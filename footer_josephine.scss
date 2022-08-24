@@ -1,0 +1,39 @@
+footer {
+    height: 215px;
+    padding: 15px 93px 40px;
+    background-color: orange;
+    width: 100%;
+
+    .wrapper-footer-section1 {
+        width: 95%;
+        height: 100%;
+        background-color: brown;
+        margin: 0 auto;
+        display: flex;
+
+        .wrapper-footer-logo {
+            flex: 1;
+            background-color: lightblue;
+
+            img {
+                width: 49px;
+                object-fit: contain;
+            }
+        }
+
+        .wrapper-footer-link1 {
+            flex: 7;
+            background-color: lightcoral;
+        }
+
+        .wrapper-footer-price {
+            flex: 2;
+            background-color: lightseagreen;
+        }
+
+        .wrapper-footer-language {
+            flex: 2;
+            background-color: lightslategrey;
+        }
+    }
+}

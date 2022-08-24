@@ -1,0 +1,35 @@
+footer {
+  height: 215px;
+  padding: 15px 93px 40px;
+  background-color: orange;
+  width: 100%;
+}
+footer .wrapper-footer-section1 {
+  width: 95%;
+  height: 100%;
+  background-color: brown;
+  margin: 0 auto;
+  display: flex;
+}
+footer .wrapper-footer-section1 .wrapper-footer-logo {
+  flex: 1;
+  background-color: lightblue;
+}
+footer .wrapper-footer-section1 .wrapper-footer-logo img {
+  width: 49px;
+  object-fit: contain;
+}
+footer .wrapper-footer-section1 .wrapper-footer-link1 {
+  flex: 7;
+  background-color: lightcoral;
+}
+footer .wrapper-footer-section1 .wrapper-footer-price {
+  flex: 2;
+  background-color: lightseagreen;
+}
+footer .wrapper-footer-section1 .wrapper-footer-language {
+  flex: 2;
+  background-color: lightslategrey;
+}
+
+/*# sourceMappingURL=footer_josephine.css.map */
