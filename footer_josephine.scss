@@ -54,16 +54,21 @@ footer {
                     }
                 }
             }
-        
 
-        .wrapper-footer-price {
-            flex: 2;
-            background-color: lightseagreen;
-        }
+        .wrapper-dropdown {
+            display: flex;
+            flex: 4;
+            height: 88px;
 
-        .wrapper-footer-language {
-            flex: 2;
-            background-color: lightslategrey;
-        }
+            .wrapper-footer-price {
+                flex: 2;
+                background-color: lightseagreen;
+            }
+    
+            .wrapper-footer-language {
+                flex: 2;
+                background-color: lightslategrey;
+            }
+        }  
     }
 }

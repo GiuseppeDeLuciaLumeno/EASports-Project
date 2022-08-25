@@ -47,11 +47,16 @@ footer .wrapper-footer-section1 .wrapper-footer-link1 ul a {
   margin-right: 2rem;
   color: #000000;
 }
-footer .wrapper-footer-section1 .wrapper-footer-price {
+footer .wrapper-footer-section1 .wrapper-dropdown {
+  display: flex;
+  flex: 4;
+  height: 88px;
+}
+footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-price {
   flex: 2;
   background-color: lightseagreen;
 }
-footer .wrapper-footer-section1 .wrapper-footer-language {
+footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-language {
   flex: 2;
   background-color: lightslategrey;
 }
