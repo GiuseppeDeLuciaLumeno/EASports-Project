@@ -56,6 +56,19 @@ footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-price {
   flex: 2;
   background-color: lightseagreen;
 }
+footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-price .button {
+  border: 1px solid red;
+  min-width: 100%;
+  min-height: 45px;
+  padding: 8px 24px;
+  font-size: 15px;
+  display: grid;
+  text-align: left;
+  grid-column: auto;
+}
+footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-price .button .wrapper-menu1 div {
+  font-size: 14px;
+}
 footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-language {
   flex: 2;
   background-color: lightslategrey;
