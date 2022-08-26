@@ -1,3 +1,21 @@
+.container_tot{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+
+}
+
+.container_gio{
+    display: flex;
+    position: relative;
+    height: 410px;
+    width: 100vw;
+
+}
+
 .blocco_bgplay{
     width: auto;
     height: auto;
@@ -6,11 +24,17 @@
     
 }
 
+.bg_play{
+    width: 100vw;
+    height: 410px;
+}
+
 .play{
     display: flex;
-    position:inherit;
+    position:absolute;
     flex-direction: column;
-    padding: 10% 67% 50% 27% ;
+   padding: 130px 0px 0px 410px;
+  
 }
 
 .scritta_play{
@@ -24,6 +48,8 @@
 
 .h6_play{
     margin-bottom: 24px;
+    justify-content: center;
+    align-items: center;
     
 }
 .img_play{
@@ -56,15 +82,23 @@
     font-size: 18px;
 }
 
+.container2_gio{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+}
+
 
 .blocco_genitori{
     display: flex;
     flex-direction: row;
     background-color:#6FB0D6;
-    width: 100%;
-    height: 100px;
+    width: 100vw;
+    height: 112px;
     justify-content: space-around;
     align-items: center ;
+   
 }
 
 .genitori_gio{
@@ -101,7 +135,7 @@
     display: flex;
     flex-direction: row;
     background-color: #EAEAEA;
-    width: 100%;
+    width: 100vw;
     height: 200px;
     justify-content: space-around;
     align-items: center;
