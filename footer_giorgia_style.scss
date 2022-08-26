@@ -1,0 +1,109 @@
+.blocco_bgplay{
+    width: auto;
+    height: auto;
+}
+
+.bottone_play{
+    width: 150px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottone_play:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 70px;
+}
+
+.iscriviti_subito{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+
+.blocco_genitori{
+    display: flex;
+    flex-direction: row;
+    background-color:#6FB0D6;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center ;
+}
+
+.genitori_gio{
+    width: 500px;
+    height: 70.22;
+    color: black;
+}
+
+.bottone_genitori{
+    width: 150px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottone_genitori:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 70px;
+}
+.scopridipiu{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.blocco_link_gio{
+    display: flex;
+    flex-direction: row;
+    background-color: #EAEAEA;
+    width: 100%;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+.linkf_gio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 884px;
+    height: 81px;
+}
+
+.link_gio{
+    text-decoration: none;
+    color: black;
+    margin: 8px 48px 5px 0px;
+}
+
+.link_gio:hover{
+    text-decoration: none;
+    color: orangered;
+}
+
+.social_logo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
