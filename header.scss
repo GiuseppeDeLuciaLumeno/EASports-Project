@@ -1,0 +1,16 @@
+.flexnav {display:flex;
+         flex-flow:column;
+    .blackline {display:flex;
+                flex:1;
+                background-color:black;}
+    .nav {display:flex;
+         flex:1;
+        background-color:rgb(235, 219, 219);
+            ul {display:flex;
+                flex:1;
+                li {display:flex;
+                    flex-basis:100%;
+                    justify-content:flex-start;
+                    gap:1rem;
+                    a {color:black;}}
+                }}}
