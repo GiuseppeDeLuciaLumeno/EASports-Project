@@ -1,12 +1,40 @@
 .blocco_bgplay{
     width: auto;
     height: auto;
+    display: flex;
+    position: absolute;
+    
+}
+
+.play{
+    display: flex;
+    position:inherit;
+    flex-direction: column;
+    padding: 10% 67% 50% 27% ;
+}
+
+.scritta_play{
+    display: flex;
+    position:relative;
+    color: white;
+    width: 544px;
+    height: 54px;
+    font-size: 27px;
+}
+
+.h6_play{
+    margin-bottom: 24px;
+    
+}
+.img_play{
+    width: 240px;
+    height: 101px;
 }
 
 .bottone_play{
     width: 150px;
     height: 60px;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -24,7 +52,7 @@
 .iscriviti_subito{
     display: block;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 18px;
 }
 
