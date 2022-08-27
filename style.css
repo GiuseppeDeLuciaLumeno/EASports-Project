@@ -16,4 +16,110 @@ img {
   max-width: 100%;
 }
 
+.flexnav {
+  display: flex;
+  flex-flow: column;
+  height: 30vh;
+  width: 30vw;
+}
+.flexnav .blackline {
+  display: flex;
+  flex: 1;
+  background-color: black;
+}
+.flexnav .nav {
+  display: flex;
+  flex: 1;
+  background-color: rgb(235, 219, 219);
+}
+.flexnav .nav ul {
+  display: flex;
+  flex: 1;
+}
+.flexnav .nav ul li {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.flexnav .nav ul li a {
+  color: black;
+}
+
+/* Giochi in evidenza style */
+.cards-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.cards-wrapper h1 {
+  padding: 3rem 0rem 1.5rem;
+}
+.cards-wrapper .apex-mobile-bg {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+.cards-wrapper .apex-mobile-bg::before {
+  content: "";
+  /* show background */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://media.contentapi.ea.com/content/dam/gin/images/2022/03/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
+  background-size: 100% 100%;
+  filter: brightness(0.7);
+}
+.cards-wrapper .apex-mobile-bg::after {
+  content: "";
+  /* show background */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://media.contentapi.ea.com/content/dam/gin/images/2022/03/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
+  background-size: 100% 100%;
+  filter: brightness(0.8);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+}
+.cards-wrapper .apex-mobile-bg:hover::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.cards-wrapper .apex-mobile-bg:hover .apex-mobile-logo {
+  transform: translateY(-70px);
+}
+.cards-wrapper .apex-mobile-bg:hover p {
+  display: block;
+  z-index: 2;
+}
+.cards-wrapper .apex-mobile-bg .apex-mobile-logo {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.cards-wrapper .apex-mobile-bg p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: white;
+  display: none;
+}
+.cards-wrapper .btn {
+  background: none;
+  border: 1, 5px solid black;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  transition: padding 0.2s ease-in-out;
+}
+
 /*# sourceMappingURL=style.css.map */
