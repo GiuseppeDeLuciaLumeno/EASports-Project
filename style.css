@@ -47,21 +47,30 @@ img {
 }
 
 /* Giochi in evidenza style */
-.cards-wrapper {
+section {
   display: flex;
-  flex-flow: row wrap;
   flex-direction: column;
   align-items: center;
 }
-.cards-wrapper h1 {
-  padding: 3rem 0rem 1.5rem;
+
+.cards-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 60vw;
+  margin: 2.5rem 0rem 0rem;
+  /* exented class */
 }
-.cards-wrapper .apex-mobile-bg {
+.cards-wrapper h1 {
+  padding: 3rem 0rem 0rem;
+}
+.cards-wrapper .the-sims4-card, .cards-wrapper .apex-card, .cards-wrapper .batterfield-card, .cards-wrapper .f1-22-card, .cards-wrapper .apex-mobile-card, .cards-wrapper .fifa23-card {
   position: relative;
   width: 350px;
   height: 350px;
 }
-.cards-wrapper .apex-mobile-bg::before {
+.cards-wrapper .the-sims4-card::before, .cards-wrapper .apex-card::before, .cards-wrapper .batterfield-card::before, .cards-wrapper .f1-22-card::before, .cards-wrapper .apex-mobile-card::before, .cards-wrapper .fifa23-card::before {
   content: "";
   /* show background */
   position: absolute;
@@ -69,11 +78,9 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url(https://media.contentapi.ea.com/content/dam/gin/images/2022/03/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
-  background-size: 100% 100%;
   filter: brightness(0.7);
 }
-.cards-wrapper .apex-mobile-bg::after {
+.cards-wrapper .the-sims4-card::after, .cards-wrapper .apex-card::after, .cards-wrapper .batterfield-card::after, .cards-wrapper .f1-22-card::after, .cards-wrapper .apex-mobile-card::after, .cards-wrapper .fifa23-card::after {
   content: "";
   /* show background */
   position: absolute;
@@ -81,45 +88,132 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url(https://media.contentapi.ea.com/content/dam/gin/images/2022/03/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
-  background-size: 100% 100%;
   filter: brightness(0.8);
   opacity: 0;
   transition: opacity 0.4s ease;
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
 }
-.cards-wrapper .apex-mobile-bg:hover::after {
+.cards-wrapper .the-sims4-card:hover::after, .cards-wrapper .apex-card:hover::after, .cards-wrapper .batterfield-card:hover::after, .cards-wrapper .f1-22-card:hover::after, .cards-wrapper .apex-mobile-card:hover::after, .cards-wrapper .fifa23-card:hover::after {
   background: rgb(47, 41, 124);
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0.82;
 }
-.cards-wrapper .apex-mobile-bg:hover .apex-mobile-logo {
+.cards-wrapper .the-sims4-card:hover .apex-mobile-logo, .cards-wrapper .apex-card:hover .apex-mobile-logo, .cards-wrapper .batterfield-card:hover .apex-mobile-logo, .cards-wrapper .f1-22-card:hover .apex-mobile-logo, .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo, .cards-wrapper .fifa23-card:hover .apex-mobile-logo {
   transform: translateY(-70px);
 }
-.cards-wrapper .apex-mobile-bg:hover p {
+.cards-wrapper .the-sims4-card:hover p, .cards-wrapper .apex-card:hover p, .cards-wrapper .batterfield-card:hover p, .cards-wrapper .f1-22-card:hover p, .cards-wrapper .apex-mobile-card:hover p, .cards-wrapper .fifa23-card:hover p {
   display: block;
   z-index: 2;
 }
-.cards-wrapper .apex-mobile-bg .apex-mobile-logo {
+.cards-wrapper .the-sims4-card .apex-mobile-logo, .cards-wrapper .apex-card .apex-mobile-logo, .cards-wrapper .batterfield-card .apex-mobile-logo, .cards-wrapper .f1-22-card .apex-mobile-logo, .cards-wrapper .apex-mobile-card .apex-mobile-logo, .cards-wrapper .fifa23-card .apex-mobile-logo {
   position: absolute;
   top: 40%;
   left: 40%;
   transition: all 0.4s ease;
   z-index: 1;
 }
-.cards-wrapper .apex-mobile-bg p {
+.cards-wrapper .the-sims4-card p, .cards-wrapper .apex-card p, .cards-wrapper .batterfield-card p, .cards-wrapper .f1-22-card p, .cards-wrapper .apex-mobile-card p, .cards-wrapper .fifa23-card p {
   position: absolute;
   top: 50%;
   left: 40%;
   color: white;
   display: none;
 }
-.cards-wrapper .btn {
+.cards-wrapper .fifa23-card {
+  background: url(https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/new-features-and-modes/images/2022/07/f23-hero-large-announce-16x9-xl.png.adapt.crop1x1.767p.png);
+  background-size: 100%;
+  /* da verificare */
+}
+.cards-wrapper .fifa23-card .fifa23-logo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.cards-wrapper .fifa23-card:hover .fifa23-logo {
+  transform: translateY(-70px);
+}
+.cards-wrapper .apex-mobile-card {
+  background: url(https://media.contentapi.ea.com/content/dam/gin/images/2022/03/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
+  background-size: 100% 100%;
+}
+.cards-wrapper .f1-22-card {
+  background: url(https://media.contentapi.ea.com/content/dam/gin/images/2022/05/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png);
+  background-size: 100% 100%;
+}
+.cards-wrapper .f1-22-card .f1-22-logo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.cards-wrapper .f1-22-card:hover .f1-22-logo {
+  transform: translateY(-70px);
+}
+.cards-wrapper .batterfield-card {
+  background: url("https://media.contentapi.ea.com/content/dam/gin/images/2021/06/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg");
+  background-size: 100% 100%;
+}
+.cards-wrapper .batterfield-card .batterfield-logo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.cards-wrapper .batterfield-card:hover .batterfield-logo {
+  transform: translateY(-70px);
+}
+.cards-wrapper .apex-card {
+  background: url(https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg);
+  background-size: 100% 100%;
+}
+.cards-wrapper .apex-card .apex-logo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.cards-wrapper .apex-card:hover .apex-logo {
+  transform: translateY(-70px);
+}
+.cards-wrapper .the-sims4-card {
+  background: url(https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg);
+  background-size: 100% 100%;
+  filter: brightness(0.8);
+  /* Filter to make white part visible */
+}
+.cards-wrapper .the-sims4-card .the-sims4-logo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.cards-wrapper .the-sims4-card:hover .the-sims4-logo {
+  transform: translateY(-55px);
+}
+
+.btn-container {
+  height: 95px;
+  display: flex;
+  align-items: center;
+  margin: 0rem 0rem 5rem;
+}
+
+.btn {
+  cursor: pointer;
   background: none;
   border: 1, 5px solid black;
   border-radius: 3px;
-  padding: 1rem 2rem;
-  transition: padding 0.2s ease-in-out;
+  padding: 15px 30px;
+  transition: padding 0.1s ease;
+}
+.btn:hover {
+  padding: 17px 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
