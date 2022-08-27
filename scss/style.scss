@@ -21,12 +21,22 @@ img{
            background-color:black;}
     .nav {display:flex;
          flex:1;
+         width:100%;
+         padding:0 30px;
         background-color:rgb(235, 219, 219);
        ul {display:flex;
            flex:1;
+           position:relative;
+           list-style: none;
            li {display:flex;
+                display:inline-block;
                flex-basis:100%;
                justify-content:flex-start;
                gap:1rem;
-               a {color:black;}}
+               position:relative;
+               a {color:black;
+                 display:block;
+                padding:15px 30px;
+                text-decoration:none;
+                transition:0.3s;}}
            }}}
