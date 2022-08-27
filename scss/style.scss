@@ -39,15 +39,20 @@ img{
                       left:0;
                       border:1px solid black;
                       border-bottom:none;
+                      visibility:hidden;
+                      opacity:0;
                     li {width:200px;
                        font-size:12px;
                         border-bottom:1px solid black;
-                        a {color:black;}}}
+                        a {color:black;
+                            display:block;
+                           padding:15px 30px;
+                           text-decoration:none;
+                           transition:0.3s;} }}}
             .sub-menu a:hover {color:red;}
-               a {color:black;
-                 display:block;
-                padding:15px 30px;
-                text-decoration:none;
-                transition:0.3s;}
+            .menu:hover .sub-menu {transition:0.5s;
+                                    visibility:visible;
+                                    opacity:1;
+                                    top:50px;}
               a:hover {color:red;}}
-           }}}
+           }}
