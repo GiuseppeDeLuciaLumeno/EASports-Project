@@ -126,7 +126,7 @@ footer {
                         justify-content: space-between;
                         align-items: center;
                         background: none;
-                        border-bottom: 1px solid black;
+                        border-bottom: 1px solid #eaeaea;
                         text-decoration: none;
                         color: $color-primary;
                         font-family: inherit;
@@ -211,10 +211,11 @@ footer {
                         height: 50px;
                         text-align: left;
                         display: flex;
-                        justify-content: space-between;
+                        justify-content: flex-start;
                         align-items: center;
+                        gap: 10px;
                         background: none;
-                        border-bottom: 1px solid black;
+                        border-bottom: 1px solid #eaeaea;
                         text-decoration: none;
                         color: $color-primary;
                         font-family: inherit;
@@ -231,11 +232,19 @@ footer {
 
                     .information-grid {
                         display: grid;
-                        grid-template-columns: repeat(3, max-content);
+                        grid-template-columns: repeat(3, 160px);
                         gap: 1rem;
                     }
                 }
             }
         }  
+    }
+
+    .wrapper-footer-section2 {
+        width: 95%;
+        height: 100%;
+        background-color: purple;
+        margin: 0 auto;
+        display: flex;
     }
 }
