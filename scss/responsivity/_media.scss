@@ -1,0 +1,55 @@
+/* Giuseppe's Medias part */
+@media only screen and (min-width: 200px) and (max-width: 460px) {
+    .section-wrapper {
+
+        .cards-wrapper {
+            gap: 15px;
+            .the-sims4-card p,
+            .apex-card p,
+            .batterfield-card p,
+            .f1-22-card p,
+            .apex-mobile-card p,
+            .fifa23-card p {
+                top: 50%;
+                left: 25%;
+                color: rgb(150, 147, 147);
+            }
+
+        }
+
+        h1 {
+
+            font-size: 30px;
+            color: #161616;
+            line-height: 1.1;
+            text-align: center;
+        }
+
+
+        .apex-mobile-card {
+            display: flex;
+            justify-content: center;
+            max-height: 175px;
+            max-width: 175px;
+            /* never over 175px */
+
+            &:hover .apex-mobile-logo img {
+                transform: translateY(20px);
+            }
+
+
+        }
+
+        .apex-mobile-card>img {
+            height: 175px;
+
+        }
+
+        .apex-mobile-logo img {
+            width: 35px;
+
+        }
+
+    }
+
+}

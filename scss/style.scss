@@ -1,5 +1,5 @@
 @import "typography/fonts";
-
+@import "responsivity/media";
 
 // reset
 * {
@@ -55,6 +55,14 @@ section {
     flex-direction: column;
     align-items: center;
 
+    h1{
+        font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
+        font-weight: 900;
+        font-size: 44px;
+        color: #161616;
+        line-height: 1.5;
+    }
+
 }
 
 .cards-wrapper {
@@ -63,13 +71,7 @@ section {
     justify-content: center;
     gap: 25px;
     width: 60vw;
-    margin: 2.5rem 0rem 0rem;
-
-
-    h1 {
-        padding: 3rem 0rem 0rem;
-    }
-
+    margin: 1.2rem;
 
     /* exented class */
     %acards-items {
@@ -85,8 +87,8 @@ section {
             top: 0;
             width: 100%;
             height: 100%;
-            filter: brightness(0.7);
-
+            background:rgba(24, 23, 23, 0.4);
+            /* to apply before effect filter only to the cards */
         }
 
         &::after {
@@ -97,10 +99,9 @@ section {
             top: 0;
             width: 100%;
             height: 100%;
-            filter: brightness(0.8);
-            opacity: 0;
             transition: opacity .4s ease;
             background: linear-gradient(90deg, rgba(47, 41, 124, 1) 0%, rgba(253, 29, 29, 1) 100%, rgba(252, 176, 69, 1) 100%);
+            opacity: 0;
         }
 
         &:hover::after {
@@ -110,23 +111,11 @@ section {
 
         }
 
-        &:hover .apex-mobile-logo {
-            transform: translateY(-70px);
-        }
-
         &:hover p {
             display: block;
             z-index: 2;
         }
 
-        .apex-mobile-logo {
-            position: absolute;
-            top: 40%;
-            left: 40%;
-            transition: all 0.4s ease;
-            z-index: 1;
-
-        }
 
         p {
             position: absolute;
@@ -134,14 +123,13 @@ section {
             left: 40%;
             color: white;
             display: none;
+            font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+            font-size: 16px;
         }
     }
 
     .fifa23-card {
         @extend %acards-items;
-        background: url(https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/new-features-and-modes/images/2022/07/f23-hero-large-announce-16x9-xl.png.adapt.crop1x1.767p.png);
-        background-size: 100%;
-        /* da verificare */
 
         .fifa23-logo {
             position: absolute;
@@ -149,6 +137,7 @@ section {
             left: 30%;
             transition: all 0.4s ease;
             z-index: 1;
+
         }
 
         &:hover .fifa23-logo {
@@ -159,14 +148,23 @@ section {
 
     .apex-mobile-card {
         @extend %acards-items;
-        background: url(https://media.contentapi.ea.com/content/dam/gin/images/2022/03/apex-mobile-keyart-1x1.jpg.adapt.crop1x1.767p.jpg);
-        background-size: 100% 100%;
+
+        .apex-mobile-logo {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            transition: all 0.4s ease;
+            z-index: 1;
+
+        }
+
+        &:hover .apex-mobile-logo {
+            transform: translateY(-70px);
+        }
     }
 
     .f1-22-card {
         @extend %acards-items;
-        background: url(https://media.contentapi.ea.com/content/dam/gin/images/2022/05/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767p.png);
-        background-size: 100% 100%;
 
         .f1-22-logo {
             position: absolute;
@@ -177,15 +175,13 @@ section {
         }
 
         &:hover .f1-22-logo {
-            transform: translateY(-70px);
+            transform: translateY(-60px);
         }
     }
 
 
     .batterfield-card {
         @extend %acards-items;
-        background: url("https://media.contentapi.ea.com/content/dam/gin/images/2021/06/battlefield-2042-key-art.jpg.adapt.crop1x1.767p.jpg");
-        background-size: 100% 100%;
 
         .batterfield-logo {
             position: absolute;
@@ -196,19 +192,17 @@ section {
         }
 
         &:hover .batterfield-logo {
-            transform: translateY(-70px);
+            transform: translateY(-40px);
         }
     }
 
     .apex-card {
         @extend %acards-items;
-        background: url(https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg);
-        background-size: 100% 100%;
 
         .apex-logo {
             position: absolute;
             top: 40%;
-            left: 30%;
+            left: 37%;
             transition: all 0.4s ease;
             z-index: 1;
         }
@@ -220,15 +214,10 @@ section {
 
     .the-sims4-card {
         @extend %acards-items;
-        background: url(https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg);
-        background-size: 100% 100%;
-        filter: brightness(.8);
-        /* Filter to make white part visible */
-
 
         .the-sims4-logo {
             position: absolute;
-            top: 40%;
+            top: 25%;
             left: 30%;
             transition: all 0.4s ease;
             z-index: 1;
@@ -243,7 +232,7 @@ section {
 }
 
 .btn-container {
-    height: 95px;
+    height: 120px;
     display: flex;
     align-items: center;
     margin: 0rem 0rem 5rem;
@@ -255,11 +244,16 @@ section {
     border: 1, 5px solid black;
     border-radius: 3px;
     padding: 15px 30px;
-    transition: padding 0.1s ease;
-
+    transition: padding 0.1s;
+    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #161616;
+    opacity: .9;
 
     &:hover {
-        padding: 17px 35px;
-
+        padding: 18px 35px;
     }
 }
+
+
+
