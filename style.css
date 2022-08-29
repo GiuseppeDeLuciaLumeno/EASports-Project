@@ -6,44 +6,6 @@
   font-family: ElectronicArtsText;
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
-/* Giuseppe's Medias part */
-@media only screen and (min-width: 200px) and (max-width: 460px) {
-  .section-wrapper .cards-wrapper {
-    gap: 15px;
-  }
-  .section-wrapper .cards-wrapper .the-sims4-card p,
-.section-wrapper .cards-wrapper .apex-card p,
-.section-wrapper .cards-wrapper .batterfield-card p,
-.section-wrapper .cards-wrapper .f1-22-card p,
-.section-wrapper .cards-wrapper .apex-mobile-card p,
-.section-wrapper .cards-wrapper .fifa23-card p {
-    top: 50%;
-    left: 25%;
-    color: rgb(150, 147, 147);
-  }
-  .section-wrapper h1 {
-    font-size: 30px;
-    color: #161616;
-    line-height: 1.1;
-    text-align: center;
-  }
-  .section-wrapper .apex-mobile-card {
-    display: flex;
-    justify-content: center;
-    max-height: 175px;
-    max-width: 175px;
-    /* never over 175px */
-  }
-  .section-wrapper .apex-mobile-card:hover .apex-mobile-logo img {
-    transform: translateY(20px);
-  }
-  .section-wrapper .apex-mobile-card > img {
-    height: 175px;
-  }
-  .section-wrapper .apex-mobile-logo img {
-    width: 35px;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -236,5 +198,111 @@ section h1 {
 .btn:hover {
   padding: 18px 35px;
 }
+
+.bi {
+  display: none;
+}
+
+/* -------------------------------------Reponsivity--------------------------------- */
+@media only screen and (min-width: 200px) and (max-width: 460px) {
+  .section-wrapper {
+    background-color: rgb(240, 238, 238);
+    padding: 3rem;
+    /* .fifa23-logo img{
+
+    } */
+    /* three dots menu */
+  }
+  .section-wrapper .cards-wrapper {
+    gap: 15px;
+  }
+  .section-wrapper .cards-wrapper .the-sims4-card p,
+.section-wrapper .cards-wrapper .apex-card p,
+.section-wrapper .cards-wrapper .batterfield-card p,
+.section-wrapper .cards-wrapper .f1-22-card p,
+.section-wrapper .cards-wrapper .apex-mobile-card p,
+.section-wrapper .cards-wrapper .fifa23-card p {
+    top: 50%;
+    left: 25%;
+    color: rgb(150, 147, 147);
+  }
+  .section-wrapper h1 {
+    font-size: 30px;
+    color: #161616;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .section-wrapper .fifa23-card,
+.section-wrapper .apex-mobile-card,
+.section-wrapper .f1-22-card,
+.section-wrapper .batterfield-card,
+.section-wrapper .apex-card,
+.section-wrapper .the-sims4-card {
+    display: flex;
+    justify-content: center;
+    max-height: 175px;
+    max-width: 175px;
+    /* never over 175px */
+  }
+  .section-wrapper .fifa23-card:hover .apex-mobile-logo img,
+.section-wrapper .apex-mobile-card:hover .apex-mobile-logo img,
+.section-wrapper .f1-22-card:hover .apex-mobile-logo img,
+.section-wrapper .batterfield-card:hover .apex-mobile-logo img,
+.section-wrapper .apex-card:hover .apex-mobile-logo img,
+.section-wrapper .the-sims4-card:hover .apex-mobile-logo img {
+    transform: translateY(20px);
+  }
+  .section-wrapper .apex-mobile-logo img {
+    width: 35px;
+  }
+  .section-wrapper .f1-22-logo img {
+    width: 75px;
+  }
+  .section-wrapper .batterfield-logo img {
+    width: 75px;
+  }
+  .section-wrapper .apex-logo {
+    width: 55px;
+  }
+  .section-wrapper .the-sims4-logo img {
+    width: 75px;
+  }
+  .section-wrapper .the-sims4-card .the-sims4-logo {
+    top: 0px;
+  }
+  .section-wrapper .btn-container {
+    align-items: flex-start;
+  }
+  .section-wrapper .btn-container a {
+    text-decoration: none;
+  }
+  .section-wrapper .btn {
+    width: 175px;
+    height: 50px;
+    border: 2px solid black;
+    font-size: 16px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-wrapper .bi-three-dots {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    display: block;
+  }
+}
+/* X show to active with js */
+/* .bi-x{
+           display: block;
+           position: absolute;
+           top: 0px;
+           right: 10px;
+           color: white;
+           font-size: 34px;
+       } */
 
 /*# sourceMappingURL=style.css.map */

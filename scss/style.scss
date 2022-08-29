@@ -1,5 +1,4 @@
 @import "typography/fonts";
-@import "responsivity/media";
 
 // reset
 * {
@@ -126,6 +125,7 @@ section {
             font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
             font-size: 16px;
         }
+
     }
 
     .fifa23-card {
@@ -161,6 +161,7 @@ section {
         &:hover .apex-mobile-logo {
             transform: translateY(-70px);
         }
+
     }
 
     .f1-22-card {
@@ -254,6 +255,14 @@ section {
         padding: 18px 35px;
     }
 }
+
+.bi{
+    display: none;
+}
+
+
+/* -------------------------------------Reponsivity--------------------------------- */
+@import "responsivity/media";
 
 
 

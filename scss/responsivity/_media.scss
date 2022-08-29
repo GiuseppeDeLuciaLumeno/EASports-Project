@@ -1,6 +1,8 @@
-/* Giuseppe's Medias part */
+
 @media only screen and (min-width: 200px) and (max-width: 460px) {
     .section-wrapper {
+        background-color: rgb(240, 238, 238);
+        padding: 3rem;
 
         .cards-wrapper {
             gap: 15px;
@@ -26,7 +28,14 @@
         }
 
 
-        .apex-mobile-card {
+
+        .fifa23-card,
+        .apex-mobile-card,
+        .f1-22-card,
+        .batterfield-card,
+        .apex-card,
+        .the-sims4-card
+         {
             display: flex;
             justify-content: center;
             max-height: 175px;
@@ -37,19 +46,79 @@
                 transform: translateY(20px);
             }
 
-
         }
 
-        .apex-mobile-card>img {
-            height: 175px;
+        /* .fifa23-logo img{
 
-        }
+        } */
 
-        .apex-mobile-logo img {
+        .apex-mobile-logo img
+        {
             width: 35px;
+        }
 
+        .f1-22-logo img{
+            width: 75px;
+        }
+
+        .batterfield-logo img{
+            width: 75px;
+        }
+
+        .apex-logo{
+            width: 55px;
+        }
+
+        .the-sims4-logo img{
+            width: 75px;
+        }
+
+        .the-sims4-card
+        .the-sims4-logo{
+            top: 0px;
+        }
+
+
+        .btn-container{
+            align-items: flex-start;
+
+            a{
+                text-decoration: none;
+            }
+        }
+
+        .btn{
+            width: 175px;
+            height: 50px;
+            border: 2px solid black;
+            font-size: 16px;
+            font-weight: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* three dots menu */
+        .bi-three-dots{
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            color: white;
+            font-size: 24px;
+            display: block;
         }
 
     }
-
 }
+
+
+/* X show to active with js */
+ /* .bi-x{
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            color: white;
+            font-size: 34px;
+        } */
+
