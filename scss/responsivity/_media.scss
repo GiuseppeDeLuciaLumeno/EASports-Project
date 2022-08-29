@@ -8,6 +8,7 @@
         .cards-wrapper {
             gap: 15px;
             margin: 1rem;
+
             .the-sims4-card p,
             .apex-card p,
             .batterfield-card p,
@@ -21,7 +22,7 @@
                 /* to active with js */
             }
 
-     }
+        }
 
         h1 {
 
@@ -110,7 +111,7 @@
 
 
         .btn-container {
-           height: fit-content;
+            height: fit-content;
             margin: 0 0 15px;
 
             a {
@@ -152,3 +153,120 @@
             color: white;
             font-size: 34px;
         } */
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .section-wrapper {
+        box-shadow: 14px -1px 30px -20px inset #161616;
+        padding-top: 2rem;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+
+    .cards-wrapper {
+        width: 90vw;
+
+        .fifa23-card,
+        .apex-mobile-card,
+        .f1-22-card,
+        .batterfield-card,
+        .apex-card,
+        .the-sims4-card {
+            max-width: 320px;
+            max-height: 320px;
+
+            &:hover::after {
+                background: none;
+                opacity: 0;
+            }
+        }
+
+    }
+
+
+    .btn-container a {
+        text-decoration: none;
+    }
+
+    .btn {
+        border: 2px solid black;
+        width: 147px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .bi-three-dots {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        color: white;
+        font-size: 24px;
+        display: block;
+        z-index: 2;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .cards-wrapper {
+        width: 100vw;
+
+        .fifa23-card,
+        .apex-mobile-card,
+        .f1-22-card,
+        .batterfield-card,
+        .apex-card,
+        .the-sims4-card {
+            max-width: 300px;
+            max-height: 300px;
+
+        }
+    }
+
+
+    .bi {
+       display: none;
+    }
+}
+
+
+@media only screen and (min-width: 1275px) {
+    .cards-wrapper {
+        width: 90vw;
+    }
+}
+
+@media only screen and (min-width: 1417px) {
+    .cards-wrapper {
+        width: 80vw;
+    }
+}
+
+
+@media only screen and (min-width: 1920px) {
+    .cards-wrapper {
+        width: 60vw;
+        .fifa23-card,
+        .apex-mobile-card,
+        .f1-22-card,
+        .batterfield-card,
+        .apex-card,
+        .the-sims4-card {
+            max-width: 350px;
+            max-height: 350px;
+        }
+    }
+
+    .bi {
+        display: none;
+    }
+}
