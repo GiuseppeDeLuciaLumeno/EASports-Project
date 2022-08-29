@@ -1,0 +1,55 @@
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
+
+
+$color-primary: #000000;
+$color-secondary: #ffffff;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+footer {
+    height: 250px;
+    padding: 15px 90px 23px;
+    background-color: orange;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 7fr 2fr 2fr;
+    grid-template-rows: 88px auto;
+
+
+    .logo {
+        grid-row: span 2;
+        background-color: brown;
+
+        img {
+            width: 49px;
+        }
+    }
+
+    .footer-link1 {
+        background-color: darkviolet;
+    }
+
+    .footer-price {
+        background-color: forestgreen;
+    }
+
+    .footer-language {
+        background-color: darkblue;
+    }
+
+    .footer-legal-link {
+        background-color: chocolate;
+    }
+
+    .footer-privacy {
+        background-color: cornflowerblue;
+        grid-column: span 2;
+    }
+    
+}

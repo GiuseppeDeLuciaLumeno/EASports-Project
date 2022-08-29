@@ -1,140 +1,43 @@
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-  }
-  
-  footer {
-    height: 250px;
-    padding: 15px 90px 23px;
-    background-color: orange;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  footer .wrapper-footer-section1 {
-    width: 95%;
-    height: 100%;
-    background-color: brown;
-    margin: 0 auto;
-    display: flex;
-  }
-  footer .wrapper-footer-section1 .wrapper-footer-logo {
-    flex: 1;
-    background-color: lightblue;
-  }
-  footer .wrapper-footer-section1 .wrapper-footer-logo img {
-    width: 49px;
-    object-fit: contain;
-  }
-  footer .wrapper-footer-section1 .wrapper-footer-link1 {
-    flex: 7;
-    background-color: lightcoral;
-    height: 88px;
-  }
-  footer .wrapper-footer-section1 .wrapper-footer-link1 ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 100%;
-    width: 90%;
-  }
-  footer .wrapper-footer-section1 .wrapper-footer-link1 ul a {
-    text-decoration: none;
-    margin-right: 2rem;
-    color: #000000;
-  }
- footer .wrapper-footer-section1 .wrapper-dropdown {
-    display: flex;
-    flex: 4;
-    height:  88px;
-  }
-  footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-price {
-    flex: 2;
-    background-color: lightseagreen;
-  }
-
-  footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-price .link {
-    width: 100%;
-    height: 50px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background: none;
-    border: none;
-    text-decoration: none;
-    color: #777;
-    font-family: inherit;
-    cursor: pointer;
-    padding: 0;
-    border-bottom: 2px solid #777;
-  }
-
-  .dropdown {
-    position: relative;
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    left: 0;
-    top: calc(100% + .25rem);
-    background-color: white;
-    padding: .75rem;
-    border-radius: .25rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-    pointer-events: none;
-  }
-
-  .dropdown-menu > .dropdown-link .link {
-    border-bottom: 2px solid #777;
-  }
-
-  .dropdown-link > .link > p:after {
-    position: absolute;
-    transform: translateX(0) translateY(0);
-    transition: transform 150ms ease-in-out;
-    content: ''; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
 }
 
-.dropdown-link > .link > p:hover:after {
-    transform: translateX(20px);
+footer {
+  height: 250px;
+  padding: 15px 90px 23px;
+  background-color: orange;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 7fr 2fr 2fr;
+  grid-template-rows: 88px auto;
+}
+footer .logo {
+  grid-row: span 2;
+  background-color: brown;
+}
+footer .logo img {
+  width: 49px;
+}
+footer .footer-link1 {
+  background-color: darkviolet;
+}
+footer .footer-price {
+  background-color: forestgreen;
+}
+footer .footer-language {
+  background-color: darkblue;
+}
+footer .footer-legal-link {
+  background-color: chocolate;
+}
+footer .footer-privacy {
+  background-color: cornflowerblue;
+  grid-column: span 2;
 }
 
-  .dropdown > .link:focus + .dropdown-menu {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .information-grid {
-    display: grid;
-    grid-template-columns: repeat(4, max-content);
-    gap: 1rem;
-  }
-
-  footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-price .link:focus, .link:hover {
-    color: red;
-  }
-
-
-  .dropdown-link > .link {
-    border-bottom: 2px solid #777;
-  }
-  footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-price .link div {
-    font-size: 14px;
-  }
-  
-  footer .wrapper-footer-section1 .wrapper-dropdown .wrapper-footer-language {
-    flex: 2;
-    background-color: lightslategrey;
-  }
-  
-  /*# sourceMappingURL=footer_josephine.css.map */
-  
+/*# sourceMappingURL=test.css.map */
