@@ -1,4 +1,5 @@
 @import "typography/fonts";
+@import "mixin/mixin";
 
 // reset
 * {
@@ -49,7 +50,7 @@ img {
 
 
 /* Giochi in evidenza style */
-section {
+.section-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,64 +73,9 @@ section {
     width: 60vw;
     margin: 1.2rem;
 
-    /* exented class */
-    %acards-items {
-        position: relative;
-        width: 350px;
-        height: 350px;
-
-        &::before {
-            content: "";
-            /* show background */
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background:rgba(24, 23, 23, 0.4);
-            /* to apply before effect filter only to the cards */
-        }
-
-        &::after {
-            content: "";
-            /* show background */
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            transition: opacity .4s ease;
-            background: linear-gradient(90deg, rgba(47, 41, 124, 1) 0%, rgba(253, 29, 29, 1) 100%, rgba(252, 176, 69, 1) 100%);
-            opacity: 0;
-        }
-
-        &:hover::after {
-            background: rgb(47, 41, 124);
-            background: linear-gradient(90deg, rgba(47, 41, 124, 1) 0%, rgba(253, 29, 29, 1) 100%, rgba(252, 176, 69, 1) 100%);
-            opacity: .82;
-
-        }
-
-        &:hover p {
-            display: block;
-            z-index: 2;
-        }
-
-
-        p {
-            position: absolute;
-            top: 50%;
-            left: 40%;
-            color: white;
-            display: none;
-            font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
-            font-size: 16px;
-        }
-
-    }
 
     .fifa23-card {
-        @extend %acards-items;
+        @include cards(relative, 350px, 350px);
 
         .fifa23-logo {
             position: absolute;
@@ -145,9 +91,8 @@ section {
         }
     }
 
-
     .apex-mobile-card {
-        @extend %acards-items;
+        @include cards(relative, 350px, 350px);
 
         .apex-mobile-logo {
             position: absolute;
@@ -165,7 +110,7 @@ section {
     }
 
     .f1-22-card {
-        @extend %acards-items;
+        @include cards(relative, 350px, 350px);
 
         .f1-22-logo {
             position: absolute;
@@ -180,9 +125,8 @@ section {
         }
     }
 
-
     .batterfield-card {
-        @extend %acards-items;
+        @include cards(relative, 350px, 350px);
 
         .batterfield-logo {
             position: absolute;
@@ -198,7 +142,7 @@ section {
     }
 
     .apex-card {
-        @extend %acards-items;
+        @include cards(relative, 350px, 350px);
 
         .apex-logo {
             position: absolute;
@@ -214,7 +158,7 @@ section {
     }
 
     .the-sims4-card {
-        @extend %acards-items;
+        @include cards(relative, 350px, 350px);
 
         .the-sims4-logo {
             position: absolute;
@@ -233,7 +177,7 @@ section {
 }
 
 .btn-container {
-    height: 120px;
+    height: 75px;
     display: flex;
     align-items: center;
     margin: 0rem 0rem 5rem;
@@ -259,6 +203,10 @@ section {
 .bi{
     display: none;
 }
+
+
+
+
 
 
 /* -------------------------------------Reponsivity--------------------------------- */
