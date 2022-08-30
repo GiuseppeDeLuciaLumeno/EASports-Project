@@ -114,7 +114,7 @@ img {
 .cards-wrapper .fifa23-card .fifa23-logo {
   position: absolute;
   top: 40%;
-  left: 30%;
+  left: 35%;
   transition: all 0.4s ease;
   z-index: 1;
 }
@@ -418,11 +418,8 @@ img {
 @media only screen and (min-width: 200px) and (max-width: 460px) {
   .section-wrapper {
     background-color: rgb(240, 238, 238);
-    box-shadow: 14px -1px 22px -20px inset #161616;
+    box-shadow: 14px -5px 22px -20px inset #161616;
     padding-top: 3rem;
-    /* .fifa23-logo img{
-
-    } */
     /* three dots menu */
   }
   .section-wrapper .cards-wrapper {
@@ -476,13 +473,22 @@ img {
     /* transform: translateY(-40px); */
     transform: none;
   }
+  .section-wrapper .f1-22-card:hover .f1-22-logo {
+    /* transform: translateY(-45px); */
+    transform: none;
+  }
+  .section-wrapper .batterfield-card:hover .batterfield-logo {
+    transform: none;
+  }
   .section-wrapper .apex-card:hover .apex-logo {
     /*  transform: translateY(-40px); */
     transform: none;
   }
-  .section-wrapper .f1-22-card:hover .f1-22-logo {
-    /* transform: translateY(-45px); */
+  .section-wrapper .the-sims4-card:hover .the-sims4-logo {
     transform: none;
+  }
+  .section-wrapper .fifa23-logo img {
+    width: 65px;
   }
   .section-wrapper .apex-mobile-logo img {
     width: 35px;
@@ -540,7 +546,7 @@ img {
         } */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .section-wrapper {
-    box-shadow: 14px -1px 30px -20px inset #161616;
+    box-shadow: 14px -5px 30px -20px inset #161616;
     padding-top: 2rem;
   }
   .section-wrapper h1 {
@@ -566,6 +572,46 @@ img {
 .cards-wrapper .the-sims4-card:hover::after {
     background: none;
     opacity: 0;
+  }
+  .cards-wrapper .fifa23-card:hover .fifa23-logo {
+    /*   transform: translateY(-40px); */
+    transform: none;
+  }
+  .cards-wrapper .fifa23-card:hover p {
+    display: none;
+  }
+  .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
+    /* transform: translateY(-40px); */
+    transform: none;
+  }
+  .cards-wrapper .apex-mobile-card:hover p {
+    display: none;
+  }
+  .cards-wrapper .f1-22-card:hover .f1-22-logo {
+    /* transform: translateY(-45px); */
+    transform: none;
+  }
+  .cards-wrapper .f1-22-card:hover p {
+    display: none;
+  }
+  .cards-wrapper .batterfield-card:hover .batterfield-logo {
+    transform: none;
+  }
+  .cards-wrapper .batterfield-card:hover p {
+    display: none;
+  }
+  .cards-wrapper .apex-card:hover .apex-logo {
+    /*  transform: translateY(-40px); */
+    transform: none;
+  }
+  .cards-wrapper .apex-card:hover p {
+    display: none;
+  }
+  .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
+    transform: none;
+  }
+  .cards-wrapper .the-sims4-card:hover p {
+    display: none;
   }
   .btn-container a {
     text-decoration: none;
