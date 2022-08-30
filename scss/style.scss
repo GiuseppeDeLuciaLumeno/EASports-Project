@@ -55,7 +55,7 @@ img {
     flex-direction: column;
     align-items: center;
 
-    h1{
+    h1 {
         font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
         font-weight: 900;
         font-size: 44px;
@@ -70,11 +70,10 @@ img {
     flex-flow: row wrap;
     justify-content: center;
     gap: 25px;
-    width: 60vw;
     margin: 1.2rem;
 
     .fifa23-card {
-        @include cards(relative, 350px, 350px);
+        @include cards(relative);
 
         .fifa23-logo {
             position: absolute;
@@ -91,7 +90,7 @@ img {
     }
 
     .apex-mobile-card {
-        @include cards(relative, 350px, 350px);
+        @include cards(relative);
 
         .apex-mobile-logo {
             position: absolute;
@@ -109,7 +108,7 @@ img {
     }
 
     .f1-22-card {
-        @include cards(relative, 350px, 350px);
+        @include cards(relative);
 
         .f1-22-logo {
             position: absolute;
@@ -125,7 +124,7 @@ img {
     }
 
     .batterfield-card {
-        @include cards(relative, 350px, 350px);
+        @include cards(relative);
 
         .batterfield-logo {
             position: absolute;
@@ -141,7 +140,7 @@ img {
     }
 
     .apex-card {
-        @include cards(relative, 350px, 350px);
+        @include cards(relative);
 
         .apex-logo {
             position: absolute;
@@ -157,7 +156,7 @@ img {
     }
 
     .the-sims4-card {
-        @include cards(relative, 350px, 350px);
+        @include cards(relative);
 
         .the-sims4-logo {
             position: absolute;
@@ -199,7 +198,7 @@ img {
     }
 }
 
-.bi{
+.bi {
     display: none;
 }
 
@@ -211,5 +210,13 @@ img {
 /* -------------------------------------Reponsivity--------------------------------- */
 @import "responsivity/media";
 
+.flex {
+    display: flex;
+    justify-content: center;
+}
 
 
+.prova {
+    position: relative;
+    margin: 1rem;
+}

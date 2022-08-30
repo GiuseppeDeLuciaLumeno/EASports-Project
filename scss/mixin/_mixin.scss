@@ -1,8 +1,6 @@
-@mixin cards($position, $width, $height) {
+@mixin cards($position) {
     position: $position;
-    width: $width;
-    height: $height;
-
+   
     &::before {
         @content;
         content: "";
