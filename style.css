@@ -789,7 +789,7 @@ img {
     font-size: 15px;
   }
 }
-@media only screen and (min-width: 361px) {
+@media only screen and (min-width: 361px) and (max-width: 899px) {
   .cards-wrapper .fifa23-card {
     display: flex;
   }
@@ -1028,15 +1028,6 @@ img {
   .bi {
     display: none;
   }
-}
-.flex {
-  display: flex;
-  justify-content: center;
-}
-
-.prova {
-  position: relative;
-  margin: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
