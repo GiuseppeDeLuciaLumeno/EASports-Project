@@ -25,6 +25,8 @@ $color-secondary: #ffffff;
         "logo link2 link2 privacy";
 
         @media screen and (max-width: 1023px) {
+            height: 100vh;
+            padding: 40px 22px 30px;
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
                 "logo ."

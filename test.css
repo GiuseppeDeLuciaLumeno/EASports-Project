@@ -20,6 +20,8 @@
 }
 @media screen and (max-width: 1023px) {
   .footer-main-link {
+    height: 100vh;
+    padding: 40px 22px 30px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "logo ." "link1 link1" "price language" "link2 link2" "privacy .";
   }
