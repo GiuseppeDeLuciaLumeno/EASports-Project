@@ -7,7 +7,7 @@
   font-size: 16px;
 }
 
-footer {
+.footer-main-link {
   height: 250px;
   padding: 15px 80px 23px;
   background-color: orange;
@@ -18,20 +18,26 @@ footer {
   grid-template-rows: 88px auto;
   grid-template-areas: "logo link1 price language" "logo link2 link2 privacy";
 }
-footer .logo {
+@media screen and (max-width: 1023px) {
+  .footer-main-link {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "logo ." "link1 link1" "price language" "link2 link2" "privacy .";
+  }
+}
+.footer-main-link .logo {
   grid-area: logo;
   background-color: brown;
 }
-footer .logo img {
+.footer-main-link .logo img {
   width: 49px;
 }
-footer .footer-link1 {
+.footer-main-link .footer-link1 {
   background-color: darkviolet;
   grid-area: link1;
   display: flex;
   width: 100%;
 }
-footer .footer-link1 ul {
+.footer-main-link .footer-link1 ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -39,21 +45,22 @@ footer .footer-link1 ul {
   height: 100%;
   width: 90%;
 }
-footer .footer-link1 ul a {
+.footer-main-link .footer-link1 ul a {
   text-decoration: none;
   margin-right: 2rem;
   color: #000000;
 }
-footer .dropdown-price {
+.footer-main-link .dropdown-price {
   background-color: cadetblue;
   grid-area: price;
 }
-footer .dropdown-price .dropdown {
+.footer-main-link .dropdown-price .dropdown {
   position: relative;
   border: 2px solid #c2c2c2;
   border-radius: 3px;
+  width: 95%;
 }
-footer .dropdown-price .dropdown .button-link {
+.footer-main-link .dropdown-price .dropdown .button-link {
   width: 100%;
   height: 61px;
   text-align: left;
@@ -69,18 +76,18 @@ footer .dropdown-price .dropdown .button-link {
   padding: 0;
   margin-left: 10px;
 }
-footer .dropdown-price .dropdown .button-link div {
+.footer-main-link .dropdown-price .dropdown .button-link div {
   font-size: 15px;
 }
-footer .dropdown-price .dropdown #color-nation {
+.footer-main-link .dropdown-price .dropdown #color-nation {
   color: #000000;
 }
-footer .dropdown-price .dropdown #color-nation img {
+.footer-main-link .dropdown-price .dropdown #color-nation img {
   width: 14px;
   height: 14px;
   margin-left: 30px;
 }
-footer .dropdown-price .dropdown .dropdown-menu {
+.footer-main-link .dropdown-price .dropdown .dropdown-menu {
   position: absolute;
   left: -140px;
   top: calc(100% + 0.25rem);
@@ -93,7 +100,7 @@ footer .dropdown-price .dropdown .dropdown-menu {
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
   pointer-events: none;
 }
-footer .dropdown-price .dropdown .link {
+.footer-main-link .dropdown-price .dropdown .link {
   width: 100%;
   height: 50px;
   text-align: left;
@@ -108,26 +115,27 @@ footer .dropdown-price .dropdown .link {
   cursor: pointer;
   padding: 0px 8px;
 }
-footer .dropdown-price .dropdown .button-link:focus + .dropdown-menu {
+.footer-main-link .dropdown-price .dropdown .button-link:focus + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
-footer .dropdown-price .dropdown .information-grid {
+.footer-main-link .dropdown-price .dropdown .information-grid {
   display: grid;
   grid-template-columns: repeat(4, max-content);
   gap: 1rem;
 }
-footer .dropdown-language {
+.footer-main-link .dropdown-language {
   background-color: darkgoldenrod;
   grid-area: language;
 }
-footer .dropdown-language .dropdown {
+.footer-main-link .dropdown-language .dropdown {
   position: relative;
   border: 2px solid #c2c2c2;
   border-radius: 3px;
+  width: 95%;
 }
-footer .dropdown-language .dropdown .button-link {
+.footer-main-link .dropdown-language .dropdown .button-link {
   width: 100%;
   height: 61px;
   text-align: left;
@@ -143,21 +151,21 @@ footer .dropdown-language .dropdown .button-link {
   padding: 0;
   margin-left: 10px;
 }
-footer .dropdown-language .dropdown .button-link div {
+.footer-main-link .dropdown-language .dropdown .button-link div {
   font-size: 15px;
 }
-footer .dropdown-language .dropdown #color-nation {
+.footer-main-link .dropdown-language .dropdown #color-nation {
   color: #000000;
 }
-footer .dropdown-language .dropdown #color-nation span {
+.footer-main-link .dropdown-language .dropdown #color-nation span {
   margin-right: 10px;
 }
-footer .dropdown-language .dropdown #color-nation img {
+.footer-main-link .dropdown-language .dropdown #color-nation img {
   width: 14px;
   height: 14px;
   margin-left: 60px;
 }
-footer .dropdown-language .dropdown .dropdown-menu {
+.footer-main-link .dropdown-language .dropdown .dropdown-menu {
   position: absolute;
   left: -250px;
   top: calc(100% + 0.25rem);
@@ -170,7 +178,7 @@ footer .dropdown-language .dropdown .dropdown-menu {
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
   pointer-events: none;
 }
-footer .dropdown-language .dropdown .link {
+.footer-main-link .dropdown-language .dropdown .link {
   width: 100%;
   height: 50px;
   text-align: left;
@@ -187,21 +195,21 @@ footer .dropdown-language .dropdown .link {
   padding: 0px 8px;
   font-size: 14px;
 }
-footer .dropdown-language .dropdown .button-link:focus + .dropdown-menu {
+.footer-main-link .dropdown-language .dropdown .button-link:focus + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
-footer .dropdown-language .dropdown .information-grid {
+.footer-main-link .dropdown-language .dropdown .information-grid {
   display: grid;
   grid-template-columns: repeat(3, 160px);
   gap: 1rem;
 }
-footer .footer-legal-link {
+.footer-main-link .footer-legal-link {
   background-color: chocolate;
   grid-area: link2;
 }
-footer .footer-legal-link ul {
+.footer-main-link .footer-legal-link ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -209,21 +217,21 @@ footer .footer-legal-link ul {
   height: 75%;
   width: 80%;
 }
-footer .footer-legal-link ul a {
+.footer-main-link .footer-legal-link ul a {
   font-size: 12px;
   text-decoration: none;
   margin-right: 2rem;
   color: #000000;
 }
-footer .footer-legal-link .copyright {
+.footer-main-link .footer-legal-link .copyright {
   margin-top: 10px;
   font-size: 14px;
 }
-footer .footer-privacy {
+.footer-main-link .footer-privacy {
   background-color: cornflowerblue;
   grid-area: privacy;
 }
-footer .footer-privacy .image-privacy {
+.footer-main-link .footer-privacy .image-privacy {
   height: 100%;
   display: flex;
   justify-content: flex-end;

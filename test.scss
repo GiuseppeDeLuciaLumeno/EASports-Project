@@ -11,7 +11,7 @@ $color-secondary: #ffffff;
   font-size: 16px;
 }
 
-footer {
+.footer-main-link {
     height: 250px;
     padding: 15px 80px 23px;
     background-color: orange;
@@ -23,6 +23,17 @@ footer {
     grid-template-areas:
         "logo link1 price language"
         "logo link2 link2 privacy";
+
+        @media screen and (max-width: 1023px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "logo ."
+                "link1 link1"
+                "price language"
+                "link2 link2"
+                "privacy ." ;
+            
+        }
 
     .logo {
         grid-area: logo;
@@ -63,6 +74,7 @@ footer {
         position: relative;
         border: 2px solid #c2c2c2;
         border-radius: 3px;
+        width: 95%;
 
             .button-link {
                 width: 100%;
@@ -147,6 +159,7 @@ footer {
             position: relative;
             border: 2px solid #c2c2c2;
             border-radius: 3px;
+            width: 95%;
 
             .button-link {
                 width: 100%;
