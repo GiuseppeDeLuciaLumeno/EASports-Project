@@ -1,4 +1,5 @@
 @import "/node_modules/flag-icons/css/flag-icons.min.css";
+@import 'breakpoints';
 
 $color-primary: #000000;
 $color-secondary: #ffffff;
@@ -14,7 +15,7 @@ $color-secondary: #ffffff;
 .footer-main-link {
     height: 250px;
     padding: 15px 80px 23px;
-    background-color: orange;
+    background-color: #f3f3f3;
     width: 100%;
     display: grid;
     gap: 5px;
@@ -24,17 +25,17 @@ $color-secondary: #ffffff;
         "logo link1 price language"
         "logo link2 link2 privacy";
 
-        @media screen and (max-width: 1023px) {
+        @include lg {
             height: 100vh;
             padding: 40px 22px 30px;
+            grid-template-rows: auto;
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
                 "logo ."
                 "link1 link1"
                 "price language"
                 "link2 link2"
-                "privacy ." ;
-            
+                "privacy .";
         }
 
     .logo {
@@ -60,10 +61,18 @@ $color-secondary: #ffffff;
         height: 100%;
         width: 90%;
 
+        @include lg {
+            width: 96%;
+        }
+
             a {
                 text-decoration: none;
                 margin-right: 2rem;
                 color: $color-primary;
+                
+                @include lg {
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -71,6 +80,12 @@ $color-secondary: #ffffff;
     .dropdown-price {
         background-color: cadetblue;
         grid-area: price;
+
+        @include lg {
+            display: flex;
+            justify-content: center;
+            height: 90%;
+        }
 
         .dropdown {
         position: relative;
@@ -101,6 +116,9 @@ $color-secondary: #ffffff;
 
             #color-nation {
                 color: $color-primary;
+                display: flex;
+                justify-content: space-between;
+                width: 85%;
 
                 img {
                 width: 14px;
@@ -121,6 +139,10 @@ $color-secondary: #ffffff;
                 transform: translateY(-10px);
                 transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
                 pointer-events: none;
+
+                @include lg {
+                    left: 0px;
+                }
             }
 
             .link {
@@ -157,6 +179,12 @@ $color-secondary: #ffffff;
         background-color: darkgoldenrod;
         grid-area: language;
 
+        @include lg {
+            display: flex;
+            justify-content: center;
+            height: 90%;
+        }
+
         .dropdown {
             position: relative;
             border: 2px solid #c2c2c2;
@@ -186,15 +214,23 @@ $color-secondary: #ffffff;
 
             #color-nation {
                 color: $color-primary;
+                display: flex;
+                width: 85%;
 
                 span {
                     margin-right: 10px;
                 }
 
-                img {
-                    width: 14px;
-                    height: 14px;
-                    margin-left: 60px;
+                .wrapper-text-arrow {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    img {
+                        width: 14px;
+                        height: 14px;
+                        margin-left: 60px;
+                    }
                 }
             }
 
@@ -256,6 +292,10 @@ $color-secondary: #ffffff;
             height: 75%;
             width: 80%;
 
+            @include lg {
+                width: 90%;
+            }
+
             a {
                 font-size: 12px;
                 text-decoration: none;
@@ -267,6 +307,10 @@ $color-secondary: #ffffff;
         .copyright {
             margin-top: 10px;
             font-size: 14px;
+
+            @include lg {
+                margin-top: 4px;
+            }
         }
     }
 
@@ -279,6 +323,29 @@ $color-secondary: #ffffff;
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
+
+            @include lg {
+                justify-content: flex-start;
+            }
         }
     }
 }
+
+/* @media screen and (max-width: 1023px) {
+    .footer-main-link {
+        height: 100vh;
+        padding: 40px 22px 30px;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "logo ."
+            "link1 link1"
+            "price language"
+            "link2 link2"
+            "privacy ." ;
+        }
+
+        .copyright {
+            margin-top: 5px;
+        }
+    } */
