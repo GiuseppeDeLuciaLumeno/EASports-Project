@@ -38,6 +38,20 @@ $color-secondary: #ffffff;
                 "privacy .";
         }
 
+        @include md {
+            height: 100vh;
+            padding: 40px 22px 30px;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "logo"
+                "link1"
+                "price" 
+                "language"
+                "link2"
+                "privacy";
+        }
+
     .logo {
         grid-area: logo;
         background-color: brown;
@@ -65,13 +79,24 @@ $color-secondary: #ffffff;
             width: 96%;
         }
 
+        @include md {
+            width: 100%;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
             a {
                 text-decoration: none;
                 margin-right: 2rem;
                 color: $color-primary;
+                line-height: 1.8;
                 
                 @include lg {
                     font-size: 15px;
+                }
+
+                @include md {
+                    margin-right: 1rem;
                 }
             }
         }
@@ -93,6 +118,10 @@ $color-secondary: #ffffff;
         border-radius: 3px;
         width: 95%;
 
+        @include md {
+            width: 100%;
+        }
+
             .button-link {
                 width: 100%;
                 height: 61px;
@@ -109,6 +138,10 @@ $color-secondary: #ffffff;
                 padding: 0;
                 margin-left: 10px;
 
+                @include md {
+                    height: 100%;
+                }
+
                 div {
                 font-size: 15px;
                 }
@@ -119,6 +152,10 @@ $color-secondary: #ffffff;
                 display: flex;
                 justify-content: space-between;
                 width: 85%;
+
+                @include md {
+                    width: 95%;
+                }
 
                 img {
                 width: 14px;
@@ -191,6 +228,10 @@ $color-secondary: #ffffff;
             border-radius: 3px;
             width: 95%;
 
+            @include md {
+                width: 100%;
+            }
+
             .button-link {
                 width: 100%;
                 height: 61px;
@@ -207,6 +248,10 @@ $color-secondary: #ffffff;
                 padding: 0;
                 margin-left: 10px;
 
+                @include md {
+                    height: 100%;
+                }
+
                 div {
                     font-size: 15px;
                 }
@@ -216,6 +261,10 @@ $color-secondary: #ffffff;
                 color: $color-primary;
                 display: flex;
                 width: 85%;
+
+                @include md {
+                    width: 95%;
+                }
 
                 span {
                     margin-right: 10px;
@@ -301,6 +350,7 @@ $color-secondary: #ffffff;
                 text-decoration: none;
                 margin-right: 2rem;
                 color: $color-primary;
+                line-height: 2;
             }
         }
 
@@ -317,7 +367,7 @@ $color-secondary: #ffffff;
     .footer-privacy {
         background-color: cornflowerblue;
         grid-area: privacy;
-
+         
         .image-privacy {
             height: 100%;
             display: flex;
@@ -330,22 +380,3 @@ $color-secondary: #ffffff;
         }
     }
 }
-
-/* @media screen and (max-width: 1023px) {
-    .footer-main-link {
-        height: 100vh;
-        padding: 40px 22px 30px;
-        grid-template-rows: auto;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "logo ."
-            "link1 link1"
-            "price language"
-            "link2 link2"
-            "privacy ." ;
-        }
-
-        .copyright {
-            margin-top: 5px;
-        }
-    } */
