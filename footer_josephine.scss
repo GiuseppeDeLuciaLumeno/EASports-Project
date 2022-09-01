@@ -28,7 +28,7 @@ $color-secondary: #ffffff;
         @include lg {
             height: 100vh;
             padding: 40px 22px 30px;
-            grid-template-rows: 60px 70px 145px 80px 70px;;
+            grid-template-rows: 60px 70px 70px 110px 70px;
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
                 "logo ."
@@ -40,8 +40,9 @@ $color-secondary: #ffffff;
 
         @include md {
             height: 100vh;
+            gap: 20px;
             padding: 40px 22px 30px;
-            grid-template-rows: 60px 70px 145px 145px 140px 70px;;
+            grid-template-rows: 60px 70px 60px 60px 140px 70px;
             grid-template-columns: 1fr;
             grid-template-areas:
                 "logo"
@@ -106,7 +107,11 @@ $color-secondary: #ffffff;
         @include lg {
             display: flex;
             justify-content: flex-start;
-            height: 50%;
+            height: 100%;
+        }
+
+        @include md {
+            height: 100%;
         }
 
         .dropdown {
@@ -219,7 +224,11 @@ $color-secondary: #ffffff;
         @include lg {
             display: flex;
             justify-content: flex-start;
-            height: 50%;
+            height: 100%;
+        }
+
+        @include md {
+            height: 100%;
         }
 
         .dropdown {
@@ -335,6 +344,10 @@ $color-secondary: #ffffff;
 
     .footer-legal-link {
         grid-area: link2;
+
+        @include lg {
+            margin-top: 1rem;
+        }
 
         ul {
             list-style-type: none;
