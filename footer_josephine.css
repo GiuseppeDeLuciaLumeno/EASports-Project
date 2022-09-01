@@ -188,6 +188,10 @@
   cursor: pointer;
   padding: 0px 8px;
 }
+.footer-main-link .dropdown-price .dropdown .link:hover {
+  padding-left: 20px;
+  transition: padding-left 100ms ease-in-out;
+}
 .footer-main-link .dropdown-price .dropdown .button-link:focus + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
@@ -195,7 +199,7 @@
 }
 .footer-main-link .dropdown-price .dropdown .information-grid {
   display: grid;
-  grid-template-columns: repeat(4, max-content);
+  grid-template-columns: repeat(4, 150px);
   gap: 1rem;
 }
 .footer-main-link .dropdown-language {
@@ -278,7 +282,7 @@
 }
 .footer-main-link .dropdown-language .dropdown .dropdown-menu {
   position: absolute;
-  left: -250px;
+  left: -300px;
   top: calc(100% + 0.25rem);
   background-color: white;
   padding: 0.75rem;
@@ -306,6 +310,10 @@
   padding: 0px 8px;
   font-size: 14px;
 }
+.footer-main-link .dropdown-language .dropdown .link:hover {
+  padding-left: 20px;
+  transition: padding-left 150ms ease-in-out;
+}
 .footer-main-link .dropdown-language .dropdown .button-link:focus + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
@@ -313,7 +321,7 @@
 }
 .footer-main-link .dropdown-language .dropdown .information-grid {
   display: grid;
-  grid-template-columns: repeat(3, 160px);
+  grid-template-columns: repeat(3, 180px);
   gap: 1rem;
 }
 .footer-main-link .footer-legal-link {

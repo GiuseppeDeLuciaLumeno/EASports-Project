@@ -204,6 +204,11 @@ $color-secondary: #ffffff;
                 padding: 0px 8px;
             }
 
+            .link:hover {
+                padding-left: 20px;
+                transition: padding-left 100ms ease-in-out;
+            }
+
             .button-link:focus + .dropdown-menu {
                 opacity: 1;
                 transform: translateY(0);
@@ -212,7 +217,7 @@ $color-secondary: #ffffff;
 
             .information-grid {
                 display: grid;
-                grid-template-columns: repeat(4, max-content);
+                grid-template-columns: repeat(4, 150px);
                 gap: 1rem;
             }
         }
@@ -298,7 +303,7 @@ $color-secondary: #ffffff;
 
             .dropdown-menu {
                 position: absolute;
-                left: -250px;
+                left: -300px;
                 top: calc(100% + 0.25rem);
                 background-color: white;
                 padding: 0.75rem;
@@ -328,6 +333,11 @@ $color-secondary: #ffffff;
                 font-size: 14px;
             }
 
+            .link:hover {
+                padding-left: 20px;
+                transition: padding-left 150ms ease-in-out;
+            }
+
             .button-link:focus + .dropdown-menu {
                 opacity: 1;
                 transform: translateY(0);
@@ -336,7 +346,7 @@ $color-secondary: #ffffff;
 
             .information-grid {
                 display: grid;
-                grid-template-columns: repeat(3, 160px);
+                grid-template-columns: repeat(3, 180px);
                 gap: 1rem;
             }
         }
