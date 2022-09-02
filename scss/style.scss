@@ -14,6 +14,10 @@ img{
     max-width: 100%;
 }
 
+.sub-menu-altre-esperienze, .sub-menu-informazioni, .sub-menu-impegni, .sub-menu-risorse {
+
+    display:none;
+}
 
 .flexnav {
     @include size (50vh, 100%);
@@ -40,20 +44,21 @@ img{
 
                 ul {
                     @include flex (flex, space-around, center);
-                    @include space (1rem, 0.5rem);
+                    @include space (1rem, 0.3rem);
                     list-style:none;
                 }
                 li {
                     @include size (2rem, 100%);
                 }
                 a {
-                    @include font (italic, small);
+                    @include font (italic, large);
+                    color:black;
                 }
             }
+           
+    }
     .img {
         display:flex;
         @include size (40vh, 100%);
-    }
-           
     }
 }
