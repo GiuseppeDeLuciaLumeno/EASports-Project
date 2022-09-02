@@ -46,19 +46,27 @@ img{
                     @include flex (flex, space-around, center);
                     @include space (1rem, 0.3rem);
                     list-style:none;
-                }
-                li {
-                    @include size (2rem, 100%);
-                }
-                a {
-                    @include font (italic, large);
-                    color:black;
-                }
-            }
+
+                     li {
+                         @include size (2rem, 100%);
+                        
+                            a {
+                                @include font (italic, large);
+                                color:black;
+                                }
+                                    } 
+                                        }
+                                            }
            
     }
     .img {
         display:flex;
         @include size (40vh, 100%);
+
+            .mainbutton {
+                        @include flex (flex, center, center);
+                        @include size (2rem, 4rem);
+                        background-color:$background-col;
+            }
     }
 }
