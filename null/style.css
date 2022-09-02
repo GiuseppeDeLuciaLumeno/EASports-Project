@@ -1,0 +1,84 @@
+@font-face {
+  font-family: ElectronicArtsDisplay;
+  src: url(../../assets/fonts/Electronic_Arts_Display.otf);
+}
+@font-face {
+  font-family: ElectronicArtsText;
+  src: url(../../assets/fonts/Electronic_Arts_Text.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.flexnav {
+  display: flex;
+  flex-flow: column;
+  height: 30vh;
+  width: 30vw;
+}
+.flexnav .blackline {
+  display: flex;
+  height: 15vh;
+  width: 100%;
+  background-color: black;
+}
+.flexnav .nav {
+  display: flex;
+  height: 15vh;
+  width: 100%;
+  padding: 0 30px;
+  background-color: rgb(235, 219, 219);
+}
+.flexnav .nav ul {
+  display: flex;
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  list-style: none;
+}
+.flexnav .nav ul li {
+  display: flex;
+  display: inline-block;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+.flexnav .nav ul li .sub-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border: 1px solid black;
+  border-bottom: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.flexnav .nav ul li .sub-menu li {
+  width: 200px;
+  font-size: 12px;
+  border-bottom: 1px solid black;
+}
+.flexnav .nav ul li .sub-menu li a {
+  color: black;
+  display: block;
+  padding: 15px 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.flexnav .nav ul .sub-menu a:hover {
+  color: red;
+}
+.flexnav .nav ul .menu:hover .sub-menu {
+  transition: 0.5s;
+  visibility: visible;
+  opacity: 1;
+  top: 50px;
+}
+.flexnav .nav ul a:hover {
+  color: red;
+}/*# sourceMappingURL=style.css.map */

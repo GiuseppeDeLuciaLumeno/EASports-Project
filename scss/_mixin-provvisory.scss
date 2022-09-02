@@ -1,0 +1,14 @@
+@mixin flex ($display, $justify, $align) {
+    display:$display;
+    justify-content:$justify;
+    align-items:$align;
+}
+
+@mixin size ($height, $width) {
+    height:$height;
+    width:$widht;
+}
+@mixin color ($color, $background){
+    color:$color;
+    background-color:$background;
+}
