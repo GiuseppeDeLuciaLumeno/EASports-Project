@@ -2,6 +2,7 @@
 @import "mixin-provvisory";
 @import "variables-provvisory";
 
+
 // reset
 *{
     margin: 0;
@@ -15,22 +16,44 @@ img{
 
 
 .flexnav {
-    @include size (50vh, 50vw);
+    @include size (50vh, 100%);
     @include flex (flex, flex-start, center);
     flex-flow:column;
 
     .blackline {
-        background-color:black;
-        @include flex (flex);
-        flex:10%;
+        background-color:$nav-col;
+        display:flex;
+        @include size(5vh, 100%);
     }
     .nav {
-        @include flex (flex);
-        background-color:$nav-col;
+        display:flex;
+        @include size (5vh, 100%);
+        
 
-            &:ul {
-                @include flex (flex, space-around, center);
-                
+            .logo {
+                @include flex (flex, flex-start, center);
+                flex:15%;
+                 }
+            .navlist {
+                @include flex (flex, flex-start, center);
+                flex:85%;
+
+                ul {
+                    @include flex (flex, space-around, center);
+                    @include space (1rem, 0.5rem);
+                    list-style:none;
+                }
+                li {
+                    @include size (2rem, 100%);
+                }
+                a {
+                    @include font (italic, small);
+                }
             }
+    .img {
+        display:flex;
+        @include size (40vh, 100%);
+    }
+           
     }
 }
