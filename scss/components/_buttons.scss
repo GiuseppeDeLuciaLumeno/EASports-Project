@@ -1,0 +1,25 @@
+//Giochi in Evidenza
+
+.btn-container {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    margin: 0rem 0rem 5rem;
+}
+
+.btn {
+    cursor: pointer;
+    background: none;
+    border: 1, 5px solid black;
+    border-radius: 3px;
+    padding: 15px 30px;
+    transition: padding 0.1s;
+    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #161616;
+    opacity: .9;
+
+    &:hover {
+        padding: 18px 35px;
+    }
+}
