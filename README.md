@@ -21,8 +21,8 @@
 ---
 ## Each developper's gonna be working in scss folder
 ---
-# **`❤Important❤`**: Use this sass command to make sass folder watching the whole project's folder: **_sass -w scss:css_** (now every modify in styles sheets will be updated automatically)
 
+# **`❤️Important❤️`**: Use this sass command to make sass folder watching the whole project's folder: **_sass -w scss:css_** (now every modify in styles sheets will be updated automatically)
 
 ## 🚀 About Us
 * Develhope - Team 3
