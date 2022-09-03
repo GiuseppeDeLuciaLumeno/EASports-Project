@@ -21,7 +21,7 @@ img {
 .section-wrapper h1 {
   font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
   font-weight: 900;
-  font-size: 2.75rem;
+  font-size: rem(44px);
   color: #161616;
   line-height: 1.5;
 }
