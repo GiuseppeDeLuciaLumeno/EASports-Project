@@ -1,15 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  /* to fix img bottom line */
-}
-
 @font-face {
   font-family: ElectronicArtsDisplay;
   src: url(../../assets/fonts/Electronic_Arts_Display.otf);
@@ -18,12 +6,208 @@ img {
   font-family: ElectronicArtsText;
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul.list,
+ol.list {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 .section-wrapper h1 {
   font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
   font-weight: 900;
   font-size: rem(44px);
   color: #161616;
   line-height: 1.5;
+}
+
+.home-h3 {
+  font-size: 2rem;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+}
+@media (min-width: 48rem) {
+  .home-h3 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-h3 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-h3 {
+    font-size: 2.75rem;
+  }
+}
+
+.home-h4 {
+  font-size: 1.25rem;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+}
+@media (min-width: 48rem) {
+  .home-h4 {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-h4 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-h4 {
+    font-size: 1.5rem;
+  }
+}
+
+.home-h5 {
+  font-size: 0.875rem;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+}
+.home-h5:first-child {
+  color: hsl(0deg, 100%, 64%);
+}
+@media (min-width: 48rem) {
+  .home-h5 {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-h5 {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-h5 {
+    font-size: 1rem;
+  }
+}
+
+.home-p {
+  font-size: 1rem;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsla(0deg, 0%, 9%, 0.8);
+}
+@media (min-width: 48rem) {
+  .home-p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-p {
+    font-size: 1.125rem;
+  }
+}
+
+.home-tabs {
+  font-size: 1rem;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsla(0deg, 0%, 9%, 0.8);
+  text-decoration: none;
+}
+@media (min-width: 48rem) {
+  .home-tabs {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-tabs {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-tabs {
+    font-size: 1.125rem;
+  }
+}
+
+.home-cta {
+  font-size: 1rem;
+}
+@media (min-width: 48rem) {
+  .home-cta {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-cta {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-cta {
+    font-size: 1.125rem;
+  }
 }
 
 .btn-container {

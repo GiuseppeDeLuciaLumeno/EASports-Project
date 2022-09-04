@@ -1,6 +1,5 @@
 //Giochi in evidenza
-
-.section-wrapper{
+.section-wrapper {
     h1 {
         font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
         font-weight: 900;
@@ -9,3 +8,120 @@
         line-height: 1.5;
     }
 }
+
+
+// EA Homepage - Ultime Notizie --------------------------------------------------------------------------------------------
+
+// font-sizes + responsive
+.home-h3 {
+    font-size: map-get($map: $fs-h3, $key: mobile);
+    font-family: map-get($map: $font-family, $key: heading);
+    color: map-get($map: $color, $key: dark);
+
+    @include breakpoint(tablet) {
+        font-size: map-get($map: $fs-h3, $key: tablet);
+    }
+    
+    @include breakpoint(desktop) {
+        font-size: map-get($map: $fs-h3, $key: desktop);
+    }
+    
+    @include breakpoint(desktop-large) {
+        font-size: map-get($map: $fs-h3, $key: desktop-large);
+    }
+}
+
+.home-h4 {
+    font-size: map-get($map: $fs-h4, $key: mobile);
+    font-family: map-get($map: $font-family, $key: heading);
+    color: map-get($map: $color, $key: dark);
+
+    @include breakpoint(tablet) {
+        font-size: map-get($map: $fs-h4, $key: tablet);
+    }
+    
+    @include breakpoint(desktop) {
+        font-size: map-get($map: $fs-h4, $key: desktop);
+    }
+    
+    @include breakpoint(desktop-large) {
+        font-size: map-get($map: $fs-h4, $key: desktop-large);
+    }
+}
+
+.home-h5 {
+    font-size: map-get($map: $fs-h5, $key: mobile);
+    font-family: map-get($map: $font-family, $key: heading);
+    color: map-get($map: $color, $key: dark);
+
+    &:first-child {
+        color: map-get($map: $color, $key: accent);
+    }
+
+    @include breakpoint(tablet) {
+        font-size: map-get($map: $fs-h5, $key: tablet);
+    }
+    
+    @include breakpoint(desktop) {
+        font-size: map-get($map: $fs-h5, $key: desktop);
+    }
+    
+    @include breakpoint(desktop-large) {
+        font-size: map-get($map: $fs-h5, $key: desktop-large);
+    }
+}
+
+.home-p {
+    font-size: map-get($map: $fs-p, $key: mobile);
+    font-family: map-get($map: $font-family, $key: text);
+    color: map-get($map: $color, $key: light-dark);
+
+    @include breakpoint(tablet) {
+        font-size: map-get($map: $fs-p, $key: tablet);
+    }
+    
+    @include breakpoint(desktop) {
+        font-size: map-get($map: $fs-p, $key: desktop);
+    }
+    
+    @include breakpoint(desktop-large) {
+        font-size: map-get($map: $fs-p, $key: desktop-large);
+    }
+}
+
+.home-tabs {
+    font-size: map-get($map: $fs-tabs, $key: mobile);
+    font-family: map-get($map: $font-family, $key: text);
+    color: map-get($map: $color, $key: light-dark);
+    text-decoration: none;
+
+    @include breakpoint(tablet) {
+        font-size: map-get($map: $fs-tabs, $key: tablet);
+    }
+    
+    @include breakpoint(desktop) {
+        font-size: map-get($map: $fs-tabs, $key: desktop);
+    }
+    
+    @include breakpoint(desktop-large) {
+        font-size: map-get($map: $fs-tabs, $key: desktop-large);
+    }
+}
+
+.home-cta {
+    font-size: map-get($map: $fs-cta, $key: mobile);
+
+    @include breakpoint(tablet) {
+        font-size: map-get($map: $fs-cta, $key: tablet);
+    }
+    
+    @include breakpoint(desktop) {
+        font-size: map-get($map: $fs-cta, $key: desktop);
+    }
+    
+    @include breakpoint(desktop-large) {
+        font-size: map-get($map: $fs-cta, $key: desktop-large);
+    }
+}
+
+// EA Homepage - Ultime Notizie - fine --------------------------------------------------------------------------------------------
