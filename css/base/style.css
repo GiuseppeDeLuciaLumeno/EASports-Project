@@ -1332,7 +1332,9 @@ img {
     display: flex;
     position: absolute;
     flex-direction: column;
-    padding: 0px;
+    padding: 32px 31, 920px 32px 31, 920px;
+    /*non prende le misure giuste del padding, 
+    Exenia anche non sa come mai*/
   }
   .scritta_play {
     display: flex;
