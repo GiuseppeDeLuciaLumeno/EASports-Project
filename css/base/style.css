@@ -553,6 +553,22 @@ select {
   transform: translateY(-55px);
 }
 
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "one" "two" "three" "four" "five" "six";
+}
+@media (min-width: 48rem) {
+  .grid-container {
+    grid-template-areas: "one two" "three four" "five six";
+  }
+}
+@media (min-width: 64rem) {
+  .grid-container {
+    grid-template-areas: "one two three" "four five six";
+  }
+}
+
 .flexnav {
   display: flex;
   flex-flow: column;

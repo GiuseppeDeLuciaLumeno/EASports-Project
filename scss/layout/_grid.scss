@@ -1,0 +1,25 @@
+// Reusable generic 6-item grid layout
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: 
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  'six';
+
+  @include breakpoint(tablet) {
+    grid-template-areas: 
+    'one two'
+    'three four'
+    'five six';
+  }
+
+  @include breakpoint(desktop) {
+    grid-template-areas: 
+    'one two three'
+    'four five six';
+  }
+}
