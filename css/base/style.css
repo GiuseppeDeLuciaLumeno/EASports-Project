@@ -410,6 +410,170 @@ img {
   display: none;
 }
 
+/* Footer Giorgia (PLAY - GENITORI - SOCIAL)*/
+.container_tot {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container_gio {
+  display: flex;
+  position: relative;
+  height: 410px;
+  width: 100vw;
+}
+
+.blocco_bgplay {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+}
+
+.bg_play {
+  width: 100vw;
+  height: 410px;
+}
+
+.play {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  padding: 130px 0px 0px 410px;
+}
+
+.scritta_play {
+  display: flex;
+  position: relative;
+  color: white;
+  width: 544px;
+  height: 54px;
+  font-size: 27px;
+}
+
+.h6_play {
+  margin-bottom: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_play {
+  width: 240px;
+  height: 101px;
+}
+
+.bottone_play {
+  width: 150px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottone_play:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 70px;
+}
+
+.iscriviti_subito {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.container2_gio {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.blocco_genitori {
+  display: flex;
+  flex-direction: row;
+  background-color: #6FB0D6;
+  width: 100vw;
+  height: 112px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.genitori_gio {
+  width: 500px;
+  height: 70.22;
+  color: black;
+}
+
+.bottone_genitori {
+  width: 150px;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottone_genitori:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 70px;
+}
+
+.scopridipiu {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.blocco_link_gio {
+  display: flex;
+  flex-direction: row;
+  background-color: #EAEAEA;
+  width: 100vw;
+  height: 200px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.linkf_gio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 884px;
+  height: 81px;
+}
+
+.link_gio {
+  text-decoration: none;
+  color: black;
+  margin: 8px 48px 5px 0px;
+}
+
+.link_gio:hover {
+  text-decoration: none;
+  color: orangered;
+}
+
+.social_logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 /* -------------------------------------Reponsivity--------------------------------- */
 @media only screen and (min-width: 200px) and (max-width: 250px) {
   .section-wrapper {
