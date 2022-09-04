@@ -1,0 +1,85 @@
+@font-face {
+  font-family: ElectronicArtsDisplay;
+  src: url(../../assets/fonts/Electronic_Arts_Display.otf);
+}
+@font-face {
+  font-family: ElectronicArtsText;
+  src: url(../../assets/fonts/Electronic_Arts_Text.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sub-menu-altre-esperienze, .sub-menu-informazioni, .sub-menu-impegni, .sub-menu-risorse {
+  display: none;
+}
+
+.flexnav {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column;
+}
+.flexnav .blackline {
+  background-color: rgb(9, 3, 3);
+  display: flex;
+  height: 5vh;
+  width: 100%;
+}
+.flexnav .nav {
+  display: flex;
+  height: 5vh;
+  width: 100%;
+}
+.flexnav .nav .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 15%;
+}
+.flexnav .nav .navlist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 85%;
+}
+.flexnav .nav .navlist ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem;
+  gap: 0.3rem;
+  list-style: none;
+}
+.flexnav .nav .navlist ul li {
+  height: 2rem;
+  width: 100%;
+}
+.flexnav .nav .navlist ul li a {
+  font-style: italic;
+  font-size: large;
+  color: black;
+}
+.flexnav .img {
+  display: flex;
+  height: 40vh;
+  width: 100%;
+}
+.flexnav .img .mainbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 4rem;
+  background-color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
