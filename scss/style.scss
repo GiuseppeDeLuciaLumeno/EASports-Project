@@ -44,9 +44,9 @@ img{
                 flex:85%;
                 border:1px solid black;
                 ul {@include flex (flex, flex-start, center);
-                    border:1px solid black;
+                    
                     @include size (2rem, 100%);
-                    @include space (1rem, 0.3rem);
+                    @include space (0.5rem, 0.2rem);
                     list-style:none;
 
                      li {
