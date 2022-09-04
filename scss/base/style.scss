@@ -134,7 +134,7 @@
     height: 101px;
 }
 
-.bottone_play{
+/*.bottone_play{
     width: 150px;
     height: 60px;
     border: 2px solid white;
@@ -157,7 +157,33 @@
     text-decoration: none;
     color: white;
     font-size: 18px;
+}*/
+
+.bottone_play1 {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 0rem 0rem;
 }
+
+.iscriviti_subito1 {
+    cursor: pointer;
+    background: none;
+    border: 1, 5px solid white;
+    border-radius: 3px;
+    padding: 15px 30px;
+    transition: padding 0.1s;
+    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    opacity: .9;
+
+    &:hover {
+        padding: 18px 35px;
+    }
+}
+
 
 .container2_gio{
     display: flex;
@@ -184,7 +210,7 @@
     color: black;
 }
 
-.bottone_genitori{
+/*.bottone_genitori{
     width: 150px;
     height: 60px;
     border: 2px solid black;
@@ -206,6 +232,31 @@
     text-decoration: none;
     color: black;
     font-size: 18px;
+}*/
+
+.bottone_genitori1 {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 0rem 0rem;
+}
+
+.scopridipiu1 {
+    cursor: pointer;
+    background: none;
+    border: 1, 5px solid black;
+    border-radius: 3px;
+    padding: 15px 30px;
+    transition: padding 0.1s;
+    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #161616;
+    opacity: .9;
+
+    &:hover {
+        padding: 18px 35px;
+    }
 }
 
 .blocco_link_gio{

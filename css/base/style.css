@@ -471,29 +471,52 @@ img {
   height: 101px;
 }
 
-.bottone_play {
-  width: 150px;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*.bottone_play{
+    width: 150px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.bottone_play:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 70px;
+.bottone_play:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 70px;
 }
 
-.iscriviti_subito {
-  display: block;
-  text-decoration: none;
-  color: white;
+.iscriviti_subito{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}*/
+.bottone_play1 {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0rem 0rem 0rem;
+}
+
+.iscriviti_subito1 {
+  cursor: pointer;
+  background: none;
+  border: 1, 5px solid white;
+  border-radius: 3px;
+  padding: 15px 30px;
+  transition: padding 0.1s;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 18px;
+  color: white;
+  opacity: 0.9;
+}
+.iscriviti_subito1:hover {
+  padding: 18px 35px;
 }
 
 .container2_gio {
@@ -518,29 +541,51 @@ img {
   color: black;
 }
 
-.bottone_genitori {
-  width: 150px;
-  height: 60px;
-  border: 2px solid black;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*.bottone_genitori{
+    width: 150px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.bottone_genitori:hover {
+.bottone_genitori:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 70px;
+}
+.scopridipiu{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}*/
+.bottone_genitori1 {
+  height: 75px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 160px;
-  height: 70px;
+  justify-content: center;
+  margin: 0rem 0rem 0rem;
 }
 
-.scopridipiu {
-  display: block;
-  text-decoration: none;
-  color: black;
+.scopridipiu1 {
+  cursor: pointer;
+  background: none;
+  border: 1, 5px solid black;
+  border-radius: 3px;
+  padding: 15px 30px;
+  transition: padding 0.1s;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 18px;
+  color: #161616;
+  opacity: 0.9;
+}
+.scopridipiu1:hover {
+  padding: 18px 35px;
 }
 
 .blocco_link_gio {
