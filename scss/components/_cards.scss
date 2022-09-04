@@ -107,3 +107,57 @@
     }
 
 }
+
+// Ultime novità - reusable card styling -------------------------------------
+.card {
+    box-shadow: 0 3px 10px -2px map-get($map: $color, $key: shadow);
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        display: block;
+
+        .img {
+            display: none;
+        }
+
+        .content {
+            padding: 1.5rem 1rem;
+
+            .info {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card-p {
+                display: none;
+            }
+        }
+    }
+
+    @include breakpoint(tablet) {
+        a {
+            .img {
+                display: block;
+            }
+
+            .content {
+                padding: 1.5rem 1.5rem;
+
+                .info {
+                    flex-direction: row;
+                    gap: 1rem;
+                }
+
+                .card-h4 {
+                    text-align: left;
+                }
+
+                .card-p {
+                    display: block;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

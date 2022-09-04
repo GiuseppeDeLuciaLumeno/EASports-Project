@@ -107,10 +107,14 @@ select {
   font-size: 1.25rem;
   font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
   color: hsl(0deg, 0%, 9%);
+  margin-top: 5px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
 }
 @media (min-width: 48rem) {
   .home-h4 {
     font-size: 1.25rem;
+    letter-spacing: 0.5px;
   }
 }
 @media (min-width: 64rem) {
@@ -127,7 +131,10 @@ select {
 .home-h5 {
   font-size: 0.875rem;
   font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
-  color: hsl(0deg, 0%, 9%);
+  font-weight: 600;
+  line-height: 19px;
+  color: hsla(0deg, 0%, 9%, 0.7);
+  margin-block: 0;
 }
 .home-h5:first-child {
   color: hsl(0deg, 100%, 64%);
@@ -151,7 +158,9 @@ select {
 .home-p {
   font-size: 1rem;
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  color: hsla(0deg, 0%, 9%, 0.8);
+  line-height: 1.5rem;
+  color: hsla(0deg, 0%, 9%, 0.7);
+  margin-top: 6px;
 }
 @media (min-width: 48rem) {
   .home-p {
@@ -161,6 +170,7 @@ select {
 @media (min-width: 64rem) {
   .home-p {
     font-size: 1.125rem;
+    line-height: 1.7rem;
   }
 }
 @media (min-width: 91rem) {
@@ -172,7 +182,7 @@ select {
 .home-tabs {
   font-size: 1rem;
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  color: hsla(0deg, 0%, 9%, 0.8);
+  color: hsla(0deg, 0%, 9%, 0.7);
   text-decoration: none;
 }
 @media (min-width: 48rem) {
@@ -551,6 +561,47 @@ select {
 }
 .the-sims4-card:hover .the-sims4-logo {
   transform: translateY(-55px);
+}
+
+.card {
+  box-shadow: 0 3px 10px -2px hsla(0deg, 0%, 0%, 0.5);
+  text-align: center;
+}
+.card a {
+  text-decoration: none;
+  display: block;
+}
+.card a .img {
+  display: none;
+}
+.card a .content {
+  padding: 1.5rem 1rem;
+}
+.card a .content .info {
+  display: flex;
+  flex-direction: column;
+}
+.card a .content .card-p {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .card a .img {
+    display: block;
+  }
+  .card a .content {
+    padding: 1.5rem 1.5rem;
+  }
+  .card a .content .info {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .card a .content .card-h4 {
+    text-align: left;
+  }
+  .card a .content .card-p {
+    display: block;
+    text-align: left;
+  }
 }
 
 .grid-container {
