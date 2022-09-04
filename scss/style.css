@@ -16,7 +16,7 @@ img {
   max-width: 100%;
 }
 
-.sub-menu-altre-esperienze, .sub-menu-informazioni, .sub-menu-impegni, .sub-menu-risorse {
+.sub-menu-altreesperienze, .sub-menu-informazioni, .sub-menu-impegni, .sub-menu-risorse {
   display: none;
 }
 
@@ -50,11 +50,15 @@ img {
   justify-content: flex-start;
   align-items: center;
   flex: 85%;
+  border: 1px solid black;
 }
 .flexnav .nav .navlist ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  border: 1px solid black;
+  height: 2rem;
+  width: 100%;
   margin: 1rem;
   gap: 0.3rem;
   list-style: none;
@@ -67,6 +71,9 @@ img {
   font-style: italic;
   font-size: large;
   color: black;
+}
+.flexnav .nav a:hover {
+  color: white;
 }
 .flexnav .img {
   display: flex;

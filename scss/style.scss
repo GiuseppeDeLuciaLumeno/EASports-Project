@@ -14,10 +14,11 @@ img{
     max-width: 100%;
 }
 
-.sub-menu-altre-esperienze, .sub-menu-informazioni, .sub-menu-impegni, .sub-menu-risorse {
+.sub-menu-altreesperienze, .sub-menu-informazioni, .sub-menu-impegni, .sub-menu-risorse {
 
     display:none;
 }
+
 
 .flexnav {
     @include size (50vh, 100%);
@@ -41,23 +42,25 @@ img{
             .navlist {
                 @include flex (flex, flex-start, center);
                 flex:85%;
-
-                ul {
-                    
+                border:1px solid black;
+                ul {@include flex (flex, flex-start, center);
+                    border:1px solid black;
+                    @include size (2rem, 100%);
                     @include space (1rem, 0.3rem);
                     list-style:none;
 
                      li {
                          @include size (2rem, 100%);
                         
-                            a {
+                            a { 
                                 @include font (italic, large);
                                 color:black;
                                 }
+                           
                                     } 
                                         }
                                             }
-           
+                                            a:hover {color:white;}
     }
     .img {
         display:flex;
