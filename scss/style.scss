@@ -42,18 +42,17 @@ img{
             .navlist {
                 @include flex (flex, flex-start, center);
                 flex:85%;
-                border:1px solid black;
+               
                 ul {@include flex (flex, flex-start, center);
-                    
                     @include size (2rem, 100%);
-                    @include space (0.5rem, 0.2rem);
+                    @include space (1rem, 1.5rem);
                     list-style:none;
 
                      li {
-                         @include size (2rem, 100%);
+                        
                         
                             a { 
-                                @include font (italic, large);
+                                font-size:large;
                                 color:black;
                                 }
                            
