@@ -506,7 +506,7 @@ img {
 .iscriviti_subito1 {
   cursor: pointer;
   background: none;
-  border: 1, 5px solid white;
+  border: 1px solid white;
   border-radius: 3px;
   padding: 15px 30px;
   transition: padding 0.1s;
@@ -1377,7 +1377,7 @@ img {
     display: flex;
     position: absolute;
     flex-direction: column;
-    padding: 32px 31, 920px 32px 31, 920px;
+    padding: 32px 31px 32px 31px;
     /*non prende le misure giuste del padding, 
     Exenia anche non sa come mai*/
   }
