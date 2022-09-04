@@ -15,11 +15,17 @@
     'one two'
     'three four'
     'five six';
+    gap: 1.5rem;
   }
 
   @include breakpoint(desktop) {
     grid-template-areas: 
     'one two three'
     'four five six';
+    gap: 1rem;
+  }
+  
+  @include breakpoint(desktop-large) {
+    width: 70rem;
   }
 }

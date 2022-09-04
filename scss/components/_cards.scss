@@ -112,6 +112,7 @@
 .card {
     box-shadow: 0 3px 10px -2px map-get($map: $color, $key: shadow);
     text-align: center;
+    background-color: map-get($map: $color, $key: white);
 
     a {
         text-decoration: none;

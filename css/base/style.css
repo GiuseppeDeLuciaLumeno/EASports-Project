@@ -566,6 +566,7 @@ select {
 .card {
   box-shadow: 0 3px 10px -2px hsla(0deg, 0%, 0%, 0.5);
   text-align: center;
+  background-color: hsl(0deg, 0%, 100%);
 }
 .card a {
   text-decoration: none;
@@ -612,12 +613,48 @@ select {
 @media (min-width: 48rem) {
   .grid-container {
     grid-template-areas: "one two" "three four" "five six";
+    gap: 1.5rem;
   }
 }
 @media (min-width: 64rem) {
   .grid-container {
     grid-template-areas: "one two three" "four five six";
+    gap: 1rem;
   }
+}
+@media (min-width: 91rem) {
+  .grid-container {
+    width: 70rem;
+  }
+}
+
+.section-container {
+  padding-inline: 7.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 48rem) {
+  .section-container {
+    padding-inline: calc(12px + 7.8125vw);
+  }
+}
+@media (min-width: 64rem) {
+  .section-container {
+    padding-inline: calc(8px + 7.4218vw);
+  }
+}
+@media (min-width: 91rem) {
+  .section-container {
+    padding-inline: calc((100vw - 1120px) / 2);
+  }
+}
+
+#ultime-novita {
+  background-color: hsl(0deg, 0%, 95%);
+}
+#ultime-novita .cta {
+  margin-top: 2.5rem;
 }
 
 .flexnav {
