@@ -76,6 +76,7 @@
     height: 100vh;
     width: 100vw;
 
+
 }
 
 .container_gio{
@@ -105,6 +106,12 @@
     flex-direction: column;
    padding: 130px 0px 0px 410px;
   
+  /* @media only screen and (max-width:425px) {
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+    padding: 0px;
+   } */
 }
 
 .scritta_play{
@@ -234,13 +241,77 @@
     color: orangered;
 }
 
+.blocco_social{
+    display: flex;
+    flex-direction: column;
+}
+
 .social_logo{
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 13px;
+}
+.blocco_loghi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
+.facebooklogo{
+    width: 22px;
+    height: 22px;
+}
 
+.facebooklogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.twitterlogo{
+    width: 22px;
+    height: 22px;
+}
+
+.twitterlogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.youtubelogo{
+    width: 22px;
+    height: 22px;
+}
+
+.youtubelogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.instagramlogo{
+    width: 22px;
+    height: 22px;
+}
+
+.instagramlogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.twitchlogo{
+    width: 22px;
+    height: 22px;
+}
+
+.twitchlogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
 
 /* -------------------------------------Reponsivity--------------------------------- */
 @import "../responsivity/media";
