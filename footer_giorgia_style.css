@@ -30,6 +30,12 @@
   position: absolute;
   flex-direction: column;
   padding: 130px 0px 0px 410px;
+  /* @media only screen and (max-width:425px) {
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+    padding: 0px;
+   } */
 }
 
 .scritta_play {
@@ -284,7 +290,7 @@
     display: flex;
     position: absolute;
     flex-direction: column;
-    padding: 32px 31.92px 32px 31.92px;
+    padding: 0px;
   }
   .scritta_play {
     display: flex;
