@@ -1,0 +1,76 @@
+@use "sass:math";
+
+@import "./reset";
+
+@import "../abstract/function";
+@import "../abstract/mixin";
+@import "../abstract/variables";
+
+@import "../tipography/font-face";
+@import "../tipography/tipography";
+
+@import "../components/buttons";
+@import "../components/cards";
+@import "../components/menu";
+@import "../components/navbar";
+@import "../components/sidebar";
+
+@import "../layout/headers";
+@import "../layout/footers";
+
+
+
+.flexnav {
+    display: flex;
+    flex-flow: column;
+    height: 30vh;
+    width: 30vw;
+
+    .blackline {
+        display: flex;
+        flex: 1;
+        background-color: black;
+    }
+
+    .nav {
+        display: flex;
+        flex: 1;
+        background-color: rgb(235, 219, 219);
+
+        ul {
+            display: flex;
+            flex: 1;
+
+            li {
+                display: flex;
+                flex-basis: 100%;
+                justify-content: flex-start;
+                gap: 1rem;
+
+                a {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+
+/* Giochi in evidenza style */
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bi {
+    display: none;
+}
+
+
+
+
+
+
+/* -------------------------------------Reponsivity--------------------------------- */
+@import "../responsivity/media";
