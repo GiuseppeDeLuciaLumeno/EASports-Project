@@ -42,15 +42,17 @@
     @include breakpoint(tablet) {
         font-size: map-get($map: $fs-h4, $key: tablet);
         letter-spacing: 0.5px;
-
+        line-height: 25px;
     }
     
     @include breakpoint(desktop) {
         font-size: map-get($map: $fs-h4, $key: desktop);
+        line-height: 30px;
     }
     
     @include breakpoint(desktop-large) {
         font-size: map-get($map: $fs-h4, $key: desktop-large);
+        line-height: 32.4px;
     }
 }
 

@@ -11,6 +11,7 @@
   'six';
 
   @include breakpoint(tablet) {
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
     'one two'
     'three four'
@@ -19,6 +20,7 @@
   }
 
   @include breakpoint(desktop) {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
     'one two three'
     'four five six';
@@ -26,6 +28,6 @@
   }
   
   @include breakpoint(desktop-large) {
-    width: 70rem;
+    width: 68rem;
   }
 }
