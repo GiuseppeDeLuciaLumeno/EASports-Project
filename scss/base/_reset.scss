@@ -16,6 +16,8 @@ h4,
 p,
 figure,
 blockquote,
+ul,
+ol,
 dl,
 dd {
   margin: 0;
@@ -25,6 +27,7 @@ dd {
 ul.list,
 ol.list {
   list-style: none;
+  padding: 0;
 }
 
 /* Set core body defaults */

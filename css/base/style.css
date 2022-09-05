@@ -22,6 +22,8 @@ h4,
 p,
 figure,
 blockquote,
+ul,
+ol,
 dl,
 dd {
   margin: 0;
@@ -31,6 +33,7 @@ dd {
 ul.list,
 ol.list {
   list-style: none;
+  padding: 0;
 }
 
 /* Set core body defaults */
@@ -614,6 +617,64 @@ select {
   }
 }
 
+.slider-tab-container {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-tab-container .slider-tab {
+  padding-inline: 1rem;
+}
+
+.slider-tab-container + .slider-tab-container .slider-tab {
+  border-left: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(1) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(2) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(3) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(4) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(5) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(6) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(7) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container.active {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+  position: relative;
+}
+.slider-tab-container.active::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  width: 80%;
+  height: 2px;
+  background-color: hsl(0deg, 100%, 64%);
+}
+.slider-tab-container.active .slider-tab {
+  color: hsl(0deg, 0%, 42%);
+}
+
 .grid-container {
   display: grid;
   gap: 1rem;
@@ -644,6 +705,7 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 @media (min-width: 48rem) {
   .section-container {
@@ -661,11 +723,33 @@ select {
   }
 }
 
+.section-container {
+  position: relative;
+}
+.section-container .slider-container ul {
+  display: flex;
+}
+.section-container .slider-container ul li {
+  list-style: none;
+}
+.section-container .slider-container .border-bottom {
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  margin-top: -2px;
+  left: 0;
+  background-color: hsla(0deg, 0%, 0%, 0.08);
+}
+
 #ultime-novita {
   background-color: hsl(0deg, 0%, 95%);
 }
 #ultime-novita .cta {
   margin-top: 2.5rem;
+}
+
+#slider-container {
+  align-self: flex-start;
 }
 
 .flexnav {

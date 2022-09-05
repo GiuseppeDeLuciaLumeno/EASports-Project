@@ -1,0 +1,28 @@
+// SLIDER LAYOUT - to use with 'slider's tabs' component --------------------------
+.section-container {
+  position: relative;
+
+  .slider-container {
+    ul {
+      display: flex;
+  
+      li {
+        list-style: none;
+  
+        a {
+          
+        }
+      }
+    }
+  
+    .border-bottom {
+      position: absolute;
+      width: 100vw;
+      height: 2px;
+      margin-top: -2px;
+      left: 0;
+      background-color: map-get($map: $color, $key: borders);
+    }
+  }
+}
+// SLIDER LAYOUT - END ---------------------------------------------------------
