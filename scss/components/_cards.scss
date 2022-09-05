@@ -1,0 +1,109 @@
+//Giochi in Evidenza
+
+.cards-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 1.2rem;
+}
+
+.fifa23-card {
+    @include cards(relative);
+
+    .fifa23-logo {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        transition: all 0.4s ease;
+        z-index: 1;
+
+    }
+
+    &:hover .fifa23-logo {
+        transform: translateY(-70px);
+    }
+}
+
+.apex-mobile-card {
+    @include cards(relative);
+
+    .apex-mobile-logo {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transition: all 0.4s ease;
+        z-index: 1;
+
+    }
+
+    &:hover .apex-mobile-logo {
+        transform: translateY(-70px);
+    }
+
+}
+
+.f1-22-card {
+    @include cards(relative);
+
+    .f1-22-logo {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transition: all 0.4s ease;
+        z-index: 1;
+    }
+
+    &:hover .f1-22-logo {
+        transform: translateY(-60px);
+    }
+}
+
+.batterfield-card {
+    @include cards(relative);
+
+    .batterfield-logo {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transition: all 0.4s ease;
+        z-index: 1;
+    }
+
+    &:hover .batterfield-logo {
+        transform: translateY(-40px);
+    }
+}
+
+.apex-card {
+    @include cards(relative);
+
+    .apex-logo {
+        position: absolute;
+        top: 40%;
+        left: 37%;
+        transition: all 0.4s ease;
+        z-index: 1;
+    }
+
+    &:hover .apex-logo {
+        transform: translateY(-70px);
+    }
+}
+
+.the-sims4-card {
+    @include cards(relative);
+
+    .the-sims4-logo {
+        position: absolute;
+        top: 25%;
+        left: 30%;
+        transition: all 0.4s ease;
+        z-index: 1;
+    }
+
+    &:hover .the-sims4-logo {
+        transform: translateY(-55px);
+    }
+
+}

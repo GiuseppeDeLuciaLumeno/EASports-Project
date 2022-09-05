@@ -1,0 +1,368 @@
+@use "sass:math";
+
+@import "./reset";
+
+@import "../abstract/function";
+@import "../abstract/mixin";
+@import "../abstract/variables";
+
+@import "../tipography/font-face";
+@import "../tipography/tipography";
+
+@import "../components/buttons";
+@import "../components/cards";
+@import "../components/menu";
+@import "../components/navbar";
+@import "../components/sidebar";
+
+@import "../layout/headers";
+@import "../layout/footers";
+
+
+
+.flexnav {
+    display: flex;
+    flex-flow: column;
+    height: 30vh;
+    width: 30vw;
+
+    .blackline {
+        display: flex;
+        flex: 1;
+        background-color: black;
+    }
+
+    .nav {
+        display: flex;
+        flex: 1;
+        background-color: rgb(235, 219, 219);
+
+        ul {
+            display: flex;
+            flex: 1;
+
+            li {
+                display: flex;
+                flex-basis: 100%;
+                justify-content: flex-start;
+                gap: 1rem;
+
+                a {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+
+/* Giochi in evidenza style */
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bi {
+    display: none;
+}
+
+/* Footer Giorgia (PLAY - GENITORI - SOCIAL)*/
+
+.container_tot{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+
+}
+
+.container_gio{
+    display: flex;
+    position: relative;
+    height: 410px;
+    width: 100vw;
+
+}
+
+.blocco_bgplay{
+    width: auto;
+    height: auto;
+    display: flex;
+    position: absolute;
+    
+}
+
+.bg_play{
+    width: 100vw;
+    height: 410px;
+}
+
+.play{
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+   padding: 130px 0px 0px 410px;
+  
+  /* @media only screen and (max-width:425px) {
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+    padding: 0px;
+   } */
+}
+
+.scritta_play{
+    display: flex;
+    position:relative;
+    color: white;
+    width: 544px;
+    height: 54px;
+    font-size: 27px;
+}
+
+.h6_play{
+    margin-bottom: 24px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.img_play{
+    width: 240px;
+    height: 101px;
+}
+
+/*.bottone_play{
+    width: 150px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottone_play:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 70px;
+}
+
+.iscriviti_subito{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}*/
+
+.bottone_play1 {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 0rem 0rem;
+}
+
+.iscriviti_subito1 {
+    cursor: pointer;
+    background: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 15px 30px;
+    transition: padding 0.1s;
+    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    opacity: .9;
+
+    &:hover {
+        padding: 18px 35px;
+    }
+}
+
+
+.container2_gio{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+}
+
+
+.blocco_genitori{
+    display: flex;
+    flex-direction: row;
+    background-color:#6FB0D6;
+    width: 100vw;
+    height: 112px;
+    justify-content: space-around;
+    align-items: center ;
+   
+}
+
+.genitori_gio{
+    width: 500px;
+    height: 70.22;
+    color: black;
+}
+
+/*.bottone_genitori{
+    width: 150px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottone_genitori:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 70px;
+}
+.scopridipiu{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}*/
+
+.bottone_genitori1 {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 0rem 0rem;
+}
+
+.scopridipiu1 {
+    cursor: pointer;
+    background: none;
+    border: 1, 5px solid black;
+    border-radius: 3px;
+    padding: 15px 30px;
+    transition: padding 0.1s;
+    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #161616;
+    opacity: .9;
+
+    &:hover {
+        padding: 18px 35px;
+    }
+}
+
+.blocco_link_gio{
+    display: flex;
+    flex-direction: row;
+    background-color: #EAEAEA;
+    width: 100vw;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+.linkf_gio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 884px;
+    height: 81px;
+}
+
+.link_gio{
+    text-decoration: none;
+    color: black;
+    margin: 8px 48px 5px 0px;
+}
+
+.link_gio:hover{
+    text-decoration: none;
+    color: orangered;
+}
+
+.blocco_social{
+    display: flex;
+    flex-direction: column;
+}
+
+.social_logo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 13px;
+}
+.blocco_loghi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.facebooklogo{
+    width: 22px;
+    height: 22px;
+}
+
+.facebooklogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.twitterlogo{
+    width: 22px;
+    height: 22px;
+}
+
+.twitterlogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.youtubelogo{
+    width: 22px;
+    height: 22px;
+}
+
+.youtubelogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.instagramlogo{
+    width: 22px;
+    height: 22px;
+}
+
+.instagramlogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.twitchlogo{
+    width: 22px;
+    height: 22px;
+}
+
+.twitchlogo:hover{
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+/* -------------------------------------Reponsivity--------------------------------- */
+@import "../responsivity/media";
