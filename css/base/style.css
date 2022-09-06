@@ -578,7 +578,7 @@ select {
 }
 .card:hover {
   transform: translateY(-12px);
-  box-shadow: 0px 22px 25px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
 }
 .card a {
   text-decoration: none;
@@ -734,6 +734,41 @@ select {
 .section-container {
   position: relative;
 }
+.section-container .slider-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-container .slider-container .arrow {
+  position: absolute;
+  margin-inline: 1rem;
+}
+.section-container .slider-container .arrow::before, .section-container .slider-container .arrow::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: hsla(0deg, 0%, 9%, 0.5);
+}
+.section-container .slider-container .arrow-left {
+  left: 0;
+}
+.section-container .slider-container .arrow-left::before {
+  transform: translateY(150%) rotate(50deg);
+}
+.section-container .slider-container .arrow-left::after {
+  transform: translateY(-150%) rotate(-50deg);
+}
+.section-container .slider-container .arrow-right {
+  right: 0;
+}
+.section-container .slider-container .arrow-right::before {
+  transform: translateY(150%) rotate(-50deg);
+}
+.section-container .slider-container .arrow-right::after {
+  transform: translateY(-150%) rotate(50deg);
+}
 .section-container .slider-container ul {
   display: flex;
 }
@@ -742,8 +777,9 @@ select {
   list-style: none;
 }
 .section-container .slider-container .border-bottom {
+  align-self: flex-end;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 2px;
   margin-top: -2px;
   left: 0;
