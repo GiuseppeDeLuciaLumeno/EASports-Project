@@ -1,81 +1,9 @@
-@use "sass:math";
-
-@import "./reset";
-
-@import "../abstract/function";
-@import "../abstract/mixin";
-@import "../abstract/variables";
-
-@import "../tipography/font-face";
-@import "../tipography/tipography";
-
-@import "../components/buttons";
-@import "../components/cards";
-@import "../components/menu";
-@import "../components/navbar";
-@import "../components/sidebar";
-
-@import "../layout/headers";
-@import "../layout/footers";
-
-
-
-.flexnav {
-    display: flex;
-    flex-flow: column;
-    height: 30vh;
-    width: 30vw;
-
-    .blackline {
-        display: flex;
-        flex: 1;
-        background-color: black;
-    }
-
-    .nav {
-        display: flex;
-        flex: 1;
-        background-color: rgb(235, 219, 219);
-
-        ul {
-            display: flex;
-            flex: 1;
-
-            li {
-                display: flex;
-                flex-basis: 100%;
-                justify-content: flex-start;
-                gap: 1rem;
-
-                a {
-                    color: black;
-                }
-            }
-        }
-    }
-}
-
-
-/* Giochi in evidenza style */
-.section-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bi {
-    display: none;
-}
-
-/* Footer Giorgia (PLAY - GENITORI - SOCIAL)*/
-
 .container_tot{
     display: flex;
     flex-direction: column;
     position: relative;
     height: 100vh;
     width: 100vw;
-
 
 }
 
@@ -170,7 +98,7 @@
 .iscriviti_subito1 {
     cursor: pointer;
     background: none;
-    border: 1px solid white;
+    border: 1, 5px solid white;
     border-radius: 3px;
     padding: 15px 30px;
     transition: padding 0.1s;
@@ -364,5 +292,125 @@
     transition-duration: 0.20s;
 }
 
-/* -------------------------------------Reponsivity--------------------------------- */
-@import "../responsivity/media";
+@media only screen and (max-width:768px){
+
+
+    .play{
+        display: flex;
+        position:absolute;
+        flex-direction: column;
+        padding: 32px 396px 32px 60px;
+      
+    }
+    
+    .scritta_play{
+        display: flex;
+        position:relative;
+        color: white;
+        width: 335px;
+        height: 100px;
+        font-size: 27px;
+    }
+    
+    .blocco_genitori{
+        display: flex;
+        flex-direction: column;
+        background-color:#6FB0D6;
+        width: 100vw;
+        height: 200px;
+        justify-content: space-around;
+        align-items: center ;
+        padding: 32px 0px 16px 0px;
+       
+    }
+    
+    .genitori_gio{
+        width: 600px;
+        height: 70.22;
+        color: black;
+    }
+    .blocco_link_gio{
+        display: flex;
+        flex-direction: column;
+        background-color: #EAEAEA;
+        width: 100vw;
+        height: 300px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 12px 60px 40px 60px;
+        
+    
+    }
+    
+    .linkf_gio{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 648px;
+        height: 118px;
+        padding-bottom: 10px;
+    }
+}
+    
+@media only screen and (max-width:425px){
+    
+    
+    .play{
+        display: flex;
+        position:absolute;
+        flex-direction: column;
+        padding: 32px 31px 32px 31px; 
+        /*non prende le misure giuste del padding, 
+        Exenia anche non sa come mai*/
+    }
+        
+    .scritta_play{
+        display: flex;
+        position:relative;
+        color: white;
+        width: 335px;
+        height: 100px;
+        font-size: 27px;
+    }
+        
+    .blocco_genitori{
+        display: flex;
+        flex-direction: column;
+        background-color:#6FB0D6;
+        width: 100vw;
+        height: 200px;
+        justify-content: space-around;
+        align-items: center ;
+        padding: 32px 0px 16px 0px;      
+    }
+        
+    .genitori_gio{
+        width: 600px;
+        height: 70.22;
+        color: black;
+    }
+    .blocco_link_gio{
+        display: flex;
+        flex-direction: column;
+        background-color: #EAEAEA;
+        width: 100vw;
+        height: 300px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 12px 60px 40px 60px;
+    }
+        
+    .linkf_gio{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 648px;
+        height: 118px;
+        padding-bottom: 10px;
+    }
+}
+        
