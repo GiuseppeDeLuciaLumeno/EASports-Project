@@ -203,7 +203,7 @@ $color-secondary: #ffffff;
                 cursor: pointer;
                 padding: 0px 8px;
 
-                &:focus::before {
+                &:active::before {
                     content: url('/assets/img/icon-check.png');
                 }
             }

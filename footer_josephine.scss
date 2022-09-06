@@ -172,7 +172,7 @@ $color-secondary: #ffffff;
 
             .dropdown-menu {
                 position: absolute;
-                left: -140px;
+                left: -250px;
                 top: calc(100% + 0.25rem);
                 background-color: $color-secondary;
                 padding: 0.75rem;
@@ -185,6 +185,7 @@ $color-secondary: #ffffff;
 
                 @include lg {
                     left: 0px;
+                    display: none;
                 }
             }
 
@@ -206,6 +207,10 @@ $color-secondary: #ffffff;
                 &:focus::before {
                     content: url('/assets/img/icon-check.png');
                 }
+
+                @include lg {
+                    display: none;
+                }
             }
 
             .link:hover {
@@ -217,12 +222,44 @@ $color-secondary: #ffffff;
                 opacity: 1;
                 transform: translateY(0);
                 pointer-events: auto;
+
+                @include lg {
+                    display: none;
+                }
             }
 
             .information-grid {
                 display: grid;
                 grid-template-columns: repeat(4, 150px);
                 gap: 1rem;
+
+                @include lg {
+                    display: none;
+                }
+            }
+
+            .select-price > select  {
+                appearance: none;
+                position: absolute;
+                color: transparent;
+                background: rgba(255,255,255,0);
+                /* padding: 10px 71px; */
+                bottom: 2px;
+                /* left: 80px; */
+                width: 100%;
+                height: 60px;
+                cursor: pointer;
+                border: 0;
+                outline: none;
+                display: none;
+
+                @include lg {
+                    display: flex;
+                }
+
+                @include md {
+                    display: flex;
+                }
             }
         }
     }
@@ -307,7 +344,7 @@ $color-secondary: #ffffff;
 
             .dropdown-menu {
                 position: absolute;
-                left: -300px;
+                left: -360px;
                 top: calc(100% + 0.25rem);
                 background-color: white;
                 padding: 0.75rem;
