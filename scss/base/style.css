@@ -485,8 +485,6 @@ img {
   color: white;
   top: 0;
   bottom: 220px;
-  align-self: flex-start;
-  border: 1px solid red;
   left: 120px;
 }
 
