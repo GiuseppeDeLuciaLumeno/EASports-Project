@@ -480,6 +480,12 @@ img {
   font-style: Helvetica;
   font-size: x-large;
 }
+.flexnav .img .imgEAplay {
+  position: absolute;
+  color: white;
+  top: 120px;
+  left: 120px;
+}
 
 /* -------------------------------------Reponsivity--------------------------------- */
 @media only screen and (min-width: 200px) and (max-width: 250px) {
