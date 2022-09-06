@@ -397,7 +397,7 @@ img {
 }
 
 .flexnav {
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -448,7 +448,7 @@ img {
 .flexnav .img {
   display: flex;
   position: relative;
-  height: 40vh;
+  height: 60vh;
   width: 100%;
 }
 .flexnav .img button {
@@ -458,18 +458,27 @@ img {
   height: 3.5rem;
   width: 8rem;
   border-radius: 0.5rem;
-  top: 160px;
-  left: 250px;
+  top: 280px;
+  left: 240px;
   position: absolute;
   background-color: white;
+  color: black;
 }
 .flexnav .img .imgphrase {
   position: absolute;
   color: white;
-  top: 120px;
-  left: 120px;
+  top: 200px;
+  left: 100px;
   font-style: Helvetica;
-  font-size: large;
+  font-size: x-large;
+}
+.flexnav .img .imgphrase2 {
+  position: absolute;
+  color: white;
+  top: 240px;
+  left: 250px;
+  font-style: Helvetica;
+  font-size: x-large;
 }
 
 /* -------------------------------------Reponsivity--------------------------------- */

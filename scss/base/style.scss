@@ -49,7 +49,7 @@ img{
 
 
 .flexnav {
-    @include size (50vh, 100%);
+    @include size (70vh, 100%);
     @include flex (flex, flex-start, center);
     flex-flow:column;
 
@@ -93,25 +93,33 @@ img{
     .img {
         display:flex;
         position:relative;
-        @include size (40vh, 100%);
+        @include size (60vh, 100%);
         
 
             button {
                         @include flex (flex, center, center);
                         @include size (3.5rem, 8rem);
                         border-radius:0.5rem;
-                        top:160px;
-                        left:250px;
+                        top:280px;
+                        left:240px;
                         position:absolute;
                         background-color:white;
+                        color:black;
             }
             .imgphrase {
                         position:absolute;
                         color:white;
-                        top:120px;
-                        left:120px;
-                        @include font (Helvetica, large);
+                        top:200px;
+                        left:100px;
+                        @include font (Helvetica, x-large);
             }
+            .imgphrase2 {
+                position:absolute;
+                color:white;
+                top:240px;
+                left:250px;
+                @include font (Helvetica, x-large);
+    }
     }
 }
 /* -------------------------------------Reponsivity--------------------------------- */
