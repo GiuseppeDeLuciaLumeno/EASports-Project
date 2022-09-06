@@ -618,10 +618,14 @@ select {
 }
 
 .slider-tab-container {
-  height: 60px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.1s ease;
+}
+.slider-tab-container:hover {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
 }
 .slider-tab-container .slider-tab {
   padding-inline: 1rem;
@@ -675,6 +679,11 @@ select {
   color: hsl(0deg, 0%, 42%);
 }
 
+@media (min-width: 48rem) {
+  .slider-tab-container {
+    height: 60px;
+  }
+}
 .grid-container {
   display: grid;
   gap: 1rem;
@@ -704,8 +713,7 @@ select {
   padding-inline: 7.5vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  align-items: stretch;
 }
 @media (min-width: 48rem) {
   .section-container {
@@ -730,6 +738,7 @@ select {
   display: flex;
 }
 .section-container .slider-container ul li {
+  flex: 0 0 auto;
   list-style: none;
 }
 .section-container .slider-container .border-bottom {
@@ -744,12 +753,30 @@ select {
 #ultime-novita {
   background-color: hsl(0deg, 0%, 95%);
 }
-#ultime-novita .cta {
-  margin-top: 2.5rem;
+#ultime-novita #h3 {
+  margin-bottom: 20px;
+  margin-inline: auto;
 }
-
-#slider-container {
+#ultime-novita #slider-container {
   align-self: flex-start;
+  margin-bottom: 40px;
+  margin-left: -16px;
+}
+#ultime-novita #cards-container {
+  margin-bottom: 40px;
+}
+#ultime-novita .cta {
+  margin-inline: auto;
+}
+@media (min-width: 48rem) {
+  #ultime-novita #slider-container {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 64rem) {
+  #ultime-novita #slider-container {
+    margin-bottom: 60px;
+  }
 }
 
 .flexnav {

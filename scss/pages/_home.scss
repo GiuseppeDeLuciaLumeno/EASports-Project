@@ -2,12 +2,35 @@
 #ultime-novita {
   background-color: map-get($map: $color, $key: bg);
 
-  .cta {
-    margin-top: 2.5rem;
+  #h3 {
+    margin-bottom: 20px;
+    margin-inline: auto;
   }
-}
 
-#slider-container {
-  align-self: flex-start;
+  #slider-container {
+    align-self: flex-start;
+    margin-bottom: 40px;
+    margin-left: -16px;
+  }
+
+  #cards-container {
+    margin-bottom: 40px;
+  }
+
+  .cta {
+    margin-inline: auto;
+  }
+
+  @include breakpoint(tablet) {
+    #slider-container {
+      margin-bottom: 50px;
+    }
+  }
+  
+  @include breakpoint(desktop) {
+    #slider-container {
+      margin-bottom: 60px;
+    }
+  }
 }
 // ULTIME NOVITA - Dario - inizio ------------------------------------
