@@ -226,11 +226,9 @@
   position: absolute;
   color: transparent;
   background: rgba(255, 255, 255, 0);
-  /* padding: 10px 71px; */
-  bottom: 2px;
-  /* left: 80px; */
+  bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 100%;
   cursor: pointer;
   border: 0;
   outline: none;
@@ -337,6 +335,12 @@
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
   pointer-events: none;
 }
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .dropdown-menu {
+    left: 0px;
+    display: none;
+  }
+}
 .footer-main-link .dropdown-language .dropdown .link {
   width: 100%;
   height: 50px;
@@ -354,6 +358,11 @@
   padding: 0px 8px;
   font-size: 14px;
 }
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .link {
+    display: none;
+  }
+}
 .footer-main-link .dropdown-language .dropdown .link:hover {
   padding-left: 20px;
   transition: padding-left 150ms ease-in-out;
@@ -363,10 +372,43 @@
   transform: translateY(0);
   pointer-events: auto;
 }
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .button-link:focus + .dropdown-menu {
+    display: none;
+  }
+}
 .footer-main-link .dropdown-language .dropdown .information-grid {
   display: grid;
   grid-template-columns: repeat(3, 180px);
   gap: 1rem;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .information-grid {
+    display: none;
+  }
+}
+.footer-main-link .dropdown-language .dropdown .select-language > select {
+  appearance: none;
+  position: absolute;
+  color: transparent;
+  background: rgba(255, 255, 255, 0);
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  display: none;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .select-language > select {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-language .dropdown .select-language > select {
+    display: flex;
+  }
 }
 .footer-main-link .footer-legal-link {
   grid-area: link2;
