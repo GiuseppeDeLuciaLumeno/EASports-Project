@@ -92,13 +92,25 @@ img{
     }
     .img {
         display:flex;
+        position:relative;
         @include size (40vh, 100%);
         
 
-            .mainbutton {
+            button {
                         @include flex (flex, center, center);
-                        @include size (2rem, 4rem);
+                        @include size (3.5rem, 8rem);
+                        border-radius:0.5rem;
+                        top:160px;
+                        left:250px;
+                        position:absolute;
                         background-color:white;
+            }
+            .imgphrase {
+                        position:absolute;
+                        color:white;
+                        top:120px;
+                        left:120px;
+                        @include font (Helvetica, large);
             }
     }
 }
