@@ -202,6 +202,10 @@ $color-secondary: #ffffff;
                 font-family: inherit;
                 cursor: pointer;
                 padding: 0px 8px;
+
+                &:focus::before {
+                    content: url('/assets/img/icon-check.png');
+                }
             }
 
             .link:hover {

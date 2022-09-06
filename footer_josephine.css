@@ -188,6 +188,9 @@
   cursor: pointer;
   padding: 0px 8px;
 }
+.footer-main-link .dropdown-price .dropdown .link:focus::before {
+  content: url("/assets/img/icon-check.png");
+}
 .footer-main-link .dropdown-price .dropdown .link:hover {
   padding-left: 20px;
   transition: padding-left 100ms ease-in-out;
