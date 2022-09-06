@@ -20,57 +20,87 @@
 
 
 
+@import "typography/fonts";
+@import "mixin-provvisory";
+@import "variables-provvisory";
+
+
+// reset
+@import "typography/fonts";
+@import "mixin-provvisory";
+@import "variables-provvisory";
+
+
+// reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+.sub-menu-altreesperienze, .sub-menu-informazioni, .sub-menu-impegni, .sub-menu-risorse {
+
+    display:none;
+}
+
+
 .flexnav {
-    display: flex;
-    flex-flow: column;
-    height: 30vh;
-    width: 30vw;
+    @include size (50vh, 100%);
+    @include flex (flex, flex-start, center);
+    flex-flow:column;
 
     .blackline {
-        display: flex;
-        flex: 1;
-        background-color: black;
+        background-color:$nav-col;
+        display:flex;
+        @include size(5vh, 100%);
     }
-
     .nav {
-        display: flex;
-        flex: 1;
-        background-color: rgb(235, 219, 219);
+        display:flex;
+        @include size (5vh, 100%);
+        
 
-        ul {
-            display: flex;
-            flex: 1;
+            .logo {
+                @include flex (flex, flex-start, center);
+                flex:15%;
+                 }
+            .navlist {
+                @include flex (flex, flex-start, center);
+                flex:85%;
+               
+                ul {@include flex (flex, flex-start, center);
+                    @include size (2rem, 100%);
+                    @include space (1rem, 1.5rem);
+                    list-style:none;
 
-            li {
-                display: flex;
-                flex-basis: 100%;
-                justify-content: flex-start;
-                gap: 1rem;
+                     li {
+                        
+                        
+                            a { 
+                                font-size:large;
+                                color:black;
+                                }
+                           
+                                    } 
+                                        }
+                                            }
+                                            a:hover {color:white;
+                                                    transition:1s;}
+    }
+    .img {
+        display:flex;
+        @include size (40vh, 100%);
+        
 
-                a {
-                    color: black;
-                }
+            .mainbutton {
+                        @include flex (flex, center, center);
+                        @include size (2rem, 4rem);
+                        background-color:white;
             }
-        }
     }
 }
-
-
-/* Giochi in evidenza style */
-.section-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bi {
-    display: none;
-}
-
-
-
-
-
-
 /* -------------------------------------Reponsivity--------------------------------- */
 @import "../responsivity/media";
