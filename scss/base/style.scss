@@ -1,23 +1,39 @@
 @use "sass:math";
 
-@import "./reset";
+// ABSTRACTS --------------------------------------------------------------------------------------------
+@import "../abstract/variables";
+@import "../abstract/variables/font-sizes";
+@import "../abstract/variables/font-families";
+@import "../abstract/variables/breakpoints";
+@import "../abstract/variables/colors";
 
 @import "../abstract/function";
-@import "../abstract/mixin";
-@import "../abstract/variables";
 
+@import "../abstract/mixin";
+@import "../abstract/mixins/breakpoints";
+
+// BASE --------------------------------------------------------------------------------------------
 @import "../tipography/font-face";
+@import "./reset";
 @import "../tipography/tipography";
 
+// COMPONENTS --------------------------------------------------------------------------------------------
 @import "../components/buttons";
 @import "../components/cards";
 @import "../components/menu";
 @import "../components/navbar";
 @import "../components/sidebar";
+@import "../components/tabs";
 
+// LAYOUTS --------------------------------------------------------------------------------------------
 @import "../layout/headers";
 @import "../layout/footers";
+@import "../layout/grid";
+@import "../layout/page-sections";
+@import "../layout/sliders";
 
+// PAGES --------------------------------------------------------------------------------------------
+@import "../pages/home";
 
 
 .flexnav {
