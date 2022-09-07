@@ -1,15 +1,7 @@
 //Giochi in Evidenza
 
-.cards-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 25px;
-    margin: 1.2rem;
-}
-
 .fifa23-card {
-    @include cards(relative);
+    @include cards;
 
     .fifa23-logo {
         position: absolute;
@@ -26,7 +18,7 @@
 }
 
 .apex-mobile-card {
-    @include cards(relative);
+    @include cards;
 
     .apex-mobile-logo {
         position: absolute;
@@ -44,7 +36,7 @@
 }
 
 .f1-22-card {
-    @include cards(relative);
+    @include cards;
 
     .f1-22-logo {
         position: absolute;
@@ -60,7 +52,7 @@
 }
 
 .batterfield-card {
-    @include cards(relative);
+    @include cards;
 
     .batterfield-logo {
         position: absolute;
@@ -76,7 +68,7 @@
 }
 
 .apex-card {
-    @include cards(relative);
+    @include cards;
 
     .apex-logo {
         position: absolute;
@@ -92,7 +84,7 @@
 }
 
 .the-sims4-card {
-    @include cards(relative);
+    @include cards;
 
     .the-sims4-logo {
         position: absolute;
@@ -119,7 +111,6 @@
 }
 
 .b-icon.active .bi-x {
-    display: block;
     position: absolute;
     top: -10px;
     right: 5px;

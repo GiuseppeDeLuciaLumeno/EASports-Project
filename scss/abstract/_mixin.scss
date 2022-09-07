@@ -1,6 +1,5 @@
-@mixin cards($position) {
-    position: $position;
-   
+@mixin cards {
+
     &::before {
         @content;
         content: "";
