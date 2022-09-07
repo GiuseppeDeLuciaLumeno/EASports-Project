@@ -1,14 +1,12 @@
 @import "/node_modules/flag-icons/css/flag-icons.min.css";
-@import 'breakpoints';
+@import '../abstract/mixin';
+@import '../base/reset';
+@import '../abstract/variables';
+@import '../tipography/font-face';
 
-$color-primary: #000000;
-$color-secondary: #ffffff;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+footer {
+  font-family: ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
 }
 
