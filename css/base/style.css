@@ -920,6 +920,7 @@ select {
 
 .bi {
   display: none;
+  cursor: pointer;
 }
 
 .b-icon.active .bi-three-dots {
