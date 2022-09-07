@@ -918,6 +918,10 @@ select {
   transform: translateY(-55px);
 }
 
+.bi {
+  display: none;
+}
+
 .b-icon.active .bi-three-dots {
   display: none;
 }
@@ -925,10 +929,10 @@ select {
 .b-icon.active .bi-x {
   display: block;
   position: absolute;
-  top: -5px;
+  top: -10px;
   right: 5px;
+  font-size: 50px;
   color: red;
-  font-size: 34px;
   display: block;
   z-index: 2;
 }
@@ -1220,10 +1224,6 @@ select {
 }
 .section-wrapper #block-position {
   position: relative;
-}
-
-.bi {
-  display: none;
 }
 
 /* Footer Giorgia (PLAY - GENITORI - SOCIAL)*/
@@ -1630,6 +1630,10 @@ select {
     display: block;
     z-index: 2;
   }
+  .section-wrapper .b-icon.active .bi-x {
+    font-size: 34px;
+    top: -5px;
+  }
 }
 /* X show to active with js */
 /* .bi-x{
@@ -1984,7 +1988,7 @@ select {
     top: 0px;
     right: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
     display: block;
     z-index: 2;
   }

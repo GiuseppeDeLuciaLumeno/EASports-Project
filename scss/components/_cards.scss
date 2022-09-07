@@ -108,6 +108,9 @@
 
 }
 
+.bi{
+   display: none;
+}
 
 .b-icon.active .bi-three-dots {
     display: none;
@@ -116,13 +119,14 @@
 .b-icon.active .bi-x {
     display: block;
     position: absolute;
-    top: -5px;
+    top: -10px;
     right: 5px;
+    font-size: 50px;
     color: red;
-    font-size: 34px;
     display: block;
     z-index: 2;
 }
+
 
 // Ultime novità - reusable card styling -------------------------------------
 .card {

@@ -154,6 +154,11 @@
             display: block;
             z-index: 2;
         }
+
+        .b-icon.active .bi-x{
+            font-size: 34px;
+            top: -5px;
+        }
     }
 }
 
@@ -622,7 +627,7 @@
         top: 0px;
         right: 10px;
         color: white;
-        font-size: 24px;
+        font-size: 34px;
         display: block;
         z-index: 2;
     }
