@@ -429,7 +429,7 @@ select {
 .section-wrapper h1 {
   font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
   font-weight: 900;
-  font-size: rem(44px);
+  font-size: 2.75rem;
   color: #161616;
   line-height: 1.5;
 }
@@ -1031,6 +1031,9 @@ select {
 @media (min-width: 48rem) {
   .slider-tab-container {
     height: 60px;
+    /* .slider-tab {
+
+    } */
   }
 }
 .grid-container {

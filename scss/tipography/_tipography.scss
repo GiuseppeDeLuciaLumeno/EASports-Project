@@ -3,8 +3,8 @@
     h1 {
         font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
         font-weight: 900;
-        font-size: $h1;
-        color: $font-color;
+        font-size: map-get($fs-h1, desktop-large);
+        color: map-get($color, black-headers);
         line-height: 1.5;
     }
 }
@@ -21,11 +21,11 @@
     @include breakpoint(tablet) {
         font-size: map-get($map: $fs-h3, $key: tablet);
     }
-    
+
     @include breakpoint(desktop) {
         font-size: map-get($map: $fs-h3, $key: desktop);
     }
-    
+
     @include breakpoint(desktop-large) {
         font-size: map-get($map: $fs-h3, $key: desktop-large);
     }
@@ -44,12 +44,12 @@
         letter-spacing: 0.5px;
         line-height: 25px;
     }
-    
+
     @include breakpoint(desktop) {
         font-size: map-get($map: $fs-h4, $key: desktop);
         line-height: 30px;
     }
-    
+
     @include breakpoint(desktop-large) {
         font-size: map-get($map: $fs-h4, $key: desktop-large);
         line-height: 32.4px;
@@ -71,11 +71,11 @@
     @include breakpoint(tablet) {
         font-size: map-get($map: $fs-h5, $key: tablet);
     }
-    
+
     @include breakpoint(desktop) {
         font-size: map-get($map: $fs-h5, $key: desktop);
     }
-    
+
     @include breakpoint(desktop-large) {
         font-size: map-get($map: $fs-h5, $key: desktop-large);
     }
@@ -91,12 +91,12 @@
     @include breakpoint(tablet) {
         font-size: map-get($map: $fs-p, $key: tablet);
     }
-    
+
     @include breakpoint(desktop) {
         font-size: map-get($map: $fs-p, $key: desktop);
         line-height: 1.7rem;
     }
-    
+
     @include breakpoint(desktop-large) {
         font-size: map-get($map: $fs-p, $key: desktop-large);
     }
@@ -111,11 +111,11 @@
     @include breakpoint(tablet) {
         font-size: map-get($map: $fs-tabs, $key: tablet);
     }
-    
+
     @include breakpoint(desktop) {
         font-size: map-get($map: $fs-tabs, $key: desktop);
     }
-    
+
     @include breakpoint(desktop-large) {
         font-size: map-get($map: $fs-tabs, $key: desktop-large);
     }
@@ -127,11 +127,11 @@
     @include breakpoint(tablet) {
         font-size: map-get($map: $fs-cta, $key: tablet);
     }
-    
+
     @include breakpoint(desktop) {
         font-size: map-get($map: $fs-cta, $key: desktop);
     }
-    
+
     @include breakpoint(desktop-large) {
         font-size: map-get($map: $fs-cta, $key: desktop-large);
     }
