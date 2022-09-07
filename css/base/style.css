@@ -440,17 +440,17 @@ select {
   font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
   color: hsl(0deg, 0%, 9%);
 }
-@media (min-width: ) {
+@media (min-width: 48rem) {
   .home-h3 {
     font-size: 2rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 64rem) {
   .home-h3 {
     font-size: 2.5rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 91rem) {
   .home-h3 {
     font-size: 2.75rem;
   }
@@ -464,20 +464,20 @@ select {
   line-height: 25px;
   letter-spacing: 0.4px;
 }
-@media (min-width: ) {
+@media (min-width: 48rem) {
   .home-h4 {
     font-size: 1.25rem;
     letter-spacing: 0.5px;
     line-height: 25px;
   }
 }
-@media (min-width: ) {
+@media (min-width: 64rem) {
   .home-h4 {
     font-size: 1.5rem;
     line-height: 30px;
   }
 }
-@media (min-width: ) {
+@media (min-width: 91rem) {
   .home-h4 {
     font-size: 1.5rem;
     line-height: 32.4px;
@@ -495,17 +495,17 @@ select {
 .home-h5:first-child {
   color: hsl(0deg, 100%, 64%);
 }
-@media (min-width: ) {
+@media (min-width: 48rem) {
   .home-h5 {
     font-size: 0.875rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 64rem) {
   .home-h5 {
     font-size: 0.875rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 91rem) {
   .home-h5 {
     font-size: 1rem;
   }
@@ -518,18 +518,18 @@ select {
   color: hsla(0deg, 0%, 9%, 0.8);
   margin-top: 6px;
 }
-@media (min-width: ) {
+@media (min-width: 48rem) {
   .home-p {
     font-size: 1rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 64rem) {
   .home-p {
     font-size: 1.125rem;
     line-height: 1.7rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 91rem) {
   .home-p {
     font-size: 1.125rem;
   }
@@ -541,17 +541,17 @@ select {
   color: hsla(0deg, 0%, 9%, 0.8);
   text-decoration: none;
 }
-@media (min-width: ) {
+@media (min-width: 48rem) {
   .home-tabs {
     font-size: 1rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 64rem) {
   .home-tabs {
     font-size: 1.125rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 91rem) {
   .home-tabs {
     font-size: 1.125rem;
   }
@@ -560,17 +560,17 @@ select {
 .home-cta {
   font-size: 1rem;
 }
-@media (min-width: ) {
+@media (min-width: 48rem) {
   .home-cta {
     font-size: 1rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 64rem) {
   .home-cta {
     font-size: 1.125rem;
   }
 }
-@media (min-width: ) {
+@media (min-width: 91rem) {
   .home-cta {
     font-size: 1.125rem;
   }
@@ -947,7 +947,7 @@ select {
 .card a .content .card-p {
   display: none;
 }
-@media (min-width: ) {
+@media (min-width: 48rem) {
   .card a .img {
     display: block;
   }
@@ -1029,7 +1029,7 @@ select {
   color: hsl(0deg, 0%, 42%);
 }
 
-@media (min-width: ) {
+@media (min-width: 48rem) {
   .slider-tab-container {
     height: 60px;
     /* .slider-tab {
@@ -1930,21 +1930,21 @@ footer {
   gap: 1rem;
   grid-template-areas: "one" "two" "three" "four" "five" "six";
 }
-@media (min-width: tablet) {
+@media (min-width: 48rem) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "one two" "three four" "five six";
     gap: 1.5rem;
   }
 }
-@media (min-width: desktop) {
+@media (min-width: 64rem) {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "one two three" "four five six";
     gap: 1rem;
   }
 }
-@media (min-width: desktop-large) {
+@media (min-width: 91rem) {
   .grid-container {
     width: 68rem;
   }
@@ -1956,17 +1956,17 @@ footer {
   flex-direction: column;
   align-items: stretch;
 }
-@media (min-width: tablet) {
+@media (min-width: 48rem) {
   .section-container {
     padding-inline: calc(12px + 7.8125vw);
   }
 }
-@media (min-width: desktop) {
+@media (min-width: 64rem) {
   .section-container {
     padding-inline: calc(8px + 7.4218vw);
   }
 }
-@media (min-width: desktop-large) {
+@media (min-width: 91rem) {
   .section-container {
     padding-inline: calc((100vw - 1120px) / 2);
   }
@@ -2045,12 +2045,12 @@ footer {
 #ultime-novita .cta {
   margin-inline: auto;
 }
-@media (min-width: tablet) {
+@media (min-width: 48rem) {
   #ultime-novita #slider-container {
     margin-bottom: 50px;
   }
 }
-@media (min-width: desktop) {
+@media (min-width: 64rem) {
   #ultime-novita #slider-container {
     margin-bottom: 60px;
   }
