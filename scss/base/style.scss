@@ -90,6 +90,7 @@ img{
                                             a:hover {color:white;
                                                     transition:1s;}
     }
+   
     .img {
         display:flex;
         position:relative;
@@ -120,15 +121,21 @@ img{
                 left:250px;
                 @include font (Helvetica, x-large);
     }
-            .imgEAplay {
-                position:absolute;
-                color:white;
-                top:0;
-                bottom:240px;
-                left:120px;
-                
+    .imgEAplay {
+        position:absolute;
+        color:white;
+        top:0;
+        
+        bottom:300px;
+        left:120px;
+        
 }
+         
     }
 }
 /* -------------------------------------Reponsivity--------------------------------- */
 @import "../responsivity/media";
+
+@if (min-width:940px, max-width:1200px) {
+        .navlist {display:none;}
+}
