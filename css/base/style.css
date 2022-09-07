@@ -918,6 +918,21 @@ select {
   transform: translateY(-55px);
 }
 
+.b-icon.active .bi-three-dots {
+  display: none;
+}
+
+.b-icon.active .bi-x {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  color: red;
+  font-size: 34px;
+  display: block;
+  z-index: 2;
+}
+
 .card {
   position: relative;
   text-align: center;
@@ -1202,6 +1217,9 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.section-wrapper #block-position {
+  position: relative;
 }
 
 .bi {
@@ -2066,10 +2084,20 @@ select {
   }
   .bi-three-dots {
     position: absolute;
-    top: 0px;
+    top: -5px;
     right: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
+    display: block;
+    z-index: 2;
+  }
+  .b-icon.active .bi-x {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    color: red;
+    font-size: 50px;
     display: block;
     z-index: 2;
   }
@@ -2176,7 +2204,7 @@ select {
     position: absolute;
     flex-direction: column;
     padding: 32px 31px 32px 31px;
-    /*non prende le misure giuste del padding, 
+    /*non prende le misure giuste del padding,
     Exenia anche non sa come mai*/
   }
   .scritta_play {

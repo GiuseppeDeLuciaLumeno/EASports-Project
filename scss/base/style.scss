@@ -77,9 +77,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    #block-position{
+        position: relative;
+    }
 }
 
-.bi {
+.bi{
     display: none;
 }
 

@@ -108,6 +108,22 @@
 
 }
 
+
+.b-icon.active .bi-three-dots {
+    display: none;
+}
+
+.b-icon.active .bi-x {
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    color: red;
+    font-size: 34px;
+    display: block;
+    z-index: 2;
+}
+
 // Ultime novità - reusable card styling -------------------------------------
 .card {
     position: relative;
@@ -119,7 +135,8 @@
     &:hover {
         transform: translateY(-12px);
         // box-shadow: 0px 22px 25px 0px rgba(0,0,0,0.5);
-        box-shadow: 0px 28px 30px -3px rgba(0,0,0,0.5);;
+        box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
+        ;
     }
 
     a {
