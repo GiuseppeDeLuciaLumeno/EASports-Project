@@ -589,6 +589,7 @@ select {
   border: 1, 5px solid black;
   border-radius: 3px;
   padding: 15px 30px;
+  width: 100%;
   transition: padding 0.1s;
   font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -599,277 +600,11 @@ select {
   padding: 18px 35px;
 }
 
-.cards-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 25px;
-  margin: 1.2rem;
-}
-
-.fifa23-card {
-  position: relative;
-}
-.fifa23-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(24, 23, 23, 0.4);
-}
-.fifa23-card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0;
-}
-.fifa23-card:hover::after {
-  background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0.82;
-}
-.fifa23-card:hover p {
-  display: block;
-  z-index: 2;
-}
-.fifa23-card p {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  color: white;
-  display: none;
-  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-.fifa23-card .fifa23-logo {
-  position: absolute;
-  top: 40%;
-  left: 35%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.fifa23-card:hover .fifa23-logo {
-  transform: translateY(-70px);
-}
-
-.apex-mobile-card {
-  position: relative;
-}
-.apex-mobile-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(24, 23, 23, 0.4);
-}
-.apex-mobile-card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0;
-}
-.apex-mobile-card:hover::after {
-  background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0.82;
-}
-.apex-mobile-card:hover p {
-  display: block;
-  z-index: 2;
-}
-.apex-mobile-card p {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  color: white;
-  display: none;
-  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-.apex-mobile-card .apex-mobile-logo {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.apex-mobile-card:hover .apex-mobile-logo {
-  transform: translateY(-70px);
-}
-
-.f1-22-card {
-  position: relative;
-}
-.f1-22-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(24, 23, 23, 0.4);
-}
-.f1-22-card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0;
-}
-.f1-22-card:hover::after {
-  background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0.82;
-}
-.f1-22-card:hover p {
-  display: block;
-  z-index: 2;
-}
-.f1-22-card p {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  color: white;
-  display: none;
-  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-.f1-22-card .f1-22-logo {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.f1-22-card:hover .f1-22-logo {
-  transform: translateY(-60px);
-}
-
-.batterfield-card {
-  position: relative;
-}
-.batterfield-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(24, 23, 23, 0.4);
-}
-.batterfield-card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0;
-}
-.batterfield-card:hover::after {
-  background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0.82;
-}
-.batterfield-card:hover p {
-  display: block;
-  z-index: 2;
-}
-.batterfield-card p {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  color: white;
-  display: none;
-  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-.batterfield-card .batterfield-logo {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.batterfield-card:hover .batterfield-logo {
-  transform: translateY(-40px);
-}
-
-.apex-card {
-  position: relative;
-}
-.apex-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(24, 23, 23, 0.4);
-}
-.apex-card::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0;
-}
-.apex-card:hover::after {
-  background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
-  opacity: 0.82;
-}
-.apex-card:hover p {
-  display: block;
-  z-index: 2;
-}
-.apex-card p {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  color: white;
-  display: none;
-  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-.apex-card .apex-logo {
-  position: absolute;
-  top: 40%;
-  left: 37%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.apex-card:hover .apex-logo {
-  transform: translateY(-70px);
-}
-
-.the-sims4-card {
-  position: relative;
-}
+.fifa23-card::before,
+.apex-mobile-card::before,
+.f1-22-card::before,
+.batterfield-card::before,
+.apex-card::before,
 .the-sims4-card::before {
   content: "";
   position: absolute;
@@ -879,6 +614,11 @@ select {
   height: 100%;
   background: rgba(24, 23, 23, 0.4);
 }
+.fifa23-card::after,
+.apex-mobile-card::after,
+.f1-22-card::after,
+.batterfield-card::after,
+.apex-card::after,
 .the-sims4-card::after {
   content: "";
   position: absolute;
@@ -890,24 +630,113 @@ select {
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0;
 }
+.fifa23-card:hover::after,
+.apex-mobile-card:hover::after,
+.f1-22-card:hover::after,
+.batterfield-card:hover::after,
+.apex-card:hover::after,
 .the-sims4-card:hover::after {
   background: rgb(47, 41, 124);
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0.82;
 }
+.fifa23-card:hover p,
+.apex-mobile-card:hover p,
+.f1-22-card:hover p,
+.batterfield-card:hover p,
+.apex-card:hover p,
 .the-sims4-card:hover p {
   display: block;
   z-index: 2;
 }
+.fifa23-card p,
+.apex-mobile-card p,
+.f1-22-card p,
+.batterfield-card p,
+.apex-card p,
 .the-sims4-card p {
   position: absolute;
   top: 50%;
   left: 40%;
-  color: white;
-  display: none;
+  color: #f3f3f3;
   font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
 }
+.fifa23-card .fifa23-logo,
+.apex-mobile-card .fifa23-logo,
+.f1-22-card .fifa23-logo,
+.batterfield-card .fifa23-logo,
+.apex-card .fifa23-logo,
+.the-sims4-card .fifa23-logo {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.fifa23-card:hover .fifa23-logo,
+.apex-mobile-card:hover .fifa23-logo,
+.f1-22-card:hover .fifa23-logo,
+.batterfield-card:hover .fifa23-logo,
+.apex-card:hover .fifa23-logo,
+.the-sims4-card:hover .fifa23-logo {
+  transform: translateY(-70px);
+}
+.fifa23-card:hover p,
+.apex-mobile-card:hover p,
+.f1-22-card:hover p,
+.batterfield-card:hover p,
+.apex-card:hover p,
+.the-sims4-card:hover p {
+  opacity: 1;
+}
+
+.apex-mobile-card .apex-mobile-logo {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.apex-mobile-card:hover .apex-mobile-logo {
+  transform: translateY(-70px);
+}
+
+.f1-22-card .f1-22-logo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.f1-22-card:hover .f1-22-logo {
+  transform: translateY(-60px);
+}
+
+.batterfield-card .batterfield-logo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.batterfield-card:hover .batterfield-logo {
+  transform: translateY(-40px);
+}
+
+.apex-card .apex-logo {
+  position: absolute;
+  top: 40%;
+  left: 37%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.apex-card:hover .apex-logo {
+  transform: translateY(-70px);
+}
+
 .the-sims4-card .the-sims4-logo {
   position: absolute;
   top: 25%;
@@ -917,6 +746,111 @@ select {
 }
 .the-sims4-card:hover .the-sims4-logo {
   transform: translateY(-55px);
+}
+
+.bi {
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+.b-icon.active .bi-three-dots {
+  display: none;
+}
+
+.b-icon.active .bi-x {
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  font-size: 50px;
+  display: block;
+  z-index: 2;
+}
+
+.b-icon.active + a .fifa23-card::after,
+.b-icon.active + a .apex-mobile-card::after,
+.b-icon.active + a .f1-22-card::after,
+.b-icon.active + a .batterfield-card::after,
+.b-icon.active + a .apex-card::after,
+.b-icon.active + a .the-sims4-card::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.b-icon.active + a .fifa23-card:hover::after,
+.b-icon.active + a .apex-mobile-card:hover::after,
+.b-icon.active + a .f1-22-card:hover::after,
+.b-icon.active + a .batterfield-card:hover::after,
+.b-icon.active + a .apex-card:hover::after,
+.b-icon.active + a .the-sims4-card:hover::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.b-icon.active + a .fifa23-card:hover .fifa23-logo,
+.b-icon.active + a .fifa23-card:hover .apex-mobile-logo,
+.b-icon.active + a .fifa23-card:hover .f1-22-logo,
+.b-icon.active + a .fifa23-card:hover .batterfield-logo,
+.b-icon.active + a .fifa23-card:hover .apex-logo,
+.b-icon.active + a .fifa23-card:hover .the-sims4-logo,
+.b-icon.active + a .apex-mobile-card:hover .fifa23-logo,
+.b-icon.active + a .apex-mobile-card:hover .apex-mobile-logo,
+.b-icon.active + a .apex-mobile-card:hover .f1-22-logo,
+.b-icon.active + a .apex-mobile-card:hover .batterfield-logo,
+.b-icon.active + a .apex-mobile-card:hover .apex-logo,
+.b-icon.active + a .apex-mobile-card:hover .the-sims4-logo,
+.b-icon.active + a .f1-22-card:hover .fifa23-logo,
+.b-icon.active + a .f1-22-card:hover .apex-mobile-logo,
+.b-icon.active + a .f1-22-card:hover .f1-22-logo,
+.b-icon.active + a .f1-22-card:hover .batterfield-logo,
+.b-icon.active + a .f1-22-card:hover .apex-logo,
+.b-icon.active + a .f1-22-card:hover .the-sims4-logo,
+.b-icon.active + a .batterfield-card:hover .fifa23-logo,
+.b-icon.active + a .batterfield-card:hover .apex-mobile-logo,
+.b-icon.active + a .batterfield-card:hover .f1-22-logo,
+.b-icon.active + a .batterfield-card:hover .batterfield-logo,
+.b-icon.active + a .batterfield-card:hover .apex-logo,
+.b-icon.active + a .batterfield-card:hover .the-sims4-logo,
+.b-icon.active + a .apex-card:hover .fifa23-logo,
+.b-icon.active + a .apex-card:hover .apex-mobile-logo,
+.b-icon.active + a .apex-card:hover .f1-22-logo,
+.b-icon.active + a .apex-card:hover .batterfield-logo,
+.b-icon.active + a .apex-card:hover .apex-logo,
+.b-icon.active + a .apex-card:hover .the-sims4-logo,
+.b-icon.active + a .the-sims4-card:hover .fifa23-logo,
+.b-icon.active + a .the-sims4-card:hover .apex-mobile-logo,
+.b-icon.active + a .the-sims4-card:hover .f1-22-logo,
+.b-icon.active + a .the-sims4-card:hover .batterfield-logo,
+.b-icon.active + a .the-sims4-card:hover .apex-logo,
+.b-icon.active + a .the-sims4-card:hover .the-sims4-logo {
+  transform: translateY(-70px);
+}
+.b-icon.active + a .fifa23-card:hover p,
+.b-icon.active + a .apex-mobile-card:hover p,
+.b-icon.active + a .f1-22-card:hover p,
+.b-icon.active + a .batterfield-card:hover p,
+.b-icon.active + a .apex-card:hover p,
+.b-icon.active + a .the-sims4-card:hover p {
+  display: block;
+}
+.b-icon.active + a .fifa23-card p,
+.b-icon.active + a .apex-mobile-card p,
+.b-icon.active + a .f1-22-card p,
+.b-icon.active + a .batterfield-card p,
+.b-icon.active + a .apex-card p,
+.b-icon.active + a .the-sims4-card p {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+  color: #f3f3f3;
+}
+.b-icon.active + a .fifa23-logo,
+.b-icon.active + a .apex-mobile-logo,
+.b-icon.active + a .f1-22-logo,
+.b-icon.active + a .batterfield-logo,
+.b-icon.active + a .apex-logo,
+.b-icon.active + a .the-sims4-logo {
+  transform: translateY(-70px);
 }
 
 .card {
@@ -2086,17 +2020,25 @@ footer {
   color: black;
 }
 
-/* Giochi in evidenza style */
+/* Start Giochi in evidenza */
 .section-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.bi {
-  display: none;
+.section-wrapper #block-position {
+  position: relative;
 }
 
+.cards-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 1.2rem;
+}
+
+/* End Giochi in evidenza style */
 /* Footer Giorgia (PLAY - GENITORI - SOCIAL)*/
 .container_tot {
   display: flex;
@@ -2483,7 +2425,7 @@ footer {
     text-decoration: none;
   }
   .section-wrapper .btn {
-    padding: 0 40px;
+    padding: 0 32px;
     height: 50px;
     border: 2px solid black;
     font-size: 16px;
@@ -2492,6 +2434,13 @@ footer {
     justify-content: center;
     align-items: center;
   }
+}
+@media only screen and (min-width: 200px) and (max-width: 250px) and (min-width: 240px) {
+  .section-wrapper .btn {
+    padding: 0 50px;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 250px) {
   .section-wrapper .bi-three-dots {
     position: absolute;
     top: 0px;
@@ -2500,6 +2449,12 @@ footer {
     font-size: 24px;
     display: block;
     z-index: 2;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 250px) {
+  .section-wrapper .b-icon.active .bi-x {
+    font-size: 34px;
+    top: -5px;
   }
 }
 /* X show to active with js */
@@ -2512,106 +2467,116 @@ footer {
             font-size: 34px;
         } */
 @media only screen and (min-width: 251px) and (max-width: 300px) {
-  .cards-wrapper .fifa23-card {
+  .section-wrapper {
+    background-color: rgb(240, 238, 238);
+    box-shadow: 14px -5px 22px -20px inset #161616;
+  }
+  .section-wrapper h1 {
+    font-size: 30px;
+    color: #161616;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .section-wrapper .cards-wrapper .fifa23-card {
     display: flex;
   }
-  .cards-wrapper .fifa23-card:hover::after {
+  .section-wrapper .cards-wrapper .fifa23-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .fifa23-card:hover .fifa23-logo {
+  .section-wrapper .cards-wrapper .fifa23-card:hover .fifa23-logo {
     /*   transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .fifa23-card:hover p {
+  .section-wrapper .cards-wrapper .fifa23-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-mobile-card {
+  .section-wrapper .cards-wrapper .apex-mobile-card {
     display: flex;
   }
-  .cards-wrapper .apex-mobile-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
     /* transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-mobile-card:hover p {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover p {
     display: none;
   }
-  .cards-wrapper .f1-22-card {
+  .section-wrapper .cards-wrapper .f1-22-card {
     display: flex;
   }
-  .cards-wrapper .f1-22-card:hover::after {
+  .section-wrapper .cards-wrapper .f1-22-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .f1-22-card:hover .f1-22-logo {
+  .section-wrapper .cards-wrapper .f1-22-card:hover .f1-22-logo {
     /* transform: translateY(-45px); */
     transform: none;
   }
-  .cards-wrapper .f1-22-card:hover p {
+  .section-wrapper .cards-wrapper .f1-22-card:hover p {
     display: none;
   }
-  .cards-wrapper .batterfield-card {
+  .section-wrapper .cards-wrapper .batterfield-card {
     display: flex;
   }
-  .cards-wrapper .batterfield-card:hover::after {
+  .section-wrapper .cards-wrapper .batterfield-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .batterfield-card:hover .batterfield-logo {
+  .section-wrapper .cards-wrapper .batterfield-card:hover .batterfield-logo {
     transform: none;
   }
-  .cards-wrapper .batterfield-card:hover p {
+  .section-wrapper .cards-wrapper .batterfield-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-card {
+  .section-wrapper .cards-wrapper .apex-card {
     display: flex;
   }
-  .cards-wrapper .apex-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-card:hover .apex-logo {
+  .section-wrapper .cards-wrapper .apex-card:hover .apex-logo {
     /*  transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-card:hover p {
+  .section-wrapper .cards-wrapper .apex-card:hover p {
     display: none;
   }
-  .cards-wrapper .the-sims4-card {
+  .section-wrapper .cards-wrapper .the-sims4-card {
     display: flex;
   }
-  .cards-wrapper .the-sims4-card:hover::after {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
     transform: none;
   }
-  .cards-wrapper .the-sims4-card:hover p {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover p {
     display: none;
   }
-  .cards-wrapper .fifa23-logo img {
+  .section-wrapper .cards-wrapper .fifa23-logo img {
     width: 100px;
     position: relative;
     left: -15%;
   }
-  .cards-wrapper .apex-mobile-logo img {
+  .section-wrapper .cards-wrapper .apex-mobile-logo img {
     width: 55px;
   }
-  .cards-wrapper .f1-22-logo img {
+  .section-wrapper .cards-wrapper .f1-22-logo img {
     width: 100px;
   }
-  .cards-wrapper .batterfield-logo img {
+  .section-wrapper .cards-wrapper .batterfield-logo img {
     width: 100px;
   }
-  .cards-wrapper .apex-logo {
+  .section-wrapper .cards-wrapper .apex-logo {
     width: 75px;
   }
-  .cards-wrapper .the-sims4-logo img {
+  .section-wrapper .cards-wrapper .the-sims4-logo img {
     width: 100px;
     position: relative;
     top: -40px;
@@ -2631,126 +2596,145 @@ footer {
   }
   .btn {
     border: 2px solid black;
-    width: 215px;
-    height: 50px;
+    padding: 15px 55px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
   }
+  .btn:hover {
+    padding: 17px 58px;
+  }
 }
 @media only screen and (min-width: 301px) and (max-width: 360px) {
-  .cards-wrapper .fifa23-card {
+  .section-wrapper {
+    background-color: rgb(240, 238, 238);
+    box-shadow: 14px -5px 22px -20px inset #161616;
+  }
+  .section-wrapper h1 {
+    font-size: 30px;
+    color: #161616;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .section-wrapper .cards-wrapper {
+    background-color: rgb(240, 238, 238);
+    box-shadow: 14px -5px 22px -20px inset #161616;
+  }
+  .section-wrapper .cards-wrapper .fifa23-card {
     display: flex;
   }
-  .cards-wrapper .fifa23-card:hover::after {
+  .section-wrapper .cards-wrapper .fifa23-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .fifa23-card:hover .fifa23-logo {
+  .section-wrapper .cards-wrapper .fifa23-card:hover .fifa23-logo {
     /*   transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .fifa23-card:hover p {
+  .section-wrapper .cards-wrapper .fifa23-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-mobile-card {
+  .section-wrapper .cards-wrapper .apex-mobile-card {
     display: flex;
   }
-  .cards-wrapper .apex-mobile-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
     /* transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-mobile-card:hover p {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover p {
     display: none;
   }
-  .cards-wrapper .f1-22-card {
+  .section-wrapper .cards-wrapper .f1-22-card {
     display: flex;
   }
-  .cards-wrapper .f1-22-card:hover::after {
+  .section-wrapper .cards-wrapper .f1-22-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .f1-22-card:hover .f1-22-logo {
+  .section-wrapper .cards-wrapper .f1-22-card:hover .f1-22-logo {
     /* transform: translateY(-45px); */
     transform: none;
   }
-  .cards-wrapper .f1-22-card:hover p {
+  .section-wrapper .cards-wrapper .f1-22-card:hover p {
     display: none;
   }
-  .cards-wrapper .batterfield-card {
+  .section-wrapper .cards-wrapper .batterfield-card {
     display: flex;
   }
-  .cards-wrapper .batterfield-card:hover::after {
+  .section-wrapper .cards-wrapper .batterfield-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .batterfield-card:hover .batterfield-logo {
+  .section-wrapper .cards-wrapper .batterfield-card:hover .batterfield-logo {
     transform: none;
   }
-  .cards-wrapper .batterfield-card:hover p {
+  .section-wrapper .cards-wrapper .batterfield-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-card {
+  .section-wrapper .cards-wrapper .apex-card {
     display: flex;
   }
-  .cards-wrapper .apex-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-card:hover .apex-logo {
+  .section-wrapper .cards-wrapper .apex-card:hover .apex-logo {
     /*  transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-card:hover p {
+  .section-wrapper .cards-wrapper .apex-card:hover p {
     display: none;
   }
-  .cards-wrapper .the-sims4-card {
+  .section-wrapper .cards-wrapper .the-sims4-card {
     display: flex;
   }
-  .cards-wrapper .the-sims4-card:hover::after {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
     transform: none;
   }
-  .cards-wrapper .the-sims4-card:hover p {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover p {
     display: none;
   }
-  .cards-wrapper .fifa23-logo img {
+  .section-wrapper .cards-wrapper .fifa23-logo img {
     width: 100px;
     position: relative;
-    left: -8%;
+    left: 2px;
   }
-  .cards-wrapper .apex-mobile-logo img {
+  .section-wrapper .cards-wrapper .apex-mobile-logo img {
     width: 55px;
   }
-  .cards-wrapper .f1-22-logo img {
+  .section-wrapper .cards-wrapper .f1-22-logo img {
+    width: 110px;
+  }
+  .section-wrapper .cards-wrapper .batterfield-logo img {
     width: 100px;
   }
-  .cards-wrapper .batterfield-logo img {
-    width: 100px;
-  }
-  .cards-wrapper .apex-logo {
+  .section-wrapper .cards-wrapper .apex-logo {
     width: 75px;
   }
-  .cards-wrapper .the-sims4-logo img {
+  .section-wrapper .cards-wrapper .the-sims4-logo img {
     width: 100px;
     position: relative;
     top: -40px;
     left: 5px;
   }
+  .section-wrapper .cards-wrapper p {
+    left: 35%;
+  }
   .bi-three-dots {
     position: absolute;
     top: 0px;
     right: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
     display: block;
     z-index: 2;
   }
@@ -2759,95 +2743,107 @@ footer {
   }
   .btn {
     border: 2px solid black;
-    width: 265px;
-    height: 50px;
+    padding: 14px 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
+  }
+  .btn:hover {
+    padding: 16px 85px;
   }
 }
 @media only screen and (min-width: 361px) and (max-width: 899px) {
-  .cards-wrapper .fifa23-card {
+  .section-wrapper {
+    background-color: rgb(240, 238, 238);
+    box-shadow: 14px -5px 22px -20px inset #161616;
+  }
+  .section-wrapper h1 {
+    font-size: 30px;
+    color: #161616;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .section-wrapper .cards-wrapper .fifa23-card {
     display: flex;
   }
-  .cards-wrapper .fifa23-card:hover::after {
+  .section-wrapper .cards-wrapper .fifa23-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .fifa23-card:hover .fifa23-logo {
+  .section-wrapper .cards-wrapper .fifa23-card:hover .fifa23-logo {
     /*   transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .fifa23-card:hover p {
+  .section-wrapper .cards-wrapper .fifa23-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-mobile-card {
+  .section-wrapper .cards-wrapper .apex-mobile-card {
     display: flex;
   }
-  .cards-wrapper .apex-mobile-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
     /* transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-mobile-card:hover p {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover p {
     display: none;
   }
-  .cards-wrapper .f1-22-card {
+  .section-wrapper .cards-wrapper .f1-22-card {
     display: flex;
   }
-  .cards-wrapper .f1-22-card:hover::after {
+  .section-wrapper .cards-wrapper .f1-22-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .f1-22-card:hover .f1-22-logo {
+  .section-wrapper .cards-wrapper .f1-22-card:hover .f1-22-logo {
     /* transform: translateY(-45px); */
     transform: none;
   }
-  .cards-wrapper .f1-22-card:hover p {
+  .section-wrapper .cards-wrapper .f1-22-card:hover p {
     display: none;
   }
-  .cards-wrapper .batterfield-card {
+  .section-wrapper .cards-wrapper .batterfield-card {
     display: flex;
   }
-  .cards-wrapper .batterfield-card:hover::after {
+  .section-wrapper .cards-wrapper .batterfield-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .batterfield-card:hover .batterfield-logo {
+  .section-wrapper .cards-wrapper .batterfield-card:hover .batterfield-logo {
     transform: none;
   }
-  .cards-wrapper .batterfield-card:hover p {
+  .section-wrapper .cards-wrapper .batterfield-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-card {
+  .section-wrapper .cards-wrapper .apex-card {
     display: flex;
   }
-  .cards-wrapper .apex-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-card:hover .apex-logo {
+  .section-wrapper .cards-wrapper .apex-card:hover .apex-logo {
     /*  transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-card:hover p {
+  .section-wrapper .cards-wrapper .apex-card:hover p {
     display: none;
   }
-  .cards-wrapper .the-sims4-card {
+  .section-wrapper .cards-wrapper .the-sims4-card {
     display: flex;
   }
-  .cards-wrapper .the-sims4-card:hover::after {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
     transform: none;
   }
-  .cards-wrapper .the-sims4-card:hover p {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover p {
     display: none;
   }
   .bi-three-dots {
@@ -2855,7 +2851,7 @@ footer {
     top: 0px;
     right: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
     display: block;
     z-index: 2;
   }
@@ -2864,12 +2860,22 @@ footer {
   }
   .btn {
     border: 2px solid black;
-    width: 325px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 16px;
+    padding: 13px 110px;
+  }
+  .btn:hover {
+    padding: 16px 113px;
+  }
+}
+@media only screen and (min-width: 361px) and (max-width: 899px) and (min-width: 414px) {
+  .btn {
+    padding: 16px 135px;
+  }
+  .btn:hover {
+    padding: 18px 138px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -2945,20 +2951,31 @@ footer {
     text-decoration: none;
   }
   .btn {
+    padding: 15px 30px;
     border: 2px solid black;
-    width: 147px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
   }
+  .btn:hover {
+    padding: 18px 35px;
+  }
   .bi-three-dots {
     position: absolute;
-    top: 0px;
+    top: -5px;
     right: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
+    display: block;
+    z-index: 2;
+  }
+  .b-icon.active .bi-x {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    font-size: 50px;
     display: block;
     z-index: 2;
   }
@@ -3065,7 +3082,7 @@ footer {
     position: absolute;
     flex-direction: column;
     padding: 32px 31px 32px 31px;
-    /*non prende le misure giuste del padding, 
+    /*non prende le misure giuste del padding,
     Exenia anche non sa come mai*/
   }
   .scritta_play {
