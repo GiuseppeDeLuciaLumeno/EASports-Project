@@ -42,9 +42,10 @@
         top: 50%;
         left: 40%;
         color: #f3f3f3;
-        display: none;
         font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
         font-size: 16px;
+        transition: opacity .1s;
+        opacity: 0;
     }
 
 }
