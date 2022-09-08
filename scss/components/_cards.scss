@@ -1,4 +1,4 @@
-//Giochi in Evidenza
+//Giochi in Evidenza's cards
 
 .fifa23-card {
     @include cards;
@@ -100,12 +100,14 @@
 
 }
 
-//Not finished yet
-.bi{
-   display: none;
-   cursor: pointer;
+//icons not to display
+.bi {
+    color: white;
+    display: none;
+    cursor: pointer;
 }
 
+//icon seet three dots to X
 .b-icon.active .bi-three-dots {
     display: none;
 }
@@ -115,10 +117,56 @@
     top: -10px;
     right: 5px;
     font-size: 50px;
-    color: red;
     display: block;
     z-index: 2;
 }
+
+//icons active shows background linear gradien & logo's translation
+.b-icon.active+ a {
+
+.fifa23-card,
+.apex-mobile-card,
+.f1-22-card,
+.batterfield-card,
+.apex-card,
+.the-sims4-card {
+   @include icons;
+   &:hover{
+    .fifa23-logo,
+    .apex-mobile-logo,
+    .f1-22-logo,
+    .batterfield-logo,
+    .apex-logo,
+    .the-sims4-logo{
+      transform: translateY(-70px);
+    }
+
+    p{
+      display: block;
+    }
+
+  }
+
+  p{
+      display: block;
+      z-index: 2;
+      color: #f3f3f3;
+  }
+
+}
+
+.fifa23-logo,
+.apex-mobile-logo,
+.f1-22-logo,
+.batterfield-logo,
+.apex-logo,
+.the-sims4-logo{
+    transform: translateY(-70px);
+}
+
+}
+
+
 
 
 // Ultime novità - reusable card styling -------------------------------------
