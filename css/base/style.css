@@ -1098,6 +1098,7 @@ select {
 
 #ultime-novita {
   background-color: rgb(242, 242, 242);
+  overflow: hidden;
 }
 #ultime-novita #h3 {
   margin-bottom: 20px;
