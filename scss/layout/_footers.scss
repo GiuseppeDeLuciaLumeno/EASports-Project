@@ -6,7 +6,7 @@
 
 
 footer {
-  font-family: ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
 }
 
@@ -26,7 +26,7 @@ footer {
         @include lg {
             height: 100vh;
             padding: 40px 22px 30px;
-            grid-template-rows: 60px 70px 70px 110px 70px;
+            grid-template-rows: 60px 60px 70px 110px 80px;
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
                 "logo ."
@@ -84,13 +84,12 @@ footer {
 
             a {
                 text-decoration: none;
-                margin-right: 2rem;
+                margin: 5px 32px 10px 0;
                 color: $color-primary;
                 line-height: 1.8;
+                font-size: 16px;
                 
-                @include lg {
-                    font-size: 15px;
-                }
+                
 
                 @include md {
                     margin-right: 1rem;
@@ -442,15 +441,15 @@ footer {
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
-            height: 75%;
+            height: 80%;
             width: 80%;
 
             @include lg {
-                width: 90%;
+                width: 89%;
             }
 
             a {
-                font-size: 12px;
+                font-size: 14px;
                 text-decoration: none;
                 margin-right: 2rem;
                 color: $color-primary;
@@ -463,7 +462,7 @@ footer {
             font-size: 14px;
 
             @include lg {
-                margin-top: 4px;
+                margin-top: 1rem;
             }
         }
     }
