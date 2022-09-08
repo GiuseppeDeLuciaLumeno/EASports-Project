@@ -72,7 +72,7 @@
 }
 
 
-/* Giochi in evidenza style */
+/* Start Giochi in evidenza */
 .section-wrapper {
     display: flex;
     flex-direction: column;
@@ -81,6 +81,15 @@
         position: relative;
     }
 }
+
+.cards-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 1.2rem;
+}
+/* End Giochi in evidenza style */
 
 /* Footer Giorgia (PLAY - GENITORI - SOCIAL)*/
 
