@@ -1,19 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  /* to fix img bottom line */
-}
-
-/* mixin header */
-/* end mixin for header */
 /*variables for header */
 /*end variables for header */
+/* mixin header */
+/* end mixin for header */
 @font-face {
   font-family: ElectronicArtsDisplay;
   src: url(../../assets/fonts/Electronic_Arts_Display.otf);
@@ -22,10 +10,81 @@ img {
   font-family: ElectronicArtsText;
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul.list,
+ol.list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 .section-wrapper h1 {
   font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
   font-weight: 900;
-  font-size: 2.75rem;
+  font-size: rem(44px);
   color: #161616;
   line-height: 1.5;
 }
@@ -371,6 +430,207 @@ img {
 }
 .the-sims4-card:hover .the-sims4-logo {
   transform: translateY(-55px);
+}
+
+.slider-tab-container {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease;
+}
+.slider-tab-container:hover {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+}
+.slider-tab-container .slider-tab {
+  padding-inline: 1rem;
+}
+
+.slider-tab-container + .slider-tab-container .slider-tab {
+  border-left: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(1) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(2) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(3) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(4) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(5) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(6) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(7) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container.active {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+  position: relative;
+}
+.slider-tab-container.active::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  width: 80%;
+  height: 2px;
+  background-color: hsl(0deg, 100%, 64%);
+}
+.slider-tab-container.active .slider-tab {
+  color: hsl(0deg, 0%, 42%);
+}
+
+@media (min-width: 48rem) {
+  .slider-tab-container {
+    height: 60px;
+    /* .slider-tab {
+
+    } */
+  }
+}
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "one" "two" "three" "four" "five" "six";
+}
+@media (min-width: 48rem) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "one two" "three four" "five six";
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 64rem) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "one two three" "four five six";
+    gap: 1rem;
+  }
+}
+@media (min-width: 91rem) {
+  .grid-container {
+    width: 68rem;
+  }
+}
+
+.section-container {
+  padding-inline: 7.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (min-width: 48rem) {
+  .section-container {
+    padding-inline: calc(12px + 7.8125vw);
+  }
+}
+@media (min-width: 64rem) {
+  .section-container {
+    padding-inline: calc(8px + 7.4218vw);
+  }
+}
+@media (min-width: 91rem) {
+  .section-container {
+    padding-inline: calc((100vw - 1120px) / 2);
+  }
+}
+
+.section-container {
+  position: relative;
+}
+.section-container .slider-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-container .slider-container .arrow {
+  position: absolute;
+  margin-inline: 1rem;
+}
+.section-container .slider-container .arrow::before, .section-container .slider-container .arrow::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: hsla(0deg, 0%, 9%, 0.5);
+}
+.section-container .slider-container .arrow-left {
+  left: 0;
+}
+.section-container .slider-container .arrow-left::before {
+  transform: translateY(150%) rotate(50deg);
+}
+.section-container .slider-container .arrow-left::after {
+  transform: translateY(-150%) rotate(-50deg);
+}
+.section-container .slider-container .arrow-right {
+  right: 0;
+}
+.section-container .slider-container .arrow-right::before {
+  transform: translateY(150%) rotate(-50deg);
+}
+.section-container .slider-container .arrow-right::after {
+  transform: translateY(-150%) rotate(50deg);
+}
+.section-container .slider-container ul {
+  display: flex;
+}
+.section-container .slider-container ul li {
+  flex: 0 0 auto;
+  list-style: none;
+}
+.section-container .slider-container .border-bottom {
+  align-self: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  margin-top: -2px;
+  left: 0;
+  background-color: hsla(0deg, 0%, 0%, 0.08);
+}
+
+#ultime-novita {
+  background-color: hsl(0deg, 0%, 95%);
+}
+#ultime-novita #h3 {
+  margin-bottom: 20px;
+  margin-inline: auto;
+}
+#ultime-novita #slider-container {
+  align-self: flex-start;
+  margin-bottom: 40px;
+  margin-left: -16px;
+}
+#ultime-novita #cards-container {
+  margin-bottom: 40px;
+}
+#ultime-novita .cta {
+  margin-inline: auto;
+}
+@media (min-width: 48rem) {
+  #ultime-novita #slider-container {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 64rem) {
+  #ultime-novita #slider-container {
+    margin-bottom: 60px;
+  }
 }
 
 /*@import "typography/fonts";

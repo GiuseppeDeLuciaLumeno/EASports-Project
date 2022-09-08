@@ -1,6 +1,4 @@
 //pixel-to-rem
-
-@function rem($number){
-
-    @return math.div($number, 16px) * 1rem;
-}
+@function rem($number) {
+    @return (math.div($number, 16px)) * 1rem;
+};
