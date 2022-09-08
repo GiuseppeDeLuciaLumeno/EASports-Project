@@ -440,6 +440,7 @@ img {
 .flexnav .nav .navlist ul li a {
   font-size: large;
   color: black;
+  text-decoration: none;
 }
 .flexnav .nav a:hover {
   color: white;
