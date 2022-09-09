@@ -178,8 +178,8 @@
 .card {
     position: relative;
     text-align: center;
-    background-color: map-get($map: $color, $key: white);
-    box-shadow: 0 3px 10px -2px map-get($map: $color, $key: shadow);
+    background-color: map-get($map: $da-color, $key: white);
+    box-shadow: 0 3px 10px -2px map-get($map: $da-color, $key: shadow);
     transition: 0.5s ease;
 
     &:hover {
@@ -211,7 +211,7 @@
         }
     }
 
-    @include breakpoint(tablet) {
+    @include da-breakpoint(tablet) {
         a {
             .img {
                 display: block;

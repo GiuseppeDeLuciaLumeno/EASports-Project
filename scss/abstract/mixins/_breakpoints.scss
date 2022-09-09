@@ -1,12 +1,12 @@
 // Dario - inizio -------------------------------------------------------------------------------
-@mixin breakpoint($size) {
-  @media (min-width: map-get($breakpoints, $size)) {
+@mixin da-breakpoint($size) {
+  @media (min-width: map-get($da-breakpoints, $size)) {
     @content;
   }
 }
 
-@mixin breakpoint-down($size) {
-  @media (max-width: map-get($breakpoints, $size)) {
+@mixin da-breakpoint-down($size) {
+  @media (max-width: map-get($da-breakpoints, $size)) {
     @content;
   }
 }

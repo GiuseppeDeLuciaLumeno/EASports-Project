@@ -1,6 +1,6 @@
 // ULTIME NOVITA - Dario - inizio ------------------------------------
 #ultime-novita {
-  background-color: map-get($map: $color, $key: bg);
+  background-color: map-get($map: $da-color, $key: bg);
   overflow: hidden;
 
 
@@ -23,13 +23,13 @@
     margin-inline: auto;
   }
 
-  @include breakpoint(tablet) {
+  @include da-breakpoint(tablet) {
     #slider-container {
       margin-bottom: 50px;
     }
   }
   
-  @include breakpoint(desktop) {
+  @include da-breakpoint(desktop) {
     #slider-container {
       margin-bottom: 60px;
     }

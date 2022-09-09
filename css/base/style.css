@@ -6,16 +6,6 @@
   font-family: ElectronicArtsText;
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-}
-
 .container_tot {
   display: flex;
   flex-direction: column;
@@ -965,9 +955,6 @@ select {
 @media (min-width: 48rem) {
   .slider-tab-container {
     height: 60px;
-    /* .slider-tab {
-
-    } */
   }
 }
 .grid-container {
