@@ -4,7 +4,7 @@
         font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
         font-weight: 900;
         font-size: map-get($fs-h1, desktop-large);
-        color: map-get($color, black-headers);
+        color: map-get($giu-color, black-headers);
         line-height: 1.5;
     }
 }
@@ -14,126 +14,126 @@
 
 // font-sizes + responsive
 .home-h3 {
-    font-size: map-get($map: $fs-h3, $key: mobile);
-    font-family: map-get($map: $font-family, $key: heading);
-    color: map-get($map: $color, $key: dark);
+    font-size: map-get($map: $da-fs-h3, $key: mobile);
+    font-family: map-get($map: $da-font-family, $key: heading);
+    color: map-get($map: $da-color, $key: dark);
 
-    @include breakpoint(tablet) {
-        font-size: map-get($map: $fs-h3, $key: tablet);
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-h3, $key: tablet);
     }
 
-    @include breakpoint(desktop) {
-        font-size: map-get($map: $fs-h3, $key: desktop);
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-h3, $key: desktop);
     }
 
-    @include breakpoint(desktop-large) {
-        font-size: map-get($map: $fs-h3, $key: desktop-large);
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-h3, $key: desktop-large);
     }
 }
 
 .home-h4 {
-    font-size: map-get($map: $fs-h4, $key: mobile);
-    font-family: map-get($map: $font-family, $key: heading);
-    color: map-get($map: $color, $key: dark);
+    font-size: map-get($map: $da-fs-h4, $key: mobile);
+    font-family: map-get($map: $da-font-family, $key: heading);
+    color: map-get($map: $da-color, $key: dark);
     margin-top: 5px;
     line-height: 25px;
     letter-spacing: 0.4px;
 
-    @include breakpoint(tablet) {
-        font-size: map-get($map: $fs-h4, $key: tablet);
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-h4, $key: tablet);
         letter-spacing: 0.5px;
         line-height: 25px;
     }
 
-    @include breakpoint(desktop) {
-        font-size: map-get($map: $fs-h4, $key: desktop);
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-h4, $key: desktop);
         line-height: 30px;
     }
 
-    @include breakpoint(desktop-large) {
-        font-size: map-get($map: $fs-h4, $key: desktop-large);
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-h4, $key: desktop-large);
         line-height: 32.4px;
     }
 }
 
 .home-h5 {
-    font-size: map-get($map: $fs-h5, $key: mobile);
-    font-family: map-get($map: $font-family, $key: heading);
+    font-size: map-get($map: $da-fs-h5, $key: mobile);
+    font-family: map-get($map: $da-font-family, $key: heading);
     font-weight: 600;
     line-height: 19px;
-    color: map-get($map: $color, $key: light-dark);
+    color: map-get($map: $da-color, $key: light-dark);
     margin-block: 0;
 
     &:first-child {
-        color: map-get($map: $color, $key: accent);
+        color: map-get($map: $da-color, $key: accent);
     }
 
-    @include breakpoint(tablet) {
-        font-size: map-get($map: $fs-h5, $key: tablet);
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-h5, $key: tablet);
     }
 
-    @include breakpoint(desktop) {
-        font-size: map-get($map: $fs-h5, $key: desktop);
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-h5, $key: desktop);
     }
 
-    @include breakpoint(desktop-large) {
-        font-size: map-get($map: $fs-h5, $key: desktop-large);
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-h5, $key: desktop-large);
     }
 }
 
 .home-p {
-    font-size: map-get($map: $fs-p, $key: mobile);
-    font-family: map-get($map: $font-family, $key: text);
+    font-size: map-get($map: $da-fs-p, $key: mobile);
+    font-family: map-get($map: $da-font-family, $key: text);
     line-height: 1.5rem;
-    color: map-get($map: $color, $key: light-dark);
+    color: map-get($map: $da-color, $key: light-dark);
     margin-top: 6px;
 
-    @include breakpoint(tablet) {
-        font-size: map-get($map: $fs-p, $key: tablet);
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-p, $key: tablet);
     }
 
-    @include breakpoint(desktop) {
-        font-size: map-get($map: $fs-p, $key: desktop);
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-p, $key: desktop);
         line-height: 1.7rem;
     }
 
-    @include breakpoint(desktop-large) {
-        font-size: map-get($map: $fs-p, $key: desktop-large);
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-p, $key: desktop-large);
     }
 }
 
 .home-tabs {
-    font-size: map-get($map: $fs-tabs, $key: mobile);
-    font-family: map-get($map: $font-family, $key: text);
-    color: map-get($map: $color, $key: light-dark);
+    font-size: map-get($map: $da-fs-tabs, $key: mobile);
+    font-family: map-get($map: $da-font-family, $key: text);
+    color: map-get($map: $da-color, $key: light-dark);
     text-decoration: none;
 
-    @include breakpoint(tablet) {
-        font-size: map-get($map: $fs-tabs, $key: tablet);
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-tabs, $key: tablet);
     }
 
-    @include breakpoint(desktop) {
-        font-size: map-get($map: $fs-tabs, $key: desktop);
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-tabs, $key: desktop);
     }
 
-    @include breakpoint(desktop-large) {
-        font-size: map-get($map: $fs-tabs, $key: desktop-large);
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-tabs, $key: desktop-large);
     }
 }
 
 .home-cta {
-    font-size: map-get($map: $fs-cta, $key: mobile);
+    font-size: map-get($map: $da-fs-cta, $key: mobile);
 
-    @include breakpoint(tablet) {
-        font-size: map-get($map: $fs-cta, $key: tablet);
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-cta, $key: tablet);
     }
 
-    @include breakpoint(desktop) {
-        font-size: map-get($map: $fs-cta, $key: desktop);
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-cta, $key: desktop);
     }
 
-    @include breakpoint(desktop-large) {
-        font-size: map-get($map: $fs-cta, $key: desktop-large);
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-cta, $key: desktop-large);
     }
 }
 
