@@ -969,6 +969,95 @@
     }
 }
 //mq daniele nav bar
-@media screen and (min-width:960px) and (max-width:1100px){
+@media screen and (min-width:760px) and (max-width:1100px){
     ul > li > a {display:none;}
+}
+@media screen and (max-width:760px){
+    .flexnav {
+        @include size (70vh, 100%);
+        @include flex (flex, flex-start, center);
+        flex-flow:column;
+    
+        .blackline {
+            background-color:$nav-col;
+            display:flex;
+            @include size(5vh, 100%);
+        }
+    
+        .nav {
+            display:flex;
+            @include size (5vh, 100%);
+            
+    
+                .logo {
+                    @include flex (flex, flex-start, center);
+                    flex:15%;
+                     }
+                .navlist {
+                    @include flex (flex, flex-start, center);
+                    flex:85%;
+                   
+                    ul {@include flex (flex, flex-start, center);
+                        @include size (2rem, 100%);
+                        @include space (1rem, 1.5rem);
+                        list-style:none;
+    
+                         li {
+                            
+                            
+                                a { 
+                                    font-size:large;
+                                    color:black;
+                                    text-decoration:none;
+                                    }
+                               
+                                        } 
+                                            }
+                                                }
+                                                a:hover {color:white;
+                                                        transition:1s;}
+        }
+       
+        .img {
+            display:flex;
+            position:relative;
+            @include size (60vh, 100%);
+            
+    
+                button {
+                            @include flex (flex, center, center);
+                            @include size (3.5rem, 8rem);
+                            border-radius:0.5rem;
+                            top:280px;
+                            left:240px;
+                            position:absolute;
+                            background-color:white;
+                            color:black;
+                }
+                .imgphrase {
+                            position:absolute;
+                            color:white;
+                            top:200px;
+                            left:100px;
+                            @include font (Helvetica, x-large);
+                }
+                .imgphrase2 {
+                    position:absolute;
+                    color:white;
+                    top:240px;
+                    left:250px;
+                    @include font (Helvetica, x-large);
+        }
+        .imgEAplay {
+            position:absolute;
+            color:white;
+            top:0;
+            
+            bottom:300px;
+            left:120px;
+            
+    }
+             
+        }
+    }
 }
