@@ -45,7 +45,7 @@ footer {
             grid-template-areas:
                 "logo"
                 "link1"
-                "price" 
+                "price"
                 "language"
                 "link2"
                 "privacy";
@@ -88,8 +88,8 @@ footer {
                 color: $color-primary;
                 line-height: 1.8;
                 font-size: 16px;
-                
-                
+
+
 
                 @include md {
                     margin-right: 1rem;
@@ -469,7 +469,7 @@ footer {
 
     .footer-privacy {
         grid-area: privacy;
-         
+
         .image-privacy {
             height: 100%;
             display: flex;
