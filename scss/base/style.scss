@@ -134,19 +134,30 @@ img{
                     color:black;
                     cursor:pointer;
                     
-        }
+            }
             
-    }
-    /*.imgEAplay {
-        position:absolute;
-        color:white;
-        top:0;
-        border:1px solid black;
-        bottom:0;
-        left:120px;
-        
-}*/
+        }
          
+    }
+    .mainimgmobile {
+                    display:flex;
+                    flex-flow:column;
+                    display:none;
+                    gap:1rem;
+                    background-image:url(/EASports-Project/assets/images/mainimgMobile.jpg);
+                    @include size(60vh, 100%);
+
+                    button {
+                        @include flex (flex, center, flex-end);
+                        @include size (1.5rem, 6rem);
+                        border-radius:0.5rem;
+                        background-color:white;
+                        color:black;
+                        cursor:pointer;
+                        
+                }
+
+
     }
 }
 

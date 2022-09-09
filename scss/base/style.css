@@ -1269,15 +1269,6 @@ img {
   background-image: url(/EASports-Project/assets/mainimgEA.jpg);
   height: 80vh;
   width: 100%;
-  /*.imgEAplay {
-          position:absolute;
-          color:white;
-          top:0;
-          border:1px solid black;
-          bottom:0;
-          left:120px;
-
-  }*/
 }
 .flexnav .img .textposition {
   display: flex;
@@ -1297,6 +1288,26 @@ img {
   align-items: flex-end;
   height: 3.5rem;
   width: 10rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.flexnav .mainimgmobile {
+  display: flex;
+  flex-flow: column;
+  display: none;
+  gap: 1rem;
+  background-image: url(/EASports-Project/assets/images/mainimgMobile.jpg);
+  height: 60vh;
+  width: 100%;
+}
+.flexnav .mainimgmobile button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 1.5rem;
+  width: 6rem;
   border-radius: 0.5rem;
   background-color: white;
   color: black;

@@ -972,3 +972,9 @@
 @media screen and (min-width:760px) and (max-width:1100px){
     ul > li > a {display:none;}
 }
+
+@media screen and (max-width:759px){
+    .mainimgmobile{display:block;}
+    .img{display:none;}
+    ul > li > a {display:none;}
+}
