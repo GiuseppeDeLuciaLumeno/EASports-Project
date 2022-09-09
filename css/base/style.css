@@ -1811,8 +1811,10 @@ footer {
   line-height: 2;
 }
 .footer-main-link .footer-legal-link .copyright {
-  margin-top: 10px;
   font-size: 14px;
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link .copyright {

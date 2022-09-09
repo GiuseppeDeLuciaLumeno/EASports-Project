@@ -458,8 +458,10 @@ footer {
         }
 
         .copyright {
-            margin-top: 10px;
             font-size: 14px;
+            width: 90%;
+            display: flex;
+            margin: 0 auto;
 
             @include lg {
                 margin-top: 1rem;
