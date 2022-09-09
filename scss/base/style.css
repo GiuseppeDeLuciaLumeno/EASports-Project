@@ -10,6 +10,355 @@
   font-family: ElectronicArtsText;
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container_tot {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container_gio {
+  display: flex;
+  position: relative;
+  height: 410px;
+  width: 100vw;
+}
+
+.blocco_bgplay {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+}
+
+.bg_play {
+  width: 100vw;
+  height: 410px;
+}
+
+.play {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  padding: 130px 0px 0px 410px;
+  /* @media only screen and (max-width:425px) {
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+    padding: 0px;
+   } */
+}
+
+.scritta_play {
+  display: flex;
+  position: relative;
+  color: white;
+  width: 544px;
+  height: 54px;
+  font-size: 27px;
+}
+
+.h6_play {
+  margin-bottom: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_play {
+  width: 240px;
+  height: 101px;
+}
+
+.bottone_play {
+  width: 150px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottone_play:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 70px;
+}
+
+.iscriviti_subito {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.container2_gio {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.blocco_genitori {
+  display: flex;
+  flex-direction: row;
+  background-color: #6FB0D6;
+  width: 100vw;
+  height: 112px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.genitori_gio {
+  width: 500px;
+  height: 70.22;
+  color: black;
+}
+
+.bottone_genitori {
+  width: 150px;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottone_genitori:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 70px;
+}
+
+.scopridipiu {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.blocco_link_gio {
+  display: flex;
+  flex-direction: row;
+  background-color: #EAEAEA;
+  width: 100vw;
+  height: 200px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.linkf_gio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 884px;
+  height: 81px;
+}
+
+.link_gio {
+  text-decoration: none;
+  color: black;
+  margin: 8px 48px 5px 0px;
+}
+
+.link_gio:hover {
+  text-decoration: none;
+  color: orangered;
+}
+
+.blocco_social {
+  display: flex;
+  flex-direction: column;
+}
+
+.social_logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 13px;
+}
+
+.blocco_loghi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.facebooklogo {
+  width: 22px;
+  height: 22px;
+}
+
+.facebooklogo:hover {
+  width: 25px;
+  height: 25px;
+  transition-duration: 0.2s;
+}
+
+.twitterlogo {
+  width: 22px;
+  height: 22px;
+}
+
+.twitterlogo:hover {
+  width: 25px;
+  height: 25px;
+  transition-duration: 0.2s;
+}
+
+.youtubelogo {
+  width: 22px;
+  height: 22px;
+}
+
+.youtubelogo:hover {
+  width: 25px;
+  height: 25px;
+  transition-duration: 0.2s;
+}
+
+.instagramlogo {
+  width: 22px;
+  height: 22px;
+}
+
+.instagramlogo:hover {
+  width: 25px;
+  height: 25px;
+  transition-duration: 0.2s;
+}
+
+.twitchlogo {
+  width: 22px;
+  height: 22px;
+}
+
+.twitchlogo:hover {
+  width: 25px;
+  height: 25px;
+  transition-duration: 0.2s;
+}
+
+@media only screen and (max-width: 768px) {
+  .play {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 32px 396px 32px 60px;
+  }
+  .scritta_play {
+    display: flex;
+    position: relative;
+    color: white;
+    width: 335px;
+    height: 100px;
+    font-size: 27px;
+  }
+  .blocco_genitori {
+    display: flex;
+    flex-direction: column;
+    background-color: #6FB0D6;
+    width: 100vw;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 32px 0px 16px 0px;
+  }
+  .genitori_gio {
+    width: 600px;
+    height: 70.22;
+    color: black;
+  }
+  .blocco_link_gio {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAEAEA;
+    width: 100vw;
+    height: 300px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px 60px 40px 60px;
+  }
+  .linkf_gio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 648px;
+    height: 118px;
+    padding-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .play {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .scritta_play {
+    display: flex;
+    position: relative;
+    color: white;
+    width: 335px;
+    height: 100px;
+    font-size: 27px;
+  }
+  .blocco_genitori {
+    display: flex;
+    flex-direction: column;
+    background-color: #6FB0D6;
+    width: 100vw;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 32px 0px 16px 0px;
+  }
+  .genitori_gio {
+    width: 600px;
+    height: 70.22;
+    color: black;
+  }
+  .blocco_link_gio {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAEAEA;
+    width: 100vw;
+    height: 300px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px 60px 40px 60px;
+  }
+  .linkf_gio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 648px;
+    height: 118px;
+    padding-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
 /* Box sizing rules */
 *,
 *::before,
@@ -84,9 +433,150 @@ select {
 .section-wrapper h1 {
   font-family: ElectronicArtsDisplay, Verdana, Helvetica, Arial, sans-serif;
   font-weight: 900;
-  font-size: rem(44px);
+  font-size: 2.75rem;
   color: #161616;
   line-height: 1.5;
+}
+
+.home-h3 {
+  font-size: 2rem;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+}
+@media (min-width: 48rem) {
+  .home-h3 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-h3 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-h3 {
+    font-size: 2.75rem;
+  }
+}
+
+.home-h4 {
+  font-size: 1.25rem;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+  margin-top: 5px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+}
+@media (min-width: 48rem) {
+  .home-h4 {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 64rem) {
+  .home-h4 {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+}
+@media (min-width: 91rem) {
+  .home-h4 {
+    font-size: 1.5rem;
+    line-height: 32.4px;
+  }
+}
+
+.home-h5 {
+  font-size: 0.875rem;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 19px;
+  color: hsla(0deg, 0%, 9%, 0.8);
+  margin-block: 0;
+}
+.home-h5:first-child {
+  color: hsl(0deg, 100%, 64%);
+}
+@media (min-width: 48rem) {
+  .home-h5 {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-h5 {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-h5 {
+    font-size: 1rem;
+  }
+}
+
+.home-p {
+  font-size: 1rem;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  line-height: 1.5rem;
+  color: hsla(0deg, 0%, 9%, 0.8);
+  margin-top: 6px;
+}
+@media (min-width: 48rem) {
+  .home-p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-p {
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-p {
+    font-size: 1.125rem;
+  }
+}
+
+.home-tabs {
+  font-size: 1rem;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsla(0deg, 0%, 9%, 0.8);
+  text-decoration: none;
+}
+@media (min-width: 48rem) {
+  .home-tabs {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-tabs {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-tabs {
+    font-size: 1.125rem;
+  }
+}
+
+.home-cta {
+  font-size: 1rem;
+}
+@media (min-width: 48rem) {
+  .home-cta {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-cta {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-cta {
+    font-size: 1.125rem;
+  }
 }
 
 .btn-container {
@@ -432,6 +922,74 @@ select {
   transform: translateY(-55px);
 }
 
+.bi {
+  display: none;
+  cursor: pointer;
+}
+
+.b-icon.active .bi-three-dots {
+  display: none;
+}
+
+.b-icon.active .bi-x {
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  font-size: 50px;
+  color: red;
+  display: block;
+  z-index: 2;
+}
+
+.card {
+  position: relative;
+  text-align: center;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0 3px 10px -2px hsla(0deg, 0%, 0%, 0.5);
+  transition: 0.5s ease;
+}
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
+}
+.card a {
+  text-decoration: none;
+  display: block;
+}
+.card a .img {
+  display: none;
+}
+.card a .content {
+  padding: 1.5rem 1rem;
+}
+.card a .content .info {
+  display: flex;
+  flex-direction: column;
+}
+.card a .content .card-p {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .card a .img {
+    display: block;
+  }
+  .card a .content {
+    padding: 1.5rem 1.5rem;
+  }
+  .card a .content .info {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .card a .content .card-h4 {
+    text-align: left;
+  }
+  .card a .content .card-p {
+    display: block;
+    text-align: left;
+  }
+}
+
 .slider-tab-container {
   height: 50px;
   display: flex;
@@ -657,7 +1215,7 @@ img {
 }
 
 .flexnav {
-  height: 70vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -708,45 +1266,41 @@ img {
 }
 .flexnav .img {
   display: flex;
-  position: relative;
-  height: 60vh;
+  background-image: url(/EASports-Project/assets/mainimgEA.jpg);
+  height: 80vh;
   width: 100%;
+  /*.imgEAplay {
+          position:absolute;
+          color:white;
+          top:0;
+          border:1px solid black;
+          bottom:0;
+          left:120px;
+
+  }*/
 }
-.flexnav .img button {
+.flexnav .img .textposition {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-style: Helvetica;
+  font-size: x-large;
+  height: 65vh;
+  width: 65%;
+  gap: 1rem;
+  color: white;
+  flex-flow: column;
+}
+.flexnav .img .textposition button {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   height: 3.5rem;
-  width: 8rem;
+  width: 10rem;
   border-radius: 0.5rem;
-  top: 280px;
-  left: 240px;
-  position: absolute;
   background-color: white;
   color: black;
-}
-.flexnav .img .imgphrase {
-  position: absolute;
-  color: white;
-  top: 200px;
-  left: 100px;
-  font-style: Helvetica;
-  font-size: x-large;
-}
-.flexnav .img .imgphrase2 {
-  position: absolute;
-  color: white;
-  top: 240px;
-  left: 250px;
-  font-style: Helvetica;
-  font-size: x-large;
-}
-.flexnav .img .imgEAplay {
-  position: absolute;
-  color: white;
-  top: 0;
-  bottom: 300px;
-  left: 120px;
+  cursor: pointer;
 }
 
 /* -------------------------------------Reponsivity--------------------------------- */
@@ -870,6 +1424,10 @@ img {
     font-size: 24px;
     display: block;
     z-index: 2;
+  }
+  .section-wrapper .b-icon.active .bi-x {
+    font-size: 34px;
+    top: -5px;
   }
 }
 /* X show to active with js */
@@ -1120,7 +1678,7 @@ img {
     top: 0px;
     right: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
     display: block;
     z-index: 2;
   }
@@ -1225,7 +1783,7 @@ img {
     top: 0px;
     right: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
     display: block;
     z-index: 2;
   }
@@ -1325,10 +1883,20 @@ img {
   }
   .bi-three-dots {
     position: absolute;
-    top: 0px;
+    top: -5px;
     right: 10px;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
+    display: block;
+    z-index: 2;
+  }
+  .b-icon.active .bi-x {
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    color: red;
+    font-size: 50px;
     display: block;
     z-index: 2;
   }
@@ -1374,6 +1942,116 @@ img {
     max-height: 350px;
   }
   .bi {
+    display: none;
+  }
+}
+/* Footer Giorgia (PLAY -GENITORI -SOCIAL)*/
+@media only screen and (max-width: 768px) {
+  .play {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 32px 396px 32px 60px;
+  }
+  .scritta_play {
+    display: flex;
+    position: relative;
+    color: white;
+    width: 335px;
+    height: 100px;
+    font-size: 27px;
+  }
+  .blocco_genitori {
+    display: flex;
+    flex-direction: column;
+    background-color: #6FB0D6;
+    width: 100vw;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 32px 0px 16px 0px;
+  }
+  .genitori_gio {
+    width: 600px;
+    height: 70.22;
+    color: black;
+  }
+  .blocco_link_gio {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAEAEA;
+    width: 100vw;
+    height: 300px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px 60px 40px 60px;
+  }
+  .linkf_gio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 648px;
+    height: 118px;
+    padding-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .play {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 32px 31px 32px 31px;
+    /*non prende le misure giuste del padding,
+    Exenia anche non sa come mai*/
+  }
+  .scritta_play {
+    display: flex;
+    position: relative;
+    color: white;
+    width: 335px;
+    height: 100px;
+    font-size: 27px;
+  }
+  .blocco_genitori {
+    display: flex;
+    flex-direction: column;
+    background-color: #6FB0D6;
+    width: 100vw;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 32px 0px 16px 0px;
+  }
+  .genitori_gio {
+    width: 200px;
+    height: 70.22;
+    color: black;
+  }
+  .blocco_link_gio {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAEAEA;
+    width: 100vw;
+    height: 300px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px 60px 40px 60px;
+  }
+  .linkf_gio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 648px;
+    height: 118px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (min-width: 760px) and (max-width: 1100px) {
+  ul > li > a {
     display: none;
   }
 }

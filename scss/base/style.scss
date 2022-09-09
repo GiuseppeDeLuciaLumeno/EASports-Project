@@ -65,7 +65,7 @@ img{
 
 
 .flexnav {
-    @include size (70vh, 100%);
+    @include size (90vh, 100%);
     @include flex (flex, flex-start, center);
     flex-flow:column;
 
@@ -111,43 +111,41 @@ img{
    
     .img {
         display:flex;
-        position:relative;
-        @include size (60vh, 100%);
         
-
-            button {
-                        @include flex (flex, center, center);
-                        @include size (3.5rem, 8rem);
-                        border-radius:0.5rem;
-                        top:280px;
-                        left:240px;
-                        position:absolute;
-                        background-color:white;
-                        color:black;
-            }
-            .imgphrase {
-                        position:absolute;
-                        color:white;
-                        top:200px;
-                        left:100px;
-                        @include font (Helvetica, x-large);
-            }
-            .imgphrase2 {
-                position:absolute;
-                color:white;
-                top:240px;
-                left:250px;
+        background-image: url(/EASports-Project/assets/mainimgEA.jpg);
+        @include size (80vh, 100%);
+        
+   
+      
+    .textposition {
+                @include flex(flex, flex-end, center);
                 @include font (Helvetica, x-large);
+                @include size (65vh, 65%);
+                gap:1rem;
+                color:white;
+                flex-flow:column;
+               
+
+                button {
+                    @include flex (flex, center, flex-end);
+                    @include size (3.5rem, 10rem);
+                    border-radius:0.5rem;
+                    background-color:white;
+                    color:black;
+                    cursor:pointer;
+                    
+        }
+            
     }
-    .imgEAplay {
+    /*.imgEAplay {
         position:absolute;
         color:white;
         top:0;
-        
-        bottom:300px;
+        border:1px solid black;
+        bottom:0;
         left:120px;
         
-}
+}*/
          
     }
 }
