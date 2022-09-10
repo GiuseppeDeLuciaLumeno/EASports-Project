@@ -1423,6 +1423,7 @@ footer {
   width: 100%;
 }
 .footer-main-link .footer-link1 ul {
+  padding-inline-start: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -1791,6 +1792,7 @@ footer {
   }
 }
 .footer-main-link .footer-legal-link ul {
+  padding-inline-start: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -1812,9 +1814,7 @@ footer {
 }
 .footer-main-link .footer-legal-link .copyright {
   font-size: 14px;
-  width: 90%;
-  display: flex;
-  margin: 0 auto;
+  margin-top: 10px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link .copyright {
