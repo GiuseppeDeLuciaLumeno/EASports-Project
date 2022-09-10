@@ -177,7 +177,11 @@ footer {
                 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
                 opacity: 0;
                 transform: translateY(-10px);
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
                 transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+                -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+                -o-transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
                 pointer-events: none;
                 z-index: 100;
 
@@ -219,6 +223,8 @@ footer {
             .button-link:focus + .dropdown-menu {
                 opacity: 1;
                 transform: translateY(0);
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
                 pointer-events: auto;
 
                 @include lg {
@@ -348,7 +354,11 @@ footer {
                 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
                 opacity: 0;
                 transform: translateY(-10px);
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
                 transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+                -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+                -o-transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
                 pointer-events: none;
                 z-index: 2;
 
@@ -383,11 +393,15 @@ footer {
             .link:hover {
                 padding-left: 20px;
                 transition: padding-left 150ms ease-in-out;
+                -webkit-transition: padding-left 150ms ease-in-out;
+                -o-transition: padding-left 150ms ease-in-out;
             }
 
             .button-link:focus + .dropdown-menu {
                 opacity: 1;
                 transform: translateY(0);
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
                 pointer-events: auto;
 
                 @include lg {
