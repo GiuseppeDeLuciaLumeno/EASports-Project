@@ -190,8 +190,24 @@
 
 }
 
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// ULTIME NOVITA' - REUSABLE CARDS STYLING -------------------------------------
 
-// Ultime novità - reusable card styling -------------------------------------
+// .card {
+//      a {
+//          img {.........}
+//          .content {
+//              .info {
+//                  h5.card-h5 {.........}
+//                  h5.card-h5 {.........}
+//              }
+//              h4.card-h4 {.........}
+//              p.card-p {.........}
+//          }
+//      }
+// }
+
 .card {
     position: relative;
     text-align: center;
@@ -201,9 +217,7 @@
 
     &:hover {
         transform: translateY(-12px);
-        // box-shadow: 0px 22px 25px 0px rgba(0,0,0,0.5);
         box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
-        ;
     }
 
     a {
