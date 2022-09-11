@@ -77,7 +77,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    #block-position{
+
+    #block-position {
         position: relative;
     }
 }
@@ -89,48 +90,46 @@
     gap: 25px;
     margin: 1.2rem;
 }
+
 /* End Giochi in evidenza style */
 
 /* Footer Giorgia (PLAY - GENITORI - SOCIAL)*/
 
-.container_tot{
+.container_tot {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 100vh;
-    width: 100vw;
-
-
+   /*  height: 100vh;
+    width: 100vw; */
 }
 
-.container_gio{
+.container_gio {
     display: flex;
     position: relative;
     height: 410px;
-    width: 100vw;
-
 }
 
-.blocco_bgplay{
+.blocco_bgplay {
     width: auto;
     height: auto;
     display: flex;
     position: absolute;
-
 }
 
-.bg_play{
-    width: 100vw;
+.bg_play {
     height: 410px;
 }
 
-.play{
-    display: flex;
-    position:absolute;
-    flex-direction: column;
-   padding: 130px 0px 0px 410px;
 
-  /* @media only screen and (max-width:425px) {
+.play {
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 320px;
+    flex-direction: column;
+    /* padding: 130px 0px 0px 410px; */
+
+    /* @media only screen and (max-width:425px) {
     display: flex;
     position:absolute;
     flex-direction: column;
@@ -138,22 +137,23 @@
    } */
 }
 
-.scritta_play{
+.scritta_play {
     display: flex;
-    position:relative;
+    position: relative;
     color: white;
     width: 544px;
     height: 54px;
     font-size: 27px;
 }
 
-.h6_play{
+.h6_play {
     margin-bottom: 24px;
     justify-content: center;
     align-items: center;
 
 }
-.img_play{
+
+.img_play {
     width: 240px;
     height: 101px;
 }
@@ -209,26 +209,27 @@
 }
 
 
-.container2_gio{
+.container2_gio {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-
+    /* width: 100vw; */
 }
 
 
-.blocco_genitori{
+.blocco_genitori {
     display: flex;
     flex-direction: row;
-    background-color:#6FB0D6;
-    width: 100vw;
+    background-color: #6FB0D6;
+   /*  width: 100vw; */
     height: 112px;
     justify-content: space-around;
-    align-items: center ;
-
+    align-items: center;
+  /*   z-index: 1;
+    position: relative;    //MHMMMM GESTIONE MOMENTANEA!!!!!!!
+    top: 50px; */
 }
 
-.genitori_gio{
+.genitori_gio {
     width: 500px;
     height: 70.22;
     color: black;
@@ -283,19 +284,19 @@
     }
 }
 
-.blocco_link_gio{
+.blocco_link_gio {
     display: flex;
     flex-direction: row;
     background-color: #EAEAEA;
-    width: 100vw;
-    height: 200px;
+   /*  width: 100vw; */
+    /* height: 200px; */
     justify-content: space-around;
     align-items: center;
 
 
 }
 
-.linkf_gio{
+.linkf_gio {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -305,84 +306,85 @@
     height: 81px;
 }
 
-.link_gio{
+.link_gio {
     text-decoration: none;
     color: black;
     margin: 8px 48px 5px 0px;
 }
 
-.link_gio:hover{
+.link_gio:hover {
     text-decoration: none;
     color: orangered;
 }
 
-.blocco_social{
+.blocco_social {
     display: flex;
     flex-direction: column;
 }
 
-.social_logo{
+.social_logo {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 13px;
 }
-.blocco_loghi{
+
+.blocco_loghi {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.facebooklogo{
+.facebooklogo {
     width: 22px;
     height: 22px;
 }
 
-.facebooklogo:hover{
+.facebooklogo:hover {
     width: 25px;
     height: 25px;
     transition-duration: 0.20s;
 }
 
-.twitterlogo{
+.twitterlogo {
     width: 22px;
     height: 22px;
 }
 
-.twitterlogo:hover{
+.twitterlogo:hover {
     width: 25px;
     height: 25px;
     transition-duration: 0.20s;
 }
 
-.youtubelogo{
+.youtubelogo {
     width: 22px;
     height: 22px;
 }
 
-.youtubelogo:hover{
+.youtubelogo:hover {
     width: 25px;
     height: 25px;
     transition-duration: 0.20s;
 }
 
-.instagramlogo{
+.instagramlogo {
     width: 22px;
     height: 22px;
 }
 
-.instagramlogo:hover{
+.instagramlogo:hover {
     width: 25px;
     height: 25px;
     transition-duration: 0.20s;
 }
 
-.twitchlogo{
+.twitchlogo {
     width: 22px;
     height: 22px;
 }
 
-.twitchlogo:hover{
+.twitchlogo:hover {
     width: 25px;
     height: 25px;
     transition-duration: 0.20s;
