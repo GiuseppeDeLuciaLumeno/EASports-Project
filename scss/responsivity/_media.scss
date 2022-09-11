@@ -907,7 +907,7 @@
 
 /* Footer Giorgia (PLAY -GENITORI -SOCIAL)*/
 
-@media (max-width:430px) {
+/*@media (max-width:430px) {
 
 
     .play {
@@ -916,7 +916,7 @@
         flex-direction: column;
         padding: 32px 31px 32px 31px;
         /*non prende le misure giuste del padding,
-        Exenia anche non sa come mai*/
+        Exenia anche non sa come mai*//*
     }
 
 
@@ -969,7 +969,7 @@
         padding-bottom: 10px;
     }
 
-}
+}*/
 
 @media only screen and (max-width:768px) {
 
@@ -1041,6 +1041,9 @@
         display: flex;
         position: absolute;
         flex-direction: column;
+        width: 100px;
+        justify-content: center;
+        align-items: center;
        /*  padding: 32px 31px 32px 31px; */
         /*non prende le misure giuste del padding,
         Exenia anche non sa come mai*/
@@ -1052,11 +1055,11 @@
         display: flex;
         position: relative;
         color: white;
-        width: 335px;
-        height: 100px;
+        width: 360px;
+        height: 79px;
         font-size: 27px;
     }
-
+    
     .blocco_genitori {
         display: flex;
         flex-direction: column;
@@ -1091,7 +1094,7 @@
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
-        width: 648px;
+        width: 380px;
         height: 118px;
         padding-bottom: 10px;
     }
