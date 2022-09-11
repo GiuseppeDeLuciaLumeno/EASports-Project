@@ -65,7 +65,7 @@ footer {
         width: 100%;
 
         ul {
-            padding-inline-start: 0;
+
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
@@ -461,7 +461,9 @@ footer {
 
         .copyright {
             font-size: 14px;
-            margin-top: 10px;
+            width: 90%;
+            display: flex;
+            margin:  0 auto;
 
             @include lg {
                 margin-top: 1rem;

@@ -1423,7 +1423,6 @@ footer {
   width: 100%;
 }
 .footer-main-link .footer-link1 ul {
-  padding-inline-start: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -1814,7 +1813,9 @@ footer {
 }
 .footer-main-link .footer-legal-link .copyright {
   font-size: 14px;
-  margin-top: 10px;
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link .copyright {
@@ -2459,15 +2460,6 @@ footer {
     top: -5px;
   }
 }
-/* X show to active with js */
-/* .bi-x{
-            display: block;
-            position: absolute;
-            top: 0px;
-            right: 10px;
-            color: white;
-            font-size: 34px;
-        } */
 @media only screen and (min-width: 251px) and (max-width: 300px) {
   .section-wrapper {
     background-color: rgb(240, 238, 238);
