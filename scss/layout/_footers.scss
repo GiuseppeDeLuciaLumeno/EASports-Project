@@ -220,7 +220,7 @@ footer {
             .button-link:focus + .dropdown-menu {
                 opacity: 1;
                 transform: translateY(0);
-                pointer-events: auto;
+                /* pointer-events: auto; */
 
                 @include lg {
                     display: none;
