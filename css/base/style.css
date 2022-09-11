@@ -1558,6 +1558,7 @@ footer {
 
 .bg_play {
   height: 410px;
+  width: 100vw;
 }
 
 .play {
@@ -1623,8 +1624,8 @@ footer {
   height: 75px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0rem 0rem 0rem;
+  justify-content: flex-start;
+  margin: 10px 0px 0px 0px;
 }
 
 .iscriviti_subito1 {
@@ -2583,6 +2584,14 @@ footer {
     position: absolute;
     flex-direction: column;
     /* padding: 32px 396px 32px 60px; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    left: 50px;
+  }
+  .h6_play {
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
   }
   .scritta_play {
     display: flex;
@@ -2679,8 +2688,8 @@ footer {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    width: 380px;
-    height: 118px;
+    width: 381px;
+    height: 324px;
     padding-bottom: 10px;
   }
 }

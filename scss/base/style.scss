@@ -118,6 +118,7 @@
 
 .bg_play {
     height: 410px;
+    width: 100vw;
 }
 
 
@@ -187,8 +188,8 @@
     height: 75px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 0rem 0rem 0rem;
+    justify-content: flex-start;
+    margin: 10px 0px 0px 0px;
 }
 
 .iscriviti_subito1 {
