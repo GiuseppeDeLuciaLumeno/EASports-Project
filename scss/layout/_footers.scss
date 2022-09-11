@@ -45,7 +45,7 @@ footer {
             grid-template-areas:
                 "logo"
                 "link1"
-                "price" 
+                "price"
                 "language"
                 "link2"
                 "privacy";
@@ -65,7 +65,7 @@ footer {
         width: 100%;
 
         ul {
-            padding-inline-start: 0;
+
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
@@ -89,8 +89,8 @@ footer {
                 color: $color-primary;
                 line-height: 1.8;
                 font-size: 16px;
-                
-                
+
+
 
                 @include md {
                     margin-right: 1rem;
@@ -461,7 +461,9 @@ footer {
 
         .copyright {
             font-size: 14px;
-            margin-top: 10px;
+            width: 90%;
+            display: flex;
+            margin:  0 auto;
 
             @include lg {
                 margin-top: 1rem;
@@ -471,7 +473,7 @@ footer {
 
     .footer-privacy {
         grid-area: privacy;
-         
+
         .image-privacy {
             height: 100%;
             display: flex;

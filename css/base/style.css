@@ -7,345 +7,6 @@
   font-family: ElectronicArtsText;
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
-.container_tot {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
-.container_gio {
-  display: flex;
-  position: relative;
-  height: 410px;
-  width: 100vw;
-}
-
-.blocco_bgplay {
-  width: auto;
-  height: auto;
-  display: flex;
-  position: absolute;
-}
-
-.bg_play {
-  width: 100vw;
-  height: 410px;
-}
-
-.play {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  padding: 130px 0px 0px 410px;
-  /* @media only screen and (max-width:425px) {
-    display: flex;
-    position:absolute;
-    flex-direction: column;
-    padding: 0px;
-   } */
-}
-
-.scritta_play {
-  display: flex;
-  position: relative;
-  color: white;
-  width: 544px;
-  height: 54px;
-  font-size: 27px;
-}
-
-.h6_play {
-  margin-bottom: 24px;
-  justify-content: center;
-  align-items: center;
-}
-
-.img_play {
-  width: 240px;
-  height: 101px;
-}
-
-.bottone_play {
-  width: 150px;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottone_play:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 70px;
-}
-
-.iscriviti_subito {
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-}
-
-.container2_gio {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-}
-
-.blocco_genitori {
-  display: flex;
-  flex-direction: row;
-  background-color: #6FB0D6;
-  width: 100vw;
-  height: 112px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.genitori_gio {
-  width: 500px;
-  height: 70.22;
-  color: black;
-}
-
-.bottone_genitori {
-  width: 150px;
-  height: 60px;
-  border: 2px solid black;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottone_genitori:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 70px;
-}
-
-.scopridipiu {
-  display: block;
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-
-.blocco_link_gio {
-  display: flex;
-  flex-direction: row;
-  background-color: #EAEAEA;
-  width: 100vw;
-  height: 200px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.linkf_gio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 884px;
-  height: 81px;
-}
-
-.link_gio {
-  text-decoration: none;
-  color: black;
-  margin: 8px 48px 5px 0px;
-}
-
-.link_gio:hover {
-  text-decoration: none;
-  color: orangered;
-}
-
-.blocco_social {
-  display: flex;
-  flex-direction: column;
-}
-
-.social_logo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 13px;
-}
-
-.blocco_loghi {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.facebooklogo {
-  width: 22px;
-  height: 22px;
-}
-
-.facebooklogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.twitterlogo {
-  width: 22px;
-  height: 22px;
-}
-
-.twitterlogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.youtubelogo {
-  width: 22px;
-  height: 22px;
-}
-
-.youtubelogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.instagramlogo {
-  width: 22px;
-  height: 22px;
-}
-
-.instagramlogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.twitchlogo {
-  width: 22px;
-  height: 22px;
-}
-
-.twitchlogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-@media only screen and (max-width: 768px) {
-  .play {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    padding: 32px 396px 32px 60px;
-  }
-  .scritta_play {
-    display: flex;
-    position: relative;
-    color: white;
-    width: 335px;
-    height: 100px;
-    font-size: 27px;
-  }
-  .blocco_genitori {
-    display: flex;
-    flex-direction: column;
-    background-color: #6FB0D6;
-    width: 100vw;
-    height: 200px;
-    justify-content: space-around;
-    align-items: center;
-    padding: 32px 0px 16px 0px;
-  }
-  .genitori_gio {
-    width: 600px;
-    height: 70.22;
-    color: black;
-  }
-  .blocco_link_gio {
-    display: flex;
-    flex-direction: column;
-    background-color: #EAEAEA;
-    width: 100vw;
-    height: 300px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 12px 60px 40px 60px;
-  }
-  .linkf_gio {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 648px;
-    height: 118px;
-    padding-bottom: 10px;
-  }
-}
-@media only screen and (max-width: 425px) {
-  .play {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    padding: 0px;
-  }
-  .scritta_play {
-    display: flex;
-    position: relative;
-    color: white;
-    width: 335px;
-    height: 100px;
-    font-size: 27px;
-  }
-  .blocco_genitori {
-    display: flex;
-    flex-direction: column;
-    background-color: #6FB0D6;
-    width: 100vw;
-    height: 200px;
-    justify-content: space-around;
-    align-items: center;
-    padding: 32px 0px 16px 0px;
-  }
-  .genitori_gio {
-    width: 600px;
-    height: 70.22;
-    color: black;
-  }
-  .blocco_link_gio {
-    display: flex;
-    flex-direction: column;
-    background-color: #EAEAEA;
-    width: 100vw;
-    height: 300px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 12px 60px 40px 60px;
-  }
-  .linkf_gio {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 648px;
-    height: 118px;
-    padding-bottom: 10px;
-  }
-}
-/*# sourceMappingURL=style.css.map */
 /* Box sizing rules */
 *,
 *::before,
@@ -590,11 +251,271 @@ select {
   padding: 18px 35px;
 }
 
-.fifa23-card::before,
-.apex-mobile-card::before,
-.f1-22-card::before,
-.batterfield-card::before,
-.apex-card::before,
+.fifa23-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 23, 23, 0.4);
+}
+.fifa23-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0;
+}
+.fifa23-card:hover::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.fifa23-card:hover p {
+  display: block;
+  z-index: 2;
+}
+.fifa23-card p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: #f3f3f3;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
+}
+.fifa23-card .fifa23-logo {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.fifa23-card:hover .fifa23-logo {
+  transform: translateY(-70px);
+}
+.fifa23-card:hover p {
+  opacity: 1;
+}
+
+.apex-mobile-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 23, 23, 0.4);
+}
+.apex-mobile-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0;
+}
+.apex-mobile-card:hover::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.apex-mobile-card:hover p {
+  display: block;
+  z-index: 2;
+}
+.apex-mobile-card p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: #f3f3f3;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
+}
+.apex-mobile-card .apex-mobile-logo {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.apex-mobile-card:hover .apex-mobile-logo {
+  transform: translateY(-70px);
+}
+.apex-mobile-card:hover p {
+  opacity: 1;
+}
+
+.f1-22-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 23, 23, 0.4);
+}
+.f1-22-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0;
+}
+.f1-22-card:hover::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.f1-22-card:hover p {
+  display: block;
+  z-index: 2;
+}
+.f1-22-card p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: #f3f3f3;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
+}
+.f1-22-card .f1-22-logo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.f1-22-card:hover .f1-22-logo {
+  transform: translateY(-60px);
+}
+.f1-22-card:hover p {
+  opacity: 1;
+}
+
+.batterfield-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 23, 23, 0.4);
+}
+.batterfield-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0;
+}
+.batterfield-card:hover::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.batterfield-card:hover p {
+  display: block;
+  z-index: 2;
+}
+.batterfield-card p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: #f3f3f3;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
+}
+.batterfield-card .batterfield-logo {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.batterfield-card:hover .batterfield-logo {
+  transform: translateY(-40px);
+}
+.batterfield-card:hover p {
+  opacity: 1;
+}
+
+.apex-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(24, 23, 23, 0.4);
+}
+.apex-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.4s ease;
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0;
+}
+.apex-card:hover::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.apex-card:hover p {
+  display: block;
+  z-index: 2;
+}
+.apex-card p {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: #f3f3f3;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
+}
+.apex-card .apex-logo {
+  position: absolute;
+  top: 40%;
+  left: 37%;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+.apex-card:hover .apex-logo {
+  transform: translateY(-70px);
+}
+.apex-card:hover p {
+  opacity: 1;
+}
+
 .the-sims4-card::before {
   content: "";
   position: absolute;
@@ -604,11 +525,6 @@ select {
   height: 100%;
   background: rgba(24, 23, 23, 0.4);
 }
-.fifa23-card::after,
-.apex-mobile-card::after,
-.f1-22-card::after,
-.batterfield-card::after,
-.apex-card::after,
 .the-sims4-card::after {
   content: "";
   position: absolute;
@@ -620,30 +536,15 @@ select {
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0;
 }
-.fifa23-card:hover::after,
-.apex-mobile-card:hover::after,
-.f1-22-card:hover::after,
-.batterfield-card:hover::after,
-.apex-card:hover::after,
 .the-sims4-card:hover::after {
   background: rgb(47, 41, 124);
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0.82;
 }
-.fifa23-card:hover p,
-.apex-mobile-card:hover p,
-.f1-22-card:hover p,
-.batterfield-card:hover p,
-.apex-card:hover p,
 .the-sims4-card:hover p {
   display: block;
   z-index: 2;
 }
-.fifa23-card p,
-.apex-mobile-card p,
-.f1-22-card p,
-.batterfield-card p,
-.apex-card p,
 .the-sims4-card p {
   position: absolute;
   top: 50%;
@@ -654,79 +555,6 @@ select {
   transition: opacity 0.1s;
   opacity: 0;
 }
-.fifa23-card .fifa23-logo,
-.apex-mobile-card .fifa23-logo,
-.f1-22-card .fifa23-logo,
-.batterfield-card .fifa23-logo,
-.apex-card .fifa23-logo,
-.the-sims4-card .fifa23-logo {
-  position: absolute;
-  top: 40%;
-  left: 35%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.fifa23-card:hover .fifa23-logo,
-.apex-mobile-card:hover .fifa23-logo,
-.f1-22-card:hover .fifa23-logo,
-.batterfield-card:hover .fifa23-logo,
-.apex-card:hover .fifa23-logo,
-.the-sims4-card:hover .fifa23-logo {
-  transform: translateY(-70px);
-}
-.fifa23-card:hover p,
-.apex-mobile-card:hover p,
-.f1-22-card:hover p,
-.batterfield-card:hover p,
-.apex-card:hover p,
-.the-sims4-card:hover p {
-  opacity: 1;
-}
-
-.apex-mobile-card .apex-mobile-logo {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.apex-mobile-card:hover .apex-mobile-logo {
-  transform: translateY(-70px);
-}
-
-.f1-22-card .f1-22-logo {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.f1-22-card:hover .f1-22-logo {
-  transform: translateY(-60px);
-}
-
-.batterfield-card .batterfield-logo {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.batterfield-card:hover .batterfield-logo {
-  transform: translateY(-40px);
-}
-
-.apex-card .apex-logo {
-  position: absolute;
-  top: 40%;
-  left: 37%;
-  transition: all 0.4s ease;
-  z-index: 1;
-}
-.apex-card:hover .apex-logo {
-  transform: translateY(-70px);
-}
-
 .the-sims4-card .the-sims4-logo {
   position: absolute;
   top: 25%;
@@ -736,6 +564,9 @@ select {
 }
 .the-sims4-card:hover .the-sims4-logo {
   transform: translateY(-55px);
+}
+.the-sims4-card:hover p {
+  opacity: 1;
 }
 
 .bi {
@@ -1037,345 +868,6 @@ select {
   font-family: ElectronicArtsText;
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
-.container_tot {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
-.container_gio {
-  display: flex;
-  position: relative;
-  height: 410px;
-  width: 100vw;
-}
-
-.blocco_bgplay {
-  width: auto;
-  height: auto;
-  display: flex;
-  position: absolute;
-}
-
-.bg_play {
-  width: 100vw;
-  height: 410px;
-}
-
-.play {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  padding: 130px 0px 0px 410px;
-  /* @media only screen and (max-width:425px) {
-    display: flex;
-    position:absolute;
-    flex-direction: column;
-    padding: 0px;
-   } */
-}
-
-.scritta_play {
-  display: flex;
-  position: relative;
-  color: white;
-  width: 544px;
-  height: 54px;
-  font-size: 27px;
-}
-
-.h6_play {
-  margin-bottom: 24px;
-  justify-content: center;
-  align-items: center;
-}
-
-.img_play {
-  width: 240px;
-  height: 101px;
-}
-
-.bottone_play {
-  width: 150px;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottone_play:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 70px;
-}
-
-.iscriviti_subito {
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-}
-
-.container2_gio {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-}
-
-.blocco_genitori {
-  display: flex;
-  flex-direction: row;
-  background-color: #6FB0D6;
-  width: 100vw;
-  height: 112px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.genitori_gio {
-  width: 500px;
-  height: 70.22;
-  color: black;
-}
-
-.bottone_genitori {
-  width: 150px;
-  height: 60px;
-  border: 2px solid black;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottone_genitori:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 70px;
-}
-
-.scopridipiu {
-  display: block;
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-
-.blocco_link_gio {
-  display: flex;
-  flex-direction: row;
-  background-color: #EAEAEA;
-  width: 100vw;
-  height: 200px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.linkf_gio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 884px;
-  height: 81px;
-}
-
-.link_gio {
-  text-decoration: none;
-  color: black;
-  margin: 8px 48px 5px 0px;
-}
-
-.link_gio:hover {
-  text-decoration: none;
-  color: orangered;
-}
-
-.blocco_social {
-  display: flex;
-  flex-direction: column;
-}
-
-.social_logo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 13px;
-}
-
-.blocco_loghi {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.facebooklogo {
-  width: 22px;
-  height: 22px;
-}
-
-.facebooklogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.twitterlogo {
-  width: 22px;
-  height: 22px;
-}
-
-.twitterlogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.youtubelogo {
-  width: 22px;
-  height: 22px;
-}
-
-.youtubelogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.instagramlogo {
-  width: 22px;
-  height: 22px;
-}
-
-.instagramlogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.twitchlogo {
-  width: 22px;
-  height: 22px;
-}
-
-.twitchlogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-@media only screen and (max-width: 768px) {
-  .play {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    padding: 32px 396px 32px 60px;
-  }
-  .scritta_play {
-    display: flex;
-    position: relative;
-    color: white;
-    width: 335px;
-    height: 100px;
-    font-size: 27px;
-  }
-  .blocco_genitori {
-    display: flex;
-    flex-direction: column;
-    background-color: #6FB0D6;
-    width: 100vw;
-    height: 200px;
-    justify-content: space-around;
-    align-items: center;
-    padding: 32px 0px 16px 0px;
-  }
-  .genitori_gio {
-    width: 600px;
-    height: 70.22;
-    color: black;
-  }
-  .blocco_link_gio {
-    display: flex;
-    flex-direction: column;
-    background-color: #EAEAEA;
-    width: 100vw;
-    height: 300px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 12px 60px 40px 60px;
-  }
-  .linkf_gio {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 648px;
-    height: 118px;
-    padding-bottom: 10px;
-  }
-}
-@media only screen and (max-width: 425px) {
-  .play {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    padding: 0px;
-  }
-  .scritta_play {
-    display: flex;
-    position: relative;
-    color: white;
-    width: 335px;
-    height: 100px;
-    font-size: 27px;
-  }
-  .blocco_genitori {
-    display: flex;
-    flex-direction: column;
-    background-color: #6FB0D6;
-    width: 100vw;
-    height: 200px;
-    justify-content: space-around;
-    align-items: center;
-    padding: 32px 0px 16px 0px;
-  }
-  .genitori_gio {
-    width: 600px;
-    height: 70.22;
-    color: black;
-  }
-  .blocco_link_gio {
-    display: flex;
-    flex-direction: column;
-    background-color: #EAEAEA;
-    width: 100vw;
-    height: 300px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 12px 60px 40px 60px;
-  }
-  .linkf_gio {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 648px;
-    height: 118px;
-    padding-bottom: 10px;
-  }
-}
-/*# sourceMappingURL=style.css.map */
 footer {
   font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
@@ -1423,7 +915,6 @@ footer {
   width: 100%;
 }
 .footer-main-link .footer-link1 ul {
-  padding-inline-start: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -1814,7 +1305,9 @@ footer {
 }
 .footer-main-link .footer-legal-link .copyright {
   font-size: 14px;
-  margin-top: 10px;
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link .copyright {
@@ -2046,15 +1539,14 @@ footer {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  /*  height: 100vh;
+   width: 100vw; */
 }
 
 .container_gio {
   display: flex;
   position: relative;
   height: 410px;
-  width: 100vw;
 }
 
 .blocco_bgplay {
@@ -2065,21 +1557,22 @@ footer {
 }
 
 .bg_play {
-  width: 100vw;
   height: 410px;
 }
 
 .play {
   display: flex;
   position: absolute;
+  top: 100px;
+  left: 320px;
   flex-direction: column;
-  padding: 130px 0px 0px 410px;
+  /* padding: 130px 0px 0px 410px; */
   /* @media only screen and (max-width:425px) {
-    display: flex;
-    position:absolute;
-    flex-direction: column;
-    padding: 0px;
-   } */
+   display: flex;
+   position:absolute;
+   flex-direction: column;
+   padding: 0px;
+  } */
 }
 
 .scritta_play {
@@ -2153,17 +1646,20 @@ footer {
 .container2_gio {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .blocco_genitori {
   display: flex;
   flex-direction: row;
   background-color: #6FB0D6;
-  width: 100vw;
+  /*  width: 100vw; */
   height: 112px;
   justify-content: space-around;
   align-items: center;
+  /*   z-index: 1;
+    position: relative;    //MHMMMM GESTIONE MOMENTANEA!!!!!!!
+    top: 50px; */
 }
 
 .genitori_gio {
@@ -2223,8 +1719,8 @@ footer {
   display: flex;
   flex-direction: row;
   background-color: #EAEAEA;
-  width: 100vw;
-  height: 200px;
+  /*  width: 100vw; */
+  /* height: 200px; */
   justify-content: space-around;
   align-items: center;
 }
@@ -2459,15 +1955,6 @@ footer {
     top: -5px;
   }
 }
-/* X show to active with js */
-/* .bi-x{
-            display: block;
-            position: absolute;
-            top: 0px;
-            right: 10px;
-            color: white;
-            font-size: 34px;
-        } */
 @media only screen and (min-width: 251px) and (max-width: 300px) {
   .section-wrapper {
     background-color: rgb(240, 238, 238);
@@ -3027,12 +2514,67 @@ footer {
   }
 }
 /* Footer Giorgia (PLAY -GENITORI -SOCIAL)*/
+<<<<<<< HEAD
 @media (max-width: 430px) {
+=======
+@media only screen and (max-width: 768px) {
   .play {
     display: flex;
     position: absolute;
     flex-direction: column;
-    padding: 32px 31px 32px 31px;
+    /* padding: 32px 396px 32px 60px; */
+  }
+  .scritta_play {
+    display: flex;
+    position: relative;
+    color: white;
+    width: 335px;
+    height: 100px;
+    font-size: 27px;
+  }
+  .blocco_genitori {
+    display: flex;
+    flex-direction: column;
+    background-color: #6FB0D6;
+    width: 100vw;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 32px 0px 16px 0px;
+  }
+  .genitori_gio {
+    width: 600px;
+    height: 70.22;
+    color: black;
+  }
+  .blocco_link_gio {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAEAEA;
+    width: 100vw;
+    height: 300px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px 60px 40px 60px;
+  }
+  .linkf_gio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 648px;
+    height: 118px;
+    padding-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 425px) {
+>>>>>>> dev
+  .play {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    /*  padding: 32px 31px 32px 31px; */
     /*non prende le misure giuste del padding,
     Exenia anche non sa come mai*/
   }

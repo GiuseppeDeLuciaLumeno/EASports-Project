@@ -1,11 +1,6 @@
 //Giochi in Evidenza's cards
 
-.fifa23-card,
-.apex-mobile-card,
-.f1-22-card,
-.batterfield-card,
-.apex-card,
-.the-sims4-card {
+.fifa23-card {
     @include cards;
 
     .fifa23-logo {
@@ -21,12 +16,14 @@
         transform: translateY(-70px);
     }
 
-    &:hover p{
+    &:hover p {
         opacity: 1;
     }
 }
 
+
 .apex-mobile-card {
+    @include cards;
 
     .apex-mobile-logo {
         position: absolute;
@@ -34,18 +31,21 @@
         left: 40%;
         transition: all 0.4s ease;
         z-index: 1;
-
     }
 
     &:hover .apex-mobile-logo {
         transform: translateY(-70px);
     }
-
+    &:hover p {
+        opacity: 1;
+    }
 }
 
-.f1-22-card {
 
-    .f1-22-logo {
+.f1-22-card {
+    @include cards;
+
+     .f1-22-logo {
         position: absolute;
         top: 40%;
         left: 30%;
@@ -56,11 +56,16 @@
     &:hover .f1-22-logo {
         transform: translateY(-60px);
     }
+    &:hover p {
+        opacity: 1;
+    }
 }
 
-.batterfield-card {
 
-    .batterfield-logo {
+.batterfield-card {
+    @include cards;
+
+     .batterfield-logo {
         position: absolute;
         top: 40%;
         left: 30%;
@@ -71,9 +76,14 @@
     &:hover .batterfield-logo {
         transform: translateY(-40px);
     }
+    &:hover p {
+        opacity: 1;
+    }
 }
 
+
 .apex-card {
+    @include cards;
 
     .apex-logo {
         position: absolute;
@@ -86,9 +96,14 @@
     &:hover .apex-logo {
         transform: translateY(-70px);
     }
+    &:hover p {
+        opacity: 1;
+    }
 }
 
+
 .the-sims4-card {
+    @include cards;
 
     .the-sims4-logo {
         position: absolute;
@@ -101,7 +116,9 @@
     &:hover .the-sims4-logo {
         transform: translateY(-55px);
     }
-
+    &:hover p {
+        opacity: 1;
+    }
 }
 
 //icons not to display
