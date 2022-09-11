@@ -15,8 +15,20 @@
     margin-left: -16px;
   }
 
-  #cards-container {
+  .cards-container-1,
+  .cards-container-2,
+  .cards-container-3,
+  .cards-container-4,
+  .cards-container-5,
+  .cards-container-6,
+  .cards-container-7,
+  .cards-container-8 {
     margin-bottom: 40px;
+    display: none;
+  }
+
+  .cards-container-active {
+    display: grid;
   }
 
   .cta {

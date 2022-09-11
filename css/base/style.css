@@ -1468,8 +1468,19 @@ footer {
   margin-bottom: 40px;
   margin-left: -16px;
 }
-#ultime-novita #cards-container {
+#ultime-novita .cards-container-1,
+#ultime-novita .cards-container-2,
+#ultime-novita .cards-container-3,
+#ultime-novita .cards-container-4,
+#ultime-novita .cards-container-5,
+#ultime-novita .cards-container-6,
+#ultime-novita .cards-container-7,
+#ultime-novita .cards-container-8 {
   margin-bottom: 40px;
+  display: none;
+}
+#ultime-novita .cards-container-active {
+  display: grid;
 }
 #ultime-novita .cta {
   margin-inline: auto;
