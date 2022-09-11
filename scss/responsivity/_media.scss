@@ -1045,8 +1045,8 @@
     }
 }
 
-@media only screen and (max-width:425px) {
-
+/*@media only screen and (min-width:320px) */
+@media only screen and (min-width: 320px) and (max-width: 425px) {
 
     .play {
         display: flex;
@@ -1075,8 +1075,8 @@
         display: flex;
         flex-direction: column;
         background-color: #6FB0D6;
-        width: 100vw;
-        height: 200px;
+        width: 360px;
+        height: 64px;
         justify-content: space-around;
         align-items: center;
         padding: 32px 0px 16px 0px;
