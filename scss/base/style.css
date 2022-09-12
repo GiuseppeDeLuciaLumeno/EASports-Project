@@ -2066,6 +2066,17 @@ img {
     display: none;
   }
 }
+@media screen and (max-width: 759px) {
+  .mainimgmobile {
+    display: block;
+  }
+  .img {
+    display: none;
+  }
+  ul > li > a {
+    display: none;
+  }
+}
 .navlist {
   display: none;
 }
