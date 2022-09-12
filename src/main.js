@@ -7,4 +7,3 @@ icons.forEach(icon => {
     console.log("icone", icons);
 });
 
-
