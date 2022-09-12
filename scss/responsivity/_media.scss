@@ -1,3 +1,5 @@
+//Giochi in evidenza Media query Start
+
 @media only screen and (min-width: 200px) and (max-width: 250px) {
     .section-wrapper {
         background-color: rgb(240, 238, 238);
@@ -166,16 +168,6 @@
     }
 }
 
-
-/* X show to active with js */
-/* .bi-x{
-            display: block;
-            position: absolute;
-            top: 0px;
-            right: 10px;
-            color: white;
-            font-size: 34px;
-        } */
 
 @media only screen and (min-width: 251px) and (max-width: 300px) {
 
@@ -915,6 +907,8 @@
     }
 }
 
+//Giochi in evidenza Media query End
+
 /* Footer Giorgia (PLAY -GENITORI -SOCIAL)*/
 
 
@@ -925,7 +919,7 @@
         display: flex;
         position: absolute;
         flex-direction: column;
-        padding: 32px 396px 32px 60px;
+        /* padding: 32px 396px 32px 60px; */
 
     }
 
@@ -988,7 +982,7 @@
         display: flex;
         position: absolute;
         flex-direction: column;
-        padding: 32px 31px 32px 31px;
+       /*  padding: 32px 31px 32px 31px; */
         /*non prende le misure giuste del padding,
         Exenia anche non sa come mai*/
     }

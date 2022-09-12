@@ -1,6 +1,16 @@
-// SLIDER'S TABS - to use with 'sliders' layout --------------------------
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// SLIDER'S TABS - TO USE WITH 'SLIDERS' LAYOUT - REUSABLE TAB STYLING ---------
+
+// li.slider-tab-container {
+//    a.slider-tab {........}
+// }
+
+
 .slider-tab-container {
   height: 50px;
+  cursor: pointer;
+  position: relative;
 
   display: flex;
   justify-content: center;
@@ -9,7 +19,17 @@
   transition: 0.1s ease;
 
   &:hover {
-    background-color: map-get($map: $color, $key: active);
+    background-color: map-get($map: $da-color, $key: active);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    width: 0%;
+    height: 2px;
+    background-color: map-get($map: $da-color, $key: accent);
+    transition: width 0.1s ease-out;
   }
 
   .slider-tab {
@@ -19,43 +39,34 @@
 
 // slider-tab's left border
 .slider-tab-container + .slider-tab-container .slider-tab {
-  border-left: 1px solid map-get($map: $color, $key: borders);
+  border-left: 1px solid map-get($map: $da-color, $key: borders);
 }
 
 // slider-tab's right border
 @for $counter from 1 to 8 {
   .slider-tab-container:nth-child(#{$counter}) .slider-tab {
-  border-right: 1px solid map-get($map: $color, $key: borders);
+  border-right: 1px solid map-get($map: $da-color, $key: borders);
   }
 }
 
 // active tab styling
 .slider-tab-container.active {
-  background-color: map-get($map: $color, $key: active);
+  background-color: map-get($map: $da-color, $key: active);
   position: relative;
 
   &::before {
-    content: '';
-    position: absolute;
-    bottom: 1px;
     width: 80%;
-    height: 2px;
-    background-color: map-get($map: $color, $key: accent);
   }
 
   .slider-tab {
-    color: map-get($map: $color, $key: text-dark);
+    color: map-get($map: $da-color, $key: text-dark);
   }
 }
 
 // responsivity
-@include breakpoint(tablet) {
+@include da-breakpoint(tablet) {
   .slider-tab-container {
     height: 60px;
-
-    /* .slider-tab {
-
-    } */
   }
 }
 // SLIDER'S TABS - END -----------------------------------------------------

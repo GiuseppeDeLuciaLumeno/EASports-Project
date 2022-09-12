@@ -1,4 +1,6 @@
-// Reusable generic 6-item grid layout
+// ---------------------------------------------------------------------
+// ---------------------------------------------------------------------
+// REUSABLE 6 ITEM GRID LAYOUT - START ---------------------------------
 
 .grid-container {
   display: grid;
@@ -11,7 +13,7 @@
   'five'
   'six';
 
-  @include breakpoint(tablet) {
+  @include da-breakpoint(tablet) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
     'one two'
@@ -20,7 +22,7 @@
     gap: 1.5rem;
   }
 
-  @include breakpoint(desktop) {
+  @include da-breakpoint(desktop) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
     'one two three'
@@ -28,7 +30,8 @@
     gap: 1rem;
   }
   
-  @include breakpoint(desktop-large) {
+  @include da-breakpoint(desktop-large) {
     width: 68rem;
   }
 }
+// REUSABLE 6 ITEM GRID LAYOUT - END ---------------------------------

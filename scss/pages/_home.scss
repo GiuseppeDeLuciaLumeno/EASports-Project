@@ -1,6 +1,8 @@
 // ULTIME NOVITA - Dario - inizio ------------------------------------
 #ultime-novita {
-  background-color: map-get($map: $color, $key: bg);
+  background-color: map-get($map: $da-color, $key: bg);
+  overflow: hidden;
+
 
   #h3 {
     margin-bottom: 20px;
@@ -13,21 +15,33 @@
     margin-left: -16px;
   }
 
-  #cards-container {
+  .cards-container-1,
+  .cards-container-2,
+  .cards-container-3,
+  .cards-container-4,
+  .cards-container-5,
+  .cards-container-6,
+  .cards-container-7,
+  .cards-container-8 {
     margin-bottom: 40px;
+    display: none;
+  }
+
+  .cards-container-active {
+    display: grid;
   }
 
   .cta {
     margin-inline: auto;
   }
 
-  @include breakpoint(tablet) {
+  @include da-breakpoint(tablet) {
     #slider-container {
       margin-bottom: 50px;
     }
   }
   
-  @include breakpoint(desktop) {
+  @include da-breakpoint(desktop) {
     #slider-container {
       margin-bottom: 60px;
     }
