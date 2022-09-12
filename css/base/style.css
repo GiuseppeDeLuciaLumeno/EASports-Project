@@ -722,8 +722,23 @@ select {
   }
 }
 
+.cards-container-active .card {
+  animation: activation-animation 0.5s ease;
+}
+@keyframes activation-animation {
+  from {
+    transform: translateY(-12px);
+    box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    box-shadow: 0 3px 10px -2px hsla(0deg, 0%, 0%, 0.5);
+  }
+}
+
 .slider-tab-container {
   height: 50px;
+  cursor: pointer;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -731,6 +746,15 @@ select {
 }
 .slider-tab-container:hover {
   background-color: hsla(0deg, 0%, 85%, 0.8);
+}
+.slider-tab-container::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  width: 0%;
+  height: 2px;
+  background-color: hsl(0deg, 100%, 64%);
+  transition: width 0.1s ease-out;
 }
 .slider-tab-container .slider-tab {
   padding-inline: 1rem;
@@ -773,12 +797,7 @@ select {
   position: relative;
 }
 .slider-tab-container.active::before {
-  content: "";
-  position: absolute;
-  bottom: 1px;
   width: 80%;
-  height: 2px;
-  background-color: hsl(0deg, 100%, 64%);
 }
 .slider-tab-container.active .slider-tab {
   color: hsl(0deg, 0%, 42%);

@@ -9,6 +9,8 @@
 
 .slider-tab-container {
   height: 50px;
+  cursor: pointer;
+  position: relative;
 
   display: flex;
   justify-content: center;
@@ -18,6 +20,16 @@
 
   &:hover {
     background-color: map-get($map: $da-color, $key: active);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    width: 0%;
+    height: 2px;
+    background-color: map-get($map: $da-color, $key: accent);
+    transition: width 0.1s ease-out;
   }
 
   .slider-tab {
@@ -43,12 +55,7 @@
   position: relative;
 
   &::before {
-    content: '';
-    position: absolute;
-    bottom: 1px;
     width: 80%;
-    height: 2px;
-    background-color: map-get($map: $da-color, $key: accent);
   }
 
   .slider-tab {
