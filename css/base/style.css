@@ -1,3 +1,4 @@
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
 @font-face {
   font-family: ElectronicArtsDisplay;
   src: url(../../assets/fonts/Electronic_Arts_Display.otf);
@@ -6,355 +7,6 @@
   font-family: ElectronicArtsText;
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-}
-
-.container_tot {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
-.container_gio {
-  display: flex;
-  position: relative;
-  height: 410px;
-  width: 100vw;
-}
-
-.blocco_bgplay {
-  width: auto;
-  height: auto;
-  display: flex;
-  position: absolute;
-}
-
-.bg_play {
-  width: 100vw;
-  height: 410px;
-}
-
-.play {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  padding: 130px 0px 0px 410px;
-  /* @media only screen and (max-width:425px) {
-    display: flex;
-    position:absolute;
-    flex-direction: column;
-    padding: 0px;
-   } */
-}
-
-.scritta_play {
-  display: flex;
-  position: relative;
-  color: white;
-  width: 544px;
-  height: 54px;
-  font-size: 27px;
-}
-
-.h6_play {
-  margin-bottom: 24px;
-  justify-content: center;
-  align-items: center;
-}
-
-.img_play {
-  width: 240px;
-  height: 101px;
-}
-
-.bottone_play {
-  width: 150px;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottone_play:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 70px;
-}
-
-.iscriviti_subito {
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-}
-
-.container2_gio {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-}
-
-.blocco_genitori {
-  display: flex;
-  flex-direction: row;
-  background-color: #6FB0D6;
-  width: 100vw;
-  height: 112px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.genitori_gio {
-  width: 500px;
-  height: 70.22;
-  color: black;
-}
-
-.bottone_genitori {
-  width: 150px;
-  height: 60px;
-  border: 2px solid black;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottone_genitori:hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 70px;
-}
-
-.scopridipiu {
-  display: block;
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-
-.blocco_link_gio {
-  display: flex;
-  flex-direction: row;
-  background-color: #EAEAEA;
-  width: 100vw;
-  height: 200px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.linkf_gio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 884px;
-  height: 81px;
-}
-
-.link_gio {
-  text-decoration: none;
-  color: black;
-  margin: 8px 48px 5px 0px;
-}
-
-.link_gio:hover {
-  text-decoration: none;
-  color: orangered;
-}
-
-.blocco_social {
-  display: flex;
-  flex-direction: column;
-}
-
-.social_logo {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 13px;
-}
-
-.blocco_loghi {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.facebooklogo {
-  width: 22px;
-  height: 22px;
-}
-
-.facebooklogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.twitterlogo {
-  width: 22px;
-  height: 22px;
-}
-
-.twitterlogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.youtubelogo {
-  width: 22px;
-  height: 22px;
-}
-
-.youtubelogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.instagramlogo {
-  width: 22px;
-  height: 22px;
-}
-
-.instagramlogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-.twitchlogo {
-  width: 22px;
-  height: 22px;
-}
-
-.twitchlogo:hover {
-  width: 25px;
-  height: 25px;
-  transition-duration: 0.2s;
-}
-
-@media only screen and (max-width: 768px) {
-  .play {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    padding: 32px 396px 32px 60px;
-  }
-  .scritta_play {
-    display: flex;
-    position: relative;
-    color: white;
-    width: 335px;
-    height: 100px;
-    font-size: 27px;
-  }
-  .blocco_genitori {
-    display: flex;
-    flex-direction: column;
-    background-color: #6FB0D6;
-    width: 100vw;
-    height: 200px;
-    justify-content: space-around;
-    align-items: center;
-    padding: 32px 0px 16px 0px;
-  }
-  .genitori_gio {
-    width: 600px;
-    height: 70.22;
-    color: black;
-  }
-  .blocco_link_gio {
-    display: flex;
-    flex-direction: column;
-    background-color: #EAEAEA;
-    width: 100vw;
-    height: 300px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 12px 60px 40px 60px;
-  }
-  .linkf_gio {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 648px;
-    height: 118px;
-    padding-bottom: 10px;
-  }
-}
-@media only screen and (max-width: 425px) {
-  .play {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    padding: 0px;
-  }
-  .scritta_play {
-    display: flex;
-    position: relative;
-    color: white;
-    width: 335px;
-    height: 100px;
-    font-size: 27px;
-  }
-  .blocco_genitori {
-    display: flex;
-    flex-direction: column;
-    background-color: #6FB0D6;
-    width: 100vw;
-    height: 200px;
-    justify-content: space-around;
-    align-items: center;
-    padding: 32px 0px 16px 0px;
-  }
-  .genitori_gio {
-    width: 600px;
-    height: 70.22;
-    color: black;
-  }
-  .blocco_link_gio {
-    display: flex;
-    flex-direction: column;
-    background-color: #EAEAEA;
-    width: 100vw;
-    height: 300px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 12px 60px 40px 60px;
-  }
-  .linkf_gio {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 648px;
-    height: 118px;
-    padding-bottom: 10px;
-  }
-}
-/*# sourceMappingURL=style.css.map */
 /* Box sizing rules */
 *,
 *::before,
@@ -588,6 +240,7 @@ select {
   border: 1, 5px solid black;
   border-radius: 3px;
   padding: 15px 30px;
+  width: 100%;
   transition: padding 0.1s;
   font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -598,17 +251,6 @@ select {
   padding: 18px 35px;
 }
 
-.cards-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: 25px;
-  margin: 1.2rem;
-}
-
-.fifa23-card {
-  position: relative;
-}
 .fifa23-card::before {
   content: "";
   position: absolute;
@@ -642,10 +284,11 @@ select {
   position: absolute;
   top: 50%;
   left: 40%;
-  color: white;
-  display: none;
+  color: #f3f3f3;
   font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
 }
 .fifa23-card .fifa23-logo {
   position: absolute;
@@ -657,10 +300,10 @@ select {
 .fifa23-card:hover .fifa23-logo {
   transform: translateY(-70px);
 }
-
-.apex-mobile-card {
-  position: relative;
+.fifa23-card:hover p {
+  opacity: 1;
 }
+
 .apex-mobile-card::before {
   content: "";
   position: absolute;
@@ -694,10 +337,11 @@ select {
   position: absolute;
   top: 50%;
   left: 40%;
-  color: white;
-  display: none;
+  color: #f3f3f3;
   font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
 }
 .apex-mobile-card .apex-mobile-logo {
   position: absolute;
@@ -709,10 +353,10 @@ select {
 .apex-mobile-card:hover .apex-mobile-logo {
   transform: translateY(-70px);
 }
-
-.f1-22-card {
-  position: relative;
+.apex-mobile-card:hover p {
+  opacity: 1;
 }
+
 .f1-22-card::before {
   content: "";
   position: absolute;
@@ -746,10 +390,11 @@ select {
   position: absolute;
   top: 50%;
   left: 40%;
-  color: white;
-  display: none;
+  color: #f3f3f3;
   font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
 }
 .f1-22-card .f1-22-logo {
   position: absolute;
@@ -761,10 +406,10 @@ select {
 .f1-22-card:hover .f1-22-logo {
   transform: translateY(-60px);
 }
-
-.batterfield-card {
-  position: relative;
+.f1-22-card:hover p {
+  opacity: 1;
 }
+
 .batterfield-card::before {
   content: "";
   position: absolute;
@@ -798,10 +443,11 @@ select {
   position: absolute;
   top: 50%;
   left: 40%;
-  color: white;
-  display: none;
+  color: #f3f3f3;
   font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
 }
 .batterfield-card .batterfield-logo {
   position: absolute;
@@ -813,10 +459,10 @@ select {
 .batterfield-card:hover .batterfield-logo {
   transform: translateY(-40px);
 }
-
-.apex-card {
-  position: relative;
+.batterfield-card:hover p {
+  opacity: 1;
 }
+
 .apex-card::before {
   content: "";
   position: absolute;
@@ -850,10 +496,11 @@ select {
   position: absolute;
   top: 50%;
   left: 40%;
-  color: white;
-  display: none;
+  color: #f3f3f3;
   font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
 }
 .apex-card .apex-logo {
   position: absolute;
@@ -865,10 +512,10 @@ select {
 .apex-card:hover .apex-logo {
   transform: translateY(-70px);
 }
-
-.the-sims4-card {
-  position: relative;
+.apex-card:hover p {
+  opacity: 1;
 }
+
 .the-sims4-card::before {
   content: "";
   position: absolute;
@@ -902,10 +549,11 @@ select {
   position: absolute;
   top: 50%;
   left: 40%;
-  color: white;
-  display: none;
+  color: #f3f3f3;
   font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
   font-size: 16px;
+  transition: opacity 0.1s;
+  opacity: 0;
 }
 .the-sims4-card .the-sims4-logo {
   position: absolute;
@@ -917,8 +565,12 @@ select {
 .the-sims4-card:hover .the-sims4-logo {
   transform: translateY(-55px);
 }
+.the-sims4-card:hover p {
+  opacity: 1;
+}
 
 .bi {
+  color: white;
   display: none;
   cursor: pointer;
 }
@@ -928,14 +580,98 @@ select {
 }
 
 .b-icon.active .bi-x {
-  display: block;
   position: absolute;
   top: -10px;
   right: 5px;
   font-size: 50px;
-  color: red;
   display: block;
   z-index: 2;
+}
+
+.b-icon.active + a .fifa23-card::after,
+.b-icon.active + a .apex-mobile-card::after,
+.b-icon.active + a .f1-22-card::after,
+.b-icon.active + a .batterfield-card::after,
+.b-icon.active + a .apex-card::after,
+.b-icon.active + a .the-sims4-card::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.b-icon.active + a .fifa23-card:hover::after,
+.b-icon.active + a .apex-mobile-card:hover::after,
+.b-icon.active + a .f1-22-card:hover::after,
+.b-icon.active + a .batterfield-card:hover::after,
+.b-icon.active + a .apex-card:hover::after,
+.b-icon.active + a .the-sims4-card:hover::after {
+  background: rgb(47, 41, 124);
+  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  opacity: 0.82;
+}
+.b-icon.active + a .fifa23-card:hover .fifa23-logo,
+.b-icon.active + a .fifa23-card:hover .apex-mobile-logo,
+.b-icon.active + a .fifa23-card:hover .f1-22-logo,
+.b-icon.active + a .fifa23-card:hover .batterfield-logo,
+.b-icon.active + a .fifa23-card:hover .apex-logo,
+.b-icon.active + a .fifa23-card:hover .the-sims4-logo,
+.b-icon.active + a .apex-mobile-card:hover .fifa23-logo,
+.b-icon.active + a .apex-mobile-card:hover .apex-mobile-logo,
+.b-icon.active + a .apex-mobile-card:hover .f1-22-logo,
+.b-icon.active + a .apex-mobile-card:hover .batterfield-logo,
+.b-icon.active + a .apex-mobile-card:hover .apex-logo,
+.b-icon.active + a .apex-mobile-card:hover .the-sims4-logo,
+.b-icon.active + a .f1-22-card:hover .fifa23-logo,
+.b-icon.active + a .f1-22-card:hover .apex-mobile-logo,
+.b-icon.active + a .f1-22-card:hover .f1-22-logo,
+.b-icon.active + a .f1-22-card:hover .batterfield-logo,
+.b-icon.active + a .f1-22-card:hover .apex-logo,
+.b-icon.active + a .f1-22-card:hover .the-sims4-logo,
+.b-icon.active + a .batterfield-card:hover .fifa23-logo,
+.b-icon.active + a .batterfield-card:hover .apex-mobile-logo,
+.b-icon.active + a .batterfield-card:hover .f1-22-logo,
+.b-icon.active + a .batterfield-card:hover .batterfield-logo,
+.b-icon.active + a .batterfield-card:hover .apex-logo,
+.b-icon.active + a .batterfield-card:hover .the-sims4-logo,
+.b-icon.active + a .apex-card:hover .fifa23-logo,
+.b-icon.active + a .apex-card:hover .apex-mobile-logo,
+.b-icon.active + a .apex-card:hover .f1-22-logo,
+.b-icon.active + a .apex-card:hover .batterfield-logo,
+.b-icon.active + a .apex-card:hover .apex-logo,
+.b-icon.active + a .apex-card:hover .the-sims4-logo,
+.b-icon.active + a .the-sims4-card:hover .fifa23-logo,
+.b-icon.active + a .the-sims4-card:hover .apex-mobile-logo,
+.b-icon.active + a .the-sims4-card:hover .f1-22-logo,
+.b-icon.active + a .the-sims4-card:hover .batterfield-logo,
+.b-icon.active + a .the-sims4-card:hover .apex-logo,
+.b-icon.active + a .the-sims4-card:hover .the-sims4-logo {
+  transform: translateY(-70px);
+}
+.b-icon.active + a .fifa23-card:hover p,
+.b-icon.active + a .apex-mobile-card:hover p,
+.b-icon.active + a .f1-22-card:hover p,
+.b-icon.active + a .batterfield-card:hover p,
+.b-icon.active + a .apex-card:hover p,
+.b-icon.active + a .the-sims4-card:hover p {
+  display: block;
+}
+.b-icon.active + a .fifa23-card p,
+.b-icon.active + a .apex-mobile-card p,
+.b-icon.active + a .f1-22-card p,
+.b-icon.active + a .batterfield-card p,
+.b-icon.active + a .apex-card p,
+.b-icon.active + a .the-sims4-card p {
+  display: block;
+  opacity: 1;
+  z-index: 1;
+  color: #f3f3f3;
+}
+.b-icon.active + a .fifa23-logo,
+.b-icon.active + a .apex-mobile-logo,
+.b-icon.active + a .f1-22-logo,
+.b-icon.active + a .batterfield-logo,
+.b-icon.active + a .apex-logo,
+.b-icon.active + a .the-sims4-logo {
+  transform: translateY(-70px);
 }
 
 .card {
@@ -1051,11 +787,548 @@ select {
 @media (min-width: 48rem) {
   .slider-tab-container {
     height: 60px;
-    /* .slider-tab {
-
-    } */
   }
 }
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul.list,
+ol.list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: ElectronicArtsDisplay;
+  src: url(../../assets/fonts/Electronic_Arts_Display.otf);
+}
+@font-face {
+  font-family: ElectronicArtsText;
+  src: url(../../assets/fonts/Electronic_Arts_Text.otf);
+}
+footer {
+  font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.footer-main-link {
+  height: 250px;
+  padding: 15px 80px 23px;
+  background-color: #f3f3f3;
+  width: 100%;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 7fr 3fr 3fr;
+  grid-template-rows: 88px auto;
+  grid-template-areas: "logo link1 price language" "logo link2 link2 privacy";
+}
+@media (max-width: 1023px) {
+  .footer-main-link {
+    height: 100vh;
+    padding: 40px 22px 30px;
+    grid-template-rows: 60px 60px 70px 110px 80px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "logo ." "link1 link1" "price language" "link2 link2" "privacy .";
+  }
+}
+@media (max-width: 767px) {
+  .footer-main-link {
+    height: 100vh;
+    gap: 20px;
+    padding: 40px 22px 30px;
+    grid-template-rows: 60px 70px 60px 60px 140px 70px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "link1" "price" "language" "link2" "privacy";
+  }
+}
+.footer-main-link .logo {
+  grid-area: logo;
+}
+.footer-main-link .logo img {
+  width: 49px;
+}
+.footer-main-link .footer-link1 {
+  grid-area: link1;
+  display: flex;
+  width: 100%;
+}
+.footer-main-link .footer-link1 ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 100%;
+  width: 90%;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .footer-link1 ul {
+    width: 96%;
+  }
+}
+@media (max-width: 767px) {
+  .footer-main-link .footer-link1 ul {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+.footer-main-link .footer-link1 ul a {
+  text-decoration: none;
+  margin: 5px 32px 10px 0;
+  color: rgb(22, 22, 22);
+  line-height: 1.8;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  .footer-main-link .footer-link1 ul a {
+    margin-right: 1rem;
+  }
+}
+.footer-main-link .dropdown-price {
+  grid-area: price;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-price {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-price {
+    height: 100%;
+  }
+}
+.footer-main-link .dropdown-price .dropdown {
+  position: relative;
+  border: 2px solid #c2c2c2;
+  border-radius: 3px;
+  width: 95%;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-price .dropdown {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-price .dropdown {
+    width: 100%;
+  }
+}
+.footer-main-link .dropdown-price .dropdown .button-link {
+  width: 100%;
+  height: 61px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #5a5a58;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-price .dropdown .button-link {
+    height: 100%;
+  }
+}
+.footer-main-link .dropdown-price .dropdown .button-link div {
+  font-size: 15px;
+}
+.footer-main-link .dropdown-price .dropdown #color-nation {
+  color: rgb(22, 22, 22);
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-price .dropdown #color-nation {
+    width: 95%;
+  }
+}
+.footer-main-link .dropdown-price .dropdown #color-nation img {
+  width: 14px;
+  height: 14px;
+  margin-left: 30px;
+}
+.footer-main-link .dropdown-price .dropdown .dropdown-menu {
+  position: absolute;
+  left: -440px;
+  top: -385px;
+  background-color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  pointer-events: none;
+  z-index: 100;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-price .dropdown .dropdown-menu {
+    left: 0px;
+    display: none;
+  }
+}
+.footer-main-link .dropdown-price .dropdown .link {
+  width: 100%;
+  height: 40px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border-bottom: 1px solid #eaeaea;
+  text-decoration: none;
+  color: rgb(22, 22, 22);
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0px 8px;
+}
+.footer-main-link .dropdown-price .dropdown .link:focus::before {
+  content: url("/assets/img/icon-check.png");
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-price .dropdown .link {
+    display: none;
+  }
+}
+.footer-main-link .dropdown-price .dropdown .link:hover {
+  padding-left: 20px;
+  transition: padding-left 100ms ease-in-out;
+}
+.footer-main-link .dropdown-price .dropdown .button-link:focus + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-price .dropdown .button-link:focus + .dropdown-menu {
+    display: none;
+  }
+}
+.footer-main-link .dropdown-price .dropdown .information-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  gap: 0.5rem;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-price .dropdown .information-grid {
+    display: none;
+  }
+}
+.footer-main-link .dropdown-price .dropdown .select-price > select {
+  appearance: none;
+  position: absolute;
+  color: transparent;
+  background: rgba(255, 255, 255, 0);
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  display: none;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-price .dropdown .select-price > select {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-price .dropdown .select-price > select {
+    display: flex;
+  }
+}
+.footer-main-link .dropdown-language {
+  grid-area: language;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language {
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-language {
+    height: 100%;
+  }
+}
+.footer-main-link .dropdown-language .dropdown {
+  position: relative;
+  border: 2px solid #c2c2c2;
+  border-radius: 3px;
+  width: 95%;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown {
+    width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-language .dropdown {
+    width: 100%;
+  }
+}
+.footer-main-link .dropdown-language .dropdown .button-link {
+  width: 100%;
+  height: 61px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #5a5a58;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-language .dropdown .button-link {
+    height: 100%;
+  }
+}
+.footer-main-link .dropdown-language .dropdown .button-link div {
+  font-size: 15px;
+}
+.footer-main-link .dropdown-language .dropdown #color-nation {
+  color: rgb(22, 22, 22);
+  display: flex;
+  width: 85%;
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-language .dropdown #color-nation {
+    width: 95%;
+  }
+}
+.footer-main-link .dropdown-language .dropdown #color-nation span {
+  margin-right: 10px;
+}
+.footer-main-link .dropdown-language .dropdown #color-nation .wrapper-text-arrow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.footer-main-link .dropdown-language .dropdown #color-nation .wrapper-text-arrow img {
+  width: 14px;
+  height: 14px;
+  margin-left: 60px;
+}
+.footer-main-link .dropdown-language .dropdown .dropdown-menu {
+  position: absolute;
+  left: -360px;
+  top: -430px;
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  pointer-events: none;
+  z-index: 2;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .dropdown-menu {
+    left: 0px;
+    display: none;
+  }
+}
+.footer-main-link .dropdown-language .dropdown .link {
+  width: 100%;
+  height: 45px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border-bottom: 1px solid #eaeaea;
+  text-decoration: none;
+  color: rgb(22, 22, 22);
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0px 8px;
+  font-size: 14px;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .link {
+    display: none;
+  }
+}
+.footer-main-link .dropdown-language .dropdown .link:hover {
+  padding-left: 20px;
+  transition: padding-left 150ms ease-in-out;
+}
+.footer-main-link .dropdown-language .dropdown .button-link:focus + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .button-link:focus + .dropdown-menu {
+    display: none;
+  }
+}
+.footer-main-link .dropdown-language .dropdown .information-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  gap: 0.5rem;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .information-grid {
+    display: none;
+  }
+}
+.footer-main-link .dropdown-language .dropdown .select-language > select {
+  appearance: none;
+  position: absolute;
+  color: transparent;
+  background: rgba(255, 255, 255, 0);
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  display: none;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .dropdown-language .dropdown .select-language > select {
+    display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .footer-main-link .dropdown-language .dropdown .select-language > select {
+    display: flex;
+  }
+}
+.footer-main-link .footer-legal-link {
+  grid-area: link2;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .footer-legal-link {
+    margin-top: 1rem;
+  }
+}
+.footer-main-link .footer-legal-link ul {
+  padding-inline-start: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 80%;
+  width: 80%;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .footer-legal-link ul {
+    width: 89%;
+  }
+}
+.footer-main-link .footer-legal-link ul a {
+  font-size: 14px;
+  text-decoration: none;
+  margin-right: 2rem;
+  color: rgb(22, 22, 22);
+  line-height: 2;
+}
+.footer-main-link .footer-legal-link .copyright {
+  font-size: 14px;
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .footer-legal-link .copyright {
+    margin-top: 1rem;
+  }
+}
+.footer-main-link .footer-privacy {
+  grid-area: privacy;
+}
+.footer-main-link .footer-privacy .image-privacy {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+@media (max-width: 1023px) {
+  .footer-main-link .footer-privacy .image-privacy {
+    justify-content: flex-start;
+  }
+}
+
 .grid-container {
   display: grid;
   gap: 1rem;
@@ -1111,35 +1384,58 @@ select {
   justify-content: space-between;
   align-items: center;
 }
-.section-container .slider-container .arrow {
+.section-container .slider-container .arrow-container {
+  height: 50px;
   position: absolute;
-  margin-inline: 1rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.section-container .slider-container .arrow::before, .section-container .slider-container .arrow::after {
+.section-container .slider-container .arrow-container::before, .section-container .slider-container .arrow-container::after {
   content: "";
-  position: absolute;
-  width: 20px;
-  height: 4px;
-  border-radius: 2px;
+  display: inline-block;
+  height: 3px;
+  width: 15px;
+  border-radius: 3px;
   background-color: hsla(0deg, 0%, 9%, 0.5);
+  position: absolute;
 }
-.section-container .slider-container .arrow-left {
+@media (min-width: 48rem) {
+  .section-container .slider-container .arrow-container {
+    height: 60px;
+  }
+}
+.section-container .slider-container .arrow-container-left {
   left: 0;
+  padding-inline: 20px 40px;
+  background: linear-gradient(90deg, rgb(242, 242, 242) 70%, rgba(242, 242, 242, 0.5) 85%, rgba(0, 212, 255, 0) 100%);
 }
-.section-container .slider-container .arrow-left::before {
-  transform: translateY(150%) rotate(50deg);
+.section-container .slider-container .arrow-container-left::before {
+  transform: rotate(48.5deg);
+  margin-top: 9.5px;
 }
-.section-container .slider-container .arrow-left::after {
-  transform: translateY(-150%) rotate(-50deg);
+.section-container .slider-container .arrow-container-left::after {
+  transform: rotate(-48.5deg);
+  margin-top: -9.5px;
 }
-.section-container .slider-container .arrow-right {
+.section-container .slider-container .arrow-container-right {
   right: 0;
+  padding-inline: 40px 20px;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0) 0%, rgba(242, 242, 242, 0.5) 15%, rgb(242, 242, 242) 30%);
 }
-.section-container .slider-container .arrow-right::before {
-  transform: translateY(150%) rotate(-50deg);
+.section-container .slider-container .arrow-container-right::before {
+  transform: rotate(-48.5deg);
+  margin-top: 9.5px;
 }
-.section-container .slider-container .arrow-right::after {
-  transform: translateY(-150%) rotate(50deg);
+.section-container .slider-container .arrow-container-right::after {
+  transform: rotate(48.5deg);
+  margin-top: -9.5px;
+}
+@media (min-width: 56.6875rem) {
+  .section-container .slider-container .arrow-container {
+    display: none;
+  }
 }
 .section-container .slider-container ul {
   display: flex;
@@ -1156,10 +1452,12 @@ select {
   margin-top: -2px;
   left: 0;
   background-color: hsla(0deg, 0%, 0%, 0.08);
+  z-index: 2;
 }
 
 #ultime-novita {
-  background-color: hsl(0deg, 0%, 95%);
+  background-color: rgb(242, 242, 242);
+  overflow: hidden;
 }
 #ultime-novita #h3 {
   margin-bottom: 20px;
@@ -1217,7 +1515,7 @@ select {
   color: black;
 }
 
-/* Giochi in evidenza style */
+/* Start Giochi in evidenza */
 .section-wrapper {
   display: flex;
   flex-direction: column;
@@ -1227,20 +1525,28 @@ select {
   position: relative;
 }
 
+.cards-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 1.2rem;
+}
+
+/* End Giochi in evidenza style */
 /* Footer Giorgia (PLAY - GENITORI - SOCIAL)*/
 .container_tot {
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  /*  height: 100vh;
+   width: 100vw; */
 }
 
 .container_gio {
   display: flex;
   position: relative;
   height: 410px;
-  width: 100vw;
 }
 
 .blocco_bgplay {
@@ -1251,21 +1557,22 @@ select {
 }
 
 .bg_play {
-  width: 100vw;
   height: 410px;
 }
 
 .play {
   display: flex;
   position: absolute;
+  top: 100px;
+  left: 320px;
   flex-direction: column;
-  padding: 130px 0px 0px 410px;
+  /* padding: 130px 0px 0px 410px; */
   /* @media only screen and (max-width:425px) {
-    display: flex;
-    position:absolute;
-    flex-direction: column;
-    padding: 0px;
-   } */
+   display: flex;
+   position:absolute;
+   flex-direction: column;
+   padding: 0px;
+  } */
 }
 
 .scritta_play {
@@ -1339,17 +1646,20 @@ select {
 .container2_gio {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .blocco_genitori {
   display: flex;
   flex-direction: row;
   background-color: #6FB0D6;
-  width: 100vw;
+  /*  width: 100vw; */
   height: 112px;
   justify-content: space-around;
   align-items: center;
+  /*   z-index: 1;
+    position: relative;    //MHMMMM GESTIONE MOMENTANEA!!!!!!!
+    top: 50px; */
 }
 
 .genitori_gio {
@@ -1409,8 +1719,8 @@ select {
   display: flex;
   flex-direction: row;
   background-color: #EAEAEA;
-  width: 100vw;
-  height: 200px;
+  /*  width: 100vw; */
+  /* height: 200px; */
   justify-content: space-around;
   align-items: center;
 }
@@ -1613,7 +1923,7 @@ select {
     text-decoration: none;
   }
   .section-wrapper .btn {
-    padding: 0 40px;
+    padding: 0 32px;
     height: 50px;
     border: 2px solid black;
     font-size: 16px;
@@ -1622,6 +1932,13 @@ select {
     justify-content: center;
     align-items: center;
   }
+}
+@media only screen and (min-width: 200px) and (max-width: 250px) and (min-width: 240px) {
+  .section-wrapper .btn {
+    padding: 0 50px;
+  }
+}
+@media only screen and (min-width: 200px) and (max-width: 250px) {
   .section-wrapper .bi-three-dots {
     position: absolute;
     top: 0px;
@@ -1631,121 +1948,124 @@ select {
     display: block;
     z-index: 2;
   }
+}
+@media only screen and (min-width: 200px) and (max-width: 250px) {
   .section-wrapper .b-icon.active .bi-x {
     font-size: 34px;
     top: -5px;
   }
 }
-/* X show to active with js */
-/* .bi-x{
-            display: block;
-            position: absolute;
-            top: 0px;
-            right: 10px;
-            color: white;
-            font-size: 34px;
-        } */
 @media only screen and (min-width: 251px) and (max-width: 300px) {
-  .cards-wrapper .fifa23-card {
+  .section-wrapper {
+    background-color: rgb(240, 238, 238);
+    box-shadow: 14px -5px 22px -20px inset #161616;
+  }
+  .section-wrapper h1 {
+    font-size: 30px;
+    color: #161616;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .section-wrapper .cards-wrapper .fifa23-card {
     display: flex;
   }
-  .cards-wrapper .fifa23-card:hover::after {
+  .section-wrapper .cards-wrapper .fifa23-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .fifa23-card:hover .fifa23-logo {
+  .section-wrapper .cards-wrapper .fifa23-card:hover .fifa23-logo {
     /*   transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .fifa23-card:hover p {
+  .section-wrapper .cards-wrapper .fifa23-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-mobile-card {
+  .section-wrapper .cards-wrapper .apex-mobile-card {
     display: flex;
   }
-  .cards-wrapper .apex-mobile-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
     /* transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-mobile-card:hover p {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover p {
     display: none;
   }
-  .cards-wrapper .f1-22-card {
+  .section-wrapper .cards-wrapper .f1-22-card {
     display: flex;
   }
-  .cards-wrapper .f1-22-card:hover::after {
+  .section-wrapper .cards-wrapper .f1-22-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .f1-22-card:hover .f1-22-logo {
+  .section-wrapper .cards-wrapper .f1-22-card:hover .f1-22-logo {
     /* transform: translateY(-45px); */
     transform: none;
   }
-  .cards-wrapper .f1-22-card:hover p {
+  .section-wrapper .cards-wrapper .f1-22-card:hover p {
     display: none;
   }
-  .cards-wrapper .batterfield-card {
+  .section-wrapper .cards-wrapper .batterfield-card {
     display: flex;
   }
-  .cards-wrapper .batterfield-card:hover::after {
+  .section-wrapper .cards-wrapper .batterfield-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .batterfield-card:hover .batterfield-logo {
+  .section-wrapper .cards-wrapper .batterfield-card:hover .batterfield-logo {
     transform: none;
   }
-  .cards-wrapper .batterfield-card:hover p {
+  .section-wrapper .cards-wrapper .batterfield-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-card {
+  .section-wrapper .cards-wrapper .apex-card {
     display: flex;
   }
-  .cards-wrapper .apex-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-card:hover .apex-logo {
+  .section-wrapper .cards-wrapper .apex-card:hover .apex-logo {
     /*  transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-card:hover p {
+  .section-wrapper .cards-wrapper .apex-card:hover p {
     display: none;
   }
-  .cards-wrapper .the-sims4-card {
+  .section-wrapper .cards-wrapper .the-sims4-card {
     display: flex;
   }
-  .cards-wrapper .the-sims4-card:hover::after {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
     transform: none;
   }
-  .cards-wrapper .the-sims4-card:hover p {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover p {
     display: none;
   }
-  .cards-wrapper .fifa23-logo img {
+  .section-wrapper .cards-wrapper .fifa23-logo img {
     width: 100px;
     position: relative;
     left: -15%;
   }
-  .cards-wrapper .apex-mobile-logo img {
+  .section-wrapper .cards-wrapper .apex-mobile-logo img {
     width: 55px;
   }
-  .cards-wrapper .f1-22-logo img {
+  .section-wrapper .cards-wrapper .f1-22-logo img {
     width: 100px;
   }
-  .cards-wrapper .batterfield-logo img {
+  .section-wrapper .cards-wrapper .batterfield-logo img {
     width: 100px;
   }
-  .cards-wrapper .apex-logo {
+  .section-wrapper .cards-wrapper .apex-logo {
     width: 75px;
   }
-  .cards-wrapper .the-sims4-logo img {
+  .section-wrapper .cards-wrapper .the-sims4-logo img {
     width: 100px;
     position: relative;
     top: -40px;
@@ -1765,120 +2085,139 @@ select {
   }
   .btn {
     border: 2px solid black;
-    width: 215px;
-    height: 50px;
+    padding: 15px 55px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
   }
+  .btn:hover {
+    padding: 17px 58px;
+  }
 }
 @media only screen and (min-width: 301px) and (max-width: 360px) {
-  .cards-wrapper .fifa23-card {
+  .section-wrapper {
+    background-color: rgb(240, 238, 238);
+    box-shadow: 14px -5px 22px -20px inset #161616;
+  }
+  .section-wrapper h1 {
+    font-size: 30px;
+    color: #161616;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .section-wrapper .cards-wrapper {
+    background-color: rgb(240, 238, 238);
+    box-shadow: 14px -5px 22px -20px inset #161616;
+  }
+  .section-wrapper .cards-wrapper .fifa23-card {
     display: flex;
   }
-  .cards-wrapper .fifa23-card:hover::after {
+  .section-wrapper .cards-wrapper .fifa23-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .fifa23-card:hover .fifa23-logo {
+  .section-wrapper .cards-wrapper .fifa23-card:hover .fifa23-logo {
     /*   transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .fifa23-card:hover p {
+  .section-wrapper .cards-wrapper .fifa23-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-mobile-card {
+  .section-wrapper .cards-wrapper .apex-mobile-card {
     display: flex;
   }
-  .cards-wrapper .apex-mobile-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
     /* transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-mobile-card:hover p {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover p {
     display: none;
   }
-  .cards-wrapper .f1-22-card {
+  .section-wrapper .cards-wrapper .f1-22-card {
     display: flex;
   }
-  .cards-wrapper .f1-22-card:hover::after {
+  .section-wrapper .cards-wrapper .f1-22-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .f1-22-card:hover .f1-22-logo {
+  .section-wrapper .cards-wrapper .f1-22-card:hover .f1-22-logo {
     /* transform: translateY(-45px); */
     transform: none;
   }
-  .cards-wrapper .f1-22-card:hover p {
+  .section-wrapper .cards-wrapper .f1-22-card:hover p {
     display: none;
   }
-  .cards-wrapper .batterfield-card {
+  .section-wrapper .cards-wrapper .batterfield-card {
     display: flex;
   }
-  .cards-wrapper .batterfield-card:hover::after {
+  .section-wrapper .cards-wrapper .batterfield-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .batterfield-card:hover .batterfield-logo {
+  .section-wrapper .cards-wrapper .batterfield-card:hover .batterfield-logo {
     transform: none;
   }
-  .cards-wrapper .batterfield-card:hover p {
+  .section-wrapper .cards-wrapper .batterfield-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-card {
+  .section-wrapper .cards-wrapper .apex-card {
     display: flex;
   }
-  .cards-wrapper .apex-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-card:hover .apex-logo {
+  .section-wrapper .cards-wrapper .apex-card:hover .apex-logo {
     /*  transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-card:hover p {
+  .section-wrapper .cards-wrapper .apex-card:hover p {
     display: none;
   }
-  .cards-wrapper .the-sims4-card {
+  .section-wrapper .cards-wrapper .the-sims4-card {
     display: flex;
   }
-  .cards-wrapper .the-sims4-card:hover::after {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
     transform: none;
   }
-  .cards-wrapper .the-sims4-card:hover p {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover p {
     display: none;
   }
-  .cards-wrapper .fifa23-logo img {
+  .section-wrapper .cards-wrapper .fifa23-logo img {
     width: 100px;
     position: relative;
-    left: -8%;
+    left: 2px;
   }
-  .cards-wrapper .apex-mobile-logo img {
+  .section-wrapper .cards-wrapper .apex-mobile-logo img {
     width: 55px;
   }
-  .cards-wrapper .f1-22-logo img {
+  .section-wrapper .cards-wrapper .f1-22-logo img {
+    width: 110px;
+  }
+  .section-wrapper .cards-wrapper .batterfield-logo img {
     width: 100px;
   }
-  .cards-wrapper .batterfield-logo img {
-    width: 100px;
-  }
-  .cards-wrapper .apex-logo {
+  .section-wrapper .cards-wrapper .apex-logo {
     width: 75px;
   }
-  .cards-wrapper .the-sims4-logo img {
+  .section-wrapper .cards-wrapper .the-sims4-logo img {
     width: 100px;
     position: relative;
     top: -40px;
     left: 5px;
   }
+  .section-wrapper .cards-wrapper p {
+    left: 35%;
+  }
   .bi-three-dots {
     position: absolute;
     top: 0px;
@@ -1893,95 +2232,107 @@ select {
   }
   .btn {
     border: 2px solid black;
-    width: 265px;
-    height: 50px;
+    padding: 14px 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
+  }
+  .btn:hover {
+    padding: 16px 85px;
   }
 }
 @media only screen and (min-width: 361px) and (max-width: 899px) {
-  .cards-wrapper .fifa23-card {
+  .section-wrapper {
+    background-color: rgb(240, 238, 238);
+    box-shadow: 14px -5px 22px -20px inset #161616;
+  }
+  .section-wrapper h1 {
+    font-size: 30px;
+    color: #161616;
+    line-height: 1.1;
+    text-align: center;
+  }
+  .section-wrapper .cards-wrapper .fifa23-card {
     display: flex;
   }
-  .cards-wrapper .fifa23-card:hover::after {
+  .section-wrapper .cards-wrapper .fifa23-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .fifa23-card:hover .fifa23-logo {
+  .section-wrapper .cards-wrapper .fifa23-card:hover .fifa23-logo {
     /*   transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .fifa23-card:hover p {
+  .section-wrapper .cards-wrapper .fifa23-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-mobile-card {
+  .section-wrapper .cards-wrapper .apex-mobile-card {
     display: flex;
   }
-  .cards-wrapper .apex-mobile-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
     /* transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-mobile-card:hover p {
+  .section-wrapper .cards-wrapper .apex-mobile-card:hover p {
     display: none;
   }
-  .cards-wrapper .f1-22-card {
+  .section-wrapper .cards-wrapper .f1-22-card {
     display: flex;
   }
-  .cards-wrapper .f1-22-card:hover::after {
+  .section-wrapper .cards-wrapper .f1-22-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .f1-22-card:hover .f1-22-logo {
+  .section-wrapper .cards-wrapper .f1-22-card:hover .f1-22-logo {
     /* transform: translateY(-45px); */
     transform: none;
   }
-  .cards-wrapper .f1-22-card:hover p {
+  .section-wrapper .cards-wrapper .f1-22-card:hover p {
     display: none;
   }
-  .cards-wrapper .batterfield-card {
+  .section-wrapper .cards-wrapper .batterfield-card {
     display: flex;
   }
-  .cards-wrapper .batterfield-card:hover::after {
+  .section-wrapper .cards-wrapper .batterfield-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .batterfield-card:hover .batterfield-logo {
+  .section-wrapper .cards-wrapper .batterfield-card:hover .batterfield-logo {
     transform: none;
   }
-  .cards-wrapper .batterfield-card:hover p {
+  .section-wrapper .cards-wrapper .batterfield-card:hover p {
     display: none;
   }
-  .cards-wrapper .apex-card {
+  .section-wrapper .cards-wrapper .apex-card {
     display: flex;
   }
-  .cards-wrapper .apex-card:hover::after {
+  .section-wrapper .cards-wrapper .apex-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .apex-card:hover .apex-logo {
+  .section-wrapper .cards-wrapper .apex-card:hover .apex-logo {
     /*  transform: translateY(-40px); */
     transform: none;
   }
-  .cards-wrapper .apex-card:hover p {
+  .section-wrapper .cards-wrapper .apex-card:hover p {
     display: none;
   }
-  .cards-wrapper .the-sims4-card {
+  .section-wrapper .cards-wrapper .the-sims4-card {
     display: flex;
   }
-  .cards-wrapper .the-sims4-card:hover::after {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover::after {
     background: none;
     opacity: 0;
   }
-  .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
     transform: none;
   }
-  .cards-wrapper .the-sims4-card:hover p {
+  .section-wrapper .cards-wrapper .the-sims4-card:hover p {
     display: none;
   }
   .bi-three-dots {
@@ -1998,12 +2349,22 @@ select {
   }
   .btn {
     border: 2px solid black;
-    width: 325px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 16px;
+    padding: 13px 110px;
+  }
+  .btn:hover {
+    padding: 16px 113px;
+  }
+}
+@media only screen and (min-width: 361px) and (max-width: 899px) and (min-width: 414px) {
+  .btn {
+    padding: 16px 135px;
+  }
+  .btn:hover {
+    padding: 18px 138px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -2079,13 +2440,15 @@ select {
     text-decoration: none;
   }
   .btn {
+    padding: 15px 30px;
     border: 2px solid black;
-    width: 147px;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
+  }
+  .btn:hover {
+    padding: 18px 35px;
   }
   .bi-three-dots {
     position: absolute;
@@ -2101,7 +2464,6 @@ select {
     position: absolute;
     top: -10px;
     right: 5px;
-    color: red;
     font-size: 50px;
     display: block;
     z-index: 2;
@@ -2157,7 +2519,7 @@ select {
     display: flex;
     position: absolute;
     flex-direction: column;
-    padding: 32px 396px 32px 60px;
+    /* padding: 32px 396px 32px 60px; */
   }
   .scritta_play {
     display: flex;
@@ -2208,7 +2570,7 @@ select {
     display: flex;
     position: absolute;
     flex-direction: column;
-    padding: 32px 31px 32px 31px;
+    /*  padding: 32px 31px 32px 31px; */
     /*non prende le misure giuste del padding,
     Exenia anche non sa come mai*/
   }

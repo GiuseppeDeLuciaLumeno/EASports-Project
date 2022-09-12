@@ -8,41 +8,66 @@
     align-items: center;
 
     // arrows
-    .arrow {
+    .arrow-container {
+      height: 50px;
       position: absolute;
-      margin-inline: 1rem;
+      z-index: 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &::before, &::after {
         content: '';
+        display: inline-block;
+        height: 3px;
+        width: 15px;
+        border-radius: 3px;
+        background-color: map-get($map: $da-color, $key: borders-dark);
+
         position: absolute;
-        width: 20px;
-        height: 4px;
-        border-radius: 2px;
-        background-color: map-get($map: $color, $key: borders-dark);
-      }
-    }
-
-    .arrow-left {
-      left: 0;
-
-      &::before {
-        transform: translateY(150%) rotate(50deg);
       }
 
-      &::after {
-        transform: translateY(-150%) rotate(-50deg);
+      @include da-breakpoint(tablet) {
+        height: 60px;
       }
     }
     
-    .arrow-right {
+    .arrow-container-left {
+      left: 0;
+      padding-inline: 20px 40px;
+      background: linear-gradient(90deg, rgba(242,242,242,1) 70%, rgba(242,242,242,0.5) 85%, rgba(0,212,255,0) 100%);
+      
+      &::before {
+        transform: rotate(48.5deg);
+        margin-top: 9.5px;
+      }
+      
+      &::after {
+        transform: rotate(-48.5deg);
+        margin-top: -9.5px;
+      }
+    }
+    
+    .arrow-container-right {
       right: 0;
+      padding-inline: 40px 20px;
+      background: linear-gradient(90deg, rgba(0,212,255,0) 0%, rgba(242,242,242,0.5) 15%, rgba(242,242,242,1) 30%);
 
       &::before {
-        transform: translateY(150%) rotate(-50deg);
+        transform: rotate(-48.5deg);
+        margin-top: 9.5px;
       }
-
+      
       &::after {
-        transform: translateY(-150%) rotate(50deg);
+        transform: rotate(48.5deg);
+        margin-top: -9.5px;
+      }
+    }
+
+    @media(min-width: 56.6875rem) {
+      .arrow-container {
+        display: none;
       }
     }
 
@@ -52,7 +77,6 @@
   
       li {
         flex: 0 0 auto;
-        
         list-style: none;
   
         a {
@@ -70,7 +94,8 @@
       height: 2px;
       margin-top: -2px;
       left: 0;
-      background-color: map-get($map: $color, $key: borders);
+      background-color: map-get($map: $da-color, $key: borders);
+      z-index: 2;
     }
   }
 }

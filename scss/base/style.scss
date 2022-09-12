@@ -58,11 +58,41 @@ img{
     max-width: 100%;
 }
 
+.cards-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 1.2rem;
+}
+
+/* End Giochi in evidenza style */
+
 .sub-menu-altreesperienze, .sub-menu-informazioni, .sub-menu-impegni, .sub-menu-risorse {
 
     display:none;
 }
 
+
+
+
+.blocco_bgplay {
+    width: auto;
+    height: auto;
+    display: flex;
+    position: absolute;
+}
+
+.bg_play{
+    width: 100vw;
+    height: 410px;
+}
+
+.play{
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+   padding: 130px 0px 0px 410px;
 
 .flexnav {
     @include size (90vh, 100%);
@@ -155,16 +185,101 @@ img{
                         color:black;
                         cursor:pointer;
                         
-                }
+                }}
 
-
-    }
+.linkf_gio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 884px;
+    height: 81px;
 }
 
+.link_gio {
+    text-decoration: none;
+    color: black;
+    margin: 8px 48px 5px 0px;
+}
+
+.link_gio:hover {
+    text-decoration: none;
+    color: orangered;
+}
+
+.blocco_social {
+    display: flex;
+    flex-direction: column;
+}
+
+.social_logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 13px;
+}
+
+.blocco_loghi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.facebooklogo {
+    width: 22px;
+    height: 22px;
+}
+
+.facebooklogo:hover {
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.twitterlogo {
+    width: 22px;
+    height: 22px;
+}
+
+.twitterlogo:hover {
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.youtubelogo {
+    width: 22px;
+    height: 22px;
+}
+
+.youtubelogo:hover {
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.instagramlogo {
+    width: 22px;
+    height: 22px;
+}
+
+.instagramlogo:hover {
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
+
+.twitchlogo {
+    width: 22px;
+    height: 22px;
+}
+
+.twitchlogo:hover {
+    width: 25px;
+    height: 25px;
+    transition-duration: 0.20s;
+}
 
 /* -------------------------------------Reponsivity--------------------------------- */
 @import "../responsivity/media";
-
-@if (min-width:940px, max-width:1200px) {
-        .navlist {display:none;}
-}
