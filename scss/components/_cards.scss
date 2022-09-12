@@ -1,4 +1,4 @@
-//Giochi in Evidenza's cards
+//Giochi in Evidenza's cards start
 
 .fifa23-card {
     @include cards;
@@ -189,10 +189,11 @@
     }
 
 }
+//Giochi in evidenza cards End
 
 // -----------------------------------------------------------------------------
+// ULTIME NOVITA' - REUSABLE CARDS STYLING - start -----------------------------
 // -----------------------------------------------------------------------------
-// ULTIME NOVITA' - REUSABLE CARDS STYLING -------------------------------------
 
 // .card {
 //      a {
@@ -207,7 +208,6 @@
 //          }
 //      }
 // }
-
 .card {
     position: relative;
     text-align: center;
@@ -284,3 +284,4 @@
         }
     }
 }
+// ULTIME NOVITA' - REUSABLE CARDS STYLING - end -----------------------------
