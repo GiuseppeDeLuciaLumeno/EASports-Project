@@ -1,0 +1,407 @@
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
+@import 'breakpoints';
+
+$color-primary: #000000;
+$color-secondary: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+.footer-main-link {
+    height: 250px;
+    padding: 15px 80px 23px;
+    background-color: #f3f3f3;
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 7fr 3fr 3fr;
+    grid-template-rows: 88px auto;
+    grid-template-areas:
+        "logo link1 price language"
+        "logo link2 link2 privacy";
+
+        @include lg {
+            height: 100vh;
+            padding: 40px 22px 30px;
+            grid-template-rows: 60px 70px 70px 110px 70px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "logo ."
+                "link1 link1"
+                "price language"
+                "link2 link2"
+                "privacy .";
+        }
+
+        @include md {
+            height: 100vh;
+            gap: 20px;
+            padding: 40px 22px 30px;
+            grid-template-rows: 60px 70px 60px 60px 140px 70px;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "logo"
+                "link1"
+                "price" 
+                "language"
+                "link2"
+                "privacy";
+        }
+
+    .logo {
+        grid-area: logo;
+
+        img {
+        width: 49px;
+        }
+    }
+
+    .footer-link1 {
+        grid-area: link1;
+        display: flex;
+        width: 100%;
+
+        ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 100%;
+        width: 90%;
+
+        @include lg {
+            width: 96%;
+        }
+
+        @include md {
+            width: 100%;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+            a {
+                text-decoration: none;
+                margin-right: 2rem;
+                color: $color-primary;
+                line-height: 1.8;
+                
+                @include lg {
+                    font-size: 15px;
+                }
+
+                @include md {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .dropdown-price {
+        grid-area: price;
+
+        @include lg {
+            display: flex;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        @include md {
+            height: 100%;
+        }
+
+        .dropdown {
+        position: relative;
+        border: 2px solid #c2c2c2;
+        border-radius: 3px;
+        width: 95%;
+
+        @include lg {
+            width: 80%;
+        }
+
+        @include md {
+            width: 100%;
+        }
+
+            .button-link {
+                width: 100%;
+                height: 61px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background: none;
+                border: none;
+                text-decoration: none;
+                color: #5a5a58;
+                font-family: inherit;
+                cursor: pointer;
+                padding: 0;
+                margin-left: 10px;
+
+                @include md {
+                    height: 100%;
+                }
+
+                div {
+                font-size: 15px;
+                }
+            }
+
+            #color-nation {
+                color: $color-primary;
+                display: flex;
+                justify-content: space-between;
+                width: 85%;
+
+                @include md {
+                    width: 95%;
+                }
+
+                img {
+                width: 14px;
+                height: 14px;
+                margin-left: 30px;
+                }
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                left: -140px;
+                top: calc(100% + 0.25rem);
+                background-color: $color-secondary;
+                padding: 0.75rem;
+                border-radius: 0.25rem;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+                pointer-events: none;
+
+                @include lg {
+                    left: 0px;
+                }
+            }
+
+            .link {
+                width: 100%;
+                height: 50px;
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: none;
+                border-bottom: 1px solid #eaeaea;
+                text-decoration: none;
+                color: $color-primary;
+                font-family: inherit;
+                cursor: pointer;
+                padding: 0px 8px;
+            }
+
+            .link:hover {
+                padding-left: 20px;
+                transition: padding-left 100ms ease-in-out;
+            }
+
+            .button-link:focus + .dropdown-menu {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .information-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 150px);
+                gap: 1rem;
+            }
+        }
+    }
+
+    .dropdown-language {
+        grid-area: language;
+
+        @include lg {
+            display: flex;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        @include md {
+            height: 100%;
+        }
+
+        .dropdown {
+            position: relative;
+            border: 2px solid #c2c2c2;
+            border-radius: 3px;
+            width: 95%;
+
+            @include lg {
+                width: 80%;
+            }
+
+            @include md {
+                width: 100%;
+            }
+
+            .button-link {
+                width: 100%;
+                height: 61px;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background: none;
+                border: none;
+                text-decoration: none;
+                color: #5a5a58;
+                font-family: inherit;
+                cursor: pointer;
+                padding: 0;
+                margin-left: 10px;
+
+                @include md {
+                    height: 100%;
+                }
+
+                div {
+                    font-size: 15px;
+                }
+            }
+
+            #color-nation {
+                color: $color-primary;
+                display: flex;
+                width: 85%;
+
+                @include md {
+                    width: 95%;
+                }
+
+                span {
+                    margin-right: 10px;
+                }
+
+                .wrapper-text-arrow {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    img {
+                        width: 14px;
+                        height: 14px;
+                        margin-left: 60px;
+                    }
+                }
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                left: -300px;
+                top: calc(100% + 0.25rem);
+                background-color: white;
+                padding: 0.75rem;
+                border-radius: 0.25rem;
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+                pointer-events: none;
+            }
+
+            .link {
+                width: 100%;
+                height: 50px;
+                text-align: left;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                background: none;
+                border-bottom: 1px solid #eaeaea;
+                text-decoration: none;
+                color: $color-primary;
+                font-family: inherit;
+                cursor: pointer;
+                padding: 0px 8px;
+                font-size: 14px;
+            }
+
+            .link:hover {
+                padding-left: 20px;
+                transition: padding-left 150ms ease-in-out;
+            }
+
+            .button-link:focus + .dropdown-menu {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .information-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 180px);
+                gap: 1rem;
+            }
+        }
+    }
+
+    .footer-legal-link {
+        grid-area: link2;
+
+        @include lg {
+            margin-top: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            height: 75%;
+            width: 80%;
+
+            @include lg {
+                width: 90%;
+            }
+
+            a {
+                font-size: 12px;
+                text-decoration: none;
+                margin-right: 2rem;
+                color: $color-primary;
+                line-height: 2;
+            }
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+
+            @include lg {
+                margin-top: 4px;
+            }
+        }
+    }
+
+    .footer-privacy {
+        grid-area: privacy;
+         
+        .image-privacy {
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            @include lg {
+                justify-content: flex-start;
+            }
+        }
+    }
+}
