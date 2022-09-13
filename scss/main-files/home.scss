@@ -1,39 +1,42 @@
 @use "sass:math";
 
 // ABSTRACTS --------------------------------------------------------------------------------------------
-@import "../abstract/variables";
-@import "../abstract/variables/font-sizes";
-@import "../abstract/variables/font-families";
-@import "../abstract/variables/breakpoints";
-@import "../abstract/variables/colors";
+@import "../atomic-design/1-abstracts/variables";
+@import "../atomic-design/1-abstracts/variables/font-sizes";
+@import "../atomic-design/1-abstracts/variables/font-families";
+@import "../atomic-design/1-abstracts/variables/breakpoints";
+@import "../atomic-design/1-abstracts/variables/colors";
 
-@import "../abstract/function";
+@import "../atomic-design/1-abstracts/function";
 
-@import "../abstract/mixin";
-@import "../abstract/mixins/breakpoints";
+@import "../atomic-design/1-abstracts/mixin";
+@import "../atomic-design/1-abstracts/mixins/breakpoints";
 
 // BASE --------------------------------------------------------------------------------------------
-@import "../tipography/font-face";
-@import "./reset";
-@import "../tipography/tipography";
+@import "../atomic-design/2-base/font-face";
+@import "../atomic-design/2-base/reset";
+@import "../atomic-design/2-base/tipography";
 
 // COMPONENTS --------------------------------------------------------------------------------------------
-@import "../components/buttons";
-@import "../components/cards";
-@import "../components/menu";
-@import "../components/navbar";
-@import "../components/sidebar";
-@import "../components/tabs";
+@import "../atomic-design/3-components/buttons";
+@import "../atomic-design/3-components/cards";
+@import "../atomic-design/3-components/menu";
+@import "../atomic-design/3-components/navbar";
+@import "../atomic-design/3-components/sidebar";
+@import "../atomic-design/3-components/tabs";
 
 // LAYOUTS --------------------------------------------------------------------------------------------
-@import "../layout/headers";
-@import "../layout/footers";
-@import "../layout/grid";
-@import "../layout/page-sections";
-@import "../layout/sliders";
+@import "../atomic-design/4-layouts/headers";
+@import "../atomic-design/4-layouts/footers";
+@import "../atomic-design/4-layouts/grid";
+@import "../atomic-design/4-layouts/page-sections";
+@import "../atomic-design/4-layouts/sliders";
+
+// TEMPLATES --------------------------------------------------------------------------------------------
+
 
 // PAGES --------------------------------------------------------------------------------------------
-@import "../pages/home";
+@import "../atomic-design/6-pages/home";
 
 
 .flexnav {
@@ -392,4 +395,4 @@
 
 
 /* -------------------------------------Reponsivity--------------------------------- */
-@import "../responsivity/media";
+@import "../atomic-design/responsivity/home";
