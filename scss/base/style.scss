@@ -128,7 +128,7 @@
     top: 100px;
     left: 320px;
     flex-direction: column;
-    /* padding: 130px 0px 0px 410px; */
+    
 
     /* @media only screen and (max-width:425px) {
     display: flex;
@@ -145,10 +145,11 @@
     width: 544px;
     height: 54px;
     font-size: 27px;
+    
 }
 
 .h6_play {
-    margin-bottom: 24px;
+    margin: 0px 0px 24px 0px;
     justify-content: center;
     align-items: center;
 
