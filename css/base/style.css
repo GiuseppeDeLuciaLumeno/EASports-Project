@@ -722,8 +722,23 @@ select {
   }
 }
 
+.cards-container-active .card {
+  animation: activation-animation 0.5s ease;
+}
+@keyframes activation-animation {
+  from {
+    transform: translateY(-12px);
+    box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    box-shadow: 0 3px 10px -2px hsla(0deg, 0%, 0%, 0.5);
+  }
+}
+
 .slider-tab-container {
   height: 50px;
+  cursor: pointer;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -731,6 +746,15 @@ select {
 }
 .slider-tab-container:hover {
   background-color: hsla(0deg, 0%, 85%, 0.8);
+}
+.slider-tab-container::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  width: 0%;
+  height: 2px;
+  background-color: hsl(0deg, 100%, 64%);
+  transition: width 0.1s ease-out;
 }
 .slider-tab-container .slider-tab {
   padding-inline: 1rem;
@@ -773,12 +797,7 @@ select {
   position: relative;
 }
 .slider-tab-container.active::before {
-  content: "";
-  position: absolute;
-  bottom: 1px;
   width: 80%;
-  height: 2px;
-  background-color: hsl(0deg, 100%, 64%);
 }
 .slider-tab-container.active .slider-tab {
   color: hsl(0deg, 0%, 42%);
@@ -915,6 +934,7 @@ footer {
   width: 100%;
 }
 .footer-main-link .footer-link1 ul {
+  padding-inline-start: 0px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -1027,7 +1047,11 @@ footer {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  -o-transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
   pointer-events: none;
   z-index: 100;
 }
@@ -1067,6 +1091,8 @@ footer {
 .footer-main-link .dropdown-price .dropdown .button-link:focus + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   pointer-events: auto;
 }
 @media (max-width: 1023px) {
@@ -1195,7 +1221,11 @@ footer {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  -o-transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
   pointer-events: none;
   z-index: 2;
 }
@@ -1230,10 +1260,14 @@ footer {
 .footer-main-link .dropdown-language .dropdown .link:hover {
   padding-left: 20px;
   transition: padding-left 150ms ease-in-out;
+  -webkit-transition: padding-left 150ms ease-in-out;
+  -o-transition: padding-left 150ms ease-in-out;
 }
 .footer-main-link .dropdown-language .dropdown .button-link:focus + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   pointer-events: auto;
 }
 @media (max-width: 1023px) {
@@ -1283,7 +1317,7 @@ footer {
   }
 }
 .footer-main-link .footer-legal-link ul {
-  padding-inline-start: 0;
+  padding-inline-start: 0px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -1305,9 +1339,7 @@ footer {
 }
 .footer-main-link .footer-legal-link .copyright {
   font-size: 14px;
-  width: 90%;
-  display: flex;
-  margin: 0 auto;
+  margin-top: 10px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link .copyright {
@@ -1468,8 +1500,19 @@ footer {
   margin-bottom: 40px;
   margin-left: -16px;
 }
-#ultime-novita #cards-container {
+#ultime-novita .cards-container-1,
+#ultime-novita .cards-container-2,
+#ultime-novita .cards-container-3,
+#ultime-novita .cards-container-4,
+#ultime-novita .cards-container-5,
+#ultime-novita .cards-container-6,
+#ultime-novita .cards-container-7,
+#ultime-novita .cards-container-8 {
   margin-bottom: 40px;
+  display: none;
+}
+#ultime-novita .cards-container-active {
+  display: grid;
 }
 #ultime-novita .cta {
   margin-inline: auto;
