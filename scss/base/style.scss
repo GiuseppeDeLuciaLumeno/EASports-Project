@@ -36,39 +36,102 @@
 @import "../pages/home";
 
 
-.flexnav {
-    display: flex;
-    flex-flow: column;
-    height: 30vh;
-    width: 30vw;
+  //codice header daniele //
+  .flexnav {
+    @include size (90vh, 100%);
+    @include flex (flex, flex-start, center);
+    flex-flow:column;
 
     .blackline {
-        display: flex;
-        flex: 1;
-        background-color: black;
+        background-color:black;
+        display:flex;
+        @include size(5vh, 100%);
     }
 
     .nav {
-        display: flex;
-        flex: 1;
-        background-color: rgb(235, 219, 219);
+        display:flex;
+        @include size (5vh, 100%);
+        
 
-        ul {
-            display: flex;
-            flex: 1;
+            .logo {
+                @include flex (flex, flex-start, center);
+                flex:15%;
+                 }
+            .navlist {
+                @include flex (flex, flex-start, center);
+                flex:85%;
+               
+                ul {@include flex (flex, flex-start, center);
+                    @include size (2rem, 100%);
+                    @include space (1rem, 1.5rem);
+                    list-style:none;
 
-            li {
-                display: flex;
-                flex-basis: 100%;
-                justify-content: flex-start;
-                gap: 1rem;
+                     li {
+                        
+                        
+                            a { 
+                                font-size:large;
+                                color:black;
+                                text-decoration:none;
+                                }
+                           
+                                    } 
+                                        }
+                                            }
+                                            a:hover {color:white;
+                                                    transition:1s;}
+    }
+   
+    .img {
+        display:flex;
+        
+        background-image: url(/EASports-Project/assets/mainimgEA.jpg);
+        @include size (80vh, 100%);
+        
+   
+      
+    .textposition {
+                @include flex(flex, flex-end, center);
+                @include font (Helvetica, x-large);
+                @include size (65vh, 65%);
+                gap:1rem;
+                color:white;
+                flex-flow:column;
+               
 
-                a {
-                    color: black;
+                button {
+                    @include flex (flex, center, flex-end);
+                    @include size (3.5rem, 10rem);
+                    border-radius:0.5rem;
+                    background-color:white;
+                    color:black;
+                    cursor:pointer;
+                    
+            }
+            
+        }
+         
+    }
+    //codice header tablet responsive
+    .mainimgmobile {
+                    display:flex;
+                    flex-flow:column;
+                    display:none;
+                    gap:1rem;
+                    background-image:url(/EASports-Project/assets/images/mainimgMobile.jpg);
+                    @include size(60vh, 100%);
+
+                    button {
+                        @include flex (flex, center, flex-end);
+                        @include size (1.5rem, 6rem);
+                        border-radius:0.5rem;
+                        background-color:white;
+                        display:none;
+                        color:black;
+                        cursor:pointer;
+                        
                 }
             }
-        }
-    }
 }
 
 
