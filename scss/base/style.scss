@@ -85,7 +85,7 @@
     .img {
         display:flex;
         
-        background-image: url(/EASports-Project/assets/mainimgEA.jpg);
+        background-image: url(/EASports-Project/assets/img/FIFAMANIMGEA.jpg);
         @include size (80vh, 100%);
         
    
@@ -97,15 +97,30 @@
                 gap:1rem;
                 color:white;
                 flex-flow:column;
+
+                &_1{
+                    @include flex (flex, flex-start, center);
+                    background-color:1px solid black;
+                }
+                &_2{
+                    @include flex (flex, flex-start, center);
+                    background-color:1px solid black;
+                }
                
 
-                button {
-                    @include flex (flex, center, flex-end);
-                    @include size (3.5rem, 10rem);
+                .btn_daniele {
+                    @include flex (flex, flex-start, center);
+                    @include size (3.5rem, 16rem);
                     border-radius:0.5rem;
                     background-color:white;
                     color:black;
                     cursor:pointer;
+
+                    button{
+                            @include size (3.5rem, 16rem);
+                            @include font (Helvetica, large);
+
+                    }
                     
             }
             
@@ -118,12 +133,12 @@
                     flex-flow:column;
                     display:none;
                     gap:1rem;
-                    background-image:url(/EASports-Project/assets/images/mainimgMobile.jpg);
+                    background-image:url(/EASports-Project/assets/img/FIFAMAINIMGEA-MOBILE.jpg);
                     @include size(60vh, 100%);
 
                     button {
                         @include flex (flex, center, flex-end);
-                        @include size (1.5rem, 6rem);
+                        @include size (1.5rem, 16rem);
                         border-radius:0.5rem;
                         background-color:white;
                         display:none;
