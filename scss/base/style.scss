@@ -102,10 +102,7 @@
                     @include flex (flex, flex-start, center);
                     background-color:1px solid black;
                 }
-                &_2{
-                    @include flex (flex, flex-start, center);
-                    background-color:1px solid black;
-                }
+              
                
 
                 .btn_daniele {
@@ -119,6 +116,7 @@
                     button{
                             @include size (3.5rem, 16rem);
                             @include font (Helvetica, large);
+
 
                     }
                     
