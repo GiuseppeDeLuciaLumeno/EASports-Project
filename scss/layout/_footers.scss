@@ -65,7 +65,7 @@ footer {
         width: 100%;
 
         ul {
-
+            padding-inline-start: 0px;
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
@@ -178,7 +178,11 @@ footer {
                 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
                 opacity: 0;
                 transform: translateY(-10px);
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
                 transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+                -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+                -o-transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
                 pointer-events: none;
                 z-index: 100;
 
@@ -220,6 +224,8 @@ footer {
             .button-link:focus + .dropdown-menu {
                 opacity: 1;
                 transform: translateY(0);
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
                 pointer-events: auto;
 
                 @include lg {
@@ -349,7 +355,11 @@ footer {
                 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
                 opacity: 0;
                 transform: translateY(-10px);
+                -webkit-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
                 transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+                -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+                -o-transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
                 pointer-events: none;
                 z-index: 2;
 
@@ -384,11 +394,15 @@ footer {
             .link:hover {
                 padding-left: 20px;
                 transition: padding-left 150ms ease-in-out;
+                -webkit-transition: padding-left 150ms ease-in-out;
+                -o-transition: padding-left 150ms ease-in-out;
             }
 
             .button-link:focus + .dropdown-menu {
                 opacity: 1;
                 transform: translateY(0);
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
                 pointer-events: auto;
 
                 @include lg {
@@ -438,7 +452,7 @@ footer {
         }
 
         ul {
-            padding-inline-start: 0;
+            padding-inline-start: 0px;
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
@@ -461,9 +475,7 @@ footer {
 
         .copyright {
             font-size: 14px;
-            width: 90%;
-            display: flex;
-            margin:  0 auto;
+            margin-top: 10px;
 
             @include lg {
                 margin-top: 1rem;
