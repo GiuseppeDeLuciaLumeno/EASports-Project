@@ -24,7 +24,7 @@ footer {
         "logo link2 link2 privacy";
 
         @include lg {
-            height: 100vh;
+            height: 65vh;
             padding: 40px 22px 30px;
             grid-template-rows: 60px 60px 70px 110px 80px;
             grid-template-columns: repeat(2, 1fr);
@@ -37,7 +37,7 @@ footer {
         }
 
         @include md {
-            height: 100vh;
+            height: 90vh;
             gap: 20px;
             padding: 40px 22px 30px;
             grid-template-rows: 60px 70px 60px 60px 140px 70px;
