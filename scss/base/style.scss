@@ -87,29 +87,39 @@
         
         background-image: url(/EASports-Project/assets/img/FIFAMANIMGEA.jpg);
         @include size (80vh, 100%);
-        
+      
+       
+        }
    
       
     .textposition {
                 @include flex(flex, flex-end, center);
                 @include font (Helvetica, x-large);
                 @include size (65vh, 65%);
-                gap:1rem;
+                gap:1.2rem;
                 color:white;
                 flex-flow:column;
 
                 &_1{
                     @include flex (flex, flex-start, center);
                     background-color:1px solid black;
+                   
+                 
+
+                }
+
+                .LOGO {
+                    @include size (4rem, 30rem);
+                    
                 }
               
                
 
                 .btn_daniele {
                     @include flex (flex, flex-start, center);
-                    @include size (3.5rem, 16rem);
+                    @include size (3.5rem, 21em);
                     border-radius:0.5rem;
-                    background-color:white;
+                  
                     color:black;
                     cursor:pointer;
 
@@ -145,7 +155,7 @@
                         
                 }
             }
-}
+
 
 
 /* Start Giochi in evidenza */

@@ -72,6 +72,18 @@
     font-style:$font-style;
     font-size:$font-size;
 }
+
+//mixin for mediaqueries daniele 
+@mixin responsive-daniele ($breakpoint){
+    @if $breakpoint == tablet {
+        @media screen and (max-width:1000px){
+            @content;}
+    }
+    @else if $breakpoint == phone {
+        @media screen and (max-width:760px){
+            @content;}
+    }
+}
 // end mixin for header 
 
 

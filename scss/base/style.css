@@ -1541,7 +1541,7 @@ footer {
   height: 80vh;
   width: 100%;
 }
-.flexnav .img .textposition {
+.flexnav .textposition {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -1549,40 +1549,38 @@ footer {
   font-size: x-large;
   height: 65vh;
   width: 65%;
-  gap: 1rem;
+  gap: 1.2rem;
   color: white;
   flex-flow: column;
 }
-.flexnav .img .textposition_1 {
+.flexnav .textposition_1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: 1px solid black;
 }
-.flexnav .img .textposition_2 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: 1px solid black;
+.flexnav .textposition .LOGO {
+  height: 4rem;
+  width: 30rem;
 }
-.flexnav .img .textposition .btn_daniele {
+.flexnav .textposition .btn_daniele {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 3.5rem;
-  width: 16rem;
+  width: 21em;
   border-radius: 0.5rem;
-  background-color: white;
   color: black;
   cursor: pointer;
 }
-.flexnav .img .textposition .btn_daniele button {
+.flexnav .textposition .btn_daniele button {
   height: 3.5rem;
   width: 16rem;
   font-style: Helvetica;
   font-size: large;
 }
-.flexnav .mainimgmobile {
+
+.mainimgmobile {
   display: flex;
   flex-flow: column;
   display: none;
@@ -1591,7 +1589,7 @@ footer {
   height: 60vh;
   width: 100%;
 }
-.flexnav .mainimgmobile button {
+.mainimgmobile button {
   display: flex;
   justify-content: center;
   align-items: flex-end;
