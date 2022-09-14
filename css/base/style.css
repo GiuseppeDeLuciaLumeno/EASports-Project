@@ -970,6 +970,9 @@ footer {
 }
 .footer-main-link .dropdown-price {
   grid-area: price;
+  display: flex;
+  justify-content: flex-end;
+  height: 65px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .dropdown-price {
@@ -1137,6 +1140,9 @@ footer {
 }
 .footer-main-link .dropdown-language {
   grid-area: language;
+  display: flex;
+  justify-content: flex-end;
+  height: 65px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .dropdown-language {

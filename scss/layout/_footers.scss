@@ -103,6 +103,9 @@ footer {
 
     .dropdown-price {
         grid-area: price;
+        display: flex;
+        justify-content: flex-end;
+        height: 65px;
 
         @include lg {
             display: flex;
@@ -271,6 +274,9 @@ footer {
 
     .dropdown-language {
         grid-area: language;
+        display: flex;
+        justify-content: flex-end;
+        height: 65px;
 
         @include lg {
             display: flex;
