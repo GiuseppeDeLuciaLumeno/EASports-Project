@@ -31,7 +31,10 @@
   <link rel="stylesheet" text="style.css" href="/EASports-Project/scss/base/style.css">
   <!-- link bootstrap icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  
   <script src="/src/main.js" defer></script>
+  <script src="/src/layout/sliders.js" defer></script>
+  <script src="/src/pages/homepage.js" defer></script>
   <!-- Have a good work to make a good job :D -->
   <!-- Start from dev branch and create your own-->
 </head>
@@ -289,31 +292,32 @@
       <a href="#"><button type="button" class="btn">Ultimi giochi</button></a>
     </div>
   </section>
+  <!-- End Giuseppe's Part -->
 
   <!-- Dario - start -->
   <section class="section-container" id="ultime-novita">
     <h3 class="home-h3" id="h3">Ultime novità</h3>
 
-    <div class="tabs slider-container" id="slider-container">
+    <div class="slider-container" id="slider-container">
       <div class="arrow-container arrow-container-left"></div>
       <ul class="list">
-        <li class="slider-tab-container active"><a href="#" class="home-tabs slider-tab">Notizie EA</a></li>
-        <li class="slider-tab-container"><a href="#" class="home-tabs slider-tab">EA Play</a></li>
-        <li class="slider-tab-container"><a href="#" class="home-tabs slider-tab">FIFA</a></li>
-        <li class="slider-tab-container"><a href="#" class="home-tabs slider-tab">F1</a></li>
-        <li class="slider-tab-container"><a href="#" class="home-tabs slider-tab">Apex Legends</a></li>
-        <li class="slider-tab-container"><a href="#" class="home-tabs slider-tab">The Sims™ 4</a></li>
-        <li class="slider-tab-container"><a href="#" class="home-tabs slider-tab">Battlefield</a></li>
-        <li class="slider-tab-container"><a href="#" class="home-tabs slider-tab">Inside EA</a></li>
+        <li class="slider-tab-container active" onclick="show1()"><a class="home-tabs slider-tab">Notizie EA</a></li>
+        <li class="slider-tab-container" onclick="show2()"><a class="home-tabs slider-tab">EA Play</a></li>
+        <li class="slider-tab-container" onclick="show3()"><a class="home-tabs slider-tab">FIFA</a></li>
+        <li class="slider-tab-container" onclick="show4()"><a class="home-tabs slider-tab">F1</a></li>
+        <li class="slider-tab-container" onclick="show5()"><a class="home-tabs slider-tab">Apex Legends</a></li>
+        <li class="slider-tab-container" onclick="show6()"><a class="home-tabs slider-tab">The Sims™ 4</a></li>
+        <li class="slider-tab-container" onclick="show7()"><a class="home-tabs slider-tab">Battlefield</a></li>
+        <li class="slider-tab-container" onclick="show8()"><a class="home-tabs slider-tab">Inside EA</a></li>
       </ul>
       <div class="arrow-container arrow-container-right"></div>
       <div class="border-bottom"></div>
     </div>
 
-    <div class="cards grid-container" id="cards-container">
+    <div class="grid-container cards-container cards-container-1 cards-container-active">
       <div class="card card-1 grid-item">
         <a href="#">
-          <img src="../../assets/img/geometric-shapes.png" alt="" class="img">
+          <img src="../../assets/img/HomePage/geometric-shapes.png" alt="" class="img">
           <div class="content">
             <div class="info">
               <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
@@ -328,7 +332,7 @@
 
       <div class="card card-2 grid-item">
         <a href="#">
-          <img src="../../assets/img/electronic-arts-logo.png" alt="" class="img">
+          <img src="../../assets/img/HomePage/electronic-arts-logo.png" alt="" class="img">
           <div class="content">
             <div class="info">
               <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
@@ -340,9 +344,9 @@
         </a>
       </div>
 
-      <div class="card grid-item">
+      <div class="card card-3 grid-item">
         <a href="">
-          <img src="../../assets/img/geometric-shapes.png" alt="" class="img">
+          <img src="../../assets/img/HomePage/geometric-shapes.png" alt="" class="img">
           <div class="content">
             <div class="info">
               <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
@@ -358,7 +362,7 @@
 
       <div class="card card-4 grid-item">
         <a href="#">
-          <img src="../../assets/img/characters-chatting.jpg" alt="" class="img">
+          <img src="../../assets/img/HomePage/characters-chatting.jpg" alt="" class="img">
           <div class="content">
             <div class="info">
               <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
@@ -372,7 +376,7 @@
 
       <div class="card card-5 grid-item">
         <a href="#">
-          <img src="../../assets/img/the-sims-building.png" alt="" class="img">
+          <img src="../../assets/img/HomePage/the-sims-building.png" alt="" class="img">
           <div class="content">
             <div class="info">
               <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
@@ -387,7 +391,7 @@
 
       <div class="card card-6 grid-item">
         <a href="#">
-          <img src="../../assets/img/electronic-arts-logo.png" alt="" class="img">
+          <img src="../../assets/img/HomePage/electronic-arts-logo.png" alt="" class="img">
           <div class="content">
             <div class="info">
               <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
@@ -400,6 +404,608 @@
         </a>
       </div>
     </div>
+    
+    <div class="grid-container cards-container cards-container-2">
+      <div class="card card-1 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/sword.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
+              <h5 class="home-h5 card-h5">14-mag-2021</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Gioca a Mass Effect™ Legendary Edition con EA Play* Pro</h4>
+            <p class="home-p card-p">Vivi la saga cinematografica ora rimasterizzata e ottimizzata per il 4K Ultra HD</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-2 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/mbappe.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">FIFA</h5>
+              <h5 class="home-h5 card-h5">3-mag-2021</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Ottieni di più da FIFA 21 con EA Play - Sito ufficiale EA SPORTS</h4>
+            <p class="home-p card-p card-p">FIFA 21 è ora disponibile in The Play List con EA Play.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-3 grid-item">
+        <a href="">
+          <img src="../../assets/img/HomePage/sword.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
+              <h5 class="home-h5 card-h5">1-apr-2021</h5>
+            </div>
+            <h4 class="home-h4 card-h4">In evidenza su EA Play - Aprile 2021</h4>
+            <p class="home-p card-p">Scopri le nuove ricompense e i giochi ora disponibili con il tuo abbonamento EA Play.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-4 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/gamepass.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
+              <h5 class="home-h5 card-h5">18-mar-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">EA Play è ora disponibile su Xbox Game Pass per PC tramite EA app</h4>
+            <p class="home-p card-p">EA app, la nostra piattaforma PC di nuova generazione, è in fase di open beta. Stiamo unendo le nostre forze con Xbox per offrire più giochi agli utenti PC.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-5 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/sword.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
+              <h5 class="home-h5 card-h5">1-mar-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">In evidenza su EA Play - Marzo 2021</h4>
+            <p class="home-p card-p">Scopri le nuove ricompense e i giochi ora disponibili con il tuo abbonamento EA Play o EA Play Pro.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-6 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/sword.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Electronic Arts Inc.</h5>
+              <h5 class="home-h5 card-h5">25-feb-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">EA Play – Prossimamente in The Play List – Primavera 2021</h4>
+            <p class="home-p card-p">Scopri tutto sui nuovi giochi in arrivo su EA Play o EA Play Pro.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="grid-container cards-container cards-container-3">
+      <div class="card card-1 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/developers-notes.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">FIFA</h5>
+              <h5 class="home-h5 card-h5">31-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">FIFA 23 | Note degli sviluppatori - Aggiornamento intesa FUT - EA SPORTS</h4>
+            <p class="home-p card-p">Il nostro obiettivo con FUT 23 è aumentare la varietà delle rose per avere squadre più diverse, rendere la creazione delle rose più semplice e rimuovere i punti più critici.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-2 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/fifa-ultimate-edition.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">FIFA</h5>
+              <h5 class="home-h5 card-h5">26-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">FIFA 23 - Elenco completo di campionati e squadre - Electronic Arts</h4>
+            <p class="home-p card-p card-p">Scopri l'elenco completo delle squadre e dei campionati disponibili in EA SPORTS FIFA 23.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-3 grid-item">
+        <a href="">
+          <img src="../../assets/img/HomePage/developers-notes-dark.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">FIFA</h5>
+              <h5 class="home-h5 card-h5">11-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">FIFA 23 | Note degli sviluppatori - Un'occhiata da vicino a FUT - Sito uffi…</h4>
+            <p class="home-p card-p">FUT 23 introduce un nuovo modo di giocare e ottenere premi con i Momenti FUT, un sistema di intesa completamente rivisto che offre maggiore flessibilità nella creazione della rosa, funzionalità cross-play, nuovi Eroi FUT e mo…</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-4 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/developers-notes-dark.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">FIFA</h5>
+              <h5 class="home-h5 card-h5">8-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">FIFA 23 | Note degli sviluppatori - Un'occhiata da vicino a Pro Club/VOLTA …</h4>
+            <p class="home-p card-p">Il nostro obiettivo, data la vastità di una funzione importante come questa, è assicurare la migliore esperienza possibile.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-5 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/developers-notes-dark.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">FIFA</h5>
+              <h5 class="home-h5 card-h5">1-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">FIFA 23 - Note degli sviluppatori - Un'occhiata da vicino alla carriera - E…</h4>
+            <p class="home-p card-p">Le novità introdotte in FIFA 23 hanno come scopo principale quello di offrire un approccio più libero alla modalità Carriera, sia in termini di gameplay che di personalizzazione.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-6 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/fifa-ultimate-edition.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">FIFA</h5>
+              <h5 class="home-h5 card-h5">29-lug-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Dual Entitlement in FIFA 23 - Electronic Arts</h4>
+            <p class="home-p card-p">Scopri di più sul Dual Entitlement in FIFA 23 e su come aggiornare la tua copia per la tua piattaforma di nuova generazione senza costi aggiuntivi.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="grid-container cards-container cards-container-4">
+      <div class="card card-1 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/alpine&mclaren.431p_" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">F1® 22</h5>
+              <h5 class="home-h5 card-h5">24-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Il cross-play arriva in F1® 22 - UPDATED</h4>
+            <p class="home-p card-p">A partire da oggi, potrai correre nello sport motoristico più veloce del mondo sfidando giocatori di qualsiasi piattaforma.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-2 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/custom-car.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">F1® 22</h5>
+              <h5 class="home-h5 card-h5">24-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Serie 2 del Pass Podio disponibile adesso</h4>
+            <p class="home-p card-p card-p">Alcune spettacolari livree debuttano nella serie 2 del Pass Podio</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-3 grid-item">
+        <a href="">
+          <img src="../../assets/img/HomePage/mclaren&williams.431p_" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">F1® 22</h5>
+              <h5 class="home-h5 card-h5">22-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">F1® 22 - Note sulla patch 1.09</h4>
+            <p class="home-p card-p">Cambio automatico, temperature delle gomme e molto altro; scopri cosa è stato corretto nella patch 1.09</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-4 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/drivers.431p_" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">F1® 22</h5>
+              <h5 class="home-h5 card-h5">22-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">F1® 22 - Aggiornamento delle valutazioni dei piloti</h4>
+            <p class="home-p card-p">Con la conclusione del Gran Premio d'Ungheria, è iniziata la pausa estiva del nostro sport motoristico preferito.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-5 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/haas.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">F1® 22</h5>
+              <h5 class="home-h5 card-h5">9-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">F1® 22 - Note sulla patch 1.08</h4>
+            <p class="home-p card-p">Scopri di più sull'ultima patch</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-6 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/williams.431p_" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">F1® 22</h5>
+              <h5 class="home-h5 card-h5">2-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">F1® 22 - Note sulla patch 1.07</h4>
+            <p class="home-p card-p">Scopri di più sull'ultima patch</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="grid-container cards-container cards-container-5">
+      <div class="card card-1 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/apex-legends-1.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Apex Legends</h5>
+              <h5 class="home-h5 card-h5">18-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Guida la caccia con il nuovo bundle di Vantage per Prime Gaming</h4>
+            <p class="home-p card-p">Ottieni la skin Capo scout di Vantage e molto altro gratuitamente con il tuo abbonamento Prime dal 18 agosto al 15 settembre</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-2 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/apex-legends-2.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Apex Legends</h5>
+              <h5 class="home-h5 card-h5">8-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Apex Legends: Caccia - Note sulla patch</h4>
+            <p class="home-p card-p card-p">Sopravvivi a ogni costo con la nuova leggenda ed esplora un Canyon dei Re trasformato dal 9 agosto, data di inizio della nuova stagione!</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-3 grid-item">
+        <a href="">
+          <img src="../../assets/img/HomePage/apex-legends-3.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Apex Legends</h5>
+              <h5 class="home-h5 card-h5">1-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Aggiornamento mappa Canyon dei Re</h4>
+            <p class="home-p card-p">Esplora il nuovo Canyon dei Re. L'area un tempo nota come Skull Town risorge dalle proprie ceneri e diventa Reliquia.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-4 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/apex-legends-4.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Apex Legends</h5>
+              <h5 class="home-h5 card-h5">21-lug-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Mostra a tutti il tuo sangue blu con il nuovo bundle di Wraith, Reale.</h4>
+            <p class="home-p card-p">Ottieni gratuitamente la skin di Wraith Fiore letale e molto altro con il tuo abbonamento Prime dal 21 luglio al 18 agosto</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-5 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/apex-legends-5.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Apex Legends</h5>
+              <h5 class="home-h5 card-h5">15-lug-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Festeggia l'evento Gaiden con gli avatar VTuber di Apex Legends™</h4>
+            <p class="home-p card-p">Unisciti al divertimento scaricando gli avatar VTuber di Octane, Bangalore e Mirage!</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-6 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/apex-legends-6.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Apex Legends</h5>
+              <h5 class="home-h5 card-h5">10-lug-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Inizia una nuova epica avventura nell'evento Gaiden</h4>
+            <p class="home-p card-p">Il 19 luglio, evoca l'eroe che è in te con 40 avventurosi oggetti cosmetici in esclusiva con l'evento e il ritorno di Armati e pericolosi.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="grid-container cards-container cards-container-6">
+      <div class="card card-1 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/the-sims-4-kits.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">The Sims 4</h5>
+              <h5 class="home-h5 card-h5">5-set-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Collaborare con la comunità sui kit The Sims 4 Lusso nel Deserto e Primi Pa…</h4>
+            <p class="home-p card-p">Siete voi a creare The Sims™ con Aveline e XUrbanSimsX</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-2 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/the-sims-4-aggiornamento.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">The Sims 4</h5>
+              <h5 class="home-h5 card-h5">30-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Aggiornamento: 30/08/2022</h4>
+            <p class="home-p card-p card-p">Tre nuove simulazioni vi danno il benvenuto in città!</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-3 grid-item">
+        <a href="">
+          <img src="../../assets/img/HomePage/the-sims-4-box.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">The Sims 4</h5>
+              <h5 class="home-h5 card-h5">10-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Consegne Express dei Sims</h4>
+            <p class="home-p card-p">Luglio - Settembre 2022</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-4 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/the-sims-4-logo.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">The Sims 4</h5>
+              <h5 class="home-h5 card-h5">4-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">The Sims™ 4 e la neurodiversità</h4>
+            <p class="home-p card-p">Una nuova espansione di The Sims™ 4 apre una nuova frontiera per la neurodiversità da EA</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-5 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/the-sims-4-aggiornamento.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">The Sims 4</h5>
+              <h5 class="home-h5 card-h5">2-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Aggiornamento: 02/08/2022</h4>
+            <p class="home-p card-p">Problemi di crescita</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-6 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/the-sims-4-aggiornamento.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">The Sims 4</h5>
+              <h5 class="home-h5 card-h5">26-lug-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Aggiornamento: 26/07/2022</h4>
+            <p class="home-p card-p">Il liceo non finisce mai</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="grid-container cards-container cards-container-7">
+      <div class="card card-1 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/battlefield-season-2.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Battlefield 2042</h5>
+              <h5 class="home-h5 card-h5">30-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Briefing su Battlefield - Benvenuti alla Stagione 2 – Maestria delle armi</h4>
+            <p class="home-p card-p">Battlefield 2042 - Panoramica della Stagione 2</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-2 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/battlefield-aggiornamento.431p_" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Battlefield 2042</h5>
+              <h5 class="home-h5 card-h5">29-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">AGGIORNAMENTO 2.0 DI BATTLEFIELD 2042</h4>
+            <p class="home-p card-p card-p">Scoprite le novità di Maestria delle armi, la Stagione 2 di Battlefield 2042</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-3 grid-item">
+        <a href="">
+          <img src="../../assets/img/HomePage/battlefield-soldiers.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Battlefield 2042</h5>
+              <h5 class="home-h5 card-h5">22-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Briefing Battlefield - Aggiornamento sullo sviluppo, agosto 2022</h4>
+            <p class="home-p card-p">Scoprite su cosa abbiamo lavorato nel nostro secondo aggiornamento sullo sviluppo di Battlefield 2042</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-4 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/battlefield-aggiornamento.431p_" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Battlefield 2042</h5>
+              <h5 class="home-h5 card-h5">1-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">AGGIORNAMENTO 1.2 DI BATTLEFIELD 2042</h4>
+            <p class="home-p card-p">Aggiornamento 1.2 per Battlefield 2042, Stagione 1</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-5 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/battlefield-aggiornamento.431p_" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Battlefield 2042</h5>
+              <h5 class="home-h5 card-h5">5-lug-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">AGGIORNAMENTO 1.1 DI BATTLEFIELD 2042</h4>
+            <p class="home-p card-p">Aggiornamento 1.1 per Battlefield 2042, Stagione 1</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-6 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/battlefield-season-1.431p_" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Battlefield 2042</h5>
+              <h5 class="home-h5 card-h5">10-giu-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Briefing su Battlefield - Benvenuti all'Ora zero</h4>
+            <p class="home-p card-p">Battlefield 2042 - Stagione 1: Ora zero</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="grid-container cards-container cards-container-8">
+      <div class="card card-1 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/geometric-shapes.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Inside EA</h5>
+              <h5 class="home-h5 card-h5">25-ago-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Un'estate di STEAM con EA</h4>
+            <p class="home-p card-p">Un post per mettere in luce e omaggiare il sostegno di EA ai programmi estivi che aiutano i giovani di diversa estrazione a sviluppare competenze in ambito STEAM (scienza, tecnologia, ingegneria, arti e matematica). A firma d…</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-2 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/light-drawn.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Inside EA</h5>
+              <h5 class="home-h5 card-h5">1-apr-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Vieni a costruire il futuro di The Sims a Maxis</h4>
+            <p class="home-p card-p card-p">La nostra ambizione: ispirare tutti a creare un mondo migliore attraverso il gioco creativo</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-3 grid-item">
+        <a href="">
+          <img src="../../assets/img/HomePage/EA-diploma.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Inside EA</h5>
+              <h5 class="home-h5 card-h5">31-mar-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Lasciare un segno positivo all'interno e all'esterno dei nostri giochi</h4>
+            <p class="home-p card-p">Lasciare un segno positivo all'interno e all'esterno dei nostri giochi</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-4 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/birthday.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Inside EA</h5>
+              <h5 class="home-h5 card-h5">13-gen-2022</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Firemonkeys Studio di EA festeggia i 10 anni di The Sims FreePlay</h4>
+            <p class="home-p card-p">Tutto è cominciato realizzando The Sims per dispositivi mobili: da allora è diventato uno dei titoli preferiti della serie</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-5 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/full-circle.png" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Inside EA</h5>
+              <h5 class="home-h5 card-h5">16-dic-2021</h5>
+            </div>
+            <h4 class="home-h4 card-h4">Dentro Full Circle - Melvin Teo, produttore di skate.</h4>
+            <p class="home-p card-p">Scopri di più sullo studio Full Circle con Melvin Teo, produttore di skate.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card card-6 grid-item">
+        <a href="#">
+          <img src="../../assets/img/HomePage/EA-inclusivity.jpg" alt="" class="img">
+          <div class="content">
+            <div class="info">
+              <h5 class="home-h5 card-h5">Inside EA</h5>
+              <h5 class="home-h5 card-h5">2-nov-2021</h5>
+            </div>
+            <h4 class="home-h4 card-h4">ABLE festeggia il mese nazionale di sensibilizzazione sull'occupazione per ...</h4>
+            <p class="home-p card-p">È il momento di educare sui problemi di handicap e celebrare i numerosi e variegati contributi dei lavoratori con disabilità</p>
+          </div>
+        </a>
+      </div>
+    </div>
 
     <div class="cta btn-container">
       <a href=""><button class="btn">Più dettagli</button></a>
@@ -408,7 +1014,6 @@
   <!-- Dario - end -->
 
   <!-- Start of the Footer(Giorgia)-->
-
   <div class="container_tot">
     <div class="container_gio">
       <div class="blocco_play">
@@ -547,8 +1152,6 @@
 
     </div>
   </div>
-
-
   <!-- END of the Footer(Giorgia)-->
 
   <!-- Inizio Footer Josephine -->
