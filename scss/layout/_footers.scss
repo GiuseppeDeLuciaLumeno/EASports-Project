@@ -8,13 +8,15 @@
 footer {
   font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  background-color: #f3f3f3;
 }
 
 .footer-main-link {
     height: 250px;
     padding: 15px 80px 23px;
     background-color: #f3f3f3;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     display: grid;
     gap: 5px;
     grid-template-columns: 1fr 7fr 3fr 3fr;
@@ -101,6 +103,9 @@ footer {
 
     .dropdown-price {
         grid-area: price;
+        display: flex;
+        justify-content: flex-end;
+        height: 65px;
 
         @include lg {
             display: flex;
@@ -116,7 +121,7 @@ footer {
         position: relative;
         border: 2px solid #c2c2c2;
         border-radius: 3px;
-        width: 95%;
+        width: 190px;
 
         @include lg {
             width: 80%;
@@ -269,6 +274,9 @@ footer {
 
     .dropdown-language {
         grid-area: language;
+        display: flex;
+        justify-content: flex-end;
+        height: 65px;
 
         @include lg {
             display: flex;
@@ -284,7 +292,7 @@ footer {
             position: relative;
             border: 2px solid #c2c2c2;
             border-radius: 3px;
-            width: 95%;
+            width: 190px;
 
             @include lg {
                 width: 80%;
