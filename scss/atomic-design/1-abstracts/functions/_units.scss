@@ -1,0 +1,7 @@
+// Giuseppe - inizio -----------------------------------------------------------------------
+
+//pixel-to-rem function
+@function rem($number) {
+  @return (math.div($number, 16px)) * 1rem;
+}
+// Giuseppe - fine -------------------------------------------------------------------------

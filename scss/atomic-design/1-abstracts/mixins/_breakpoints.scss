@@ -11,3 +11,42 @@
   }
 }
 // Dario - fine ----------------------------------------------------------------------------------
+
+// Josephine - inizio ----------------------------------------------------------------------------
+@mixin xs {
+  @media (max-width: map-get($breakpointsJo, "xs")) {
+      @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: map-get($breakpointsJo, "sm")) {
+      @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($breakpointsJo, "md")) {
+      @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: map-get($breakpointsJo, "lg")) {
+      @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: map-get($breakpointsJo, "xl")) {
+      @content;
+  }
+}
+
+// custom Breakpoint
+@mixin breakpointJo($bp: 0) {
+  @media (min-width: $bp) {
+      @content;
+  }
+}
+// Josephine - fine ----------------------------------------------------------------------------

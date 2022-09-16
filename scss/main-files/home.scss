@@ -1,16 +1,16 @@
 @use "sass:math";
 
 // ABSTRACTS --------------------------------------------------------------------------------------------
-@import "../atomic-design/1-abstracts/variables";
 @import "../atomic-design/1-abstracts/variables/font-sizes";
 @import "../atomic-design/1-abstracts/variables/font-families";
 @import "../atomic-design/1-abstracts/variables/breakpoints";
 @import "../atomic-design/1-abstracts/variables/colors";
 
-@import "../atomic-design/1-abstracts/function";
+@import "../atomic-design/1-abstracts/functions/units";
 
-@import "../atomic-design/1-abstracts/mixin";
 @import "../atomic-design/1-abstracts/mixins/breakpoints";
+@import "../atomic-design/1-abstracts/mixins/cards";
+@import "../atomic-design/1-abstracts/mixins/icons";
 
 // BASE --------------------------------------------------------------------------------------------
 @import "../atomic-design/2-base/font-face";
