@@ -36,40 +36,147 @@
 @import "../pages/home";
 
 
-.flexnav {
-    display: flex;
-    flex-flow: column;
-    height: 30vh;
-    width: 30vw;
+  //codice header daniele //
+  .flexnav {
+    @include size (90vh, 100%);
+    @include flex (flex, flex-start, center);
+    flex-flow:column;
 
     .blackline {
-        display: flex;
-        flex: 1;
-        background-color: black;
+        background-color:black;
+        display:flex;
+        @include size(5vh, 100%);
     }
 
     .nav {
-        display: flex;
-        flex: 1;
-        background-color: rgb(235, 219, 219);
+        display:flex;
+        @include size (5vh, 100%);
+        
 
-        ul {
-            display: flex;
-            flex: 1;
+            .logo {
+                @include flex (flex, flex-start, center);
+                flex:15%;
+                 }
+            .navlist {
+                @include flex (flex, flex-start, center);
+                flex:85%;
+               
+                ul {@include flex (flex, flex-start, center);
+                    @include size (2rem, 100%);
+                    @include space (1rem, 1.5rem);
+                    list-style:none;
 
-            li {
-                display: flex;
-                flex-basis: 100%;
-                justify-content: flex-start;
-                gap: 1rem;
+                     li {
+                        
+                        
+                            a { 
+                                font-size:large;
+                                color:black;
+                                text-decoration:none;
+                                }
+                           
+                                    } 
+                                        }
+                                            }
+                                            a:hover {color:white;
+                                                    transition:1s;}
+    }
+   
+    .img {
+        display:flex;
+        
+        background-image: url(/EASports-Project/assets/img/FIFAMANIMGEA.jpg);
+        @include size (80vh, 100%);
+      
+       
+        }
+   
+      
+    .textposition {
+                @include flex(flex, flex-end, center);
+                @include font (Helvetica, x-large);
+                @include size (65vh, 65%);
+                gap:1.2rem;
+                color:white;
+                flex-flow:column;
 
-                a {
-                    color: black;
+                &_1{
+                    @include flex (flex, flex-start, center);
+                    background-color:1px solid black;
+                   
+                 
+
+                }
+
+                .LOGO {
+                    @include size (4rem, 30rem);
+                    
+                }
+              
+               
+
+                .btn_daniele {
+                    @include flex (flex, flex-start, center);
+                    @include size (3.5rem, 21em);
+                    border-radius:0.5rem;
+                  
+                    color:black;
+                    cursor:pointer;
+
+                    button{
+                            @include size (3.5rem, 16rem);
+                            @include font (Helvetica, large);
+
+
+                    }
+                    
+            }
+            
+        }
+         
+    }
+
+    //dropdown menu with scss and js
+    .sub-menu-altreesperienze {
+        display:none;
+        list-style:none;
+        padding:0.2em, 0.5em;
+        background-color:white;
+        position:absolute;
+        top:3em;
+        left:50%;
+        width:100%;
+        opacity:0;
+        transition:0.3s;
+
+            li{
+                padding:0.7em, 0.5em;
+                margin:0.3em, 0;
+                border-radius:0.5em;
+                cursor:pointer;
+            }
+    }
+    //codice header tablet responsive
+    .mainimgmobile {
+                    display:flex;
+                    flex-flow:column;
+                    display:none;
+                    gap:1rem;
+                    background-image:url(/EASports-Project/assets/img/FIFAMAINIMGEA-MOBILE.jpg);
+                    @include size(60vh, 100%);
+
+                    button {
+                        @include flex (flex, center, flex-end);
+                        @include size (1.5rem, 16rem);
+                        border-radius:0.5rem;
+                        background-color:white;
+                        display:none;
+                        color:black;
+                        cursor:pointer;
+                        
                 }
             }
-        }
-    }
-}
+
 
 
 /* Start Giochi in evidenza */
