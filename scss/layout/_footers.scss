@@ -9,6 +9,9 @@ footer {
   font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   background-color: #f3f3f3;
+  @include dsl {
+    padding-bottom: 4rem;
+  }
 }
 
 .footer-main-link {
@@ -52,6 +55,15 @@ footer {
                 "link2"
                 "privacy";
         }
+
+        @include dsl {
+            width: 65%;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 10fr 3fr 3fr;
+        }
+
 
     .logo {
         grid-area: logo;
