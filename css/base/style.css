@@ -892,6 +892,11 @@ footer {
   font-size: 16px;
   background-color: #f3f3f3;
 }
+@media only screen and (min-width: 1920px) {
+  footer {
+    padding-bottom: 4rem;
+  }
+}
 
 .footer-main-link {
   height: 250px;
@@ -922,6 +927,15 @@ footer {
     grid-template-rows: 60px 70px 60px 60px 140px 70px;
     grid-template-columns: 1fr;
     grid-template-areas: "logo" "link1" "price" "language" "link2" "privacy";
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .footer-main-link {
+    width: 65%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 10fr 3fr 3fr;
   }
 }
 .footer-main-link .logo {
