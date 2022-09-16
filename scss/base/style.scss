@@ -51,7 +51,7 @@
     .nav {
         display:flex;
         @include size (5vh, 100%);
-        
+
 
             .logo {
                 @include flex (flex, flex-start, center);
@@ -60,38 +60,37 @@
             .navlist {
                 @include flex (flex, flex-start, center);
                 flex:85%;
-               
+
                 ul {@include flex (flex, flex-start, center);
                     @include size (2rem, 100%);
                     @include space (1rem, 1.5rem);
                     list-style:none;
 
                      li {
-                        
-                        
-                            a { 
+
+
+                            a {
                                 font-size:large;
                                 color:black;
                                 text-decoration:none;
                                 }
-                           
-                                    } 
+
+                                    }
                                         }
                                             }
                                             a:hover {color:white;
                                                     transition:1s;}
     }
-   
+
     .img {
         display:flex;
-        
-        background-image: url(/EASports-Project/assets/img/FIFAMANIMGEA.jpg);
-        @include size (80vh, 100%);
-      
-       
+
+        background-image: url(/assets/img/FIFAMANIMGEA.jpg);
+        @include size (87vh, 100%);
+
         }
-   
-      
+
+
     .textposition {
                 @include flex(flex, flex-end, center);
                 @include font (Helvetica, x-large);
@@ -103,23 +102,23 @@
                 &_1{
                     @include flex (flex, flex-start, center);
                     background-color:1px solid black;
-                   
-                 
+
+
 
                 }
 
                 .LOGO {
                     @include size (4rem, 30rem);
-                    
+
                 }
-              
-               
+
+
 
                 .btn_daniele {
                     @include flex (flex, flex-start, center);
                     @include size (3.5rem, 21em);
                     border-radius:0.5rem;
-                  
+
                     color:black;
                     cursor:pointer;
 
@@ -129,11 +128,11 @@
 
 
                     }
-                    
+
             }
-            
+
         }
-         
+
     }
 
     //dropdown menu with scss and js
@@ -173,7 +172,7 @@
                         display:none;
                         color:black;
                         cursor:pointer;
-                        
+
                 }
             }
 

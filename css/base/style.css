@@ -1580,8 +1580,8 @@ footer {
 }
 .flexnav .img {
   display: flex;
-  background-image: url(/EASports-Project/assets/img/FIFAMANIMGEA.jpg);
-  height: 80vh;
+  background-image: url(/assets/img/FIFAMANIMGEA.jpg);
+  height: 87vh;
   width: 100%;
 }
 .flexnav .textposition {
