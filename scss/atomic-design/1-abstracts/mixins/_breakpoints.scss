@@ -43,6 +43,18 @@
   }
 }
 
+@mixin dsl {
+  @media only screen and (min-width: map-get($breakpointsJo, "dsl")){
+      @content;
+  }
+}
+
+@mixin fhd {
+  @media only screen and (max-width: map-get($breakpointsJo, "fhd")) {
+      @content;
+  }
+}
+
 // custom Breakpoint
 @mixin breakpointJo($bp: 0) {
   @media (min-width: $bp) {
