@@ -1,9 +1,11 @@
+// Josephine - inizio --------------------------------------------------------------------------------------
+
 @import "/node_modules/flag-icons/css/flag-icons.min.css";
-@import '../1-abstracts/mixins/cards';
-@import '../1-abstracts/mixins/icons';
-@import '../2-base/reset';
-@import '../1-abstracts/variables/colors';
-@import '../2-base/font-face';
+@import '../../1-abstracts/mixins/cards/cards-giuseppe';
+@import '../../1-abstracts/mixins/icons/icons-giuseppe';
+@import '../../1-abstracts/variables/colors/colors-josephine';
+@import '../../2-base/resets/reset-dario';
+@import '../../2-base/font-faces/font-faces-dario';
 
 
 footer {
@@ -532,3 +534,4 @@ footer {
         }
     }
 }
+// Josephine - fine ------------------------------------------------------------------------------------------

@@ -1,0 +1,96 @@
+// Dario - inizio -----------------------------------------------------------------------------------
+
+// ULTIME NOVITA' - REUSABLE CARDS STYLING - start -----------------------------
+
+// .card {
+//      a {
+//          img {.........}
+//          .content {
+//              .info {
+//                  h5.card-h5 {.........}
+//                  h5.card-h5 {.........}
+//              }
+//              h4.card-h4 {.........}
+//              p.card-p {.........}
+//          }
+//      }
+// }
+.card {
+  position: relative;
+  text-align: center;
+  background-color: map-get($map: $da-color, $key: white);
+  box-shadow: 0 3px 10px -2px map-get($map: $da-color, $key: shadow);
+  transition: 0.5s ease;
+
+  &:hover {
+      transform: translateY(-12px);
+      box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
+  }
+
+  a {
+      text-decoration: none;
+      display: block;
+
+      .img {
+          display: none;
+      }
+
+      .content {
+          padding: 1.5rem 1rem;
+
+          .info {
+              display: flex;
+              flex-direction: column;
+          }
+
+          .card-p {
+              display: none;
+          }
+      }
+  }
+
+  @include da-breakpoint(tablet) {
+      a {
+          .img {
+              display: block;
+          }
+
+          .content {
+              padding: 1.5rem 1.5rem;
+
+              .info {
+                  flex-direction: row;
+                  gap: 1rem;
+              }
+
+              .card-h4 {
+                  text-align: left;
+              }
+
+              .card-p {
+                  display: block;
+                  text-align: left;
+              }
+          }
+      }
+  }
+}
+
+.cards-container-active {
+  .card {
+      animation: activation-animation 0.5s ease;
+  }
+
+  @keyframes activation-animation {
+      from {
+          transform: translateY(-12px);
+          box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
+      }
+      to {
+          box-shadow: 0 3px 10px -2px map-get($map: $da-color, $key: shadow);
+      }
+  }
+}
+// ULTIME NOVITA' - REUSABLE CARDS STYLING - end -----------------------------
+
+// Dario - fine ---------------------------------------------------------------------------------------
