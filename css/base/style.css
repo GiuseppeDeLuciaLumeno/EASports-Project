@@ -897,6 +897,11 @@ footer {
     padding-bottom: 4rem;
   }
 }
+@media only screen and (max-width: 1024px) {
+  footer {
+    padding: 1.5rem 0 3rem;
+  }
+}
 
 .footer-main-link {
   height: 250px;
@@ -909,6 +914,12 @@ footer {
   grid-template-columns: 1fr 7fr 3fr 3fr;
   grid-template-rows: 88px auto;
   grid-template-areas: "logo link1 price language" "logo link2 link2 privacy";
+}
+@media only screen and (max-width: 1024px) {
+  .footer-main-link {
+    padding: 0;
+    height: 255px;
+  }
 }
 @media (max-width: 1023px) {
   .footer-main-link {
@@ -1362,6 +1373,9 @@ footer {
 .footer-main-link .footer-legal-link .copyright {
   font-size: 14px;
   margin-top: 10px;
+  /*  @include fhd {
+       padding: 0;
+   } */
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link .copyright {

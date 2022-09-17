@@ -12,6 +12,10 @@ footer {
   @include dsl {
     padding-bottom: 4rem;
   }
+
+  @include fhd {
+    padding: 1.5rem 0 3rem;
+  }
 }
 
 .footer-main-link {
@@ -27,6 +31,11 @@ footer {
     grid-template-areas:
         "logo link1 price language"
         "logo link2 link2 privacy";
+
+        @include fhd {
+            padding: 0;
+            height: 255px;
+        }
 
         @include lg {
             height: 65vh;
@@ -500,6 +509,10 @@ footer {
             @include lg {
                 margin-top: 1rem;
             }
+
+           /*  @include fhd {
+                padding: 0;
+            } */
         }
     }
 
