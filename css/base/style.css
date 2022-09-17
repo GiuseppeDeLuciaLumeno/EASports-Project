@@ -294,7 +294,7 @@ select {
   position: absolute;
   top: 40%;
   left: 35%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .fifa23-card:hover .fifa23-logo {
@@ -347,7 +347,7 @@ select {
   position: absolute;
   top: 40%;
   left: 40%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .apex-mobile-card:hover .apex-mobile-logo {
@@ -400,7 +400,7 @@ select {
   position: absolute;
   top: 40%;
   left: 30%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .f1-22-card:hover .f1-22-logo {
@@ -453,7 +453,7 @@ select {
   position: absolute;
   top: 40%;
   left: 30%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .batterfield-card:hover .batterfield-logo {
@@ -506,7 +506,7 @@ select {
   position: absolute;
   top: 40%;
   left: 37%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .apex-card:hover .apex-logo {
@@ -559,7 +559,7 @@ select {
   position: absolute;
   top: 25%;
   left: 30%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .the-sims4-card:hover .the-sims4-logo {
