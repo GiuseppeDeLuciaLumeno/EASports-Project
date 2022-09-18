@@ -1581,6 +1581,7 @@ footer {
 .flexnav .img {
   display: flex;
   background-image: url(/EASports-Project/assets/img/FIFAMANIMGEA.jpg);
+  background-repeat: no-repeat;
   height: 80vh;
   width: 100%;
 }
@@ -1624,14 +1625,10 @@ footer {
 }
 
 .sub-menu-altreesperienze {
-  display: none;
   list-style: none;
   padding: 0.2em, 0.5em;
   background-color: white;
-  position: absolute;
-  top: 3em;
-  left: 50%;
-  width: 100%;
+  color: black;
   opacity: 0;
   transition: 0.3s;
 }
@@ -1640,6 +1637,14 @@ footer {
   margin: 0.3em, 0;
   border-radius: 0.5em;
   cursor: pointer;
+}
+.sub-menu-altreesperienze li a {
+  display: block;
+  font-size: medium;
+}
+
+.hide {
+  display: none;
 }
 
 .mainimgmobile {

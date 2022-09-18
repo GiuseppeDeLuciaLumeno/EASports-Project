@@ -7,3 +7,12 @@ icons.forEach(icon => {
     console.log("icone", icons);
 });
 
+//start of dropdown menu header daniele
+
+const subMenu1 = document.querySelector(".sub-menu-altreesperienze");
+subMenu1.addEventListener('click', ()=>{
+    //get dropdown menu
+    subMenu1.classList.toggle("hide");
+    //remove hide class
+
+})

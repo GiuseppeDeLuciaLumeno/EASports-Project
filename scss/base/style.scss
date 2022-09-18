@@ -48,10 +48,11 @@
         @include size(5vh, 100%);
     }
 
+
     .nav {
         display:flex;
         @include size (5vh, 100%);
-        
+       
 
             .logo {
                 @include flex (flex, flex-start, center);
@@ -78,14 +79,19 @@
                                     } 
                                         }
                                             }
+                                                 
                                             a:hover {color:white;
                                                     transition:1s;}
-    }
+                                            }
+
    
     .img {
         display:flex;
         
         background-image: url(/EASports-Project/assets/img/FIFAMANIMGEA.jpg);
+        background-repeat: no-repeat;
+        
+       
         @include size (80vh, 100%);
       
        
@@ -138,14 +144,10 @@
 
     //dropdown menu with scss and js
     .sub-menu-altreesperienze {
-        display:none;
         list-style:none;
         padding:0.2em, 0.5em;
         background-color:white;
-        position:absolute;
-        top:3em;
-        left:50%;
-        width:100%;
+        color:black;
         opacity:0;
         transition:0.3s;
 
@@ -154,7 +156,15 @@
                 margin:0.3em, 0;
                 border-radius:0.5em;
                 cursor:pointer;
+
+                a{
+                    display:block;
+                    font-size:medium;
+                }
             }
+    }
+    .hide {
+        display:none;
     }
     //codice header tablet responsive
     .mainimgmobile {
