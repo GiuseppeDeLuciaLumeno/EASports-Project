@@ -1743,6 +1743,7 @@ footer {
 
 .bg_play {
   height: 410px;
+  width: 100vw;
 }
 
 .play {
@@ -1751,7 +1752,6 @@ footer {
   top: 100px;
   left: 320px;
   flex-direction: column;
-  /* padding: 130px 0px 0px 410px; */
   /* @media only screen and (max-width:425px) {
    display: flex;
    position:absolute;
@@ -1770,7 +1770,7 @@ footer {
 }
 
 .h6_play {
-  margin-bottom: 24px;
+  margin: 0px 0px 24px 0px;
   justify-content: center;
   align-items: center;
 }
@@ -1808,8 +1808,8 @@ footer {
   height: 75px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0rem 0rem 0rem;
+  justify-content: flex-start;
+  margin: 10px 0px 0px 0px;
 }
 
 .iscriviti_subito1 {
@@ -2699,12 +2699,83 @@ footer {
   }
 }
 /* Footer Giorgia (PLAY -GENITORI -SOCIAL)*/
+/*@media (max-width:430px) {
+
+
+    .play {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        padding: 32px 31px 32px 31px;
+        /*non prende le misure giuste del padding,
+        Exenia anche non sa come mai*/ /*
+    }
+
+
+
+    .scritta_play {
+        display: flex;
+        position: relative;
+        color: white;
+        width: 335px;
+        height: 100px;
+        font-size: 27px;
+    }
+
+    .blocco_genitori {
+        display: flex;
+        flex-direction: column;
+        background-color: #6FB0D6;
+        width: 100vw;
+        height: 200px;
+        justify-content: space-around;
+        align-items: center;
+        padding: 32px 0px 16px 0px;
+    }
+
+    .genitori_gio {
+        width: 200px;
+        height: 70.22;
+        color: black;
+    }
+
+    .blocco_link_gio {
+        display: flex;
+        flex-direction: column;
+        background-color: #EAEAEA;
+        width: 100vw;
+        height: 300px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 12px 60px 40px 60px;
+    }
+
+    .linkf_gio {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 648px;
+        height: 118px;
+        padding-bottom: 10px;
+    }
+
+}*/
 @media only screen and (max-width: 768px) {
   .play {
     display: flex;
     position: absolute;
     flex-direction: column;
     /* padding: 32px 396px 32px 60px; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    left: 50px;
+  }
+  .h6_play {
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
   }
   .scritta_play {
     display: flex;
@@ -2750,11 +2821,15 @@ footer {
     padding-bottom: 10px;
   }
 }
-@media only screen and (max-width: 425px) {
+/*@media only screen and (min-width:320px) */
+@media only screen and (min-width: 320px) and (max-width: 425px) {
   .play {
     display: flex;
     position: absolute;
     flex-direction: column;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
     /*  padding: 32px 31px 32px 31px; */
     /*non prende le misure giuste del padding,
     Exenia anche non sa come mai*/
@@ -2763,16 +2838,16 @@ footer {
     display: flex;
     position: relative;
     color: white;
-    width: 335px;
-    height: 100px;
+    width: 360px;
+    height: 79px;
     font-size: 27px;
   }
   .blocco_genitori {
     display: flex;
     flex-direction: column;
     background-color: #6FB0D6;
-    width: 100vw;
-    height: 200px;
+    width: 360px;
+    height: 64px;
     justify-content: space-around;
     align-items: center;
     padding: 32px 0px 16px 0px;
@@ -2798,8 +2873,8 @@ footer {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    width: 648px;
-    height: 118px;
+    width: 370px;
+    height: 324px;
     padding-bottom: 10px;
   }
 }
