@@ -8,13 +8,22 @@
 footer {
   font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  background-color: #f3f3f3;
+  @include dsl {
+    padding-bottom: 4rem;
+  }
+
+  @include fhd {
+    padding: 1.5rem 0 3rem;
+  }
 }
 
 .footer-main-link {
     height: 250px;
     padding: 15px 80px 23px;
     background-color: #f3f3f3;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     display: grid;
     gap: 5px;
     grid-template-columns: 1fr 7fr 3fr 3fr;
@@ -22,6 +31,11 @@ footer {
     grid-template-areas:
         "logo link1 price language"
         "logo link2 link2 privacy";
+
+        @include fhd {
+            padding: 0;
+            height: 255px;
+        }
 
         @include lg {
             height: 65vh;
@@ -50,6 +64,15 @@ footer {
                 "link2"
                 "privacy";
         }
+
+        @include dsl {
+            width: 65%;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 10fr 3fr 3fr;
+        }
+
 
     .logo {
         grid-area: logo;
@@ -101,6 +124,9 @@ footer {
 
     .dropdown-price {
         grid-area: price;
+        display: flex;
+        justify-content: flex-end;
+        height: 65px;
 
         @include lg {
             display: flex;
@@ -116,7 +142,7 @@ footer {
         position: relative;
         border: 2px solid #c2c2c2;
         border-radius: 3px;
-        width: 95%;
+        width: 190px;
 
         @include lg {
             width: 80%;
@@ -269,6 +295,9 @@ footer {
 
     .dropdown-language {
         grid-area: language;
+        display: flex;
+        justify-content: flex-end;
+        height: 65px;
 
         @include lg {
             display: flex;
@@ -284,7 +313,7 @@ footer {
             position: relative;
             border: 2px solid #c2c2c2;
             border-radius: 3px;
-            width: 95%;
+            width: 190px;
 
             @include lg {
                 width: 80%;
@@ -480,6 +509,10 @@ footer {
             @include lg {
                 margin-top: 1rem;
             }
+
+           /*  @include fhd {
+                padding: 0;
+            } */
         }
     }
 

@@ -294,7 +294,7 @@ select {
   position: absolute;
   top: 40%;
   left: 35%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .fifa23-card:hover .fifa23-logo {
@@ -347,7 +347,7 @@ select {
   position: absolute;
   top: 40%;
   left: 40%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .apex-mobile-card:hover .apex-mobile-logo {
@@ -400,7 +400,7 @@ select {
   position: absolute;
   top: 40%;
   left: 30%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .f1-22-card:hover .f1-22-logo {
@@ -453,7 +453,7 @@ select {
   position: absolute;
   top: 40%;
   left: 30%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .batterfield-card:hover .batterfield-logo {
@@ -506,7 +506,7 @@ select {
   position: absolute;
   top: 40%;
   left: 37%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .apex-card:hover .apex-logo {
@@ -559,7 +559,7 @@ select {
   position: absolute;
   top: 25%;
   left: 30%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   z-index: 1;
 }
 .the-sims4-card:hover .the-sims4-logo {
@@ -890,18 +890,36 @@ select {
 footer {
   font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  background-color: #f3f3f3;
+}
+@media only screen and (min-width: 1920px) {
+  footer {
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  footer {
+    padding: 1.5rem 0 3rem;
+  }
 }
 
 .footer-main-link {
   height: 250px;
   padding: 15px 80px 23px;
   background-color: #f3f3f3;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: grid;
   gap: 5px;
   grid-template-columns: 1fr 7fr 3fr 3fr;
   grid-template-rows: 88px auto;
   grid-template-areas: "logo link1 price language" "logo link2 link2 privacy";
+}
+@media only screen and (max-width: 1024px) {
+  .footer-main-link {
+    padding: 0;
+    height: 255px;
+  }
 }
 @media (max-width: 1023px) {
   .footer-main-link {
@@ -920,6 +938,15 @@ footer {
     grid-template-rows: 60px 70px 60px 60px 140px 70px;
     grid-template-columns: 1fr;
     grid-template-areas: "logo" "link1" "price" "language" "link2" "privacy";
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .footer-main-link {
+    width: 65%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 10fr 3fr 3fr;
   }
 }
 .footer-main-link .logo {
@@ -968,6 +995,9 @@ footer {
 }
 .footer-main-link .dropdown-price {
   grid-area: price;
+  display: flex;
+  justify-content: flex-end;
+  height: 65px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .dropdown-price {
@@ -985,7 +1015,7 @@ footer {
   position: relative;
   border: 2px solid #c2c2c2;
   border-radius: 3px;
-  width: 95%;
+  width: 190px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .dropdown-price .dropdown {
@@ -1135,6 +1165,9 @@ footer {
 }
 .footer-main-link .dropdown-language {
   grid-area: language;
+  display: flex;
+  justify-content: flex-end;
+  height: 65px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .dropdown-language {
@@ -1152,7 +1185,7 @@ footer {
   position: relative;
   border: 2px solid #c2c2c2;
   border-radius: 3px;
-  width: 95%;
+  width: 190px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .dropdown-language .dropdown {
@@ -1340,6 +1373,9 @@ footer {
 .footer-main-link .footer-legal-link .copyright {
   font-size: 14px;
   margin-top: 10px;
+  /*  @include fhd {
+       padding: 0;
+   } */
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link .copyright {
@@ -1529,33 +1565,139 @@ footer {
 }
 
 .flexnav {
+  height: 90vh;
+  width: 100%;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-flow: column;
-  height: 30vh;
-  width: 30vw;
 }
 .flexnav .blackline {
-  display: flex;
-  flex: 1;
   background-color: black;
+  display: flex;
+  height: 5vh;
+  width: 100%;
 }
 .flexnav .nav {
   display: flex;
-  flex: 1;
-  background-color: rgb(235, 219, 219);
+  height: 5vh;
+  width: 100%;
 }
-.flexnav .nav ul {
+.flexnav .nav .logo {
   display: flex;
-  flex: 1;
-}
-.flexnav .nav ul li {
-  display: flex;
-  flex-basis: 100%;
   justify-content: flex-start;
-  gap: 1rem;
+  align-items: center;
+  flex: 15%;
 }
-.flexnav .nav ul li a {
+.flexnav .nav .navlist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 85%;
+}
+.flexnav .nav .navlist ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2rem;
+  width: 100%;
+  margin: 1rem;
+  gap: 1.5rem;
+  list-style: none;
+}
+.flexnav .nav .navlist ul li a {
+  font-size: large;
   color: black;
+  text-decoration: none;
+}
+.flexnav .nav a:hover {
+  color: white;
+  transition: 1s;
+}
+.flexnav .img {
+  display: flex;
+  background-image: url(/assets/img/FIFAMANIMGEA.jpg);
+  height: 87vh;
+  width: 100%;
+}
+.flexnav .textposition {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-style: Helvetica;
+  font-size: x-large;
+  height: 65vh;
+  width: 65%;
+  gap: 1.2rem;
+  color: white;
+  flex-flow: column;
+}
+.flexnav .textposition_1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: 1px solid black;
+}
+.flexnav .textposition .LOGO {
+  height: 4rem;
+  width: 30rem;
+}
+.flexnav .textposition .btn_daniele {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 3.5rem;
+  width: 21em;
+  border-radius: 0.5rem;
+  color: black;
+  cursor: pointer;
+}
+.flexnav .textposition .btn_daniele button {
+  height: 3.5rem;
+  width: 16rem;
+  font-style: Helvetica;
+  font-size: large;
+}
+
+.sub-menu-altreesperienze {
+  display: none;
+  list-style: none;
+  padding: 0.2em, 0.5em;
+  background-color: white;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s;
+}
+.sub-menu-altreesperienze li {
+  padding: 0.7em, 0.5em;
+  margin: 0.3em, 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.mainimgmobile {
+  display: flex;
+  flex-flow: column;
+  display: none;
+  gap: 1rem;
+  background-image: url(/EASports-Project/assets/img/FIFAMAINIMGEA-MOBILE.jpg);
+  height: 60vh;
+  width: 100%;
+}
+.mainimgmobile button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 1.5rem;
+  width: 16rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  display: none;
+  color: black;
+  cursor: pointer;
 }
 
 /* Start Giochi in evidenza */
