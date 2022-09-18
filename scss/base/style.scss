@@ -224,7 +224,6 @@
 
 .bg_play {
     height: 410px;
-    width: 100vw;
 }
 
 
@@ -234,7 +233,7 @@
     top: 100px;
     left: 320px;
     flex-direction: column;
-    
+    /* padding: 130px 0px 0px 410px; */
 
     /* @media only screen and (max-width:425px) {
     display: flex;
@@ -251,11 +250,10 @@
     width: 544px;
     height: 54px;
     font-size: 27px;
-    
 }
 
 .h6_play {
-    margin: 0px 0px 24px 0px;
+    margin-bottom: 24px;
     justify-content: center;
     align-items: center;
 
@@ -295,8 +293,8 @@
     height: 75px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin: 10px 0px 0px 0px;
+    justify-content: center;
+    margin: 0rem 0rem 0rem;
 }
 
 .iscriviti_subito1 {
@@ -412,7 +410,6 @@
     flex-wrap: wrap;
     width: 884px;
     height: 81px;
-    
 }
 
 .link_gio {

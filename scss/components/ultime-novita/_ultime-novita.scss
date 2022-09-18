@@ -1,6 +1,0 @@
-@use '../../abstracts' as *;
-
-.ultime-novita {
-  background-color: map-get($map: $colors, $key: bg);
-  text-align: center;
-}
