@@ -11,3 +11,29 @@
   }
 }
 // Dario - fine ----------------------------------------------------------------------------------
+$breakpoints:(
+  'desk': 1000px,
+  'tablet': 750px,
+  'smartphone': 480px,
+);
+
+@mixin break {
+  @media (min-width:map-get($breakpoints, 'desk')){
+    @content; 
+  }
+}
+@mixin break {
+  @media (min-width:map-get($breakpoints, 'tablet')){
+    @content; 
+  }
+}
+@mixin break {
+  @media (min-width:map-get($breakpoints, 'smartphone')){
+    @content; 
+  }
+}
+@mixin MediaQueries ($bp:0){
+@media (min-width:$bp){
+  @content;
+}
+}

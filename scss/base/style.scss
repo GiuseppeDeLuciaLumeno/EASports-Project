@@ -52,11 +52,24 @@
     .nav {
         display:flex;
         @include size (5vh, 100%);
+        gap:0.5rem;
        
+            .threepoints{
+                 @include flex ( flex, center, flex-start);
+                 margin-left:1rem;
+                 flex-flow:column;
+                 flex:5%;
+                 
 
+                 .span {
+                        @include size (0.4rem, 0.4rem);
+                        border-radius:0.4rem;
+                        background-color:black;
+                 }
+            }
             .logo {
                 @include flex (flex, flex-start, center);
-                flex:15%;
+                flex:10%;
                  }
             .navlist {
                 @include flex (flex, flex-start, center);
@@ -90,6 +103,7 @@
         
         background-image: url(/EASports-Project/assets/img/FIFAMANIMGEA.jpg);
         background-repeat: no-repeat;
+        object-fit: cover;
         
        
         @include size (80vh, 100%);
@@ -163,10 +177,10 @@
                 }
             }
     }
-    .hide {
-        display:none;
-    }
+    
     //codice header tablet responsive
+
+  
     .mainimgmobile {
                     display:flex;
                     flex-flow:column;
