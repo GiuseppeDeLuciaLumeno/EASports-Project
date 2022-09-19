@@ -1632,7 +1632,7 @@ footer {
 }
 .flexnav .img {
   display: flex;
-  background-image: url(/EASports-Project/assets/img/FIFAMANIMGEA.jpg);
+  background-image: url(../../assets/img/FIFAMANIMGEA.jpg);
   background-repeat: no-repeat;
   object-fit: cover;
   height: 80vh;
