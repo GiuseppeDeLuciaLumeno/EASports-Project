@@ -75,7 +75,7 @@
 
 
 
-// end mixin for header 
+// end mixin for header
 
 
 @mixin icons ($position: absolute) {
@@ -123,6 +123,18 @@
 
 @mixin xl {
     @media (max-width: map-get($breakpointsJo, "xl")) {
+        @content;
+    }
+}
+
+@mixin dsl {
+    @media only screen and (min-width: map-get($breakpointsJo, "dsl")){
+        @content;
+    }
+}
+
+@mixin fhd {
+    @media only screen and (max-width: map-get($breakpointsJo, "fhd")) {
         @content;
     }
 }
