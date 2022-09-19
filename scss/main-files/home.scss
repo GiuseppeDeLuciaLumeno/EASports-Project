@@ -59,13 +59,13 @@
         flex-flow:column;
         gap:0.2rem;
         flex:5%;
-
+        
 
         .span {
                @include size (0.4rem, 0.4rem);
                border-radius:0.4rem;
                background-color:black;}
-
+               
         }
     .nav {
         display:flex;
@@ -102,10 +102,9 @@
     }
 
     .img {
-        
+        display:flex;
+
         background-image: url(/assets/img/FIFAMANIMGEA.jpg);
-        background-size: 100%;
-        background-repeat: no-repeat;
         @include size (87vh, 100%);
 
         }

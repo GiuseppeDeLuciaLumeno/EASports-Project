@@ -54,10 +54,10 @@ footer {
         }
 
         @include md {
-            height: 90vh;
+            height: 100vh;
             gap: 20px;
             padding: 40px 22px 30px;
-            grid-template-rows: 60px 70px 60px 60px 140px 70px;
+            grid-template-rows: auto;
             grid-template-columns: 1fr;
             grid-template-areas:
                 "logo"
@@ -496,6 +496,10 @@ footer {
                 width: 89%;
             }
 
+            @include md {
+                height: 100%;
+            }
+
             a {
                 font-size: 14px;
                 text-decoration: none;
@@ -513,6 +517,11 @@ footer {
                 margin-top: 1rem;
             }
 
+            @include md {
+                margin-bottom: .9rem;
+                margin-top: 0;
+            }
+
            /*  @include fhd {
                 padding: 0;
             } */
@@ -521,6 +530,10 @@ footer {
 
     .footer-privacy {
         grid-area: privacy;
+
+        @include md {
+            margin-top: 1rem;
+        }
 
         .image-privacy {
             height: 100%;
