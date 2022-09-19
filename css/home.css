@@ -1630,8 +1630,9 @@ footer {
   transition: 1s;
 }
 .flexnav .img {
-  display: flex;
   background-image: url(/assets/img/FIFAMANIMGEA.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
   height: 87vh;
   width: 100%;
 }
