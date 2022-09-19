@@ -58,6 +58,7 @@
                  @include flex ( flex, center, flex-start);
                  margin-left:1rem;
                  flex-flow:column;
+                 gap:0.2rem;
                  flex:5%;
                  
 
@@ -79,6 +80,7 @@
                     @include size (2rem, 100%);
                     @include space (1rem, 1.5rem);
                     list-style:none;
+                   
 
                      li {
                         
@@ -157,6 +159,15 @@
     }
 
     //dropdown menu with scss and js
+   .navlist {
+    position:relative;
+    .sub-menu {
+        position:absolute;
+        background-color:red;
+    }
+   }
+
+
     .sub-menu-altreesperienze {
         list-style:none;
         padding:0.2em, 0.5em;
