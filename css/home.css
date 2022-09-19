@@ -1578,6 +1578,21 @@ footer {
   height: 5vh;
   width: 100%;
 }
+.flexnav .threepoints {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 1rem;
+  flex-flow: column;
+  gap: 0.2rem;
+  flex: 5%;
+}
+.flexnav .threepoints .span {
+  height: 0.4rem;
+  width: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: black;
+}
 .flexnav .nav {
   display: flex;
   height: 5vh;
