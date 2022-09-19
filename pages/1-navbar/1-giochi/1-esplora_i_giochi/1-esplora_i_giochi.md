@@ -1,1 +1,0 @@
-Qui ci vanno tutti le pagine 'linkate' nella sezione 'esplora i giochi' del dropdown 'giochi della 'navbar' della 'homepage'

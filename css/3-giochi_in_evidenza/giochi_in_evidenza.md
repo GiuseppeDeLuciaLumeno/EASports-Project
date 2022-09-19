@@ -1,1 +1,0 @@
-Qui ci vanno tutti le pagine 'linkate' nella sezione 'giochi in evidenza' della 'homepage'
