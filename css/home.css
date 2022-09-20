@@ -1058,10 +1058,10 @@ footer {
 }
 @media (max-width: 767px) {
   .footer-main-link {
-    height: 90vh;
+    height: 100vh;
     gap: 20px;
     padding: 40px 22px 30px;
-    grid-template-rows: 60px 70px 60px 60px 140px 70px;
+    grid-template-rows: auto;
     grid-template-columns: 1fr;
     grid-template-areas: "logo" "link1" "price" "language" "link2" "privacy";
   }
@@ -1489,6 +1489,11 @@ footer {
     width: 89%;
   }
 }
+@media (max-width: 767px) {
+  .footer-main-link .footer-legal-link ul {
+    height: 100%;
+  }
+}
 .footer-main-link .footer-legal-link ul a {
   font-size: 14px;
   text-decoration: none;
@@ -1508,8 +1513,19 @@ footer {
     margin-top: 1rem;
   }
 }
+@media (max-width: 767px) {
+  .footer-main-link .footer-legal-link .copyright {
+    margin-bottom: 0.9rem;
+    margin-top: 0;
+  }
+}
 .footer-main-link .footer-privacy {
   grid-area: privacy;
+}
+@media (max-width: 767px) {
+  .footer-main-link .footer-privacy {
+    margin-top: 1rem;
+  }
 }
 .footer-main-link .footer-privacy .image-privacy {
   height: 100%;
@@ -1630,6 +1646,7 @@ footer {
   transition: 1s;
 }
 .flexnav .img {
+  display: flex;
   background-image: url(/assets/img/FIFAMANIMGEA.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -2549,6 +2566,12 @@ footer {
   }
 }
 @media only screen and (max-width: 767px) {
+  .the-sims4-card:hover .the-sims4-logo {
+    transform: none;
+  }
+  .the-sims4-card:hover p {
+    display: none;
+  }
   .the-sims4-card .resizer-responsive {
     width: 767px;
   }
