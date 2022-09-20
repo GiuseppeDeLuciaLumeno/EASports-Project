@@ -2566,12 +2566,6 @@ footer {
   }
 }
 @media only screen and (max-width: 767px) {
-  .the-sims4-card:hover .the-sims4-logo {
-    transform: none;
-  }
-  .the-sims4-card:hover p {
-    display: none;
-  }
   .the-sims4-card .resizer-responsive {
     width: 767px;
   }
