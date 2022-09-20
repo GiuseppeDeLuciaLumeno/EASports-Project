@@ -369,7 +369,6 @@
 
         .cards-wrapper {
         background-color: rgb(240, 238, 238);
-        box-shadow: 14px -5px 22px -20px inset #161616;
 
         .fifa23-card {
             display: flex;
@@ -665,6 +664,8 @@
             &:hover p {
                 display: none;
             }
+
+
         }
 
     }
@@ -707,6 +708,15 @@
     }
 
 
+}
+
+//To fix The sims 4 Cards Responsivity: <768px
+@media only screen and (max-width: 767px) {
+    .the-sims4-card{
+        .resizer-responsive{
+            width: 767px;
+        }
+    }
 }
 
 

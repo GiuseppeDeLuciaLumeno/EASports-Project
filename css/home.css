@@ -2309,7 +2309,6 @@ footer {
   }
   .section-wrapper .cards-wrapper {
     background-color: rgb(240, 238, 238);
-    box-shadow: 14px -5px 22px -20px inset #161616;
   }
   .section-wrapper .cards-wrapper .fifa23-card {
     display: flex;
@@ -2566,6 +2565,11 @@ footer {
   }
   .btn:hover {
     padding: 18px 138px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .the-sims4-card .resizer-responsive {
+    width: 767px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
