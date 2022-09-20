@@ -2068,7 +2068,6 @@ footer {
 .section-wrapper .batterfield-card:hover::after,
 .section-wrapper .apex-card:hover::after,
 .section-wrapper .the-sims4-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .fifa23-card:hover .fifa23-logo {
@@ -2171,7 +2170,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .fifa23-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .fifa23-card:hover .fifa23-logo {
@@ -2185,7 +2183,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .apex-mobile-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
@@ -2199,7 +2196,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .f1-22-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .f1-22-card:hover .f1-22-logo {
@@ -2213,7 +2209,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .batterfield-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .batterfield-card:hover .batterfield-logo {
@@ -2226,7 +2221,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .apex-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .apex-card:hover .apex-logo {
@@ -2240,7 +2234,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .the-sims4-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
@@ -2314,7 +2307,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .fifa23-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .fifa23-card:hover .fifa23-logo {
@@ -2328,7 +2320,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .apex-mobile-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
@@ -2342,7 +2333,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .f1-22-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .f1-22-card:hover .f1-22-logo {
@@ -2356,7 +2346,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .batterfield-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .batterfield-card:hover .batterfield-logo {
@@ -2369,7 +2358,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .apex-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .apex-card:hover .apex-logo {
@@ -2383,7 +2371,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .the-sims4-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
@@ -2457,7 +2444,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .fifa23-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .fifa23-card:hover .fifa23-logo {
@@ -2471,7 +2457,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .apex-mobile-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .apex-mobile-card:hover .apex-mobile-logo {
@@ -2485,7 +2470,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .f1-22-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .f1-22-card:hover .f1-22-logo {
@@ -2499,7 +2483,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .batterfield-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .batterfield-card:hover .batterfield-logo {
@@ -2512,7 +2495,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .apex-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .apex-card:hover .apex-logo {
@@ -2526,7 +2508,6 @@ footer {
     display: flex;
   }
   .section-wrapper .cards-wrapper .the-sims4-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .section-wrapper .cards-wrapper .the-sims4-card:hover .the-sims4-logo {
@@ -2598,7 +2579,6 @@ footer {
 .cards-wrapper .batterfield-card:hover::after,
 .cards-wrapper .apex-card:hover::after,
 .cards-wrapper .the-sims4-card:hover::after {
-    background: none;
     opacity: 0;
   }
   .cards-wrapper .fifa23-card:hover .fifa23-logo {
