@@ -13,11 +13,6 @@
 
 html, body {
     width: 100vw;
-    background: url(../../../assets/img/josephine_page/background-easport1455.png); 
-}
-
-.container-fluid {
-    --bs-gutter-x:0;
 }
 
 header {
@@ -26,6 +21,12 @@ header {
         position: relative;
         width: 100vw;
         height: 800px;
+
+        background: linear-gradient(
+            to top,
+            black, 
+            transparent
+        );
 
         //Non permette al Video di Uscire fuori al container
         overflow: hidden;
@@ -42,6 +43,11 @@ header {
 
             z-index: -100;
             filter: url('#squiggly-2') brightness(0.4);
+        }
+
+        #pegi-logo {
+            max-width: 64px;
+            max-height: 64px;
         }
 
         .wrapper-title {
@@ -68,9 +74,5 @@ header {
 .cards {
     width: 100%;
     height: 1000px;
-    background: linear-gradient(
-        to top,
-        black, 
-        transparent
-      );
+    background-color: black;
 }
