@@ -1,0 +1,107 @@
+//Header //
+@use "sass:color";
+@import "../../atomic-design/2-base/resets/reset-dario";
+@import "../../atomic-design/1-abstracts/variables/colors/colors-Ultimi-giochi";
+
+form {
+
+    .black-block {
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+        padding: 5px 0;
+        background-color: black;
+    }
+
+    .bi {
+        font-size: 23px;
+        height: 30px;
+        font-weight: bolder;
+        cursor: pointer;
+        color: $header-icon;
+        transition: color .05s ease;
+
+        &:hover {
+            color: $header-icon-hover;
+        }
+    }
+
+    svg {
+        height: 17px;
+        fill: $header-icon;
+        cursor: pointer;
+        transition: fill .05s ease;
+
+        &:hover {
+            fill: $header-icon-hover;
+        }
+    }
+
+    .ea-logo {
+        filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+        width: 41px;
+        height: 21px;
+        margin-right: 25px;
+        cursor: pointer;
+        transition: filter .05s ease;
+
+        &:hover {
+            filter: invert(25%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+        }
+    }
+}
+
+
+
+nav {
+    display: flex;
+    gap: 30px;
+
+    .bi-three-dots-vertical {
+        color: black;
+        font-size: 25px;
+        transition: all .3s ease-in-out;
+
+
+        &:hover {
+            color: red;
+            transform: scale(1.39);
+        }
+    }
+
+    .games {
+        cursor: pointer;
+        
+        .left-line {
+
+            transition: transform .2s ease;
+            position: relative;
+
+            &::before {
+                content: "";
+                cursor: pointer;
+                border-radius: 0.5em;
+                border-top: 0.1em solid black;
+                height: 0.1em;
+                width: 0.9em;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: rotate(-45deg);
+            }
+        }
+
+        /* .right-line{
+                background: black;
+                width: 13px;
+                height: 1px;
+                transform: rotate(-45deg);
+                position: relative;
+                left: 9px;
+                bottom: 1px;
+            } */
+    }
+
+}

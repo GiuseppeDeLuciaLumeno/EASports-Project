@@ -1,3 +1,178 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
 
-/*# sourceMappingURL=games.css.map */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul.list,
+ol.list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+form .black-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 30px;
+  padding: 5px 0;
+  background-color: black;
+}
+form .bi {
+  font-size: 23px;
+  height: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+  color: rgb(163, 163, 163);
+  -webkit-transition: color 0.05s ease;
+  transition: color 0.05s ease;
+}
+form .bi:hover {
+  color: white;
+}
+form svg {
+  height: 17px;
+  fill: rgb(163, 163, 163);
+  cursor: pointer;
+  -webkit-transition: fill 0.05s ease;
+  transition: fill 0.05s ease;
+}
+form svg:hover {
+  fill: white;
+}
+form .ea-logo {
+  -webkit-filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+          filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+  width: 41px;
+  height: 21px;
+  margin-right: 25px;
+  cursor: pointer;
+  -webkit-transition: -webkit-filter 0.05s ease;
+  transition: -webkit-filter 0.05s ease;
+  transition: filter 0.05s ease;
+  transition: filter 0.05s ease, -webkit-filter 0.05s ease;
+}
+form .ea-logo:hover {
+  -webkit-filter: invert(25%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+          filter: invert(25%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+nav .bi-three-dots-vertical {
+  color: black;
+  font-size: 25px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+nav .bi-three-dots-vertical:hover {
+  color: red;
+  -webkit-transform: scale(1.39);
+          transform: scale(1.39);
+}
+nav .games {
+  cursor: pointer;
+  /* .right-line{
+          background: black;
+          width: 13px;
+          height: 1px;
+          transform: rotate(-45deg);
+          position: relative;
+          left: 9px;
+          bottom: 1px;
+      } */
+}
+nav .games .left-line {
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  position: relative;
+}
+nav .games .left-line::before {
+  content: "";
+  cursor: pointer;
+  border-radius: 0.5em;
+  border-top: 0.1em solid black;
+  height: 0.1em;
+  width: 0.9em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
