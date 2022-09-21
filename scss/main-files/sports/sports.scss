@@ -13,6 +13,7 @@
 
 html, body {
     width: 100vw;
+    background: url(../../../assets/img/josephine_page/background-easport1455.png); 
 }
 
 .container-fluid {
@@ -20,37 +21,45 @@ html, body {
 }
 
 header {
-    width: 100vw;
-    
-    video {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        position: fixed;
-        z-index: -100;
-        filter: url('#squiggly-2') brightness(0.4);
-    }
+    .video-wrapper {
+        // Riferimento "relative" per lo sfondo "Absolute" 
+        position: relative;
+        width: 100vw;
+        height: 800px;
 
-    #logo {
-        display: flex;
-        justify-content: center;
-    }
+        //Non permette al Video di Uscire fuori al container
+        overflow: hidden;
 
-    .wrapper-title {
-        color: #fff;
-        
-        h1 {
-            font-size: 44px;
-            font-family: "Juana W05 Bold";
+        video {
+            //Simuliamo la proprietà background-size: cover;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            z-index: -100;
+            filter: url('#squiggly-2') brightness(0.4);
         }
 
-        h4 {
-            font-size: 24px;
-            font-family: "FS Industrie W05 Regular";
-
-            a {
-                color: #FF4747;
-                text-decoration: none;
+        .wrapper-title {
+            color: #fff;
+            
+            h1 {
+                font-size: 44px;
+                font-family: "Juana W05 Bold";
+            }
+    
+            h4 {
+                font-size: 24px;
+                font-family: "FS Industrie W05 Regular";
+    
+                a {
+                    color: #FF4747;
+                    text-decoration: none;
+                }
             }
         }
     }

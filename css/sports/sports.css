@@ -11403,39 +11403,41 @@ textarea.form-control-lg {
 
 html, body {
   width: 100vw;
+  background: url(../../../assets/img/josephine_page/background-easport1455.png);
 }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
   --bs-gutter-x:0;
 }
 
-header {
+header .video-wrapper {
+  position: relative;
   width: 100vw;
+  height: 800px;
+  overflow: hidden;
 }
-header video {
-  width: 100%;
-  height: auto;
+header .video-wrapper video {
   object-fit: cover;
-  position: fixed;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -100;
   filter: url("#squiggly-2") brightness(0.4);
 }
-header #logo {
-  display: flex;
-  justify-content: center;
-}
-header .wrapper-title {
+header .video-wrapper .wrapper-title {
   color: #fff;
 }
-header .wrapper-title h1, header .wrapper-title .h1 {
+header .video-wrapper .wrapper-title h1, header .video-wrapper .wrapper-title .h1 {
   font-size: 44px;
   font-family: "Juana W05 Bold";
 }
-header .wrapper-title h4, header .wrapper-title .h4 {
+header .video-wrapper .wrapper-title h4, header .video-wrapper .wrapper-title .h4 {
   font-size: 24px;
   font-family: "FS Industrie W05 Regular";
 }
-header .wrapper-title h4 a, header .wrapper-title .h4 a {
+header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title .h4 a {
   color: #FF4747;
   text-decoration: none;
 }
