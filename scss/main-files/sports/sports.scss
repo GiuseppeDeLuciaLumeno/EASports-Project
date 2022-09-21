@@ -3,7 +3,32 @@
 @import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine';
 @import '../../atomic-design/4-layouts/footers/footer-1-josephine';
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+ //FONT TRY
 
+ @import url(/t/1.css?apiType=css&projectid=d2185c81-76fa-4b2a-9876-0e4480705aac);
+ @font-face{
+ font-family:"Juana W05 Bold";
+ src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=07bbdfe9-dc82-47d5-8fe5-4750d59a5b4d&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=07bbdfe9-dc82-47d5-8fe5-4750d59a5b4d&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+ }
+ @font-face{
+ font-family:"Juana W05 Bold It";
+ src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=2a4c2f3c-c8b7-4960-95a7-0b50e020ab74&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=2a4c2f3c-c8b7-4960-95a7-0b50e020ab74&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+ }
+ @font-face{
+ font-family:"FS Industrie W05 Regular";
+ src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=614811f6-27e8-4c96-9df7-d72514687f33&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=614811f6-27e8-4c96-9df7-d72514687f33&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+ }
+ @font-face{
+ font-family:"FS Industrie W05 Italic";
+ src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=b61c664f-1a3a-4faa-a1d6-42a0b46c9c42&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,aa-ab,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=b61c664f-1a3a-4faa-a1d6-42a0b46c9c42&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,aa-ab,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+ }
+ @font-face{
+ font-family:"FS Industrie W05 Bold";
+ src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=d227881e-6f79-4812-a16a-53929c4bb75c&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=d227881e-6f79-4812-a16a-53929c4bb75c&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+ }
+
+
+ //
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +52,7 @@ header {
         object-fit: cover;
         position: fixed;
         z-index: -100;
-        filter: url('#squiggly-2') brightness(0.5);
+        filter: url('#squiggly-2') brightness(0.4);
     }
 
     #logo {
@@ -37,11 +62,30 @@ header {
 
     .wrapper-title {
         color: #fff;
+        
+        h1 {
+            font-size: 44px;
+            font-family: "Juana W05 Bold";
+        }
+
+        h4 {
+            font-size: 24px;
+            font-family: "FS Industrie W05 Regular";
+
+            a {
+                color: #FF4747;
+                text-decoration: none;
+            }
+        }
     }
 }
 
 .cards {
     width: 100%;
     height: 500px;
-    background-color: lightcoral;
+    background: linear-gradient(
+        to top,
+        black, 
+        transparent
+      );
 }
