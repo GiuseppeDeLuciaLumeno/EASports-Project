@@ -12887,6 +12887,10 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
 }
 #card-section img {
   width: 390px;
+  opacity: 0.7;
+}
+#card-section img:hover {
+  opacity: 1;
 }
 #card-section .btn-lg, #card-section .btn-group-lg > .btn {
   --bs-btn-border-radius: 0.2rem;

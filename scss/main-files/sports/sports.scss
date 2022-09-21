@@ -80,6 +80,11 @@ header {
 
     img {
         width: 390px;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     .btn-lg {
