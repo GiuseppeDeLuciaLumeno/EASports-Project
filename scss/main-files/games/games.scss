@@ -73,7 +73,7 @@ nav {
 
     .games {
         cursor: pointer;
-        
+
         .left-line {
 
             transition: transform .2s ease;
@@ -81,13 +81,24 @@ nav {
 
             &::before {
                 content: "";
-                cursor: pointer;
                 border-radius: 0.5em;
                 border-top: 0.1em solid black;
                 height: 0.1em;
-                width: 0.9em;
+                width: 0.5em;
                 position: absolute;
                 left: 0;
+                top: 50%;
+                transform: rotate(45deg);
+            }
+
+            &::after{
+                content: "";
+                border-radius: 0.5em;
+                border-top: 0.1em solid black;
+                height: 0.1em;
+                width: 0.5em;
+                position: absolute;
+                left: 5px;
                 top: 50%;
                 transform: rotate(-45deg);
             }

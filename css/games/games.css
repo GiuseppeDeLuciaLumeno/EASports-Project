@@ -165,13 +165,24 @@ nav .games .left-line {
 }
 nav .games .left-line::before {
   content: "";
-  cursor: pointer;
   border-radius: 0.5em;
   border-top: 0.1em solid black;
   height: 0.1em;
-  width: 0.9em;
+  width: 0.5em;
   position: absolute;
   left: 0;
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+nav .games .left-line::after {
+  content: "";
+  border-radius: 0.5em;
+  border-top: 0.1em solid black;
+  height: 0.1em;
+  width: 0.5em;
+  position: absolute;
+  left: 5px;
   top: 50%;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
