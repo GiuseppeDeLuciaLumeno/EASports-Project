@@ -812,7 +812,7 @@ select {
   padding-inline: 7.5vw;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
 }
 @media (min-width: 48rem) {
   .section-container {
@@ -1550,7 +1550,6 @@ footer {
 #ultime-novita #slider-container {
   align-self: flex-start;
   margin-bottom: 40px;
-  margin-left: -16px;
 }
 #ultime-novita .cards-container-1,
 #ultime-novita .cards-container-2,
@@ -2820,5 +2819,3 @@ footer {
     padding-bottom: 10px;
   }
 }
-
-/*# sourceMappingURL=home.css.map */
