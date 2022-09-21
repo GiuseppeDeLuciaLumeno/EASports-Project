@@ -11442,6 +11442,6 @@ header .wrapper-title h4 a, header .wrapper-title .h4 a {
 
 .cards {
   width: 100%;
-  height: 500px;
+  height: 1000px;
   background: linear-gradient(to top, black, transparent);
 }
