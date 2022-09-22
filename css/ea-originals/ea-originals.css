@@ -1,0 +1,29 @@
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+article .ea-description {
+  width: 50%;
+  font-size: 24px;
+}
+article .ea-social {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+article .ea-social .section-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+  height: auto;
+  margin: 30px;
+}
+article .ea-social .section-social svg {
+  width: 40px;
+  height: 40px;
+}
