@@ -55,13 +55,16 @@ form {
 
 
 
-nav {
+.lower-header {
     display: flex;
+    align-items: center;
     gap: 30px;
 
     .bi-three-dots-vertical {
         color: black;
         font-size: 25px;
+        position: relative;
+        top: 3px;
         transition: all .3s ease-in-out;
 
 
@@ -71,48 +74,74 @@ nav {
         }
     }
 
+
     .games {
         cursor: pointer;
+        transition: all 200ms ease;
+        gap: 3px;
+        display: flex;
 
-        .left-line {
+        &:hover {
+            color: red;
 
-            transition: transform .2s ease;
-            position: relative;
+        }
 
-            &::before {
-                content: "";
-                border-radius: 0.5em;
-                border-top: 0.1em solid black;
-                height: 0.1em;
-                width: 0.5em;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: rotate(45deg);
-            }
+        &:hover .left-line::before {
+            transform: rotate(-45deg);
+            border-color: red;
+        }
 
-            &::after{
-                content: "";
-                border-radius: 0.5em;
-                border-top: 0.1em solid black;
-                height: 0.1em;
-                width: 0.5em;
-                position: absolute;
-                left: 5px;
-                top: 50%;
+        &:hover .left-line::after {
+            transform: rotate(45deg);
+            border-color: red;
+        }
+    }
+
+}
+
+.dropdown-container{
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    .left-line {
+        position: relative;
+
+        &::before {
+            content: "";
+            cursor: pointer;
+            border-radius: 0.5em;
+            border-top: 0.1em solid black;
+            height: 0.1em;
+            width: 0.5em;
+            position: absolute;
+            left: 0;
+            top: 11px;
+            transform: rotate(45deg);
+            transition: transform 200ms ease;
+
+            &:hover::before{
                 transform: rotate(-45deg);
+
             }
         }
 
-        /* .right-line{
-                background: black;
-                width: 13px;
-                height: 1px;
-                transform: rotate(-45deg);
-                position: relative;
-                left: 9px;
-                bottom: 1px;
-            } */
-    }
+        &::after {
+            content: "";
+            cursor: pointer;
+            border-radius: 0.5em;
+            border-top: 0.1em solid black;
+            height: 0.1em;
+            width: 0.5em;
+            position: absolute;
+            left: 5px;
+            top: 11px;
+            transform: rotate(-45deg);
+            transition: transform 200ms ease;
 
+            &:hover::after{
+                transform: rotate(45deg);
+            }
+        }
+    }
 }

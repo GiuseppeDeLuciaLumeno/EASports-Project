@@ -127,63 +127,98 @@ form .ea-logo:hover {
           filter: invert(25%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
 }
 
-nav {
+.lower-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
 }
-nav .bi-three-dots-vertical {
+.lower-header .bi-three-dots-vertical {
   color: black;
   font-size: 25px;
+  position: relative;
+  top: 3px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-nav .bi-three-dots-vertical:hover {
+.lower-header .bi-three-dots-vertical:hover {
   color: red;
   -webkit-transform: scale(1.39);
           transform: scale(1.39);
 }
-nav .games {
+.lower-header .games {
   cursor: pointer;
-  /* .right-line{
-          background: black;
-          width: 13px;
-          height: 1px;
-          transform: rotate(-45deg);
-          position: relative;
-          left: 9px;
-          bottom: 1px;
-      } */
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  gap: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-nav .games .left-line {
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+.lower-header .games:hover {
+  color: red;
+}
+.lower-header .games:hover .left-line::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-color: red;
+}
+.lower-header .games:hover .left-line::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-color: red;
+}
+
+.dropdown-container {
+  width: 20px;
+  height: 20px;
   position: relative;
 }
-nav .games .left-line::before {
+.dropdown-container .left-line {
+  position: relative;
+}
+.dropdown-container .left-line::before {
   content: "";
+  cursor: pointer;
   border-radius: 0.5em;
   border-top: 0.1em solid black;
   height: 0.1em;
   width: 0.5em;
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 11px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
-nav .games .left-line::after {
+.dropdown-container .left-line::before:hover::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.dropdown-container .left-line::after {
   content: "";
+  cursor: pointer;
   border-radius: 0.5em;
   border-top: 0.1em solid black;
   height: 0.1em;
   width: 0.5em;
   position: absolute;
   left: 5px;
-  top: 50%;
+  top: 11px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+.dropdown-container .left-line::after:hover::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
