@@ -65,7 +65,11 @@ header {
                 font-family: "FS Industrie W05 Regular";
                 font-style: normal;
                 font-weight: 400;
-    
+                
+                @include media-breakpoint-down(lg) {
+                    font-size: rfs-fluid-value(20px);
+                  }
+
                 a {
                     color: #FF4747;
                     text-decoration: none;
@@ -81,6 +85,7 @@ header {
     img {
         width: 390px;
         opacity: 0.7;
+        margin: 0 auto;
 
         &:hover {
             opacity: 1;
