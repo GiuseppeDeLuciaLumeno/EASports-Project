@@ -54,8 +54,12 @@
 }
 
 .bi-x-lg{
- color: $ea-logo-color;
+ color: $header-icon;
  margin-left: auto;
+ cursor: pointer;
+ &:hover{
+    color: $header-icon-hover;
+ }
 }
 
 form {
@@ -112,7 +116,7 @@ form {
     .create-account p{
         font-family: map-get($ultimi-giochi-font, text);
         color: lightgray;
-        font-size: 15px;
+        font-size: 14px;
     }
 
 }
