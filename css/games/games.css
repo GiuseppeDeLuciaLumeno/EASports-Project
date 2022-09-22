@@ -74,6 +74,14 @@ select {
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: ElectronicArtsDisplay;
+  src: url(../../assets/fonts/Electronic_Arts_Display.otf);
+}
+@font-face {
+  font-family: ElectronicArtsText;
+  src: url(../../assets/fonts/Electronic_Arts_Text.otf);
+}
 form .black-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,8 +131,8 @@ form .ea-logo {
   transition: filter 0.05s ease, -webkit-filter 0.05s ease;
 }
 form .ea-logo:hover {
-  -webkit-filter: invert(25%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
-          filter: invert(25%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+  -webkit-filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+          filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
 }
 
 .lower-header {
@@ -135,6 +143,7 @@ form .ea-logo:hover {
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
+  padding: 0.85rem 1rem 0.5rem;
 }
 .lower-header .three-dots-container {
   height: auto;
@@ -149,7 +158,7 @@ form .ea-logo:hover {
   color: black;
   font-size: 25px;
   position: relative;
-  top: 3px;
+  top: 2px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -160,17 +169,52 @@ form .ea-logo:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 30px;
+  margin-inline: 2rem;
+}
+.lower-header .ea-dropdown:nth-child(1) p {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: rgb(63, 62, 62);
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+}
+.lower-header .ea-dropdown:nth-child(2) p {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: rgb(63, 62, 62);
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+}
+.lower-header .ea-dropdown:nth-child(3) p {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: rgb(63, 62, 62);
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+}
+.lower-header .ea-dropdown:nth-child(4) p {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: rgb(63, 62, 62);
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
+}
+.lower-header .ea-dropdown:nth-child(5) p {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: rgb(63, 62, 62);
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease;
 }
 .lower-header .ea-dropdown {
   cursor: pointer;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
   gap: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.lower-header .ea-dropdown:hover {
+.lower-header .ea-dropdown:hover p {
   color: red;
 }
 .lower-header .ea-dropdown:hover .v-icon::before {
@@ -184,15 +228,15 @@ form .ea-logo:hover {
   border-color: red;
 }
 
-.dropdown-container {
+.dropdown-icon-container {
   width: 20px;
   height: 20px;
   position: relative;
 }
-.dropdown-container .v-icon {
+.dropdown-icon-container .v-icon {
   position: relative;
 }
-.dropdown-container .v-icon::before {
+.dropdown-icon-container .v-icon::before {
   content: "";
   cursor: pointer;
   border-radius: 0.5em;
@@ -209,11 +253,11 @@ form .ea-logo:hover {
   transition: transform 200ms ease;
   transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
-.dropdown-container .v-icon::before:hover::before {
+.dropdown-icon-container .v-icon::before:hover::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.dropdown-container .v-icon::after {
+.dropdown-icon-container .v-icon::after {
   content: "";
   cursor: pointer;
   border-radius: 0.5em;
@@ -230,7 +274,7 @@ form .ea-logo:hover {
   transition: transform 200ms ease;
   transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
-.dropdown-container .v-icon::after:hover::after {
+.dropdown-icon-container .v-icon::after:hover::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }

@@ -1,0 +1,39 @@
+//mixin Header
+
+@mixin v-icons {
+       position: relative;
+       &::before {
+        content: "";
+        cursor: pointer;
+        border-radius: 0.5em;
+        border-top: 0.1em solid black;
+        height: 0.1em;
+        width: 0.5em;
+        position: absolute;
+        left: 0;
+        top: 11px;
+        transform: rotate(45deg);
+        transition: transform 200ms ease;
+        &:hover::before{
+            transform: rotate(-45deg);
+
+        }
+    }
+
+    &::after {
+        content: "";
+        cursor: pointer;
+        border-radius: 0.5em;
+        border-top: 0.1em solid black;
+        height: 0.1em;
+        width: 0.5em;
+        position: absolute;
+        left: 5px;
+        top: 11px;
+        transform: rotate(-45deg);
+        transition: transform 200ms ease;
+        &:hover::after{
+            transform: rotate(45deg);
+        }
+    }
+}

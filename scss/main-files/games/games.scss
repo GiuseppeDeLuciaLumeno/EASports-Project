@@ -2,11 +2,15 @@
 @use "sass:color";
 @import "../../atomic-design/2-base/resets/reset-dario";
 @import "../../atomic-design/1-abstracts/variables/colors/colors-Ultimi-giochi";
+@import "../../atomic-design/2-base/font-faces/font-faces-dario";
+@import "../../atomic-design/2-base/typography/games/games";
+@import "../../atomic-design/1-abstracts/mixins/header/header-ultimi-giochi";
+
+
 
 form {
 
     .black-block {
-
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -40,7 +44,7 @@ form {
     }
 
     .ea-logo {
-        filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+        filter: $ea-logo-color;
         width: 41px;
         height: 21px;
         margin-right: 25px;
@@ -48,17 +52,17 @@ form {
         transition: filter .05s ease;
 
         &:hover {
-            filter: invert(25%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+            filter: $ea-logo-color;
         }
     }
 }
-
 
 
 .lower-header {
     display: flex;
     align-items: center;
     gap: 30px;
+    padding: 0.85rem 1rem 0.5rem;
 
     .three-dots-container{
         height: auto;
@@ -73,7 +77,7 @@ form {
         color: black;
         font-size: 25px;
         position: relative;
-        top: 3px;
+        top: 2px;
         transition: all .2s ease-in-out;
 
         &:hover {
@@ -84,15 +88,26 @@ form {
 
     .container-nav-menu{
         display: flex;
+        gap: 30px;
+        margin-inline: 2rem;
     }
+
+    //to give fontfamily by for cycle
+   @for $i from 1 to 6 {
+    .ea-dropdown:nth-child(#{$i}) p{
+        font-family: map-get($ultimi-giochi-font, text);
+        font-size: 18px;
+        color: map-get($color-typography, text);
+        transition: color 200ms ease;
+    }
+   }
 
     .ea-dropdown {
         cursor: pointer;
-        transition: all 200ms ease;
         gap: 3px;
         display: flex;
 
-        &:hover {
+        &:hover p {
             color: red;
 
         }
@@ -110,49 +125,12 @@ form {
 
 }
 
-.dropdown-container{
+.dropdown-icon-container{
     width: 20px;
     height: 20px;
     position: relative;
 
     .v-icon {
-        position: relative;
-
-        &::before {
-            content: "";
-            cursor: pointer;
-            border-radius: 0.5em;
-            border-top: 0.1em solid black;
-            height: 0.1em;
-            width: 0.5em;
-            position: absolute;
-            left: 0;
-            top: 11px;
-            transform: rotate(45deg);
-            transition: transform 200ms ease;
-
-            &:hover::before{
-                transform: rotate(-45deg);
-
-            }
-        }
-
-        &::after {
-            content: "";
-            cursor: pointer;
-            border-radius: 0.5em;
-            border-top: 0.1em solid black;
-            height: 0.1em;
-            width: 0.5em;
-            position: absolute;
-            left: 5px;
-            top: 11px;
-            transform: rotate(-45deg);
-            transition: transform 200ms ease;
-
-            &:hover::after{
-                transform: rotate(45deg);
-            }
-        }
+       @include v-icons;
     }
 }
