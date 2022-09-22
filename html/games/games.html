@@ -38,7 +38,7 @@
 
         <form action="#" method="get">
             <div class="black-block">
-                <i class="bi bi-person icon-login"></i>
+                <i class="bi bi-person icon-login" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17">
                     <path
                         d="M5.193,0C0.538,0,0,2.673,0,4.684a0.978,0.978,0,0,0,1.955,0c0-1.648.225-2.729,3.238-2.729,2.852,0,2.852,1.45,2.852,2.729a1.951,1.951,0,0,1-1.29,1.675l-0.216.083C4.8,7.108,3.809,7.531,3.809,8.472v3.5a0.978,0.978,0,1,0,1.955,0V8.887c0.4-.209,1.152-0.5,1.474-0.62l0.224-.085A3.831,3.831,0,0,0,10,4.684C10,3.526,10,0,5.193,0Z">
@@ -53,59 +53,85 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-full">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </form>
 
-            <nav class="lower-header">
+        <nav class="lower-header">
 
-                 <div class="three-dots-container">
-                    <i class="bi bi-three-dots-vertical"></i>
-                 </div>
+            <div class="three-dots-container">
+                <i class="bi bi-three-dots-vertical"></i>
+            </div>
 
-                 <img src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg"
-                     alt="Electronic Arts">
+            <img src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg"
+                alt="Electronic Arts">
 
 
-                <div class="container-nav-menu">
+            <div class="container-nav-menu">
 
-                    <div class="ea-dropdown">
-                        <p>Giochi</p>
-                        <div class="dropdown-icon-container">
-                            <div class="v-icon"></div>
-                        </div>
+                <div class="ea-dropdown">
+                    <p>Giochi</p>
+                    <div class="dropdown-icon-container">
+                        <div class="v-icon"></div>
                     </div>
-
-                    <div class="ea-dropdown">
-                        <p>Altre esperienze</p>
-                        <div class="dropdown-icon-container">
-                            <div class="v-icon"></div>
-                        </div>
-                    </div>
-
-                    <div class="ea-dropdown">
-                        <p>Informazioni</p>
-                        <div class="dropdown-icon-container">
-                            <div class="v-icon"></div>
-                        </div>
-                    </div>
-
-                    <div class="ea-dropdown">
-                        <p>Impegni</p>
-                        <div class="dropdown-icon-container">
-                            <div class="v-icon"></div>
-                        </div>
-                    </div>
-
-                    <div class="ea-dropdown">
-                        <p>Risorse</p>
-                        <div class="dropdown-icon-container">
-                            <div class="v-icon"></div>
-                        </div>
-                    </div>
-
                 </div>
-            </nav>
+
+                <div class="ea-dropdown">
+                    <p>Altre esperienze</p>
+                    <div class="dropdown-icon-container">
+                        <div class="v-icon"></div>
+                    </div>
+                </div>
+
+                <div class="ea-dropdown">
+                    <p>Informazioni</p>
+                    <div class="dropdown-icon-container">
+                        <div class="v-icon"></div>
+                    </div>
+                </div>
+
+                <div class="ea-dropdown">
+                    <p>Impegni</p>
+                    <div class="dropdown-icon-container">
+                        <div class="v-icon"></div>
+                    </div>
+                </div>
+
+                <div class="ea-dropdown">
+                    <p>Risorse</p>
+                    <div class="dropdown-icon-container">
+                        <div class="v-icon"></div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
     </header>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
