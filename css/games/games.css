@@ -12328,6 +12328,12 @@ form .ea-logo:hover {
   -webkit-filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
           filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
 }
+form .login-logo p,
+form .create-account p {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: lightgray;
+  font-size: 15px;
+}
 
 .lower-header {
   display: -webkit-box;

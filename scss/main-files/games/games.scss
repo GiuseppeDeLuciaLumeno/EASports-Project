@@ -108,6 +108,13 @@ form {
         }
     }
 
+    .login-logo p,
+    .create-account p{
+        font-family: map-get($ultimi-giochi-font, text);
+        color: lightgray;
+        font-size: 15px;
+    }
+
 }
 
 
