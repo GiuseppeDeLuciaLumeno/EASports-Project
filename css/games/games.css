@@ -131,8 +131,8 @@ form .ea-logo {
   transition: filter 0.05s ease, -webkit-filter 0.05s ease;
 }
 form .ea-logo:hover {
-  -webkit-filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
-          filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+  -webkit-filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
+          filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
 }
 
 .lower-header {

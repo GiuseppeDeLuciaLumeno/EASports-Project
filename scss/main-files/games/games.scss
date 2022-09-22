@@ -1,4 +1,4 @@
-//Header //
+
 @use "sass:color";
 @import "../../atomic-design/2-base/resets/reset-dario";
 @import "../../atomic-design/1-abstracts/variables/colors/colors-Ultimi-giochi";
@@ -7,7 +7,7 @@
 @import "../../atomic-design/1-abstracts/mixins/header/header-ultimi-giochi";
 
 
-
+//Header //
 form {
 
     .black-block {
@@ -52,7 +52,7 @@ form {
         transition: filter .05s ease;
 
         &:hover {
-            filter: $ea-logo-color;
+            filter: $ea-logo-hover-color;
         }
     }
 }
