@@ -243,6 +243,7 @@
 
 .bg_play {
     height: 410px;
+    width: 100vw;
 }
 
 
@@ -327,6 +328,7 @@
     font-size: 18px;
     color: white;
     opacity: .9;
+    margin: 100px 500px 0px 0px;
 
     &:hover {
         padding: 18px 35px;
@@ -403,6 +405,7 @@
     font-size: 18px;
     color: #161616;
     opacity: .9;
+    
 
     &:hover {
         padding: 18px 35px;
