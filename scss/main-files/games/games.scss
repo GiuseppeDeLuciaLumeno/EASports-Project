@@ -60,22 +60,33 @@ form {
     align-items: center;
     gap: 30px;
 
+    .three-dots-container{
+        height: auto;
+        transition: all .2s ease-in-out;
+
+        &:hover{
+            transform: scale(1.39);
+        }
+    }
+
     .bi-three-dots-vertical {
         color: black;
         font-size: 25px;
         position: relative;
         top: 3px;
-        transition: all .3s ease-in-out;
-
+        transition: all .2s ease-in-out;
 
         &:hover {
             color: red;
-            transform: scale(1.39);
+
         }
     }
 
+    .container-nav-menu{
+        display: flex;
+    }
 
-    .games {
+    .ea-dropdown {
         cursor: pointer;
         transition: all 200ms ease;
         gap: 3px;
@@ -86,12 +97,12 @@ form {
 
         }
 
-        &:hover .left-line::before {
+        &:hover .v-icon::before {
             transform: rotate(-45deg);
             border-color: red;
         }
 
-        &:hover .left-line::after {
+        &:hover .v-icon::after {
             transform: rotate(45deg);
             border-color: red;
         }
@@ -104,7 +115,7 @@ form {
     height: 20px;
     position: relative;
 
-    .left-line {
+    .v-icon {
         position: relative;
 
         &::before {

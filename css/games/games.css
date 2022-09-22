@@ -136,20 +136,32 @@ form .ea-logo:hover {
           align-items: center;
   gap: 30px;
 }
+.lower-header .three-dots-container {
+  height: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.lower-header .three-dots-container:hover {
+  -webkit-transform: scale(1.39);
+          transform: scale(1.39);
+}
 .lower-header .bi-three-dots-vertical {
   color: black;
   font-size: 25px;
   position: relative;
   top: 3px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .lower-header .bi-three-dots-vertical:hover {
   color: red;
-  -webkit-transform: scale(1.39);
-          transform: scale(1.39);
 }
-.lower-header .games {
+.lower-header .container-nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.lower-header .ea-dropdown {
   cursor: pointer;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
@@ -158,15 +170,15 @@ form .ea-logo:hover {
   display: -ms-flexbox;
   display: flex;
 }
-.lower-header .games:hover {
+.lower-header .ea-dropdown:hover {
   color: red;
 }
-.lower-header .games:hover .left-line::before {
+.lower-header .ea-dropdown:hover .v-icon::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   border-color: red;
 }
-.lower-header .games:hover .left-line::after {
+.lower-header .ea-dropdown:hover .v-icon::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   border-color: red;
@@ -177,10 +189,10 @@ form .ea-logo:hover {
   height: 20px;
   position: relative;
 }
-.dropdown-container .left-line {
+.dropdown-container .v-icon {
   position: relative;
 }
-.dropdown-container .left-line::before {
+.dropdown-container .v-icon::before {
   content: "";
   cursor: pointer;
   border-radius: 0.5em;
@@ -197,11 +209,11 @@ form .ea-logo:hover {
   transition: transform 200ms ease;
   transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
-.dropdown-container .left-line::before:hover::before {
+.dropdown-container .v-icon::before:hover::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.dropdown-container .left-line::after {
+.dropdown-container .v-icon::after {
   content: "";
   cursor: pointer;
   border-radius: 0.5em;
@@ -218,7 +230,7 @@ form .ea-logo:hover {
   transition: transform 200ms ease;
   transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
-.dropdown-container .left-line::after:hover::after {
+.dropdown-container .v-icon::after:hover::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
