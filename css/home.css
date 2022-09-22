@@ -1775,6 +1775,7 @@ footer {
 
 .bg_play {
   height: 410px;
+  width: 100vw;
 }
 
 .play {
@@ -1855,6 +1856,7 @@ footer {
   font-size: 18px;
   color: white;
   opacity: 0.9;
+  margin: 100px 500px 0px 0px;
 }
 .iscriviti_subito1:hover {
   padding: 18px 35px;

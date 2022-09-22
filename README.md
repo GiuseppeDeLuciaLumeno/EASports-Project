@@ -5,11 +5,12 @@ IMPORTANTE! Perché tutto funzioni, queste sono le cartelle 'off limits': quelle
   -> \html
   -> \css
   -> \scss\main-files
+  -> \scss\atomic-design\2-base\typography
   -> \scss\atomic-design\6-pages
   -> \scss\atomic-design\responsivity
   -> \js\6-pages
 
-Bisogno di aggiungere/modificare un file di una di queste cartelle? Chiedere a Dario, provvederà subito...
+Bisogno di aggiungere/modificare un file di una di queste cartelle? Chiedere a Dario, provvederà subito... :-)
 
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------- -->
 
