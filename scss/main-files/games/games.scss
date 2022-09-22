@@ -41,6 +41,8 @@
     border-bottom: none;
 }
 
+
+
 .modal.fade .modal-dialog{
     -webkit-transition: -webkit-transform 0.3s ease-out;
     transition: -webkit-transform 0.3s ease-out;
@@ -67,7 +69,9 @@ form {
         background-color: black;
     }
 
-    .bi {
+    .bi-person {
+        position: relative;
+        bottom: 2px;
         font-size: 23px;
         height: 30px;
         font-weight: bolder;
@@ -103,6 +107,7 @@ form {
             filter: $ea-logo-hover-color;
         }
     }
+
 }
 
 
@@ -154,6 +159,10 @@ form {
         cursor: pointer;
         gap: 3px;
         display: flex;
+
+        p{
+            margin-bottom: 0;
+        }
 
         &:hover p {
             color: red;
