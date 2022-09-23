@@ -1014,7 +1014,7 @@ select {
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
 footer {
-  font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: ElectronicArtsText, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   background-color: #f3f3f3;
 }
@@ -2821,3 +2821,5 @@ footer {
     padding-bottom: 10px;
   }
 }
+
+/*# sourceMappingURL=home.css.map */
