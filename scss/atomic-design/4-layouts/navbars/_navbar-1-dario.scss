@@ -1,0 +1,87 @@
+// Dario - inizio -------------------------------------------------------------
+
+// .navbar {
+//    .dark-section {
+//        ul {
+//          li {
+//            a {
+//              svg.account {
+//                 path {...}
+//              }
+//            }
+//          }
+//          li {
+//            a {
+//              svg.help {
+//                 path {...}
+//              }
+//            }
+//          }
+//          li {
+//            a {
+//              svg.ea {
+//                 path {...}
+//              }
+//            }
+//          }
+//        }
+//    }
+// }
+
+.navbar {
+  .dark-section {
+    height: rem(40px);
+    background-color: rgb(22 22 22);
+  
+    ul {
+      list-style: none;
+  
+      height: inherit;
+      margin-inline: rem(32px);
+      min-width: rem(calc(215px - (32px * 2)));
+  
+      @include flexbox($justify-content: flex-end);
+      gap: rem(40px);
+  
+      li {
+  
+        a {
+          display: block;
+  
+          svg {
+            display: block;
+            fill: rgb(163, 163, 163);
+            
+            &.account {
+              width: rem(18px);
+              height: rem(18px);
+              margin-right: 4px;
+            }
+  
+            &.help {
+              width: rem(18px);
+              height: rem(18px);
+              margin-right: -5px;
+            }
+  
+            &.ea {
+              width: rem(32px);
+              height: rem(32px);
+              margin-right: 4px;
+              fill: rgb(117, 117, 117);
+            }
+  
+            &:hover {
+              fill: rgb(243, 242, 242);
+  
+              &.ea {
+              fill: rgb(163, 163, 163);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Dario - fine -------------------------------------------------------------

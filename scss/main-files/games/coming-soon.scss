@@ -1,6 +1,9 @@
 @use 'sass:math';
 
 // ABSTRACTS -----------------------------------------------------
+@import '../../atomic-design/1-abstracts/variables/font-families/font-families-dario';
+@import '../../atomic-design/1-abstracts/variables/font-sizes/font-sizes-dario';
+
 @import '../../atomic-design/1-abstracts/functions/units/units-giuseppe';
 
 @import '../../atomic-design/1-abstracts/mixins/flexbox/flexbox-1-dario';
@@ -8,61 +11,5 @@
 /* RESET ---------------------------------------------------------*/
 @import '../../atomic-design/2-base/resets/reset-dario';
 
-header {
-  .navbar {
-    .dark-section {
-      height: rem(40px);
-      background-color: rgb(22 22 22);
-
-      ul {
-        list-style: none;
-
-        height: inherit;
-        margin-inline: rem(32px);
-        min-width: rem(calc(215px - (32px * 2)));
-
-        @include flexbox($justify-content: flex-end);
-        gap: rem(40px);
-
-        li {
-
-          a {
-            display: block;
-
-            svg {
-              display: block;
-              fill: rgb(163, 163, 163);
-              
-              &.account {
-                width: rem(18px);
-                height: rem(18px);
-                margin-right: 4px;
-              }
-
-              &.help {
-                width: rem(18px);
-                height: rem(18px);
-                margin-right: -5px;
-              }
-  
-              &.ea {
-                width: rem(32px);
-                height: rem(32px);
-                margin-right: 4px;
-                fill: rgb(117, 117, 117);
-              }
-
-              &:hover {
-                fill: rgb(243, 242, 242);
-
-                &.ea {
-                fill: rgb(163, 163, 163);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+/* LAYOUTS -------------------------------------------------------*/
+@import '../../atomic-design/4-layouts/navbars/navbar-1-dario';
