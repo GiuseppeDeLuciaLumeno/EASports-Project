@@ -12699,11 +12699,43 @@ form .ea-logo:hover {
   -webkit-filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
           filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
 }
-form .login-logo p,
+form .login-logo {
+  cursor: pointer;
+}
+form .login-logo .translate {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+form .login-logo:hover .translate {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+form .login-logo p {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: lightgray;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+form .create-account {
+  cursor: pointer;
+}
+form .create-account .translate {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+form .create-account:hover .translate {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
 form .create-account p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
   color: lightgray;
   font-size: 14px;
+  margin-bottom: 0;
 }
 
 .lower-header {
