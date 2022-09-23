@@ -1,3 +1,116 @@
+/* RESET ---------------------------------------------------------*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
 
-/*# sourceMappingURL=coming-soon.css.map */
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul.list,
+ol.list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+header .navbar .dark-section {
+  height: 2.5rem;
+  background-color: rgb(22, 22, 22);
+}
+header .navbar .dark-section ul {
+  list-style: none;
+  height: inherit;
+  margin-inline: 2rem;
+  min-width: 9.4375rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.5rem;
+}
+header .navbar .dark-section ul li a {
+  display: block;
+}
+header .navbar .dark-section ul li a svg {
+  display: block;
+  fill: rgb(163, 163, 163);
+}
+header .navbar .dark-section ul li a svg.account {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 4px;
+}
+header .navbar .dark-section ul li a svg.help {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: -5px;
+}
+header .navbar .dark-section ul li a svg.ea {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 4px;
+  fill: rgb(117, 117, 117);
+}
+header .navbar .dark-section ul li a svg:hover {
+  fill: rgb(243, 242, 242);
+}
+header .navbar .dark-section ul li a svg:hover.ea {
+  fill: rgb(163, 163, 163);
+}
