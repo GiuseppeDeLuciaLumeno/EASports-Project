@@ -12602,6 +12602,10 @@ textarea.form-control-lg {
   }
 }
 
+.modal-body {
+  padding: 7rem 0;
+}
+
 .modal-content {
   background-color: #161616;
   position: relative;
@@ -12653,7 +12657,7 @@ form .black-block {
           justify-content: flex-end;
   gap: 30px;
   padding: 5px 0;
-  background: #2a2a2a;
+  background: #2c2c2c;
 }
 form .bi-person {
   position: relative;

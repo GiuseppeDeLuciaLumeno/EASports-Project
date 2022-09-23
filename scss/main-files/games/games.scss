@@ -20,6 +20,10 @@
     --bs-modal-border-color: none;
 }
 
+.modal-body{
+    padding: 7rem 0;
+}
+
 .modal-content{
     background-color: $header-base-color;
     position: relative;
@@ -27,7 +31,6 @@
     top: 10px;
     background-clip:initial;
     border-radius: 0;
-
 }
 
 .modal-dialog{
@@ -71,7 +74,7 @@ form {
         justify-content: flex-end;
         gap: 30px;
         padding: 5px 0;
-        background: lighten($header-base-color, 8);
+        background: lighten($header-base-color, 8.5);
     }
 
     .bi-person {
