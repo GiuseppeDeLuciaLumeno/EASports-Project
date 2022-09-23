@@ -12668,6 +12668,7 @@ textarea.form-control-lg {
 }
 
 form .black-block {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12811,6 +12812,7 @@ form .create-account .text-colapse p {
           transform: scale(1.39);
 }
 .lower-header .bi-three-dots-vertical {
+  cursor: pointer;
   color: black;
   font-size: 25px;
   position: relative;

@@ -16,7 +16,6 @@
     @media (min-width: 576px) {
         --bs-modal-margin: 1.75rem;
     }
-
     --bs-modal-border-color: none;
 }
 
@@ -33,7 +32,6 @@
             -ms-flex-direction: column !important;
             flex-direction: row !important;
         }
-
     }
 }
 
@@ -86,6 +84,7 @@
 form {
 
     .black-block {
+        width: 100vw;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -222,6 +221,7 @@ form {
     }
 
     .bi-three-dots-vertical {
+        cursor: pointer;
         color: black;
         font-size: 25px;
         position: relative;
@@ -229,7 +229,6 @@ form {
 
         &:hover {
             color: red;
-
         }
     }
 
