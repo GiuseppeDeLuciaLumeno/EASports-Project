@@ -16,12 +16,12 @@
 .modal {
     @media (min-width: 576px) {
         --bs-modal-margin: 1.75rem;
-
     }
+    --bs-modal-border-color: none;
 }
 
 .modal-content{
-    background-color:black;
+    background-color: $header-base-color;
     position: relative;
     left: 0;
     top: 10px;
@@ -56,6 +56,7 @@
 .bi-x-lg{
  color: $header-icon;
  margin-left: auto;
+ margin-right: 1rem;
  cursor: pointer;
  &:hover{
     color: $header-icon-hover;
@@ -70,7 +71,7 @@ form {
         justify-content: flex-end;
         gap: 30px;
         padding: 5px 0;
-        background-color: black;
+        background: lighten($header-base-color, 8);
     }
 
     .bi-person {
@@ -141,7 +142,6 @@ form {
         color: black;
         font-size: 25px;
         position: relative;
-        top: 2px;
         transition: all .2s ease-in-out;
 
         &:hover {

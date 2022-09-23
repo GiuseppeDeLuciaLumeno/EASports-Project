@@ -12593,6 +12593,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.modal {
+  --bs-modal-border-color: none;
+}
 @media (min-width: 576px) {
   .modal {
     --bs-modal-margin: 1.75rem;
@@ -12600,7 +12603,7 @@ textarea.form-control-lg {
 }
 
 .modal-content {
-  background-color: black;
+  background-color: #161616;
   position: relative;
   left: 0;
   top: 10px;
@@ -12631,6 +12634,7 @@ textarea.form-control-lg {
 .bi-x-lg {
   color: rgb(163, 163, 163);
   margin-left: auto;
+  margin-right: 1rem;
   cursor: pointer;
 }
 .bi-x-lg:hover {
@@ -12649,7 +12653,7 @@ form .black-block {
           justify-content: flex-end;
   gap: 30px;
   padding: 5px 0;
-  background-color: black;
+  background: #2a2a2a;
 }
 form .bi-person {
   position: relative;
@@ -12721,7 +12725,6 @@ form .create-account p {
   color: black;
   font-size: 25px;
   position: relative;
-  top: 2px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
