@@ -33,6 +33,11 @@ header {
         //Non permette al Video di Uscire fuori al container
         overflow: hidden;
 
+        @include media-breakpoint-down(md) {
+            background: #000;
+            height: 750px;
+          }
+
         video {
             //Simuliamo la proprietà background-size: cover;
             object-fit: cover;
@@ -45,6 +50,10 @@ header {
 
             z-index: -100;
             filter: url('#squiggly-2') brightness(0.4);
+
+            @include media-breakpoint-down(md) {
+                display: none;
+              }
         }
 
         #pegi-logo {

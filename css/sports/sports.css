@@ -12848,6 +12848,12 @@ header .video-wrapper {
   background: linear-gradient(to top, black, transparent);
   overflow: hidden;
 }
+@media (max-width: 767.98px) {
+  header .video-wrapper {
+    background: #000;
+    height: 750px;
+  }
+}
 header .video-wrapper video {
   object-fit: cover;
   height: 100%;
@@ -12857,6 +12863,11 @@ header .video-wrapper video {
   left: 0;
   z-index: -100;
   filter: url("#squiggly-2") brightness(0.4);
+}
+@media (max-width: 767.98px) {
+  header .video-wrapper video {
+    display: none;
+  }
 }
 header .video-wrapper #pegi-logo {
   max-width: 64px;
