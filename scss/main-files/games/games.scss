@@ -354,11 +354,11 @@ form {
     position: fixed;
     top: 2.5rem;
     left: 0;
-    padding: 2.5rem 2rem 4rem;
+    padding: 2.5rem 2rem 6rem;
     z-index: 1;
     transform: translateX(-100%);
     transition: transform .5s cubic-bezier(.5,.25,.015,1);
-
+    
 
     .all-games-block {
         width: 296px;
@@ -427,7 +427,7 @@ form {
     .card-wrapper {
         width: 22.5rem;
         padding-top: 2rem;
-       
+
         .row {
             margin-top: 0;
             margin-right: 0;
