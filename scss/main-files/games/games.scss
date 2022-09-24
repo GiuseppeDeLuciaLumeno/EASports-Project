@@ -4,6 +4,7 @@
 @import "../../atomic-design/2-base/font-faces/font-faces-dario";
 @import "../../atomic-design/2-base/typography/games/games";
 @import "../../atomic-design/1-abstracts/mixins/header/header-ultimi-giochi";
+@import "../../atomic-design/1-abstracts/mixins/cards/mini-cards-scroll";
 //Import Bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
@@ -188,8 +189,6 @@ form {
             }
         }
 
-
-
         @media only screen and (max-width: 543px) {
             justify-content: flex-start !important;
             margin-inline: 10rem;
@@ -235,101 +234,107 @@ form {
         }
     }
 
-    .bi-three-dots-vertical {
-        cursor: pointer;
-        color: black;
-        font-size: 25px;
-        position: relative;
-        transition: all .2s ease-in-out;
-
-        &:hover {
-            color: red;
-        }
-
-        @media only screen and (max-width: 1030px) {
-            display: none;
-        }
+    .three-dots-container.active~.modal-wrapper {
+        transform: translateX(0%);
+                                                                          ////CAZOOOOOO
     }
-
-    .burger {
-
-        @media only screen and (max-width: 1030px) {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            margin-right: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-
-            .top-bar,
-            .mid-bar,
-            .low-bar {
-                background: black;
-                width: 20px;
-                height: 2px;
-                border-radius: 10px;
-                -webkit-transition: all 0.2s ease-in-out;
-                transition: all 0.2s ease-in-out;
-            }
-
-            &:hover .top-bar,
-            &:hover .mid-bar,
-            &:hover .low-bar {
-                background: red;
-            }
-        }
-
-        position: relative;
-        top: 2px;
-        display: none; //from 1031 is hidden
-    }
-
-    .container-nav-menu {
-        display: flex;
-        gap: 30px;
-        margin-inline: 2rem;
-
-        @media only screen and (max-width: 1030px) {
-            display: none;
-        }
-    }
-
-    //to give fontfamily by for cycle
-    @for $i from 1 to 6 {
-        .ea-dropdown:nth-child(#{$i}) p {
-            font-family: map-get($ultimi-giochi-font, text);
-            font-size: 18px;
-            color: map-get($color-typography, text);
-            transition: color 200ms ease;
-        }
-    }
-
-    .ea-dropdown {
-        cursor: pointer;
-        gap: 3px;
-        display: flex;
-
-        p {
-            margin-bottom: 0;
-        }
-
-        &:hover p {
-            color: red;
-
-        }
-
-        &:hover .v-icon::before {
-            transform: rotate(-45deg);
-            border-color: red;
-        }
-
-        &:hover .v-icon::after {
-            transform: rotate(45deg);
-            border-color: red;
-        }
-    }
-
 }
+
+.bi-three-dots-vertical {
+    cursor: pointer;
+    color: black;
+    font-size: 25px;
+    position: relative;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        color: red;
+    }
+
+    @media only screen and (max-width: 1030px) {
+        display: none;
+    }
+}
+
+.burger {
+
+    @media only screen and (max-width: 1030px) {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        .top-bar,
+        .mid-bar,
+        .low-bar {
+            background: black;
+            width: 20px;
+            height: 2px;
+            border-radius: 10px;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &:hover .top-bar,
+        &:hover .mid-bar,
+        &:hover .low-bar {
+            background: red;
+        }
+    }
+
+    position: relative;
+    top: 2px;
+    display: none; //from 1031 is hidden
+}
+
+.container-nav-menu {
+    display: flex;
+    gap: 30px;
+    margin-inline: 2rem;
+
+    @media only screen and (max-width: 1030px) {
+        display: none;
+    }
+}
+
+//to give fontfamily by for cycle
+@for $i from 1 to 6 {
+    .ea-dropdown:nth-child(#{$i}) p {
+        font-family: map-get($ultimi-giochi-font, text);
+        font-size: 18px;
+        color: map-get($color-typography, text);
+        transition: color 200ms ease;
+    }
+}
+
+.ea-dropdown {
+    cursor: pointer;
+    gap: 3px;
+    display: flex;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    &:hover p {
+        color: red;
+
+    }
+
+    &:hover .v-icon::before {
+        transform: rotate(-45deg);
+        border-color: red;
+    }
+
+    &:hover .v-icon::after {
+        transform: rotate(45deg);
+        border-color: red;
+    }
+}
+
+
 
 .dropdown-icon-container {
     width: 20px;
@@ -342,20 +347,19 @@ form {
 }
 
 
-//Aside Modal white
+//Aside Modal white                                  /////OKOKAOSKOAKSO
 .modal-wrapper {
-    /* margin-left: 100%; */  /* To active width js */
-    height: 100%; //to set overflow-y
-    overflow-y: scroll;
-    &::-webkit-scrollbar{
-        display: none;
-    }
+    background: $white;
+    @include scroll-bar-hider(none);
     position: fixed;
     top: 2.5rem;
     left: 0;
     padding: 2.5rem 2rem 4rem;
-    z-index: 3;
-    background: $white;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform .5s cubic-bezier(.5,.25,.015,1);
+
+
     .all-games-block {
         width: 296px;
 
@@ -365,29 +369,31 @@ form {
             font-weight: 500;
             color: $text-aside;
             transition: color 100ms ease-out;
+
             &:hover {
                 color: red;
             }
         }
 
         #icon-x {
-            color: black;
-            font-size: 15px;
-            font-weight: bolder;
-            width: 30px;
+           cursor: pointer;
+           position: relative;
+            top: -5px;
+            right: -10px;
+            width: 20px;
             &:hover {
-                color: red;
+                fill: red;
             }
         }
     }
 
     .ea-play-card {
-        padding-top: 1.7rem;
+        margin-top: 2.2rem;
         position: relative;
 
         &:hover #ea-play-logo {
             transform: translate3d(5%, 5%, 0);
-            transform: scale(1.10);
+            transform: scale(1.12);
         }
     }
 
@@ -421,7 +427,7 @@ form {
     .card-wrapper {
         width: 22.5rem;
         padding-top: 2rem;
-
+       
         .row {
             margin-top: 0;
             margin-right: 0;
@@ -430,4 +436,3 @@ form {
     }
 
 }
-
