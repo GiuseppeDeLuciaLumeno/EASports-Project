@@ -13063,9 +13063,11 @@ form .create-account .text-colapse p {
 .modal-wrapper .min-card {
   width: 180px;
   position: relative;
+}
+.modal-wrapper #hover-min-card {
   cursor: pointer;
 }
-.modal-wrapper .min-card:hover #min-logo {
+.modal-wrapper #hover-min-card:hover + #min-logo {
   transform: scale(1.14);
 }
 .modal-wrapper #min-logo {
@@ -13074,6 +13076,9 @@ form .create-account .text-colapse p {
   left: 30%;
   z-index: 1;
   transition: transform 0.2s ease;
+}
+.modal-wrapper #min-logo:hover {
+  transform: scale(1.14);
 }
 .modal-wrapper .card-wrapper {
   width: 22.5rem;

@@ -417,9 +417,11 @@ form {
     .min-card {
         width: 180px; //Mini Cards Dimensions
         position: relative;
-        cursor: pointer;
+    }
 
-        &:hover #min-logo {
+    #hover-min-card{
+        cursor: pointer;
+        &:hover + #min-logo{
             transform: scale(1.14);
         }
     }
@@ -430,6 +432,9 @@ form {
         left: 30%;
         z-index: 1;
         transition: transform .2s ease;
+        &:hover{
+            transform: scale(1.14);
+        }
     }
 
     .card-wrapper {
