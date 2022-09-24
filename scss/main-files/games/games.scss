@@ -217,12 +217,15 @@ form {
     align-items: center;
     gap: 30px;
     padding: 0.85rem 1rem 0.5rem;
+
     @media only screen and (max-width: 1030px) {
         gap: 6px;
     }
-    @media only screen and (max-width: map-get($grid-breakpoints, lg) ) {
+
+    @media only screen and (max-width: map-get($grid-breakpoints, lg)) {
         padding: 0.5rem 1rem 0.5rem;
     }
+
     .three-dots-container {
         height: auto;
         transition: all .2s ease-in-out;
@@ -275,6 +278,7 @@ form {
                 background: red;
             }
         }
+
         position: relative;
         top: 2px;
         display: none; //from 1031 is hidden
@@ -284,6 +288,7 @@ form {
         display: flex;
         gap: 30px;
         margin-inline: 2rem;
+
         @media only screen and (max-width: 1030px) {
             display: none;
         }
@@ -338,49 +343,71 @@ form {
 
 
 //Aside Modal white
+.modal-wrapper {
+     /* To active width js */
+    /* margin-left: 100%; */
+    z-index: 3;
+    background: $white;
+    position: fixed;
+    padding: 2.5rem 2rem 4rem;
+    top: 2.5rem;
+    left: 0;
 
-
-.modal-wrapper{
-/* max-width: 0; */  /* To active width js */
-z-index: 1;
-background:yellow;
-position: fixed;
-padding: 2.5rem 2rem 4rem;
-top: 2.5rem;
-left: 0;
-
-    .all-games-block{
+    .all-games-block {
         width: 296px;
+
+        p {
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            color: $text-aside;
+            transition: color 100ms ease-out;
+            &:hover {
+                color: red;
+            }
+        }
+
+        #icon-x {
+            color: black;
+            font-size: 15px;
+            font-weight: bolder;
+            width: 30px;
+            &:hover {
+                color: red;
+            }
+        }
     }
 
-    .ea-play-card{
+    .ea-play-card {
         padding-top: 1.7rem;
         position: relative;
-        &:hover #ea-play-logo{
-            transform: translate3d(5%, 5%,0);
+
+        &:hover #ea-play-logo {
+            transform: translate3d(5%, 5%, 0);
             transform: scale(1.10);
         }
     }
 
-    #ea-play-logo{
+    #ea-play-logo {
         transition: transform .4s ease;
         z-index: 1;
         position: absolute;
-        top: 38%;
+        top: 43%;
         left: 34%;
     }
 
 
-    .min-card{
+    .min-card {
         width: 180px; //Mini Cards Dimensions
         position: relative;
         cursor: pointer;
-        &:hover #min-logo{
+
+        &:hover #min-logo {
             transform: scale(1.10);
         }
     }
 
-    #min-logo{
+    #min-logo {
         position: absolute;
         top: 35%;
         left: 30%;
@@ -388,14 +415,16 @@ left: 0;
         transition: transform .2s ease;
     }
 
-    .card-wrapper{
+    .card-wrapper {
         width: 22.5rem;
         padding-top: 2rem;
 
-        .row{
+        .row {
             margin-top: 0;
             margin-right: 0;
             margin-left: 0;
         }
     }
+
 }
+

@@ -14071,9 +14071,10 @@ form .create-account .text-colapse p {
 }
 
 .modal-wrapper {
-  /* max-width: 0; */ /* To active width js */
-  z-index: 1;
-  background: yellow;
+  /* To active width js */
+  /* margin-left: 100%; */
+  z-index: 3;
+  background: #fff;
   position: fixed;
   padding: 2.5rem 2rem 4rem;
   top: 2.5rem;
@@ -14081,6 +14082,26 @@ form .create-account .text-colapse p {
 }
 .modal-wrapper .all-games-block {
   width: 296px;
+}
+.modal-wrapper .all-games-block p {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(163, 163, 163);
+  -webkit-transition: color 100ms ease-out;
+  transition: color 100ms ease-out;
+}
+.modal-wrapper .all-games-block p:hover {
+  color: red;
+}
+.modal-wrapper .all-games-block #icon-x {
+  color: black;
+  font-size: 15px;
+  font-weight: bolder;
+  width: 30px;
+}
+.modal-wrapper .all-games-block #icon-x:hover {
+  color: red;
 }
 .modal-wrapper .ea-play-card {
   padding-top: 1.7rem;
@@ -14099,7 +14120,7 @@ form .create-account .text-colapse p {
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
   z-index: 1;
   position: absolute;
-  top: 38%;
+  top: 43%;
   left: 34%;
 }
 .modal-wrapper .min-card {
