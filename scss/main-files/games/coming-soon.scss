@@ -3,13 +3,24 @@
 // ABSTRACTS -----------------------------------------------------
 @import '../../atomic-design/1-abstracts/variables/font-families/font-families-dario';
 @import '../../atomic-design/1-abstracts/variables/font-sizes/font-sizes-dario';
+@import '../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-dario';
+@import '../../atomic-design/1-abstracts/variables/colors/colors-dario';
 
 @import '../../atomic-design/1-abstracts/functions/units/units-giuseppe';
 
 @import '../../atomic-design/1-abstracts/mixins/flexbox/flexbox-1-dario';
+@import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../atomic-design/2-base/font-faces/font-faces-dario';
 
 /* RESET ---------------------------------------------------------*/
 @import '../../atomic-design/2-base/resets/reset-dario';
 
+/* ---------------------------------------------------------------*/
 /* LAYOUTS -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
 @import '../../atomic-design/4-layouts/navbars/navbar-1-dario';
+
+body {
+  font-family: map-get($map: $da-font-family, $key: text);
+  background-color: lightblue;
+}
