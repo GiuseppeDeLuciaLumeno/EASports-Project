@@ -12857,12 +12857,22 @@ header .video-wrapper {
 header .video-wrapper video {
   object-fit: cover;
   height: 100%;
-  width: 100%;
+  width: 90%;
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   z-index: -100;
   filter: url("#squiggly-2") brightness(0.4);
+}
+@media (max-width: 991.98px) {
+  header .video-wrapper video {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 @media (max-width: 767.98px) {
   header .video-wrapper video {
