@@ -21,3 +21,8 @@ burger.addEventListener("click", () => {
 asidehide.addEventListener("click", () => {
     burger.classList.remove("active");
 });
+
+
+
+
+//Autofocus:

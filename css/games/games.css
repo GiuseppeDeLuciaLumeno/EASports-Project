@@ -12903,36 +12903,41 @@ form .create-account .text-colapse p {
 
 .ea-dropdown:nth-child(1) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  color: rgb(63, 62, 62);
+  font-size: 17px;
+  font-weight: lighter;
+  color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(2) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  color: rgb(63, 62, 62);
+  font-size: 17px;
+  font-weight: lighter;
+  color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(3) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  color: rgb(63, 62, 62);
+  font-size: 17px;
+  font-weight: lighter;
+  color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(4) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  color: rgb(63, 62, 62);
+  font-size: 17px;
+  font-weight: lighter;
+  color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(5) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  color: rgb(63, 62, 62);
+  font-size: 17px;
+  font-weight: lighter;
+  color: #000;
   transition: color 200ms ease;
 }
 

@@ -300,7 +300,6 @@ form {
     display: flex;
     gap: 30px;
     margin-inline: 2rem;
-
     @media only screen and (max-width: 1030px) {
         display: none;
     }
@@ -310,8 +309,9 @@ form {
 @for $i from 1 to 6 {
     .ea-dropdown:nth-child(#{$i}) p {
         font-family: map-get($ultimi-giochi-font, text);
-        font-size: 18px;
-        color: map-get($color-typography, text);
+        font-size: 17px;
+        font-weight: lighter;
+        color: $black;
         transition: color 200ms ease;
     }
 }
