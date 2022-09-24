@@ -12643,6 +12643,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+html {
+  box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
+}
+
 .modal {
   --bs-modal-border-color: none;
 }
@@ -12882,6 +12886,10 @@ form .create-account .text-colapse p {
   }
 }
 
+.burger.active + .modal-wrapper {
+  transform: translateX(0%);
+}
+
 .container-nav-menu {
   display: flex;
   gap: 30px;
@@ -12991,6 +12999,7 @@ form .create-account .text-colapse p {
 
 .modal-wrapper {
   background: #fff;
+  box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
   height: 100%;
   overflow-y: scroll;
   scrollbar-width: none;

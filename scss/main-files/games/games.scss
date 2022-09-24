@@ -11,6 +11,9 @@
 
 
 //Header //
+html{
+    box-shadow: inset 30px 0px 11px -30px rgba(0,0,0,0.7);
+}
 
 //Modal Black
 .modal {
@@ -236,7 +239,7 @@ form {
 
     .three-dots-container.active~.modal-wrapper {
         transform: translateX(0%);
-                                                                          ////CAZOOOOOO
+
     }
 }
 
@@ -287,6 +290,10 @@ form {
     position: relative;
     top: 2px;
     display: none; //from 1031 is hidden
+}
+
+.burger.active + .modal-wrapper {
+    transform: translateX(0%);
 }
 
 .container-nav-menu {
@@ -350,6 +357,7 @@ form {
 //Aside Modal white                                  /////OKOKAOSKOAKSO
 .modal-wrapper {
     background: $white;
+    box-shadow: inset 30px 0px 11px -30px rgba(0,0,0,0.7);
     @include scroll-bar-hider(none);
     position: fixed;
     top: 2.5rem;
@@ -358,7 +366,7 @@ form {
     z-index: 1;
     transform: translateX(-100%);
     transition: transform .5s cubic-bezier(.5,.25,.015,1);
-    
+
 
     .all-games-block {
         width: 296px;
@@ -436,3 +444,5 @@ form {
     }
 
 }
+
+
