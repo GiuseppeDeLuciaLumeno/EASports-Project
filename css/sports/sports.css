@@ -12931,3 +12931,14 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   font-size: 18px;
   padding: 12px 24px;
 }
+
+#sign-up {
+  background: rgb(11, 13, 55);
+  background: linear-gradient(35deg, rgb(11, 13, 55) 36%, rgb(166, 52, 71) 74%);
+}
+#sign-up p {
+  font-size: 24px;
+  font-family: "Juana W05 Bold";
+  color: #fff;
+  margin-bottom: 0;
+}
