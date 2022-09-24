@@ -14069,3 +14069,64 @@ form .create-account .text-colapse p {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+
+.modal-wrapper {
+  /* max-width: 0; */ /* To active width js */
+  z-index: 1;
+  background: yellow;
+  position: fixed;
+  padding: 2.5rem 2rem 4rem;
+  top: 2.5rem;
+  left: 0;
+}
+.modal-wrapper .all-games-block {
+  width: 296px;
+}
+.modal-wrapper .ea-play-card {
+  padding-top: 1.7rem;
+  position: relative;
+}
+.modal-wrapper .ea-play-card:hover #ea-play-logo {
+  -webkit-transform: translate3d(5%, 5%, 0);
+          transform: translate3d(5%, 5%, 0);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.modal-wrapper #ea-play-logo {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  z-index: 1;
+  position: absolute;
+  top: 38%;
+  left: 34%;
+}
+.modal-wrapper .min-card {
+  width: 180px;
+  position: relative;
+  cursor: pointer;
+}
+.modal-wrapper .min-card:hover #min-logo {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.modal-wrapper #min-logo {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  z-index: 1;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.modal-wrapper .card-wrapper {
+  width: 22.5rem;
+  padding-top: 2rem;
+}
+.modal-wrapper .card-wrapper .row {
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+}

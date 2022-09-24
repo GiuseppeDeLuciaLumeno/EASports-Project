@@ -10,8 +10,8 @@
 
 
 //Header //
-//Menu Login Bootstrap
 
+//Modal Black
 .modal {
     @media (min-width: 576px) {
         --bs-modal-margin: 1.75rem;
@@ -333,5 +333,69 @@ form {
 
     .v-icon {
         @include v-icons;
+    }
+}
+
+
+//Aside Modal white
+
+
+.modal-wrapper{
+/* max-width: 0; */  /* To active width js */
+z-index: 1;
+background:yellow;
+position: fixed;
+padding: 2.5rem 2rem 4rem;
+top: 2.5rem;
+left: 0;
+
+    .all-games-block{
+        width: 296px;
+    }
+
+    .ea-play-card{
+        padding-top: 1.7rem;
+        position: relative;
+        &:hover #ea-play-logo{
+            transform: translate3d(5%, 5%,0);
+            transform: scale(1.10);
+        }
+    }
+
+    #ea-play-logo{
+        transition: transform .4s ease;
+        z-index: 1;
+        position: absolute;
+        top: 38%;
+        left: 34%;
+    }
+
+
+    .min-card{
+        width: 180px; //Mini Cards Dimensions
+        position: relative;
+        cursor: pointer;
+        &:hover #min-logo{
+            transform: scale(1.10);
+        }
+    }
+
+    #min-logo{
+        position: absolute;
+        top: 35%;
+        left: 30%;
+        z-index: 1;
+        transition: transform .2s ease;
+    }
+
+    .card-wrapper{
+        width: 22.5rem;
+        padding-top: 2rem;
+
+        .row{
+            margin-top: 0;
+            margin-right: 0;
+            margin-left: 0;
+        }
     }
 }
