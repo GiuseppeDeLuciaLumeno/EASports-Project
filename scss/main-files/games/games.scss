@@ -344,15 +344,18 @@ form {
 
 //Aside Modal white
 .modal-wrapper {
-     /* To active width js */
-    /* margin-left: 100%; */
-    z-index: 3;
-    background: $white;
+    /* margin-left: 100%; */  /* To active width js */
+    height: 100%; //to set overflow-y
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
     position: fixed;
-    padding: 2.5rem 2rem 4rem;
     top: 2.5rem;
     left: 0;
-
+    padding: 2.5rem 2rem 4rem;
+    z-index: 3;
+    background: $white;
     .all-games-block {
         width: 296px;
 
@@ -403,7 +406,7 @@ form {
         cursor: pointer;
 
         &:hover #min-logo {
-            transform: scale(1.10);
+            transform: scale(1.14);
         }
     }
 

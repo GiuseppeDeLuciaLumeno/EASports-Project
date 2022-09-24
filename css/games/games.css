@@ -14071,14 +14071,18 @@ form .create-account .text-colapse p {
 }
 
 .modal-wrapper {
-  /* To active width js */
-  /* margin-left: 100%; */
-  z-index: 3;
-  background: #fff;
+  /* margin-left: 100%; */ /* To active width js */
+  height: 100%;
+  overflow-y: scroll;
   position: fixed;
-  padding: 2.5rem 2rem 4rem;
   top: 2.5rem;
   left: 0;
+  padding: 2.5rem 2rem 4rem;
+  z-index: 3;
+  background: #fff;
+}
+.modal-wrapper::-webkit-scrollbar {
+  display: none;
 }
 .modal-wrapper .all-games-block {
   width: 296px;
@@ -14129,8 +14133,8 @@ form .create-account .text-colapse p {
   cursor: pointer;
 }
 .modal-wrapper .min-card:hover #min-logo {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.14);
+          transform: scale(1.14);
 }
 .modal-wrapper #min-logo {
   position: absolute;
