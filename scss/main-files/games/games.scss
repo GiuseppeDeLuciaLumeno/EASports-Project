@@ -239,7 +239,6 @@ form {
 
     .three-dots-container.active~.modal-wrapper {
         transform: translateX(0%);
-
     }
 }
 
@@ -354,6 +353,7 @@ form {
 
 //Aside Modal white                                  /////OKOKAOSKOAKSO
 .modal-wrapper {
+    opacity: 1;
     @include scroll-bar-hider(none);
     background: $white;
     box-shadow: inset 30px 0px 11px -30px rgba(0,0,0,0.7);
@@ -372,6 +372,7 @@ form {
     a{
         outline: none;
     }
+
 
     .all-games-block {
         width: 95%;

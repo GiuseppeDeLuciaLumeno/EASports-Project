@@ -12999,6 +12999,7 @@ form .create-account .text-colapse p {
 }
 
 .modal-wrapper {
+  opacity: 1;
   height: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
