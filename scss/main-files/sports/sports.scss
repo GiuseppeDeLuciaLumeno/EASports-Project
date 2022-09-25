@@ -314,3 +314,50 @@ header {
 
   }
 }
+
+//Banner Bot
+
+#banner-bot {
+  background: url(../../../assets/img/josephine_page/background-banner-bot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  @include media-breakpoint-down(md) {
+    background: #fff;
+  }
+
+  .row {
+    height: 6rem;
+
+    @include media-breakpoint-down(lg) {
+      height: 10rem;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    font-family: "Juana W05 Bold";
+    margin-bottom: 0;
+  }
+
+  .btn-container-bot {
+    height: 75px;
+
+    .btn-jo-bot {
+      cursor: pointer;
+      background: #ed4344;
+      border-radius: 3px;
+      padding: 12px 24px;
+      width: 100%;
+      transition: padding 0.1s;
+      font-family: "FS Industrie W05 Regular";
+      font-size: 18px;
+      color: #fff;
+    
+      &:hover {
+          padding: 15px 30px;
+      }
+    }
+  }
+}

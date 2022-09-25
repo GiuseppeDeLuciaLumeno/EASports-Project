@@ -13504,3 +13504,45 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
 .btn-outline-light:hover {
   padding: 14px 28px;
 }
+
+#banner-bot {
+  background: url(../../../assets/img/josephine_page/background-banner-bot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+@media (max-width: 767.98px) {
+  #banner-bot {
+    background: #fff;
+  }
+}
+#banner-bot .row {
+  height: 6rem;
+}
+@media (max-width: 991.98px) {
+  #banner-bot .row {
+    height: 10rem;
+  }
+}
+#banner-bot p {
+  font-size: 24px;
+  font-family: "Juana W05 Bold";
+  margin-bottom: 0;
+}
+#banner-bot .btn-container-bot {
+  height: 75px;
+}
+#banner-bot .btn-container-bot .btn-jo-bot {
+  cursor: pointer;
+  background: #ed4344;
+  border-radius: 3px;
+  padding: 12px 24px;
+  width: 100%;
+  transition: padding 0.1s;
+  font-family: "FS Industrie W05 Regular";
+  font-size: 18px;
+  color: #fff;
+}
+#banner-bot .btn-container-bot .btn-jo-bot:hover {
+  padding: 15px 30px;
+}
