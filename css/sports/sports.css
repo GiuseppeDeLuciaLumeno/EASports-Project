@@ -1,6 +1,302 @@
 @charset "UTF-8";
-@import "/node_modules/flag-icons/css/flag-icons.min.css"; /* Box sizing rules */
 @import url(/t/1.css?apiType=css&projectid=d2185c81-76fa-4b2a-9876-0e4480705aac);
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
+@font-face {
+  font-family: "Juana W05 Bold";
+  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=07bbdfe9-dc82-47d5-8fe5-4750d59a5b4d&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=07bbdfe9-dc82-47d5-8fe5-4750d59a5b4d&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+}
+@font-face {
+  font-family: "Juana W05 Bold It";
+  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=2a4c2f3c-c8b7-4960-95a7-0b50e020ab74&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=2a4c2f3c-c8b7-4960-95a7-0b50e020ab74&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+}
+@font-face {
+  font-family: "FS Industrie W05 Regular";
+  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=614811f6-27e8-4c96-9df7-d72514687f33&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=614811f6-27e8-4c96-9df7-d72514687f33&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+}
+@font-face {
+  font-family: "FS Industrie W05 Italic";
+  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=b61c664f-1a3a-4faa-a1d6-42a0b46c9c42&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,aa-ab,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=b61c664f-1a3a-4faa-a1d6-42a0b46c9c42&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,aa-ab,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+}
+@font-face {
+  font-family: "FS Industrie W05 Bold";
+  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=d227881e-6f79-4812-a16a-53929c4bb75c&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=d227881e-6f79-4812-a16a-53929c4bb75c&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
+}
+.home-h3 {
+  font-size: 2rem;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+}
+@media (min-width: 48rem) {
+  .home-h3 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-h3 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-h3 {
+    font-size: 2.75rem;
+  }
+}
+
+.home-h4 {
+  font-size: 1.25rem;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+  margin-top: 5px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+}
+@media (min-width: 48rem) {
+  .home-h4 {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 64rem) {
+  .home-h4 {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+}
+@media (min-width: 91rem) {
+  .home-h4 {
+    font-size: 1.5rem;
+    line-height: 32.4px;
+  }
+}
+
+.home-h5 {
+  font-size: 0.875rem;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 19px;
+  color: hsla(0deg, 0%, 9%, 0.8);
+  margin-block: 0;
+}
+.home-h5:first-child {
+  color: hsl(0deg, 100%, 64%);
+}
+@media (min-width: 48rem) {
+  .home-h5 {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-h5 {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-h5 {
+    font-size: 1rem;
+  }
+}
+
+.home-p {
+  font-size: 1rem;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  line-height: 1.5rem;
+  color: hsla(0deg, 0%, 9%, 0.8);
+  margin-top: 6px;
+}
+@media (min-width: 48rem) {
+  .home-p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-p {
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-p {
+    font-size: 1.125rem;
+  }
+}
+
+.home-tabs {
+  font-size: 1rem;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsla(0deg, 0%, 9%, 0.8);
+  text-decoration: none;
+}
+@media (min-width: 48rem) {
+  .home-tabs {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-tabs {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-tabs {
+    font-size: 1.125rem;
+  }
+}
+
+.home-cta {
+  font-size: 1rem;
+}
+@media (min-width: 48rem) {
+  .home-cta {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  .home-cta {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 91rem) {
+  .home-cta {
+    font-size: 1.125rem;
+  }
+}
+
+.card {
+  position: relative;
+  text-align: center;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0 3px 10px -2px hsla(0deg, 0%, 0%, 0.5);
+  transition: 0.5s ease;
+}
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
+}
+.card a {
+  text-decoration: none;
+  display: block;
+}
+.card a .img {
+  display: none;
+}
+.card a .content {
+  padding: 1.5rem 1rem;
+}
+.card a .content .info {
+  display: flex;
+  flex-direction: column;
+}
+.card a .content .card-p {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .card a .img {
+    display: block;
+  }
+  .card a .content {
+    padding: 1.5rem 1.5rem;
+  }
+  .card a .content .info {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .card a .content .card-h4 {
+    text-align: left;
+  }
+  .card a .content .card-p {
+    display: block;
+    text-align: left;
+  }
+}
+
+.cards-container-active .card {
+  animation: activation-animation 0.5s ease;
+}
+@keyframes activation-animation {
+  from {
+    transform: translateY(-12px);
+    box-shadow: 0px 28px 30px -3px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    box-shadow: 0 3px 10px -2px hsla(0deg, 0%, 0%, 0.5);
+  }
+}
+
+.slider-tab-container {
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease;
+}
+.slider-tab-container:hover {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+}
+.slider-tab-container::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  width: 0%;
+  height: 2px;
+  background-color: hsl(0deg, 100%, 64%);
+  transition: width 0.1s ease-out;
+}
+.slider-tab-container .slider-tab {
+  padding-inline: 1rem;
+}
+
+.slider-tab-container + .slider-tab-container .slider-tab {
+  border-left: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(1) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(2) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(3) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(4) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(5) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(6) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(7) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container.active {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+  position: relative;
+}
+.slider-tab-container.active::before {
+  width: 80%;
+}
+.slider-tab-container.active .slider-tab {
+  color: hsl(0deg, 0%, 42%);
+}
+
+@media (min-width: 48rem) {
+  .slider-tab-container {
+    height: 60px;
+  }
+}
+/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -84,7 +380,7 @@ select {
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
 footer {
-  font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: ElectronicArtsText, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   background-color: #f3f3f3;
 }
@@ -607,6 +903,132 @@ footer {
   .footer-main-link .footer-privacy .image-privacy {
     justify-content: flex-start;
   }
+}
+
+.section-container {
+  padding-inline: 7.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 48rem) {
+  .section-container {
+    padding-inline: calc(12px + 7.8125vw);
+  }
+}
+@media (min-width: 64rem) {
+  .section-container {
+    padding-inline: calc(8px + 7.4218vw);
+  }
+}
+@media (min-width: 91rem) {
+  .section-container {
+    padding-inline: calc((100vw - 1120px) / 2);
+  }
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "one" "two" "three" "four" "five" "six";
+}
+@media (min-width: 48rem) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "one two" "three four" "five six";
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 64rem) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "one two three" "four five six";
+    gap: 1rem;
+  }
+}
+@media (min-width: 91rem) {
+  .grid-container {
+    width: 68rem;
+  }
+}
+
+.section-container {
+  position: relative;
+}
+.section-container .slider-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-container .slider-container .arrow-container {
+  height: 50px;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-container .slider-container .arrow-container::before, .section-container .slider-container .arrow-container::after {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 15px;
+  border-radius: 3px;
+  background-color: hsla(0deg, 0%, 9%, 0.5);
+  position: absolute;
+}
+@media (min-width: 48rem) {
+  .section-container .slider-container .arrow-container {
+    height: 60px;
+  }
+}
+.section-container .slider-container .arrow-container-left {
+  left: 0;
+  padding-inline: 20px 40px;
+  background: linear-gradient(90deg, rgb(242, 242, 242) 70%, rgba(242, 242, 242, 0.5) 85%, rgba(0, 212, 255, 0) 100%);
+}
+.section-container .slider-container .arrow-container-left::before {
+  transform: rotate(48.5deg);
+  margin-top: 9.5px;
+}
+.section-container .slider-container .arrow-container-left::after {
+  transform: rotate(-48.5deg);
+  margin-top: -9.5px;
+}
+.section-container .slider-container .arrow-container-right {
+  right: 0;
+  padding-inline: 40px 20px;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0) 0%, rgba(242, 242, 242, 0.5) 15%, rgb(242, 242, 242) 30%);
+}
+.section-container .slider-container .arrow-container-right::before {
+  transform: rotate(-48.5deg);
+  margin-top: 9.5px;
+}
+.section-container .slider-container .arrow-container-right::after {
+  transform: rotate(48.5deg);
+  margin-top: -9.5px;
+}
+@media (min-width: 56.6875rem) {
+  .section-container .slider-container .arrow-container {
+    display: none;
+  }
+}
+.section-container .slider-container ul {
+  display: flex;
+}
+.section-container .slider-container ul li {
+  flex: 0 0 auto;
+  list-style: none;
+}
+.section-container .slider-container .border-bottom {
+  align-self: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  margin-top: -2px;
+  left: 0;
+  background-color: hsla(0deg, 0%, 0%, 0.08);
+  z-index: 2;
 }
 
 /*!
@@ -12811,26 +13233,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-@font-face {
-  font-family: "Juana W05 Bold";
-  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=07bbdfe9-dc82-47d5-8fe5-4750d59a5b4d&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=07bbdfe9-dc82-47d5-8fe5-4750d59a5b4d&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
-}
-@font-face {
-  font-family: "Juana W05 Bold It";
-  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=2a4c2f3c-c8b7-4960-95a7-0b50e020ab74&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=2a4c2f3c-c8b7-4960-95a7-0b50e020ab74&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
-}
-@font-face {
-  font-family: "FS Industrie W05 Regular";
-  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=614811f6-27e8-4c96-9df7-d72514687f33&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=614811f6-27e8-4c96-9df7-d72514687f33&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
-}
-@font-face {
-  font-family: "FS Industrie W05 Italic";
-  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=b61c664f-1a3a-4faa-a1d6-42a0b46c9c42&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,aa-ab,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=b61c664f-1a3a-4faa-a1d6-42a0b46c9c42&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,aa-ab,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
-}
-@font-face {
-  font-family: "FS Industrie W05 Bold";
-  src: url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=d227881e-6f79-4812-a16a-53929c4bb75c&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"), url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=d227881e-6f79-4812-a16a-53929c4bb75c&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
-}
 * {
   margin: 0;
   padding: 0;
@@ -12945,6 +13347,9 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
 #card-section .card-jo:hover > .logo {
   transform: scale(1.1);
 }
+#card-section .button-height {
+  height: 8rem;
+}
 
 .btn-lg, .btn-group-lg > .btn {
   --bs-btn-border-radius: 0.2rem;
@@ -13002,4 +13407,100 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
 }
 #card-mobile .card-jo:hover > .logo {
   transform: scale(1.1);
+}
+
+#last-news h3, #last-news .h3 {
+  font-size: 40px;
+  font-family: "Juana W05 Bold";
+}
+
+#ultime-novita {
+  background-color: rgb(242, 242, 242);
+  overflow: hidden;
+}
+#ultime-novita #h3 {
+  margin-bottom: 20px;
+  margin-inline: auto;
+}
+#ultime-novita #slider-container {
+  height: 50px;
+  align-self: flex-start;
+  margin-bottom: 40px;
+}
+#ultime-novita .cards-container-1,
+#ultime-novita .cards-container-2,
+#ultime-novita .cards-container-3,
+#ultime-novita .cards-container-4,
+#ultime-novita .cards-container-5,
+#ultime-novita .cards-container-6,
+#ultime-novita .cards-container-7,
+#ultime-novita .cards-container-8 {
+  margin-bottom: 40px;
+  display: none;
+}
+#ultime-novita .cards-container-active {
+  display: grid;
+}
+#ultime-novita .cta {
+  margin-inline: auto;
+}
+@media (min-width: 48rem) {
+  #ultime-novita #slider-container {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 64rem) {
+  #ultime-novita #slider-container {
+    margin-bottom: 60px;
+  }
+}
+
+.btn-container {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  margin: 0rem 0rem 5rem;
+}
+
+.btn-jo {
+  cursor: pointer;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  padding: 12px 24px;
+  width: 100%;
+  transition: padding 0.1s;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.9;
+}
+.btn-jo:hover {
+  padding: 15px 30px;
+}
+
+.btn-jo-blk {
+  cursor: pointer;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 3px;
+  padding: 12px 24px;
+  width: 100%;
+  transition: padding 0.1s;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #000;
+  opacity: 0.9;
+}
+.btn-jo-blk:hover {
+  padding: 15px 30px;
+}
+
+.btn-outline-light {
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-active-bg: transparent;
+}
+.btn-outline-light:hover {
+  padding: 14px 28px;
 }
