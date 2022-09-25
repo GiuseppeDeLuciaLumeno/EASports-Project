@@ -23,6 +23,9 @@
    margin-left: 30px;
    margin-right: 30px;
 
+   &:hover{
+    
+   }
      
   
 }
@@ -33,7 +36,7 @@
     display: flex;
     position: absolute;
     top: 70px;
-    left: 50px;
+    left: 40px;
     color: white;
     
    }
@@ -41,48 +44,22 @@
 .arrow{
     display: flex;
     position: absolute;
-    bottom: 30px;
-    left: 50px;
+    top: 130px;
+    left: 40px;
     
 
     &:hover{
-    display: flex;
-    position: absolute;
-    bottom: 30px;
-    left: 50px;
+    
     width: 42px;
     height: 42px;
     transition: 1s;
 
     }
-   }
-
-
-
-   .subtitle2{
+}
+.transformimg2{
     display: flex;
-    position: absolute;
-    top: 125px;
-    left: 610px;
-    color: white;
-    
-   }
+    position: relative;
+}
 
-.arrow2{
-    display: flex;
-    position: absolute;
-    bottom: 490px;
-    left: 610px;
-    
-    &:hover{
-    display: flex;
-    position: absolute;
-    bottom: 30px;
-    left: 50px;
-    width: 42px;
-    height: 42px;
-    transition: 1s;
 
-    }
-   }
    /*FINE CARD*/ 
