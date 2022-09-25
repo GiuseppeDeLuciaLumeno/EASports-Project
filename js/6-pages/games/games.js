@@ -6,21 +6,21 @@ const blackBackground = document.querySelector(".lower-header");
 const body = document.querySelector(".click-out")
 
 
-//Aside menu activate with dots
+//Aside Menu activate with dots
 asideShow.addEventListener("click", () => {
     asideShow.classList.toggle("active");
     blackBackground.classList.toggle("active");
    /*  modal.showModal() */;
 });
 
-//Aside menu Disactivate with I-icon
+//Aside Menu Disactivate with I-icon
 asidehide.addEventListener("click", () => {
    asideShow.classList.remove("active");
    blackBackground.classList.remove("active");
  /*   modal.close(); */
 });
 
-//Aside menu Disactivate width Esc key
+//Aside Menu Disactivate width Esc key
 window.addEventListener("keydown", keypress);
   function keypress(key) {
     if (key.keyCode == 27) {
@@ -29,7 +29,7 @@ window.addEventListener("keydown", keypress);
     }
   }
 
-//Aside menu Disactivate by clicking anywhere else
+//Aside Menu Disactivate by clicking anywhere else
 window.addEventListener("mouseup", function (event) {
   if (event.target == body) {
     asideShow.classList.remove("active");
@@ -45,7 +45,7 @@ window.addEventListener("mouseup", function (event) {
 });
 
 
-//Aside menu activate with burger menu
+//Aside Menu activate with burger menu
 const burger = document.querySelector(".burger");
 
 burger.addEventListener("click", () => {
@@ -56,6 +56,22 @@ burger.addEventListener("click", () => {
 asidehide.addEventListener("click", () => {
     burger.classList.remove("active");
 });
+
+
+
+
+//Modal Interrogative point
+const interrogative = document.getElementById("open-modal");
+const myModal = document.getElementById("fixed");
+const iconX = document.getElementById("icon-x-modal");
+
+interrogative.addEventListener("click", () => {
+  myModal.classList.toggle("active");
+});
+
+iconX.addEventListener("click", () => {
+  myModal.classList.remove("active");
+})
 
 
 

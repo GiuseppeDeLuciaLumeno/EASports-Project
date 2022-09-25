@@ -493,22 +493,30 @@ form {
     }
 }
 
-#fixed{
+#fixed {
+    opacity: 0;
     position: fixed;
     top: 1rem;
     left: 0%;
     width: 100%;
     z-index: 0;
-    .bi-x-lg{
+    overflow: hidden;
+    transition: opacity 0.15s linear;
+    .bi-x-lg {
         position: absolute;
         top: 2.5rem;
         right: 1rem;
     }
+
+    &.active{
+        overflow: visible;
+        opacity: 1;
+    }
 }
 
 .second-modal-wrapper {
-    padding: 6rem 0 3rem;
     background: lighten($header-base-color, 8.5);
+    padding: 6rem 0 3rem;
     display: grid;
     grid-template-columns: repeat(2, 300px);
     grid-template-rows: auto;
@@ -533,24 +541,31 @@ form {
         grid-area: grid-first-icon;
         display: grid;
         justify-items: center;
+        @extend .login-logo
     }
 
     .grid-second-icon {
         grid-area: grid-second-icon;
         display: grid;
         justify-items: center;
+        @extend .login-logo
     }
 
     .grid-third-icon {
         grid-area: grid-third-icon;
         display: grid;
         justify-items: center;
+        @extend .login-logo;
+        padding: 1rem 0;
+
     }
 
     .grid-fourth-icon {
         grid-area: grid-fourth-icon;
         display: grid;
         justify-items: center;
+        @extend .login-logo;
+        padding: 1rem 0;
     }
 
     .grid-footer {

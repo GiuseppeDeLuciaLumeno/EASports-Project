@@ -12763,27 +12763,27 @@ form .ea-logo {
 form .ea-logo:hover {
   filter: invert(10%) sepia(0%) saturate(0%) hue-rotate(294deg) brightness(99%) contrast(92%);
 }
-form .login-logo {
+form .login-logo, form .second-modal-wrapper .grid-fourth-icon, .second-modal-wrapper form .grid-fourth-icon, form .second-modal-wrapper .grid-third-icon, .second-modal-wrapper form .grid-third-icon, form .second-modal-wrapper .grid-second-icon, .second-modal-wrapper form .grid-second-icon, form .second-modal-wrapper .grid-first-icon, .second-modal-wrapper form .grid-first-icon {
   cursor: pointer;
 }
-form .login-logo .translate {
+form .login-logo .translate, form .second-modal-wrapper .grid-fourth-icon .translate, .second-modal-wrapper form .grid-fourth-icon .translate, form .second-modal-wrapper .grid-third-icon .translate, .second-modal-wrapper form .grid-third-icon .translate, form .second-modal-wrapper .grid-second-icon .translate, .second-modal-wrapper form .grid-second-icon .translate, form .second-modal-wrapper .grid-first-icon .translate, .second-modal-wrapper form .grid-first-icon .translate {
   transition: transform 0.2s ease-in-out;
 }
-form .login-logo:hover .translate {
+form .login-logo:hover .translate, form .second-modal-wrapper .grid-fourth-icon:hover .translate, .second-modal-wrapper form .grid-fourth-icon:hover .translate, form .second-modal-wrapper .grid-third-icon:hover .translate, .second-modal-wrapper form .grid-third-icon:hover .translate, form .second-modal-wrapper .grid-second-icon:hover .translate, .second-modal-wrapper form .grid-second-icon:hover .translate, form .second-modal-wrapper .grid-first-icon:hover .translate, .second-modal-wrapper form .grid-first-icon:hover .translate {
   transform: translateY(-15px);
 }
-form .login-logo p {
+form .login-logo p, form .second-modal-wrapper .grid-fourth-icon p, .second-modal-wrapper form .grid-fourth-icon p, form .second-modal-wrapper .grid-third-icon p, .second-modal-wrapper form .grid-third-icon p, form .second-modal-wrapper .grid-second-icon p, .second-modal-wrapper form .grid-second-icon p, form .second-modal-wrapper .grid-first-icon p, .second-modal-wrapper form .grid-first-icon p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
   color: lightgray;
   font-size: 14px;
   margin-bottom: 0;
 }
 @media only screen and (max-width: 543px) {
-  form .login-logo {
+  form .login-logo, form .second-modal-wrapper .grid-fourth-icon, .second-modal-wrapper form .grid-fourth-icon, form .second-modal-wrapper .grid-third-icon, .second-modal-wrapper form .grid-third-icon, form .second-modal-wrapper .grid-second-icon, .second-modal-wrapper form .grid-second-icon, form .second-modal-wrapper .grid-first-icon, .second-modal-wrapper form .grid-first-icon {
     justify-content: flex-start !important;
     margin-inline: 10rem;
   }
-  form .login-logo p.translate {
+  form .login-logo p.translate, form .second-modal-wrapper .grid-fourth-icon p.translate, .second-modal-wrapper form .grid-fourth-icon p.translate, form .second-modal-wrapper .grid-third-icon p.translate, .second-modal-wrapper form .grid-third-icon p.translate, form .second-modal-wrapper .grid-second-icon p.translate, .second-modal-wrapper form .grid-second-icon p.translate, form .second-modal-wrapper .grid-first-icon p.translate, .second-modal-wrapper form .grid-first-icon p.translate {
     margin-left: 10px;
   }
 }
@@ -12812,7 +12812,7 @@ form .create-account .text-colapse p {
 }
 
 @media only screen and (min-width: 240px) and (max-width: 542px) {
-  .login-logo,
+  .login-logo, .second-modal-wrapper .grid-fourth-icon, .second-modal-wrapper .grid-third-icon, .second-modal-wrapper .grid-second-icon, .second-modal-wrapper .grid-first-icon,
 .create-account {
     width: 35px;
     display: flex;
@@ -13123,21 +13123,28 @@ form .create-account .text-colapse p {
 }
 
 #fixed {
+  opacity: 0;
   position: fixed;
   top: 1rem;
   left: 0%;
   width: 100%;
   z-index: 0;
+  overflow: hidden;
+  transition: opacity 0.15s linear;
 }
 #fixed .bi-x-lg {
   position: absolute;
   top: 2.5rem;
   right: 1rem;
 }
+#fixed.active {
+  overflow: visible;
+  opacity: 1;
+}
 
 .second-modal-wrapper {
-  padding: 6rem 0 3rem;
   background: #2c2c2c;
+  padding: 6rem 0 3rem;
   display: grid;
   grid-template-columns: repeat(2, 300px);
   grid-template-rows: auto;
@@ -13165,11 +13172,13 @@ form .create-account .text-colapse p {
   grid-area: grid-third-icon;
   display: grid;
   justify-items: center;
+  padding: 1rem 0;
 }
 .second-modal-wrapper .grid-fourth-icon {
   grid-area: grid-fourth-icon;
   display: grid;
   justify-items: center;
+  padding: 1rem 0;
 }
 .second-modal-wrapper .grid-footer {
   grid-area: grid-footer;
