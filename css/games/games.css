@@ -12999,7 +12999,6 @@ form .create-account .text-colapse p {
 }
 
 .modal-wrapper {
-  opacity: 1;
   height: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
@@ -13034,7 +13033,7 @@ form .create-account .text-colapse p {
   font-size: 18px;
   font-weight: 500;
   color: rgb(163, 163, 163);
-  transition: color 100ms ease-out;
+  transition: color 10ms ease-out;
 }
 .modal-wrapper .all-games-block p:hover {
   color: red;

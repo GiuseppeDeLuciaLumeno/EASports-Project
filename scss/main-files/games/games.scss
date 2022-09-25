@@ -353,7 +353,6 @@ form {
 
 //Aside Modal white                                  /////OKOKAOSKOAKSO
 .modal-wrapper {
-    opacity: 1;
     @include scroll-bar-hider(none);
     background: $white;
     box-shadow: inset 30px 0px 11px -30px rgba(0,0,0,0.7);
@@ -382,7 +381,7 @@ form {
             font-size: 18px;
             font-weight: 500;
             color: $text-aside;
-            transition: color 100ms ease-out;
+            transition: color 10ms ease-out;
 
             &:hover {
                 color: red;
