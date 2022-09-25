@@ -12963,3 +12963,43 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   color: #fff;
   margin-bottom: 0;
 }
+
+#card-mobile { /* stack everything on top of eachoter*/
+  /* hover effect */
+}
+#card-mobile h2, #card-mobile .h2 {
+  font-size: 40px;
+  font-family: "Juana W05 Bold";
+}
+#card-mobile .card-jo {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1;
+}
+#card-mobile .card-jo::after, #card-mobile .card-jo > * {
+  grid-row: 1;
+  grid-column: 1;
+}
+#card-mobile .card-jo::after { /* black layer with opacity*/
+  content: "";
+  background-color: black;
+  opacity: 0.5;
+  transition: opacity 250ms ease;
+}
+#card-mobile .card-jo > .cover { /* cover image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#card-mobile .card-jo > .logo { /* logo on top */
+  place-self: center;
+  max-width: 40%;
+  z-index: 1;
+  transition: transform 250ms ease;
+}
+#card-mobile .card-jo:hover::after {
+  opacity: 0;
+}
+#card-mobile .card-jo:hover > .logo {
+  transform: scale(1.1);
+}
