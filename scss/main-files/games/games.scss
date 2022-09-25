@@ -11,8 +11,8 @@
 
 
 //Header //
-html{
-    box-shadow: inset 30px 0px 11px -30px rgba(0,0,0,0.7);
+html {
+    box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
 }
 
 //Modal Black
@@ -220,6 +220,32 @@ form {
     gap: 30px;
     padding: 0.85rem 1rem 0.5rem;
 
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity .3s ease;
+        background: rgb(0, 0, 0,);
+        opacity: 0;
+        z-index: -2;
+    }
+
+    &.active::after{
+        content: "";
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgb(0, 0, 0,);
+        opacity: .8;
+        z-index: -4;
+    }
+
     @media only screen and (max-width: 1030px) {
         gap: 6px;
     }
@@ -289,6 +315,10 @@ form {
     position: relative;
     top: 2px;
     display: none; //from 1031 is hidden
+
+    &.active+.modal-wrapper {
+        transform: translateX(0%);
+    }
 }
 
 
@@ -296,6 +326,7 @@ form {
     display: flex;
     gap: 30px;
     margin-inline: 2rem;
+
     @media only screen and (max-width: 1030px) {
         display: none;
     }
@@ -351,27 +382,22 @@ form {
 }
 
 
-//Aside Modal white                                  /////OKOKAOSKOAKSO
+//Aside Modal white
 .modal-wrapper {
     @include scroll-bar-hider(none);
     background: $white;
-    box-shadow: inset 30px 0px 11px -30px rgba(0,0,0,0.7);
+    box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
     position: fixed;
-    top: 2.6rem;
-    left: -80%;
+    top: 2.5rem;
+    left: 0%;
     padding: 2.5rem 2rem 6rem;
     z-index: 1;
     transform: translateX(-100%);
-    transition: transform .5s cubic-bezier(.5,.25,.015,1);
-    border: none;
-    &::backdrop{
-        background: rgba(0, 0, 0, 0.80);  //To obscure background
-    }
+    transition: transform .5s cubic-bezier(.5, .25, .015, 1);
 
-    a{
+    a {
         outline: none;
     }
-
 
     .all-games-block {
         width: 95%;
@@ -389,11 +415,12 @@ form {
         }
 
         #icon-x {
-           cursor: pointer;
-           position: relative;
+            cursor: pointer;
+            position: relative;
             top: -5px;
             right: -10px;
             width: 20px;
+
             &:hover {
                 fill: red;
             }
@@ -425,9 +452,10 @@ form {
         position: relative;
     }
 
-    #hover-min-card{
+    #hover-min-card {
         cursor: pointer;
-        &:hover + #min-logo{
+
+        &:hover+#min-logo {
             transform: scale(1.14);
         }
     }
@@ -438,7 +466,8 @@ form {
         left: 30%;
         z-index: 1;
         transition: transform .2s ease;
-        &:hover{
+
+        &:hover {
             transform: scale(1.14);
         }
     }
@@ -454,4 +483,3 @@ form {
         }
     }
 }
-

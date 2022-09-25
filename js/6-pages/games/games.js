@@ -2,19 +2,22 @@ const modal = document.querySelector(".modal-wrapper");
 const asideShow = document.querySelector(".three-dots-container");
 const asidehide = document.getElementById("icon-x");
 const esc = document.querySelector(".icon-x");
-const allGames = document.querySelector(".all-games-block");
-const cards = document.querySelector(".card-wrapper");
+const blackBackground = document.querySelector(".lower-header");
+const body = document.querySelector(".click-out")
+
 
 //Aside menu activate with dots
 asideShow.addEventListener("click", () => {
     asideShow.classList.toggle("active");
-    modal.showModal();
+    blackBackground.classList.toggle("active");
+   /*  modal.showModal() */;
 });
 
 //Aside menu Disactivate with I-icon
 asidehide.addEventListener("click", () => {
    asideShow.classList.remove("active");
-   modal.close();
+   blackBackground.classList.remove("active");
+ /*   modal.close(); */
 });
 
 //Aside menu Disactivate width Esc key
@@ -26,7 +29,12 @@ window.addEventListener("keydown", keypress);
   }
 
 //Aside menu Disactivate by clicking anywhere else
-
+window.addEventListener("mouseup", function (event) {
+  if (event.target == body) {
+    asideShow.classList.remove("active");
+    blackBackground.classList.remove("active");
+  }
+});
 
 
 //Aside menu activate with burger menu
@@ -34,6 +42,7 @@ const burger = document.querySelector(".burger");
 
 burger.addEventListener("click", () => {
     burger.classList.toggle("active");
+    blackBackground.classList.toggle("active");
 });
 
 asidehide.addEventListener("click", () => {

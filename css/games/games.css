@@ -12820,6 +12820,29 @@ form .create-account .text-colapse p {
   gap: 30px;
   padding: 0.85rem 1rem 0.5rem;
 }
+.lower-header::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+  background: rgb(0, 0, 0);
+  opacity: 0;
+  z-index: -2;
+}
+.lower-header.active::after {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  opacity: 0.8;
+  z-index: -4;
+}
 @media only screen and (max-width: 1030px) {
   .lower-header {
     gap: 6px;
@@ -12884,6 +12907,9 @@ form .create-account .text-colapse p {
   .burger:hover .top-bar, .burger:hover .mid-bar, .burger:hover .low-bar {
     background: red;
   }
+}
+.burger.active + .modal-wrapper {
+  transform: translateX(0%);
 }
 
 .container-nav-menu {
@@ -13008,19 +13034,15 @@ form .create-account .text-colapse p {
   background: #fff;
   box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
   position: fixed;
-  top: 2.6rem;
-  left: -80%;
+  top: 2.5rem;
+  left: 0%;
   padding: 2.5rem 2rem 6rem;
   z-index: 1;
   transform: translateX(-100%);
   transition: transform 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
-  border: none;
 }
 .modal-wrapper::-webkit-scrollbar {
   display: none;
-}
-.modal-wrapper::backdrop {
-  background: rgba(0, 0, 0, 0.8);
 }
 .modal-wrapper a {
   outline: none;
