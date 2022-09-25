@@ -533,6 +533,7 @@ form {
         "grid-first-icon grid-second-icon"
         "grid-third-icon grid-fourth-icon"
         "grid-footer grid-footer";
+        row-gap: 10px;
     justify-content: center;
 
     .bi-x-lg {
@@ -541,8 +542,12 @@ form {
 
 
     .grid-header {
+        padding-bottom: 1rem;
         grid-area: grid-header;
         justify-self: center;
+        p{
+            font-size: 21px;
+        }
     }
 
     .grid-first-icon {
@@ -598,5 +603,7 @@ form {
 
     p {
         color: lightgray;
+        font-family: map-get($ultimi-giochi-font, text);
+        font-size: 16px;
     }
 }
