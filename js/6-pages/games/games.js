@@ -3,8 +3,9 @@ const asideShow = document.querySelector(".three-dots-container");
 const asidehide = document.getElementById("icon-x");
 const esc = document.querySelector(".icon-x");
 const blackBackground = document.querySelector(".lower-header");
-const body = document.querySelector(".click-out")
-
+const body = document.querySelector(".click-out");
+const blackBlock = document.querySelector(".black-block");
+const personIcon = document.getElementById("person-icon")
 
 //Aside Menu activate with dots
 asideShow.addEventListener("click", () => {
@@ -42,6 +43,10 @@ window.addEventListener("mouseup", function (event) {
     asideShow.classList.remove("active");
     blackBackground.classList.remove("active");
     burger.classList.remove("active");
+    myModal.classList.remove("active");
+  }
+
+  else if (event.target == blackBlock || event.target == personIcon) {
     myModal.classList.remove("active");
   }
 });
