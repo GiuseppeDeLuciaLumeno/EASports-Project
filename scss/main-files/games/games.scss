@@ -101,6 +101,7 @@ form {
     }
 
     .bi-person {
+        z-index: 1;
         position: relative;
         bottom: 2px;
         font-size: 23px;
@@ -109,34 +110,36 @@ form {
         cursor: pointer;
         color: $header-icon;
         transition: color .05s ease;
-
         &:hover {
             color: $header-icon-hover;
         }
     }
 
     svg {
+        z-index: 1;
         height: 17px;
         fill: $header-icon;
         cursor: pointer;
         transition: fill .05s ease;
-
+        z-index: 1;
         &:hover {
             fill: $header-icon-hover;
         }
     }
 
     .ea-logo {
+        z-index: 1;
+        position: relative;
         filter: $ea-logo-color;
         width: 41px;
         height: 21px;
         margin-right: 25px;
         cursor: pointer;
         transition: filter .05s ease;
-
         &:hover {
             filter: $ea-logo-hover-color;
         }
+
     }
 
     .login-logo {
@@ -219,7 +222,7 @@ form {
     align-items: center;
     gap: 30px;
     padding: 0.85rem 1rem 0.5rem;
-
+    z-index: 2;
 
     &::after{
         content: "";
@@ -228,10 +231,10 @@ form {
         position: absolute;
         top: 0;
         left: 0;
-        transition: opacity .3s ease;
-        background: rgb(0, 0, 0,);
+        transition: opacity 350ms ease;
+        background: #161616;
         opacity: 0;
-        z-index: -2;
+        z-index: -1;
     }
 
     &.active::after{
@@ -241,10 +244,12 @@ form {
         position: absolute;
         top: 0;
         left: 0;
-        background: rgb(0, 0, 0,);
+        background: #161616;
         opacity: .8;
-        z-index: -4;
+        z-index: 0;
     }
+
+
 
     @media only screen and (max-width: 1030px) {
         gap: 6px;
@@ -326,7 +331,7 @@ form {
     display: flex;
     gap: 30px;
     margin-inline: 2rem;
-
+    z-index: 0;
     @media only screen and (max-width: 1030px) {
         display: none;
     }

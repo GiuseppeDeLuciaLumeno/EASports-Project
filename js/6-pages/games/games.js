@@ -25,6 +25,7 @@ window.addEventListener("keydown", keypress);
   function keypress(key) {
     if (key.keyCode == 27) {
         asideShow.classList.remove("active");
+        blackBackground.classList.remove("active");
     }
   }
 
@@ -33,6 +34,13 @@ window.addEventListener("mouseup", function (event) {
   if (event.target == body) {
     asideShow.classList.remove("active");
     blackBackground.classList.remove("active");
+    burger.classList.remove("active");
+  }
+
+  else if (event.target == blackBackground) {
+    asideShow.classList.remove("active");
+    blackBackground.classList.remove("active");
+    burger.classList.remove("active");
   }
 });
 
