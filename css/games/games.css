@@ -12674,7 +12674,7 @@ html {
 }
 
 .modal-content {
-  background-color: #161616;
+  background-color: rgb(26, 25, 25);
   position: relative;
   left: 0;
   top: 10px;
@@ -12723,7 +12723,7 @@ form .black-block {
   justify-content: flex-end;
   gap: 30px;
   padding: 5px 0;
-  background: #2c2c2c;
+  background: rgb(26, 25, 25);
 }
 form .bi-person {
   z-index: 1;
@@ -13149,7 +13149,7 @@ form .create-account .text-colapse p {
 }
 
 .second-modal-wrapper {
-  background: #2c2c2c;
+  background: rgb(26, 25, 25);
   padding: 6rem 0 3rem;
   display: grid;
   grid-template-columns: repeat(2, 300px);

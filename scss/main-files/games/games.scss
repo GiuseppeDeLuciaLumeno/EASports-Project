@@ -97,7 +97,7 @@ form {
         justify-content: flex-end;
         gap: 30px;
         padding: 5px 0;
-        background: lighten($header-base-color, 8.5);
+        background: $header-base-color;
     }
 
     .bi-person {
@@ -523,7 +523,7 @@ form {
 }
 
 .second-modal-wrapper {
-    background: lighten($header-base-color, 8.5);
+    background: $header-base-color;
     padding: 6rem 0 3rem;
     display: grid;
     grid-template-columns: repeat(2, 300px);
