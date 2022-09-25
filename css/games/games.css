@@ -12886,10 +12886,6 @@ form .create-account .text-colapse p {
   }
 }
 
-.burger.active + .modal-wrapper {
-  transform: translateX(0%);
-}
-
 .container-nav-menu {
   display: flex;
   gap: 30px;
@@ -12903,40 +12899,40 @@ form .create-account .text-colapse p {
 
 .ea-dropdown:nth-child(1) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 17px;
   font-weight: lighter;
+  font-size: 17px;
   color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(2) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 17px;
   font-weight: lighter;
+  font-size: 17px;
   color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(3) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 17px;
   font-weight: lighter;
+  font-size: 17px;
   color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(4) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 17px;
   font-weight: lighter;
+  font-size: 17px;
   color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(5) p {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-size: 17px;
   font-weight: lighter;
+  font-size: 17px;
   color: #000;
   transition: color 200ms ease;
 }
@@ -13003,27 +12999,34 @@ form .create-account .text-colapse p {
 }
 
 .modal-wrapper {
-  background: #fff;
-  box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
   height: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
   /* firefox */
   scroll-snap-type: mandatory;
   scroll-behavior: smooth;
+  background: #fff;
+  box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
   position: fixed;
-  top: 2.5rem;
-  left: 0;
+  top: 2.6rem;
+  left: -80%;
   padding: 2.5rem 2rem 6rem;
   z-index: 1;
   transform: translateX(-100%);
   transition: transform 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
+  border: none;
 }
 .modal-wrapper::-webkit-scrollbar {
   display: none;
 }
+.modal-wrapper::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+.modal-wrapper a {
+  outline: none;
+}
 .modal-wrapper .all-games-block {
-  width: 296px;
+  width: 95%;
 }
 .modal-wrapper .all-games-block p {
   cursor: pointer;
