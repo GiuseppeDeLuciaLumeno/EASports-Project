@@ -35,12 +35,14 @@ window.addEventListener("mouseup", function (event) {
     asideShow.classList.remove("active");
     blackBackground.classList.remove("active");
     burger.classList.remove("active");
+    myModal.classList.remove("active");
   }
 
   else if (event.target == blackBackground) {
     asideShow.classList.remove("active");
     blackBackground.classList.remove("active");
     burger.classList.remove("active");
+    myModal.classList.remove("active");
   }
 });
 

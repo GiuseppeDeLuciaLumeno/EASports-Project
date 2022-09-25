@@ -496,21 +496,29 @@ form {
 #fixed {
     opacity: 0;
     position: fixed;
-    top: 1rem;
+    top: 2.5rem;
     left: 0%;
     width: 100%;
     z-index: 0;
     overflow: hidden;
-    transition: opacity 0.15s linear;
+    transition: opacity 0.20s linear;
+
     .bi-x-lg {
+        font-weight: bolder;
         position: absolute;
-        top: 2.5rem;
+        top: 1rem;
         right: 1rem;
+        color: rgb(163, 163, 163);
+
+        &:hover {
+            color: white;
+        }
     }
 
-    &.active{
+    &.active {
         overflow: visible;
         opacity: 1;
+        z-index: 1;
     }
 }
 
@@ -540,35 +548,42 @@ form {
     .grid-first-icon {
         grid-area: grid-first-icon;
         display: grid;
-        justify-items: center;
-        @extend .login-logo
+        justify-content: center;
+
+        .hover{
+
+            cursor: pointer;
+            &:hover .translate{
+                transform: translateY(-15px);
+            }
+            .translate,
+            .text-colapse p{
+                transition: transform .2s ease-in-out;
+            }
+
+            &:hover .text-colapse p{
+                transform: translateY(-15px);
+            }
+        }
     }
 
     .grid-second-icon {
+        @extend .grid-first-icon;
         grid-area: grid-second-icon;
-        display: grid;
-        justify-items: center;
-        @extend .login-logo
     }
 
     .grid-third-icon {
+        @extend .grid-first-icon;
         grid-area: grid-third-icon;
-        display: grid;
-        justify-items: center;
-        @extend .login-logo;
-        padding: 1rem 0;
-
     }
 
     .grid-fourth-icon {
+        @extend .grid-first-icon;
         grid-area: grid-fourth-icon;
-        display: grid;
-        justify-items: center;
-        @extend .login-logo;
-        padding: 1rem 0;
     }
 
     .grid-footer {
+        justify-self: flex-end;
         grid-area: grid-footer;
 
         p {
@@ -584,5 +599,4 @@ form {
     p {
         color: lightgray;
     }
-
 }
