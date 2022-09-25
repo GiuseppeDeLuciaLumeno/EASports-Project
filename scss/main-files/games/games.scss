@@ -110,6 +110,7 @@ form {
         cursor: pointer;
         color: $header-icon;
         transition: color .05s ease;
+
         &:hover {
             color: $header-icon-hover;
         }
@@ -122,6 +123,7 @@ form {
         cursor: pointer;
         transition: fill .05s ease;
         z-index: 1;
+
         &:hover {
             fill: $header-icon-hover;
         }
@@ -136,6 +138,7 @@ form {
         margin-right: 25px;
         cursor: pointer;
         transition: filter .05s ease;
+
         &:hover {
             filter: $ea-logo-hover-color;
         }
@@ -224,7 +227,7 @@ form {
     padding: 0.85rem 1rem 0.5rem;
     z-index: 2;
 
-    &::after{
+    &::after {
         content: "";
         width: 100%;
         height: 100vh;
@@ -237,7 +240,7 @@ form {
         z-index: -1;
     }
 
-    &.active::after{
+    &.active::after {
         content: "";
         width: 100%;
         height: 100vh;
@@ -332,6 +335,7 @@ form {
     gap: 30px;
     margin-inline: 2rem;
     z-index: 0;
+
     @media only screen and (max-width: 1030px) {
         display: none;
     }
@@ -487,4 +491,83 @@ form {
             margin-left: 0;
         }
     }
+}
+
+#fixed{
+    position: fixed;
+    top: 1rem;
+    left: 0%;
+    width: 100%;
+    z-index: 0;
+    .bi-x-lg{
+        position: absolute;
+        top: 2.5rem;
+        right: 1rem;
+    }
+}
+
+.second-modal-wrapper {
+    padding: 6rem 0 3rem;
+    background: lighten($header-base-color, 8.5);
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "grid-header grid-header"
+        "grid-first-icon grid-second-icon"
+        "grid-third-icon grid-fourth-icon"
+        "grid-footer grid-footer";
+    justify-content: center;
+
+    .bi-x-lg {
+        color: $header-icon;
+    }
+
+
+    .grid-header {
+        grid-area: grid-header;
+        justify-self: center;
+    }
+
+    .grid-first-icon {
+        grid-area: grid-first-icon;
+        display: grid;
+        justify-items: center;
+    }
+
+    .grid-second-icon {
+        grid-area: grid-second-icon;
+        display: grid;
+        justify-items: center;
+    }
+
+    .grid-third-icon {
+        grid-area: grid-third-icon;
+        display: grid;
+        justify-items: center;
+    }
+
+    .grid-fourth-icon {
+        grid-area: grid-fourth-icon;
+        display: grid;
+        justify-items: center;
+    }
+
+    .grid-footer {
+        grid-area: grid-footer;
+
+        p {
+            color: lightgray;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+        }
+    }
+
+    p {
+        color: lightgray;
+    }
+
 }

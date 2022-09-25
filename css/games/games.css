@@ -13121,3 +13121,66 @@ form .create-account .text-colapse p {
   margin-right: 0;
   margin-left: 0;
 }
+
+#fixed {
+  position: fixed;
+  top: 1rem;
+  left: 0%;
+  width: 100%;
+  z-index: 0;
+}
+#fixed .bi-x-lg {
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+}
+
+.second-modal-wrapper {
+  padding: 6rem 0 3rem;
+  background: #2c2c2c;
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-template-rows: auto;
+  grid-template-areas: "grid-header grid-header" "grid-first-icon grid-second-icon" "grid-third-icon grid-fourth-icon" "grid-footer grid-footer";
+  justify-content: center;
+}
+.second-modal-wrapper .bi-x-lg {
+  color: rgb(163, 163, 163);
+}
+.second-modal-wrapper .grid-header {
+  grid-area: grid-header;
+  justify-self: center;
+}
+.second-modal-wrapper .grid-first-icon {
+  grid-area: grid-first-icon;
+  display: grid;
+  justify-items: center;
+}
+.second-modal-wrapper .grid-second-icon {
+  grid-area: grid-second-icon;
+  display: grid;
+  justify-items: center;
+}
+.second-modal-wrapper .grid-third-icon {
+  grid-area: grid-third-icon;
+  display: grid;
+  justify-items: center;
+}
+.second-modal-wrapper .grid-fourth-icon {
+  grid-area: grid-fourth-icon;
+  display: grid;
+  justify-items: center;
+}
+.second-modal-wrapper .grid-footer {
+  grid-area: grid-footer;
+}
+.second-modal-wrapper .grid-footer p {
+  color: lightgray;
+}
+.second-modal-wrapper .grid-footer a {
+  color: red;
+  text-decoration: none;
+}
+.second-modal-wrapper p {
+  color: lightgray;
+}
