@@ -350,6 +350,52 @@ select {
   }
 }
 
+/* navbar -------------------------*/
+header .hero {
+  position: relative;
+}
+header .hero video {
+  width: 100%;
+  display: none;
+}
+header .hero picture img {
+  width: 100%;
+}
+header .hero picture.pegi {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+@media (min-width: 48rem) {
+  header .hero picture.pegi {
+    display: block;
+  }
+}
+@media (min-width: 64rem) {
+  header .hero video:nth-child(2) {
+    display: block;
+    position: absolute;
+    z-index: -10;
+  }
+  header .hero picture.games {
+    display: none;
+  }
+  header .hero picture.pegi {
+    position: relative;
+  }
+}
+@media (min-width: 91rem) {
+  header .hero video:nth-child(1) {
+    display: block;
+  }
+  header .hero video:nth-child(2) {
+    display: none;
+  }
+  header .hero picture.pegi {
+    position: absolute;
+  }
+}
+
 /* footer -------------------------*/
 /* Box sizing rules */
 *,

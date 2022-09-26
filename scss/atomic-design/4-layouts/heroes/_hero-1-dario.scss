@@ -1,0 +1,70 @@
+header {
+  .hero {
+    position: relative;
+
+    video {
+      width: 100%;
+      display: none;
+    }
+  
+    picture {
+      img {
+        width: 100%;
+      }
+
+      &.pegi {
+        position: absolute;
+        inset: 0;
+        display: none;
+      }
+    }
+  }
+
+  @include da-breakpoint(tablet) {
+    .hero {
+      picture {
+        &.pegi {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include da-breakpoint(desktop) {
+    .hero {
+      video:nth-child(2) {
+        display: block;
+        position: absolute;
+        z-index: -10;
+      }
+
+      picture {
+        &.games {
+          display: none;
+        }
+
+        &.pegi {
+          position: relative;
+        }
+      }
+    }
+  }
+
+  @include da-breakpoint(desktop-large) {
+    .hero {
+      video:nth-child(1) {
+        display: block;
+      }
+
+      video:nth-child(2) {
+        display: none;
+      }
+
+      picture {
+        &.pegi {
+          position: absolute;
+        }
+      }
+    }
+  }
+}
