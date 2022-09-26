@@ -361,3 +361,41 @@ header {
     }
   }
 }
+
+// Banner Social
+#banner-social {
+  background-color: #eaeaea;
+
+  .row {
+    height: 10rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+
+    li {
+      text-decoration: none;
+      
+      a {
+        font-size: 16px;
+        font-family: "FS Industrie W05 Regular";
+        color: #161616;
+        text-decoration: none;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 14px;
+    font-family: "Juana W05 Bold";
+  }
+
+  .svg-res {
+    
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
