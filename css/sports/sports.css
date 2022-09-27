@@ -13379,6 +13379,16 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   height: 75px;
   width: 100%;
 }
+@media (max-width: 991.98px) {
+  #sign-up .btn-container-sign {
+    width: 60%;
+  }
+}
+@media (max-width: 767.98px) {
+  #sign-up .btn-container-sign {
+    width: 100%;
+  }
+}
 #sign-up .btn-container-sign .btn-jo-sign {
   cursor: pointer;
   background: none;
