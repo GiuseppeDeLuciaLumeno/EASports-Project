@@ -692,7 +692,7 @@
 //To fix The sims 4 Cards Responsivity: <768px
 @media only screen and (max-width: 767px) {
     .the-sims4-card{
-        
+
         .resizer-responsive{
             width: 767px;
         }
@@ -860,6 +860,10 @@
     .bi {
         display: none;
     }
+
+    .btn{
+        border: 2px solid black;
+    }
 }
 
 
@@ -962,6 +966,7 @@
         height: 118px;
         padding-bottom: 10px;
     }
+
 }
 
 @media only screen and (max-width:425px) {
@@ -1024,5 +1029,11 @@
         width: 648px;
         height: 118px;
         padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 3080px) {
+    .scopridipiu1{
+        border: 2px solid black;
     }
 }

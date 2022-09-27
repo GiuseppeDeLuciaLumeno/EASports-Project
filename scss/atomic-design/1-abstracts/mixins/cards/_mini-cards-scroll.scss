@@ -1,0 +1,12 @@
+//scrollbar behavior
+@mixin scroll-bar-hider($display) {
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* firefox */
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar{
+        display: $display;
+    }
+}

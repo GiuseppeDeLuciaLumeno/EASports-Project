@@ -1,0 +1,609 @@
+@use "sass:color";
+@import "../../atomic-design/2-base/resets/reset-dario";
+@import "../../atomic-design/1-abstracts/variables/colors/colors-Ultimi-giochi";
+@import "../../atomic-design/2-base/font-faces/font-faces-dario";
+@import "../../atomic-design/2-base/typography/games/games";
+@import "../../atomic-design/1-abstracts/mixins/header/header-ultimi-giochi";
+@import "../../atomic-design/1-abstracts/mixins/cards/mini-cards-scroll";
+//Import Bootstrap
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
+
+//Header //
+html {
+    box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
+}
+
+//Modal Black
+.modal {
+    @media (min-width: 576px) {
+        --bs-modal-margin: 1.75rem;
+    }
+
+    --bs-modal-border-color: none;
+}
+
+.modal-body {
+    padding: 7rem 0;
+
+    @media only screen and (max-width: 543px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px !important;
+
+        .flex-column {
+            -webkit-box-orient: vertical !important;
+            -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+            flex-direction: row !important;
+        }
+    }
+}
+
+.modal-content {
+    background-color: $header-base-color;
+    position: relative;
+    left: 0;
+    top: 10px;
+    background-clip: initial;
+    border-radius: 0;
+}
+
+.modal-dialog {
+    margin: 0;
+    margin-top: 1.75rem;
+
+    @media (min-width: 576px) {
+        max-width: 100vw;
+        margin-right: 0;
+    }
+
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+
+
+.modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    -webkit-transform: translate(0, 2px);
+    transform: translate(0, 2px);
+
+}
+
+.bi-x-lg {
+    color: $header-icon;
+    margin-left: auto;
+    margin-right: 1rem;
+    cursor: pointer;
+
+    &:hover {
+        color: $header-icon-hover;
+    }
+}
+
+form {
+
+    .black-block {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+        padding: 5px 0;
+        background: $header-base-color;
+    }
+
+    .bi-person {
+        z-index: 1;
+        position: relative;
+        bottom: 2px;
+        font-size: 23px;
+        height: 30px;
+        font-weight: bolder;
+        cursor: pointer;
+        color: $header-icon;
+        transition: color .05s ease;
+
+        &:hover {
+            color: $header-icon-hover;
+        }
+    }
+
+    svg {
+        z-index: 1;
+        height: 17px;
+        fill: $header-icon;
+        cursor: pointer;
+        transition: fill .05s ease;
+        z-index: 1;
+
+        &:hover {
+            fill: $header-icon-hover;
+        }
+    }
+
+    .ea-logo {
+        z-index: 1;
+        position: relative;
+        filter: $ea-logo-color;
+        width: 41px;
+        height: 21px;
+        margin-right: 25px;
+        cursor: pointer;
+        transition: filter .05s ease;
+
+        &:hover {
+            filter: $ea-logo-hover-color;
+        }
+
+    }
+
+    .login-logo {
+        cursor: pointer;
+
+        .translate {
+            transition: transform .2s ease-in-out;
+        }
+
+        &:hover .translate {
+            transform: translateY(-15px);
+        }
+
+        p {
+            font-family: map-get($ultimi-giochi-font, text);
+            color: lightgray;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        @media only screen and (max-width: 543px) {
+            justify-content: flex-start !important;
+            margin-inline: 10rem;
+
+            p.translate {
+                margin-left: 10px;
+            }
+        }
+
+    }
+
+    .create-account {
+        cursor: pointer;
+
+        .translate {
+            transition: transform .2s ease-in-out;
+
+        }
+
+        &:hover .translate {
+            transform: translateY(-15px);
+        }
+
+
+        .text-colapse {
+            p {
+                font-family: map-get($ultimi-giochi-font, text);
+                color: lightgray;
+                font-size: 14px;
+                margin-bottom: 0;
+                margin-left: 10px;
+                width: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 543px) {
+            justify-content: flex-start !important;
+            margin-inline: 10rem;
+        }
+    }
+}
+
+
+//img logos login and create account responsivity
+@media only screen and (min-width: 240px) and (max-width: 542px) {
+
+    .login-logo,
+    .create-account {
+        width: 35px;
+        display: flex;
+        margin-inline: 5rem !important;
+    }
+
+}
+
+
+
+.lower-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0.85rem 1rem 0.5rem;
+    z-index: 2;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 350ms ease;
+        background: #161616;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    &.active::after {
+        content: "";
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #161616;
+        opacity: .8;
+        z-index: 0;
+    }
+
+
+
+    @media only screen and (max-width: 1030px) {
+        gap: 6px;
+    }
+
+    @media only screen and (max-width: map-get($grid-breakpoints, lg)) {
+        padding: 0.5rem 1rem 0.5rem;
+    }
+
+    .three-dots-container {
+        height: auto;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.39);
+        }
+    }
+
+    .three-dots-container.active~.modal-wrapper {
+        transform: translateX(0%);
+    }
+}
+
+.bi-three-dots-vertical {
+    cursor: pointer;
+    color: black;
+    font-size: 25px;
+    position: relative;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        color: red;
+    }
+
+    @media only screen and (max-width: 1030px) {
+        display: none;
+    }
+}
+
+.burger {
+
+    @media only screen and (max-width: 1030px) {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        .top-bar,
+        .mid-bar,
+        .low-bar {
+            background: black;
+            width: 20px;
+            height: 2px;
+            border-radius: 10px;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &:hover .top-bar,
+        &:hover .mid-bar,
+        &:hover .low-bar {
+            background: red;
+        }
+    }
+
+    position: relative;
+    top: 2px;
+    display: none; //from 1031 is hidden
+
+    &.active+.modal-wrapper {
+        transform: translateX(0%);
+    }
+}
+
+
+.container-nav-menu {
+    display: flex;
+    gap: 30px;
+    margin-inline: 2rem;
+    z-index: 0;
+
+    @media only screen and (max-width: 1030px) {
+        display: none;
+    }
+}
+
+//to give fontfamily by for cycle
+@for $i from 1 to 6 {
+    .ea-dropdown:nth-child(#{$i}) p {
+        font-family: map-get($ultimi-giochi-font, text);
+        font-weight: lighter;
+        font-size: 17px;
+        color: $black;
+        transition: color 200ms ease;
+
+    }
+}
+
+.ea-dropdown {
+    cursor: pointer;
+    gap: 3px;
+    display: flex;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    &:hover p {
+        color: red;
+
+    }
+
+    &:hover .v-icon::before {
+        transform: rotate(-45deg);
+        border-color: red;
+    }
+
+    &:hover .v-icon::after {
+        transform: rotate(45deg);
+        border-color: red;
+    }
+}
+
+
+
+.dropdown-icon-container {
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    .v-icon {
+        @include v-icons;
+    }
+}
+
+
+//Aside Modal white
+.modal-wrapper {
+    @include scroll-bar-hider(none);
+    background: $white;
+    box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 2.5rem;
+    left: 0%;
+    padding: 2.5rem 2rem 6rem;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform .5s cubic-bezier(.5, .25, .015, 1);
+
+    a {
+        outline: none;
+    }
+
+    .all-games-block {
+        width: 95%;
+
+        p {
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            color: $text-aside;
+            transition: color 10ms ease-out;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        #icon-x {
+            cursor: pointer;
+            position: relative;
+            top: -5px;
+            right: -10px;
+            width: 20px;
+
+            &:hover {
+                fill: red;
+            }
+        }
+    }
+
+    .ea-play-card {
+        margin-top: 2.2rem;
+        position: relative;
+
+        &:hover #ea-play-logo {
+            transform: translate3d(5%, 5%, 0);
+            transform: scale(1.12);
+        }
+
+    }
+
+    #ea-play-logo {
+        transition: transform .4s ease;
+        z-index: 1;
+        position: absolute;
+        top: 43%;
+        left: 34%;
+    }
+
+
+    .min-card {
+        width: 180px; //Mini Cards Dimensions
+        position: relative;
+    }
+
+    #hover-min-card {
+        cursor: pointer;
+
+        &:hover+#min-logo {
+            transform: scale(1.14);
+        }
+    }
+
+    #min-logo {
+        position: absolute;
+        top: 35%;
+        left: 30%;
+        z-index: 1;
+        transition: transform .2s ease;
+
+        &:hover {
+            transform: scale(1.14);
+        }
+    }
+
+    .card-wrapper {
+        width: 22.5rem;
+        padding-top: 2rem;
+
+        .row {
+            margin-top: 0;
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+}
+
+#fixed {
+    opacity: 0;
+    position: fixed;
+    top: 2.5rem;
+    left: 0%;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    transition: opacity 0.20s linear;
+
+    .bi-x-lg {
+        font-weight: bolder;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: rgb(163, 163, 163);
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &.active {
+        overflow: visible;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+.second-modal-wrapper {
+    background: $header-base-color;
+    padding: 6rem 0 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "grid-header grid-header"
+        "grid-first-icon grid-second-icon"
+        "grid-third-icon grid-fourth-icon"
+        "grid-footer grid-footer";
+        row-gap: 10px;
+    justify-content: center;
+
+    .bi-x-lg {
+        color: $header-icon;
+    }
+
+
+    .grid-header {
+        padding-bottom: 1rem;
+        grid-area: grid-header;
+        justify-self: center;
+        p{
+            font-size: 21px;
+        }
+    }
+
+    .grid-first-icon {
+        grid-area: grid-first-icon;
+        display: grid;
+        justify-content: center;
+
+        .hover{
+
+            cursor: pointer;
+            &:hover .translate{
+                transform: translateY(-15px);
+            }
+            .translate,
+            .text-colapse p{
+                transition: transform .2s ease-in-out;
+            }
+
+            &:hover .text-colapse p{
+                transform: translateY(-15px);
+            }
+        }
+    }
+
+    .grid-second-icon {
+        @extend .grid-first-icon;
+        grid-area: grid-second-icon;
+    }
+
+    .grid-third-icon {
+        @extend .grid-first-icon;
+        grid-area: grid-third-icon;
+    }
+
+    .grid-fourth-icon {
+        @extend .grid-first-icon;
+        grid-area: grid-fourth-icon;
+    }
+
+    .grid-footer {
+        justify-self: flex-end;
+        grid-area: grid-footer;
+
+        p {
+            color: lightgray;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+        }
+    }
+
+    p {
+        color: lightgray;
+        font-family: map-get($ultimi-giochi-font, text);
+        font-size: 16px;
+    }
+}
