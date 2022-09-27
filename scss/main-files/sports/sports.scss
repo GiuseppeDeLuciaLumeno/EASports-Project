@@ -1,34 +1,20 @@
 @import '../../atomic-design/1-abstracts/functions/units/units-giuseppe';
+@import '../../atomic-design/1-abstracts/variables/colors/colors-dario';
+@import '../../atomic-design/1-abstracts/variables/font-families/font-families-dario';
+@import '../../atomic-design/1-abstracts/variables/font-sizes/font-sizes-dario';
+@import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-dario';
 @import '../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-josephine';
 @import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine';
+@import '../../atomic-design/2-base/typography/sports/sports';
+@import '../../atomic-design/3-components/cards/cards-1-dario';
+@import '../../atomic-design/3-components/tabs/tabs-1-dario';
 @import '../../atomic-design/4-layouts/footers/footer-1-josephine';
+@import '../../atomic-design/4-layouts/page-sections/page-section-1-dario';
+@import '../../atomic-design/4-layouts/grids/6-items-1-dario';
+@import '../../atomic-design/4-layouts/sliders/slider-1-josephine';
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 
-// Font-Family Josephine Sport Page
-
-@import url(/t/1.css?apiType=css&projectid=d2185c81-76fa-4b2a-9876-0e4480705aac);
- @font-face{
- font-family:"Juana W05 Bold";
- src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=07bbdfe9-dc82-47d5-8fe5-4750d59a5b4d&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=07bbdfe9-dc82-47d5-8fe5-4750d59a5b4d&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
- }
- @font-face{
- font-family:"Juana W05 Bold It";
- src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=2a4c2f3c-c8b7-4960-95a7-0b50e020ab74&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=2a4c2f3c-c8b7-4960-95a7-0b50e020ab74&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-12c,12e-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
- }
- @font-face{
- font-family:"FS Industrie W05 Regular";
- src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=614811f6-27e8-4c96-9df7-d72514687f33&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=614811f6-27e8-4c96-9df7-d72514687f33&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
- }
- @font-face{
- font-family:"FS Industrie W05 Italic";
- src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=b61c664f-1a3a-4faa-a1d6-42a0b46c9c42&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,aa-ab,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=b61c664f-1a3a-4faa-a1d6-42a0b46c9c42&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,aa-ab,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
- }
- @font-face{
- font-family:"FS Industrie W05 Bold";
- src:url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=14&fcId=d227881e-6f79-4812-a16a-53929c4bb75c&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff2"),url("https://api2.fonts.com/FontSubsetter.ashx?d44f19a684109620e4841578a190e81899ea4ef258eef72d3a036e96543ce79f6a8dbdb4030c201d44f5a4bc228df0de57f0fa4ba0f947180304a98ae97f7d337ff9298b9f809788c259bf9945d3e811afcc64b20635fcea946a3a42765f8ca09dccf7151faa622b28529333e63ea49c06e3974c&fctypeId=3&fcId=d227881e-6f79-4812-a16a-53929c4bb75c&ranges=20-7e,a1-a1,a3-a3,a5-a5,a7-a7,a9-ab,ae-ae,b4-b4,b7-b7,ba-bb,bf-d6,d8-f6,f8-107,10a-11b,11e-11f,122-123,126-127,12a-131,136-137,139-13e,141-148,14a-155,158-167,16a-173,178-17e,2013-2014,2018-201a,201c-201e,2020-2021,2026-2026,2039-203a,20ac-20ac,2122-2122&ot=false&projectId=d2185c81-76fa-4b2a-9876-0e4480705aac") format("woff");
- }
-
- // Fine Font-Family Josephine Page
 
 * {
     margin: 0;
@@ -38,55 +24,378 @@
 
 html, body {
     width: 100vw;
+
 }
 
-.container-fluid {
-    --bs-gutter-x:0;
-}
 
 header {
-    width: 100vw;
-    
-    video {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        position: fixed;
-        z-index: -100;
-        filter: url('#squiggly-2') brightness(0.4);
-    }
+    .video-wrapper {
+        // Riferimento "relative" per lo sfondo "Absolute" 
+        position: relative;
+        width: 100vw;
+        height: 650px;
 
-    #logo {
-        display: flex;
-        justify-content: center;
-    }
+        background: linear-gradient(
+            to top,
+            black, 
+            transparent
+        );
 
-    .wrapper-title {
-        color: #fff;
-        
-        h1 {
-            font-size: 44px;
-            font-family: "Juana W05 Bold";
+        //Non permette al Video di Uscire fuori al container
+        overflow: hidden;
+
+        @include media-breakpoint-down(md) {
+            background: #000;
+            height: 750px;
+          }
+
+        video {
+            //Simuliamo la proprietà background-size: cover;
+            object-fit: cover;
+            height: 100%;
+            width: 90%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+
+            z-index: -100;
+            filter: url('#squiggly-2') brightness(0.4);
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+              }
+
+            @include media-breakpoint-down(md) {
+                display: none;
+              }
         }
 
-        h4 {
-            font-size: 24px;
-            font-family: "FS Industrie W05 Regular";
+        #pegi-logo {
+            max-width: 64px;
+            max-height: 64px;
+        }
 
-            a {
-                color: #FF4747;
-                text-decoration: none;
+        .wrapper-title {
+            color: #fff;
+            
+            h1 {
+                font-size: 44px;
+                font-family: "Juana W05 Bold";
+                font-style: normal;
+                font-weight: 600;
+            }
+    
+            h4 {
+                font-size: 24px;
+                font-family: "FS Industrie W05 Regular";
+                font-style: normal;
+                font-weight: 400;
+                
+                @include media-breakpoint-down(lg) {
+                    font-size: rfs-fluid-value(20px);
+                  }
+                  
+                a {
+                    color: #FF4747;
+                    text-decoration: none;
+                }
             }
         }
     }
 }
 
-.cards {
-    width: 100%;
-    height: 1000px;
-    background: linear-gradient(
-        to top,
-        black, 
-        transparent
-      );
+#card-section {
+    background-color: #000;
+    
+    .card-jo {
+        display: grid;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+      .card-jo::after, .card-jo > * { grid-row: 1; grid-column: 1 } /* stack everything on top of eachoter*/
+      
+      .card-jo::after { /* black layer with opacity*/
+        content: "";
+        background-color: black;
+        opacity: 0.5;
+        transition: opacity 250ms ease
+      }
+      .card-jo > .cover { /* cover image */
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-jo > .logo { /* logo on top */
+        place-self: center;
+        max-width: 50%;
+        z-index: 1;
+        transition: transform 250ms ease
+      }
+      
+      /* hover effect */
+      .card-jo:hover::after { opacity: 0}
+      .card-jo:hover > .logo { transform: scale(1.1)}
+
+      .button-height {
+        height: 8rem;
+      }
+}
+
+    .btn-lg {
+        --bs-btn-border-radius: 0.2rem;
+        font-family: "FS Industrie W05 Regular";
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+
+#sign-up {
+    background: rgb(11,13,55);
+    background: linear-gradient(35deg, rgba(11,13,55,1) 36%, rgba(166,52,71,1) 74%);
+
+    p {
+        font-size: 24px;
+        font-family: "Juana W05 Bold";
+        color: #fff;
+        margin-bottom: 0;
+    }
+}
+
+#card-mobile {
+    h2 {
+        font-size: 40px;
+        font-family: "Juana W05 Bold";
+    }
+
+    .card-jo {
+        display: grid;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+      .card-jo::after, .card-jo > * { grid-row: 1; grid-column: 1 } /* stack everything on top of eachoter*/
+      
+      .card-jo::after { /* black layer with opacity*/
+        content: "";
+        background-color: black;
+        opacity: 0.5;
+        transition: opacity 250ms ease
+      }
+      .card-jo > .cover { /* cover image */
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-jo > .logo { /* logo on top */
+        place-self: center;
+        max-width: 40%;
+        z-index: 1;
+        transition: transform 250ms ease
+      }
+      
+      /* hover effect */
+      .card-jo:hover::after { opacity: 0}
+      .card-jo:hover > .logo { transform: scale(1.1)}
+}
+ // Sezione scss Dario
+#last-news {
+  
+  h3 {
+    font-size: 40px;
+    font-family: "Juana W05 Bold";
+  }
+}
+
+#ultime-novita {
+  background-color: map-get($map: $da-color, $key: bg);
+  overflow: hidden;
+
+
+  #h3 {
+    margin-bottom: 20px;
+    margin-inline: auto;
+  }
+
+  #slider-container {
+    height: 50px;
+    align-self: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .cards-container-1,
+  .cards-container-2,
+  .cards-container-3,
+  .cards-container-4,
+  .cards-container-5,
+  .cards-container-6,
+  .cards-container-7,
+  .cards-container-8 {
+    margin-bottom: 40px;
+    display: none;
+  }
+
+  .cards-container-active {
+    display: grid;
+  }
+
+  .cta {
+    margin-inline: auto;
+  }
+
+  @include da-breakpoint(tablet) {
+    #slider-container {
+      margin-bottom: 50px;
+    }
+  }
+  
+  @include da-breakpoint(desktop) {
+    #slider-container {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+//Button Giuseppe
+.btn-container {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  margin: 0rem 0rem 5rem;
+}
+
+.btn-jo {
+  cursor: pointer;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  padding: 12px 24px;
+  width: 100%;
+  transition: padding 0.1s;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  opacity: .9;
+
+  &:hover {
+      padding: 15px 30px;
+  }
+}
+
+.btn-jo-blk {
+  cursor: pointer;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 3px;
+  padding: 12px 24px;
+  width: 100%;
+  transition: padding 0.1s;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #000;
+  opacity: .9;
+
+  &:hover {
+      padding: 15px 30px;
+  }
+}
+//Fine Button Giuseppe
+
+.btn-outline-light {
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-active-bg: transparent;
+
+  &:hover {
+    padding: 14px 28px;
+
+  }
+}
+
+//Banner Bot
+
+#banner-bot {
+  background: url(../../../assets/img/josephine_page/background-banner-bot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  @include media-breakpoint-down(md) {
+    background: #fff;
+  }
+
+  .row {
+    height: 6rem;
+
+    @include media-breakpoint-down(lg) {
+      height: 10rem;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    font-family: "Juana W05 Bold";
+    margin-bottom: 0;
+  }
+
+  .btn-container-bot {
+    height: 75px;
+
+    .btn-jo-bot {
+      cursor: pointer;
+      background: #ed4344;
+      border-radius: 3px;
+      padding: 12px 24px;
+      width: 100%;
+      transition: padding 0.1s;
+      font-family: "FS Industrie W05 Regular";
+      font-size: 18px;
+      color: #fff;
+    
+      &:hover {
+          padding: 15px 30px;
+      }
+    }
+  }
+}
+
+// Banner Social
+#banner-social {
+  background-color: #eaeaea;
+
+  .row {
+    height: 10rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+
+    li {
+      text-decoration: none;
+      
+      a {
+        font-size: 16px;
+        font-family: "FS Industrie W05 Regular";
+        color: #161616;
+        text-decoration: none;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 14px;
+    font-family: "Juana W05 Bold";
+  }
+
+  .svg-res {
+    
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
 }

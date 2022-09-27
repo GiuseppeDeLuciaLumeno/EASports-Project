@@ -237,7 +237,7 @@ select {
 .btn {
   cursor: pointer;
   background: none;
-  border: 1, 5px solid black;
+  border: 2px solid black;
   border-radius: 3px;
   padding: 15px 30px;
   width: 100%;
@@ -1014,7 +1014,7 @@ select {
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
 footer {
-  font-family: FS Industrie Narrow, ElectronicArtsDisplay, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: ElectronicArtsText, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   background-color: #f3f3f3;
 }
@@ -2688,6 +2688,9 @@ footer {
   .bi {
     display: none;
   }
+  .btn {
+    border: 2px solid black;
+  }
 }
 @media only screen and (min-width: 1275px) {
   .cards-wrapper {
@@ -2819,5 +2822,10 @@ footer {
     width: 648px;
     height: 118px;
     padding-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 3080px) {
+  .scopridipiu1 {
+    border: 2px solid black;
   }
 }
