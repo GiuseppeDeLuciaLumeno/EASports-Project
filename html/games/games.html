@@ -38,7 +38,7 @@
 
         <form action=" #" method="get">
     <div class="black-block">
-        <i class="bi bi-person icon-login" id="person-icon" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+        <i class="bi bi-person icon-login" id="person-icon"></i>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17" id="open-modal">
             <path
                 d="M5.193,0C0.538,0,0,2.673,0,4.684a0.978,0.978,0,0,0,1.955,0c0-1.648.225-2.729,3.238-2.729,2.852,0,2.852,1.45,2.852,2.729a1.951,1.951,0,0,1-1.29,1.675l-0.216.083C4.8,7.108,3.809,7.531,3.809,8.472v3.5a0.978,0.978,0,1,0,1.955,0V8.887c0.4-.209,1.152-0.5,1.474-0.62l0.224-.085A3.831,3.831,0,0,0,10,4.684C10,3.526,10,0,5.193,0Z">
@@ -55,13 +55,14 @@
     </div>
 
     <!-- First Black Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <!--  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-full">
             <div class="modal-content">
                 <div class="modal-header">
                     <i class="bi bi-x-lg" data-bs-dismiss="modal" aria-label="Close"></i>
                 </div>
                 <div class="modal-body d-flex justify-content-center gap-6">
+
                     <div class="login-logo d-flex flex-column align-items-center justify-content-center">
                         <img src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconsignin.svg"
                             alt="Login icon" width="35px" class="translate">
@@ -75,14 +76,35 @@
                             <p class="translate">Crea account</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    <!-- First Modal Developping-->
+    <section id="fixed-first-modal">
+        <i class="bi bi-x-lg" id="icon-x-modal"></i>
+        <div class="first-modal-wrapper d-flex justify-content-center gap-9">
+            <div class="login-logo d-flex flex-column align-items-center justify-content-center">
+                <img src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconsignin.svg"
+                    alt="Login icon" width="35px" class="translate">
+                <p class="translate">Accedi</p>
+            </div>
+
+            <div class="create-account d-flex flex-column align-items-center justify-content-center">
+                <img src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconregister.svg"
+                    alt="Crea un account icon" width="35px" class="translate">
+                <div class="text-colapse">
+                    <p class="translate">Crea account</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--Second Black Modal  -->
-    <section id="fixed">
-        <i class="bi bi-x-lg" id="icon-x-modal"></i>
+    <section class="fixed">
+        <i class="bi bi-x-lg" id="icon-x-second-modal"></i>
         <div class="second-modal-wrapper">
             <div class="grid-header">
                 <p>Ti serve aiuto?</p>

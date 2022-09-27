@@ -344,8 +344,8 @@ form {
 //to give fontfamily by for cycle
 @for $i from 1 to 6 {
     .ea-dropdown:nth-child(#{$i}) p {
-        font-family: map-get($ultimi-giochi-font, text);
-        font-weight: lighter;
+        font-family: map-get($ultimi-giochi-font, header);
+        font-weight: 400;
         font-size: 17px;
         color: $black;
         transition: color 200ms ease;
@@ -493,7 +493,38 @@ form {
     }
 }
 
-#fixed {
+#fixed-first-modal {
+    background: $header-base-color;
+    padding: 12rem 0;
+    opacity: 0;
+    position: fixed;
+    top: 2.5rem;
+    left: 0%;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    transition: opacity 0.20s linear;
+    .bi-x-lg {
+        font-weight: bolder;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: rgb(163, 163, 163);
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &.active {
+        overflow: visible;
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+
+.fixed {
     opacity: 0;
     position: fixed;
     top: 2.5rem;
@@ -520,6 +551,7 @@ form {
         opacity: 1;
         z-index: 1;
     }
+
 }
 
 .second-modal-wrapper {
@@ -533,7 +565,7 @@ form {
         "grid-first-icon grid-second-icon"
         "grid-third-icon grid-fourth-icon"
         "grid-footer grid-footer";
-        row-gap: 10px;
+    row-gap: 10px;
     justify-content: center;
 
     .bi-x-lg {
@@ -545,7 +577,8 @@ form {
         padding-bottom: 1rem;
         grid-area: grid-header;
         justify-self: center;
-        p{
+
+        p {
             font-size: 21px;
         }
     }
@@ -555,18 +588,20 @@ form {
         display: grid;
         justify-content: center;
 
-        .hover{
+        .hover {
 
             cursor: pointer;
-            &:hover .translate{
+
+            &:hover .translate {
                 transform: translateY(-15px);
             }
+
             .translate,
-            .text-colapse p{
+            .text-colapse p {
                 transition: transform .2s ease-in-out;
             }
 
-            &:hover .text-colapse p{
+            &:hover .text-colapse p {
                 transform: translateY(-15px);
             }
         }

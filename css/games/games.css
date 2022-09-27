@@ -12931,40 +12931,35 @@ form .create-account .text-colapse p {
 }
 
 .ea-dropdown:nth-child(1) p {
-  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 17px;
   color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(2) p {
-  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 17px;
   color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(3) p {
-  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 17px;
   color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(4) p {
-  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 17px;
   color: #000;
   transition: color 200ms ease;
 }
 
 .ea-dropdown:nth-child(5) p {
-  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 17px;
   color: #000;
   transition: color 200ms ease;
@@ -13122,7 +13117,9 @@ form .create-account .text-colapse p {
   margin-left: 0;
 }
 
-#fixed {
+#fixed-first-modal {
+  background: rgb(26, 25, 25);
+  padding: 12rem 0;
   opacity: 0;
   position: fixed;
   top: 2.5rem;
@@ -13132,17 +13129,43 @@ form .create-account .text-colapse p {
   overflow: hidden;
   transition: opacity 0.2s linear;
 }
-#fixed .bi-x-lg {
+#fixed-first-modal .bi-x-lg {
   font-weight: bolder;
   position: absolute;
   top: 1rem;
   right: 1rem;
   color: rgb(163, 163, 163);
 }
-#fixed .bi-x-lg:hover {
+#fixed-first-modal .bi-x-lg:hover {
   color: white;
 }
-#fixed.active {
+#fixed-first-modal.active {
+  overflow: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.fixed {
+  opacity: 0;
+  position: fixed;
+  top: 2.5rem;
+  left: 0%;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  transition: opacity 0.2s linear;
+}
+.fixed .bi-x-lg {
+  font-weight: bolder;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: rgb(163, 163, 163);
+}
+.fixed .bi-x-lg:hover {
+  color: white;
+}
+.fixed.active {
   overflow: visible;
   opacity: 1;
   z-index: 1;

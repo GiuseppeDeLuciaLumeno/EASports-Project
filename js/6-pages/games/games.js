@@ -5,7 +5,9 @@ const esc = document.querySelector(".icon-x");
 const blackBackground = document.querySelector(".lower-header");
 const body = document.querySelector(".click-out");
 const blackBlock = document.querySelector(".black-block");
-const personIcon = document.getElementById("person-icon")
+const personIcon = document.getElementById("person-icon");
+
+
 
 //Aside Menu activate with dots
 asideShow.addEventListener("click", () => {
@@ -24,7 +26,7 @@ asidehide.addEventListener("click", () => {
 //Aside Menu Disactivate width Esc key
 window.addEventListener("keydown", keypress);
   function keypress(key) {
-    if (key.keyCode == 27) {
+    if (key.keyCode === 27) {
         asideShow.classList.remove("active");
         blackBackground.classList.remove("active");
     }
@@ -32,21 +34,22 @@ window.addEventListener("keydown", keypress);
 
 //Aside Menu Disactivate by clicking anywhere else
 window.addEventListener("mouseup", function(event) {
-  if (event.target == body) {
+  if (event.target === body) {
+    asideShow.classList.remove("active");
+    blackBackground.classList.remove("active");
+    burger.classList.remove("active");
+    myModal.classList.remove("active");
+    firstModal.classList.remove("active");
+  }
+
+  else if (event.target === blackBackground) {
     asideShow.classList.remove("active");
     blackBackground.classList.remove("active");
     burger.classList.remove("active");
     myModal.classList.remove("active");
   }
 
-  else if (event.target == blackBackground) {
-    asideShow.classList.remove("active");
-    blackBackground.classList.remove("active");
-    burger.classList.remove("active");
-    myModal.classList.remove("active");
-  }
-
-  else if (event.target == blackBlock || event.target == personIcon) {
+  else if (event.target == personIcon) {
     myModal.classList.remove("active");
   }
 });
@@ -65,15 +68,26 @@ asidehide.addEventListener("click", () => {
 });
 
 
+//First-Modal Person Icon
+const firstModal = document.getElementById("fixed-first-modal");
+const firstIconX = document.getElementById("icon-x-modal")
+personIcon.addEventListener("click", () => {
+firstModal.classList.toggle("active");
+});
+
+firstIconX.addEventListener("click", () => {
+  firstModal.classList.remove("active");
+})
 
 
-//Modal Interrogative point
+//Second-Modal Interrogative point icon
 const interrogative = document.getElementById("open-modal");
-const myModal = document.getElementById("fixed");
-const iconX = document.getElementById("icon-x-modal");
+const myModal = document.querySelector(".fixed");
+const iconX = document.getElementById("icon-x-second-modal");
 
 interrogative.addEventListener("click", () => {
   myModal.classList.toggle("active");
+  firstModal.classList.remove("active");
 });
 
 iconX.addEventListener("click", () => {
