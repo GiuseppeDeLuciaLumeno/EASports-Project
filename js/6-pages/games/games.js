@@ -33,7 +33,7 @@ window.addEventListener("keydown", keypress);
   }
 
 //Aside Menu Disactivate by clicking anywhere else
-window.addEventListener("mouseup", function(event) {
+window.addEventListener("mouseup", (event) => {
   if (event.target === body) {
     asideShow.classList.remove("active");
     blackBackground.classList.remove("active");

@@ -12674,7 +12674,7 @@ html {
 }
 
 .modal-content {
-  background-color: rgb(26, 25, 25);
+  background-color: rgb(19, 18, 18);
   position: relative;
   left: 0;
   top: 10px;
@@ -12723,7 +12723,7 @@ form .black-block {
   justify-content: flex-end;
   gap: 30px;
   padding: 5px 0;
-  background: rgb(26, 25, 25);
+  background: rgb(19, 18, 18);
 }
 form .bi-person {
   z-index: 1;
@@ -13118,7 +13118,7 @@ form .create-account .text-colapse p {
 }
 
 #fixed-first-modal {
-  background: rgb(26, 25, 25);
+  background: rgb(19, 18, 18);
   padding: 12rem 0;
   opacity: 0;
   position: fixed;
@@ -13172,13 +13172,13 @@ form .create-account .text-colapse p {
 }
 
 .second-modal-wrapper {
-  background: rgb(26, 25, 25);
+  background: rgb(19, 18, 18);
   padding: 6rem 0 3rem;
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 290px);
   grid-template-rows: auto;
   grid-template-areas: "grid-header grid-header" "grid-first-icon grid-second-icon" "grid-third-icon grid-fourth-icon" "grid-footer grid-footer";
-  row-gap: 10px;
+  row-gap: 30px;
   justify-content: center;
 }
 .second-modal-wrapper .bi-x-lg {
@@ -13237,4 +13237,21 @@ form .create-account .text-colapse p {
   color: lightgray;
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 585px) {
+  .second-modal-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "grid-header" "grid-first-icon" "grid-second-icon" "grid-third-icon" "grid-fourth-icon" "grid-footer";
+    row-gap: 5px;
+  }
+  .second-modal-wrapper p {
+    margin: 0 0 0px;
+  }
+  .second-modal-wrapper .grid-first-icon,
+.second-modal-wrapper .grid-second-icon,
+.second-modal-wrapper .grid-third-icon,
+.second-modal-wrapper .grid-fourth-icon {
+    justify-content: flex-start;
+  }
 }

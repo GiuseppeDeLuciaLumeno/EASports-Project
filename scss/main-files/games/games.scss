@@ -558,14 +558,14 @@ form {
     background: $header-base-color;
     padding: 6rem 0 3rem;
     display: grid;
-    grid-template-columns: repeat(2, 300px);
+    grid-template-columns: repeat(2, 290px);
     grid-template-rows: auto;
     grid-template-areas:
         "grid-header grid-header"
         "grid-first-icon grid-second-icon"
         "grid-third-icon grid-fourth-icon"
         "grid-footer grid-footer";
-    row-gap: 10px;
+    row-gap: 30px;
     justify-content: center;
 
     .bi-x-lg {
@@ -640,5 +640,37 @@ form {
         color: lightgray;
         font-family: map-get($ultimi-giochi-font, text);
         font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 585px) {
+    .second-modal-wrapper{
+
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "grid-header"
+        "grid-first-icon"
+        "grid-second-icon"
+        "grid-third-icon"
+        "grid-fourth-icon"
+        "grid-footer";
+        row-gap: 5px;
+
+        .d-flex{
+           
+
+        }
+        p{
+            margin: 0 0 0px;
+        }
+
+        .grid-first-icon,
+        .grid-second-icon,
+        .grid-third-icon,
+        .grid-fourth-icon{
+
+        justify-content: flex-start;
+        }
+
     }
 }
