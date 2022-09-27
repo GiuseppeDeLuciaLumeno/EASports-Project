@@ -26,6 +26,102 @@
 //          }
 //        }
 //    }
+//    .light-section {
+//        .toggle {
+//          .dot {...}
+//        }
+//        a {
+//          img {...}
+//        }
+//        .dropdowns {
+//          .dropdown.dropdown-1 {
+//            .dropdown-button {
+//              p {...}
+//              .arrow {...}
+//            }
+//            .dropdown-menu-wrapper {
+//              .dropdown-menu {
+//                .col-1 {
+//                   h3 {...}
+//                   a {...}
+//                   a {...}
+//                   a {...}
+//                   a {...}
+//                   a {...}
+//                   a {...}
+//                }
+//                .col-2 {
+//                   h3 {...}
+//                   a {...}
+//                   a {...}
+//                   a {...}
+//                   a {...}
+//                   a {...}
+//                }
+//              }
+//            }
+//          }
+//          .dropdown {
+//            .dropdown-button {
+//              p {...}
+//              .arrow {...}
+//            }
+//            .dropdown-menu-wrapper {
+//              .dropdown-menu {
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//             }
+//           }
+//          .dropdown {
+//            .dropdown-button {
+//              p {...}
+//              .arrow {...}
+//            }
+//            .dropdown-menu-wrapper {
+//              .dropdown-menu {
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//             }
+//           }
+//          .dropdown {
+//            .dropdown-button {
+//              p {...}
+//              .arrow {...}
+//            }
+//            .dropdown-menu-wrapper {
+//              .dropdown-menu {
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//             }
+//           }
+//          .dropdown {
+//            .dropdown-button {
+//              p {...}
+//              .arrow {...}
+//            }
+//            .dropdown-menu-wrapper {
+//              .dropdown-menu {
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//                a {...}
+//             }
+//           }
+//        }
 // }
 
 .navbar {
@@ -152,8 +248,8 @@
 
     .dropdowns {
       @include flexbox($justify-content: flex-start, $align-items: stretch);
-      gap: 30px;
-      margin-left: 1.8rem;
+      gap: 20px;
+      margin-left: 1.5rem;
 
       display: none;
 
@@ -172,6 +268,7 @@
           p {
             text-transform: capitalize;
             font-size: map-get($map: $da-fs-p, $key: desktop);
+            letter-spacing: -0.5px;
           }
 
           .arrow {
@@ -204,41 +301,85 @@
           }
         }
 
-        .dropdown-menu {
-          background-color: map-get($map: $da-color, $key: white-tr-100);
-
+        .dropdown-menu-wrapper {
           position: absolute;
-          top: 65px;
-          left: -27px;
+          top: 50px;
+          left: 0;
+          z-index: 10;
 
-          border-radius: 4px;
-          padding-block: 20px;
-          padding-left: 35px;
-          padding-right: 50px;
-
-          opacity: 0;
           pointer-events: none;
+          cursor: pointer;
 
-          transform-origin: top center;
-          transform: translateY(-5px) scaleY(0);
+          transform: scaleY(0);
+          transform-origin: center top;
 
-          transition: .3s cubic-bezier(.5, .25, .015, 1);
+          transition: transform 0.3s cubic-bezier(0.5, 0.25, 0.015, 1);
 
-          a {
-            text-decoration: none;
-            text-transform: capitalize;
-            color: map-get($map: $da-color, $key: text-light);
-            font-size: map-get($map: $da-fs-p, $key: mobile);
+          .dropdown-menu {
+            background-color: map-get($map: $da-color, $key: white-tr-100);
+  
+            border-radius: 4px;
+            padding-block: 25px;
+            padding-left: 35px;
+            padding-right: 50px;
+
+            margin-top: 14px;
+            margin-left: -30px;
+  
+            a {
+              text-decoration: none;
+              text-transform: capitalize;
+              line-height: 1rem;
+              color: map-get($map: $da-color, $key: text-light);
+              font-size: map-get($map: $da-fs-p, $key: mobile);
+              width: max-content;
+  
+              transform: translateY(-5px);
+              opacity: 0;
+              
+              transition-property: transform, opacity;
+              transition-duration: 0.4s;
+              transition-delay: 0.1s;
+              transition-timing-function: cubic-bezier(0.5, 0.25, 0.015, 1);
+
+              & + a {
+                margin-top: rem(20px);
+              }
+            }
+
+            a:hover {
+              color: map-get($map: $da-color, $key: accent);
+              transition: none;
+            }
+          }
+        }
+      }
+
+      .dropdown:first-of-type {
+        .dropdown-menu {
+          @include flexbox($align-items: flex-start);
+          gap: 50px;
+          padding-block: 40px 50px;
+
+          h3 {
             width: max-content;
+            text-transform: uppercase;
+            line-height: 34px;
+            font-size: map-get($map: $da-fs-p, $key: mobile);
+            letter-spacing: 1px;
+            border-bottom: 1px solid map-get($map: $da-color, $key: borders-light);
 
             transform: translateY(-5px);
             opacity: 0;
 
-            transition: 0.4s 0.1s cubic-bezier(0.5, 0.25, 0.015, 1);
+            transition-property: transform, opacity;
+            transition-duration: 0.3s;
+            transition-delay: 0.1s;
+            transition-timing-function: cubic(0.5, 0.25, 0.015, 1);
+          }
 
-            & + a {
-              margin-top: 15px;
-            }
+          a:first-of-type {
+            margin-top: rem(20px);
           }
         }
       }
@@ -260,35 +401,26 @@
           }
         }
 
-        .dropdown-menu {
-          opacity: 1;
-          transform: translateY(0px) scaleY(1);
+        .dropdown-menu-wrapper {
+          pointer-events: auto;
+          transform: scaleY(1);
 
-          a {
-            opacity: 1;
-            transform: translateY(0);
+          .dropdown-menu {
+            h3 {
+              transform: translateY(0);
+              opacity: 1;
+            }
+
+            a {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
         }
       }
 
-      .dropdown:first-of-type {
-        .dropdown-menu {
-          @include flexbox($align-items: flex-start);
-          gap: 50px;
-          padding-block: 40px 50px;
-
-          h3 {
-            width: max-content;
-            text-transform: uppercase;
-            line-height: 34px;
-            font-size: map-get($map: $da-fs-p, $key: mobile);
-            border-bottom: 1px solid map-get($map: $da-color, $key: borders-light);
-          }
-
-          a:first-of-type {
-            margin-top: 15px;
-          }
-        }
+      @include da-breakpoint(desktop-large) {
+        gap: 35px;
       }
     }
 
@@ -355,6 +487,25 @@
   
         .dropdowns {
           display: flex;
+        }
+      }
+    }
+
+    @include da-breakpoint(desktop-large) {
+      & {
+        height: rem(60px);
+
+        .dropdowns {
+          margin-left: 1.75rem;
+          gap: 35px;
+
+          .dropdown {
+            .dropdown-menu-wrapper {
+              .dropdown-menu {
+                margin-top: 18px;
+              }
+            }
+          }
         }
       }
     }
