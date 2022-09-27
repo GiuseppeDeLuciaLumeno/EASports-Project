@@ -237,7 +237,7 @@ select {
 .btn {
   cursor: pointer;
   background: none;
-  border: 1, 5px solid black;
+  border: 2px solid black;
   border-radius: 3px;
   padding: 15px 30px;
   width: 100%;
@@ -2688,6 +2688,9 @@ footer {
   .bi {
     display: none;
   }
+  .btn {
+    border: 2px solid black;
+  }
 }
 @media only screen and (min-width: 1275px) {
   .cards-wrapper {
@@ -2821,5 +2824,8 @@ footer {
     padding-bottom: 10px;
   }
 }
-
-/*# sourceMappingURL=home.css.map */
+@media only screen and (max-width: 3080px) {
+  .scopridipiu1 {
+    border: 2px solid black;
+  }
+}

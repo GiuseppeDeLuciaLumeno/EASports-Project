@@ -1,9 +1,20 @@
 @import '../../atomic-design/1-abstracts/functions/units/units-giuseppe';
+@import '../../atomic-design/1-abstracts/variables/colors/colors-dario';
+@import '../../atomic-design/1-abstracts/variables/font-families/font-families-dario';
+@import '../../atomic-design/1-abstracts/variables/font-sizes/font-sizes-dario';
+@import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-dario';
 @import '../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-josephine';
 @import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine';
-@import '../../atomic-design/4-layouts/footers/footer-1-josephine';
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../../atomic-design/2-base/typography/sports/sports';
+@import '../../atomic-design/3-components/cards/cards-1-dario';
+@import '../../atomic-design/3-components/tabs/tabs-1-dario';
+@import '../../atomic-design/4-layouts/footers/footer-1-josephine';
+@import '../../atomic-design/4-layouts/page-sections/page-section-1-dario';
+@import '../../atomic-design/4-layouts/grids/6-items-1-dario';
+@import '../../atomic-design/4-layouts/sliders/slider-1-josephine';
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
 
 * {
     margin: 0;
@@ -33,18 +44,36 @@ header {
         //Non permette al Video di Uscire fuori al container
         overflow: hidden;
 
+        @include media-breakpoint-down(md) {
+            background: #000;
+            height: 750px;
+          }
+
         video {
             //Simuliamo la proprietà background-size: cover;
             object-fit: cover;
             height: 100%;
-            width: 100%;
+            width: 90%;
 
             position: absolute;
             top: 0;
             left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
 
             z-index: -100;
             filter: url('#squiggly-2') brightness(0.4);
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+              }
+
+            @include media-breakpoint-down(md) {
+                display: none;
+              }
         }
 
         #pegi-logo {
@@ -112,8 +141,10 @@ header {
       /* hover effect */
       .card-jo:hover::after { opacity: 0}
       .card-jo:hover > .logo { transform: scale(1.1)}
-      
-     
+
+      .button-height {
+        height: 8rem;
+      }
 }
 
     .btn-lg {
@@ -122,3 +153,249 @@ header {
         font-size: 18px;
         padding: 12px 24px;
     }
+
+#sign-up {
+    background: rgb(11,13,55);
+    background: linear-gradient(35deg, rgba(11,13,55,1) 36%, rgba(166,52,71,1) 74%);
+
+    p {
+        font-size: 24px;
+        font-family: "Juana W05 Bold";
+        color: #fff;
+        margin-bottom: 0;
+    }
+}
+
+#card-mobile {
+    h2 {
+        font-size: 40px;
+        font-family: "Juana W05 Bold";
+    }
+
+    .card-jo {
+        display: grid;
+        width: 100%;
+        aspect-ratio: 1;
+      }
+      .card-jo::after, .card-jo > * { grid-row: 1; grid-column: 1 } /* stack everything on top of eachoter*/
+      
+      .card-jo::after { /* black layer with opacity*/
+        content: "";
+        background-color: black;
+        opacity: 0.5;
+        transition: opacity 250ms ease
+      }
+      .card-jo > .cover { /* cover image */
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-jo > .logo { /* logo on top */
+        place-self: center;
+        max-width: 40%;
+        z-index: 1;
+        transition: transform 250ms ease
+      }
+      
+      /* hover effect */
+      .card-jo:hover::after { opacity: 0}
+      .card-jo:hover > .logo { transform: scale(1.1)}
+}
+ // Sezione scss Dario
+#last-news {
+  
+  h3 {
+    font-size: 40px;
+    font-family: "Juana W05 Bold";
+  }
+}
+
+#ultime-novita {
+  background-color: map-get($map: $da-color, $key: bg);
+  overflow: hidden;
+
+
+  #h3 {
+    margin-bottom: 20px;
+    margin-inline: auto;
+  }
+
+  #slider-container {
+    height: 50px;
+    align-self: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .cards-container-1,
+  .cards-container-2,
+  .cards-container-3,
+  .cards-container-4,
+  .cards-container-5,
+  .cards-container-6,
+  .cards-container-7,
+  .cards-container-8 {
+    margin-bottom: 40px;
+    display: none;
+  }
+
+  .cards-container-active {
+    display: grid;
+  }
+
+  .cta {
+    margin-inline: auto;
+  }
+
+  @include da-breakpoint(tablet) {
+    #slider-container {
+      margin-bottom: 50px;
+    }
+  }
+  
+  @include da-breakpoint(desktop) {
+    #slider-container {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+//Button Giuseppe
+.btn-container {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  margin: 0rem 0rem 5rem;
+}
+
+.btn-jo {
+  cursor: pointer;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  padding: 12px 24px;
+  width: 100%;
+  transition: padding 0.1s;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  opacity: .9;
+
+  &:hover {
+      padding: 15px 30px;
+  }
+}
+
+.btn-jo-blk {
+  cursor: pointer;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 3px;
+  padding: 12px 24px;
+  width: 100%;
+  transition: padding 0.1s;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #000;
+  opacity: .9;
+
+  &:hover {
+      padding: 15px 30px;
+  }
+}
+//Fine Button Giuseppe
+
+.btn-outline-light {
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-active-bg: transparent;
+
+  &:hover {
+    padding: 14px 28px;
+
+  }
+}
+
+//Banner Bot
+
+#banner-bot {
+  background: url(../../../assets/img/josephine_page/background-banner-bot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  @include media-breakpoint-down(md) {
+    background: #fff;
+  }
+
+  .row {
+    height: 6rem;
+
+    @include media-breakpoint-down(lg) {
+      height: 10rem;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    font-family: "Juana W05 Bold";
+    margin-bottom: 0;
+  }
+
+  .btn-container-bot {
+    height: 75px;
+
+    .btn-jo-bot {
+      cursor: pointer;
+      background: #ed4344;
+      border-radius: 3px;
+      padding: 12px 24px;
+      width: 100%;
+      transition: padding 0.1s;
+      font-family: "FS Industrie W05 Regular";
+      font-size: 18px;
+      color: #fff;
+    
+      &:hover {
+          padding: 15px 30px;
+      }
+    }
+  }
+}
+
+// Banner Social
+#banner-social {
+  background-color: #eaeaea;
+
+  .row {
+    height: 10rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+
+    li {
+      text-decoration: none;
+      
+      a {
+        font-size: 16px;
+        font-family: "FS Industrie W05 Regular";
+        color: #161616;
+        text-decoration: none;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 14px;
+    font-family: "Juana W05 Bold";
+  }
+
+  .svg-res {
+    
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}

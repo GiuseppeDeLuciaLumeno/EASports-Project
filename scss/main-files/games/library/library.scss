@@ -22,14 +22,21 @@
     height: 200px;
    margin-left: 30px;
    margin-right: 30px;
+
+   &:hover{
     
+   }
+     
   
 }
+
+
+
 .subtitle{
     display: flex;
     position: absolute;
     top: 70px;
-    left: 50px;
+    left: 40px;
     color: white;
     
    }
@@ -37,19 +44,22 @@
 .arrow{
     display: flex;
     position: absolute;
-    bottom: 30px;
-    left: 50px;
+    top: 130px;
+    left: 40px;
     
 
     &:hover{
-    display: flex;
-    position: absolute;
-    bottom: 30px;
-    left: 50px;
+    
     width: 42px;
     height: 42px;
     transition: 1s;
 
     }
-   }
+}
+.transformimg2{
+    display: flex;
+    position: relative;
+}
+
+
    /*FINE CARD*/ 
