@@ -1,9 +1,11 @@
 @import "../../atomic-design/1-abstracts/variables/colors/colors-christian";
 
+
 * {
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
     margin: 0;
+    background-color: $bg;
 
 
 
@@ -14,10 +16,8 @@
         justify-content: center;
         align-items: center;
         max-width: 100%;
-        background-color: $bg;
-        color: #f3f3f3;
 
-        justify-content: flex-end;
+        color: #f3f3f3;
         padding-top: 30px;
 
 
@@ -26,7 +26,13 @@
 
         .ea-description {
             width: 52%;
+            height: auto;
             font-size: 24px;
+
+
+            p {
+                margin-top: 30px;
+            }
 
 
         }
@@ -44,14 +50,22 @@
                 flex-direction: column;
                 align-items: center;
                 width: 200px;
-                height: auto;
+                height: 80px;
                 font-size: 18px;
                 margin: 30px;
+                justify-content: space-between;
 
                 svg {
-                    width: 40px;
+                    width: 45px;
                     fill: rgb(243, 243, 243);
+
+                    &:hover {
+                        width: 50px;
+
+
+                    }
                 }
+
 
 
 
@@ -65,7 +79,7 @@
     }
 
     .container-game {
-        background-color: $bg;
+
         max-width: 100%;
 
         .title-section-game {
@@ -84,7 +98,8 @@
 
 
             .section-card {
-                width: 75%;
+                max-width: 100%;
+                width: auto;
                 height: auto;
                 background-color: #f3f3f3;
                 display: grid;
@@ -92,7 +107,7 @@
                 grid-template-rows: repeat(3, 1fr);
                 justify-items: center;
                 background-color: $bg;
-                gap: 20px;
+                gap: 30px;
                 padding-top: 30px;
 
 
@@ -102,28 +117,114 @@
 
 
                 .card {
-                    border: 1px solid black;
+
                     width: 350px;
                     height: 350px;
-                    background-color: red;
 
-                    &:hover{
-
+                    &:hover {
                         opacity: 0.3;
+
                     }
 
 
 
 
+
+
+                    img {
+                        width: 100%;
+
+
+                    }
+
+
                 }
 
-                img {
-                    width: 100%;
 
 
-                }
+
             }
 
+
         }
+
     }
+
+    .video-section {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .trailer-section {
+            width: 100%;
+            height: 200px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            h3 {
+                color: #f3f3f3;
+                font-size: 40px;
+
+            }
+        }
+
+        .trailer-video {
+            width: 85%;
+            height: 700px;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+
+
+            }
+
+
+        }
+
+        .carousel-video {
+            width: 40%;
+            height: 100px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            .svg{
+                width: 40px;
+                height: 40px;
+            }
+
+
+            svg.left {
+                transform: scale(-1);
+
+                pointer-events: auto;
+
+                fill: #f3f3f3;
+            }
+
+            svg.right {
+
+                pointer-events: auto;
+
+                fill: #f3f3f3;
+            }
+
+
+
+            span {
+                color: #f3f3f3;
+            }
+        }
+
+    }
+
 }
