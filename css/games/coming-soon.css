@@ -1,3 +1,6 @@
+/* ---------------------------------------------------------------*/
+/* BASE -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
 /* FONT-FACES ----------------------------------------------------*/
 @import "/node_modules/flag-icons/css/flag-icons.min.css";
 @font-face {
@@ -80,6 +83,249 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/* TYPOGRAPHY ---------------------------------------------------------*/
+.h3 {
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+  font-size: 2rem;
+  line-height: 2.3rem;
+  margin-block: 2.5rem;
+}
+@media (min-width: 48rem) {
+  .h3 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    margin-block: 3rem;
+  }
+}
+@media (min-width: 64rem) {
+  .h3 {
+    font-size: 2.5rem;
+    line-height: 2.875rem;
+    margin-block: 3.5rem;
+  }
+}
+@media (min-width: 91rem) {
+  .h3 {
+    font-size: 2.75rem;
+    line-height: 3.1625rem;
+    margin-block: 4rem;
+  }
+}
+
+.h4 {
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  margin-block: 0.8125rem;
+}
+@media (min-width: 48rem) {
+  .h4 {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    margin-block: 0.8125rem;
+  }
+}
+@media (min-width: 64rem) {
+  .h4 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    margin-block: 0.975rem;
+  }
+}
+@media (min-width: 91rem) {
+  .h4 {
+    font-size: 1.5rem;
+    line-height: 2.025rem;
+    margin-block: 0.975rem;
+  }
+}
+
+.h5 {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+  font-size: 1rem;
+  line-height: 1.65rem;
+  margin-block: 0;
+}
+@media (min-width: 48rem) {
+  .h5 {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+}
+@media (min-width: 64rem) {
+  .h5 {
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+  }
+}
+@media (min-width: 91rem) {
+  .h5 {
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+  }
+}
+
+.p {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 42%);
+  font-size: 1rem;
+  line-height: 1.65rem;
+}
+@media (min-width: 48rem) {
+  .p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+}
+@media (min-width: 64rem) {
+  .p {
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+  }
+}
+@media (min-width: 91rem) {
+  .p {
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+  }
+}
+
+a {
+  color: hsl(0deg, 100%, 64%);
+  text-decoration: none;
+}
+
+.cta {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 52%);
+  font-size: 1rem;
+  line-height: 1.65rem;
+}
+@media (min-width: 48rem) {
+  .cta {
+    font-size: 1rem;
+    line-height: 1.65rem;
+  }
+}
+@media (min-width: 64rem) {
+  .cta {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+@media (min-width: 91rem) {
+  .cta {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+
+/* ---------------------------------------------------------------*/
+/* COMPONENTS -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+/* buttons -------------------------------------------------------*/
+.cta {
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.cta::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid hsl(0deg, 0%, 9%);
+  border-radius: 4px;
+  animation: 0.1s ease;
+}
+.cta:hover::before {
+  top: -3px;
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+}
+@media (min-width: 640px) {
+  .cta {
+    width: auto;
+  }
+}
+@media (min-width: 48rem) {
+  .cta {
+    margin-top: 1.75rem;
+  }
+}
+@media (min-width: 64rem) {
+  .cta {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 91rem) {
+  .cta {
+    padding: 1rem 1.5rem;
+    margin-top: 2.25rem;
+  }
+}
+
+/* cards -------------------------------------------------------*/
+.card img {
+  display: block;
+  max-width: 100%;
+}
+.card .content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.card .content .p + .h5 {
+  margin-top: 1rem;
+}
+@media (min-width: 48rem) {
+  .card .content .p + .h5 {
+    margin-top: 0;
+  }
+}
+@media (min-width: 48rem) {
+  .card .content {
+    margin-top: 1.75rem;
+    grid-template-columns: max-content auto;
+    grid-template-areas: "one two" "three four" "five six";
+    column-gap: 1.5rem;
+    position: relative;
+  }
+  .card .content .h5, .card .content .p {
+    padding-block: 4px 0;
+  }
+  .card .content .p::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(234, 234, 234);
+  }
+}
+@media (min-width: 64rem) {
+  .card .content {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 91rem) {
+  .card .content {
+    margin-top: 2.25rem;
+  }
+}
+
 /* ---------------------------------------------------------------*/
 /* LAYOUTS -------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
@@ -392,7 +638,7 @@ select {
   }
 }
 
-/* navbar -------------------------*/
+/* hero section -------------------------*/
 header .hero {
   position: relative;
 }
@@ -418,6 +664,7 @@ header .hero picture.pegi {
     display: block;
     position: absolute;
     z-index: -10;
+    bottom: 0;
   }
   header .hero picture.games {
     display: none;
@@ -435,6 +682,63 @@ header .hero picture.pegi {
   }
   header .hero picture.pegi {
     position: absolute;
+  }
+}
+
+/* section 'prossimamente' ------------------------------*/
+/* section positioning -------------------------*/
+.section-container {
+  padding-inline: 7.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 48rem) {
+  .section-container {
+    padding-inline: 7.8125vw;
+    margin-bottom: 2.75rem;
+  }
+}
+@media (min-width: 64rem) {
+  .section-container {
+    padding-inline: 7.4218vw;
+    margin-bottom: 3rem;
+  }
+}
+@media (min-width: 91rem) {
+  .section-container {
+    padding-inline: calc((100vw - 1120px) / 2);
+    margin-bottom: 3.25rem;
+  }
+}
+
+/* grid container -------------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "one" "two" "three" "four" "five" "six";
+  row-gap: 2.5rem;
+}
+@media (min-width: 48rem) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "one two" "three four" "five six";
+    column-gap: 1.5rem;
+    row-gap: 2.75rem;
+  }
+}
+@media (min-width: 64rem) {
+  .grid-container {
+    column-gap: 1.75rem;
+    row-gap: 3rem;
+  }
+}
+@media (min-width: 91rem) {
+  .grid-container {
+    column-gap: 2rem;
+    row-gap: 3.25rem;
   }
 }
 

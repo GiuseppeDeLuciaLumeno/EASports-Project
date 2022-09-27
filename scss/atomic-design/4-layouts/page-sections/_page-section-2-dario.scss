@@ -1,0 +1,25 @@
+.section-container {
+  padding-inline: 7.5vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: rem(40px);
+
+  @include da-breakpoint(tablet) {
+    padding-inline: 7.8125vw;
+    margin-bottom: rem(44px);
+  }
+  
+  @include da-breakpoint(desktop) {
+    padding-inline: 7.4218vw;
+    margin-bottom: rem(48px);
+  }
+  
+  @include da-breakpoint(desktop-large) {
+    padding-inline: calc((100vw - 1120px) / 2);
+    margin-bottom: rem(52px);
+  }
+}
