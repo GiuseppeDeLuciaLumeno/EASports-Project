@@ -13362,6 +13362,48 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   background: rgb(11, 13, 55);
   background: linear-gradient(35deg, rgb(11, 13, 55) 36%, rgb(166, 52, 71) 74%);
 }
+@media (max-width: 767.98px) {
+  #sign-up {
+    height: 20rem;
+  }
+  #sign-up .row > [class*=col-] {
+    display: flex;
+    flex-direction: column;
+  }
+  #sign-up img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+#sign-up .btn-container-sign {
+  height: 75px;
+  width: 100%;
+}
+#sign-up .btn-container-sign .btn-jo-sign {
+  cursor: pointer;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  padding: 12px 24px;
+  width: 100%;
+  transition: padding 0.1s;
+  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+@media (max-width: 767.98px) {
+  #sign-up .btn-container-sign .btn-jo-sign {
+    padding: 12px 65px;
+  }
+}
+#sign-up .btn-container-sign .btn-jo-sign:hover {
+  padding: 15px 30px;
+}
+@media (max-width: 767.98px) {
+  #sign-up .btn-container-sign .btn-jo-sign:hover {
+    padding: 15px 68px;
+  }
+}
 #sign-up p {
   font-size: 24px;
   font-family: "Juana W05 Bold";
@@ -13375,6 +13417,11 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
 #card-mobile h2, #card-mobile .h2 {
   font-size: 40px;
   font-family: "Juana W05 Bold";
+}
+@media (max-width: 767.98px) {
+  #card-mobile h2, #card-mobile .h2 {
+    font-size: 32px;
+  }
 }
 #card-mobile .card-jo {
   display: grid;

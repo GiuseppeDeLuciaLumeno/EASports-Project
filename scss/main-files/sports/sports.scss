@@ -109,7 +109,7 @@ header {
         }
     }
 }
-
+// Sezione Card Principale
 #card-section {
     background-color: #000;
     
@@ -155,21 +155,68 @@ header {
     }
 
 #sign-up {
-    background: rgb(11,13,55);
-    background: linear-gradient(35deg, rgba(11,13,55,1) 36%, rgba(166,52,71,1) 74%);
+  background: rgb(11,13,55);
+  background: linear-gradient(35deg, rgba(11,13,55,1) 36%, rgba(166,52,71,1) 74%);
 
-    p {
-        font-size: 24px;
-        font-family: "Juana W05 Bold";
-        color: #fff;
-        margin-bottom: 0;
+  @include media-breakpoint-down(md) {
+    height: 20rem;
+
+    .row > [class*='col-'] {
+      display: flex;
+      flex-direction: column;
     }
+
+    img {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+  }
+  .btn-container-sign {
+    height: 75px;
+    width: 100%;
+    
+    .btn-jo-sign {
+      cursor: pointer;
+      background: none;
+      border: 2px solid #fff;
+      border-radius: 3px;
+      padding: 12px 24px;
+      width: 100%;
+      transition: padding 0.1s;
+      font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      color: #fff;
+
+      @include media-breakpoint-down(md) {
+        padding: 12px 65px;
+      }
+    
+      &:hover {
+          padding: 15px 30px;
+          
+          @include media-breakpoint-down(md) {
+            padding: 15px 68px;
+          }
+      }
+    }
+  }
+
+  p {
+    font-size: 24px;
+    font-family: "Juana W05 Bold";
+    color: #fff;
+    margin-bottom: 0;
+  }
 }
 
 #card-mobile {
     h2 {
         font-size: 40px;
         font-family: "Juana W05 Bold";
+
+        @include media-breakpoint-down(md) {
+          font-size: 32px;
+        }
     }
 
     .card-jo {
