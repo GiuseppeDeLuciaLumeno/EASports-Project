@@ -21,13 +21,7 @@
     width: 357px;
     height: 200px;
    margin-left: 30px;
-   margin-right: 30px;
-
-   &:hover{
-    
-   }
-     
-  
+   margin-right: 30px;  
 }
 
 
@@ -61,5 +55,39 @@
     position: relative;
 }
 
+.card_gio:hover{
+   
+}
 
-   /*FINE CARD*/ 
+@media screen and (max-width: 576px){
+    .img_card{
+        display: none;  
+      
+    }
+
+    .transformimg{
+        display: flex;
+        position: relative;
+        background-color:#262629;
+        width: 489px;
+        height: 110px;;
+    }
+    .transformimg2{
+        display: flex;
+        position: relative;
+        background-color:#262629;
+        width: 489px;
+        height: 110px;;
+    }
+    .subtitle{
+        display: flex;
+        position: absolute;
+        top: 40px;
+        left: 150px;
+        color: white;
+    
+        
+       }
+}
+
+/*FINE CARD*/ 
