@@ -222,8 +222,8 @@ header {
         font-size: 40px;
         font-family: "Juana W05 Bold";
 
-        @include media-breakpoint-down(md) {
-          font-size: 32px;
+        @include media-breakpoint-down(lg) {
+          font-size: 34px;
         }
     }
 
@@ -423,11 +423,16 @@ header {
 
   .row {
     height: 10rem;
+
+    @include media-breakpoint-down(lg) {
+      height: 15rem;
+    }
   }
   
   ul {
     list-style-type: none;
     margin-bottom: 0;
+    padding-left: 0;
 
     li {
       text-decoration: none;
@@ -447,10 +452,19 @@ header {
   }
 
   .svg-res {
-    
+    width: 75%;
+
+    @include media-breakpoint-down(lg) {
+      width: 30%;
+    }
+
     svg {
       width: 22px;
       height: 22px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }

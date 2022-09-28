@@ -13779,17 +13779,13 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   color: #fff;
   margin-bottom: 0;
 }
-
-#card-mobile { /* stack everything on top of eachoter*/
-  /* hover effect */
-}
 #card-mobile h2, #card-mobile .h2 {
   font-size: 40px;
   font-family: "Juana W05 Bold";
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   #card-mobile h2, #card-mobile .h2 {
-    font-size: 32px;
+    font-size: 34px;
   }
 }
 #card-mobile .card-jo {
@@ -13969,9 +13965,15 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
 #banner-social .row {
   height: 10rem;
 }
+@media (max-width: 991.98px) {
+  #banner-social .row {
+    height: 15rem;
+  }
+}
 #banner-social ul {
   list-style-type: none;
   margin-bottom: 0;
+  padding-left: 0;
 }
 #banner-social ul li {
   text-decoration: none;
@@ -13986,7 +13988,18 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   font-size: 14px;
   font-family: "Juana W05 Bold";
 }
+#banner-social .svg-res {
+  width: 75%;
+}
+@media (max-width: 991.98px) {
+  #banner-social .svg-res {
+    width: 30%;
+  }
+}
 #banner-social .svg-res svg {
   width: 22px;
   height: 22px;
+}
+#banner-social .svg-res svg:hover {
+  transform: scale(1.2);
 }
