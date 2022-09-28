@@ -555,6 +555,8 @@ form {
 }
 
 .second-modal-wrapper {
+    justify-items: center;
+    justify-content: center;
     background: $header-base-color;
     padding: 6rem 0 3rem;
     display: grid;
@@ -566,7 +568,6 @@ form {
         "grid-third-icon grid-fourth-icon"
         "grid-footer grid-footer";
     row-gap: 30px;
-    justify-content: center;
 
     .bi-x-lg {
         color: $header-icon;
@@ -576,7 +577,7 @@ form {
     .grid-header {
         padding-bottom: 1rem;
         grid-area: grid-header;
-        justify-self: center;
+
 
         p {
             font-size: 21px;
@@ -584,10 +585,8 @@ form {
     }
 
     .grid-first-icon {
-        grid-area: grid-first-icon;
-        display: grid;
-        justify-content: center;
-
+       grid-area: grid-first-icon;
+        width: 350px;
         .hover {
 
             cursor: pointer;
@@ -623,7 +622,6 @@ form {
     }
 
     .grid-footer {
-        justify-self: flex-end;
         grid-area: grid-footer;
 
         p {
@@ -640,37 +638,58 @@ form {
         color: lightgray;
         font-family: map-get($ultimi-giochi-font, text);
         font-size: 16px;
+        margin: 0 0 0px;
     }
+
+
+
+    
 }
+
+@media only screen and (max-width: 768px) {
+   .second-modal-wrapper{
+    justify-items: flex-start;
+    row-gap: 35px;
+    .grid-header{
+        justify-self: center;
+    }
+
+    p{
+        margin-left: 5px;
+    }
+   }
+}
+
+@media only screen and (max-width: 659px) {
+    .second-modal-wrapper{
+        grid-template-columns: 280px 250px;
+
+    }
+ }
 
 @media only screen and (max-width: 585px) {
     .second-modal-wrapper{
-
-        grid-template-columns: 1fr;
+        justify-items: center;
         grid-template-areas:
-        "grid-header"
-        "grid-first-icon"
-        "grid-second-icon"
-        "grid-third-icon"
-        "grid-fourth-icon"
-        "grid-footer";
-        row-gap: 5px;
-
-        .d-flex{
-           
-
-        }
+        "grid-header grid-header"
+        "grid-first-icon grid-first-icon"
+        "grid-second-icon grid-second-icon"
+        "grid-third-icon grid-third-icon"
+        "grid-fourth-icon grid-fourth-icon"
+        "grid-footer grid-footer";
+        row-gap: 25px;
         p{
-            margin: 0 0 0px;
+            margin: 0 5px 0px;
         }
-
-        .grid-first-icon,
-        .grid-second-icon,
-        .grid-third-icon,
-        .grid-fourth-icon{
-
-        justify-content: flex-start;
+        .grid-footer{
+            margin-left: 15px;
         }
+    }
+}
+
+@media only screen and (max-width: 521px) {
+    .second-modal-wrapper{
+        grid-template-columns: 1fr;
 
     }
 }

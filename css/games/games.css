@@ -13172,6 +13172,8 @@ form .create-account .text-colapse p {
 }
 
 .second-modal-wrapper {
+  justify-items: center;
+  justify-content: center;
   background: rgb(19, 18, 18);
   padding: 6rem 0 3rem;
   display: grid;
@@ -13179,7 +13181,6 @@ form .create-account .text-colapse p {
   grid-template-rows: auto;
   grid-template-areas: "grid-header grid-header" "grid-first-icon grid-second-icon" "grid-third-icon grid-fourth-icon" "grid-footer grid-footer";
   row-gap: 30px;
-  justify-content: center;
 }
 .second-modal-wrapper .bi-x-lg {
   color: rgb(163, 163, 163);
@@ -13187,15 +13188,13 @@ form .create-account .text-colapse p {
 .second-modal-wrapper .grid-header {
   padding-bottom: 1rem;
   grid-area: grid-header;
-  justify-self: center;
 }
 .second-modal-wrapper .grid-header p {
   font-size: 21px;
 }
 .second-modal-wrapper .grid-first-icon, .second-modal-wrapper .grid-fourth-icon, .second-modal-wrapper .grid-third-icon, .second-modal-wrapper .grid-second-icon {
   grid-area: grid-first-icon;
-  display: grid;
-  justify-content: center;
+  width: 350px;
 }
 .second-modal-wrapper .grid-first-icon .hover, .second-modal-wrapper .grid-fourth-icon .hover, .second-modal-wrapper .grid-third-icon .hover, .second-modal-wrapper .grid-second-icon .hover {
   cursor: pointer;
@@ -13223,7 +13222,6 @@ form .create-account .text-colapse p {
   grid-area: grid-fourth-icon;
 }
 .second-modal-wrapper .grid-footer {
-  justify-self: flex-end;
   grid-area: grid-footer;
 }
 .second-modal-wrapper .grid-footer p {
@@ -13237,21 +13235,41 @@ form .create-account .text-colapse p {
   color: lightgray;
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
   font-size: 16px;
+  margin: 0 0 0px;
 }
 
-@media only screen and (max-width: 585px) {
+@media only screen and (max-width: 768px) {
   .second-modal-wrapper {
-    grid-template-columns: 1fr;
-    grid-template-areas: "grid-header" "grid-first-icon" "grid-second-icon" "grid-third-icon" "grid-fourth-icon" "grid-footer";
-    row-gap: 5px;
+    justify-items: flex-start;
+    row-gap: 35px;
+  }
+  .second-modal-wrapper .grid-header {
+    justify-self: center;
   }
   .second-modal-wrapper p {
-    margin: 0 0 0px;
+    margin-left: 5px;
   }
-  .second-modal-wrapper .grid-first-icon,
-.second-modal-wrapper .grid-second-icon,
-.second-modal-wrapper .grid-third-icon,
-.second-modal-wrapper .grid-fourth-icon {
-    justify-content: flex-start;
+}
+@media only screen and (max-width: 659px) {
+  .second-modal-wrapper {
+    grid-template-columns: 280px 250px;
+  }
+}
+@media only screen and (max-width: 585px) {
+  .second-modal-wrapper {
+    justify-items: center;
+    grid-template-areas: "grid-header grid-header" "grid-first-icon grid-first-icon" "grid-second-icon grid-second-icon" "grid-third-icon grid-third-icon" "grid-fourth-icon grid-fourth-icon" "grid-footer grid-footer";
+    row-gap: 25px;
+  }
+  .second-modal-wrapper p {
+    margin: 0 5px 0px;
+  }
+  .second-modal-wrapper .grid-footer {
+    margin-left: 15px;
+  }
+}
+@media only screen and (max-width: 521px) {
+  .second-modal-wrapper {
+    grid-template-columns: 1fr;
   }
 }
