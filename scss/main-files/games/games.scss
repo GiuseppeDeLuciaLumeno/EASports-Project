@@ -643,7 +643,7 @@ form {
 
 
 
-    
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -691,5 +691,21 @@ form {
     .second-modal-wrapper{
         grid-template-columns: 1fr;
 
+    }
+
+
+}
+@media only screen and (max-width: 355px) {
+    .second-modal-wrapper{
+     .grid-first-icon{
+        width: 250px;
+     }
+    }
+}
+@media only screen and (max-width: 256px) {
+    .second-modal-wrapper{
+     .grid-first-icon{
+        width: 190px;
+     }
     }
 }

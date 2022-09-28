@@ -13273,3 +13273,13 @@ form .create-account .text-colapse p {
     grid-template-columns: 1fr;
   }
 }
+@media only screen and (max-width: 355px) {
+  .second-modal-wrapper .grid-first-icon, .second-modal-wrapper .grid-second-icon, .second-modal-wrapper .grid-third-icon, .second-modal-wrapper .grid-fourth-icon {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 256px) {
+  .second-modal-wrapper .grid-first-icon, .second-modal-wrapper .grid-second-icon, .second-modal-wrapper .grid-third-icon, .second-modal-wrapper .grid-fourth-icon {
+    width: 190px;
+  }
+}
