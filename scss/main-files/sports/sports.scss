@@ -427,6 +427,16 @@ header {
     @include media-breakpoint-down(lg) {
       height: 15rem;
     }
+    
+    @include media-breakpoint-down(md) {
+      height: 20rem;
+  
+      .row > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+      }
+    }
   }
   
   ul {

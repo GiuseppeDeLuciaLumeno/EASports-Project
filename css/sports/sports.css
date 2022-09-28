@@ -13780,6 +13780,9 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   margin-bottom: 0;
 }
 
+#card-mobile { /* stack everything on top of eachoter*/
+  /* hover effect */
+}
 #card-mobile h2, #card-mobile .h2 {
   font-size: 40px;
   font-family: "Juana W05 Bold";
@@ -13969,6 +13972,16 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
 @media (max-width: 991.98px) {
   #banner-social .row {
     height: 15rem;
+  }
+}
+@media (max-width: 767.98px) {
+  #banner-social .row {
+    height: 20rem;
+  }
+  #banner-social .row .row > [class*=col-] {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
   }
 }
 #banner-social ul {
