@@ -49,7 +49,7 @@ window.addEventListener("mouseup", (event) => {
     myModal.classList.remove("active");
   }
 
-  else if (event.target == personIcon) {
+  else if (event.target === personIcon) {
     myModal.classList.remove("active");
   }
 });
