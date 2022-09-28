@@ -12778,15 +12778,6 @@ form .login-logo p {
   font-size: 14px;
   margin-bottom: 0;
 }
-@media only screen and (max-width: 543px) {
-  form .login-logo {
-    justify-content: flex-start !important;
-    margin-inline: 10rem;
-  }
-  form .login-logo p.translate {
-    margin-left: 10px;
-  }
-}
 form .create-account {
   cursor: pointer;
 }
@@ -13237,7 +13228,6 @@ form .create-account .text-colapse p {
   font-size: 16px;
   margin: 0 0 0px;
 }
-
 @media only screen and (max-width: 768px) {
   .second-modal-wrapper {
     justify-items: flex-start;

@@ -162,16 +162,6 @@ form {
             font-size: 14px;
             margin-bottom: 0;
         }
-
-        @media only screen and (max-width: 543px) {
-            justify-content: flex-start !important;
-            margin-inline: 10rem;
-
-            p.translate {
-                margin-left: 10px;
-            }
-        }
-
     }
 
     .create-account {
@@ -504,6 +494,7 @@ form {
     z-index: 0;
     overflow: hidden;
     transition: opacity 0.20s linear;
+
     .bi-x-lg {
         font-weight: bolder;
         position: absolute;
@@ -554,9 +545,10 @@ form {
 
 }
 
+//SECOND BLACK MODAL
 .second-modal-wrapper {
-    justify-items: center;
-    justify-content: center;
+    justify-items: center; //SINGOL ITEMS OF GRID
+    justify-content: center; //THE WHOLE GRID STRUCTURE
     background: $header-base-color;
     padding: 6rem 0 3rem;
     display: grid;
@@ -578,15 +570,15 @@ form {
         padding-bottom: 1rem;
         grid-area: grid-header;
 
-
         p {
             font-size: 21px;
         }
     }
 
     .grid-first-icon {
-       grid-area: grid-first-icon;
+        grid-area: grid-first-icon;
         width: 350px;
+
         .hover {
 
             cursor: pointer;
@@ -641,71 +633,57 @@ form {
         margin: 0 0 0px;
     }
 
+    //RESPONSIVITY
+    @media only screen and (max-width: 768px) {
+        justify-items: flex-start;
+        row-gap: 35px;
 
+        .grid-header {
+            justify-self: center;
+        }
 
-
-}
-
-@media only screen and (max-width: 768px) {
-   .second-modal-wrapper{
-    justify-items: flex-start;
-    row-gap: 35px;
-    .grid-header{
-        justify-self: center;
+        p {
+            margin-left: 5px;
+        }
     }
 
-    p{
-        margin-left: 5px;
-    }
-   }
-}
-
-@media only screen and (max-width: 659px) {
-    .second-modal-wrapper{
+    @media only screen and (max-width: 659px) {
         grid-template-columns: 280px 250px;
-
     }
- }
 
-@media only screen and (max-width: 585px) {
-    .second-modal-wrapper{
+    @media only screen and (max-width: 585px) {
         justify-items: center;
         grid-template-areas:
-        "grid-header grid-header"
-        "grid-first-icon grid-first-icon"
-        "grid-second-icon grid-second-icon"
-        "grid-third-icon grid-third-icon"
-        "grid-fourth-icon grid-fourth-icon"
-        "grid-footer grid-footer";
+            "grid-header grid-header"
+            "grid-first-icon grid-first-icon"
+            "grid-second-icon grid-second-icon"
+            "grid-third-icon grid-third-icon"
+            "grid-fourth-icon grid-fourth-icon"
+            "grid-footer grid-footer";
         row-gap: 25px;
-        p{
+
+        p {
             margin: 0 5px 0px;
         }
-        .grid-footer{
+
+        .grid-footer {
             margin-left: 15px;
         }
     }
-}
 
-@media only screen and (max-width: 521px) {
-    .second-modal-wrapper{
+    @media only screen and (max-width: 521px) {
         grid-template-columns: 1fr;
-
     }
 
-
-}
-@media only screen and (max-width: 355px) {
-    .second-modal-wrapper{
-     .grid-first-icon{
-        width: 250px;
-     }
+    @media only screen and (max-width: 355px) {
+        .grid-first-icon {
+            width: 250px;
+        }
     }
-}
-@media only screen and (max-width: 256px) {
-    .second-modal-wrapper{
-     .grid-first-icon{
-        width: 190px;
-     }
+
+    @media only screen and (max-width: 256px) {
+        .grid-first-icon {
+            width: 190px;
+        }
     }
 }
