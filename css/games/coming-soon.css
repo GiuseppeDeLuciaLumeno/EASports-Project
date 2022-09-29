@@ -743,9 +743,24 @@ a {
   }
 }
 
+.navbar {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+}
+.navbar .dark-section, .navbar .light-section {
+  transition: 0.4s cubic-bezier(0.5, 0.25, 0.015, 1);
+}
+
+.navbar.hidden .dark-section, .navbar.hidden .light-section {
+  transform: translateY(-40px);
+}
+
 /* hero section -------------------------*/
 header .hero {
   position: relative;
+  margin-top: 93px;
 }
 header .hero video {
   width: 100%;
@@ -760,11 +775,17 @@ header .hero picture.pegi {
   display: none;
 }
 @media (min-width: 48rem) {
+  header .hero {
+    margin-top: 93px;
+  }
   header .hero picture.pegi {
     display: block;
   }
 }
 @media (min-width: 64rem) {
+  header .hero {
+    margin-top: 96px;
+  }
   header .hero video:nth-child(2) {
     display: block;
     position: absolute;
@@ -779,6 +800,9 @@ header .hero picture.pegi {
   }
 }
 @media (min-width: 91rem) {
+  header .hero {
+    margin-top: 100px;
+  }
   header .hero video:nth-child(1) {
     display: block;
   }

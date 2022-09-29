@@ -13,9 +13,11 @@
 
 // ATTENZIONE! Fare attenzione all' html... deve essere nel modo giusto -----> ref: \html\games\coming-soon.html 
 
+// ATTENZIONE! Adjust '.hero {margin-top}' to match the navbar's height on the different screen sizes
 header {
   .hero {
     position: relative;
+    margin-top: 93px;
 
     video {
       width: 100%;
@@ -37,6 +39,8 @@ header {
 
   @include da-breakpoint(tablet) {
     .hero {
+      margin-top: 93px;
+
       picture {
         &.pegi {
           display: block;
@@ -47,6 +51,8 @@ header {
 
   @include da-breakpoint(desktop) {
     .hero {
+      margin-top: 96px;
+
       video:nth-child(2) {
         display: block;
         position: absolute;
@@ -68,6 +74,8 @@ header {
 
   @include da-breakpoint(desktop-large) {
     .hero {
+      margin-top: 100px;
+
       video:nth-child(1) {
         display: block;
       }

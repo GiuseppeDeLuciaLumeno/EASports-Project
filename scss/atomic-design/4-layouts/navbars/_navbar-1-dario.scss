@@ -511,4 +511,21 @@
     }
   }
 }
+
+.navbar {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  
+  .dark-section, .light-section {
+    transition: 0.4s cubic-bezier(0.5, 0.25, 0.015, 1);
+  }
+}
+
+.navbar.hidden {
+  .dark-section, .light-section {
+    transform: translateY(-40px);
+  }
+}
 // Dario - fine -------------------------------------------------------------
