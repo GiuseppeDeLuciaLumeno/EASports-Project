@@ -36,6 +36,9 @@
 /* cards -------------------------------------------------------*/
 @import '../../atomic-design/3-components/cards/cards-2-dario';
 
+/* slider tabs -------------------------------------------------------*/
+@import '../../atomic-design/3-components/tabs/tabs-1-dario';
+
 /* ---------------------------------------------------------------*/
 /* LAYOUTS -------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
@@ -46,6 +49,9 @@
 /* hero section -------------------------*/
 @import '../../atomic-design/4-layouts/heroes/hero-1-dario';
 
+/* slider -------------------------------------------------------*/
+@import '../../atomic-design/4-layouts/sliders/slider-1-dario';
+
 /* section 'prossimamente' ------------------------------*/
 /* section positioning -------------------------*/
 @import '../../atomic-design/4-layouts/page-sections/page-section-2-dario';
@@ -55,6 +61,9 @@
 /* footer -------------------------*/
 @import '../../atomic-design/4-layouts/footers/footer-1-josephine';
 
-body {
-  font-family: map-get($map: $da-font-family, $key: text);
-}
+/* ---------------------------------------------------------------*/
+/* PAGES -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* coming soon -------------------------*/
+@import '../../atomic-design/6-pages/games/coming-soon';

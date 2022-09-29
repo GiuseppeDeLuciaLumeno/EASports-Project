@@ -130,3 +130,29 @@ a {
         line-height: rem(27px);
     }
 }
+
+.slider-tab {
+    font-family: map-get($map: $da-font-family, $key: text);
+    color: map-get($map: $da-color, $key: dark);
+    font-size: map-get($map: $da-fs-p, $key: mobile);
+    line-height: rem(24px);
+
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-p, $key: tablet);
+        line-height: rem(24px);
+    }
+
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-p, $key: desktop);
+        line-height: rem(27px);
+    }
+
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-p, $key: desktop-large);
+        line-height: rem(27px);
+    }
+}
+
+.slider-tab-container.active .slider-tab {
+    color: map-get($map: $da-color, $key: dark) !important;
+}
