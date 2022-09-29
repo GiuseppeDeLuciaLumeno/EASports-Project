@@ -39,6 +39,8 @@
 
     @include da-breakpoint(tablet) {
       margin-top: rem(28px);
+      max-width: max-content;
+      padding-right: rem(24px);
 
       grid-template-columns: max-content auto;
       grid-template-areas: 

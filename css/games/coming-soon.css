@@ -297,6 +297,8 @@ a {
 @media (min-width: 48rem) {
   .card .content {
     margin-top: 1.75rem;
+    max-width: max-content;
+    padding-right: 1.5rem;
     grid-template-columns: max-content auto;
     grid-template-areas: "one two" "three four" "five six";
     column-gap: 1.5rem;
