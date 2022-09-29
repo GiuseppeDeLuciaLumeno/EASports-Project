@@ -795,6 +795,7 @@ header .hero picture.pegi {
   position: relative;
 }
 .section-container .slider-container {
+  align-self: flex-start;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -859,6 +860,65 @@ header .hero picture.pegi {
   flex: 0 0 auto;
   list-style: none;
 }
+.section-container .slider-container .dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.section-container .slider-container .dropdown .dropdown-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: lightblue;
+  padding-inline: 1.5rem;
+  height: 3rem;
+  background-color: hsl(0deg, 0%, 87%);
+}
+.section-container .slider-container .dropdown .dropdown-button svg {
+  height: 1rem;
+  width: 1rem;
+}
+.section-container .slider-container .dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  width: 110%;
+  top: 0;
+  z-index: 11;
+  background-color: hsl(0deg, 0%, 87%);
+  padding-inline: 24px 40px;
+  border: 2px solid hsla(0deg, 0%, 0%, 0.08);
+  border-radius: 2px;
+  height: 215px;
+  overflow: scroll;
+}
+.section-container .slider-container .dropdown .dropdown-menu::-webkit-scrollbar {
+  display: none;
+}
+.section-container .slider-container .dropdown .dropdown-menu .choice {
+  line-height: 26.4px;
+  padding-block: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.1s ease-in-out;
+}
+.section-container .slider-container .dropdown .dropdown-menu .choice svg {
+  display: inline-block;
+  height: 16px;
+  transition: 0.1s ease-in-out;
+}
+.section-container .slider-container .dropdown .dropdown-menu .choice:hover {
+  padding-left: 8px;
+}
+.section-container .slider-container .dropdown .dropdown-menu .choice:hover svg {
+  transform: translateX(8px);
+}
+.section-container .slider-container .dropdown .dropdown-menu .choice + .choice {
+  border-top: 2px solid hsla(0deg, 0%, 0%, 0.08);
+}
+.section-container .slider-container .dropdown.active .dropdown-menu {
+  display: block;
+}
 .section-container .slider-container .border-bottom {
   align-self: flex-end;
   position: absolute;
@@ -868,6 +928,26 @@ header .hero picture.pegi {
   left: 0;
   background-color: hsla(0deg, 0%, 0%, 0.08);
   z-index: 2;
+}
+@media (max-width: 48rem) {
+  .section-container .slider-container .border-bottom {
+    bottom: -2px;
+  }
+}
+@media (max-width: 48rem) {
+  .section-container .slider-container ul, .section-container .slider-container .arrow-container {
+    display: none !important;
+  }
+}
+@media (min-width: 48rem) {
+  .section-container .slider-container .dropdown {
+    display: none;
+  }
+}
+@media (min-width: 48rem) {
+  .section-container {
+    overflow-x: hidden;
+  }
 }
 
 /* section 'prossimamente' ------------------------------*/
@@ -1543,10 +1623,6 @@ body {
 
 #slider-section {
   margin-bottom: 0;
-}
-
-.slider-container {
-  justify-content: flex-start;
 }
 
 @media (max-width: 1275px) {
