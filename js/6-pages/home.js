@@ -14,3 +14,13 @@ icons.forEach(icon => {
 // ----------------------------------------------------------------------------------------------
 // Giuseppe - fine ------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------------
+
+// Josephine - Inizio Test
+
+function swapArrow() {
+	let element = document.getElementById('arrow');
+	element.classList.remove('down');
+    element.classList.add('up');
+}
+
+// Josephine - Fine

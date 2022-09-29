@@ -849,6 +849,7 @@ footer {
   align-items: flex-start;
   height: 80%;
   width: 80%;
+  margin-bottom: 0px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link ul {
@@ -13615,6 +13616,12 @@ header .video-wrapper {
     height: 750px;
   }
 }
+@media (max-width: 767.98px) {
+  header .video-wrapper {
+    background: #000;
+    height: 100%;
+  }
+}
 header .video-wrapper video {
   object-fit: cover;
   height: 100%;
@@ -13724,10 +13731,6 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
 @media (max-width: 767.98px) {
   #sign-up {
     height: 20rem;
-  }
-  #sign-up .row > [class*=col-] {
-    display: flex;
-    flex-direction: column;
   }
   #sign-up img {
     max-width: 50%;
@@ -13978,11 +13981,6 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   #banner-social .row {
     height: 20rem;
   }
-  #banner-social .row .row > [class*=col-] {
-    display: flex;
-    flex-direction: column;
-    margin: 0 1rem;
-  }
 }
 #banner-social ul {
   list-style-type: none;
@@ -14003,12 +14001,7 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   font-family: "Juana W05 Bold";
 }
 #banner-social .svg-res {
-  width: 75%;
-}
-@media (max-width: 991.98px) {
-  #banner-social .svg-res {
-    width: 30%;
-  }
+  width: 13rem;
 }
 #banner-social .svg-res svg {
   width: 22px;

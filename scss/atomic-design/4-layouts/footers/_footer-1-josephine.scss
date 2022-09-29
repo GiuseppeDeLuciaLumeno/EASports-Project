@@ -99,6 +99,7 @@ footer {
             height: 100%;
             width: 90%;
 
+
         @include lg {
             width: 96%;
         }
@@ -354,7 +355,7 @@ footer {
             #color-nation {
                 color: $color-primary;
                 display: flex;
-                width: 85%;
+                width: 90%;
 
                 @include md {
                     width: 95%;
@@ -367,13 +368,6 @@ footer {
                 .wrapper-text-arrow {
                     display: flex;
                     width: 100%;
-                    justify-content: space-between;
-
-                    img {
-                        width: 14px;
-                        height: 14px;
-                        margin-left: 60px;
-                    }
                 }
             }
 
@@ -491,6 +485,7 @@ footer {
             align-items: flex-start;
             height: 80%;
             width: 80%;
+            margin-bottom: 0px;
 
             @include lg {
                 width: 89%;
@@ -547,4 +542,22 @@ footer {
         }
     }
 }
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 0 0 0.1rem 3rem;
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
 // Josephine - fine ------------------------------------------------------------------------------------------

@@ -49,6 +49,11 @@ header {
             height: 750px;
           }
 
+        @include media-breakpoint-down(md) {
+          background: #000;
+          height: 100%;
+        }
+
         video {
             //Simuliamo la proprietà background-size: cover;
             object-fit: cover;
@@ -161,16 +166,12 @@ header {
   @include media-breakpoint-down(md) {
     height: 20rem;
 
-    .row > [class*='col-'] {
-      display: flex;
-      flex-direction: column;
-    }
-
     img {
       max-width: 50%;
       margin: 0 auto;
     }
   }
+   
   .btn-container-sign {
     height: 75px;
     width: 100%;
@@ -430,12 +431,6 @@ header {
     
     @include media-breakpoint-down(md) {
       height: 20rem;
-  
-      .row > [class*='col-'] {
-        display: flex;
-        flex-direction: column;
-        margin: 0 1rem;
-      }
     }
   }
   
@@ -462,11 +457,7 @@ header {
   }
 
   .svg-res {
-    width: 75%;
-
-    @include media-breakpoint-down(lg) {
-      width: 30%;
-    }
+    width: 13rem;
 
     svg {
       width: 22px;
