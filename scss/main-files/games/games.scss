@@ -696,3 +696,56 @@ form {
         }
     }
 }
+
+
+.video-wrapper{
+    z-index: -1;
+    video{
+        max-width: 100%;
+    }
+    @media only screen and (max-width: 1023px) {
+       video{
+        display: none;
+       }
+       video + img{
+        display: block;
+        @media (max-width: 765px) {
+            display: none;
+        }
+       }
+       .top-md-0{
+        top: 7rem !important;
+        @media only screen and(max-width: 765px) {
+            display: none;
+        }
+        @media only screen and (max-width: 768px) {
+            top: 5rem !important;
+        }
+       }
+    }
+
+       .games-bg{
+        display: none;
+        @media only screen and (min-width: 249px) and (max-width: 765px) {
+            display: block;
+            left: 0;
+            line-height: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+       }
+    }
+
+    @media only screen and (min-width: 1023px) {
+        video + img {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 2072px) {
+        .top-0 {
+            right: 0;
+            top: 13rem !important;
+        }
+    }

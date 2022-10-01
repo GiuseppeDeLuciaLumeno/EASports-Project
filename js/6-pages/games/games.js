@@ -8,18 +8,18 @@ const blackBlock = document.querySelector(".black-block");
 const personIcon = document.getElementById("person-icon");
 
 
-
 //Aside Menu activate with dots
 asideShow.addEventListener("click", () => {
     asideShow.classList.toggle("active");
     blackBackground.classList.toggle("active");
-   /*  modal.showModal() */;
+   document.body.style.overflow = "hidden";
 });
 
-//Aside Menu Disactivate with I-icon
+//Aside Menu Disactivate with Icon-X
 asidehide.addEventListener("click", () => {
    asideShow.classList.remove("active");
    blackBackground.classList.remove("active");
+   document.body.style.overflow ="auto";
  /*   modal.close(); */
 });
 
@@ -29,6 +29,7 @@ window.addEventListener("keydown", keypress);
     if (key.keyCode === 27) {
         asideShow.classList.remove("active");
         blackBackground.classList.remove("active");
+        document.body.style.overflow ="auto";
     }
   }
 
@@ -40,6 +41,7 @@ window.addEventListener("mouseup", (event) => {
     burger.classList.remove("active");
     myModal.classList.remove("active");
     firstModal.classList.remove("active");
+    document.body.style.overflow ="auto";
   }
 
   else if (event.target === blackBackground) {
@@ -47,10 +49,12 @@ window.addEventListener("mouseup", (event) => {
     blackBackground.classList.remove("active");
     burger.classList.remove("active");
     myModal.classList.remove("active");
+    document.body.style.overflow ="auto";
   }
 
   else if (event.target === personIcon) {
     myModal.classList.remove("active");
+    document.body.style.overflow ="auto";
   }
 });
 
@@ -65,6 +69,7 @@ burger.addEventListener("click", () => {
 
 asidehide.addEventListener("click", () => {
     burger.classList.remove("active");
+    document.body.style.overflow ="auto";
 });
 
 
@@ -93,7 +98,6 @@ interrogative.addEventListener("click", () => {
 iconX.addEventListener("click", () => {
   myModal.classList.remove("active");
 })
-
 
 
 
