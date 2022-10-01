@@ -1,0 +1,69 @@
+@use 'sass:math';
+
+// ABSTRACTS -----------------------------------------------------
+@import '../../atomic-design/1-abstracts/variables/font-families/font-families-dario';
+@import '../../atomic-design/1-abstracts/variables/font-sizes/font-sizes-dario';
+@import '../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-dario';
+@import '../../atomic-design/1-abstracts/variables/colors/colors-dario';
+@import '../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-josephine';
+
+@import '../../atomic-design/1-abstracts/functions/units/units-giuseppe';
+
+@import '../../atomic-design/1-abstracts/mixins/flexbox/flexbox-1-dario';
+@import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine';
+
+/* ---------------------------------------------------------------*/
+/* BASE -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* FONT-FACES ----------------------------------------------------*/
+@import '../../atomic-design/2-base/font-faces/font-faces-dario';
+
+/* RESET ---------------------------------------------------------*/
+@import '../../atomic-design/2-base/resets/reset-dario';
+
+/* TYPOGRAPHY ---------------------------------------------------------*/
+@import '../../atomic-design/2-base/typography/games/coming-soon';
+
+/* ---------------------------------------------------------------*/
+/* COMPONENTS -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* buttons -------------------------------------------------------*/
+@import '../../atomic-design/3-components/buttons/button-1-dario';
+
+/* cards -------------------------------------------------------*/
+@import '../../atomic-design/3-components/cards/cards-2-dario';
+
+/* slider tabs -------------------------------------------------------*/
+@import '../../atomic-design/3-components/tabs/tabs-1-dario';
+
+/* ---------------------------------------------------------------*/
+/* LAYOUTS -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* navbar -------------------------*/
+@import '../../atomic-design/4-layouts/navbars/navbar-1-dario';
+
+/* hero section -------------------------*/
+@import '../../atomic-design/4-layouts/heroes/hero-1-dario';
+
+/* slider -------------------------------------------------------*/
+@import '../../atomic-design/4-layouts/sliders/slider-2-dario';
+
+/* section 'prossimamente' ------------------------------*/
+/* section positioning -------------------------*/
+@import '../../atomic-design/4-layouts/page-sections/page-section-2-dario';
+/* grid container -------------------------*/
+@import '../../atomic-design/4-layouts/grids/6-items-2-dario';
+
+/* footer -------------------------*/
+@import '../../atomic-design/4-layouts/footers/footer-1-josephine';
+
+/* ---------------------------------------------------------------*/
+/* PAGES -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* coming soon -------------------------*/
+@import '../../atomic-design/6-pages/games/coming-soon';
