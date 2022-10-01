@@ -212,7 +212,7 @@ form {    ///BLACK BLOCKLL
 
 
 .lower-header {
-    z-index: -3;
+   z-index: 2 !important;
    background: white;
    width: 100%;
     display: flex;
@@ -507,17 +507,18 @@ form {    ///BLACK BLOCKLL
 }
 
 #fixed-first-modal {
+    display: flex;
+    justify-content: center;
     background: $header-base-color;
-    padding: 12rem 0;
+    height: 0;
+    /* padding: 12rem 0; */
     opacity: 0;
     position: fixed;
     top: 2.5rem;
     left: 0%;
     width: 100%;
-    z-index: 2 !important;
     overflow: hidden;
-    transition: opacity 0.20s linear;
-    display: none;
+    transition: all 0.20s linear;
 
     .bi-x-lg {
         font-weight: bolder;
@@ -532,50 +533,28 @@ form {    ///BLACK BLOCKLL
     }
 
     &.active {
-        display: block;
+        height: 25rem;
         overflow: visible;
         opacity: 1;
-        z-index: 1;
+        z-index: 2;
     }
 }
 
-
-.fixed {
-    opacity: 0;
-    position: fixed;
-    top: 2.5rem;
-    left: 0%;
-    width: 100%;
-    z-index: 0;
-    overflow: hidden;
-    transition: opacity 0.20s linear;
-
-    .bi-x-lg {
-        font-weight: bolder;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        color: rgb(163, 163, 163);
-
-        &:hover {
-            color: white;
-        }
-    }
-
-    &.active {
-        overflow: visible;
-        opacity: 1;
-        z-index: 1;
-    }
-
-}
 
 //SECOND BLACK MODAL
 .second-modal-wrapper {
+    opacity: 0;
+    transition: all 0.20s linear;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 2.5rem;
+    left: 0;
+    overflow: hidden;
     justify-items: center; //SINGOL ITEMS OF GRID
     justify-content: center; //THE WHOLE GRID STRUCTURE
     background: $header-base-color;
-    padding: 6rem 0 3rem;
+    /* padding: 6rem 0 3rem; */
     display: grid;
     grid-template-columns: repeat(2, 290px);
     grid-template-rows: auto;
@@ -586,8 +565,23 @@ form {    ///BLACK BLOCKLL
         "grid-footer grid-footer";
     row-gap: 30px;
 
+    &.active {
+        height: 25rem;
+        overflow: visible;
+        opacity: 1;
+        z-index: 2;
+    }
+
     .bi-x-lg {
-        color: $header-icon;
+        font-weight: bolder;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: rgb(163, 163, 163);
+
+        &:hover {
+            color: white;
+        }
     }
 
 
@@ -789,10 +783,6 @@ header{
     width: 100%;
 }
 
-//normal
-.video-wrapper{
-/* margin-top: 3rem; */
-}
 
 
 

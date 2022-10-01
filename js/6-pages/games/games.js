@@ -17,10 +17,7 @@ let scrollEvent = 0;
 document.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
-  if (currentScroll > 0) {
-    header.classList.add("header");
- }
-  if (currentScroll <= 0) {
+ if (currentScroll <= 0) {
     header.classList.remove("header");
  }
 
@@ -28,6 +25,9 @@ document.addEventListener("scroll", () => {
   header.classList.remove("header");
  }
 
+ if (currentScroll > scrollEvent) {
+  header.classList.add("header");
+}
 
   scrollEvent = currentScroll;
 });
@@ -39,10 +39,10 @@ asideShow.addEventListener("click", () => {
     blackBackground.classList.toggle("active");
 });
 
-//Aside Menu active and the header disappears
-asideShow.addEventListener("click", () => {
+//Aside Menu active and the header Appears
+ asideShow.addEventListener("click", () => {
   header.classList.remove("header");
-})
+});
 
 
 
@@ -117,7 +117,7 @@ firstIconX.addEventListener("click", () => {
 
 //Second-Modal Interrogative point icon
 const interrogative = document.getElementById("open-modal");
-const myModal = document.querySelector(".fixed");
+const myModal = document.querySelector(".second-modal-wrapper");
 const iconX = document.getElementById("icon-x-second-modal");
 
 interrogative.addEventListener("click", () => {
