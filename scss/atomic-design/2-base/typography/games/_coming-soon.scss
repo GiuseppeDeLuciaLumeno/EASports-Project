@@ -156,3 +156,7 @@ a {
 .slider-tab-container.active .slider-tab {
     color: map-get($map: $da-color, $key: dark) !important;
 }
+
+.dropdown-menu .choice a{
+    color: map-get($map: $da-color, $key: dark);
+}
