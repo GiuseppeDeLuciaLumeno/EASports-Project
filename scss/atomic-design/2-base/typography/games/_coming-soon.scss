@@ -1,0 +1,158 @@
+// h3 to be used as SECTIONS' TITLE -------------------------------------------------------
+.h3 {
+    font-family: map-get($map: $da-font-family, $key: heading);
+    color: map-get($map: $da-color, $key: dark);
+    font-size: map-get($map: $da-fs-h3, $key: mobile);
+    line-height: rem(36.8px);
+
+    margin-block: rem(40px);
+
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-h3, $key: tablet);
+        line-height: rem(36.8px);
+
+        margin-block: rem(48px);
+    }
+
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-h3, $key: desktop);
+        line-height: rem(46px);
+
+        margin-block: rem(56px);
+    }
+
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-h3, $key: desktop-large);
+        line-height: rem(50.6px);
+
+        margin-block: rem(64px);
+    }
+}
+
+.h4 {
+    font-family: map-get($map: $da-font-family, $key: heading);
+    color: map-get($map: $da-color, $key: dark);
+    font-size: map-get($map: $da-fs-h4, $key: mobile);
+    line-height: rem(25px);
+
+    margin-block: rem(13px);
+
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-h4, $key: tablet);
+        line-height: rem(25px);
+
+        margin-block: rem(13px);
+    }
+
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-h4, $key: desktop);
+        line-height: rem(30px);
+
+        margin-block: rem(15.6px);
+    }
+
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-h4, $key: desktop-large);
+        line-height: rem(32.4px);
+
+        margin-block: rem(15.6px);
+    }
+}
+
+.h5 {
+    font-family: map-get($map: $da-font-family, $key: text);
+    color: map-get($map: $da-color, $key: dark);
+    font-size: map-get($map: $da-fs-p, $key: mobile);
+    line-height: rem(26.4px);
+    margin-block: 0;
+
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-p, $key: tablet);
+        line-height: rem(30.4px);
+    }
+
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-p, $key: desktop);
+        line-height: rem(31px);
+    }
+
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-p, $key: desktop-large);
+        line-height: rem(31px);
+    }
+}
+
+.p {
+    font-family: map-get($map: $da-font-family, $key: text);
+    color: map-get($map: $da-color, $key: text-dark);
+    font-size: map-get($map: $da-fs-p, $key: mobile);
+    line-height: rem(26.4px);
+
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-p, $key: tablet);
+        line-height: rem(30.4px);
+    }
+
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-p, $key: desktop);
+        line-height: rem(31px);
+    }
+
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-p, $key: desktop-large);
+        line-height: rem(31px);
+    }
+}
+
+a {
+    color: map-get($map: $da-color, $key: accent);
+    text-decoration: none;
+}
+
+.cta {
+    font-family: map-get($map: $da-font-family, $key: text);
+    color: map-get($map: $da-color, $key: text-light);
+    font-size: map-get($map: $da-fs-cta, $key: mobile);
+    line-height: rem(26.4px);
+
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-cta, $key: tablet);
+        line-height: rem(26.4px);
+    }
+
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-cta, $key: desktop);
+        line-height: rem(27px);
+    }
+
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-cta, $key: desktop-large);
+        line-height: rem(27px);
+    }
+}
+
+.slider-tab {
+    font-family: map-get($map: $da-font-family, $key: text);
+    color: map-get($map: $da-color, $key: dark);
+    font-size: map-get($map: $da-fs-p, $key: mobile);
+    line-height: rem(24px);
+
+    @include da-breakpoint(tablet) {
+        font-size: map-get($map: $da-fs-p, $key: tablet);
+        line-height: rem(24px);
+    }
+
+    @include da-breakpoint(desktop) {
+        font-size: map-get($map: $da-fs-p, $key: desktop);
+        line-height: rem(27px);
+    }
+
+    @include da-breakpoint(desktop-large) {
+        font-size: map-get($map: $da-fs-p, $key: desktop-large);
+        line-height: rem(27px);
+    }
+}
+
+.slider-tab-container.active .slider-tab {
+    color: map-get($map: $da-color, $key: dark) !important;
+}
