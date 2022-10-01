@@ -12811,11 +12811,13 @@ form .create-account .text-colapse p {
   }
 }
 .lower-header {
+  z-index: -3;
+  background: white;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 30px;
   padding: 0.85rem 1rem 0.5rem;
-  z-index: 2;
 }
 .lower-header::before {
   content: "";
@@ -13028,7 +13030,7 @@ form .create-account .text-colapse p {
 }
 
 .modal-wrapper {
-  height: 100%;
+  height: 100vh;
   overflow-y: scroll;
   scrollbar-width: none;
   /* firefox */
@@ -13039,7 +13041,7 @@ form .create-account .text-colapse p {
   position: fixed;
   top: 2.5rem;
   left: 0%;
-  padding: 2.5rem 2rem 6rem;
+  padding: 2.5rem 2rem 4.5rem;
   z-index: 1;
   transform: translateX(-100%);
   transition: transform 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
@@ -13138,9 +13140,10 @@ form .create-account .text-colapse p {
   top: 2.5rem;
   left: 0%;
   width: 100%;
-  z-index: 0;
+  z-index: 2 !important;
   overflow: hidden;
   transition: opacity 0.2s linear;
+  display: none;
 }
 #fixed-first-modal .bi-x-lg {
   font-weight: bolder;
@@ -13153,6 +13156,7 @@ form .create-account .text-colapse p {
   color: white;
 }
 #fixed-first-modal.active {
+  display: block;
   overflow: visible;
   opacity: 1;
   z-index: 1;
@@ -13298,12 +13302,11 @@ form .create-account .text-colapse p {
 
 .video-wrapper {
   z-index: -1;
-  position: relative;
 }
 .video-wrapper video {
   max-width: 100%;
-  max-height: 100%;
-  overflow: hidden;
+  /* max-height: 100%; */
+  /* overflow: hidden; */
 }
 @media only screen and (max-width: 1023px) {
   .video-wrapper video {
@@ -13362,4 +13365,22 @@ form .create-account .text-colapse p {
   .top-0 {
     top: 5rem !important;
   }
+}
+.header {
+  transform: translateY(-2.5rem);
+}
+
+.header-show {
+  transform: translateY(0rem);
+}
+
+header {
+  transition: transform 0.4s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.video-wrapper {
+  /* margin-top: 3rem; */
 }

@@ -8,20 +8,51 @@ const blackBlock = document.querySelector(".black-block");
 const personIcon = document.getElementById("person-icon");
 
 
+
+//header show and hide after scroll
+let header = document.querySelector("header");
+let scrollEvent = 0;
+
+
+document.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > 0) {
+    header.classList.add("header");
+ }
+  if (currentScroll <= 0) {
+    header.classList.remove("header");
+ }
+
+ if (currentScroll < scrollEvent) {
+  header.classList.remove("header");
+ }
+
+
+  scrollEvent = currentScroll;
+});
+
+
 //Aside Menu activate with dots
 asideShow.addEventListener("click", () => {
     asideShow.classList.toggle("active");
     blackBackground.classList.toggle("active");
-   document.body.style.overflow = "hidden";
 });
+
+//Aside Menu active and the header disappears
+asideShow.addEventListener("click", () => {
+  header.classList.remove("header");
+})
+
+
 
 //Aside Menu Disactivate with Icon-X
 asidehide.addEventListener("click", () => {
    asideShow.classList.remove("active");
    blackBackground.classList.remove("active");
-   document.body.style.overflow ="auto";
- /*   modal.close(); */
 });
+
+
 
 //Aside Menu Disactivate width Esc key
 window.addEventListener("keydown", keypress);
@@ -29,7 +60,6 @@ window.addEventListener("keydown", keypress);
     if (key.keyCode === 27) {
         asideShow.classList.remove("active");
         blackBackground.classList.remove("active");
-         document.body.style.overflow ="auto";
     }
   }
 
@@ -41,7 +71,6 @@ window.addEventListener("mouseup", (event) => {
     burger.classList.remove("active");
     myModal.classList.remove("active");
     firstModal.classList.remove("active");
-     document.body.style.overflow ="auto";
   }
 
   else if (event.target === blackBackground) {
@@ -49,13 +78,11 @@ window.addEventListener("mouseup", (event) => {
     blackBackground.classList.remove("active");
     burger.classList.remove("active");
     myModal.classList.remove("active");
-    document.body.style.overflow ="auto";
     firstModal.classList.remove("active");
   }
 
   else if (event.target === personIcon) {
     myModal.classList.remove("active");
-     document.body.style.overflow ="auto";
   }
 
 });
@@ -71,7 +98,6 @@ burger.addEventListener("click", () => {
 
 asidehide.addEventListener("click", () => {
     burger.classList.remove("active");
-    document.body.style.overflow ="auto";
 });
 
 

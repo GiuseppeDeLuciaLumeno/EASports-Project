@@ -1,6 +1,6 @@
 //scrollbar behavior
 @mixin scroll-bar-hider($display) {
-    height: 100%;
+    height: 100vh;
     overflow-y: scroll;
     scrollbar-width: none;
     /* firefox */
