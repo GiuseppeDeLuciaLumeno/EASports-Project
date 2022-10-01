@@ -13071,6 +13071,12 @@ form .create-account .text-colapse p {
   transform: translate3d(5%, 5%, 0);
   transform: scale(1.12);
 }
+@media only screen and (max-width: 361px) {
+  .modal-wrapper .ea-play-card img:nth-child(1) {
+    height: 320px;
+    width: 345px;
+  }
+}
 .modal-wrapper #ea-play-logo {
   transition: transform 0.4s ease;
   z-index: 1;
@@ -13106,6 +13112,12 @@ form .create-account .text-colapse p {
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
+}
+@media only screen and (max-width: 361px) {
+  .modal-wrapper {
+    width: 100vw;
+    padding: 2.5rem 1rem 6rem;
+  }
 }
 
 #fixed-first-modal {

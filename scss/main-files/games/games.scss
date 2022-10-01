@@ -434,7 +434,12 @@ form {
             transform: translate3d(5%, 5%, 0);
             transform: scale(1.12);
         }
-
+        @media only screen and (max-width: 361px) {
+            img:nth-child(1){
+                height: 320px;
+                width: 345px;
+            }
+        }
     }
 
     #ea-play-logo {
@@ -480,6 +485,10 @@ form {
             margin-right: 0;
             margin-left: 0;
         }
+    }
+    @media only screen and (max-width: 361px) {
+        width: 100vw;
+        padding: 2.5rem 1rem 6rem;
     }
 }
 
