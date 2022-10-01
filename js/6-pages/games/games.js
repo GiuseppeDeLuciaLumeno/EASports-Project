@@ -29,7 +29,7 @@ window.addEventListener("keydown", keypress);
     if (key.keyCode === 27) {
         asideShow.classList.remove("active");
         blackBackground.classList.remove("active");
-        document.body.style.overflow ="auto";
+         document.body.style.overflow ="auto";
     }
   }
 
@@ -41,7 +41,7 @@ window.addEventListener("mouseup", (event) => {
     burger.classList.remove("active");
     myModal.classList.remove("active");
     firstModal.classList.remove("active");
-    document.body.style.overflow ="auto";
+     document.body.style.overflow ="auto";
   }
 
   else if (event.target === blackBackground) {
@@ -50,12 +50,14 @@ window.addEventListener("mouseup", (event) => {
     burger.classList.remove("active");
     myModal.classList.remove("active");
     document.body.style.overflow ="auto";
+    firstModal.classList.remove("active");
   }
 
   else if (event.target === personIcon) {
     myModal.classList.remove("active");
-    document.body.style.overflow ="auto";
+     document.body.style.overflow ="auto";
   }
+
 });
 
 
@@ -75,13 +77,15 @@ asidehide.addEventListener("click", () => {
 
 //First-Modal Person Icon
 const firstModal = document.getElementById("fixed-first-modal");
-const firstIconX = document.getElementById("icon-x-modal")
+const firstIconX = document.getElementById("icon-x-modal");
 personIcon.addEventListener("click", () => {
 firstModal.classList.toggle("active");
+blackBackground.classList.toogle("active");
 });
 
 firstIconX.addEventListener("click", () => {
   firstModal.classList.remove("active");
+  blackBackground.classList.remove("active");
 })
 
 
@@ -93,10 +97,12 @@ const iconX = document.getElementById("icon-x-second-modal");
 interrogative.addEventListener("click", () => {
   myModal.classList.toggle("active");
   firstModal.classList.remove("active");
+
 });
 
 iconX.addEventListener("click", () => {
   myModal.classList.remove("active");
+
 })
 
 
