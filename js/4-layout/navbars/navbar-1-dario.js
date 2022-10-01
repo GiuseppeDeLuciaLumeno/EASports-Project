@@ -1,6 +1,7 @@
 // HIDE & SHOW navbar on scroll down/up ------------------------------------------------------------
 
 let navbar = document.querySelector(".navbar");
+let aside = document.querySelector("aside");
 let lastScroll = 0;
 
 document.addEventListener('scroll', () => {
@@ -19,4 +20,11 @@ document.addEventListener('scroll', () => {
   }
 
   lastScroll = currentScroll;
+})
+
+document.addEventListener('click', e => {
+  if (e.target.closest(".toggle")) {
+    aside.classList.add("active");
+    navbar.classList.remove("hidden")
+  }
 })

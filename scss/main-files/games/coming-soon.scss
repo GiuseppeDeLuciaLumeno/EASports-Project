@@ -67,3 +67,263 @@
 
 /* coming soon -------------------------*/
 @import '../../atomic-design/6-pages/games/coming-soon';
+
+
+aside {
+  position: fixed;
+  top: rem(40px);
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  max-width: rem(375px);
+  background-color: map-get($map: $da-color, $key: white);
+  cursor: pointer;
+
+  transform: translateX(-100%);
+  transition: transform 0.45s ease-in-out;
+
+  @media (min-width: 321px) {
+    width: 86.5%;
+  }
+
+  .heading {
+    background-color: map-get($map: $da-color, $key: borders);
+    @include flexbox($justify-content: space-between);
+    height: rem(53px);
+    padding-inline: rem(14px);
+
+    a {
+      width: rem(200px);
+    }
+
+    .close-btn {
+      height: rem(34px);
+      width: rem(34px);
+      border: 1px solid map-get($map: $da-color, $key: dark);
+      border-radius: 50%;
+
+      @include flexbox;
+
+      svg {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+
+  .dropdowns {
+    height: calc(100vh - 40px - 53px);
+    margin-inline: rem(28px);
+
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include da-breakpoint(tablet) {
+      margin-inline: rem(18px);
+    }
+
+    .dropdown {
+
+      .dropdown-btn {
+        padding-block: rem(13px) rem(12px);
+        border-bottom: 1px solid map-get($map: $da-color, $key: dark);
+
+        @include flexbox($justify-content: space-between);
+
+        .arrow-container {
+          margin-right: 17px;
+          width: 16px;
+          height: 8px;
+          position: relative;
+
+          @include flexbox;
+
+          &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 65%;
+            height: 2px;
+            background-color: map-get($map: $da-color, $key: dark) !important;
+          }
+
+          &::before {
+            right: 6px;
+            transform: rotate(42.5deg);
+          }
+
+          &::after {
+            left: 6px;
+            transform: rotate(-42.5deg);
+          }
+        }
+      }
+
+      .dropdown-btn:hover {
+        p {
+          color: map-get($map: $da-color, $key: accent);
+        }
+
+        .arrow-container {
+          &::before, &::after {
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        overflow-y: hidden;
+        height: 0;
+
+
+        .choice {
+          padding-block: rem(15px) rem(14px);
+          padding-inline: rem(14px) rem(20px);
+
+          @include flexbox($justify-content: space-between);
+
+          a {
+            color: rgb(163, 163, 163);
+          }
+
+          .plus-container {
+            position: relative;
+            width: 10px;
+            height: 10px;
+            @include flexbox;
+
+            &::before, &::after {
+              content: '';
+              position: absolute;
+              display: block;
+              height: 2px;
+              width: 100%;
+              background-color: rgb(163, 163, 163);
+            }
+
+            &::after {
+              transform: rotate(90deg);
+            }
+          }
+
+          &.class-type1 {
+            border-bottom: 1px solid rgb(163, 163, 163);
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+
+        .choice:hover {
+          a {
+            color: map-get($map: $da-color, $key: accent);
+          }
+
+          .plus-container {
+            &::before, &::after {
+              background-color: map-get($map: $da-color, $key: accent);
+            }
+          }
+        }
+
+        .sub-dropdown {
+          border-bottom: 1px solid rgb(163, 163, 163);
+
+          .sub-dropdown-menu {
+            padding-inline: rem(38px);
+            overflow-y: hidden;
+            height: 0;
+
+            a {
+              display: block;
+              margin-block: 7px 13px;
+              color: rgb(37, 37, 37);
+
+              &:last-child {
+                margin-bottom: 20px;
+              }
+            }
+
+            a.active, a:hover {
+              color: map-get($map: $da-color, $key: accent);
+            }
+          }
+        }
+
+        .sub-dropdown:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .dropdown.dropdown-menu-open {
+      .dropdown-btn {
+        border-bottom-color: map-get($map: $da-color, $key: accent);
+
+        p {
+          color: map-get($map: $da-color, $key: accent);
+        }
+
+        .arrow-container {
+          &::before {
+            transform: rotate(-42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+          
+          &::after {
+            transform: rotate(42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        height: auto;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+
+        .sub-dropdown.sub-dropdown-menu-open {
+          border-bottom-color: map-get($map: $da-color, $key: dark);
+
+          .sub-dropdown-btn {
+            a {
+              color: map-get($map: $da-color, $key: dark);
+            }
+
+            .plus-container {
+              rotate: 45deg;
+
+              &::before, &::after {
+                background-color: map-get($map: $da-color, $key: dark);
+              }
+            }
+          }
+
+          .sub-dropdown-btn:hover {
+            a {
+              color: map-get($map: $da-color, $key: accent);
+            }
+
+            .plus-container {
+              rotate: 45deg;
+
+              &::before, &::after {
+                background-color: map-get($map: $da-color, $key: accent);
+              }
+            }
+          }
+          
+          .sub-dropdown-menu {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+aside.active {
+  transform: translateX(0);
+}
