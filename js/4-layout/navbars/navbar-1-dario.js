@@ -23,8 +23,18 @@ document.addEventListener('scroll', () => {
 })
 
 document.addEventListener('click', e => {
-  if (e.target.closest(".toggle")) {
+  if (!aside.classList.contains("active") && e.target.closest(".toggle")) {
     aside.classList.add("active");
     navbar.classList.remove("hidden")
+  } else if (aside.classList.contains("active") && window.pageYOffset > 0 && e.target.closest("aside") == null) {
+    aside.classList.remove("active");
+    navbar.classList.add("hidden")
+  } else if (aside.classList.contains("active") && window.pageYOffset == 0 && e.target.closest("aside") == null) {
+    aside.classList.remove("active");
+  } else if (aside.classList.contains("active") && window.pageYOffset > 0 && e.target.closest(".close-btn")) {
+    aside.classList.remove("active");
+    navbar.classList.add("hidden")
+  } else if (aside.classList.contains("active") && window.pageYOffset == 0 && e.target.closest(".close-btn")) {
+    aside.classList.remove("active");
   }
 })

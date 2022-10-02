@@ -1,3 +1,5 @@
+let sidebar = document.querySelector("aside");
+
 document.addEventListener('click', e => {
   if (e.target.closest("aside .dropdown:nth-child(1) .dropdown-btn")) {
     e.target.closest("aside .dropdown").classList.toggle("giochi-open")
