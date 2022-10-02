@@ -26,9 +26,6 @@
 /* FONT-FACES ----------------------------------------------------*/
 @import '../../atomic-design/2-base/font-faces/font-faces-dario';
 
-/* RESET ---------------------------------------------------------*/
-@import '../../atomic-design/2-base/resets/reset-dario';
-
 /* TYPOGRAPHY ---------------------------------------------------------*/
 @import '../../atomic-design/2-base/typography/games/coming-soon';
 
@@ -70,6 +67,12 @@
 /* coming soon -------------------------*/
 @import '../../atomic-design/6-pages/games/coming-soon';
 
+//CARDS
+@import "../../atomic-design/1-abstracts/variables/colors/colors-giuseppe";
+@import "../../atomic-design/1-abstracts/mixins/cards/-cards-2-Giuseppe.scss";
+@import "../../atomic-design/3-components/cards/cards-2-giuseppe";
+@import "../../atomic-design/responsivity/games/games";
+@import "../../atomic-design/3-components/buttons/button-2-giuseppe";
 
 //Header //
 html {
@@ -837,7 +840,34 @@ form {
  }
 
 
+ //TO SET Z-INDEX TO SLIDER UNDER THE ASIDE
+ .section-container,
+ #slider-section{
+    z-index: -1;
+ }
 
+
+
+//CARDS LAYOUT DA SISTEMARE
+.section-wrapper {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #block-position {
+        position: relative;
+    }
+}
+
+.cards-wrapper {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 1.2rem;
+}
 
 
 
@@ -868,18 +898,14 @@ header {
 }
 
 
-
-
 .overflow-lock-scroll{
     overflow: hidden;
 }
 
 
-
-
-
-
-
+.z-index-1{
+    z-index: -1;
+}
 
 
 

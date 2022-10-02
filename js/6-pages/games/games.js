@@ -8,7 +8,7 @@ const body = document.querySelector(".click-out");
 const lowerHeader = document.querySelector(".lower-header"); */
 const personIcon = document.getElementById("person-icon");
 const html = document.querySelector("body");
-
+const cardsIndex = document.querySelector(".cards-wrapper")
 
 
 //Aside Menu activate with dots
@@ -18,7 +18,7 @@ const html = document.querySelector("body");
     asideShow.classList.toggle("active");
     blackBackground.classList.toggle("active");
     html.classList.add("overflow-lock-scroll");
-    console.log(html);
+    cardsIndex.classList.add("z-index-1");
 });
 
 
@@ -39,6 +39,7 @@ asidehide.addEventListener("click", () => {
    asideShow.classList.remove("active");
    blackBackground.classList.remove("active");
    html.classList.remove("overflow-lock-scroll");
+   cardsIndex.classList.remove("z-index-1");
 });
 
 
@@ -70,6 +71,7 @@ window.addEventListener("mouseup", (event) => {
     myModal.classList.remove("active");
     firstModal.classList.remove("active");
     html.classList.remove("overflow-lock-scroll");
+    cardsIndex.classList.remove("z-index-1");
   }
 
   else if (event.target === personIcon) {
@@ -92,17 +94,19 @@ asidehide.addEventListener("click", () => {
 });
 
 
-//First-Modal Person Icon
+//First Modal Person Icon
 const firstModal = document.getElementById("fixed-first-modal");
 const firstIconX = document.getElementById("icon-x-modal");
 personIcon.addEventListener("click", () => {
 firstModal.classList.toggle("active");
-/* blackBackground.classList.toogle("active"); */
+html.classList.add("overflow-lock-scroll");
 });
 
+//close First modal
 firstIconX.addEventListener("click", () => {
   firstModal.classList.remove("active");
   blackBackground.classList.remove("active");
+  html.classList.remove("overflow-lock-scroll");
 })
 
 
@@ -114,11 +118,13 @@ const iconX = document.getElementById("icon-x-second-modal");
 interrogative.addEventListener("click", () => {
   myModal.classList.toggle("active");
   firstModal.classList.remove("active");
-
+  html.classList.add("overflow-lock-scroll");
 });
 
+//Second Modal close
 iconX.addEventListener("click", () => {
   myModal.classList.remove("active");
+  html.classList.remove("overflow-lock-scroll");
 })
 
 
