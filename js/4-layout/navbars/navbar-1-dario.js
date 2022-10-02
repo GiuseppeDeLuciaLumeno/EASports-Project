@@ -1,7 +1,7 @@
 // HIDE & SHOW navbar on scroll down/up ------------------------------------------------------------
 
 let navbar = document.querySelector(".navbar");
-let aside = document.querySelector("aside");
+let aside = document.querySelector(".aside-mobile");
 let lastScroll = 0;
 
 document.addEventListener('scroll', () => {

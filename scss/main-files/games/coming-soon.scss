@@ -69,7 +69,7 @@
 @import '../../atomic-design/6-pages/games/coming-soon';
 
 
-aside {
+.aside-mobile {
   position: fixed;
   top: rem(40px);
   left: 0;
@@ -113,12 +113,9 @@ aside {
 
   .dropdowns {
     height: calc(100vh - 40px - 53px);
-    margin-inline: rem(28px);
+    padding-inline: rem(28px);
 
     overflow-y: scroll;
-    &::-webkit-scrollbar {
-      display: none;
-    }
 
     @include da-breakpoint(tablet) {
       margin-inline: rem(18px);
@@ -577,6 +574,12 @@ aside {
   }
 }
 
-aside.active {
+.aside-mobile.active {
   transform: translateX(0);
+}
+
+@include da-breakpoint(desktop) {
+  .aside-mobile {
+    display: none;
+  }
 }
