@@ -12795,10 +12795,9 @@ form .create-account .text-colapse p {
   margin-left: 10px;
   width: 100px;
 }
-@media only screen and (max-width: 543px) {
+@media only screen and (min-width: 543px) and (max-width: 575px) {
   form .create-account {
-    justify-content: flex-start !important;
-    margin-inline: 10rem;
+    margin-left: 7rem;
   }
 }
 
@@ -12807,7 +12806,7 @@ form .create-account .text-colapse p {
 .create-account {
     width: 35px;
     display: flex;
-    margin-inline: 5rem !important;
+    margin-inline: 2rem !important;
   }
 }
 .lower-header {

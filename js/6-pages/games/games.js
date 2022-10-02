@@ -128,7 +128,6 @@ interrogative.addEventListener("click", () => {
 
 iconX.addEventListener("click", () => {
   myModal.classList.remove("active");
-
 })
 
 
