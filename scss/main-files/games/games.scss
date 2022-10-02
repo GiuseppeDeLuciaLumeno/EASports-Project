@@ -5,6 +5,8 @@
 @import "../../atomic-design/2-base/typography/games/games";
 @import "../../atomic-design/1-abstracts/mixins/header/header-ultimi-giochi";
 @import "../../atomic-design/1-abstracts/mixins/cards/mini-cards-scroll";
+
+
 //Import Bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
@@ -89,7 +91,8 @@ html {
 }
 
 
-form {    ///BLACK BLOCKLL
+form {
+    ///BLACK BLOCKLL
 
     .black-block {
         width: 100%;
@@ -211,23 +214,23 @@ form {    ///BLACK BLOCKLL
 
 
 .lower-header {
-   z-index: 2 !important;
-   background: white;
-   width: 100%;
+    z-index: 2 !important;
+    background: white;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 30px;
     padding: 0.85rem 1rem 0.5rem;
 
-     &::before{
-            content: "";
-            position: absolute;
-            top: 2.5rem;
-            left: 0;
-            height: 100vh;
-            width: 100%;
-            background: black;
-            opacity: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 2.5rem;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: black;
+        opacity: 0;
     }
 
     &::after {
@@ -237,7 +240,7 @@ form {    ///BLACK BLOCKLL
         position: absolute;
         top: 0;
         left: 0;
-        transition: opacity 350ms ease;
+        transition: all .5s ease;
         background: #161616;
         opacity: 0;
         z-index: -1;
@@ -399,10 +402,10 @@ form {    ///BLACK BLOCKLL
     @include scroll-bar-hider(none);
     background: $white;
     box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
-    position: fixed;
+    position: absolute;
     top: 2.5rem;
     left: 0%;
-    padding: 2.5rem 2rem 4.5rem;
+    padding: 2.5rem 2rem 6rem;
     z-index: 1;
     transform: translateX(-100%);
     transition: transform .5s cubic-bezier(.5, .25, .015, 1);
@@ -447,8 +450,9 @@ form {    ///BLACK BLOCKLL
             transform: translate3d(5%, 5%, 0);
             transform: scale(1.12);
         }
+
         @media only screen and (max-width: 361px) {
-            img:nth-child(1){
+            img:nth-child(1) {
                 height: 320px;
                 width: 345px;
             }
@@ -499,6 +503,7 @@ form {    ///BLACK BLOCKLL
             margin-left: 0;
         }
     }
+
     @media only screen and (max-width: 361px) {
         width: 100vw;
         padding: 2.5rem 1rem 6rem;
@@ -706,36 +711,45 @@ form {    ///BLACK BLOCKLL
     }
 }
 
-.video-wrapper{
+.video-wrapper {
     z-index: -1;
-    video{
-          max-width: 100%;
-         /* max-height: 100%; */
+    margin-top: 5rem;
+    video {
+        max-width: 100%;
+
+        /* max-height: 100%; */
         /* overflow: hidden; */
     }
+
     @media only screen and (max-width: 1023px) {
-       video{
-        display: none;
-       }
-       video + img{
-        display: block;
-        @media (max-width: 765px) {
+        video {
             display: none;
         }
-       }
-       .top-md-0{
-        top: 7rem !important;
-        @media only screen and(max-width: 765px) {
-            display: none;
+
+        video+img {
+            display: block;
+
+            @media (max-width: 765px) {
+                display: none;
+            }
         }
-        @media only screen and (max-width: 768px) {
-            top: 5rem !important;
+
+        .top-md-0 {
+            top: 7rem !important;
+
+            @media only screen and (max-width: 765px) {
+                display: none;
+            }
+
+            @media only screen and (max-width: 768px) {
+                top: 5rem !important;
+            }
         }
-       }
     }
 
-       .games-bg{
+    .games-bg {
         display: none;
+
         @media only screen and (min-width: 249px) and (max-width: 765px) {
             display: block;
             left: 0;
@@ -744,43 +758,68 @@ form {    ///BLACK BLOCKLL
             top: 0;
             width: 100%;
         }
-       }
     }
-
-    @media only screen and (min-width: 1023px) {
-        video + img {
-            display: none;
-        }
-    }
-
-    @media only screen and (min-width: 2072px) {
-        .top-0 {
-            right: 0;
-            top: 13rem !important;
-        }
-    }
-
-    @media only screen and (min-width: 2160px) and (max-width: 3079px) {
-        .top-0{
-            top: 5rem !important;
-        }
-    }
-
-
-.header{
-       transform: translateY(-2.5rem);
 }
 
-.header-show{
-    transform: translateY(0rem);
+@media only screen and (min-width: 1023px) {
+    video+img {
+        display: none;
+    }
 }
 
-header{
-    transition: transform 0.4s ease;
+@media only screen and (min-width: 2072px) {
+    .top-0 {
+        right: 0;
+        top: 13rem !important;
+    }
+}
+
+@media only screen and (min-width: 2160px) and (max-width: 3079px) {
+    .top-0 {
+        top: 5rem !important;
+    }
+}
+
+
+
+//header global position to set th e
+header {
+    width: 100%;
     position: fixed;
     top: 0;
-    width: 100%;
 }
+
+
+ .black-block{
+    transition: transform .4s ease;
+}
+
+.black-block-hide{
+    transform: translateY(-2.5rem);
+}
+
+.lower-header{
+    transition: all .4s ease;
+}
+
+
+ .lower-header-show{
+
+    transform: translateY(-2.5rem);
+}
+
+
+
+
+.overflow-lock-scroll{
+    overflow: hidden;
+}
+
+
+
+
+
+
 
 
 

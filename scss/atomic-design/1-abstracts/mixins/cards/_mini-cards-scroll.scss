@@ -4,7 +4,7 @@
     overflow-y: scroll;
     scrollbar-width: none;
     /* firefox */
-    scroll-snap-type: mandatory;
+    scroll-snap-type: inline mandatory;
     scroll-behavior: smooth;
     &::-webkit-scrollbar{
         display: $display;

@@ -4,45 +4,33 @@ const asidehide = document.getElementById("icon-x");
 const esc = document.querySelector(".icon-x");
 const blackBackground = document.querySelector(".lower-header");
 const body = document.querySelector(".click-out");
-const blackBlock = document.querySelector(".black-block");
+/* const blackBlock = document.querySelector(".lower-header");
+const lowerHeader = document.querySelector(".lower-header"); */
 const personIcon = document.getElementById("person-icon");
+const html = document.querySelector("body");
 
-
-
-//header show and hide after scroll
-let header = document.querySelector("header");
-let scrollEvent = 0;
-
-
-document.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-
- if (currentScroll <= 0) {
-    header.classList.remove("header");
- }
-
- if (currentScroll < scrollEvent) {
-  header.classList.remove("header");
- }
-
- if (currentScroll > scrollEvent) {
-  header.classList.add("header");
-}
-
-  scrollEvent = currentScroll;
-});
 
 
 //Aside Menu activate with dots
-asideShow.addEventListener("click", () => {
+
+  asideShow.addEventListener("click", () => {
+    let bar = window.scrollY || document.documentElement.scrollTop;
     asideShow.classList.toggle("active");
     blackBackground.classList.toggle("active");
+    html.classList.add("overflow-lock-scroll");
+    console.log(html);
 });
 
-//Aside Menu active and the header Appears
- asideShow.addEventListener("click", () => {
-  header.classList.remove("header");
-});
+
+//When scroll is rather or lower than 100px
+
+/* window.addEventListener("scroll", () =>{
+  if (window.scrollY > 100) {
+     console.log("Maggiore di 100px");
+  } else if (window.scrollY > 200) {
+    console.log("MAggiore di 200px")
+  }
+}); */
 
 
 
@@ -50,7 +38,9 @@ asideShow.addEventListener("click", () => {
 asidehide.addEventListener("click", () => {
    asideShow.classList.remove("active");
    blackBackground.classList.remove("active");
+   html.classList.remove("overflow-lock-scroll");
 });
+
 
 
 
@@ -79,6 +69,7 @@ window.addEventListener("mouseup", (event) => {
     burger.classList.remove("active");
     myModal.classList.remove("active");
     firstModal.classList.remove("active");
+    html.classList.remove("overflow-lock-scroll");
   }
 
   else if (event.target === personIcon) {
@@ -106,7 +97,7 @@ const firstModal = document.getElementById("fixed-first-modal");
 const firstIconX = document.getElementById("icon-x-modal");
 personIcon.addEventListener("click", () => {
 firstModal.classList.toggle("active");
-blackBackground.classList.toogle("active");
+/* blackBackground.classList.toogle("active"); */
 });
 
 firstIconX.addEventListener("click", () => {
@@ -129,6 +120,8 @@ interrogative.addEventListener("click", () => {
 iconX.addEventListener("click", () => {
   myModal.classList.remove("active");
 })
+
+
 
 
 
