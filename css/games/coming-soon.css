@@ -1719,7 +1719,7 @@ body {
 .aside-mobile .dropdowns {
   height: calc(100vh - 40px - 53px);
   padding-inline: 1.75rem;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 @media (min-width: 48rem) {
   .aside-mobile .dropdowns {

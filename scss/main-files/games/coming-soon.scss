@@ -115,7 +115,7 @@
     height: calc(100vh - 40px - 53px);
     padding-inline: rem(28px);
 
-    overflow-y: scroll;
+    overflow-y: auto;
 
     @include da-breakpoint(tablet) {
       margin-inline: rem(18px);
