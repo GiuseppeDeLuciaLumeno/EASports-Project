@@ -12647,15 +12647,15 @@ textarea.form-control-lg {
   background-color: #36404A;
   width: 100vw;
   height: 1600px;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 60px;
+  padding-left: 150px;
 }
 
 .piattaforme {
   height: 200px;
   width: 300px;
   padding-top: 100px;
-  padding-left: 800px;
+  padding-left: 620px;
 }
 
 .piattaforma_title {
@@ -12684,4 +12684,112 @@ textarea.form-control-lg {
   left: 100px;
 }
 
+.psp_portatile {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 180px;
+  left: 40px;
+}
+
+.subtitle_plt1 {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 130px;
+}
+
+.subtitle_plt2 {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 135px;
+}
+
+.subtitle_plt3 {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 140px;
+}
+
+.subtitle_plt4 {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 80px;
+}
+
+.subtitle_plt5 {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 140px;
+}
+
+.subtitle_plt6 {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 145px;
+}
+
+.subtitle_plt7 {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 130px;
+}
+
+.subtitle_plt8 {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 140px;
+}
+
+@media screen and (max-width: 912px) {
+  .platforms {
+    background-color: #36404A;
+    width: 100vw;
+    height: 1800px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .piattaforme {
+    height: 200px;
+    width: 300px;
+    padding-top: 100px;
+    padding-left: 400px;
+  }
+}
+@media screen and (max-width: 776px) {
+  .platforms {
+    background-color: #36404A;
+    width: 100vw;
+    height: 3200px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .piattaforme {
+    height: 200px;
+    width: 300px;
+    padding-top: 100px;
+    padding-left: 100px;
+  }
+  #plt_gio {
+    width: 360px;
+    height: 140px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
 /*FINE PIATTAFORME*/
