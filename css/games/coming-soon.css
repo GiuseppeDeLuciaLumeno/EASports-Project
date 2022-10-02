@@ -1732,6 +1732,7 @@ aside .dropdowns::-webkit-scrollbar {
 aside .dropdowns .dropdown .dropdown-btn {
   padding-block: 0.8125rem 0.75rem;
   border-bottom: 1px solid hsl(0deg, 0%, 9%);
+  transition: border-bottom-color 0.38s ease-in-out;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1754,6 +1755,7 @@ aside .dropdowns .dropdown .dropdown-btn .arrow-container::before, aside .dropdo
   width: 65%;
   height: 2px;
   background-color: hsl(0deg, 0%, 9%) !important;
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 aside .dropdowns .dropdown .dropdown-btn .arrow-container::before {
   right: 6px;
@@ -1772,6 +1774,9 @@ aside .dropdowns .dropdown .dropdown-btn:hover .arrow-container::before, aside .
 aside .dropdowns .dropdown .dropdown-menu {
   overflow-y: hidden;
   height: 0;
+  opacity: 0;
+  border-bottom: 1px solid hsl(0deg, 100%, 64%);
+  transition: all 0.38s ease-in-out;
 }
 aside .dropdowns .dropdown .dropdown-menu .choice {
   padding-block: 0.9375rem 0.875rem;
@@ -1792,6 +1797,7 @@ aside .dropdowns .dropdown .dropdown-menu .choice .plus-container {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 aside .dropdowns .dropdown .dropdown-menu .choice .plus-container::before, aside .dropdowns .dropdown .dropdown-menu .choice .plus-container::after {
   content: "";
@@ -1818,11 +1824,14 @@ aside .dropdowns .dropdown .dropdown-menu .choice:hover .plus-container::before,
 }
 aside .dropdowns .dropdown .dropdown-menu .sub-dropdown {
   border-bottom: 1px solid rgb(163, 163, 163);
+  transition: border-bottom-color 0.4s ease-in-out;
 }
 aside .dropdowns .dropdown .dropdown-menu .sub-dropdown .sub-dropdown-menu {
   padding-inline: 2.375rem;
   overflow-y: hidden;
   height: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
 }
 aside .dropdowns .dropdown .dropdown-menu .sub-dropdown .sub-dropdown-menu a {
   display: block;
@@ -1838,47 +1847,205 @@ aside .dropdowns .dropdown .dropdown-menu .sub-dropdown .sub-dropdown-menu a.act
 aside .dropdowns .dropdown .dropdown-menu .sub-dropdown:last-child {
   border-bottom: none;
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-btn {
+aside .dropdowns .dropdown.giochi-open .dropdown-btn {
   border-bottom-color: hsl(0deg, 100%, 64%);
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-btn p {
+aside .dropdowns .dropdown.giochi-open .dropdown-btn p {
   color: hsl(0deg, 100%, 64%);
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-btn .arrow-container::before {
+aside .dropdowns .dropdown.giochi-open .dropdown-btn .arrow-container::before {
   transform: rotate(-42.5deg);
   background-color: hsl(0deg, 100%, 64%) !important;
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-btn .arrow-container::after {
+aside .dropdowns .dropdown.giochi-open .dropdown-btn .arrow-container::after {
   transform: rotate(42.5deg);
   background-color: hsl(0deg, 100%, 64%) !important;
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu {
-  height: auto;
+aside .dropdowns .dropdown.giochi-open .dropdown-menu {
+  height: 107px;
   border-bottom: 1px solid hsl(0deg, 100%, 64%);
+  opacity: 1;
+  transition: height 0.38s ease-in-out;
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open {
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu {
+  height: 344px;
+  border-bottom: 1px solid hsl(0deg, 100%, 64%);
+  opacity: 1;
+  transition: height 0.38s ease-in-out;
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open {
   border-bottom-color: hsl(0deg, 0%, 9%);
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn a {
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn a {
   color: hsl(0deg, 0%, 9%);
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container {
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container {
   rotate: 45deg;
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container::before, aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container::after {
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container::before, aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container::after {
   background-color: hsl(0deg, 0%, 9%);
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover a {
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover a {
   color: hsl(0deg, 100%, 64%);
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container {
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container {
   rotate: 45deg;
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container::before, aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container::after {
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container::before, aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container::after {
   background-color: hsl(0deg, 100%, 64%);
 }
-aside .dropdowns .dropdown.dropdown-menu-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-menu {
-  height: auto;
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-menu {
+  height: 236px;
+  opacity: 1;
+  transition: height 0.4s ease-in-out;
+}
+aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu {
+  height: 307px;
+  border-bottom: 1px solid hsl(0deg, 100%, 64%);
+  opacity: 1;
+  transition: height 0.38s ease-in-out;
+}
+aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open {
+  border-bottom-color: hsl(0deg, 0%, 9%);
+}
+aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn a {
+  color: hsl(0deg, 0%, 9%);
+}
+aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container {
+  rotate: 45deg;
+}
+aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container::before, aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container::after {
+  background-color: hsl(0deg, 0%, 9%);
+}
+aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover a {
+  color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container {
+  rotate: 45deg;
+}
+aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container::before, aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container::after {
+  background-color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-menu {
+  height: 199px;
+  opacity: 1;
+  transition: height 0.4s ease-in-out;
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu {
+  height: 543px;
+  border-bottom: 1px solid hsl(0deg, 100%, 64%);
+  opacity: 1;
+  transition: height 0.38s ease-in-out;
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open {
+  border-bottom-color: hsl(0deg, 0%, 9%);
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn a {
+  color: hsl(0deg, 0%, 9%);
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container {
+  rotate: 45deg;
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container::before, aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn .plus-container::after {
+  background-color: hsl(0deg, 0%, 9%);
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover a {
+  color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container {
+  rotate: 45deg;
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container::before, aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-btn:hover .plus-container::after {
+  background-color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-menu {
+  transition: all 0.4s ease-in-out;
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-menu-1 {
+  height: 236px;
+}
+aside .dropdowns .dropdown.giochi-open.esplora-giochi-open.piattaforme-open .dropdown-menu .sub-dropdown.sub-dropdown-menu-open .sub-dropdown-menu-2 {
+  height: 199px;
+}
+aside .dropdowns .dropdown.altre-esperienze-open .dropdown-btn {
+  border-bottom-color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.altre-esperienze-open .dropdown-btn p {
+  color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.altre-esperienze-open .dropdown-btn .arrow-container::before {
+  transform: rotate(-42.5deg);
+  background-color: hsl(0deg, 100%, 64%) !important;
+}
+aside .dropdowns .dropdown.altre-esperienze-open .dropdown-btn .arrow-container::after {
+  transform: rotate(42.5deg);
+  background-color: hsl(0deg, 100%, 64%) !important;
+}
+aside .dropdowns .dropdown.altre-esperienze-open .dropdown-menu {
+  height: 216px;
+  border-bottom: 1px solid hsl(0deg, 100%, 64%);
+  opacity: 1;
+  transition: height 0.38s ease-in-out;
+}
+aside .dropdowns .dropdown.informazioni-open .dropdown-btn {
+  border-bottom-color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.informazioni-open .dropdown-btn p {
+  color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.informazioni-open .dropdown-btn .arrow-container::before {
+  transform: rotate(-42.5deg);
+  background-color: hsl(0deg, 100%, 64%) !important;
+}
+aside .dropdowns .dropdown.informazioni-open .dropdown-btn .arrow-container::after {
+  transform: rotate(42.5deg);
+  background-color: hsl(0deg, 100%, 64%) !important;
+}
+aside .dropdowns .dropdown.informazioni-open .dropdown-menu {
+  height: 378px;
+  border-bottom: 1px solid hsl(0deg, 100%, 64%);
+  opacity: 1;
+  transition: height 0.38s ease-in-out;
+}
+aside .dropdowns .dropdown.impegni-open .dropdown-btn {
+  border-bottom-color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.impegni-open .dropdown-btn p {
+  color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.impegni-open .dropdown-btn .arrow-container::before {
+  transform: rotate(-42.5deg);
+  background-color: hsl(0deg, 100%, 64%) !important;
+}
+aside .dropdowns .dropdown.impegni-open .dropdown-btn .arrow-container::after {
+  transform: rotate(42.5deg);
+  background-color: hsl(0deg, 100%, 64%) !important;
+}
+aside .dropdowns .dropdown.impegni-open .dropdown-menu {
+  height: 270px;
+  border-bottom: 1px solid hsl(0deg, 100%, 64%);
+  opacity: 1;
+  transition: height 0.38s ease-in-out;
+}
+aside .dropdowns .dropdown.risorse-open .dropdown-btn {
+  border-bottom-color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.risorse-open .dropdown-btn p {
+  color: hsl(0deg, 100%, 64%);
+}
+aside .dropdowns .dropdown.risorse-open .dropdown-btn .arrow-container::before {
+  transform: rotate(-42.5deg);
+  background-color: hsl(0deg, 100%, 64%) !important;
+}
+aside .dropdowns .dropdown.risorse-open .dropdown-btn .arrow-container::after {
+  transform: rotate(42.5deg);
+  background-color: hsl(0deg, 100%, 64%) !important;
+}
+aside .dropdowns .dropdown.risorse-open .dropdown-menu {
+  height: 378px;
+  border-bottom: 1px solid hsl(0deg, 100%, 64%);
+  opacity: 1;
+  transition: height 0.38s ease-in-out;
 }
 
 aside.active {
