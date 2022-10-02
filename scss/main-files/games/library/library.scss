@@ -11,6 +11,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
+}
+
+.generi_title{
+    padding-top: 100px;
+    padding-bottom: 30px;
 }
 
 .transformimg{
@@ -53,10 +59,39 @@
 .transformimg2{
     display: flex;
     position: relative;
+
 }
 
 .card_gio:hover{
    
+}
+
+@media screen and (max-width: 912px){
+    .img_card{
+        width: 357px;
+        height: 200px;
+      margin-left: 1px;
+       margin-right: 1px;
+    }
+    .transformimg{
+        display: flex;
+        position: relative;
+        
+    }
+    .transformimg2{
+        display: flex;
+        position: relative;
+    
+    }
+    .subtitle{
+        display: flex;
+        position: absolute;
+        top: 40px;
+        left: 150px;
+        color: white;
+    }
+
+
 }
 
 @media screen and (max-width: 576px){
@@ -89,6 +124,8 @@
         
        }
 }
+
+
 
 /*FINE CARD*/ 
 
@@ -137,6 +174,7 @@
     height: 140px;
     margin-left: 30px;
     margin-right: 30px;
+    margin-bottom:30px ;
 }
 
 .subtitle_plt{
@@ -234,7 +272,7 @@
     .platforms{
         background-color: #36404A;
         width: 100vw;
-        height: 1800px;
+        height: 2100px;
         padding-right: 0px;
         padding-left: 0px;
         
@@ -252,7 +290,7 @@
     .platforms{
         background-color: #36404A;
         width: 100vw;
-        height: 3200px;
+        height: 3700px;
         padding-right: 0px;
         padding-left: 0px;
         
@@ -273,3 +311,37 @@
     
 }
 /*FINE PIATTAFORME*/ 
+
+
+/*INIZIO CARD N°2*/ 
+
+
+.age_title{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+/*FINE CARD N°2*/
+
+
+/*INIZIO CARD N°3*/ 
+
+.contenitore4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paragrafo{
+    width: 800px;
+    
+}
+
+.p_title{
+    padding-top: 100px;
+    padding-bottom: 30px;
+    font-style: oblique;
+}
+
+
+/*FINE CARD N°3*/ 
