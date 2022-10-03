@@ -1,7 +1,8 @@
 // HIDE & SHOW navbar on scroll down/up ------------------------------------------------------------
 
 let navbar = document.querySelector(".navbar");
-let aside = document.querySelector(".aside-mobile");
+let asideMobile = document.querySelector(".aside-mobile");
+let asideDesktop = document.querySelector(".aside-desktop")
 let lastScroll = 0;
 
 document.addEventListener('scroll', () => {
@@ -23,18 +24,33 @@ document.addEventListener('scroll', () => {
 })
 
 document.addEventListener('click', e => {
-  if (!aside.classList.contains("active") && e.target.closest(".toggle")) {
-    aside.classList.add("active");
+  if (!asideMobile.classList.contains("active") && e.target.closest(".toggle")) {
+    asideMobile.classList.add("active");
     navbar.classList.remove("hidden")
-  } else if (aside.classList.contains("active") && window.pageYOffset > 0 && e.target.closest("aside") == null) {
-    aside.classList.remove("active");
+  } else if (asideMobile.classList.contains("active") && window.pageYOffset > 0 && e.target.closest(".aside-mobile") == null) {
+    asideMobile.classList.remove("active");
     navbar.classList.add("hidden")
-  } else if (aside.classList.contains("active") && window.pageYOffset == 0 && e.target.closest("aside") == null) {
-    aside.classList.remove("active");
-  } else if (aside.classList.contains("active") && window.pageYOffset > 0 && e.target.closest(".close-btn")) {
-    aside.classList.remove("active");
+  } else if (asideMobile.classList.contains("active") && window.pageYOffset == 0 && e.target.closest(".aside-mobile") == null) {
+    asideMobile.classList.remove("active");
+  } else if (asideMobile.classList.contains("active") && window.pageYOffset > 0 && e.target.closest(".close-btn")) {
+    asideMobile.classList.remove("active");
     navbar.classList.add("hidden")
-  } else if (aside.classList.contains("active") && window.pageYOffset == 0 && e.target.closest(".close-btn")) {
-    aside.classList.remove("active");
+  } else if (asideMobile.classList.contains("active") && window.pageYOffset == 0 && e.target.closest(".close-btn")) {
+    asideMobile.classList.remove("active");
+  }
+  
+  if (!asideDesktop.classList.contains("active") && e.target.closest(".toggle")) {
+    asideDesktop.classList.add("active");
+    navbar.classList.remove("hidden")
+  } else if (asideDesktop.classList.contains("active") && window.pageYOffset > 0 && e.target.closest(".aside-desktop") == null) {
+    asideDesktop.classList.remove("active");
+    navbar.classList.add("hidden")
+  } else if (asideDesktop.classList.contains("active") && window.pageYOffset == 0 && e.target.closest(".aside-desktop") == null) {
+    asideDesktop.classList.remove("active");
+  } else if (asideDesktop.classList.contains("active") && window.pageYOffset > 0 && e.target.closest(".close-btn")) {
+    asideDesktop.classList.remove("active");
+    navbar.classList.add("hidden")
+  } else if (asideDesktop.classList.contains("active") && window.pageYOffset == 0 && e.target.closest(".close-btn")) {
+    asideDesktop.classList.remove("active");
   }
 })

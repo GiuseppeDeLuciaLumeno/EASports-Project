@@ -593,6 +593,9 @@
     display: none;
   }
 
+  transform: translateX(-100%);
+  transition: transform 0.45s ease-in-out;
+
   @include da-breakpoint(tablet) {
     width: calc(5 * ((100vw - 2 * 7.8125vw - 24px * 11) / 12) + 6 * 24px);
   }
@@ -641,6 +644,7 @@
     svg {
       height: 16px;
       width: 16px;
+      cursor: pointer;
     }
 
     svg:hover {
@@ -746,6 +750,10 @@
       }
     }
   }
+}
+
+.aside-desktop.active {
+  transform: translateX(0);
 }
 
 @include da-breakpoint(desktop) {
