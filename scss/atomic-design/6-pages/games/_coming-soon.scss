@@ -1,0 +1,17 @@
+body {
+  font-family: map-get($map: $da-font-family, $key: text);
+}
+
+#slider-section {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1275px) {
+  .arrow-container {
+    display: flex !important;
+    
+    &::before, &::after {
+      background-color: map-get($map: $da-color, $key: accent) !important;
+    }
+  }
+}
