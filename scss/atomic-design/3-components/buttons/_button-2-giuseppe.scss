@@ -1,58 +1,29 @@
-/* .btn-container {
-    height: 80px;
-    display: flex;
-    align-items: flex-end;
-    margin: 0rem 0rem 5rem;
-}
-
-.btn-g{
+.button {
     cursor: pointer;
-    background: none;
-    border: 2px solid black;
-    border-radius: 3px;
-    padding: 15px 30px;
-    width: 100%;
-    transition: padding 0.1s;
-    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    color: #161616;
-    opacity: .9;
-
-    &:hover {
-        padding: 18px 35px;
-    }
-} */
-
-
-
-
-.button{
-cursor: pointer;
-height: 150px;
-width: 250px;
-display: flex;
-justify-content: center;
-align-items: center;
-
-
-.button-container{
-    border: 2px solid black;
-    border-radius: 3px;
-    padding: 12px 24px;
-    transition: padding .2s ease;
-
-    &:hover{
-        padding: 17px 29px;
-    }
-}
-
-
-.inside-button{
-    border: none;
-    background: none;
-    color: #161616;
-    font-family: map-get($ultimi-giochi-font, text);
+    height: 150px;
+    width: 250px;
     display: flex;
     justify-content: center;
-}
+    align-items: center;
+
+
+    .button-container {
+        border: 2px solid black;
+        border-radius: 3px;
+        padding: 12px 24px;
+        transition: padding .2s ease;
+
+        &:hover {
+            padding: 17px 29px;
+        }
+    }
+
+    .inside-button {
+        border: none;
+        background: none;
+        color: #161616;
+        font-family: map-get($ultimi-giochi-font, text);
+        display: flex;
+        justify-content: center;
+    }
 }
