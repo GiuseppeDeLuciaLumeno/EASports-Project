@@ -782,7 +782,7 @@ position: relative;
             height: 0;
             width: 0;
             opacity: 0;
-
+            z-index: -5;
         }
 
         &::after {
@@ -795,7 +795,7 @@ position: relative;
             transition: opacity .5s ease;
             background: #161616;
             opacity: 0;
-
+            z-index: -5;
 
         }
 
@@ -807,6 +807,7 @@ position: relative;
             top: 0;
             left: 0;
             opacity: 0;
+            z-index: 0;
         }
 
     z-index: -1;

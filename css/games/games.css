@@ -16030,6 +16030,7 @@ form .create-account .text-colapse p {
   height: 0;
   width: 0;
   opacity: 0;
+  z-index: -5;
 }
 .click-out::after {
   content: "";
@@ -16041,6 +16042,7 @@ form .create-account .text-colapse p {
   transition: opacity 0.5s ease;
   background: #161616;
   opacity: 0;
+  z-index: -5;
 }
 .click-out.active::after {
   content: "";
@@ -16050,6 +16052,7 @@ form .create-account .text-colapse p {
   top: 0;
   left: 0;
   opacity: 0;
+  z-index: 0;
 }
 .click-out video {
   max-width: 100%;
