@@ -27,6 +27,7 @@
 
     &:hover::after {
         @content;
+        z-index: 0;
         background: $bg-base-blue;
         background: $bg-linear-gradient;
         opacity: .82;

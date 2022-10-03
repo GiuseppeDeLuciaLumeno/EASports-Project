@@ -14322,6 +14322,7 @@ body {
   opacity: 0;
 }
 .fifa23-card:hover::after {
+  z-index: 0;
   background: rgb(47, 41, 124);
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0.82;
@@ -14345,10 +14346,10 @@ body {
   top: 40%;
   left: 35%;
   transition: transform 0.4s ease;
-  z-index: 1;
 }
 .fifa23-card:hover .fifa23-logo {
   transform: translateY(-70px);
+  z-index: 2;
 }
 .fifa23-card:hover p {
   opacity: 1;
@@ -14375,6 +14376,7 @@ body {
   opacity: 0;
 }
 .apex-mobile-card:hover::after {
+  z-index: 0;
   background: rgb(47, 41, 124);
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0.82;
@@ -14398,10 +14400,10 @@ body {
   top: 40%;
   left: 40%;
   transition: transform 0.4s ease;
-  z-index: 1;
 }
 .apex-mobile-card:hover .apex-mobile-logo {
   transform: translateY(-70px);
+  z-index: 2;
 }
 .apex-mobile-card:hover p {
   opacity: 1;
@@ -14428,6 +14430,7 @@ body {
   opacity: 0;
 }
 .f1-22-card:hover::after {
+  z-index: 0;
   background: rgb(47, 41, 124);
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0.82;
@@ -14451,10 +14454,10 @@ body {
   top: 40%;
   left: 30%;
   transition: transform 0.4s ease;
-  z-index: 1;
 }
 .f1-22-card:hover .f1-22-logo {
   transform: translateY(-60px);
+  z-index: 2;
 }
 .f1-22-card:hover p {
   opacity: 1;
@@ -14481,6 +14484,7 @@ body {
   opacity: 0;
 }
 .batterfield-card:hover::after {
+  z-index: 0;
   background: rgb(47, 41, 124);
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0.82;
@@ -14504,10 +14508,10 @@ body {
   top: 40%;
   left: 30%;
   transition: transform 0.4s ease;
-  z-index: 1;
 }
 .batterfield-card:hover .batterfield-logo {
   transform: translateY(-40px);
+  z-index: 2;
 }
 .batterfield-card:hover p {
   opacity: 1;
@@ -14534,6 +14538,7 @@ body {
   opacity: 0;
 }
 .apex-card:hover::after {
+  z-index: 0;
   background: rgb(47, 41, 124);
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0.82;
@@ -14557,10 +14562,10 @@ body {
   top: 40%;
   left: 37%;
   transition: transform 0.4s ease;
-  z-index: 1;
 }
 .apex-card:hover .apex-logo {
   transform: translateY(-70px);
+  z-index: 2;
 }
 .apex-card:hover p {
   opacity: 1;
@@ -14587,6 +14592,7 @@ body {
   opacity: 0;
 }
 .the-sims4-card:hover::after {
+  z-index: 0;
   background: rgb(47, 41, 124);
   background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
   opacity: 0.82;
@@ -14610,10 +14616,10 @@ body {
   top: 25%;
   left: 30%;
   transition: transform 0.4s ease;
-  z-index: 1;
 }
 .the-sims4-card:hover .the-sims4-logo {
   transform: translateY(-55px);
+  z-index: 2;
 }
 .the-sims4-card:hover p {
   opacity: 1;
@@ -15097,7 +15103,6 @@ body {
 }
 @media only screen and (min-width: 361px) and (max-width: 899px) {
   .section-wrapper {
-    background-color: rgb(240, 238, 238);
     box-shadow: 14px -5px 22px -20px inset #161616;
   }
   .section-wrapper h1, .section-wrapper .h1 {
@@ -15337,8 +15342,8 @@ body {
 .btn-container {
   height: 75px;
   display: flex;
-  align-items: center;
-  margin: 0rem 0rem 5rem;
+  align-items: flex-end;
+  margin: 3rem 0rem 5rem;
 }
 
 .btn-g {
@@ -15531,6 +15536,7 @@ form .create-account .text-colapse p {
   align-items: center;
   gap: 30px;
   padding: 0.85rem 1rem 0.5rem;
+  z-index: 2;
 }
 .lower-header::before {
   content: "";
