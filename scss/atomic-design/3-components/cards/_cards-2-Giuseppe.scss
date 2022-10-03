@@ -45,7 +45,7 @@
 
   .f1-22-card {
     @include cards;
-    
+
      .f1-22-logo {
         position: absolute;
         top: 40%;
@@ -121,6 +121,17 @@
         opacity: 1;
     }
   }
+
+
+  //GESTIONE MOMENTANEA
+  #nhl-card{
+    #nhl-logo{
+        position: absolute;
+        top: 40%;
+        left: 18%;
+    }
+  }
+
 
   //icons not to display
  /*  .bi {

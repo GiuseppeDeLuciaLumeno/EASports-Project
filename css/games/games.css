@@ -14636,6 +14636,12 @@ body {
   opacity: 1;
 }
 
+#nhl-card #nhl-logo {
+  position: absolute;
+  top: 40%;
+  left: 18%;
+}
+
 /*  .bi {
    color: white;
    display: none;
