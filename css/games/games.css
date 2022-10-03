@@ -15339,28 +15339,54 @@ body {
     max-height: 350px;
   }
 }
-.btn-container {
-  height: 75px;
-  display: flex;
-  align-items: flex-end;
-  margin: 3rem 0rem 5rem;
+/* .btn-container {
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    margin: 0rem 0rem 5rem;
 }
 
-.btn-g {
+.btn-g{
+    cursor: pointer;
+    background: none;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 15px 30px;
+    width: 100%;
+    transition: padding 0.1s;
+    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #161616;
+    opacity: .9;
+
+    &:hover {
+        padding: 18px 35px;
+    }
+} */
+.button {
   cursor: pointer;
-  background: none;
+  height: 150px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button .button-container {
   border: 2px solid black;
   border-radius: 3px;
-  padding: 15px 30px;
-  width: 100%;
-  transition: padding 0.1s;
-  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  color: #161616;
-  opacity: 0.9;
+  padding: 12px 24px;
+  transition: padding 0.2s ease;
 }
-.btn-g:hover {
-  padding: 18px 35px;
+.button .button-container:hover {
+  padding: 17px 29px;
+}
+.button .inside-button {
+  border: none;
+  background: none;
+  color: #161616;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 html {
@@ -15864,6 +15890,7 @@ form .create-account .text-colapse p {
   transition: all 0.2s linear;
 }
 #fixed-first-modal .bi-x-lg {
+  cursor: pointer;
   font-weight: bolder;
   position: absolute;
   top: 1rem;

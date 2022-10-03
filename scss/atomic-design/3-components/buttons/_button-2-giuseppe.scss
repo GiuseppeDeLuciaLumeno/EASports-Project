@@ -1,8 +1,8 @@
-.btn-container {
-    height: 75px;
+/* .btn-container {
+    height: 80px;
     display: flex;
     align-items: flex-end;
-    margin: 3rem 0rem 5rem;
+    margin: 0rem 0rem 5rem;
 }
 
 .btn-g{
@@ -21,4 +21,38 @@
     &:hover {
         padding: 18px 35px;
     }
+} */
+
+
+
+
+.button{
+cursor: pointer;
+height: 150px;
+width: 250px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+.button-container{
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 12px 24px;
+    transition: padding .2s ease;
+
+    &:hover{
+        padding: 17px 29px;
+    }
+}
+
+
+.inside-button{
+    border: none;
+    background: none;
+    color: #161616;
+    font-family: map-get($ultimi-giochi-font, text);
+    display: flex;
+    justify-content: center;
+}
 }
