@@ -14318,13 +14318,13 @@ body {
   width: 100%;
   height: 100%;
   transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0;
 }
 .fifa23-card:hover::after {
   z-index: 0;
   background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0.82;
 }
 .fifa23-card:hover p {
@@ -14372,13 +14372,13 @@ body {
   width: 100%;
   height: 100%;
   transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0;
 }
 .apex-mobile-card:hover::after {
   z-index: 0;
   background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0.82;
 }
 .apex-mobile-card:hover p {
@@ -14426,13 +14426,13 @@ body {
   width: 100%;
   height: 100%;
   transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0;
 }
 .f1-22-card:hover::after {
   z-index: 0;
   background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0.82;
 }
 .f1-22-card:hover p {
@@ -14480,13 +14480,13 @@ body {
   width: 100%;
   height: 100%;
   transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0;
 }
 .batterfield-card:hover::after {
   z-index: 0;
   background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0.82;
 }
 .batterfield-card:hover p {
@@ -14534,13 +14534,13 @@ body {
   width: 100%;
   height: 100%;
   transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0;
 }
 .apex-card:hover::after {
   z-index: 0;
   background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0.82;
 }
 .apex-card:hover p {
@@ -14588,13 +14588,13 @@ body {
   width: 100%;
   height: 100%;
   transition: opacity 0.4s ease;
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0;
 }
 .the-sims4-card:hover::after {
   z-index: 0;
   background: rgb(47, 41, 124);
-  background: linear-gradient(90deg, rgb(47, 41, 124) 0%, rgb(253, 29, 29) 100%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(4, 16, 97) 0%, rgb(60, 65, 212) 100%);
   opacity: 0.82;
 }
 .the-sims4-card:hover p {
@@ -15339,31 +15339,7 @@ body {
     max-height: 350px;
   }
 }
-/* .btn-container {
-    height: 80px;
-    display: flex;
-    align-items: flex-end;
-    margin: 0rem 0rem 5rem;
-}
-
-.btn-g{
-    cursor: pointer;
-    background: none;
-    border: 2px solid black;
-    border-radius: 3px;
-    padding: 15px 30px;
-    width: 100%;
-    transition: padding 0.1s;
-    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    color: #161616;
-    opacity: .9;
-
-    &:hover {
-        padding: 18px 35px;
-    }
-} */
-.button {
+.button-container {
   cursor: pointer;
   height: 150px;
   width: 250px;
@@ -15371,16 +15347,16 @@ body {
   justify-content: center;
   align-items: center;
 }
-.button .button-container {
+.button-container .button {
   border: 2px solid black;
   border-radius: 3px;
   padding: 12px 24px;
   transition: padding 0.2s ease;
 }
-.button .button-container:hover {
+.button-container .button:hover {
   padding: 17px 29px;
 }
-.button .inside-button {
+.button-container .inside-button {
   border: none;
   background: none;
   color: #161616;
@@ -15933,6 +15909,7 @@ form .create-account .text-colapse p {
   z-index: 2;
 }
 .second-modal-wrapper .bi-x-lg {
+  z-index: 2 !important;
   font-weight: bolder;
   position: absolute;
   top: 1rem;
@@ -16053,7 +16030,6 @@ form .create-account .text-colapse p {
   height: 0;
   width: 0;
   opacity: 0;
-  z-index: 5;
 }
 .click-out::after {
   content: "";
@@ -16065,7 +16041,6 @@ form .create-account .text-colapse p {
   transition: opacity 0.5s ease;
   background: #161616;
   opacity: 0;
-  z-index: -10;
 }
 .click-out.active::after {
   content: "";
@@ -16075,7 +16050,6 @@ form .create-account .text-colapse p {
   top: 0;
   left: 0;
   opacity: 0;
-  z-index: 5;
 }
 .click-out video {
   max-width: 100%;

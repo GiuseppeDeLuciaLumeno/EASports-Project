@@ -635,6 +635,7 @@ form {
     }
 
     .bi-x-lg {
+        z-index: 2 !important;
         font-weight: bolder;
         position: absolute;
         top: 1rem;
@@ -781,7 +782,7 @@ position: relative;
             height: 0;
             width: 0;
             opacity: 0;
-            z-index: 5;
+
         }
 
         &::after {
@@ -794,7 +795,7 @@ position: relative;
             transition: opacity .5s ease;
             background: #161616;
             opacity: 0;
-            z-index: -10;
+
 
         }
 
@@ -806,7 +807,6 @@ position: relative;
             top: 0;
             left: 0;
             opacity: 0;
-            z-index: 5;
         }
 
     z-index: -1;
