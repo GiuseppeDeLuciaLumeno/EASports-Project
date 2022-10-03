@@ -15924,6 +15924,7 @@ form .create-account .text-colapse p {
   overflow: visible;
   opacity: 1;
   z-index: 2;
+  padding-top: 2rem;
 }
 .second-modal-wrapper .bi-x-lg {
   z-index: 2 !important;
@@ -16152,10 +16153,8 @@ form .create-account .text-colapse p {
 }
 
 header {
+  transition: all 0.4s ease;
   z-index: 1;
-}
-
-header {
   width: 100%;
   position: fixed;
   top: 0;
@@ -16165,15 +16164,13 @@ header {
   transition: transform 0.4s ease;
 }
 
-.black-block-hide {
-  transform: translateY(-2.5rem);
-}
-
-.lower-header {
-  transition: all 0.4s ease;
-}
-
-.lower-header-show {
+/* .black-block-hide {
+    transform: translateY(-2.5rem);
+} */
+/* .lower-header {
+    transition: all .4s ease;
+} */
+.header-hider {
   transform: translateY(-2.5rem);
 }
 

@@ -104,6 +104,7 @@ personIcon.addEventListener("click", () => {
 firstModal.classList.toggle("active");
 html.classList.add("overflow-lock-scroll");
 body.classList.add("active");
+
 });
 
 //close First modal
