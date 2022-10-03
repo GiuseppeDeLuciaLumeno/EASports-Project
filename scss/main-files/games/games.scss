@@ -275,8 +275,8 @@ form {
 
 
 
-.lower-header {
-    z-index: 2 !important;
+ .lower-header {
+
     background: white;
     width: 100%;
     display: flex;
@@ -284,28 +284,29 @@ form {
     gap: 30px;
     padding: 0.85rem 1rem 0.5rem;
 
-     &::before {
+      &::before {
         content: "";
         position: absolute;
         top: 2.5rem;
         left: 0;
-        height: 100vh;
-        width: 100%;
+        height: 0;
+        width: 0%;
         background: black;
         opacity: 0;
+
     }
 
     &::after {
         content: "";
-        width: 100%;
-        height: 100vh;
+        width: 0%;
+        height: 0;
         position: absolute;
         top: 0;
         left: 0;
-        transition: all .5s ease;
+        transition: opacity .5s ease;
         background: #161616;
         opacity: 0;
-        z-index: -1;
+        
     }
 
     &.active::after {
@@ -317,7 +318,7 @@ form {
         left: 0;
         background: #161616;
         opacity: .8;
-        z-index: 0;
+
     }
 
 
@@ -839,14 +840,10 @@ form {
     }
  }
 
-
- //TO SET Z-INDEX TO SLIDER UNDER THE ASIDE
- .section-container,
- #slider-section{
-    z-index: -1;
- }
-
-
+ //SET CONTAINER NAVBAR DARIO
+.section-container{
+    z-index: 0;
+}
 
 //CARDS LAYOUT DA SISTEMARE
 .section-wrapper {
@@ -869,7 +866,9 @@ form {
     margin: 1.2rem;
 }
 
-
+header{
+    z-index: 1;
+}
 
 //header global position to set th e
 header {
@@ -906,6 +905,5 @@ header {
 .z-index-1{
     z-index: -1;
 }
-
 
 

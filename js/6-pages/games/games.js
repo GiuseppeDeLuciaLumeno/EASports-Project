@@ -87,6 +87,7 @@ const burger = document.querySelector(".burger");
 burger.addEventListener("click", () => {
     burger.classList.toggle("active");
     blackBackground.classList.toggle("active");
+    cardsIndex.classList.add("z-index-1");
 });
 
 asidehide.addEventListener("click", () => {

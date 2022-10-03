@@ -15452,7 +15452,6 @@ form .create-account .text-colapse p {
   }
 }
 .lower-header {
-  z-index: 2 !important;
   background: white;
   width: 100%;
   display: flex;
@@ -15465,22 +15464,21 @@ form .create-account .text-colapse p {
   position: absolute;
   top: 2.5rem;
   left: 0;
-  height: 100vh;
-  width: 100%;
+  height: 0;
+  width: 0%;
   background: black;
   opacity: 0;
 }
 .lower-header::after {
   content: "";
-  width: 100%;
-  height: 100vh;
+  width: 0%;
+  height: 0;
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease;
   background: #161616;
   opacity: 0;
-  z-index: -1;
 }
 .lower-header.active::after {
   content: "";
@@ -15491,7 +15489,6 @@ form .create-account .text-colapse p {
   left: 0;
   background: #161616;
   opacity: 0.8;
-  z-index: 0;
 }
 @media only screen and (max-width: 1030px) {
   .lower-header {
@@ -15999,9 +15996,8 @@ form .create-account .text-colapse p {
   }
 }
 
-.section-container,
-#slider-section {
-  z-index: -1;
+.section-container {
+  z-index: 0;
 }
 
 .section-wrapper {
@@ -16020,6 +16016,10 @@ form .create-account .text-colapse p {
   justify-content: center;
   gap: 25px;
   margin: 1.2rem;
+}
+
+header {
+  z-index: 1;
 }
 
 header {
