@@ -578,8 +578,182 @@
   transform: translateX(0);
 }
 
+.aside-desktop {
+  display: none;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  background-color: map-get($map: $da-color, $key: white);
+  z-index: 100;
+  width: 100%;
+  height: calc(100vh - 40px);
+
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include da-breakpoint(tablet) {
+    width: calc(5 * ((100vw - 2 * 7.8125vw - 24px * 11) / 12) + 6 * 24px);
+  }
+
+  @include da-breakpoint(desktop) {
+    width: calc(4 * ((100vw - 2 * 7.4218vw - 28px * 11) / 12) + 5 * 28px);
+  }
+
+  @include da-breakpoint(desktop-large) {
+    width: calc(4 * ((100vw - 2 * ((100vw - 1120px) / 2) - 32px * 11) / 12) + 5 * 32px);
+  }
+
+  padding-inline: rem(32px) rem(49px);
+
+  .heading {
+    @include flexbox($justify-content: space-between);
+    margin-block: rem(47px) rem(47px);
+
+    a {
+      color: rgb(163, 163, 163);
+      font-weight: 700;
+      line-height: 26.4px;
+      font-size: 16px;
+      cursor: pointer;
+
+      @include da-breakpoint(tablet) {
+        line-height: 26.4px;
+        font-size: 16px;
+      }
+
+      @include da-breakpoint(desktop) {
+        line-height: 27px;
+        font-size: 18px;
+      }
+
+      @include da-breakpoint(desktop-large) {
+        line-height: 27px;
+        font-size: 18px;
+      }
+    }
+
+    a:hover {
+      color: map-get($map: $da-color, $key: accent);
+    }
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+
+    svg:hover {
+      path {
+        fill: map-get($map: $da-color, $key: accent);
+      }
+    }
+  }
+
+  .card {
+    position: relative;
+    aspect-ratio: 1 / 1;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      img {
+        position: absolute;
+        inset: 0;
+      }
+
+      img:last-child {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  .card:hover {
+    a {
+      img:last-child {
+        transform: scale(1.1) translate3d(-45%, -40%, 0);
+      }
+    }
+  }
+
+  .big-card {
+    a {
+      img:last-child {
+        width: 25%;
+      }
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(32px);
+
+    margin-block: rem(32px) rem(57px);
+    
+    .card-1 {
+      a {
+        img:last-child {
+          width: 40%;
+        }
+      }
+    }
+
+    .card-2 {
+      a {
+        img:last-child {
+          width: 100%;
+          height: 20%;
+        }
+      }
+    }
+
+    .card-3 {
+      a {
+        img:last-child {
+          width: 40%;
+        }
+      }
+    }
+
+    .card-4 {
+      a {
+        img:last-child {
+          width: 32.5%;
+        }
+      }
+    }
+
+    .card-5 {
+      a {
+        img:last-child {
+          width: 67.5%;
+        }
+      }
+    }
+
+    .card-6 {
+      a {
+        img:last-child {
+          width: 100%;
+          height: 20%;
+        }
+      }
+    }
+  }
+}
+
 @include da-breakpoint(desktop) {
   .aside-mobile {
     display: none;
+  }
+
+  .aside-desktop {
+    display: block;
   }
 }
