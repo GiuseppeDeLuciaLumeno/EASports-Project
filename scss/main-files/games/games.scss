@@ -8,7 +8,7 @@
 @import "../../atomic-design/1-abstracts/mixins/cards/mini-cards-scroll";
 
 //Import Bootstrap
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // ABSTRACTS -----------------------------------------------------
 @import '../../atomic-design/1-abstracts/variables/font-families/font-families-dario';
@@ -273,9 +273,7 @@ form {
 
 }
 
-
-
- .lower-header {
+.lower-header {
 
     background: white;
     width: 100%;
@@ -284,7 +282,7 @@ form {
     gap: 30px;
     padding: 0.85rem 1rem 0.5rem;
 
-      &::before {
+    &::before {
         content: "";
         position: absolute;
         top: 2.5rem;
@@ -306,7 +304,7 @@ form {
         transition: opacity .5s ease;
         background: #161616;
         opacity: 0;
-        
+
     }
 
     &.active::after {
@@ -318,12 +316,9 @@ form {
         left: 0;
         background: #161616;
         opacity: .8;
-
     }
 
-
-
-     @media only screen and (max-width: 1030px) {
+    @media only screen and (max-width: 1030px) {
         gap: 6px;
     }
 
@@ -774,25 +769,64 @@ form {
     }
 }
 
-.video-wrapper {
+//OPEN AND CLOSE MODAL BY CLICKING ANYWHERE ELSE
+.click-out{
+position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            height: 0;
+            width: 0;
+            opacity: 0;
+            z-index: 5;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity .5s ease;
+            background: #161616;
+            opacity: 0;
+            z-index: -10;
+
+        }
+
+        &.active::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 5;
+        }
+
     z-index: -1;
-     margin-top: 5rem;
+    margin-top: 5rem;
+
     video {
         max-width: 100%;
     }
 
-    video+img{
+    video+img {
         display: none;
     }
 
-    @media  only screen and (min-width: 766px) and (max-width: 1023px) {
-        video+img{
+    @media only screen and (min-width: 766px) and (max-width: 1023px) {
+        video+img {
             display: block;
+        }
     }
-}
 
-   @media only screen and (max-width: 1023px) {
-          video{
+    @media only screen and (max-width: 1023px) {
+        video {
             display: none;
         }
 
@@ -810,7 +844,6 @@ form {
         }
     }
 
-
     .games-bg {
         display: none;
 
@@ -822,26 +855,28 @@ form {
     }
 }
 
- @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     video+img {
         display: none;
     }
 
- }
+}
 
- .image-position{
+.image-position {
     position: absolute;
     top: 0;
+
     @media screen and (max-width: 767px) {
         display: none;
     }
-    @media screen and (min-width: 767px) and (max-width: 1023px) {
-       top: 6rem;
-    }
- }
 
- //SET CONTAINER NAVBAR DARIO
-.section-container{
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        top: 6rem;
+    }
+}
+
+//SET CONTAINER NAVBAR DARIO
+.section-container {
     z-index: 0;
 }
 
@@ -866,7 +901,7 @@ form {
     margin: 1.2rem;
 }
 
-header{
+header {
     z-index: 1;
 }
 
@@ -878,32 +913,30 @@ header {
 }
 
 
- .black-block{
+.black-block {
     transition: transform .4s ease;
 }
 
-.black-block-hide{
+.black-block-hide {
     transform: translateY(-2.5rem);
 }
 
-.lower-header{
+.lower-header {
     transition: all .4s ease;
 }
 
 
- .lower-header-show{
+.lower-header-show {
 
     transform: translateY(-2.5rem);
 }
 
 
-.overflow-lock-scroll{
+.overflow-lock-scroll {
     overflow: hidden;
 }
 
 
-.z-index-1{
+.z-index-1 {
     z-index: -1;
 }
-
-

@@ -62,6 +62,8 @@ window.addEventListener("mouseup", (event) => {
     burger.classList.remove("active");
     myModal.classList.remove("active");
     firstModal.classList.remove("active");
+    body.classList.remove("active");
+    html.classList.remove("overflow-lock-scroll");
   }
 
   else if (event.target === blackBackground) {
@@ -101,6 +103,7 @@ const firstIconX = document.getElementById("icon-x-modal");
 personIcon.addEventListener("click", () => {
 firstModal.classList.toggle("active");
 html.classList.add("overflow-lock-scroll");
+body.classList.add("active");
 });
 
 //close First modal
@@ -108,6 +111,7 @@ firstIconX.addEventListener("click", () => {
   firstModal.classList.remove("active");
   blackBackground.classList.remove("active");
   html.classList.remove("overflow-lock-scroll");
+  body.classList.remove("active");
 })
 
 
@@ -120,12 +124,14 @@ interrogative.addEventListener("click", () => {
   myModal.classList.toggle("active");
   firstModal.classList.remove("active");
   html.classList.add("overflow-lock-scroll");
+  body.classList.add("active");
 });
 
 //Second Modal close
 iconX.addEventListener("click", () => {
   myModal.classList.remove("active");
   html.classList.remove("overflow-lock-scroll");
+  body.classList.remove("active");
 })
 
 
