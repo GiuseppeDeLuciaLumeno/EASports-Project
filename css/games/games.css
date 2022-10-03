@@ -83,6 +83,46 @@ select {
   font-family: ElectronicArtsText;
   src: url(../../assets/fonts/Electronic_Arts_Text.otf);
 }
+.dropdown-icon-container {
+  width: 20px;
+  height: 20px;
+}
+.dropdown-icon-container .v-icon {
+  position: relative;
+}
+.dropdown-icon-container .v-icon::before {
+  content: "";
+  cursor: pointer;
+  border-radius: 0.5em;
+  border-top: 0.1em solid black;
+  height: 0.1em;
+  width: 0.5em;
+  position: absolute;
+  left: 0;
+  top: 11px;
+  transform: rotate(45deg);
+  transition: transform 200ms ease;
+}
+.dropdown-icon-container .v-icon::before:hover::before {
+  transform: rotate(-45deg);
+}
+.dropdown-icon-container .v-icon::after {
+  content: "";
+  cursor: pointer;
+  border-radius: 0.5em;
+  border-top: 0.1em solid black;
+  height: 0.1em;
+  width: 0.5em;
+  position: absolute;
+  left: 5px;
+  top: 11px;
+  transform: rotate(-45deg);
+  transition: transform 200ms ease;
+}
+.dropdown-icon-container .v-icon::after:hover::after {
+  transform: rotate(45deg);
+}
+
 /*!
  * Bootstrap  v5.2.1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -15722,47 +15762,6 @@ form .create-account .text-colapse p {
 .ea-dropdown:hover .v-icon::after {
   transform: rotate(45deg);
   border-color: red;
-}
-
-.dropdown-icon-container {
-  width: 20px;
-  height: 20px;
-  position: relative;
-}
-.dropdown-icon-container .v-icon {
-  position: relative;
-}
-.dropdown-icon-container .v-icon::before {
-  content: "";
-  cursor: pointer;
-  border-radius: 0.5em;
-  border-top: 0.1em solid black;
-  height: 0.1em;
-  width: 0.5em;
-  position: absolute;
-  left: 0;
-  top: 11px;
-  transform: rotate(45deg);
-  transition: transform 200ms ease;
-}
-.dropdown-icon-container .v-icon::before:hover::before {
-  transform: rotate(-45deg);
-}
-.dropdown-icon-container .v-icon::after {
-  content: "";
-  cursor: pointer;
-  border-radius: 0.5em;
-  border-top: 0.1em solid black;
-  height: 0.1em;
-  width: 0.5em;
-  position: absolute;
-  left: 5px;
-  top: 11px;
-  transform: rotate(-45deg);
-  transition: transform 200ms ease;
-}
-.dropdown-icon-container .v-icon::after:hover::after {
-  transform: rotate(45deg);
 }
 
 .modal-wrapper {

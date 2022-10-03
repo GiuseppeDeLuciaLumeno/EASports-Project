@@ -6,7 +6,7 @@
 @import "../../atomic-design/2-base/typography/games/games";
 @import "../../atomic-design/1-abstracts/mixins/header/header-ultimi-giochi";
 @import "../../atomic-design/1-abstracts/mixins/cards/mini-cards-scroll";
-
+@import "../../atomic-design/1-abstracts/mixins/icons/icons-ultimi-giochi-giuseppe";
 //Import Bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -438,18 +438,6 @@ form {
     &:hover .v-icon::after {
         transform: rotate(45deg);
         border-color: red;
-    }
-}
-
-
-
-.dropdown-icon-container {
-    width: 20px;
-    height: 20px;
-    position: relative;
-
-    .v-icon {
-        @include v-icons;
     }
 }
 
