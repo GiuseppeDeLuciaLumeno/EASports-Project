@@ -1723,7 +1723,7 @@ body {
 }
 @media (min-width: 48rem) {
   .aside-mobile .dropdowns {
-    margin-inline: 1.125rem;
+    padding-inline: 1.125rem;
   }
 }
 .aside-mobile .dropdowns .dropdown .dropdown-btn {

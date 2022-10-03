@@ -118,7 +118,7 @@
     overflow-y: auto;
 
     @include da-breakpoint(tablet) {
-      margin-inline: rem(18px);
+      padding-inline: rem(18px);
     }
 
     .dropdown {
