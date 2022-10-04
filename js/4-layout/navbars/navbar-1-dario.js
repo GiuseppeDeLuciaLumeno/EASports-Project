@@ -37,6 +37,8 @@ document.addEventListener('click', e => {
     navbar.classList.add("hidden")
   } else if (asideMobile.classList.contains("active") && window.pageYOffset == 0 && e.target.closest(".close-btn")) {
     asideMobile.classList.remove("active");
+  } else if (asideMobile.classList.contains("active") && e.target.closest(".aside-mobile")) {
+    return
   }
   
   if (!asideDesktop.classList.contains("active") && e.target.closest(".toggle")) {
@@ -52,5 +54,7 @@ document.addEventListener('click', e => {
     navbar.classList.add("hidden")
   } else if (asideDesktop.classList.contains("active") && window.pageYOffset == 0 && e.target.closest(".close-btn")) {
     asideDesktop.classList.remove("active");
+  } else if (asideDesktop.classList.contains("active") && e.target.closest(".aside-desktop")) {
+    return
   }
 })
