@@ -1,0 +1,729 @@
+@import '../../1-abstracts/variables/colors/colors-dario';
+@import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/mixins/flexbox/flexbox-1-dario';
+@import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/functions/units/units-giuseppe';
+
+
+.aside-mobile {
+  position: fixed;
+  top: rem(40px);
+  left: 0;
+  z-index: 140;
+  width: 100%;
+  max-width: rem(375px);
+  background-color: map-get($map: $da-color, $key: white);
+  cursor: pointer;
+
+  transform: translateX(-100%);
+  transition: transform 0.45s ease-in-out;
+
+  @media (min-width: 321px) {
+    width: 86.5%;
+  }
+
+  .heading {
+    background-color: map-get($map: $da-color, $key: borders);
+    @include flexbox($justify-content: space-between);
+    height: rem(53px);
+    padding-inline: rem(14px);
+
+    a {
+      width: rem(200px);
+    }
+
+    .close-btn {
+      height: rem(34px);
+      width: rem(34px);
+      border: 1px solid map-get($map: $da-color, $key: dark);
+      border-radius: 50%;
+
+      @include flexbox;
+
+      svg {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+
+  .dropdowns {
+    height: calc(100vh - 40px - 53px);
+    padding-inline: rem(28px);
+
+    overflow-y: auto;
+
+    @include da-breakpoint(tablet) {
+      padding-inline: rem(18px);
+    }
+
+    .dropdown {
+
+      .dropdown-btn {
+        padding-block: rem(13px) rem(12px);
+        border-bottom: 1px solid map-get($map: $da-color, $key: dark);
+
+        transition: border-bottom-color 0.38s ease-in-out;
+
+        @include flexbox($justify-content: space-between);
+
+        .arrow-container {
+          margin-right: 17px;
+          width: 16px;
+          height: 8px;
+          position: relative;
+
+          @include flexbox;
+
+          &::before, &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 65%;
+            height: 2px;
+            background-color: map-get($map: $da-color, $key: dark) !important;
+
+            transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+          }
+
+          &::before {
+            right: 6px;
+            transform: rotate(42.5deg);
+          }
+
+          &::after {
+            left: 6px;
+            transform: rotate(-42.5deg);
+          }
+        }
+      }
+
+      .dropdown-btn:hover {
+        p {
+          color: map-get($map: $da-color, $key: accent);
+        }
+
+        .arrow-container {
+          &::before, &::after {
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        overflow-y: hidden;
+        height: 0;
+        opacity: 0;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+
+        transition: all 0.38s ease-in-out;
+
+
+        .choice {
+          padding-block: rem(15px) rem(14px);
+          padding-inline: rem(14px) rem(20px);
+
+          @include flexbox($justify-content: space-between);
+
+          a {
+            color: rgb(163, 163, 163);
+          }
+
+          .plus-container {
+            position: relative;
+            width: 10px;
+            height: 10px;
+            @include flexbox;
+
+            transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+            &::before, &::after {
+              content: '';
+              position: absolute;
+              display: block;
+              height: 2px;
+              width: 100%;
+              background-color: rgb(163, 163, 163);
+            }
+
+            &::after {
+              transform: rotate(90deg);
+            }
+          }
+
+          &.class-type1 {
+            border-bottom: 1px solid rgb(163, 163, 163);
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+
+        .choice:hover {
+          a {
+            color: map-get($map: $da-color, $key: accent);
+          }
+
+          .plus-container {
+            &::before, &::after {
+              background-color: map-get($map: $da-color, $key: accent);
+            }
+          }
+        }
+
+        .sub-dropdown {
+          border-bottom: 1px solid rgb(163, 163, 163);
+          transition: border-bottom-color 0.4s ease-in-out;
+
+          .sub-dropdown-menu {
+            padding-inline: rem(38px);
+            overflow-y: hidden;
+            height: 0;
+            opacity: 0;
+
+            transition: all 0.4s ease-in-out;
+
+            a {
+              display: block;
+              margin-block: 7px 13px;
+              color: rgb(37, 37, 37);
+
+              &:last-child {
+                margin-bottom: 20px;
+              }
+            }
+
+            a.active, a:hover {
+              color: map-get($map: $da-color, $key: accent);
+            }
+          }
+        }
+
+        .sub-dropdown:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .dropdown.giochi-open {
+      .dropdown-btn {
+        border-bottom-color: map-get($map: $da-color, $key: accent);
+
+        p {
+          color: map-get($map: $da-color, $key: accent);
+        }
+
+        .arrow-container {
+          &::before {
+            transform: rotate(-42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+          
+          &::after {
+            transform: rotate(42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        height: 107px;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+        opacity: 1;
+
+        transition: height 0.38s ease-in-out;
+      }
+    }
+    
+    .dropdown.giochi-open.esplora-giochi-open {
+      .dropdown-menu {
+        height: 344px;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+        opacity: 1;
+
+        transition: height 0.38s ease-in-out;
+
+        .sub-dropdown.sub-dropdown-menu-open {
+          border-bottom-color: map-get($map: $da-color, $key: dark);
+
+          .sub-dropdown-btn {
+            a {
+              color: map-get($map: $da-color, $key: dark);
+            }
+
+            .plus-container {
+              rotate: 45deg;
+
+              &::before, &::after {
+                background-color: map-get($map: $da-color, $key: dark);
+              }
+            }
+          }
+
+          .sub-dropdown-btn:hover {
+            a {
+              color: map-get($map: $da-color, $key: accent);
+            }
+
+            .plus-container {
+              rotate: 45deg;
+
+              &::before, &::after {
+                background-color: map-get($map: $da-color, $key: accent);
+              }
+            }
+          }
+          
+          .sub-dropdown-menu {
+            height: 236px;
+            opacity: 1;
+
+            transition: height 0.4s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .dropdown.giochi-open.piattaforme-open {
+      .dropdown-menu {
+        height: 307px;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+        opacity: 1;
+
+        transition: height 0.38s ease-in-out;
+
+        .sub-dropdown.sub-dropdown-menu-open {
+          border-bottom-color: map-get($map: $da-color, $key: dark);
+
+          .sub-dropdown-btn {
+            a {
+              color: map-get($map: $da-color, $key: dark);
+            }
+
+            .plus-container {
+              rotate: 45deg;
+
+              &::before, &::after {
+                background-color: map-get($map: $da-color, $key: dark);
+              }
+            }
+          }
+
+          .sub-dropdown-btn:hover {
+            a {
+              color: map-get($map: $da-color, $key: accent);
+            }
+
+            .plus-container {
+              rotate: 45deg;
+
+              &::before, &::after {
+                background-color: map-get($map: $da-color, $key: accent);
+              }
+            }
+          }
+          
+          .sub-dropdown-menu {
+            height: 199px;
+            opacity: 1;
+
+            transition: height 0.4s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .dropdown.giochi-open.esplora-giochi-open.piattaforme-open {
+      .dropdown-menu {
+        height: 543px;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+        opacity: 1;
+
+        transition: height 0.38s ease-in-out;
+
+        .sub-dropdown.sub-dropdown-menu-open {
+          border-bottom-color: map-get($map: $da-color, $key: dark);
+
+          .sub-dropdown-btn {
+            a {
+              color: map-get($map: $da-color, $key: dark);
+            }
+
+            .plus-container {
+              rotate: 45deg;
+
+              &::before, &::after {
+                background-color: map-get($map: $da-color, $key: dark);
+              }
+            }
+          }
+
+          .sub-dropdown-btn:hover {
+            a {
+              color: map-get($map: $da-color, $key: accent);
+            }
+
+            .plus-container {
+              rotate: 45deg;
+
+              &::before, &::after {
+                background-color: map-get($map: $da-color, $key: accent);
+              }
+            }
+          }
+          
+          .sub-dropdown-menu {
+            transition: all 0.4s ease-in-out;
+          }
+
+          .sub-dropdown-menu-1 {
+            height: 236px;
+          }
+
+          .sub-dropdown-menu-2 {
+            height: 199px;
+          }
+        }
+      }
+    }
+    
+    .dropdown.altre-esperienze-open {
+      .dropdown-btn {
+        border-bottom-color: map-get($map: $da-color, $key: accent);
+
+        p {
+          color: map-get($map: $da-color, $key: accent);
+        }
+
+        .arrow-container {
+          &::before {
+            transform: rotate(-42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+          
+          &::after {
+            transform: rotate(42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        height: 216px;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+        opacity: 1;
+
+        transition: height 0.38s ease-in-out;
+      }
+    }
+
+    .dropdown.informazioni-open {
+      .dropdown-btn {
+        border-bottom-color: map-get($map: $da-color, $key: accent);
+
+        p {
+          color: map-get($map: $da-color, $key: accent);
+        }
+
+        .arrow-container {
+          &::before {
+            transform: rotate(-42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+          
+          &::after {
+            transform: rotate(42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        height: 378px;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+        opacity: 1;
+
+        transition: height 0.38s ease-in-out;
+      }
+    }
+
+    .dropdown.impegni-open {
+      .dropdown-btn {
+        border-bottom-color: map-get($map: $da-color, $key: accent);
+
+        p {
+          color: map-get($map: $da-color, $key: accent);
+        }
+
+        .arrow-container {
+          &::before {
+            transform: rotate(-42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+          
+          &::after {
+            transform: rotate(42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        height: 270px;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+        opacity: 1;
+
+        transition: height 0.38s ease-in-out;
+      }
+    }
+
+    .dropdown.risorse-open {
+      .dropdown-btn {
+        border-bottom-color: map-get($map: $da-color, $key: accent);
+
+        p {
+          color: map-get($map: $da-color, $key: accent);
+        }
+
+        .arrow-container {
+          &::before {
+            transform: rotate(-42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+          
+          &::after {
+            transform: rotate(42.5deg);
+            background-color: map-get($map: $da-color, $key: accent) !important;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        height: 378px;
+        border-bottom: 1px solid map-get($map: $da-color, $key: accent);
+        opacity: 1;
+
+        transition: height 0.38s ease-in-out;
+      }
+    }
+  }
+}
+
+.aside-mobile.active {
+  transform: translateX(0);
+}
+
+.aside-desktop {
+  display: none;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  background-color: map-get($map: $da-color, $key: white);
+  z-index: 140;
+  width: 100%;
+  height: calc(100vh - 40px);
+
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  transform: translateX(-100%);
+  transition: transform 0.45s ease-in-out;
+
+  @include da-breakpoint(tablet) {
+    width: calc(5 * ((100vw - 2 * 7.8125vw - 24px * 11) / 12) + 6 * 24px);
+  }
+
+  @include da-breakpoint(desktop) {
+    width: calc(4 * ((100vw - 2 * 7.4218vw - 28px * 11) / 12) + 5 * 28px);
+  }
+
+  @include da-breakpoint(desktop-large) {
+    width: calc(4 * ((100vw - 2 * ((100vw - 1120px) / 2) - 32px * 11) / 12) + 5 * 32px);
+  }
+
+  padding-inline: rem(32px) rem(49px);
+
+  .heading {
+    @include flexbox($justify-content: space-between);
+    margin-block: rem(47px) rem(47px);
+
+    a {
+      color: rgb(163, 163, 163);
+      font-weight: 700;
+      line-height: 26.4px;
+      font-size: 16px;
+      cursor: pointer;
+
+      @include da-breakpoint(tablet) {
+        line-height: 26.4px;
+        font-size: 16px;
+      }
+
+      @include da-breakpoint(desktop) {
+        line-height: 27px;
+        font-size: 18px;
+      }
+
+      @include da-breakpoint(desktop-large) {
+        line-height: 27px;
+        font-size: 18px;
+      }
+    }
+
+    a:hover {
+      color: map-get($map: $da-color, $key: accent);
+    }
+
+    svg {
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+    }
+
+    svg:hover {
+      path {
+        fill: map-get($map: $da-color, $key: accent);
+      }
+    }
+  }
+
+  .card {
+    position: relative;
+    aspect-ratio: 1 / 1;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      img {
+        position: absolute;
+        inset: 0;
+      }
+
+      img:last-child {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  .card:hover {
+    a {
+      img:last-child {
+        transform: scale(1.1) translate3d(-45%, -40%, 0);
+      }
+    }
+  }
+
+  .big-card {
+    a {
+      img:last-child {
+        width: 25%;
+      }
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(32px);
+
+    margin-block: rem(32px) rem(57px);
+    
+    .card-1 {
+      a {
+        img:last-child {
+          width: 40%;
+        }
+      }
+    }
+
+    .card-2 {
+      a {
+        img:last-child {
+          width: 100%;
+          height: 20%;
+        }
+      }
+    }
+
+    .card-3 {
+      a {
+        img:last-child {
+          width: 40%;
+        }
+      }
+    }
+
+    .card-4 {
+      a {
+        img:last-child {
+          width: 32.5%;
+        }
+      }
+    }
+
+    .card-5 {
+      a {
+        img:last-child {
+          width: 67.5%;
+        }
+      }
+    }
+
+    .card-6 {
+      a {
+        img:last-child {
+          width: 100%;
+          height: 20%;
+        }
+      }
+    }
+  }
+}
+
+.aside-desktop.active {
+  transform: translateX(0);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #161616;
+  z-index: 130;
+  pointer-events: none;
+  opacity: 0;
+}
+
+body.sidebar-open {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  inset: var(--scroll) 0 0;
+
+  .overlay {
+    opacity: 0.85;
+    height: calc(100vh * 100);
+    pointer-events: auto;
+  }
+}
+
+@include da-breakpoint(desktop) {
+  .aside-mobile {
+    display: none;
+  }
+
+  .aside-desktop {
+    display: block;
+  }
+}

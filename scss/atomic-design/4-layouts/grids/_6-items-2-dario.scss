@@ -1,0 +1,36 @@
+@import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/functions/units/units-giuseppe';
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  'six';
+  row-gap: rem(40px);
+
+  @include da-breakpoint(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    'one two'
+    'three four'
+    'five six';
+    column-gap: rem(24px);
+    row-gap: rem(44px);
+  }
+
+  @include da-breakpoint(desktop) {
+    column-gap: rem(28px);
+    row-gap: rem(48px);
+  }
+
+  @include da-breakpoint(desktop-large) {
+    column-gap: rem(32px);
+    row-gap: rem(52px);
+  }
+}

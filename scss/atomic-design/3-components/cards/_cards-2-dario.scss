@@ -1,0 +1,79 @@
+// HTML structure -------------------------------------------------------
+// *** 'n' vuol dire: 1, 2, 3, 4... ***
+
+// .card.card-n {
+//    picture {
+//       source {...}
+//       source {...}
+//       source {...}
+//       img {...}
+//    {
+//    h4.h4 {...}
+//    .content {
+//      h5.h5 {...}
+//      p.p {...}
+//          .
+//          .
+//    }
+//    button.cta {...}
+// }
+
+@import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/functions/units/units-giuseppe';
+
+.card {
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .p + .h5 {
+      margin-top: 1rem;
+
+      @include da-breakpoint(tablet) {
+        margin-top: 0;
+      }
+    }
+
+    @include da-breakpoint(tablet) {
+      margin-top: rem(28px);
+      max-width: max-content;
+      padding-right: rem(24px);
+
+      grid-template-columns: max-content auto;
+      grid-template-areas: 
+      'one two'
+      'three four'
+      'five six';
+      column-gap: rem(24px);
+      position: relative;
+
+      .h5, .p {
+        padding-block: 4px 0;
+      }
+
+      .p::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgb(234, 234, 234);
+      }
+    }
+
+    @include da-breakpoint(desktop) {
+      margin-top: rem(32px);
+    }
+    
+    @include da-breakpoint(desktop-large) {
+      margin-top: rem(36px);
+    }
+  }
+}
