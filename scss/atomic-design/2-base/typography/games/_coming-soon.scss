@@ -153,6 +153,23 @@ a {
     }
 }
 
+aside {
+    p {
+        font-size: rem(16px);
+        font-family: map-get($map: $da-font-family, $key: text);
+        color: hsl(0, 0%, 15%);
+        line-height: 26.4px;
+
+        @include da-breakpoint(desktop) {
+            line-height: 24px;
+        }
+    }
+}
+
 .slider-tab-container.active .slider-tab {
     color: map-get($map: $da-color, $key: dark) !important;
+}
+
+.dropdown-menu .choice a{
+    color: map-get($map: $da-color, $key: dark);
 }
