@@ -12560,6 +12560,410 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul.list,
+ol.list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.dark-section {
+  height: 2.5rem;
+  background-color: rgb(22, 22, 22);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 140;
+  transition: 0.4s cubic-bezier(0.5, 0.25, 0.015, 1);
+  transform: translateY(-100%);
+}
+.dark-section ul {
+  list-style: none;
+  height: inherit;
+  margin-inline: 2rem;
+  min-width: 9.4375rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.5rem;
+}
+.dark-section ul li a {
+  display: block;
+}
+.dark-section ul li a svg {
+  display: block;
+  fill: rgb(163, 163, 163);
+}
+.dark-section ul li a svg.account {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 4px;
+}
+.dark-section ul li a svg.help {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: -5px;
+}
+.dark-section ul li a svg.ea {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 4px;
+  fill: rgb(117, 117, 117);
+}
+.dark-section ul li a svg:hover {
+  fill: rgb(243, 242, 242);
+}
+.dark-section ul li a svg:hover.ea {
+  fill: rgb(163, 163, 163);
+}
+
+.dark-section.show {
+  transform: translateY(0);
+}
+
+.light-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.9rem;
+  height: 3.3125rem;
+  background-color: hsl(0deg, 0%, 100%);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 120;
+  transition: 0.4s cubic-bezier(0.5, 0.25, 0.015, 1);
+}
+.light-section > * {
+  flex: 0 0 auto;
+}
+.light-section .toggle {
+  align-self: center;
+  margin-left: 0.85rem;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.light-section .toggle .dot {
+  height: 2px;
+  width: 20px;
+  border-radius: 4.5px;
+  background-color: black;
+  position: relative;
+}
+.light-section .toggle .dot::before, .light-section .toggle .dot::after {
+  content: "";
+  height: 2px;
+  width: 20px;
+  border-radius: 4.5px;
+  background-color: black;
+  display: block;
+  position: absolute;
+}
+.light-section .toggle .dot::before {
+  transform: translateY(-7px);
+}
+.light-section .toggle .dot::after {
+  transform: translateY(7px);
+}
+.light-section .toggle:hover .dot {
+  background-color: hsl(0deg, 100%, 64%);
+}
+.light-section .toggle:hover .dot::before, .light-section .toggle:hover .dot::after {
+  background-color: hsl(0deg, 100%, 64%);
+}
+.light-section a {
+  display: block;
+  width: 5.625rem;
+  align-self: center;
+}
+.light-section .dropdowns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 20px;
+  margin-left: 1.5rem;
+  display: none;
+}
+.light-section .dropdowns .dropdown {
+  position: relative;
+  color: hsl(0deg, 0%, 9%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.light-section .dropdowns .dropdown .dropdown-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.light-section .dropdowns .dropdown .dropdown-button p {
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  letter-spacing: -0.5px;
+}
+.light-section .dropdowns .dropdown .dropdown-button .arrow {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.light-section .dropdowns .dropdown .dropdown-button .arrow::before, .light-section .dropdowns .dropdown .dropdown-button .arrow::after {
+  content: "";
+  width: 60%;
+  height: 0.5px;
+  background-color: hsl(0deg, 0%, 9%);
+  border-radius: 1px;
+  display: block;
+  position: absolute;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.light-section .dropdowns .dropdown .dropdown-button .arrow::before {
+  transform: translate(-30%) rotate(45deg);
+}
+.light-section .dropdowns .dropdown .dropdown-button .arrow::after {
+  transform: translate(30%) rotate(-45deg);
+}
+.light-section .dropdowns .dropdown .dropdown-menu-wrapper {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+  cursor: pointer;
+  transform: scaleY(0);
+  transform-origin: center top;
+  transition: transform 0.3s cubic-bezier(0.5, 0.25, 0.015, 1);
+}
+.light-section .dropdowns .dropdown .dropdown-menu-wrapper .dropdown-menu {
+  background-color: hsla(0deg, 0%, 100%, 0.95);
+  border-radius: 4px;
+  padding-block: 25px;
+  padding-left: 35px;
+  padding-right: 50px;
+  margin-top: 14px;
+  margin-left: -30px;
+}
+.light-section .dropdowns .dropdown .dropdown-menu-wrapper .dropdown-menu a {
+  text-decoration: none;
+  text-transform: capitalize;
+  line-height: 1rem;
+  color: hsl(0deg, 0%, 52%);
+  font-size: 1rem;
+  width: max-content;
+  transform: translateY(-5px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.4s;
+  transition-delay: 0.1s;
+  transition-timing-function: cubic-bezier(0.5, 0.25, 0.015, 1);
+}
+.light-section .dropdowns .dropdown .dropdown-menu-wrapper .dropdown-menu a + a {
+  margin-top: 1.25rem;
+}
+.light-section .dropdowns .dropdown .dropdown-menu-wrapper .dropdown-menu a:hover {
+  color: hsl(0deg, 100%, 64%);
+  transition: none;
+}
+.light-section .dropdowns .dropdown:first-of-type .dropdown-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding-block: 40px 50px;
+}
+.light-section .dropdowns .dropdown:first-of-type .dropdown-menu h3, .light-section .dropdowns .dropdown:first-of-type .dropdown-menu .h3 {
+  width: max-content;
+  text-transform: uppercase;
+  line-height: 34px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid hsl(0deg, 0%, 70%);
+  transform: translateY(-5px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+  transition-timing-function: cubic(0.5, 0.25, 0.015, 1);
+}
+.light-section .dropdowns .dropdown:first-of-type .dropdown-menu a:first-of-type {
+  margin-top: 1.25rem;
+}
+.light-section .dropdowns .dropdown:hover .dropdown-button p {
+  color: hsl(0deg, 100%, 64%);
+}
+.light-section .dropdowns .dropdown:hover .dropdown-button .arrow::before {
+  transform: translate(-30%) rotate(-45deg);
+  background-color: hsl(0deg, 100%, 64%);
+}
+.light-section .dropdowns .dropdown:hover .dropdown-button .arrow::after {
+  transform: translate(30%) rotate(45deg);
+  background-color: hsl(0deg, 100%, 64%);
+}
+.light-section .dropdowns .dropdown:hover .dropdown-menu-wrapper {
+  pointer-events: auto;
+  transform: scaleY(1);
+}
+.light-section .dropdowns .dropdown:hover .dropdown-menu-wrapper .dropdown-menu h3, .light-section .dropdowns .dropdown:hover .dropdown-menu-wrapper .dropdown-menu .h3 {
+  transform: translateY(0);
+  opacity: 1;
+}
+.light-section .dropdowns .dropdown:hover .dropdown-menu-wrapper .dropdown-menu a {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (min-width: 91rem) {
+  .light-section .dropdowns {
+    gap: 35px;
+  }
+}
+@media (min-width: 20.0625rem) {
+  .light-section a {
+    width: 6.25rem;
+  }
+}
+@media (min-width: 23.5rem) {
+  .light-section a {
+    width: 6.875rem;
+  }
+}
+@media (min-width: 48rem) {
+  .light-section a {
+    width: 12.5rem;
+  }
+}
+@media (min-width: 64rem) {
+  .light-section {
+    gap: 2.1rem;
+    height: 3.5rem;
+  }
+  .light-section .toggle {
+    margin-left: 1.05rem;
+  }
+  .light-section .toggle .dot {
+    height: 4.5px;
+    width: 4.5px;
+    transition: transform 0.3s ease, background-color 0.7s ease;
+  }
+  .light-section .toggle .dot::before, .light-section .toggle .dot::after {
+    height: 4.5px;
+    width: 4.5px;
+    transition: background-color 0.7s ease;
+  }
+  .light-section .toggle .dot::before {
+    transform: translateY(-8px);
+  }
+  .light-section .toggle .dot::after {
+    transform: translateY(8px);
+  }
+  .light-section .toggle:hover .dot {
+    transform: scale(1.4);
+  }
+  .light-section .dropdowns {
+    display: flex;
+  }
+}
+@media (min-width: 91rem) {
+  .light-section {
+    height: 3.75rem;
+  }
+  .light-section .dropdowns {
+    margin-left: 1.75rem;
+    gap: 35px;
+  }
+  .light-section .dropdowns .dropdown .dropdown-menu-wrapper .dropdown-menu {
+    margin-top: 18px;
+  }
+}
+
+.light-section.show-dark {
+  top: 40px;
+}
+
 /*INIZO NAVBAR*/
 /*FINE NAVBAR*/
 /*INIZIO CARD*/

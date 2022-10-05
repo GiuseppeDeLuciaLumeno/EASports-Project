@@ -1,4 +1,8 @@
+@use 'sass:math';
 @import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../atomic-design/2-base/resets/reset-dario';
+
+@import '../../../atomic-design/4-layouts/navbars/navbar-1-dario';
 
 /*INIZO NAVBAR*/ 
 
@@ -402,3 +406,5 @@
 }
 
 /*FINE CARD N°3*/ 
+
+
