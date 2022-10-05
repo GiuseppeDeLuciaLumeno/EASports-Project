@@ -12577,6 +12577,7 @@ textarea.form-control-lg {
 .transformimg {
   display: flex;
   position: absolute;
+  width: 357px;
 }
 
 .img_card {
@@ -12609,6 +12610,44 @@ textarea.form-control-lg {
 .transformimg2 {
   display: flex;
   position: relative;
+}
+
+#card_gio {
+  width: 357px;
+  padding: 0px;
+  margin: 10px 10px 10px 0px;
+}
+#card_gio:hover {
+  -webkit-animation: shadow-drop-2-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: shadow-drop-2-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes shadow-drop-2-br {
+  0% {
+    -webkit-transform: translateZ(0) translateX(0) translateY(0);
+    transform: translateZ(0) translateX(0) translateY(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(50px) translateX(-12px) translateY(-12px);
+    transform: translateZ(50px) translateX(-12px) translateY(-12px);
+    -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes shadow-drop-2-br {
+  0% {
+    -webkit-transform: translateZ(0) translateX(0) translateY(0);
+    transform: translateZ(0) translateX(0) translateY(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(50px) translateX(-12px) translateY(-12px);
+    transform: translateZ(50px) translateX(-12px) translateY(-12px);
+    -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+  }
 }
 
 @media screen and (max-width: 912px) {
@@ -12675,15 +12714,16 @@ textarea.form-control-lg {
   background-color: #36404A;
   width: 100vw;
   height: 1600px;
-  padding-right: 60px;
-  padding-left: 150px;
 }
 
 .piattaforme {
   height: 200px;
   width: 300px;
   padding-top: 100px;
-  padding-left: 620px;
+  padding-left: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .piattaforma_title {
@@ -12846,4 +12886,14 @@ textarea.form-control-lg {
   font-style: oblique;
 }
 
+@media screen and (max-width: 912px) {
+  .paragrafo {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 776px) {
+  .paragrafo {
+    width: 400px;
+  }
+}
 /*FINE CARD N°3*/
