@@ -8,7 +8,7 @@
     background-color: $bg;
 
 
-// container generale
+    // container generale
 
     .container-ea-description {
         display: flex;
@@ -22,7 +22,7 @@
 
 
 
-// sezione descrizione
+        // sezione descrizione
 
         .ea-description {
             width: 52%;
@@ -37,7 +37,7 @@
 
         }
 
-// loghi con link
+        // loghi con link
 
         .ea-social {
             display: flex;
@@ -79,6 +79,7 @@
 
 
     }
+
     // contenitore card giochi con giochi
 
     .container-game {
@@ -152,7 +153,8 @@
         }
 
     }
-// sezione video
+
+    // sezione video
     .video-section {
         width: 100%;
         max-width: 100%;
@@ -200,7 +202,8 @@
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
-            .svg{
+
+            .svg {
                 width: 40px;
                 height: 40px;
             }
@@ -232,7 +235,7 @@
 
     // sezione news-letter
 
-    .news-letter-section{
+    .news-letter-section {
         max-width: 100%;
         width: 100%;
         height: 100px;
@@ -245,47 +248,225 @@
         .container-form {
             width: 85%;
             display: flex;
+            padding-right: 28px;
 
         }
-        .description-form{
+
+        .description-form {
             width: 50%;
             height: 200px;
             color: #f3f3f3;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            margin-right: 28px;
 
-            h2{
+
+
+
+            h2 {
                 font-size: 40px;
             }
-            p{
+
+            p {
                 padding-top: 20px;
                 line-height: 25px;
-                font-size: 18px;         }
+                font-size: 18px;
+            }
 
         }
-        .form{
-            width: 50%;
 
-            input{
+        .form {
+            width: 50%;
+            height: 300px;
+
+            display: flex;
+            flex-direction: column;
+            .input-email{
+                width: 100%;
+                height: 60px;
+            }
+
+
+
+            input {
                 font-size: 14px;
             }
-            #email{
-                width: 90%;
+
+            #email {
+                width: 100%;
                 height: 60px;
                 border: 2px solid white;
-           
 
-                &::placeholder{
+
+
+
+
+            }
+
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding-top:30px ;
+
+
+                width: 100%;
+                height: 70px;
+
+
+
+                #date {
+                    width: 48%;
+                    height: 60px;
+                    border: 2px solid white;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    #date-of-birth {
+                        border: none;
+                        padding-left: 30px;
+                    }
+
+
+
+                }
+
+                span {
+                    color: #f3f3f3;
+
+
+                }
+
+            }
+
+
+            #state {
+                width: 48%;
+                height: 60px;
+                border: 2px solid white;
+                display: flex;
+                align-items: center;
+
+
+                &:hover {
+                    width: 49%;
+                    height: 65px;
+
+
+                }
+
+                .span-state {
                     padding-left: 30px;
+                    display: flex;
+                    flex-direction: column;
+
+
+                    .title-state {
+                        font-size: 14px;
+                        color: rgb(163, 163, 163);
+
+
+                    }
+
+                    .StatiUniti {
+                        font-size: 18px;
+                    }
                 }
 
 
 
+
+
+            }
+
+            .legal-optin {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 60px;
+
+
+
+
+
+
+            }
+
+            .input-checkbox {
+                width: 5%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                svg {
+                    fill: #f3f3f3;
+                    width: 20px;
+                }
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+            .checkbox-label {
+                width: 100%;
+                height: 100%;
+                color: #f3f3f3;
+
+                p {
+                    color: #f3f3f3;
+                    font-size: 18px;
+                    line-height: 23px;
+
+                    a {
+                        text-decoration: none;
+                        color: rgb(255, 71, 71);
+                    }
+                }
+
+
+            }
+
+            .button {
+                width: 100%;
+                height: 90px;
+                display: flex;
+                align-items: flex-end;
+                align-content: flex-end;
+
+
+
+
+
+                input[type=submit] {
+                    background-color: rgb(255, 71, 71);
+                    width: 136px;
+                    height: 56px;
+                    font-size: 18px;
+                    color: #f3f3f3;
+                    border: none;
+                    border-radius: 3px;
+
+                }
+
+
             }
 
         }
-
     }
+
+
 
 }
