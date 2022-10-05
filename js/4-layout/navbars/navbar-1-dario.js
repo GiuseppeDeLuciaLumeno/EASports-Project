@@ -12,8 +12,9 @@ document.addEventListener('scroll', () => {
   if (currentScroll > lastScroll) {
     darkSection.classList.remove("show");
     lightSection.classList.remove("show-dark");
+
   }
-  
+
   if (currentScroll < lastScroll) {
     darkSection.classList.add("show");
     lightSection.classList.add("show-dark");
@@ -36,7 +37,7 @@ document.addEventListener("click", e => {
   }
 })
 
-document.addEventListener("click", e => {
+ document.addEventListener("click", e => {
   if (asideMobile.classList.contains("active")) {
     if (e.target.closest(".close-btn") || e.target.closest(".overlay")) {
       body.classList.remove("sidebar-open");

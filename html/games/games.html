@@ -37,7 +37,7 @@
 
     <header>
         <form action=" #" method="get">
-            <div class="black-block">
+            <div class="black-block black-block-show">
                 <i class="bi bi-person icon-login" id="person-icon"></i>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 17" id="open-modal">
                     <path
@@ -129,165 +129,164 @@
                     </div>
                 </div>
             </section>
-
-
-
         </form>
+    </header>
 
-        <nav class="lower-header">
 
-            <div class="three-dots-container">
-                <i class="bi bi-three-dots-vertical"></i>
-            </div>
 
-            <div class="burger">
-                <div class="top-bar"></div>
-                <div class="mid-bar"></div>
-                <div class="low-bar"></div>
-            </div>
 
-            <!-- Modal White -->
-            <aside class="modal-wrapper d-flex flex-column align-items-center">
-                <div class="all-games-block d-flex justify-content-between">
-                    <p>Tutti i giochi</p>
-                    <svg id="icon-x" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16">
-                        <path d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
+    <nav class="lower-header lower-header-show">
+
+        <div class="three-dots-container">
+            <i class="bi bi-three-dots-vertical"></i>
+        </div>
+
+        <div class="burger">
+            <div class="top-bar"></div>
+            <div class="mid-bar"></div>
+            <div class="low-bar"></div>
+        </div>
+
+        <!-- Modal White -->
+        <aside class="modal-wrapper d-flex flex-column align-items-center">
+            <div class="all-games-block d-flex justify-content-between">
+                <p>Tutti i giochi</p>
+                <svg id="icon-x" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16">
+                    <path d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
                             0.3L8,6.6l-4-4 C3.5,2.1,2.7,1.9,2.3,2.3C1.9,2.7,2.1,3.5,2.6,4.1l4,
                             4l-3.9,3.9c-0.6,0.6-0.7,1.3-0.3,1.7c0.4,0.4,1.2,0.3,1.7-0.3L8,9.4l4,
                             4 c0.6,0.6,1.3,0.7,1.7,0.3C14.1,13.3,13.9,12.5,13.4,11.9z"></path>
-                    </svg>
-
-                </div>
-
-                <a href="#">
-                    <div class="ea-play-card">
-                        <img src="https://media.contentapi.ea.com/content/dam/gin/images/2021/04/ea-play-16x9-png.adapt.crop1x1.767w."
-                            alt="Ea-play" width="339px" height="350px">
-                        <img src="https://media.contentapi.ea.com/content/dam/gin/images/2021/04/ea-play-mono-logo-svg.svg"
-                            alt="logo Ea-play" width="100px" id="ea-play-logo">
-                    </div>
-                </a>
-                <!-- Set gap by Boostrap custom variable -->
-                <section class="card-wrapper row g-10">
-                    <!-- Fifa 23 -->
-                    <div class="min-card col-lg-6">
-                        <a href="#">
-                            <div>
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/images/2022/07/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767w.jpg"
-                                    alt="Fifa23-card" id="hover-min-card">
-
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/fifa23-logo-white-stacked.svg"
-                                    alt="Fifa23-logo-card" width="65px" id="min-logo">
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- FI 22 -->
-                    <div class="min-card col-lg-6">
-                        <a href="#">
-                            <div>
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/images/2022/05/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767w.png"
-                                    alt="Fi22-card" id="hover-min-card">
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f122-gamebox-logo.png"
-                                    alt="Fi22-logo-card" width="75px" id="min-logo">
-                            </div>
-                        </a>
-                    </div>
-
-                    <!--Madden 23-->
-                    <div class="min-card col-lg-6">
-                        <a href="#">
-                            <div>
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/images/2022/05/madden-23-keyart.jpg.adapt.crop1x1.767w.jpg"
-                                    alt="Madden-card" id="hover-min-card">
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/m23-gamebox-logo.svg"
-                                    alt="Madden-logo-card" width="65px" id="min-logo">
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Apex -->
-                    <div class="min-card col-lg-6">
-                        <a href="#">
-                            <div>
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767w.jpg"
-                                    alt="Apex-card" id="hover-min-card">
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/apex-legends-mono-logo.svg"
-                                    alt="AApex-logo-card" width="65px" id="min-logo">
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Batterfield-->
-                    <div class="min-card col-lg-6">
-                        <a href="#">
-                            <div>
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/images/2021/06/battlefield-2042-key-art.jpg.adapt.crop1x1.767w.jpg"
-                                    alt="Batterfield" id="hover-min-card">
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/battlefield-2042-mono-logo-svg.svg"
-                                    alt="Batterfield-logo-card" width="65px" id="min-logo">
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- The sims4 -->
-                    <div class="min-card col-lg-6">
-                        <a href="#">
-                            <div>
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767w.jpg"
-                                    alt="The Sims4-card" id="hover-min-card">
-                                <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/the-sims-4-mono-logo.png"
-                                    alt="The sims 4-logo-card" width="65px" id="min-logo">
-                            </div>
-                        </a>
-                    </div>
-                </section>
-            </aside>
-
-            <img src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg"
-                alt="Electronic Arts">
-
-            <div class="container-nav-menu">
-
-                <div class="ea-dropdown">
-                    <p>Giochi</p>
-                    <div class="dropdown-icon-container">
-                        <div class="v-icon"></div>
-                    </div>
-                </div>
-
-                <div class="ea-dropdown">
-                    <p>Altre esperienze</p>
-                    <div class="dropdown-icon-container">
-                        <div class="v-icon"></div>
-                    </div>
-                </div>
-
-                <div class="ea-dropdown">
-                    <p>Informazioni</p>
-                    <div class="dropdown-icon-container">
-                        <div class="v-icon"></div>
-                    </div>
-                </div>
-
-                <div class="ea-dropdown">
-                    <p>Impegni</p>
-                    <div class="dropdown-icon-container">
-                        <div class="v-icon"></div>
-                    </div>
-                </div>
-
-                <div class="ea-dropdown">
-                    <p>Risorse</p>
-                    <div class="dropdown-icon-container">
-                        <div class="v-icon"></div>
-                    </div>
-                </div>
+                </svg>
 
             </div>
-        </nav>
-    </header>
 
+            <a href="#">
+                <div class="ea-play-card">
+                    <img src="https://media.contentapi.ea.com/content/dam/gin/images/2021/04/ea-play-16x9-png.adapt.crop1x1.767w."
+                        alt="Ea-play" width="339px" height="350px">
+                    <img src="https://media.contentapi.ea.com/content/dam/gin/images/2021/04/ea-play-mono-logo-svg.svg"
+                        alt="logo Ea-play" width="100px" id="ea-play-logo">
+                </div>
+            </a>
+            <!-- Set gap by Boostrap custom variable -->
+            <section class="card-wrapper row g-10">
+                <!-- Fifa 23 -->
+                <div class="min-card col-lg-6">
+                    <a href="#">
+                        <div>
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/images/2022/07/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767w.jpg"
+                                alt="Fifa23-card" id="hover-min-card">
+
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/fifa23-logo-white-stacked.svg"
+                                alt="Fifa23-logo-card" width="65px" id="min-logo">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- FI 22 -->
+                <div class="min-card col-lg-6">
+                    <a href="#">
+                        <div>
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/images/2022/05/1-1-gamebox-f122-keyart-1.png.adapt.crop1x1.767w.png"
+                                alt="Fi22-card" id="hover-min-card">
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f122-gamebox-logo.png"
+                                alt="Fi22-logo-card" width="75px" id="min-logo">
+                        </div>
+                    </a>
+                </div>
+
+                <!--Madden 23-->
+                <div class="min-card col-lg-6">
+                    <a href="#">
+                        <div>
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/images/2022/05/madden-23-keyart.jpg.adapt.crop1x1.767w.jpg"
+                                alt="Madden-card" id="hover-min-card">
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/m23-gamebox-logo.svg"
+                                alt="Madden-logo-card" width="65px" id="min-logo">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Apex -->
+                <div class="min-card col-lg-6">
+                    <a href="#">
+                        <div>
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767w.jpg"
+                                alt="Apex-card" id="hover-min-card">
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/apex-legends-mono-logo.svg"
+                                alt="AApex-logo-card" width="65px" id="min-logo">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Batterfield-->
+                <div class="min-card col-lg-6">
+                    <a href="#">
+                        <div>
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/images/2021/06/battlefield-2042-key-art.jpg.adapt.crop1x1.767w.jpg"
+                                alt="Batterfield" id="hover-min-card">
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/battlefield-2042-mono-logo-svg.svg"
+                                alt="Batterfield-logo-card" width="65px" id="min-logo">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- The sims4 -->
+                <div class="min-card col-lg-6">
+                    <a href="#">
+                        <div>
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767w.jpg"
+                                alt="The Sims4-card" id="hover-min-card">
+                            <img src="https://media.contentapi.ea.com/content/dam/gin/common/logos/the-sims-4-mono-logo.png"
+                                alt="The sims 4-logo-card" width="65px" id="min-logo">
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </aside>
+
+        <img src="https://media.contentapi.ea.com/content/dam/eacom/common/ea-wordmark-network-nav-coral.svg"
+            alt="Electronic Arts">
+
+        <div class="container-nav-menu">
+
+            <div class="ea-dropdown">
+                <p>Giochi</p>
+                <div class="dropdown-icon-container">
+                    <div class="v-icon"></div>
+                </div>
+            </div>
+
+            <div class="ea-dropdown">
+                <p>Altre esperienze</p>
+                <div class="dropdown-icon-container">
+                    <div class="v-icon"></div>
+                </div>
+            </div>
+
+            <div class="ea-dropdown">
+                <p>Informazioni</p>
+                <div class="dropdown-icon-container">
+                    <div class="v-icon"></div>
+                </div>
+            </div>
+
+            <div class="ea-dropdown">
+                <p>Impegni</p>
+                <div class="dropdown-icon-container">
+                    <div class="v-icon"></div>
+                </div>
+            </div>
+
+            <div class="ea-dropdown">
+                <p>Risorse</p>
+                <div class="dropdown-icon-container">
+                    <div class="v-icon"></div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
 
     <main>
         <!-- Main Video -->
@@ -468,8 +467,8 @@
                     </a>
                 </div>
 
-                   <!-- NHL 22 -->
-                   <div id="block-position">
+                <!-- NHL 22 -->
+                <div id="block-position">
                     <a href="#">
                         <div class="the-sims4-card" id="nhl-card">
                             <img class="resizer-responsive"

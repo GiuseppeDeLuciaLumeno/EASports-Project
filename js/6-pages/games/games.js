@@ -11,15 +11,25 @@ const html = document.querySelector("body");
 const cardsIndex = document.querySelector(".cards-wrapper")
 
 
-//Aside Menu activate with dots
 
-  asideShow.addEventListener("click", () => {
-    let bar = window.scrollY || document.documentElement.scrollTop;
-    asideShow.classList.toggle("active");
-    blackBackground.classList.toggle("active");
-    html.classList.add("overflow-lock-scroll");
-    cardsIndex.classList.add("z-index-1");
+//Aside Menu activate with dots
+let currentScroll;
+let latestScroll;
+
+  asideShow.addEventListener("click", (e) => {
+    currentScroll = window.scrollY;
+    if (!asidehide.classList.contains("active")) {     //SE L'ASIDE NON E' DIVERSO DAL CONTENERE ACTIVE
+     document.documentElement.style.setProperty("--scroll", -currentScroll + "px");//to set Body scroll To zero
+     html.classList.add("overflow-lock-scroll");
+     asideShow.classList.toggle("active");
+     blackBackground.classList.toggle("active");
+     cardsIndex.classList.add("z-index-1");
+
+    latestScroll = currentScroll;
+  }
 });
+
+
 
 
 //When scroll is rather or lower than 100px
@@ -35,11 +45,13 @@ const cardsIndex = document.querySelector(".cards-wrapper")
 
 
 //Aside Menu Disactivate with Icon-X
+
 asidehide.addEventListener("click", () => {
+   html.classList.remove("overflow-lock-scroll");
    asideShow.classList.remove("active");
    blackBackground.classList.remove("active");
-   html.classList.remove("overflow-lock-scroll");
    cardsIndex.classList.remove("z-index-1");
+   document.documentElement.scrollTop = latestScroll;
 });
 
 
@@ -56,6 +68,7 @@ window.addEventListener("keydown", keypress);
 
 //Aside Menu Disactivate by clicking anywhere else
 window.addEventListener("mouseup", (event) => {
+  document.documentElement.style.setProperty("--scroll", -currentScroll + "px"); //FAR RICORDARE LO SCROLL A JAVA; MA SERVONO ANCHE LE ULTIME DUE
   if (event.target === body) {
     asideShow.classList.remove("active");
     blackBackground.classList.remove("active");
@@ -64,9 +77,11 @@ window.addEventListener("mouseup", (event) => {
     firstModal.classList.remove("active");
     body.classList.remove("active");
     html.classList.remove("overflow-lock-scroll");
+    document.documentElement.scrollTop = latestScroll;
+    lastScroll = currentScroll
   }
 
-  else if (event.target === blackBackground) {
+   else if (event.target === blackBackground) {
     asideShow.classList.remove("active");
     blackBackground.classList.remove("active");
     burger.classList.remove("active");
@@ -81,6 +96,13 @@ window.addEventListener("mouseup", (event) => {
   }
 
 });
+
+//RICORDA  LO SCROLL SUL CLICK ANYWHERE ELSE PER I MODAL
+
+
+
+
+
 
 
 //Aside Menu activate with burger menu
@@ -97,15 +119,23 @@ asidehide.addEventListener("click", () => {
 });
 
 
-//First Modal Person Icon
+
 const firstModal = document.getElementById("fixed-first-modal");
 const firstIconX = document.getElementById("icon-x-modal");
-personIcon.addEventListener("click", () => {
-firstModal.classList.toggle("active");
-html.classList.add("overflow-lock-scroll");
-body.classList.add("active");
 
+//First Modal OPEN
+  personIcon.addEventListener("click", (e) => {
+    currentScroll = window.scrollY;
+    if (!asidehide.classList.contains("active")) {     //SE L'ASIDE NON E' DIVERSO DAL CONTENERE ACTIVE
+     document.documentElement.style.setProperty("--scroll", -currentScroll + "px");//to set Body scroll To zero
+     firstModal.classList.toggle("active");
+     html.classList.add("overflow-lock-scroll");
+     body.classList.add("active");
+
+     latestScroll = currentScroll;
+  }
 });
+
 
 //close First modal
 firstIconX.addEventListener("click", () => {
@@ -113,30 +143,33 @@ firstIconX.addEventListener("click", () => {
   blackBackground.classList.remove("active");
   html.classList.remove("overflow-lock-scroll");
   body.classList.remove("active");
+  document.documentElement.scrollTop = latestScroll;
 })
 
 
-//Second-Modal Interrogative point icon
+//Second-Modal OPEN
 const interrogative = document.getElementById("open-modal");
 const myModal = document.querySelector(".second-modal-wrapper");
 const iconX = document.getElementById("icon-x-second-modal");
 
-interrogative.addEventListener("click", () => {
-  myModal.classList.toggle("active");
-  firstModal.classList.remove("active");
-  html.classList.add("overflow-lock-scroll");
-  body.classList.add("active");
+interrogative.addEventListener("click", (e) => {
+  currentScroll = window.scrollY;
+  if (!asidehide.classList.contains("active")) {
+    document.documentElement.style.setProperty("--scroll", -currentScroll + "px");
+    myModal.classList.toggle("active");
+    firstModal.classList.remove("active");
+    html.classList.add("overflow-lock-scroll");
+    body.classList.add("active");
+    lastScroll = currentScroll;
+    console.log(lastScroll)
+  }
 });
 
-//Second Modal close
+//Close second Modal
 iconX.addEventListener("click", () => {
   myModal.classList.remove("active");
   html.classList.remove("overflow-lock-scroll");
   body.classList.remove("active");
+  document.documentElement.scrollTop = latestScroll;
 })
-
-
-
-
-
 
