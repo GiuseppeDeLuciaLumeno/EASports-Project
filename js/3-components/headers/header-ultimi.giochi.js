@@ -21,7 +21,8 @@ window.addEventListener("scroll", () =>{
 
 let blackBlock = document.querySelector(".black-block");
 let whiteBlock = document.querySelector(".lower-header");
-let lastScrollTop = 0;
+
+let lastScrollTop = 0; //SITUAZIONE DI PARTENZA
 
 document.addEventListener("scroll", () => {
   const currentScroll = window.scrollY || document.documentElement.scrollTop;

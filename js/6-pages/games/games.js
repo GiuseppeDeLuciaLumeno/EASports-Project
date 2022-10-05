@@ -68,7 +68,9 @@ window.addEventListener("keydown", keypress);
 
 //Aside Menu Disactivate by clicking anywhere else
 window.addEventListener("mouseup", (event) => {
-  document.documentElement.style.setProperty("--scroll", -currentScroll + "px"); //FAR RICORDARE LO SCROLL A JAVA; MA SERVONO ANCHE LE ULTIME DUE
+  //FAR RICORDARE LO SCROLL A JAVA; MA SERVONO ANCHE LE ULTIME DUE
+  document.documentElement.style.setProperty("--scroll", -currentScroll + "px");
+
   if (event.target === body) {
     asideShow.classList.remove("active");
     blackBackground.classList.remove("active");
@@ -96,12 +98,6 @@ window.addEventListener("mouseup", (event) => {
   }
 
 });
-
-//RICORDA  LO SCROLL SUL CLICK ANYWHERE ELSE PER I MODAL
-
-
-
-
 
 
 
