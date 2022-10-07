@@ -182,12 +182,18 @@
   width: 100%;
   height: 60px;
   border: 2px solid white;
+  padding-left: 30px;
+  border-radius: 3px;
+}
+* .news-letter-section .form #email:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 * .news-letter-section .form .form-row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 30px;
+  margin-top: 30px;
   width: 100%;
   height: 70px;
 }
@@ -198,6 +204,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+* .news-letter-section .form .form-row #date:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 * .news-letter-section .form .form-row #date #date-of-birth {
   border: none;
@@ -214,8 +224,8 @@
   align-items: center;
 }
 * .news-letter-section .form #state:hover {
-  width: 49%;
-  height: 65px;
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 * .news-letter-section .form #state .span-state {
   padding-left: 30px;
@@ -234,7 +244,7 @@
   height: auto;
   display: flex;
   justify-content: space-between;
-  padding-top: 60px;
+  margin-top: 60px;
 }
 * .news-letter-section .form .input-checkbox {
   width: 5%;
@@ -267,6 +277,7 @@
   display: flex;
   align-items: flex-end;
   align-content: flex-end;
+  margin-top: 30px;
 }
 * .news-letter-section .form .button input[type=submit] {
   background-color: rgb(255, 71, 71);
@@ -276,4 +287,8 @@
   color: #f3f3f3;
   border: none;
   border-radius: 3px;
+}
+* .news-letter-section .form .button input[type=submit]:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
