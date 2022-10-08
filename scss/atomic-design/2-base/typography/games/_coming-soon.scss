@@ -1,4 +1,8 @@
 // h3 to be used as SECTIONS' TITLE -------------------------------------------------------
+.light-section {
+    font-family: map-get($map: $da-font-family, $key: text);
+}
+
 .h3 {
     font-family: map-get($map: $da-font-family, $key: heading);
     color: map-get($map: $da-color, $key: dark);
