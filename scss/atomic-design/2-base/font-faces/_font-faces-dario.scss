@@ -3,12 +3,22 @@
 //import fonts (file presents in assets)
 @font-face {
   font-family: ElectronicArtsDisplay;
-  src: url(../../assets/fonts/Electronic_Arts_Display.otf);
+  src: url(../../../../assets/fonts/Electronic_Arts_Display.otf);
 }
 
 @font-face {
   font-family: ElectronicArtsText;
-  src: url(../../assets/fonts/Electronic_Arts_Text.otf);
+  src: url(../../../../assets/fonts/Electronic_Arts_Text.otf);
+}
+
+@font-face {
+  font-family: open-sans;
+  src: url(../../../../assets/fonts/OpenSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: oswald;
+  src: url(../../../../assets/fonts/Oswald-VariableFont_wght.ttf);
 }
 
 // dario - fine ---------------------------------------------------------------------------------------------------

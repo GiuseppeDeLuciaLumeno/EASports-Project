@@ -173,3 +173,25 @@ aside {
 .dropdown-menu .choice a{
     color: map-get($map: $da-color, $key: dark);
 }
+
+p.navbar-button {
+    font-family: map-get($map: $da-font-family, $key: navbar-text);
+    color: rgb(243, 243, 243);
+    font-size: 16px;
+    line-height: 21.6px;
+}
+
+p.navbar-footer {
+    font-family: map-get($map: $da-font-family, $key: navbar-text);
+    color: rgb(243, 243, 243);
+    font-size: 14px;
+    line-height: 18.9px;
+}
+
+h6.navbar-heading {
+    font-family: map-get($map: $da-font-family, $key: navbar-heading);
+    color: rgb(243, 243, 243);
+    font-size: 18px;
+    line-height: 29.7px;
+    letter-spacing: 0.72px;
+}
