@@ -61,7 +61,9 @@ document.addEventListener("click", e => {
       darkSection.querySelector(".dropdown-window").classList.add("help-open");
       latestScroll = currentScroll;
     } else return
-  } else if (darkSection.classList.contains("open")) {
+  } 
+  
+  else if (darkSection.classList.contains("open")) {
     if (e.target.closest(".dark-section") == null || e.target.closest("svg.close-x")) {
       document.removeEventListener("scroll", hideShowNavbar)
       body.classList.remove("navbar-open");
@@ -70,7 +72,9 @@ document.addEventListener("click", e => {
       darkSection.querySelector(".dropdown-window").classList.remove("help-open");
       document.documentElement.scrollTop = latestScroll;
       setTimeout(() => document.addEventListener("scroll", hideShowNavbar), 501)
-    } else if (e.target.closest("svg.account")) {
+    } 
+    
+    else if (e.target.closest("svg.account")) {
       if (darkSection.querySelector(".dropdown-window").classList.contains("account-open")) {
         document.removeEventListener("scroll", hideShowNavbar)
         body.classList.remove("navbar-open");

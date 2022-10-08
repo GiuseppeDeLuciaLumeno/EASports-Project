@@ -7,6 +7,333 @@
 @import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
 @import '../../1-abstracts/functions/units/units-giuseppe';
 
+.dark-section {
+  height: rem(40px);
+  overflow: hidden;
+  background-color: rgb(22 22 22);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 160;
+
+  transition: transform 0.4s cubic-bezier(0.5, 0.25, 0.015, 1), height 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
+  transform: translateY(-40px);
+
+  ul {
+    list-style: none;
+
+    height: 40px;
+    margin-inline: rem(32px);
+    min-width: rem(calc(215px - (32px * 2)));
+
+    @include flexbox($justify-content: flex-end);
+    gap: rem(40px);
+
+    li {
+
+      a {
+        display: block;
+        cursor: pointer;
+
+        svg {
+          display: block;
+          fill: rgb(163, 163, 163);
+          
+          &.account {
+            width: rem(18px);
+            height: rem(18px);
+            margin-right: 4px;
+          }
+
+          &.help {
+            width: rem(18px);
+            height: rem(18px);
+            margin-right: -5px;
+          }
+
+          &.ea {
+            width: rem(32px);
+            height: rem(32px);
+            margin-right: 4px;
+            fill: rgb(117, 117, 117);
+          }
+
+          &:hover {
+            fill: rgb(243, 242, 242);
+
+            &.ea {
+            fill: rgb(163, 163, 163);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-window {
+    height: calc(100% - 40px);
+    overflow: hidden;
+    position: relative;
+
+    svg.close-x {
+      position: absolute;
+      z-index: 1;
+      top: 43px;
+      right: 33px;
+      width: 13px;
+      height: 13px;
+
+      cursor: pointer;
+
+      path {
+        fill: rgb(243, 242, 242);
+      }
+    }
+
+    .account-wrapper {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+
+      @include flexbox;
+
+      pointer-events: auto;
+      opacity: 0;
+      transform: translateY(0);
+      transition: opacity 0.5s cubic-bezier(0.5, 0.25, 0.015, 1), transform 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
+
+      .buttons-wrapper {
+        padding-inline: 7.5vw;
+
+        flex-grow: 1;
+        @include flexbox;
+
+        @include da-breakpoint(tablet) {
+          padding-inline: 7.8125vw;
+        }
+        
+        @include da-breakpoint(desktop) {
+          padding-inline: 7.4218vw;
+        }
+        
+        @include da-breakpoint(desktop-large) {
+          padding-inline: calc((100vw - 1120px) / 2);
+        }
+
+        .flex-container {
+          width: 100%;
+          max-width: 272px;
+          margin-block: 16px;
+
+          @include flexbox(column, flex-start, stretch);
+          gap: 16px;
+
+
+          @media (min-width: 544px) {
+            max-width: 640px;
+            margin-block: 24px;
+            @include flexbox(row, center, center);
+            gap: 24px;
+          }
+
+          @include da-breakpoint(desktop) {
+            max-width: 560px;
+            gap: 32px;
+          }
+
+          a {
+            @include flexbox(row, flex-start);
+            gap: 8px;
+            cursor: pointer;
+
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+
+            @media (min-width: 544px) {
+              flex-grow: 1;
+              flex-basis: 100%;
+            }
+
+            @include da-breakpoint(desktop) {
+              @include flexbox(column, flex-start, stretch);
+            }
+
+            img {
+              width: 36px;
+              height: 36px;
+
+              @include da-breakpoint(desktop) {
+                align-self: center;
+              }
+            }
+
+            p {
+              flex-grow: 1;
+
+              @include da-breakpoint(desktop) {
+                text-align: center;
+              }
+            }
+          }
+
+          a:hover {
+            transform: translateY(-5px);
+            transition: transform 0.1s ease-in-out;
+          }
+        }
+      }
+    }
+    
+    .help-wrapper {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+
+      @include flexbox;
+
+      pointer-events: auto;
+      opacity: 0;
+      transform: translateY(0);
+      transition: opacity 0.5s cubic-bezier(0.5, 0.25, 0.015, 1), transform 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
+
+      .buttons-wrapper {
+        flex-grow: 1;
+        @include flexbox(column, flex-start, center);
+        padding-inline: 7.5vw;
+        padding-block: 2rem 1rem;
+
+        @include da-breakpoint(tablet) {
+          padding-inline: 7.8125vw;
+        }
+        
+        @include da-breakpoint(desktop) {
+          padding-inline: 7.4218vw;
+        }
+        
+        @include da-breakpoint(desktop-large) {
+          padding-inline: calc((100vw - 1120px) / 2);
+        }
+
+        h6 {
+          align-self: stretch;
+          text-align: center;
+          margin-block: 0;
+        }
+
+        .navbar-grid-container {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-areas: 
+          'one'
+          'two'
+          'three'
+          'four';
+          row-gap: 1rem;
+
+          margin-block: 1rem;
+          max-width: 272px;
+
+          @media (min-width: 544px) {
+            margin-block: 1.5rem;
+            max-width: 640px;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            'one two'
+            'three four';
+            row-gap: 1.5rem;
+            column-gap: 2rem;
+          }
+
+          @include da-breakpoint(desktop) {
+            max-width: 560px;
+          }
+
+          @include da-breakpoint(desktop-large) {
+            column-gap: 48px;
+          }
+
+          a {
+            @include flexbox(row, flex-start, center);
+            gap: 8px;
+
+            @include da-breakpoint(desktop) {
+              @include flexbox(column, flex-start, center)
+            }
+
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+
+            img {
+              width: 36px;
+              height: 36px;
+            }
+
+            p {
+              flex-grow: 1;
+            }
+          }
+
+          a:hover {
+            transform: translateY(-5px);
+            transition: transform 0.1s ease-in-out;
+          }
+        }
+
+        p.navbar-footer {
+          align-self: stretch;
+          text-align: center;
+
+          a {
+            color: rgb(255, 30, 60);
+          }
+        }
+      }
+    }
+  }
+}
+.dark-section.show {
+  transform: translateY(0);
+}
+.dark-section.open {
+  height: 440px;
+  background-color: #101010;
+
+  .dropdown-window.account-open {
+    .account-wrapper {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .help-wrapper {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+  }
+
+  .dropdown-window.help-open {
+    .account-wrapper {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+    
+    .help-wrapper {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+body.navbar-open {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  inset: var(--scroll) 0 0;
+}
+
 .light-section {
   @include flexbox($justify-content: flex-start, $align-items: stretch);
   gap: 0.9rem;
