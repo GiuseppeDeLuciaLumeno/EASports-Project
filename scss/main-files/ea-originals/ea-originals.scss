@@ -6,6 +6,18 @@
     font-family: 'DM Sans', sans-serif;
     margin: 0;
     background-color: $bg ;
+    // main con video
+    .video-main{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        video{
+            width: 100%;
+            height: auto;
+
+        }
+        
+    }
 
 
 
@@ -453,6 +465,9 @@
 
 
             }
+
+
+
 
             .button {
                 width: 100%;
