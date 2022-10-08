@@ -137,9 +137,11 @@
   }
 
   .dropdown-window {
-    height: calc(100% - 40px);
+    height: 0;
     overflow: hidden;
     position: relative;
+
+    transition: height 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
 
     svg.close-x {
       position: absolute;
@@ -157,11 +159,15 @@
     }
 
     .account-wrapper {
-      opacity: 0;
       position: absolute;
       inset: 0;
 
       @include flexbox;
+
+      pointer-events: auto;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: opacity 0.5s cubic-bezier(0.5, 0.25, 0.015, 1), transform 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
 
       .buttons-wrapper {
         padding-inline: 7.5vw;
@@ -205,6 +211,10 @@
           a {
             @include flexbox(row, flex-start);
             gap: 8px;
+            cursor: pointer;
+
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
 
             @media (min-width: 544px) {
               flex-grow: 1;
@@ -232,16 +242,120 @@
               }
             }
           }
+
+          a:hover {
+            transform: translateY(-5px);
+            transition: transform 0.1s ease-in-out;
+          }
         }
       }
     }
     
     .help-wrapper {
-      background-color: blue;
       position: absolute;
       inset: 0;
 
+      @include flexbox;
+
+      pointer-events: auto;
       opacity: 0;
+      transform: translateY(-100%);
+      transition: opacity 0.5s cubic-bezier(0.5, 0.25, 0.015, 1), transform 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
+
+      .buttons-wrapper {
+        flex-grow: 1;
+        @include flexbox(column, flex-start, center);
+        padding-inline: 7.5vw;
+        padding-block: 2rem 1rem;
+
+        @include da-breakpoint(tablet) {
+          padding-inline: 7.8125vw;
+        }
+        
+        @include da-breakpoint(desktop) {
+          padding-inline: 7.4218vw;
+        }
+        
+        @include da-breakpoint(desktop-large) {
+          padding-inline: calc((100vw - 1120px) / 2);
+        }
+
+        h6 {
+          align-self: stretch;
+          text-align: center;
+          margin-block: 0;
+        }
+
+        .navbar-grid-container {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-areas: 
+          'one'
+          'two'
+          'three'
+          'four';
+          row-gap: 1rem;
+
+          margin-block: 1rem;
+          max-width: 272px;
+
+          @media (min-width: 544px) {
+            margin-block: 1.5rem;
+            max-width: 640px;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            'one two'
+            'three four';
+            row-gap: 1.5rem;
+            column-gap: 2rem;
+          }
+
+          @include da-breakpoint(desktop) {
+            max-width: 560px;
+          }
+
+          @include da-breakpoint(desktop-large) {
+            column-gap: 48px;
+          }
+
+          a {
+            @include flexbox(row, flex-start, center);
+            gap: 8px;
+
+            @include da-breakpoint(desktop) {
+              @include flexbox(column, flex-start, center)
+            }
+
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+
+            img {
+              width: 36px;
+              height: 36px;
+            }
+
+            p {
+              flex-grow: 1;
+            }
+          }
+
+          a:hover {
+            transform: translateY(-5px);
+            transition: transform 0.1s ease-in-out;
+          }
+        }
+
+        p.navbar-footer {
+          align-self: stretch;
+          text-align: center;
+
+          a {
+            color: rgb(255, 30, 60);
+          }
+        }
+      }
     }
   }
 }
@@ -251,6 +365,24 @@
 .dark-section.open {
   height: 440px;
   background-color: #101010;
+
+  .dropdown-window {
+    height: 400px;
+  }
+
+  .dropdown-window.account-open {
+    .account-wrapper {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .dropdown-window.help-open {
+    .help-wrapper {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 body.navbar-open {
   height: 100%;

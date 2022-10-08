@@ -48,19 +48,54 @@ document.addEventListener("click", e => {
 
 document.addEventListener("click", e => {
   if (!darkSection.classList.contains("open")) {
-    if (e.target.closest("svg.account") || e.target.closest("svg.help")) {
+    if (e.target.closest("svg.account")) {
       document.documentElement.style.setProperty("--scroll", -currentScroll + "px");
       body.classList.add("navbar-open");
       darkSection.classList.add("open");
+      darkSection.querySelector(".dropdown-window").classList.add("account-open");
+      latestScroll = currentScroll;
+    } else if (e.target.closest("svg.help")) {
+      document.documentElement.style.setProperty("--scroll", -currentScroll + "px");
+      body.classList.add("navbar-open");
+      darkSection.classList.add("open");
+      darkSection.querySelector(".dropdown-window").classList.add("help-open");
       latestScroll = currentScroll;
     } else return
   } else if (darkSection.classList.contains("open")) {
-    if (e.target.closest(".dark-section") == null || e.target.closest("svg.close-x") || e.target.closest("svg.account") || e.target.closest("svg.help")) {
+    if (e.target.closest(".dark-section") == null || e.target.closest("svg.close-x")) {
       document.removeEventListener("scroll", hideShowNavbar)
       body.classList.remove("navbar-open");
       darkSection.classList.remove("open");
+      darkSection.querySelector(".dropdown-window").classList.remove("account-open");
+      darkSection.querySelector(".dropdown-window").classList.remove("help-open");
       document.documentElement.scrollTop = latestScroll;
       setTimeout(() => document.addEventListener("scroll", hideShowNavbar), 501)
+    } else if (e.target.closest("svg.account")) {
+      if (darkSection.querySelector(".dropdown-window").classList.contains("account-open")) {
+        document.removeEventListener("scroll", hideShowNavbar)
+        body.classList.remove("navbar-open");
+        darkSection.classList.remove("open");
+        darkSection.querySelector(".dropdown-window").classList.remove("account-open");
+        darkSection.querySelector(".dropdown-window").classList.remove("help-open");
+        document.documentElement.scrollTop = latestScroll;
+        setTimeout(() => document.addEventListener("scroll", hideShowNavbar), 501)
+      } else if (darkSection.querySelector(".dropdown-window").classList.contains("help-open")) {
+        darkSection.querySelector(".dropdown-window").classList.add("account-open");
+        darkSection.querySelector(".dropdown-window").classList.remove("help-open");
+      } else return
+    } else if(e.target.closest("svg.help")) {
+      if (darkSection.querySelector(".dropdown-window").classList.contains("help-open")) {
+        document.removeEventListener("scroll", hideShowNavbar)
+        body.classList.remove("navbar-open");
+        darkSection.classList.remove("open");
+        darkSection.querySelector(".dropdown-window").classList.remove("account-open");
+        darkSection.querySelector(".dropdown-window").classList.remove("help-open");
+        document.documentElement.scrollTop = latestScroll;
+        setTimeout(() => document.addEventListener("scroll", hideShowNavbar), 501)
+      } else if (darkSection.querySelector(".dropdown-window").classList.contains("account-open")) {
+        darkSection.querySelector(".dropdown-window").classList.remove("account-open");
+        darkSection.querySelector(".dropdown-window").classList.add("help-open");
+      } else return
     } else return
   }
 })
