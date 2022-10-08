@@ -5,23 +5,95 @@
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
     margin: 0;
-    background-color: $bg ;
-    // main con video
-    .video-main{
+    // nav-bar nera
+
+
+
+    // nav-bar bianca
+    .light-section {
         max-width: 100%;
         width: 100%;
-        height: auto;
-        video{
-            width: 100%;
-            height: auto;
+        height: 56px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position: fixed;
 
+
+
+        .container-logo {
+            width: 200px;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 48px;
+
+            img {
+                background-color: rgb(255, 255, 255);
+            }
         }
-        
+
+        .container-link {
+            width: auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background-color: rgb(255, 255, 255);
+            margin-left: 36px;
+
+            span {
+
+                font-size: 18px;
+                background-color: rgb(255, 255, 255);
+                margin-left: 20px;
+
+
+
+
+
+
+
+
+                a {
+                    text-decoration: none;
+                    background-color: rgb(255, 255, 255);
+                    color: #161616;
+
+                    &:hover {
+                        color: rgb(255, 71, 71);
+
+                    }
+                }
+
+            }
+        }
     }
 
 
 
-    // container generale
+    // video sotto la nav-bar
+    .video-main {
+        padding-top: 56px;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        background-color: $bg ;
+
+
+        video {
+            width: 100%;
+            height: auto;
+
+        }
+
+    }
+
+
+
+    // section-container-stories
 
     .container-ea-description {
         display: flex;
@@ -29,13 +101,14 @@
         justify-content: center;
         align-items: center;
         max-width: 100%;
+        background-color: $bg ;
 
         color: #f3f3f3;
         padding-top: 30px;
 
 
 
-        // sezione descrizione
+
 
         .ea-description {
             width: 52%;
@@ -50,7 +123,7 @@
 
         }
 
-        // loghi con link
+        //container loghi social
 
         .ea-social {
             display: flex;
@@ -93,7 +166,7 @@
 
     }
 
-    // contenitore card giochi con giochi
+    // sezione cards-game
 
     .container-game {
 
@@ -104,6 +177,7 @@
             font-size: 44px;
             text-align: center;
             padding-top: 80px;
+            background-color: $bg;
 
         }
 
@@ -112,6 +186,7 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            background-color: $bg ;
 
 
             .section-card {
@@ -137,11 +212,22 @@
 
                     width: 350px;
                     height: 350px;
-
-                    &:hover {
-                        opacity: 0.3;
+                    display: flex;
+                    .small-logo{
+                        width: 50px;
+                        height: 50px;
+                        img{
+                        width:100%;
+                        height: 30px;
+                        position: absolute;
+                        top: 0;
+                        left:50%
+                        }
+                    }
 
                     }
+
+
 
 
 
@@ -167,7 +253,7 @@
 
     }
 
-    // sezione video
+    // sezione video-carousel
     .video-section {
         width: 100%;
         max-width: 100%;
@@ -176,6 +262,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: $bg ;
 
         .trailer-section {
             width: 100%;
@@ -194,8 +281,8 @@
         }
 
         .trailer-video {
-            width: 85%;
-            height: 700px;
+            width: 70%;
+            height: 600px;
 
             iframe {
                 width: 100%;
@@ -208,110 +295,303 @@
         }
 
         .carousel-video {
-            width: 40%;
+            width: 50%;
             height: 100px;
 
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
 
-            .svg {
+            .number-videos {
+                width: 100px;
+                text-align: center;
+                margin: 0 20px;
+                min-width: 100px;
+            }
+
+            //freccia sinistra
+
+            svg {
                 width: 40px;
                 height: 40px;
-            }
-
-
-            svg.left {
                 transform: scale(-1);
-
-                pointer-events: auto;
-
                 fill: #f3f3f3;
+
+
             }
 
-            svg.right {
+            //freccia destra
+            #arrow-right {
 
-                pointer-events: auto;
+                transform: scale(1);
 
-                fill: #f3f3f3;
+
             }
+
+
 
 
 
             span {
                 color: #f3f3f3;
-            }
-        }
-
-    }
-
-    // sezione news-letter
-
-    .news-letter-section {
-        max-width: 100%;
-        width: 100%;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-
-        padding-top: 100px;
-
-
-        .container-form {
-            width: 85%;
-            display: flex;
-            padding-right: 28px;
-
-        }
-
-        .description-form {
-            width: 50%;
-            height: 200px;
-            color: #f3f3f3;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-right: 28px;
-
-
-
-
-            h2 {
-                font-size: 40px;
-            }
-
-            p {
-                padding-top: 20px;
-                line-height: 25px;
                 font-size: 18px;
             }
 
         }
+    }
 
-        .form {
-            width: 50%;
-            height: 300px;
 
+
+// sezione news-letter
+
+.news-letter-section {
+    max-width: 100%;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    background-color: $bg ;
+    padding-top: 100px;
+
+
+    .container-form {
+        width: 85%;
+        display: flex;
+        padding-right: 28px;
+
+
+    }
+
+    .description-form {
+        width: 50%;
+        height: 200px;
+        color: #f3f3f3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 28px;
+
+
+
+
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            padding-top: 20px;
+            line-height: 25px;
+            font-size: 18px;
+        }
+
+    }
+
+    .form {
+        width: 50%;
+        height: 300px;
+
+        display: flex;
+        flex-direction: column;
+
+        .input-email {
+            width: 100%;
+            height: 60px;
+        }
+
+
+
+        input {
+            font-size: 14px;
+            background-color: $bg ;
+        }
+
+        #email {
+            width: 100%;
+            height: 60px;
+            border: 2px solid white;
+            padding-left: 30px;
+            border-radius: 3px;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.2s;
+            }
+
+
+
+
+
+
+        }
+
+        .form-row {
             display: flex;
-            flex-direction: column;
-
-            .input-email {
-                width: 100%;
-                height: 60px;
-            }
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 30px;
 
 
+            width: 100%;
+            height: 70px;
 
-            input {
-                font-size: 14px;
-            }
 
-            #email {
-                width: 100%;
+
+            #date {
+                width: 48%;
                 height: 60px;
                 border: 2px solid white;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: 0.2s;
+
+                }
+
+                #date-of-birth {
+                    border: none;
+                    padding-left: 30px;
+                }
+
+
+
+            }
+
+            span {
+                color: #f3f3f3;
+
+
+            }
+
+        }
+
+
+        #state {
+            width: 48%;
+            height: 60px;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+
+
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.2s;
+
+            }
+
+            .span-state {
                 padding-left: 30px;
+                display: flex;
+                flex-direction: column;
+
+
+                .title-state {
+                    font-size: 14px;
+                    color: rgb(163, 163, 163);
+
+
+                }
+
+                .StatiUniti {
+                    font-size: 18px;
+                }
+            }
+
+
+
+
+
+        }
+
+        .legal-optin {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+
+
+
+
+
+
+        }
+
+        .input-checkbox {
+            width: 5%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            svg {
+                fill: #f3f3f3;
+                width: 20px;
+            }
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+        .checkbox-label {
+            width: 100%;
+            height: 100%;
+            color: #f3f3f3;
+
+            p {
+                color: #f3f3f3;
+                font-size: 18px;
+                line-height: 23px;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(255, 71, 71);
+                }
+            }
+
+
+        }
+
+
+
+
+
+        .button {
+            width: 100%;
+            height: 90px;
+            display: flex;
+            align-items: flex-end;
+            align-content: flex-end;
+            margin-top: 30px;
+            background-color: $bg ;
+
+
+
+
+
+
+
+            input[type=submit] {
+                background-color: rgb(255, 71, 71);
+                width: 136px;
+                height: 56px;
+                font-size: 18px;
+                color: #f3f3f3;
+                border: none;
                 border-radius: 3px;
 
                 &:hover {
@@ -319,192 +599,11 @@
                     transition: 0.2s;
                 }
 
-
-
-
-
-
             }
 
-            .form-row {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                margin-top: 30px;
-
-
-                width: 100%;
-                height: 70px;
-
-
-
-                #date {
-                    width: 48%;
-                    height: 60px;
-                    border: 2px solid white;
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-
-                    &:hover {
-                        transform: scale(1.1);
-                        transition: 0.2s;
-
-                    }
-
-                    #date-of-birth {
-                        border: none;
-                        padding-left: 30px;
-                    }
-
-
-
-                }
-
-                span {
-                    color: #f3f3f3;
-
-
-                }
-
-            }
-
-
-            #state {
-                width: 48%;
-                height: 60px;
-                border: 2px solid white;
-                display: flex;
-                align-items: center;
-
-
-                &:hover {
-                    transform: scale(1.1);
-                    transition: 0.2s;
-
-                }
-
-                .span-state {
-                    padding-left: 30px;
-                    display: flex;
-                    flex-direction: column;
-
-
-                    .title-state {
-                        font-size: 14px;
-                        color: rgb(163, 163, 163);
-
-
-                    }
-
-                    .StatiUniti {
-                        font-size: 18px;
-                    }
-                }
-
-
-
-
-
-            }
-
-            .legal-optin {
-                width: 100%;
-                height: auto;
-                display: flex;
-                justify-content: space-between;
-                margin-top: 60px;
-
-
-
-
-
-
-            }
-
-            .input-checkbox {
-                width: 5%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-
-                svg {
-                    fill: #f3f3f3;
-                    width: 20px;
-                }
-
-
-
-
-
-
-            }
-
-
-
-
-
-
-
-            .checkbox-label {
-                width: 100%;
-                height: 100%;
-                color: #f3f3f3;
-
-                p {
-                    color: #f3f3f3;
-                    font-size: 18px;
-                    line-height: 23px;
-
-                    a {
-                        text-decoration: none;
-                        color: rgb(255, 71, 71);
-                    }
-                }
-
-
-            }
-
-
-
-
-            .button {
-                width: 100%;
-                height: 90px;
-                display: flex;
-                align-items: flex-end;
-                align-content: flex-end;
-                margin-top: 30px;
-
-
-
-
-
-
-
-                input[type=submit] {
-                    background-color: rgb(255, 71, 71);
-                    width: 136px;
-                    height: 56px;
-                    font-size: 18px;
-                    color: #f3f3f3;
-                    border: none;
-                    border-radius: 3px;
-
-                    &:hover {
-                        transform: scale(1.1);
-                        transition: 0.2s;
-                    }
-
-                }
-
-
-            }
 
         }
+
     }
-
-
 
 }
