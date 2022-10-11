@@ -1,6 +1,10 @@
 // Dario - inizio --------------------------------------------------------------------------------
 
 // RE-USABLE PAGE-SECTION STRUCTURE ACCROSS PAGES - START ------------------------
+
+@import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
+
 .section-container {
   padding-inline: 7.5vw;
 

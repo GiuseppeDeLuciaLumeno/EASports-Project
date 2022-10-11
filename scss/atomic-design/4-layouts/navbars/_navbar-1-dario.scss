@@ -1,178 +1,72 @@
 // Dario - inizio -------------------------------------------------------------
+@use 'sass:math';
+@import '../../1-abstracts/variables/colors/colors-dario';
+@import '../../1-abstracts/variables/font-sizes/font-sizes-dario';
+@import '../../1-abstracts/variables/font-families/font-families-dario';
+@import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/mixins/flexbox/flexbox-1-dario';
+@import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/functions/units/units-giuseppe';
+@import '../../2-base/typography/games/coming-soon';
 
-// .navbar {
-//    .dark-section {
-//        ul {
-//          li {
-//            a {
-//              svg.account {
-//                 path {...}
-//              }
-//            }
-//          }
-//          li {
-//            a {
-//              svg.help {
-//                 path {...}
-//              }
-//            }
-//          }
-//          li {
-//            a {
-//              svg.ea {
-//                 path {...}
-//              }
-//            }
-//          }
-//        }
-//    }
-//    .light-section {
-//        .toggle {
-//          .dot {...}
-//        }
-//        a {
-//          img {...}
-//        }
-//        .dropdowns {
-//          .dropdown.dropdown-1 {
-//            .dropdown-button {
-//              p {...}
-//              .arrow {...}
-//            }
-//            .dropdown-menu-wrapper {
-//              .dropdown-menu {
-//                .col-1 {
-//                   h3 {...}
-//                   a {...}
-//                   a {...}
-//                   a {...}
-//                   a {...}
-//                   a {...}
-//                   a {...}
-//                }
-//                .col-2 {
-//                   h3 {...}
-//                   a {...}
-//                   a {...}
-//                   a {...}
-//                   a {...}
-//                   a {...}
-//                }
-//              }
-//            }
-//          }
-//          .dropdown {
-//            .dropdown-button {
-//              p {...}
-//              .arrow {...}
-//            }
-//            .dropdown-menu-wrapper {
-//              .dropdown-menu {
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//             }
-//           }
-//          .dropdown {
-//            .dropdown-button {
-//              p {...}
-//              .arrow {...}
-//            }
-//            .dropdown-menu-wrapper {
-//              .dropdown-menu {
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//             }
-//           }
-//          .dropdown {
-//            .dropdown-button {
-//              p {...}
-//              .arrow {...}
-//            }
-//            .dropdown-menu-wrapper {
-//              .dropdown-menu {
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//             }
-//           }
-//          .dropdown {
-//            .dropdown-button {
-//              p {...}
-//              .arrow {...}
-//            }
-//            .dropdown-menu-wrapper {
-//              .dropdown-menu {
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//                a {...}
-//             }
-//           }
-//        }
-// }
+.dark-section {
+  height: rem(40px);
+  overflow: hidden;
+  background-color: rgb(22 22 22);
 
-.navbar {
-  .dark-section {
-    height: rem(40px);
-    background-color: rgb(22 22 22);
-  
-    ul {
-      list-style: none;
-  
-      height: inherit;
-      margin-inline: rem(32px);
-      min-width: rem(calc(215px - (32px * 2)));
-  
-      @include flexbox($justify-content: flex-end);
-      gap: rem(40px);
-  
-      li {
-  
-        a {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 160;
+
+  transition: transform 0.4s cubic-bezier(0.5, 0.25, 0.015, 1), height 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
+  transform: translateY(-40px);
+
+  ul {
+    list-style: none;
+
+    height: 40px;
+    margin-inline: rem(32px);
+    min-width: rem(calc(215px - (32px * 2)));
+
+    @include flexbox($justify-content: flex-end);
+    gap: rem(40px);
+
+    li {
+
+      a {
+        display: block;
+        cursor: pointer;
+
+        svg {
           display: block;
-  
-          svg {
-            display: block;
-            fill: rgb(163, 163, 163);
-            
-            &.account {
-              width: rem(18px);
-              height: rem(18px);
-              margin-right: 4px;
-            }
-  
-            &.help {
-              width: rem(18px);
-              height: rem(18px);
-              margin-right: -5px;
-            }
-  
+          fill: rgb(163, 163, 163);
+          
+          &.account {
+            width: rem(18px);
+            height: rem(18px);
+            margin-right: 4px;
+          }
+
+          &.help {
+            width: rem(18px);
+            height: rem(18px);
+            margin-right: -5px;
+          }
+
+          &.ea {
+            width: rem(32px);
+            height: rem(32px);
+            margin-right: 4px;
+            fill: rgb(117, 117, 117);
+          }
+
+          &:hover {
+            fill: rgb(243, 242, 242);
+
             &.ea {
-              width: rem(32px);
-              height: rem(32px);
-              margin-right: 4px;
-              fill: rgb(117, 117, 117);
-            }
-  
-            &:hover {
-              fill: rgb(243, 242, 242);
-  
-              &.ea {
-              fill: rgb(163, 163, 163);
-              }
+            fill: rgb(163, 163, 163);
             }
           }
         }
@@ -180,330 +74,598 @@
     }
   }
 
-  .light-section {
-    @include flexbox($justify-content: flex-start, $align-items: stretch);
-    gap: 0.9rem;
-    
-    height: rem(53px);
-    background-color: map-get($map: $da-color, $key: white);
+  .dropdown-window {
+    height: calc(100% - 40px);
+    overflow: hidden;
+    position: relative;
 
-    & > * {
-      flex: 0 0 auto;
-    }
+    svg.close-x {
+      position: absolute;
+      z-index: 1;
+      top: 43px;
+      right: 33px;
+      width: 13px;
+      height: 13px;
 
-    .toggle {
-      align-self: center;
-      margin-left: 0.85rem;
-
-      height: 20px;
-      width: 20px;
-
-      @include flexbox;
       cursor: pointer;
 
-      .dot {
+      path {
+        fill: rgb(243, 242, 242);
+      }
+    }
+
+    .account-wrapper {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+
+      @include flexbox;
+
+      pointer-events: auto;
+      opacity: 0;
+      transform: translateY(0);
+      transition: opacity 0.5s cubic-bezier(0.5, 0.25, 0.015, 1), transform 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
+
+      .buttons-wrapper {
+        padding-inline: 7.5vw;
+
+        flex-grow: 1;
+        @include flexbox;
+
+        @include da-breakpoint(tablet) {
+          padding-inline: 7.8125vw;
+        }
+        
+        @include da-breakpoint(desktop) {
+          padding-inline: 7.4218vw;
+        }
+        
+        @include da-breakpoint(desktop-large) {
+          padding-inline: calc((100vw - 1120px) / 2);
+        }
+
+        .flex-container {
+          width: 100%;
+          max-width: 272px;
+          margin-block: 16px;
+
+          @include flexbox(column, flex-start, stretch);
+          gap: 16px;
+
+
+          @media (min-width: 544px) {
+            max-width: 640px;
+            margin-block: 24px;
+            @include flexbox(row, center, center);
+            gap: 24px;
+          }
+
+          @include da-breakpoint(desktop) {
+            max-width: 560px;
+            gap: 32px;
+          }
+
+          a {
+            @include flexbox(row, flex-start);
+            gap: 8px;
+            cursor: pointer;
+
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+
+            @media (min-width: 544px) {
+              flex-grow: 1;
+              flex-basis: 100%;
+            }
+
+            @include da-breakpoint(desktop) {
+              @include flexbox(column, flex-start, stretch);
+            }
+
+            img {
+              width: 36px;
+              height: 36px;
+
+              @include da-breakpoint(desktop) {
+                align-self: center;
+              }
+            }
+
+            p {
+              flex-grow: 1;
+
+              @include da-breakpoint(desktop) {
+                text-align: center;
+              }
+            }
+          }
+
+          a:hover {
+            transform: translateY(-5px);
+            transition: transform 0.1s ease-in-out;
+          }
+        }
+      }
+    }
+    
+    .help-wrapper {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+
+      @include flexbox;
+
+      pointer-events: auto;
+      opacity: 0;
+      transform: translateY(0);
+      transition: opacity 0.5s cubic-bezier(0.5, 0.25, 0.015, 1), transform 0.5s cubic-bezier(0.5, 0.25, 0.015, 1);
+
+      .buttons-wrapper {
+        flex-grow: 1;
+        @include flexbox(column, flex-start, center);
+        padding-inline: 7.5vw;
+        padding-block: 2rem 1rem;
+
+        @include da-breakpoint(tablet) {
+          padding-inline: 7.8125vw;
+        }
+        
+        @include da-breakpoint(desktop) {
+          padding-inline: 7.4218vw;
+        }
+        
+        @include da-breakpoint(desktop-large) {
+          padding-inline: calc((100vw - 1120px) / 2);
+        }
+
+        h6 {
+          align-self: stretch;
+          text-align: center;
+          margin-block: 0;
+        }
+
+        .navbar-grid-container {
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-areas: 
+          'one'
+          'two'
+          'three'
+          'four';
+          row-gap: 1rem;
+
+          margin-block: 1rem;
+          max-width: 272px;
+
+          @media (min-width: 544px) {
+            margin-block: 1.5rem;
+            max-width: 640px;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            'one two'
+            'three four';
+            row-gap: 1.5rem;
+            column-gap: 2rem;
+          }
+
+          @include da-breakpoint(desktop) {
+            max-width: 560px;
+          }
+
+          @include da-breakpoint(desktop-large) {
+            column-gap: 48px;
+          }
+
+          a {
+            @include flexbox(row, flex-start, center);
+            gap: 8px;
+
+            @include da-breakpoint(desktop) {
+              @include flexbox(column, flex-start, center)
+            }
+
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+
+            img {
+              width: 36px;
+              height: 36px;
+            }
+
+            p {
+              flex-grow: 1;
+            }
+          }
+
+          a:hover {
+            transform: translateY(-5px);
+            transition: transform 0.1s ease-in-out;
+          }
+        }
+
+        p.navbar-footer {
+          align-self: stretch;
+          text-align: center;
+
+          a {
+            color: rgb(255, 30, 60);
+          }
+        }
+      }
+    }
+  }
+}
+.dark-section.show {
+  transform: translateY(0);
+}
+.dark-section.open {
+  height: 440px;
+  background-color: #101010;
+
+  .dropdown-window.account-open {
+    .account-wrapper {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .help-wrapper {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+  }
+
+  .dropdown-window.help-open {
+    .account-wrapper {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+    
+    .help-wrapper {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+body.navbar-open {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  inset: var(--scroll) 0 0;
+}
+
+.light-section {
+  @include flexbox($justify-content: flex-start, $align-items: stretch);
+  gap: 0.9rem;
+  
+  height: rem(53px);
+  background-color: map-get($map: $da-color, $key: white);
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 120;
+
+  transition: 0.4s cubic-bezier(0.5, 0.25, 0.015, 1);
+
+  & > * {
+    flex: 0 0 auto;
+  }
+
+  .toggle {
+    align-self: center;
+    margin-left: 0.85rem;
+
+    height: 20px;
+    width: 20px;
+
+    @include flexbox;
+    cursor: pointer;
+
+    .dot {
+      height: 2px;
+      width: 20px;
+      border-radius: 4.5px;
+      background-color: black;
+
+      position: relative;
+
+      &::before, &::after {
+        content: '';
         height: 2px;
         width: 20px;
         border-radius: 4.5px;
         background-color: black;
 
-        position: relative;
+        display: block;
+        position: absolute;
+      }
+
+      &::before {
+        transform: translateY(-7px);
+      }
+
+      &::after {
+        transform: translateY(7px);
+      }
+    }
+
+    &:hover {
+      .dot {
+        background-color: map-get($map: $da-color, $key: accent);
 
         &::before, &::after {
-          content: '';
-          height: 2px;
-          width: 20px;
-          border-radius: 4.5px;
-          background-color: black;
-
-          display: block;
-          position: absolute;
-        }
-
-        &::before {
-          transform: translateY(-7px);
-        }
-
-        &::after {
-          transform: translateY(7px);
+          background-color: map-get($map: $da-color, $key: accent);
         }
       }
+    }
+  }
 
-      &:hover {
-        .dot {
-          background-color: map-get($map: $da-color, $key: accent);
-  
+  a {
+    display: block;
+    width: rem(90px);
+    align-self: center;
+  }
+
+  .dropdowns {
+    @include flexbox($justify-content: flex-start, $align-items: stretch);
+    gap: 20px;
+    margin-left: 1.5rem;
+
+    display: none;
+
+    .dropdown {
+      position: relative;
+      color: map-get($map: $da-color, $key: dark);
+
+      @include flexbox;
+
+      cursor: pointer;
+
+      .dropdown-button {
+        @include flexbox;
+        gap: 4px;
+
+        p {
+          text-transform: capitalize;
+          font-size: map-get($map: $da-fs-p, $key: desktop);
+          letter-spacing: -0.5px;
+        }
+
+        .arrow {
+          height: 15px;
+          width: 15px;
+
+          position: relative;
+          @include flexbox;
+
           &::before, &::after {
-            background-color: map-get($map: $da-color, $key: accent);
+            content: '';
+            width: 60%;
+            height: .5px;
+            background-color: map-get($map: $da-color, $key: dark);
+            border-radius: 1px;
+
+            display: block;
+            position: absolute;
+
+            transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+          }
+
+          &::before {
+            transform: translate(-30%) rotate(45deg);
+          }
+          
+          &::after {
+            transform: translate(30%) rotate(-45deg);
           }
         }
       }
-    }
 
-    a {
-      display: block;
-      width: rem(90px);
-      align-self: center;
-    }
+      .dropdown-menu-wrapper {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 10;
 
-    .dropdowns {
-      @include flexbox($justify-content: flex-start, $align-items: stretch);
-      gap: 20px;
-      margin-left: 1.5rem;
-
-      display: none;
-
-      .dropdown {
-        position: relative;
-        color: map-get($map: $da-color, $key: dark);
-
-        @include flexbox;
-
+        pointer-events: none;
         cursor: pointer;
 
-        .dropdown-button {
-          @include flexbox;
-          gap: 4px;
+        transform: scaleY(0);
+        transform-origin: center top;
 
-          p {
-            text-transform: capitalize;
-            font-size: map-get($map: $da-fs-p, $key: desktop);
-            letter-spacing: -0.5px;
-          }
+        transition: transform 0.3s cubic-bezier(0.5, 0.25, 0.015, 1);
 
-          .arrow {
-            height: 15px;
-            width: 15px;
-
-            position: relative;
-            @include flexbox;
-
-            &::before, &::after {
-              content: '';
-              width: 60%;
-              height: .5px;
-              background-color: map-get($map: $da-color, $key: dark);
-              border-radius: 1px;
-
-              display: block;
-              position: absolute;
-
-              transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-            }
-
-            &::before {
-              transform: translate(-30%) rotate(45deg);
-            }
-            
-            &::after {
-              transform: translate(30%) rotate(-45deg);
-            }
-          }
-        }
-
-        .dropdown-menu-wrapper {
-          position: absolute;
-          top: 50px;
-          left: 0;
-          z-index: 10;
-
-          pointer-events: none;
-          cursor: pointer;
-
-          transform: scaleY(0);
-          transform-origin: center top;
-
-          transition: transform 0.3s cubic-bezier(0.5, 0.25, 0.015, 1);
-
-          .dropdown-menu {
-            background-color: map-get($map: $da-color, $key: white-tr-100);
-  
-            border-radius: 4px;
-            padding-block: 25px;
-            padding-left: 35px;
-            padding-right: 50px;
-
-            margin-top: 14px;
-            margin-left: -30px;
-  
-            a {
-              text-decoration: none;
-              text-transform: capitalize;
-              line-height: 1rem;
-              color: map-get($map: $da-color, $key: text-light);
-              font-size: map-get($map: $da-fs-p, $key: mobile);
-              width: max-content;
-  
-              transform: translateY(-5px);
-              opacity: 0;
-              
-              transition-property: transform, opacity;
-              transition-duration: 0.4s;
-              transition-delay: 0.1s;
-              transition-timing-function: cubic-bezier(0.5, 0.25, 0.015, 1);
-
-              & + a {
-                margin-top: rem(20px);
-              }
-            }
-
-            a:hover {
-              color: map-get($map: $da-color, $key: accent);
-              transition: none;
-            }
-          }
-        }
-      }
-
-      .dropdown:first-of-type {
         .dropdown-menu {
-          @include flexbox($align-items: flex-start);
-          gap: 50px;
-          padding-block: 40px 50px;
+          background-color: map-get($map: $da-color, $key: white-tr-100);
 
-          h3 {
-            width: max-content;
-            text-transform: uppercase;
-            line-height: 34px;
+          border-radius: 4px;
+          padding-block: 25px;
+          padding-left: 35px;
+          padding-right: 50px;
+
+          margin-top: 14px;
+          margin-left: -30px;
+
+          a {
+            text-decoration: none;
+            text-transform: capitalize;
+            line-height: 1rem;
+            color: map-get($map: $da-color, $key: text-light);
             font-size: map-get($map: $da-fs-p, $key: mobile);
-            letter-spacing: 1px;
-            border-bottom: 1px solid map-get($map: $da-color, $key: borders-light);
+            width: max-content;
 
             transform: translateY(-5px);
             opacity: 0;
-
+            
             transition-property: transform, opacity;
-            transition-duration: 0.3s;
+            transition-duration: 0.4s;
             transition-delay: 0.1s;
-            transition-timing-function: cubic(0.5, 0.25, 0.015, 1);
+            transition-timing-function: cubic-bezier(0.5, 0.25, 0.015, 1);
+
+            & + a {
+              margin-top: rem(20px);
+            }
           }
 
-          a:first-of-type {
-            margin-top: rem(20px);
-          }
-        }
-      }
-
-      .dropdown:hover {
-        .dropdown-button {
-          p {
+          a:hover {
             color: map-get($map: $da-color, $key: accent);
-          }
-
-          .arrow::before {
-            transform: translate(-30%) rotate(-45deg);
-            background-color: map-get($map: $da-color, $key: accent);
-          }
-        
-          .arrow::after {
-            transform: translate(30%) rotate(45deg);
-            background-color: map-get($map: $da-color, $key: accent);
+            transition: none;
           }
         }
-
-        .dropdown-menu-wrapper {
-          pointer-events: auto;
-          transform: scaleY(1);
-
-          .dropdown-menu {
-            h3 {
-              transform: translateY(0);
-              opacity: 1;
-            }
-
-            a {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-        }
-      }
-
-      @include da-breakpoint(desktop-large) {
-        gap: 35px;
       }
     }
 
-    @include da-breakpoint(mobile) {
-      & {
-        a {
-          width: rem(100px);
+    .dropdown:first-of-type {
+      .dropdown-menu {
+        @include flexbox($align-items: flex-start);
+        gap: 50px;
+        padding-block: 40px 50px;
+
+        h3 {
+          width: max-content;
+          text-transform: uppercase;
+          line-height: 34px;
+          font-size: map-get($map: $da-fs-p, $key: mobile);
+          letter-spacing: 1px;
+          border-bottom: 1px solid map-get($map: $da-color, $key: borders-light);
+
+          transform: translateY(-5px);
+          opacity: 0;
+
+          transition-property: transform, opacity;
+          transition-duration: 0.3s;
+          transition-delay: 0.1s;
+          transition-timing-function: cubic(0.5, 0.25, 0.015, 1);
+        }
+
+        a:first-of-type {
+          margin-top: rem(20px);
         }
       }
     }
-  
-    @include da-breakpoint(mobile-large) {
-      & {
-        a {
-          width: rem(110px);
+
+    .dropdown:hover {
+      .dropdown-button {
+        p {
+          color: map-get($map: $da-color, $key: accent);
+        }
+
+        .arrow::before {
+          transform: translate(-30%) rotate(-45deg);
+          background-color: map-get($map: $da-color, $key: accent);
+        }
+      
+        .arrow::after {
+          transform: translate(30%) rotate(45deg);
+          background-color: map-get($map: $da-color, $key: accent);
         }
       }
-    }
-  
-    @include da-breakpoint(tablet) {
-      & {
-        a {
-          width: rem(200px);
-        }
-      }
-    }
-  
-    @include da-breakpoint(desktop) {
-      & {
-        gap: 2.1rem;
-        height: rem(56px);
-  
-        .toggle {
-          margin-left: 1.05rem;
-  
-          .dot {
-            height: 4.5px;
-            width: 4.5px;
-  
-            transition: transform 0.3s ease, background-color 0.7s ease;
-  
-            &::before, &::after {
-              height: 4.5px;
-              width: 4.5px;
-  
-              transition: background-color 0.7s ease;
-            }
-  
-            &::before {
-              transform: translateY(-8px);
-            }
-  
-            &::after {
-              transform: translateY(8px);
-            }
+
+      .dropdown-menu-wrapper {
+        pointer-events: auto;
+        transform: scaleY(1);
+
+        .dropdown-menu {
+          h3 {
+            transform: translateY(0);
+            opacity: 1;
           }
-        }
-        
-        .toggle:hover {
-          .dot {
-            transform: scale(1.4);
+
+          a {
+            opacity: 1;
+            transform: translateY(0);
           }
-        }
-  
-        .dropdowns {
-          display: flex;
         }
       }
     }
 
     @include da-breakpoint(desktop-large) {
-      & {
-        height: rem(60px);
+      gap: 35px;
+    }
+  }
 
-        .dropdowns {
-          margin-left: 1.75rem;
-          gap: 35px;
+  @include da-breakpoint(mobile) {
+    & {
+      a {
+        width: rem(100px);
+      }
+    }
+  }
 
-          .dropdown {
-            .dropdown-menu-wrapper {
-              .dropdown-menu {
-                margin-top: 18px;
-              }
+  @include da-breakpoint(mobile-large) {
+    & {
+      a {
+        width: rem(110px);
+      }
+    }
+  }
+
+  @include da-breakpoint(tablet) {
+    & {
+      a {
+        width: rem(200px);
+      }
+    }
+  }
+
+  @include da-breakpoint(desktop) {
+    & {
+      gap: 2.1rem;
+      height: rem(56px);
+
+      .toggle {
+        margin-left: 1.05rem;
+
+        .dot {
+          height: 4.5px;
+          width: 4.5px;
+
+          transition: transform 0.3s ease, background-color 0.7s ease;
+
+          &::before, &::after {
+            height: 4.5px;
+            width: 4.5px;
+
+            transition: background-color 0.7s ease;
+          }
+
+          &::before {
+            transform: translateY(-8px);
+          }
+
+          &::after {
+            transform: translateY(8px);
+          }
+        }
+      }
+      
+      .toggle:hover {
+        .dot {
+          transform: scale(1.4);
+        }
+      }
+
+      .dropdowns {
+        display: flex;
+      }
+    }
+  }
+
+  @include da-breakpoint(desktop-large) {
+    & {
+      height: rem(60px);
+
+      .dropdowns {
+        margin-left: 1.75rem;
+        gap: 35px;
+
+        .dropdown {
+          .dropdown-menu-wrapper {
+            .dropdown-menu {
+              margin-top: 18px;
             }
           }
         }
@@ -511,21 +673,7 @@
     }
   }
 }
-
-.navbar {
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  top: 0;
-  
-  .dark-section, .light-section {
-    transition: 0.4s cubic-bezier(0.5, 0.25, 0.015, 1);
-  }
-}
-
-.navbar.hidden {
-  .dark-section, .light-section {
-    transform: translateY(-40px);
-  }
+.light-section.show-dark {
+  top: 40px;
 }
 // Dario - fine -------------------------------------------------------------

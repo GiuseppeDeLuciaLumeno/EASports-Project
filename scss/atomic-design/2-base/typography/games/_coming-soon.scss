@@ -1,4 +1,8 @@
 // h3 to be used as SECTIONS' TITLE -------------------------------------------------------
+.light-section {
+    font-family: map-get($map: $da-font-family, $key: text);
+}
+
 .h3 {
     font-family: map-get($map: $da-font-family, $key: heading);
     color: map-get($map: $da-color, $key: dark);
@@ -153,6 +157,45 @@ a {
     }
 }
 
+aside {
+    p {
+        font-size: rem(16px);
+        font-family: map-get($map: $da-font-family, $key: text);
+        color: hsl(0, 0%, 15%);
+        line-height: 26.4px;
+
+        @include da-breakpoint(desktop) {
+            line-height: 24px;
+        }
+    }
+}
+
 .slider-tab-container.active .slider-tab {
     color: map-get($map: $da-color, $key: dark) !important;
+}
+
+.dropdown-menu .choice a{
+    color: map-get($map: $da-color, $key: dark);
+}
+
+p.navbar-button {
+    font-family: map-get($map: $da-font-family, $key: navbar-text);
+    color: rgb(243, 243, 243);
+    font-size: 16px;
+    line-height: 21.6px;
+}
+
+p.navbar-footer {
+    font-family: map-get($map: $da-font-family, $key: navbar-text);
+    color: rgb(243, 243, 243);
+    font-size: 14px;
+    line-height: 18.9px;
+}
+
+h6.navbar-heading {
+    font-family: map-get($map: $da-font-family, $key: navbar-heading);
+    color: rgb(243, 243, 243);
+    font-size: 18px;
+    line-height: 29.7px;
+    letter-spacing: 0.72px;
 }

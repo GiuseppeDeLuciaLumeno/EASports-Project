@@ -14,6 +14,10 @@
 // ATTENZIONE! Fare attenzione all' html... deve essere nel modo giusto -----> ref: \html\games\coming-soon.html 
 
 // ATTENZIONE! Adjust '.hero {margin-top}' to match the navbar's height on the different screen sizes
+
+@import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
+@import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
+
 header {
   .hero {
     position: relative;
