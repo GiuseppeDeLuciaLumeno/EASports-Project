@@ -92,6 +92,10 @@ select {
   }
 }
 /* TYPOGRAPHY ---------------------------------------------------------*/
+.light-section {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+}
+
 .h3 {
   font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
   color: hsl(0deg, 0%, 9%);
@@ -481,6 +485,216 @@ h6.navbar-heading {
 /* LAYOUTS -------------------------------------------------------*/
 /* ---------------------------------------------------------------*/
 /* navbar -------------------------*/
+.light-section {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+}
+
+.h3 {
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+  font-size: 2rem;
+  line-height: 2.3rem;
+  margin-block: 2.5rem;
+}
+@media (min-width: 48rem) {
+  .h3 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    margin-block: 3rem;
+  }
+}
+@media (min-width: 64rem) {
+  .h3 {
+    font-size: 2.5rem;
+    line-height: 2.875rem;
+    margin-block: 3.5rem;
+  }
+}
+@media (min-width: 91rem) {
+  .h3 {
+    font-size: 2.75rem;
+    line-height: 3.1625rem;
+    margin-block: 4rem;
+  }
+}
+
+.h4 {
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  margin-block: 0.8125rem;
+}
+@media (min-width: 48rem) {
+  .h4 {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    margin-block: 0.8125rem;
+  }
+}
+@media (min-width: 64rem) {
+  .h4 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    margin-block: 0.975rem;
+  }
+}
+@media (min-width: 91rem) {
+  .h4 {
+    font-size: 1.5rem;
+    line-height: 2.025rem;
+    margin-block: 0.975rem;
+  }
+}
+
+.h5 {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+  font-size: 1rem;
+  line-height: 1.65rem;
+  margin-block: 0;
+}
+@media (min-width: 48rem) {
+  .h5 {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+}
+@media (min-width: 64rem) {
+  .h5 {
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+  }
+}
+@media (min-width: 91rem) {
+  .h5 {
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+  }
+}
+
+.p {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 42%);
+  font-size: 1rem;
+  line-height: 1.65rem;
+}
+@media (min-width: 48rem) {
+  .p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+}
+@media (min-width: 64rem) {
+  .p {
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+  }
+}
+@media (min-width: 91rem) {
+  .p {
+    font-size: 1.125rem;
+    line-height: 1.9375rem;
+  }
+}
+
+a {
+  color: hsl(0deg, 100%, 64%);
+  text-decoration: none;
+}
+
+.cta {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 52%);
+  font-size: 1rem;
+  line-height: 1.65rem;
+}
+@media (min-width: 48rem) {
+  .cta {
+    font-size: 1rem;
+    line-height: 1.65rem;
+  }
+}
+@media (min-width: 64rem) {
+  .cta {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+@media (min-width: 91rem) {
+  .cta {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+
+.slider-tab {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 9%);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media (min-width: 48rem) {
+  .slider-tab {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media (min-width: 64rem) {
+  .slider-tab {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+@media (min-width: 91rem) {
+  .slider-tab {
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+}
+
+aside p {
+  font-size: 1rem;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+  color: hsl(0deg, 0%, 15%);
+  line-height: 26.4px;
+}
+@media (min-width: 64rem) {
+  aside p {
+    line-height: 24px;
+  }
+}
+
+.slider-tab-container.active .slider-tab {
+  color: hsl(0deg, 0%, 9%) !important;
+}
+
+.dropdown-menu .choice a {
+  color: hsl(0deg, 0%, 9%);
+}
+
+p.navbar-button {
+  font-family: open-sans, verdana, Helvetica, Arial, sans-serif;
+  color: rgb(243, 243, 243);
+  font-size: 16px;
+  line-height: 21.6px;
+}
+
+p.navbar-footer {
+  font-family: open-sans, verdana, Helvetica, Arial, sans-serif;
+  color: rgb(243, 243, 243);
+  font-size: 14px;
+  line-height: 18.9px;
+}
+
+h6.navbar-heading {
+  font-family: oswald, verdana, Helvetica, Arial, sans-serif;
+  color: rgb(243, 243, 243);
+  font-size: 18px;
+  line-height: 29.7px;
+  letter-spacing: 0.72px;
+}
+
 .dark-section {
   height: 2.5rem;
   overflow: hidden;
@@ -1524,54 +1738,54 @@ body.navbar-open {
 .aside-desktop .heading svg:hover path {
   fill: hsl(0deg, 100%, 64%);
 }
-.aside-desktop .card {
+.aside-desktop .sidebar-card {
   position: relative;
   aspect-ratio: 1/1;
 }
-.aside-desktop .card a {
+.aside-desktop .sidebar-card a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.aside-desktop .card a img {
+.aside-desktop .sidebar-card a img {
   position: absolute;
   inset: 0;
 }
-.aside-desktop .card a img:last-child {
+.aside-desktop .sidebar-card a img:last-child {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   transition: transform 0.3s ease;
 }
-.aside-desktop .card:hover a img:last-child {
+.aside-desktop .sidebar-card:hover a img:last-child {
   transform: scale(1.1) translate3d(-45%, -40%, 0);
 }
 .aside-desktop .big-card a img:last-child {
   width: 25%;
 }
-.aside-desktop .grid-container {
+.aside-desktop .sidebar-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-block: 2rem 3.5625rem;
 }
-.aside-desktop .grid-container .card-1 a img:last-child {
+.aside-desktop .sidebar-grid-container .card-1 a img:last-child {
   width: 40%;
 }
-.aside-desktop .grid-container .card-2 a img:last-child {
+.aside-desktop .sidebar-grid-container .card-2 a img:last-child {
   width: 100%;
   height: 20%;
 }
-.aside-desktop .grid-container .card-3 a img:last-child {
+.aside-desktop .sidebar-grid-container .card-3 a img:last-child {
   width: 40%;
 }
-.aside-desktop .grid-container .card-4 a img:last-child {
+.aside-desktop .sidebar-grid-container .card-4 a img:last-child {
   width: 32.5%;
 }
-.aside-desktop .grid-container .card-5 a img:last-child {
+.aside-desktop .sidebar-grid-container .card-5 a img:last-child {
   width: 67.5%;
 }
-.aside-desktop .grid-container .card-6 a img:last-child {
+.aside-desktop .sidebar-grid-container .card-6 a img:last-child {
   width: 100%;
   height: 20%;
 }
