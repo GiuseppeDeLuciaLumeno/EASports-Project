@@ -3356,157 +3356,97 @@ footer {
   }
 }
 
-.flexnav {
-  height: 90vh;
-  width: 100%;
+.img {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   flex-flow: column;
-}
-.flexnav .blackline {
-  background-color: black;
-  display: flex;
-  height: 5vh;
-  width: 100%;
-}
-.flexnav .threepoints {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: 1rem;
-  flex-flow: column;
-  gap: 0.2rem;
-  flex: 5%;
-}
-.flexnav .threepoints .span {
-  height: 0.4rem;
-  width: 0.4rem;
-  border-radius: 0.4rem;
-  background-color: black;
-}
-.flexnav .nav {
-  display: flex;
-  height: 5vh;
-  width: 100%;
-}
-.flexnav .nav .logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 15%;
-}
-.flexnav .nav .navlist {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 85%;
-}
-.flexnav .nav .navlist ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 2rem;
-  width: 100%;
-  margin: 1rem;
-  gap: 1.5rem;
-  list-style: none;
-}
-.flexnav .nav .navlist ul li a {
-  font-size: large;
-  color: black;
-  text-decoration: none;
-}
-.flexnav .nav a:hover {
-  color: white;
-  transition: 1s;
-}
-.flexnav .img {
-  display: flex;
-  background-image: url(/assets/img/FIFAMANIMGEA.jpg);
-  background-size: 100%;
+  background-image: url(/assets/img/home-header_daniele/newMainImgEA.png);
+  top: 0;
+  left: 0;
+  -webkit-background-size: cover;
+  -moz-background-cover: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 87vh;
+  gap: 0.5rem;
+  height: 80vh;
   width: 100%;
 }
-.flexnav .textposition {
+.img .textposition {
+  height: 30vh;
+  width: 65%;
+  margin-left: 3.5rem;
+  color: white;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
   font-style: Helvetica;
   font-size: x-large;
-  height: 65vh;
-  width: 65%;
-  gap: 1.2rem;
-  color: white;
-  flex-flow: column;
 }
-.flexnav .textposition_1 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: 1px solid black;
-}
-.flexnav .textposition .LOGO {
+.img .textposition .LOGO {
   height: 4rem;
   width: 30rem;
 }
-.flexnav .textposition .btn_daniele {
+.img .textposition-1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 3.5rem;
-  width: 21em;
-  border-radius: 0.5rem;
+  height: 30vh;
+  width: 65%;
+  font-style: Helvetica;
+  font-size: xx-large;
+  font-weight: bold;
+  margin-left: 3.5rem;
   color: black;
-  cursor: pointer;
 }
-.flexnav .textposition .btn_daniele button {
-  height: 3.5rem;
+.img .btn_daniele {
+  height: 4rem;
   width: 16rem;
   font-style: Helvetica;
   font-size: large;
-}
-
-.sub-menu-altreesperienze {
-  display: none;
-  list-style: none;
-  padding: 0.2em, 0.5em;
-  background-color: white;
-  position: absolute;
-  top: 3em;
-  left: 50%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.3s;
-}
-.sub-menu-altreesperienze li {
-  padding: 0.7em, 0.5em;
-  margin: 0.3em, 0;
-  border-radius: 0.5em;
-  cursor: pointer;
-}
-
-.mainimgmobile {
-  display: flex;
-  flex-flow: column;
-  display: none;
-  gap: 1rem;
-  background-image: url(/EASports-Project/assets/img/FIFAMAINIMGEA-MOBILE.jpg);
-  height: 60vh;
-  width: 100%;
-}
-.mainimgmobile button {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 1.5rem;
-  width: 16rem;
-  border-radius: 0.5rem;
-  background-color: white;
-  display: none;
+  height: 5rem;
+  width: 10rem;
   color: black;
-  cursor: pointer;
+  background-color: white;
+  border-radius: 0.2rem;
+  margin-left: 4rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid green;
+}
+.img .textposition-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  gap: 1rem;
+  height: 20vh;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.img .textposition-2 .font-text {
+  font-style: Helvetica;
+  font-size: large;
+  color: white;
+}
+.img .textposition-2 .button-an {
+  height: 4rem;
+  width: 16rem;
+  font-style: Helvetica;
+  font-size: large;
+  height: 4rem;
+  width: 10rem;
+  border-radius: 0.4rem;
+  color: white;
+  margin-right: 6rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
 }
 
 /* Start Giochi in evidenza */
