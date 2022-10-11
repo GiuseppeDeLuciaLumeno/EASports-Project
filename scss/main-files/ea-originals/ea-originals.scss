@@ -1,6 +1,8 @@
 @import "../../atomic-design/1-abstracts/variables/colors/colors-christian";
 @import "../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-josephine";
 @import "../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine";
+@import "../../atomic-design/4-layouts/navbars/navbar-1-dario";
+@import "../../atomic-design/4-layouts/sidebars/sidebars-1-dario";
 @import "../../atomic-design/4-layouts/footers/footer-1-josephine";
 
 
@@ -8,83 +10,16 @@
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
     margin: 0;
-    // nav-bar nera
-
-
-
-    // nav-bar bianca
-    .light-section {
-        max-width: 100%;
-        width: 100%;
-        height: 56px;
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        position: fixed;
-        z-index: 1;
-
-
-
-        .container-logo {
-            width: 200px;
-            height: 100%;
-            background-color: rgb(255, 255, 255);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 48px;
-
-            img {
-                background-color: rgb(255, 255, 255);
-            }
-        }
-
-        .container-link {
-            width: auto;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            background-color: rgb(255, 255, 255);
-            margin-left: 36px;
-
-            span {
-
-                font-size: 18px;
-                background-color: rgb(255, 255, 255);
-                margin-left: 20px;
-
-
-
-
-
-
-
-
-                a {
-                    text-decoration: none;
-                    background-color: rgb(255, 255, 255);
-                    color: #161616;
-
-                    &:hover {
-                        color: rgb(255, 71, 71);
-
-                    }
-                }
-
-            }
-        }
-    }
-
-
 
     // video sotto la nav-bar
     .video-main {
-        padding-top: 56px;
+       
         max-width: 100%;
         width: 100%;
         height: auto;
         background-color: $bg ;
+        margin-top: 96px;
+
 
 
         video {
