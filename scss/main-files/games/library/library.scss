@@ -1,8 +1,17 @@
 @use 'sass:math';
-@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../../../atomic-design/2-base/resets/reset-dario';
 
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/containers";
+@import "../../../../node_modules/bootstrap/scss/maps";
+@import "../../../../node_modules/bootstrap/scss/grid";
+@import "../../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import '../../../../node_modules/bootstrap/scss/card';
 @import '../../../atomic-design/4-layouts/navbars/navbar-1-dario';
+@import '../../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-josephine';
+@import '../../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine';
+@import '../../../atomic-design/4-layouts/footers/footer-1-josephine';
 
 /*INIZO NAVBAR*/ 
 
