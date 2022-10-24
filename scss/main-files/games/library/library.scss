@@ -1,11 +1,23 @@
-@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+@use 'sass:math';
 
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/containers";
+@import "../../../../node_modules/bootstrap/scss/maps";
+@import "../../../../node_modules/bootstrap/scss/grid";
+@import "../../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import '../../../../node_modules/bootstrap/scss/card';
+@import '../../../atomic-design/4-layouts/navbars/navbar-1-dario';
+@import '../../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-josephine';
+@import '../../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine';
+@import '../../../atomic-design/4-layouts/footers/footer-1-josephine';
 
-   /*INIZO NAVBAR*/ 
+/*INIZO NAVBAR*/ 
 
-   /*FINE NAVBAR*/ 
+/*FINE NAVBAR*/ 
 
-   /*INIZIO CARD*/ 
+/*INIZIO CARD*/ 
     
 .titolo{
     display: flex;
@@ -19,9 +31,11 @@
     padding-bottom: 30px;
 }
 
+
 .transformimg{
     display: flex;
-    position: absolute
+    position: absolute;
+    width: 357px;
 }
 .img_card{
     width: 357px;
@@ -59,12 +73,54 @@
 .transformimg2{
     display: flex;
     position: relative;
-
+    
 }
 
-.card_gio:hover{
-   
+#card_gio{
+    
+    width: 357px;
+    padding: 0px;
+    margin:10px 10px 10px 0px;
+    
+
+ &:hover{
+  
+    
+    -webkit-animation: shadow-drop-2-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-drop-2-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            @-webkit-keyframes shadow-drop-2-br {
+                0% {
+                  -webkit-transform: translateZ(0) translateX(0) translateY(0);
+                          transform: translateZ(0) translateX(0) translateY(0);
+                  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                }
+                100% {
+                  -webkit-transform: translateZ(50px) translateX(-12px) translateY(-12px);
+                          transform: translateZ(50px) translateX(-12px) translateY(-12px);
+                  -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+                          box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+                }
+              }
+              @keyframes shadow-drop-2-br {
+                0% {
+                  -webkit-transform: translateZ(0) translateX(0) translateY(0);
+                          transform: translateZ(0) translateX(0) translateY(0);
+                  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                }
+                100% {
+                  -webkit-transform: translateZ(50px) translateX(-12px) translateY(-12px);
+                          transform: translateZ(50px) translateX(-12px) translateY(-12px);
+                  -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+                          box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+                }
+              }        
+ }
 }
+
+
+
 
 @media screen and (max-width: 912px){
     .img_card{
@@ -145,8 +201,7 @@
     background-color: #36404A;
     width: 100vw;
     height: 1600px;
-    padding-right: 60px;
-    padding-left: 150px;
+    
     
 }
 
@@ -154,7 +209,10 @@
     height: 200px;
     width: 300px;
     padding-top: 100px;
-    padding-left: 620px;
+    padding-left: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .piattaforma_title{
     color: white;
@@ -342,6 +400,20 @@
     padding-bottom: 30px;
     font-style: oblique;
 }
+@media screen and (max-width: 912px){
+    .paragrafo{
+        width: 400px;
+        
+    }
+}
 
+@media screen and (max-width: 776px){
+    .paragrafo{
+        width: 400px;
+        
+    }
+}
 
 /*FINE CARD N°3*/ 
+
+
