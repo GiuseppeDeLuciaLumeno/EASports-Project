@@ -12,8 +12,9 @@ function hideShowNavbar() {
   if (currentScroll > lastScroll) {
     darkSection.classList.remove("show");
     lightSection.classList.remove("show-dark");
+
   }
-  
+
   if (currentScroll < lastScroll) {
     darkSection.classList.add("show");
     lightSection.classList.add("show-dark");
@@ -61,8 +62,8 @@ document.addEventListener("click", e => {
       darkSection.querySelector(".dropdown-window").classList.add("help-open");
       latestScroll = currentScroll;
     } else return
-  } 
-  
+  }
+
   else if (darkSection.classList.contains("open")) {
     if (e.target.closest(".dark-section") == null || e.target.closest("svg.close-x")) {
       document.removeEventListener("scroll", hideShowNavbar)
@@ -72,8 +73,8 @@ document.addEventListener("click", e => {
       darkSection.querySelector(".dropdown-window").classList.remove("help-open");
       document.documentElement.scrollTop = latestScroll;
       setTimeout(() => document.addEventListener("scroll", hideShowNavbar), 501)
-    } 
-    
+    }
+
     else if (e.target.closest("svg.account")) {
       if (darkSection.querySelector(".dropdown-window").classList.contains("account-open")) {
         document.removeEventListener("scroll", hideShowNavbar)

@@ -65,23 +65,23 @@
         height: 60px;
       }
     }
-    
+
     .arrow-container-left {
       left: 0;
       padding-inline: 20px 40px;
       background: linear-gradient(90deg, rgba(242,242,242,1) 70%, rgba(242,242,242,0.5) 85%, rgba(0,212,255,0) 100%);
-      
+
       &::before {
         transform: rotate(48.5deg);
         margin-top: 9.5px;
       }
-      
+
       &::after {
         transform: rotate(-48.5deg);
         margin-top: -9.5px;
       }
     }
-    
+
     .arrow-container-right {
       right: 0;
       padding-inline: 40px 20px;
@@ -91,7 +91,7 @@
         transform: rotate(-48.5deg);
         margin-top: 9.5px;
       }
-      
+
       &::after {
         transform: rotate(48.5deg);
         margin-top: -9.5px;
@@ -107,14 +107,10 @@
     // slider's tabs
     ul {
       display: flex;
-  
+
       li {
         flex: 0 0 auto;
         list-style: none;
-  
-        a {
-          
-        }
       }
     }
 
@@ -198,7 +194,7 @@
         display: block;
       }
     }
-  
+
     // horizontal bottom line
     .border-bottom {
       align-self: flex-end;

@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use "sass:color";
 @import "../../atomic-design/2-base/resets/reset-dario";
 @import "../../atomic-design/1-abstracts/variables/colors/colors-Ultimi-giochi";
@@ -5,76 +6,88 @@
 @import "../../atomic-design/2-base/typography/games/games";
 @import "../../atomic-design/1-abstracts/mixins/header/header-ultimi-giochi";
 @import "../../atomic-design/1-abstracts/mixins/cards/mini-cards-scroll";
-//Import Bootstrap
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../atomic-design/1-abstracts/mixins/icons/icons-ultimi-giochi-giuseppe";
+
+//Import Bootstrap ESSENTIALLY REQUEST
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/containers";
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 
+
+
+
+// ABSTRACTS -----------------------------------------------------
+@import '../../atomic-design/1-abstracts/variables/font-families/font-families-dario';
+@import '../../atomic-design/1-abstracts/variables/font-sizes/font-sizes-dario';
+@import '../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-dario';
+@import '../../atomic-design/1-abstracts/variables/colors/colors-dario';
+@import '../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-josephine';
+
+@import '../../atomic-design/1-abstracts/functions/units/units-giuseppe';
+
+@import '../../atomic-design/1-abstracts/mixins/flexbox/flexbox-1-dario';
+@import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine';
+
+/* FONT-FACES ----------------------------------------------------*/
+@import '../../atomic-design/2-base/font-faces/font-faces-dario';
+
+/* TYPOGRAPHY ---------------------------------------------------------*/
+@import '../../atomic-design/2-base/typography/games/coming-soon';
+
+/* ---------------------------------------------------------------*/
+/* COMPONENTS -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* buttons -------------------------------------------------------*/
+@import '../../atomic-design/3-components/buttons/button-1-dario';
+
+/* cards -------------------------------------------------------*/
+@import '../../atomic-design/3-components/cards/cards-2-dario';
+
+/* slider tabs -------------------------------------------------------*/
+@import '../../atomic-design/3-components/tabs/tabs-1-dario';
+
+/* ---------------------------------------------------------------*/
+/* LAYOUTS -------------------------------------------------------*/
+/* ---------------------------------------------------------------*/
+
+/* navbar -------------------------*/
+@import '../../atomic-design/4-layouts/navbars/navbar-1-dario';
+
+/* hero section -------------------------*/
+@import '../../atomic-design/4-layouts/heroes/hero-1-dario';
+
+/* slider -------------------------------------------------------*/
+@import '../../atomic-design/4-layouts/sliders/slider-2-dario';
+
+/* section 'prossimamente' ------------------------------*/
+/* section positioning -------------------------*/
+@import '../../atomic-design/4-layouts/page-sections/page-section-2-dario';
+/* grid container -------------------------*/
+@import '../../atomic-design/4-layouts/grids/6-items-2-dario';
+
+/* footer -------------------------*/
+@import '../../atomic-design/4-layouts/footers/footer-1-josephine';
+
+/* coming soon -------------------------*/
+@import '../../atomic-design/6-pages/games/coming-soon';
+
+//CARDS
+@import "../../atomic-design/1-abstracts/variables/colors/colors-giuseppe";
+@import "../../atomic-design/1-abstracts/mixins/cards/-cards-2-Giuseppe.scss";
+@import "../../atomic-design/3-components/cards/cards-2-giuseppe";
+@import "../../atomic-design/responsivity/games/games";
+@import "../../atomic-design/3-components/buttons/button-2-giuseppe";
 
 //Header //
 html {
     box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
-}
-
-//Modal Black
-.modal {
-    @media (min-width: 576px) {
-        --bs-modal-margin: 1.75rem;
-    }
-
-    --bs-modal-border-color: none;
-}
-
-.modal-body {
-    padding: 7rem 0;
-
-    @media only screen and (max-width: 543px) {
-        display: flex;
-        flex-direction: column;
-        gap: 20px !important;
-
-        .flex-column {
-            -webkit-box-orient: vertical !important;
-            -webkit-box-direction: normal !important;
-            -ms-flex-direction: column !important;
-            flex-direction: row !important;
-        }
-    }
-}
-
-.modal-content {
-    background-color: $header-base-color;
-    position: relative;
-    left: 0;
-    top: 10px;
-    background-clip: initial;
-    border-radius: 0;
-}
-
-.modal-dialog {
-    margin: 0;
-    margin-top: 1.75rem;
-
-    @media (min-width: 576px) {
-        max-width: 100vw;
-        margin-right: 0;
-    }
-
-}
-
-.modal-header {
-    border-bottom: none;
-}
-
-
-
-.modal.fade .modal-dialog {
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-    transition: -webkit-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
-    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-    -webkit-transform: translate(0, 2px);
-    transform: translate(0, 2px);
-
 }
 
 .bi-x-lg {
@@ -88,10 +101,12 @@ html {
     }
 }
 
+
 form {
 
+    ///BLACK BLOCKLL
     .black-block {
-        width: 100vw;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -162,16 +177,6 @@ form {
             font-size: 14px;
             margin-bottom: 0;
         }
-
-        @media only screen and (max-width: 543px) {
-            justify-content: flex-start !important;
-            margin-inline: 10rem;
-
-            p.translate {
-                margin-left: 10px;
-            }
-        }
-
     }
 
     .create-account {
@@ -198,9 +203,8 @@ form {
             }
         }
 
-        @media only screen and (max-width: 543px) {
-            justify-content: flex-start !important;
-            margin-inline: 10rem;
+        @media only screen and (min-width: 543px) and (max-width: 575px) {
+            margin-left: 7rem;
         }
     }
 }
@@ -213,31 +217,31 @@ form {
     .create-account {
         width: 35px;
         display: flex;
-        margin-inline: 5rem !important;
+        margin-inline: 2rem !important;
     }
 
 }
 
-
-
 .lower-header {
+    box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
+    background: white;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 30px;
     padding: 0.85rem 1rem 0.5rem;
-    z-index: 2;
+    z-index: 1;
 
-    &::after {
+    &::after {                                        //invisible background
         content: "";
-        width: 100%;
-        height: 100vh;
+        width: 0%;
+        height: 0;
         position: absolute;
         top: 0;
         left: 0;
-        transition: opacity 350ms ease;
+        transition: opacity .5s ease;
         background: #161616;
         opacity: 0;
-        z-index: -1;
     }
 
     &.active::after {
@@ -249,10 +253,7 @@ form {
         left: 0;
         background: #161616;
         opacity: .8;
-        z-index: 0;
     }
-
-
 
     @media only screen and (max-width: 1030px) {
         gap: 6px;
@@ -322,7 +323,7 @@ form {
 
     position: relative;
     top: 2px;
-    display: none; //from 1031 is hidden
+    display: none; //from 1031px is hidden
 
     &.active+.modal-wrapper {
         transform: translateX(0%);
@@ -344,8 +345,8 @@ form {
 //to give fontfamily by for cycle
 @for $i from 1 to 6 {
     .ea-dropdown:nth-child(#{$i}) p {
-        font-family: map-get($ultimi-giochi-font, text);
-        font-weight: lighter;
+        font-family: map-get($ultimi-giochi-font, header);
+        font-weight: 400;
         font-size: 17px;
         color: $black;
         transition: color 200ms ease;
@@ -379,26 +380,14 @@ form {
 }
 
 
-
-.dropdown-icon-container {
-    width: 20px;
-    height: 20px;
-    position: relative;
-
-    .v-icon {
-        @include v-icons;
-    }
-}
-
-
 //Aside Modal white
 .modal-wrapper {
     @include scroll-bar-hider(none);
     background: $white;
     box-shadow: inset 30px 0px 11px -30px rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 2.5rem;
-    left: 0%;
+    position: absolute;
+    top: 0rem;
+    left: 0;
     padding: 2.5rem 2rem 6rem;
     z-index: 1;
     transform: translateX(-100%);
@@ -437,7 +426,7 @@ form {
     }
 
     .ea-play-card {
-        margin-top: 2.2rem;
+        margin-top: 3.7rem;
         position: relative;
 
         &:hover #ea-play-logo {
@@ -445,6 +434,12 @@ form {
             transform: scale(1.12);
         }
 
+        @media only screen and (max-width: 361px) {
+            img:nth-child(1) {
+                height: 320px;
+                width: 345px;
+            }
+        }
     }
 
     #ea-play-logo {
@@ -491,19 +486,96 @@ form {
             margin-left: 0;
         }
     }
+
+    @media only screen and (max-width: 361px) {
+        width: 96vw;
+        padding: 2.5rem 1rem 6rem;
+    }
 }
 
-#fixed {
+//modify boostrap class
+@media only screen and (max-width: 361px) {
+    .g-10 {
+        --bs-gutter-x: 3rem;
+    }
+}
+
+//FIRST MODAL
+#fixed-first-modal {
+    display: flex;
+    justify-content: center;
+    background: $header-base-color;
+    height: 0;
+    /* padding: 12rem 0; */
     opacity: 0;
     position: fixed;
     top: 2.5rem;
     left: 0%;
     width: 100%;
-    z-index: 0;
     overflow: hidden;
-    transition: opacity 0.20s linear;
+    transition: all 0.20s linear;
+
+    &.active {
+        height: 25rem;
+        overflow: visible;
+        opacity: 1;
+        z-index: 2;
+    }
 
     .bi-x-lg {
+        cursor: pointer;
+        font-weight: bolder;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: rgb(163, 163, 163);
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+
+//SECOND BLACK MODAL
+.second-modal-wrapper {
+    opacity: 0;
+    transition: all 0.20s linear;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 2.5rem;
+    left: 0;
+    overflow: hidden;
+    justify-items: center; //SINGOL ITEMS OF GRID
+    justify-content: center; //THE WHOLE GRID STRUCTURE
+    background: $header-base-color;
+    /* padding: 6rem 0 3rem; */
+    display: grid;
+    grid-template-columns: repeat(2, 290px);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "grid-header grid-header"
+        "grid-first-icon grid-second-icon"
+        "grid-third-icon grid-fourth-icon"
+        "grid-footer grid-footer";
+    row-gap: 30px;
+
+    &.active {
+        height: 25rem;
+        overflow: visible;
+        opacity: 1;
+        z-index: 2;
+        padding-top: 2rem;
+
+        @media only screen and (max-width: 360px) {
+            height: 26rem;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .bi-x-lg {
+        z-index: 2 !important;
         font-weight: bolder;
         position: absolute;
         top: 1rem;
@@ -515,58 +587,34 @@ form {
         }
     }
 
-    &.active {
-        overflow: visible;
-        opacity: 1;
-        z-index: 1;
-    }
-}
-
-.second-modal-wrapper {
-    background: $header-base-color;
-    padding: 6rem 0 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, 300px);
-    grid-template-rows: auto;
-    grid-template-areas:
-        "grid-header grid-header"
-        "grid-first-icon grid-second-icon"
-        "grid-third-icon grid-fourth-icon"
-        "grid-footer grid-footer";
-        row-gap: 10px;
-    justify-content: center;
-
-    .bi-x-lg {
-        color: $header-icon;
-    }
-
 
     .grid-header {
         padding-bottom: 1rem;
         grid-area: grid-header;
-        justify-self: center;
-        p{
+
+        p {
             font-size: 21px;
         }
     }
 
     .grid-first-icon {
         grid-area: grid-first-icon;
-        display: grid;
-        justify-content: center;
+        width: 350px;
 
-        .hover{
+        .hover {
 
             cursor: pointer;
-            &:hover .translate{
+
+            &:hover .translate {
                 transform: translateY(-15px);
             }
+
             .translate,
-            .text-colapse p{
+            .text-colapse p {
                 transition: transform .2s ease-in-out;
             }
 
-            &:hover .text-colapse p{
+            &:hover .text-colapse p {
                 transform: translateY(-15px);
             }
         }
@@ -588,7 +636,6 @@ form {
     }
 
     .grid-footer {
-        justify-self: flex-end;
         grid-area: grid-footer;
 
         p {
@@ -605,5 +652,265 @@ form {
         color: lightgray;
         font-family: map-get($ultimi-giochi-font, text);
         font-size: 16px;
+        margin: 0 0 0px;
     }
+
+    //RESPONSIVITY
+    @media only screen and (max-width: 768px) {
+        justify-items: flex-start;
+        row-gap: 35px;
+
+        .grid-header {
+            justify-self: center;
+        }
+
+        p {
+            margin-left: 5px;
+        }
+    }
+
+    @media only screen and (max-width: 659px) {
+        grid-template-columns: 280px 250px;
+    }
+
+    @media only screen and (max-width: 585px) {
+        justify-items: center;
+        grid-template-areas:
+            "grid-header grid-header"
+            "grid-first-icon grid-first-icon"
+            "grid-second-icon grid-second-icon"
+            "grid-third-icon grid-third-icon"
+            "grid-fourth-icon grid-fourth-icon"
+            "grid-footer grid-footer";
+        row-gap: 25px;
+
+        p {
+            margin: 0 5px 0px;
+        }
+
+        .grid-footer {
+            margin-left: 15px;
+        }
+    }
+
+    @media only screen and (max-width: 521px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media only screen and (max-width: 360px) {
+        .grid-first-icon {
+            width: 250px;
+        }
+    }
+
+    @media only screen and (max-width: 256px) {
+        .grid-first-icon {
+            width: 190px;
+        }
+    }
+
+    @media only screen and (max-width: 290px) {
+        row-gap: 20px;
+    }
+}
+
+
+//OPEN AND CLOSE MODAL BY CLICKING ANYWHERE ELSE
+.click-out {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        height: 0;
+        width: 0;
+        opacity: 0;
+        z-index: -5;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity .5s ease;
+        background: #161616;
+        opacity: 0;
+        z-index: -5;
+
+    }
+
+    &.active::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 0;
+    }
+
+    z-index: -1;
+    /* margin-top: 5rem; */
+}
+
+video {
+    max-width: 100%;
+}
+
+video+img {
+    display: none;
+}
+
+@media only screen and (min-width: 766px) and (max-width: 1023px) {
+    video+img {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    video {
+        display: none;
+    }
+
+    .top-md-0 {
+        top: 7rem !important;
+
+        @media only screen and (max-width: 765px) {
+            display: none;
+        }
+
+    }
+}
+
+.games-bg {
+    display: none;
+
+    @media only screen and (min-width: 249px) and (max-width: 765px) {
+        display: block;
+        line-height: 0;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    video+img {
+        display: none;
+    }
+}
+
+.image-position {
+    position: absolute;
+    top: 0;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        top: 6rem;
+    }
+}
+
+//SET CONTAINER NAVBAR DARIO
+.section-container {
+    z-index: 0;
+}
+
+//CARDS LAYOUT DA SISTEMARE
+.section-wrapper {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #block-position {
+        position: relative;
+    }
+}
+
+.cards-wrapper {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 1.2rem;
+}
+
+
+
+//header global position to set th e
+header {
+    /* transition: all .4s ease; */
+    z-index: 1;
+    width: 100%;
+    /*    position: fixed;
+    top: 0; */
+}
+
+/* .black-block {
+    transition: transform .4s ease;
+} */
+
+/* .black-block-hide {
+    transform: translateY(-2.5rem);
+} */
+
+/* .lower-header {
+    transition: all .4s ease;
+} */
+
+
+/* .header-hider {
+    transform: translateY(-2.5rem);
+} */
+
+.black-block{
+   transition: all .4s ease;
+   transform: translateY(-2.5rem);
+   position: fixed;
+   top: 0;
+   z-index: 3;
+}
+
+.black-block-show {
+    transform: translateY(0);
+
+}
+
+
+.lower-header{
+    position: fixed;
+    top: 0;
+    transition: all .4s ease;
+    transform: translateY(0rem);
+}
+
+
+.lower-header-show{
+    transform: translateY(2.5rem);
+}
+
+
+
+
+//classi funzionanti
+.overflow-lock-scroll {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    inset: var(--scroll) 0 0; //ATTIVATO CON JAVASCRIPT PER FARE ALLA PAGINA INSET DI SCROLL 0
+}
+
+
+.z-index-1 {
+    z-index: -1;
 }

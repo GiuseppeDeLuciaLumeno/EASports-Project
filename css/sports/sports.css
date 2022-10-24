@@ -13369,9 +13369,9 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   margin-bottom: 0;
 }
 
-#card-mobile { /* stack everything on top of eachoter*/
-  /* hover effect */
-}
+/* #card-mobile { /* stack everything on top of eachoter*/
+  /* hover effect
+} */
 #card-mobile h2, #card-mobile .h2 {
   font-size: 40px;
   font-family: "Juana W05 Bold";
