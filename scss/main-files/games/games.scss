@@ -19,8 +19,6 @@
 
 
 
-
-
 // ABSTRACTS -----------------------------------------------------
 @import '../../atomic-design/1-abstracts/variables/font-families/font-families-dario';
 @import '../../atomic-design/1-abstracts/variables/font-sizes/font-sizes-dario';
@@ -101,7 +99,7 @@ html {
     }
 }
 
-
+//BLOCCO NERO INIZIALE
 form {
 
     ///BLACK BLOCKLL
@@ -520,6 +518,16 @@ form {
         overflow: visible;
         opacity: 1;
         z-index: 2;
+    }
+
+    .first-modal-wrapper{
+       gap: 14rem;
+       @media only screen and (max-width: 575px) {
+        gap: 3rem;
+       }
+       @media only screen and (max-width: 334px) {
+        gap: 3rem;
+       }
     }
 
     .bi-x-lg {
