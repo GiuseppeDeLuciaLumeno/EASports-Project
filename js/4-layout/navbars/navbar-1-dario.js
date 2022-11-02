@@ -12,14 +12,11 @@ function hideShowNavbar() {
   if (currentScroll > lastScroll) {
     darkSection.classList.remove("show");
     lightSection.classList.remove("show-dark");
-
   }
-
   if (currentScroll < lastScroll) {
     darkSection.classList.add("show");
     lightSection.classList.add("show-dark");
   }
-
   lastScroll = currentScroll;
 }
 document.addEventListener('scroll', hideShowNavbar)
@@ -72,7 +69,9 @@ document.addEventListener("click", e => {
       darkSection.querySelector(".dropdown-window").classList.remove("account-open");
       darkSection.querySelector(".dropdown-window").classList.remove("help-open");
       document.documentElement.scrollTop = latestScroll;
-      setTimeout(() => document.addEventListener("scroll", hideShowNavbar), 501)
+      setTimeout(() => {
+        document.addEventListener("scroll", hideShowNavbar)
+      }, 501)
     }
 
     else if (e.target.closest("svg.account")) {
@@ -83,7 +82,9 @@ document.addEventListener("click", e => {
         darkSection.querySelector(".dropdown-window").classList.remove("account-open");
         darkSection.querySelector(".dropdown-window").classList.remove("help-open");
         document.documentElement.scrollTop = latestScroll;
-        setTimeout(() => document.addEventListener("scroll", hideShowNavbar), 501)
+        setTimeout(() => {
+          document.addEventListener("scroll", hideShowNavbar)
+        }, 501)
       } else if (darkSection.querySelector(".dropdown-window").classList.contains("help-open")) {
         darkSection.querySelector(".dropdown-window").classList.add("account-open");
         darkSection.querySelector(".dropdown-window").classList.remove("help-open");
@@ -96,7 +97,9 @@ document.addEventListener("click", e => {
         darkSection.querySelector(".dropdown-window").classList.remove("account-open");
         darkSection.querySelector(".dropdown-window").classList.remove("help-open");
         document.documentElement.scrollTop = latestScroll;
-        setTimeout(() => document.addEventListener("scroll", hideShowNavbar), 501)
+        setTimeout(() => {
+          document.addEventListener("scroll", hideShowNavbar)
+        }, 501)
       } else if (darkSection.querySelector(".dropdown-window").classList.contains("account-open")) {
         darkSection.querySelector(".dropdown-window").classList.remove("account-open");
         darkSection.querySelector(".dropdown-window").classList.add("help-open");
