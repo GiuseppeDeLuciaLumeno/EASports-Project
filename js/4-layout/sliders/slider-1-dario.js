@@ -124,25 +124,33 @@ function getContentWidth(elem) {
     return elemWidth - parseFloat(computedStyles.paddingLeft) - parseFloat(computedStyles.paddingRight)
 }
 
+// adjust slider's sliding position to look good also on window's resizing
 function makeSliderFollowResizing() {
-    sliderTabs.style.transition = "none"
-    const newWindowWidth = window.innerWidth
+    sliderTabs.style.transition = "none" //remove sliding transition to make the slider instantly follow window's resizing
+    const newWindowWidth = window.innerWidth //get the new window's width to check if it's widening or shrinking
     
+    //if you widen the page...
     if (newWindowWidth > previousWindowWidth) {
+        //and there's some sliding needed for the slider to reach the end...
         if (maxSlide > 0) {
+            //but the slider is slided more than the max value available
             if (slidePosition > maxSlide) {
                 slidePosition = maxSlide
                 sliderTabs.style.transform = `translateX(${-slidePosition}px)`
             }
+        // if instead no sliding is needed since the available space is enough
         } else if (maxSlide <= 0) {
             slidePosition = 0
             sliderTabs.style.transform = `translateX(${-slidePosition}px)`
         }
     }
     
+    // update the window's page for new comparison if page's resized
     previousWindowWidth = newWindowWidth
+
+    // wait for everything needed to be ended, then...
     setTimeout(() => {
-        sliderTabs.style.transition = "transform 0.5s ease-in-out"
+        sliderTabs.style.transition = "transform 0.4s"
     })
 }
 
@@ -182,7 +190,7 @@ function hideShowArrows() {
     }
 }
 
-//set the magic needed for the slider to work
+//set the magic needed for the slider to work ;-)
 function setSlider() {
     tabsWidth = document.querySelector(".wrapper-div ul").offsetWidth //update how long the slider is
     sliderContainerWidth = getContentWidth(document.querySelector(".wrapper-div")) //update how much space is for the slider to show
@@ -218,7 +226,7 @@ function slideSlider(arrow) {
 }
 
 
-
+// ACTUAL FUNCTIONING CODE
 window.addEventListener("load", () => {
     setSlider()
 })
