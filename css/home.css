@@ -2226,6 +2226,7 @@ body.sidebar-open .overlay {
   height: 50px;
   position: absolute;
   z-index: 1;
+  cursor: pointer;
   display: none;
   justify-content: center;
   align-items: center;

@@ -2,16 +2,6 @@
 
 // SLIDER LAYOUT - TO USE WITH 'SLIDER'S TABS' COMPONENT - ref: homepage 'ultime notizie' ----------------------
 
-// .slider-container#slider-container {
-//    .arrow-container.arrow-container-left {.......}
-//    ul.list {
-//        li.slider-tab-container {
-//            a.slider-tab {.......}
-//        }
-//    }
-//    .arrow-container.arrow-container-right {.......}
-//    .border-bottom
-
 @import '../../1-abstracts/variables/colors/colors-dario';
 @import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
 @import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
@@ -28,6 +18,7 @@
     height: 50px;
     position: absolute;
     z-index: 1;
+    cursor: pointer;
 
     display: none;
     justify-content: center;
