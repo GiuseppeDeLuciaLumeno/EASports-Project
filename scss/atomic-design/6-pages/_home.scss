@@ -3,6 +3,22 @@
   background-color: map-get($map: $da-color, $key: bg);
   overflow: hidden;
 
+  &:last-of-type {
+    padding-top: 40px;
+    
+    @include da-breakpoint(tablet) {
+    padding-top: 50px;
+    }
+    
+    @include da-breakpoint(desktop) {
+    padding-top: 60px;
+    }
+    
+    @include da-breakpoint(desktop-large) {
+    padding-top: 68px;
+    }
+  }
+
 
   #h3 {
     margin-bottom: 20px;
@@ -11,7 +27,6 @@
 
   #slider-container {
     align-self: flex-start;
-    margin-bottom: 40px;
   }
 
   .cards-container-1,
