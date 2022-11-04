@@ -417,7 +417,7 @@ h6.navbar-heading {
   align-items: center;
   transition: 0.1s ease;
 }
-.slider-tab-container:hover {
+.slider-tab-container:hover, .slider-tab-container:active, .slider-tab-container:focus {
   background-color: hsla(0deg, 0%, 85%, 0.8);
 }
 .slider-tab-container::before {
