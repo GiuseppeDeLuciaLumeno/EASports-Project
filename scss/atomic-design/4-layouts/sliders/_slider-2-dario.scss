@@ -2,232 +2,226 @@
 
 // SLIDER LAYOUT - TO USE WITH 'SLIDER'S TABS' COMPONENT - ref: homepage 'ultime notizie' ----------------------
 
-// .slider-container#slider-container {
-//    .arrow-container.arrow-container-left {.......}
-//    ul.list {
-//        li.slider-tab-container {
-//            a.slider-tab {.......}
-//        }
-//    }
-//    .dropdown {
-//      .dropdown-button {
-//        p {...}
-//        svg {...}
-//      }
-//      .dropdown-menu {
-//        .choice {...)
-//              .
-//              .
-//              .
-//      }
-//    .arrow-container.arrow-container-right {.......}
-//    .border-bottom
-
 @use 'sass:math';
 @import '../../1-abstracts/variables/colors/colors-dario';
 @import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
 @import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
 @import '../../1-abstracts/functions/units/units-giuseppe';
 
+.slider-container {
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-.section-container {
-  position: relative;
+  padding-inline: 0;
+  display: flex;
+  justify-content: center;
+  
+  // arrows
+  .arrow-container {
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
 
-  .slider-container {
-    align-self: flex-start;
-
-    display: flex;
-    justify-content: space-between;
+    display: none;
+    justify-content: center;
     align-items: center;
 
-    // arrows
-    .arrow-container {
-      height: 50px;
+    &::before, &::after {
+      content: '';
+      display: inline-block;
+      height: 3px;
+      width: 15px;
+      border-radius: 3px;
+      background-color: map-get($map: $da-color, $key: accent);
+
       position: absolute;
-      z-index: 1;
+    }
 
+    @include da-breakpoint(tablet) {
+      height: 60px;
+    }
+  }
+  
+  .arrow-container-left {
+    left: 0;
+    padding-inline: 20px 40px;
+    
+    &::before {
+      transform: rotate(48.5deg);
+      margin-top: 9.5px;
+    }
+    
+    &::after {
+      transform: rotate(-48.5deg);
+      margin-top: -9.5px;
+    }
+  }
+  
+  .arrow-container-right {
+    right: 0;
+    padding-inline: 40px 20px;
+
+    &::before {
+      transform: rotate(-48.5deg);
+      margin-top: 9.5px;
+    }
+    
+    &::after {
+      transform: rotate(48.5deg);
+      margin-top: -9.5px;
+    }
+  }
+
+  // slider's tabs
+  .wrapper-div {
+    --padding-inline: 7.5vw;
+    --mask-width: 12px;
+    --tabs-mask-width: calc(var(--padding-inline) + var(--mask-width));
+    --tabs-mask-width-outside: calc(var(--padding-inline));
+
+    width: 100%;
+    padding-inline: var(--padding-inline);
+
+    @include da-breakpoint(tablet) {
+      --tabs-mask-width: 60px;
+      --tabs-mask-width-outside: calc(var(--tabs-mask-width) / 2);
+    }
+    
+    @include da-breakpoint(desktop) {
+      --padding-inline: 7.4218vw;
+    }
+    
+    @include da-breakpoint(desktop-large) {
+      --padding-inline: calc((100vw - 1120px) / 2);
+    }
+
+    ul {
+      width: max-content;
       display: flex;
-      justify-content: center;
+      transition: transform 0.4s;
+    }
+  }
+  .wrapper-div.hide-left {
+    -webkit-mask-image: linear-gradient( 90deg, transparent calc(var(--tabs-mask-width-outside)), #000 var(--tabs-mask-width), black calc(100% - var(--tabs-mask-width-outside)), transparent calc(100% - var(--tabs-mask-width-outside) + 1px));
+  }
+  .wrapper-div.hide-right {
+    -webkit-mask-image: linear-gradient( 90deg, transparent calc(var(--tabs-mask-width-outside) - 1px), #000 var(--tabs-mask-width-outside), #000 calc(100% - var(--tabs-mask-width)), transparent calc(100% - var(--tabs-mask-width-outside)));
+  }
+  .wrapper-div.hide-both {
+    -webkit-mask-image: linear-gradient( 90deg, transparent calc(var(--tabs-mask-width-outside)), black var(--tabs-mask-width), #000 calc(100% - var(--tabs-mask-width)), transparent calc(100% - var(--tabs-mask-width-outside)) );
+  }
+
+  // dropdown
+  .dropdown {
+    position: relative;
+    cursor: pointer;
+
+    .dropdown-button {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
+      gap: 1rem;
 
-      &::before, &::after {
-        content: '';
-        display: inline-block;
-        height: 3px;
-        width: 15px;
-        border-radius: 3px;
-        background-color: map-get($map: $da-color, $key: borders-dark);
+      background-color: lightblue;
 
-        position: absolute;
-      }
+      padding-inline: rem(24px);
+      height: rem(48px);
+      background-color: hsl(0, 0%, 87%);
 
-      @include da-breakpoint(tablet) {
-        height: 60px;
+      svg {
+        height: 1rem;
+        width: 1rem;
       }
     }
 
-    .arrow-container-left {
-      left: 0;
-      padding-inline: 20px 40px;
-      background: linear-gradient(90deg, rgba(242,242,242,1) 70%, rgba(242,242,242,0.5) 85%, rgba(0,212,255,0) 100%);
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      width: 110%;
+      top: 0;
+      z-index: 110;
 
-      &::before {
-        transform: rotate(48.5deg);
-        margin-top: 9.5px;
-      }
-
-      &::after {
-        transform: rotate(-48.5deg);
-        margin-top: -9.5px;
-      }
-    }
-
-    .arrow-container-right {
-      right: 0;
-      padding-inline: 40px 20px;
-      background: linear-gradient(90deg, rgba(0,212,255,0) 0%, rgba(242,242,242,0.5) 15%, rgba(242,242,242,1) 30%);
-
-      &::before {
-        transform: rotate(-48.5deg);
-        margin-top: 9.5px;
-      }
-
-      &::after {
-        transform: rotate(48.5deg);
-        margin-top: -9.5px;
-      }
-    }
-
-    @media(min-width: 56.6875rem) {
-      .arrow-container {
+      &::-webkit-scrollbar {
         display: none;
       }
-    }
 
-    // slider's tabs
-    ul {
-      display: flex;
+      background-color: hsl(0, 0%, 87%);
+      padding-inline: 24px 40px;
 
-      li {
-        flex: 0 0 auto;
-        list-style: none;
-      }
-    }
+      border: 2px solid map-get($map: $da-color, $key: borders);
+      border-radius: 2px;
 
-    // dropdown
-    .dropdown {
-      position: relative;
-      cursor: pointer;
+      height: 215px;
+      overflow: scroll;
 
-      .dropdown-button {
+      .choice {
+        line-height: 26.4px;
+        padding-block: 9px;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
-
-        background-color: lightblue;
-
-        padding-inline: rem(24px);
-        height: rem(48px);
-        background-color: hsl(0, 0%, 87%);
 
         svg {
-          height: 1rem;
-          width: 1rem;
-        }
-      }
-
-      .dropdown-menu {
-        display: none;
-        position: absolute;
-        width: 110%;
-        top: 0;
-        z-index: 11;
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
-
-        background-color: hsl(0, 0%, 87%);
-        padding-inline: 24px 40px;
-
-        border: 2px solid map-get($map: $da-color, $key: borders);
-        border-radius: 2px;
-
-        height: 215px;
-        overflow: scroll;
-
-        .choice {
-          line-height: 26.4px;
-          padding-block: 9px;
-
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          svg {
-            display: inline-block;
-            height: 16px;
-
-            transition: 0.1s ease-in-out;
-          }
+          display: inline-block;
+          height: 16px;
 
           transition: 0.1s ease-in-out;
         }
 
-        .choice:hover {
-          padding-left: 8px;
+        transition: 0.1s ease-in-out;
+      }
 
-          svg {
-            transform: translateX(8px);
-          }
-        }
+      .choice:hover {
+        padding-left: 8px;
 
-        .choice + .choice {
-          border-top: 2px solid map-get($map: $da-color, $key: borders);
+        svg {
+          transform: translateX(8px);
         }
       }
-    }
 
-    .dropdown.active {
-      .dropdown-menu {
-        display: block;
+      .choice + .choice {
+        border-top: 2px solid map-get($map: $da-color, $key: borders);
       }
     }
-
-    // horizontal bottom line
-    .border-bottom {
-      align-self: flex-end;
-
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      margin-top: -2px;
-      left: 0;
-      background-color: map-get($map: $da-color, $key: borders);
-      z-index: 2;
-
-      @include da-breakpoint-down(tablet) {
-        bottom: -2px;
-      }
+  }
+  .dropdown.active {
+    .dropdown-menu {
+      display: block;
     }
+  }
 
-    // show slider or dropdown
-    @include da-breakpoint-down(tablet) {
-      & ul, & .arrow-container {
-        display: none !important;
-      }
-    }
+  // horizontal bottom line
+  .border-bottom {
+    align-self: flex-end;
 
-    @include da-breakpoint(tablet) {
-      .dropdown {
-        display: none;
-      }
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    margin-top: -2px;
+    left: 0;
+    background-color: map-get($map: $da-color, $key: borders);
+    z-index: 2;
+  }
+
+  // show slider or dropdown
+  @include da-breakpoint-down(tablet) {
+    justify-content: flex-start;
+    padding-inline: 7.5vw;
+    overflow-x: unset;
+
+    & .wrapper-div, & .arrow-container {
+      display: none !important;
     }
   }
 
   @include da-breakpoint(tablet) {
-    overflow-x: hidden;
+    .dropdown {
+      display: none;
+    }
   }
 }
 // SLIDER LAYOUT - END ---------------------------------------------------------
