@@ -109,6 +109,9 @@ const arrowSX = document.querySelector(".arrow-container-left")
 const arrowDX = document.querySelector(".arrow-container-right")
 const sliderContainer = document.querySelector(".wrapper-div")
 const sliderTabs = document.querySelector(".wrapper-div ul")
+const startEvents = ["mousedown", "touchstart"]
+const endEvents = ["mouseup", "mouseleave", "touchend"]
+const moveEvents = ["mousemove", "touchmove"]
 
 let tabsWidth //how long the slider is
 let sliderContainerWidth //how much available space is for the slider to show
@@ -116,6 +119,8 @@ let slidePosition = 0 //how much the slider il slided
 let maxSlide //how much sliding is needed for the slider to reach the end
 let movement //how much the slider il slided at every click
 let previousWindowWidth = window.innerWidth //browser window width
+let pressed = false //if the slider is being pressed or not
+let startX
 
 // get the actual width of an element content box
 function getContentWidth(elem) {
@@ -158,7 +163,7 @@ function makeSliderFollowResizing() {
 function hideShowArrows() {
     // if scroll is needed...
     if (tabsWidth > sliderContainerWidth) {
-        // and the slider il nor at the start or at the end
+        // and the slider is nor at the start or at the end
         if (slidePosition > 0 && slidePosition < maxSlide) {
             arrowSX.style.display = "flex"
             arrowDX.style.display = "flex"
@@ -225,10 +230,46 @@ function slideSlider(arrow) {
     })
 }
 
+function dragSlider() {
+    startEvents.forEach(eventTupe => {
+        sliderContainer.addEventListener(eventTupe, e => {
+            pressed = true
+            startX = e.pageX
+        })
+    })
+    
+    endEvents.forEach(eventTupe => {
+        window.addEventListener(eventTupe, () => {
+            pressed = false
+        })
+    })
+
+    moveEvents.forEach(eventTupe => {
+        window.addEventListener(eventTupe, e => {
+            if (!pressed) return
+    
+            e.preventDefault()
+            const x = e.pageX
+            slidePosition += startX - x
+            
+            sliderTabs.style.transition = "none"
+            if (slidePosition < 0) slidePosition = 0
+            else if (slidePosition > maxSlide) slidePosition = maxSlide
+            sliderTabs.style.transform = `translateX(${-slidePosition}px)`
+            setTimeout(() => {
+                sliderTabs.style.transition = "transform 0.4s"
+            }, 500)
+    
+            startX = x
+            hideShowArrows()
+        })
+    })
+}
 
 // ACTUAL FUNCTIONING CODE
 window.addEventListener("load", () => {
     setSlider()
+    dragSlider()
 })
 
 slideSlider(arrowSX)
