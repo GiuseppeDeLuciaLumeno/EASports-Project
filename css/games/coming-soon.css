@@ -699,6 +699,10 @@ h6.navbar-heading {
   scroll-behavior: auto !important;
 }
 
+body > *:not(:first-child) {
+  pointer-events: auto;
+}
+
 .dark-section {
   height: 2.5rem;
   overflow: hidden;
@@ -1015,6 +1019,10 @@ body.navbar-open {
   overflow: hidden;
   position: fixed;
   inset: var(--scroll) 0 0;
+}
+
+body > *:not(:first-child).navbar-open {
+  pointer-events: none;
 }
 
 .light-section {
