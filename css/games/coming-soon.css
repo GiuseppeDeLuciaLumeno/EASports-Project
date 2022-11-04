@@ -1824,6 +1824,7 @@ aside {
   z-index: 130;
   pointer-events: none;
   opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.42, 0, 0.19, 0.98);
 }
 
 body.sidebar-open {
