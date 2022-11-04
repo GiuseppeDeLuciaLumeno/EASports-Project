@@ -2931,6 +2931,14 @@ footer {
   }
 }
 
+body > *:not(:first-child) {
+  pointer-events: auto;
+}
+
+body > *:not(:first-child).navbar-open {
+  pointer-events: none;
+}
+
 #ultime-novita {
   background-color: hsl(0deg, 0%, 95%);
   overflow: hidden;
