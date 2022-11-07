@@ -9,6 +9,13 @@
 @import '../../1-abstracts/functions/units/units-giuseppe';
 @import '../../2-base/typography/games/coming-soon';
 
+* {
+  scroll-behavior: auto !important;
+}
+body > *:not(:first-child) {
+  pointer-events: auto;
+}
+
 .dark-section {
   height: rem(40px);
   overflow: hidden;
@@ -335,6 +342,9 @@ body.navbar-open {
   position: fixed;
   inset: var(--scroll) 0 0;
 }
+body > *:not(:first-child).navbar-open {
+  pointer-events: none;
+}
 
 .light-section {
   @include flexbox($justify-content: flex-start, $align-items: stretch);
@@ -409,14 +419,14 @@ body.navbar-open {
     align-self: center;
   }
 
-  .dropdowns {
+  .da-dropdowns {
     @include flexbox($justify-content: flex-start, $align-items: stretch);
     gap: 20px;
     margin-left: 1.5rem;
 
     display: none;
 
-    .dropdown {
+    .da-dropdown {
       position: relative;
       color: map-get($map: $da-color, $key: dark);
 
@@ -464,7 +474,7 @@ body.navbar-open {
         }
       }
 
-      .dropdown-menu-wrapper {
+      .da-dropdown-menu-wrapper {
         position: absolute;
         top: 50px;
         left: 0;
@@ -478,7 +488,7 @@ body.navbar-open {
 
         transition: transform 0.3s cubic-bezier(0.5, 0.25, 0.015, 1);
 
-        .dropdown-menu {
+        .da-dropdown-menu {
           background-color: map-get($map: $da-color, $key: white-tr-100);
 
           border-radius: 4px;
@@ -518,8 +528,8 @@ body.navbar-open {
       }
     }
 
-    .dropdown:first-of-type {
-      .dropdown-menu {
+    .da-dropdown:first-of-type {
+      .da-dropdown-menu {
         @include flexbox($align-items: flex-start);
         gap: 50px;
         padding-block: 40px 50px;
@@ -547,7 +557,7 @@ body.navbar-open {
       }
     }
 
-    .dropdown:hover {
+    .da-dropdown:hover {
       .dropdown-button {
         p {
           color: map-get($map: $da-color, $key: accent);
@@ -564,11 +574,11 @@ body.navbar-open {
         }
       }
 
-      .dropdown-menu-wrapper {
+      .da-dropdown-menu-wrapper {
         pointer-events: auto;
         transform: scaleY(1);
 
-        .dropdown-menu {
+        .da-dropdown-menu {
           h3 {
             transform: translateY(0);
             opacity: 1;
@@ -648,7 +658,7 @@ body.navbar-open {
         }
       }
 
-      .dropdowns {
+      .da-dropdowns {
         display: flex;
       }
     }
@@ -658,13 +668,13 @@ body.navbar-open {
     & {
       height: rem(60px);
 
-      .dropdowns {
+      .da-dropdowns {
         margin-left: 1.75rem;
         gap: 35px;
 
-        .dropdown {
-          .dropdown-menu-wrapper {
-            .dropdown-menu {
+        .da-dropdown {
+          .da-dropdown-menu-wrapper {
+            .da-dropdown-menu {
               margin-top: 18px;
             }
           }
