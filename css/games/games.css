@@ -11036,6 +11036,10 @@ body.sidebar-open .overlay {
   }
 }
 
+.video-wrapper {
+  margin-top: 5rem;
+}
+
 video {
   max-width: 100%;
 }
