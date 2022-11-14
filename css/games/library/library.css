@@ -7651,6 +7651,10 @@ h6.navbar-heading {
   scroll-behavior: auto !important;
 }
 
+body > *:not(:first-child) {
+  pointer-events: auto;
+}
+
 .dark-section {
   height: 2.5rem;
   overflow: hidden;
@@ -7967,6 +7971,10 @@ body.navbar-open {
   overflow: hidden;
   position: fixed;
   inset: var(--scroll) 0 0;
+}
+
+body > *:not(:first-child).navbar-open {
+  pointer-events: none;
 }
 
 .light-section {
@@ -9432,6 +9440,10 @@ body {
   height: 200px;
   margin-left: 30px;
   margin-right: 30px;
+  transition: box-shadow 0.3s ease;
+}
+.img_card:hover {
+  box-shadow: 0px 22px 19px -6px #000000;
 }
 
 .subtitle {
@@ -9463,38 +9475,11 @@ body {
   width: 357px;
   padding: 0px;
   margin: 10px 10px 10px 0px;
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
 }
 #card_gio:hover {
-  -webkit-animation: shadow-drop-2-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: shadow-drop-2-br 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-@-webkit-keyframes shadow-drop-2-br {
-  0% {
-    -webkit-transform: translateZ(0) translateX(0) translateY(0);
-    transform: translateZ(0) translateX(0) translateY(0);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    -webkit-transform: translateZ(50px) translateX(-12px) translateY(-12px);
-    transform: translateZ(50px) translateX(-12px) translateY(-12px);
-    -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-  }
-}
-@keyframes shadow-drop-2-br {
-  0% {
-    -webkit-transform: translateZ(0) translateX(0) translateY(0);
-    transform: translateZ(0) translateX(0) translateY(0);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    -webkit-transform: translateZ(50px) translateX(-12px) translateY(-12px);
-    transform: translateZ(50px) translateX(-12px) translateY(-12px);
-    -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-    box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-  }
+  transform: translateY(-10px);
 }
 
 @media screen and (max-width: 912px) {

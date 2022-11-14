@@ -47,6 +47,12 @@ body{
     height: 200px;
   margin-left: 30px;
    margin-right: 30px;
+   transition: box-shadow .3s ease;
+
+   &:hover{
+    box-shadow: 0px 22px 19px -6px #000000;
+    }
+   
 }
 
 
@@ -86,41 +92,12 @@ body{
     width: 357px;
     padding: 0px;
     margin:10px 10px 10px 0px;
-    
+    transition: transform 0.2s ease-in;
+    cursor: pointer;
 
  &:hover{
+  transform: translateY(-10px);
   
-    
-    -webkit-animation: shadow-drop-2-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: shadow-drop-2-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            @-webkit-keyframes shadow-drop-2-br {
-                0% {
-                  -webkit-transform: translateZ(0) translateX(0) translateY(0);
-                          transform: translateZ(0) translateX(0) translateY(0);
-                  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-                          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-                }
-                100% {
-                  -webkit-transform: translateZ(50px) translateX(-12px) translateY(-12px);
-                          transform: translateZ(50px) translateX(-12px) translateY(-12px);
-                  -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-                          box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-                }
-              }
-              @keyframes shadow-drop-2-br {
-                0% {
-                  -webkit-transform: translateZ(0) translateX(0) translateY(0);
-                          transform: translateZ(0) translateX(0) translateY(0);
-                  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-                          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-                }
-                100% {
-                  -webkit-transform: translateZ(50px) translateX(-12px) translateY(-12px);
-                          transform: translateZ(50px) translateX(-12px) translateY(-12px);
-                  -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-                          box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-                }
-              }        
  }
 }
 
