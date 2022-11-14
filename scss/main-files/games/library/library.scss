@@ -9,11 +9,14 @@
 @import "../../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 @import '../../../../node_modules/bootstrap/scss/card';
 @import '../../../atomic-design/2-base/resets/reset-dario';
+@import '../../../atomic-design/3-components/tabs/tabs-1-dario';
+@import '../../../atomic-design/4-layouts/sliders/slider-1-dario';
 @import '../../../atomic-design/4-layouts/navbars/navbar-1-dario';
 @import '../../../atomic-design/4-layouts/sidebars/sidebars-1-dario';
 @import '../../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-josephine';
 @import '../../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine';
 @import '../../../atomic-design/4-layouts/footers/footer-1-josephine';
+
 
 body{
     font-family: ElectronicArtsText;
