@@ -4087,10 +4087,16 @@ body > *:not(:first-child).navbar-open {
 }
 /* Footer Giorgia (PLAY -GENITORI -SOCIAL)*/
 @media only screen and (max-width: 768px) {
+  .a_gio {
+    width: 50px;
+  }
   .play {
     display: flex;
     position: absolute;
     flex-direction: column;
+    left: 50px;
+    top: 50px;
+    width: 100px;
     /* padding: 32px 396px 32px 60px; */
   }
   .scritta_play {
@@ -4100,6 +4106,24 @@ body > *:not(:first-child).navbar-open {
     width: 335px;
     height: 100px;
     font-size: 27px;
+    bottom: 30px;
+  }
+  .iscriviti_subito1 {
+    cursor: pointer;
+    background: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 15px 30px;
+    transition: padding 0.1s;
+    font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    opacity: 0.9;
+    margin: 100px 900px 0px 0px;
+    right: 250px;
+  }
+  .iscriviti_subito1:hover {
+    padding: 18px 35px;
   }
   .blocco_genitori {
     display: flex;
@@ -4112,7 +4136,7 @@ body > *:not(:first-child).navbar-open {
     padding: 32px 0px 16px 0px;
   }
   .genitori_gio {
-    width: 600px;
+    width: 400px;
     height: 70.22;
     color: black;
   }
@@ -4132,9 +4156,12 @@ body > *:not(:first-child).navbar-open {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    width: 648px;
+    width: 300px;
     height: 118px;
     padding-bottom: 10px;
+  }
+  .blocco_social {
+    padding-top: 50px;
   }
 }
 @media only screen and (max-width: 425px) {
