@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../../css/games/library/library.css">
     <script src="../../../js/4-layout/navbars/navbar-1-dario.js" defer></script>
     <script src="../../../js/4-layout/sidebars/sidebar-1-dario.js" defer></script>
+    <script src="../../../js/4-layout/sliders/slider-1-dario.js" defer></script>
     
 </head>
 <body>
@@ -383,9 +384,64 @@
     </div>
     
     <!-- FINE NAVBAR -->
-
     
 
+    <div class="video-wrapper position-relative">
+      <video autoplay loop muted source media="(max-width: 1920px)"
+          src="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/07/ea-mashup-video-7x2-xl.mp4" source
+          media="(max-width: 3080px)"
+          src="https://media.contentapi.ea.com/content/dam/eacom/videos/2022/07/ea-mashup-video-7x2-xl.mp4"
+          width="3080px">
+      </video>
+
+      <img src="../../../assets/img/Ultimi-giochi/ea-hero-md-bg-mashup-trailer-7x2-xl.jpg.adapt.crop5x2.1455w.jpg"
+          alt="games">
+
+      <div class="games-bg">
+          <img src="../../../assets/img/Ultimi-giochi/ea-hero-md-bg-mashup-trailer-7x2-xl.jpg.adapt.crop16x9.767w.jpg"
+              alt="games">
+      </div>
+
+      <picture class="image-position">
+          <source media="(max-width: 1920px)" srcset="../../assets/img/Games_ComingSoon/hero-pegi-7x2-1920w.png">
+          <source media="(max-width: 1023px)" srcset="../../assets/img/Games_ComingSoon/hero-pegi-2x1-1023w.png">
+          <source media="(max-width: 1455px)" srcset="">
+          <img src="../../../assets/img/Games_ComingSoon/hero-pegi-5x2-1455w.png" alt="pegi logo">
+      </picture>
+  </div>
+<div class="slider-container" id="slider-container">
+      <div class="arrow-container arrow-container-left"></div>
+      <div class="wrapper-div hide-left">
+        <ul class="list">
+          <li class="slider-tab-container active" onclick="show1()">
+            <a class="home-tabs slider-tab">Libreria</a>
+          </li>
+          <li class="slider-tab-container" onclick="show2()">
+            <a class="home-tabs slider-tab">Generi</a>
+          </li>
+          <li class="slider-tab-container" onclick="show3()">
+            <a class="home-tabs slider-tab">Piattaforme</a>
+          </li>
+          <li class="slider-tab-container" onclick="show4()">
+            <a class="home-tabs slider-tab">Classificazione Età</a>
+          </li>
+          <li class="slider-tab-container" onclick="show5()">
+            <a class="home-tabs slider-tab">Modalità Di Gioco</a>
+          </li>
+         <!-- <li class="slider-tab-container" onclick="show6()">
+            <a class="home-tabs slider-tab">The Sims™ 4</a>
+          </li>
+          <li class="slider-tab-container" onclick="show7()">
+            <a class="home-tabs slider-tab">Battlefield</a>
+          </li>
+          <li class="slider-tab-container" onclick="show8()">
+            <a class="home-tabs slider-tab">Inside EA</a>
+          </li>-->
+        </ul>
+      </div>
+      <div class="arrow-container arrow-container-right"></div>
+      <div class="border-bottom"></div>
+    </div>
   <div class="titolo"><h1 class="generi_title">Generi</h1></div>
 
 
@@ -394,7 +450,8 @@
         <div class="container">
             <div class="row g-3 d-flex justify-content-center">
                 <div id="card_gio" class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
-                    <div class="transformimg">
+                    
+                  <div class="transformimg">
                     
                         <img class="img_card" src="/assets/img/card-grigia.png" alt="">
                         <h4 class="subtitle">Azione</h4>
@@ -467,7 +524,7 @@
                     <div class="transformimg2">
                         <img class="img_card" src="/assets/img/card-grigia.png" alt="">
                         <h4 class="subtitle">Corse</h4>
-                        <img class="arrow" alt=" " data-src="https://media.contentapi.ea.com/content/dam/eacom/common/learn-more-arrow-light.svg" src="https://media.contentapi.ea.com/content/dam/eacom/common/learn-more-arrow-light.svg">
+                        <img class="arrow_gio" alt=" " data-src="https://media.contentapi.ea.com/content/dam/eacom/common/learn-more-arrow-light.svg" src="https://media.contentapi.ea.com/content/dam/eacom/common/learn-more-arrow-light.svg">
                     </div>
                 </div>
                 <div id="card_gio" class="col-lg-4 col-md-6 col-sm-12">
@@ -742,7 +799,7 @@
 
 
    </main>
-</div>
+
 <footer>
     <div class="footer-main-link">
         <div class="logo">
