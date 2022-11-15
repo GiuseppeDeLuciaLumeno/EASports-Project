@@ -3397,7 +3397,22 @@ body > *:not(:first-child).navbar-open {
   width: 884px;
   height: 81px;
 }
-.linkf_gio div a {
+.linkf_gio div a:nth-child(1) {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+}
+.linkf_gio div a:nth-child(2) {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+}
+.linkf_gio div a:nth-child(3) {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+}
+.linkf_gio div a:nth-child(4) {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+}
+.linkf_gio div a:nth-child(5) {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+}
+.linkf_gio div a:nth-child(6) {
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
 }
 

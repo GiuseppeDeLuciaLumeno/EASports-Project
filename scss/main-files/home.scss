@@ -367,12 +367,10 @@
   flex-wrap: wrap;
   width: 884px;
   height: 81px;
-
-  // @for $i from 1 to 7 {
-  //  div a:nth-child(#{$i});
-  // }
-  div a {
-    font-family: map-get($ultimi-giochi-font, text);
+  @for $i from 1 to 7 {
+   div a:nth-child(#{$i}) {
+      font-family: map-get($ultimi-giochi-font, text)
+    }
   }
 }
 
