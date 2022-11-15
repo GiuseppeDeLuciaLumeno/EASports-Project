@@ -13,7 +13,7 @@ const notDarkNavbar = document.querySelectorAll("body > *:not(:first-child)")
 
 let lastScroll = 0;
 function hideShowNavbar() {
-  const currentScroll = window.pageYOffset;
+  const currentScroll = window.scrollY;
 
   if (currentScroll > lastScroll) {
     darkSection.classList.remove("show");
