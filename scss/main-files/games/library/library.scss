@@ -1,17 +1,17 @@
 @import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
 
 
-   /*INIZO NAVBAR*/ 
+   /*INIZO NAVBAR*/
 
-   /*FINE NAVBAR*/ 
+   /*FINE NAVBAR*/
 
-   /*INIZIO CARD*/ 
-    
+   /*INIZIO CARD*/
+
 .titolo{
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
 
 .generi_title{
@@ -38,7 +38,7 @@
     top: 70px;
     left: 40px;
     color: white;
-    
+
    }
 
 .arrow{
@@ -46,10 +46,10 @@
     position: absolute;
     top: 130px;
     left: 40px;
-    
+
 
     &:hover{
-    
+
     width: 42px;
     height: 42px;
     transition: 1s;
@@ -62,9 +62,7 @@
 
 }
 
-.card_gio:hover{
-   
-}
+
 
 @media screen and (max-width: 912px){
     .img_card{
@@ -76,12 +74,12 @@
     .transformimg{
         display: flex;
         position: relative;
-        
+
     }
     .transformimg2{
         display: flex;
         position: relative;
-    
+
     }
     .subtitle{
         display: flex;
@@ -96,8 +94,8 @@
 
 @media screen and (max-width: 576px){
     .img_card{
-        display: none;  
-      
+        display: none;
+
     }
 
     .transformimg{
@@ -120,16 +118,16 @@
         top: 40px;
         left: 150px;
         color: white;
-    
-        
+
+
        }
 }
 
 
 
-/*FINE CARD*/ 
+/*FINE CARD*/
 
-/*INIZIO PIATTAFORME*/ 
+/*INIZIO PIATTAFORME*/
 .container2{
     margin-top:100px;
 }
@@ -137,7 +135,7 @@
 .transformimg3{
     display: flex;
     position: absolute;
-    
+
 }
 
 
@@ -147,7 +145,7 @@
     height: 1600px;
     padding-right: 60px;
     padding-left: 150px;
-    
+
 }
 
 .piattaforme{
@@ -160,7 +158,7 @@
     color: white;
     display: flex;
     justify-content: center;
-    
+
 
 }
 
@@ -183,7 +181,7 @@
     position:absolute;
     top:150px;
     left:100px;
-    
+
 }
 
 .psp_portatile{
@@ -201,7 +199,7 @@
     position:absolute;
     top:150px;
     left:130px;
-    
+
 }
 
 .subtitle_plt2{
@@ -210,7 +208,7 @@
     position:absolute;
     top:150px;
     left:135px;
-    
+
 }
 
 .subtitle_plt3{
@@ -219,7 +217,7 @@
     position:absolute;
     top:150px;
     left:140px;
-    
+
 }
 
 
@@ -229,7 +227,7 @@
     position:absolute;
     top:150px;
     left:80px;
-    
+
 }
 
 .subtitle_plt5{
@@ -238,7 +236,7 @@
     position:absolute;
     top:150px;
     left:140px;
-    
+
 }
 
 .subtitle_plt6{
@@ -247,7 +245,7 @@
     position:absolute;
     top:150px;
     left:145px;
-    
+
 }
 
 .subtitle_plt7{
@@ -256,7 +254,7 @@
     position:absolute;
     top:150px;
     left:130px;
-    
+
 }
 
 .subtitle_plt8{
@@ -265,7 +263,7 @@
     position:absolute;
     top:150px;
     left:140px;
-    
+
 }
 
 @media screen and (max-width: 912px){
@@ -275,9 +273,9 @@
         height: 2100px;
         padding-right: 0px;
         padding-left: 0px;
-        
+
     }
-    
+
     .piattaforme{
         height: 200px;
         width: 300px;
@@ -293,9 +291,9 @@
         height: 3700px;
         padding-right: 0px;
         padding-left: 0px;
-        
+
     }
-    
+
     .piattaforme{
         height: 200px;
         width: 300px;
@@ -308,12 +306,12 @@
         margin-left: 30px;
         margin-right: 30px;
     }
-    
+
 }
-/*FINE PIATTAFORME*/ 
+/*FINE PIATTAFORME*/
 
 
-/*INIZIO CARD N°2*/ 
+/*INIZIO CARD N°2*/
 
 
 .age_title{
@@ -324,7 +322,7 @@
 /*FINE CARD N°2*/
 
 
-/*INIZIO CARD N°3*/ 
+/*INIZIO CARD N°3*/
 
 .contenitore4{
     display: flex;
@@ -334,7 +332,7 @@
 
 .paragrafo{
     width: 800px;
-    
+
 }
 
 .p_title{
@@ -344,4 +342,4 @@
 }
 
 
-/*FINE CARD N°3*/ 
+/*FINE CARD N°3*/
