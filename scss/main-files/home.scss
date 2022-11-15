@@ -22,6 +22,7 @@
 @import "../atomic-design/2-base/font-faces/font-faces-dario";
 @import "../atomic-design/2-base/resets/reset-dario";
 @import "../atomic-design/2-base/typography/home";
+@import "../../scss/atomic-design/2-base/typography/games/games";
 
 // COMPONENTS --------------------------------------------------------------------------------------------
 @import "../atomic-design/3-components/buttons/button-1-giuseppe";
@@ -103,8 +104,8 @@
 
   .textposition-2 {
     @include flex(flex, space-between, center);
-    @include space(2rem, 1rem);
-    @include size(20vh, 100%);
+    @include space(0rem, 1rem);
+    @include size(0vh, 100%);
     //background-image: url(/assets/img/HomePage/form-color.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -128,6 +129,8 @@
     }
   }
 }
+
+
 /* Start Giochi in evidenza */
 .section-wrapper {
   display: flex;
@@ -206,6 +209,7 @@
   margin-bottom: 24px;
   justify-content: center;
   align-items: center;
+  font-family: map-get($ultimi-giochi-font, heading);
 }
 
 .img_play {
@@ -244,6 +248,7 @@
   align-items: center;
   justify-content: center;
   margin: 0rem 0rem 0rem;
+  font-family: map-get($ultimi-giochi-font, text);
 }
 
 .iscriviti_subito1 {
@@ -287,6 +292,9 @@
   width: 500px;
   height: 70.22;
   color: black;
+  .genitori {
+    font-family: map-get($ultimi-giochi-font, heading);
+  }
 }
 
 /*.bottone_genitori{
@@ -328,7 +336,7 @@
   border-radius: 3px;
   padding: 15px 30px;
   transition: padding 0.1s;
-  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-family: map-get($ultimi-giochi-font, text);
   font-size: 18px;
   color: #161616;
   opacity: 0.9;
@@ -356,6 +364,13 @@
   flex-wrap: wrap;
   width: 884px;
   height: 81px;
+
+  // @for $i from 1 to 7 {
+  //  div a:nth-child(#{$i});
+  // }
+  div a {
+    font-family: map-get($ultimi-giochi-font, text);
+  }
 }
 
 .link_gio {
@@ -379,6 +394,9 @@
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 13px;
+  h3 {
+    font-family: map-get($ultimi-giochi-font, heading);
+  }
 }
 
 .blocco_loghi {

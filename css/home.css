@@ -3069,9 +3069,9 @@ body > *:not(:first-child).navbar-open {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem;
+  margin: 0rem;
   gap: 1rem;
-  height: 20vh;
+  height: 0vh;
   width: 100%;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -3172,6 +3172,7 @@ body > *:not(:first-child).navbar-open {
   margin-bottom: 24px;
   justify-content: center;
   align-items: center;
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
 }
 
 .img_play {
@@ -3209,6 +3210,7 @@ body > *:not(:first-child).navbar-open {
   align-items: center;
   justify-content: center;
   margin: 0rem 0rem 0rem;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
 }
 
 .iscriviti_subito1 {
@@ -3252,6 +3254,9 @@ body > *:not(:first-child).navbar-open {
   height: 70.22;
   color: black;
 }
+.genitori_gio .genitori {
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
+}
 
 /*.bottone_genitori{
     width: 150px;
@@ -3291,7 +3296,7 @@ body > *:not(:first-child).navbar-open {
   border-radius: 3px;
   padding: 15px 30px;
   transition: padding 0.1s;
-  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #161616;
   opacity: 0.9;
@@ -3319,6 +3324,9 @@ body > *:not(:first-child).navbar-open {
   width: 884px;
   height: 81px;
 }
+.linkf_gio div a {
+  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+}
 
 .link_gio {
   text-decoration: none;
@@ -3341,6 +3349,9 @@ body > *:not(:first-child).navbar-open {
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 13px;
+}
+.social_logo h3 {
+  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
 }
 
 .blocco_loghi {
