@@ -1,8 +1,11 @@
 //Giochi in evidenza Media query Start
+.section-wrapper {
+    background-color: rgb(242, 242, 242);
+}
 
 @media only screen and (min-width: 200px) and (max-width: 250px) {
     .section-wrapper {
-        background-color: rgb(240, 238, 238);
+        background-color: rgb(242, 242, 242);
         box-shadow: 14px -5px 22px -20px inset #161616;
         padding-top: 3rem;
 
@@ -171,7 +174,7 @@
 @media only screen and (min-width: 251px) and (max-width: 300px) {
 
     .section-wrapper {
-        background-color: rgb(240, 238, 238);
+        background-color: rgb(242, 242, 242);
         box-shadow: 14px -5px 22px -20px inset #161616;
 
         h1 {
@@ -351,7 +354,7 @@
 @media only screen and (min-width: 301px) and (max-width: 360px) {
 
     .section-wrapper {
-        background-color: rgb(240, 238, 238);
+        background-color: rgb(242, 242, 242);
         box-shadow: 14px -5px 22px -20px inset #161616;
 
         h1 {
@@ -536,8 +539,8 @@
 
 @media only screen and (min-width: 361px) and (max-width: 899px) {
 .section-wrapper{
-    background-color: rgb(240, 238, 238);
-    box-shadow: 14px -5px 22px -20px inset #161616;
+    background-color: rgb(242, 242, 242);
+    // box-shadow: 14px -5px 22px -20px inset #161616;
 
     h1 {
         font-size: 30px;
@@ -703,7 +706,8 @@
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
     .section-wrapper {
-        box-shadow: 14px -5px 30px -20px inset #161616;
+        background-color: rgb(242, 242, 242);
+        // box-shadow: 14px -5px 30px -20px inset #161616;
         padding-top: 2rem;
 
         h1 {
@@ -929,9 +933,9 @@
         height: 100px;
         font-size: 27px;
         bottom:30px;
-        
+
     }
-    
+
     .iscriviti_subito1 {
         cursor: pointer;
         background: none;
@@ -945,7 +949,7 @@
         opacity: 0.9;
         margin: 100px 900px 0px 0px;
         right: 250px;
-      
+
         &:hover {
           padding: 18px 35px;
         }

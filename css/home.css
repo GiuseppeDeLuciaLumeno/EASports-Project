@@ -2224,6 +2224,79 @@ body.sidebar-open .overlay {
   }
 }
 
+.slider-tab-container {
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease;
+}
+.slider-tab-container:hover, .slider-tab-container:active, .slider-tab-container:focus {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+}
+.slider-tab-container::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  width: 0%;
+  height: 2px;
+  background-color: hsl(0deg, 100%, 64%);
+  transition: width 0.1s ease-out;
+}
+.slider-tab-container .slider-tab {
+  padding-inline: 1rem;
+}
+
+.slider-tab-container + .slider-tab-container .slider-tab {
+  border-left: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(1) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(2) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(3) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(4) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(5) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(6) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(7) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container.active {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+  position: relative;
+}
+.slider-tab-container.active::before {
+  width: 80%;
+}
+.slider-tab-container.active .slider-tab {
+  color: hsl(0deg, 0%, 42%);
+}
+
+@media (min-width: 48rem) {
+  .slider-tab-container {
+    height: 60px;
+  }
+}
 .slider-container {
   overflow-x: hidden;
   background-color: hsl(0deg, 0%, 95%);
@@ -3416,9 +3489,13 @@ body > *:not(:first-child).navbar-open {
 }
 
 /* -------------------------------------Reponsivity--------------------------------- */
+.section-wrapper {
+  background-color: rgb(242, 242, 242);
+}
+
 @media only screen and (min-width: 200px) and (max-width: 250px) {
   .section-wrapper {
-    background-color: rgb(240, 238, 238);
+    background-color: rgb(242, 242, 242);
     box-shadow: 14px -5px 22px -20px inset #161616;
     padding-top: 3rem;
     /* three dots menu */
@@ -3552,7 +3629,7 @@ body > *:not(:first-child).navbar-open {
 }
 @media only screen and (min-width: 251px) and (max-width: 300px) {
   .section-wrapper {
-    background-color: rgb(240, 238, 238);
+    background-color: rgb(242, 242, 242);
     box-shadow: 14px -5px 22px -20px inset #161616;
   }
   .section-wrapper h1 {
@@ -3686,7 +3763,7 @@ body > *:not(:first-child).navbar-open {
 }
 @media only screen and (min-width: 301px) and (max-width: 360px) {
   .section-wrapper {
-    background-color: rgb(240, 238, 238);
+    background-color: rgb(242, 242, 242);
     box-shadow: 14px -5px 22px -20px inset #161616;
   }
   .section-wrapper h1 {
@@ -3826,8 +3903,7 @@ body > *:not(:first-child).navbar-open {
 }
 @media only screen and (min-width: 361px) and (max-width: 899px) {
   .section-wrapper {
-    background-color: rgb(240, 238, 238);
-    box-shadow: 14px -5px 22px -20px inset #161616;
+    background-color: rgb(242, 242, 242);
   }
   .section-wrapper h1 {
     font-size: 30px;
@@ -3950,7 +4026,7 @@ body > *:not(:first-child).navbar-open {
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .section-wrapper {
-    box-shadow: 14px -5px 30px -20px inset #161616;
+    background-color: rgb(242, 242, 242);
     padding-top: 2rem;
   }
   .section-wrapper h1 {
