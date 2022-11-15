@@ -23,8 +23,7 @@
 }
 
 html, body {
-    width: 100vw;
-
+    width: 100%;
 }
 
 
@@ -32,7 +31,7 @@ header {
     .video-wrapper {
         // Riferimento "relative" per lo sfondo "Absolute"
         position: relative;
-        width: 100vw;
+        width: 100%;
         height: 650px;
 
         background: linear-gradient(
