@@ -7510,6 +7510,79 @@ select {
     height: 60px;
   }
 }
+.slider-tab-container {
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease;
+}
+.slider-tab-container:hover, .slider-tab-container:active, .slider-tab-container:focus {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+}
+.slider-tab-container::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  width: 0%;
+  height: 2px;
+  background-color: hsl(0deg, 100%, 64%);
+  transition: width 0.1s ease-out;
+}
+.slider-tab-container .slider-tab {
+  padding-inline: 1rem;
+}
+
+.slider-tab-container + .slider-tab-container .slider-tab {
+  border-left: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(1) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(2) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(3) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(4) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(5) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(6) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container:nth-child(7) .slider-tab {
+  border-right: 1px solid hsla(0deg, 0%, 0%, 0.08);
+}
+
+.slider-tab-container.active {
+  background-color: hsla(0deg, 0%, 85%, 0.8);
+  position: relative;
+}
+.slider-tab-container.active::before {
+  width: 80%;
+}
+.slider-tab-container.active .slider-tab {
+  color: hsl(0deg, 0%, 42%);
+}
+
+@media (min-width: 48rem) {
+  .slider-tab-container {
+    height: 60px;
+  }
+}
 .slider-container {
   overflow-x: hidden;
   background-color: hsl(0deg, 0%, 95%);
@@ -9592,6 +9665,63 @@ body {
 
 /*INIZO NAVBAR*/
 /*FINE NAVBAR*/
+video {
+  max-width: 100%;
+}
+
+video + img {
+  display: none;
+}
+
+@media only screen and (min-width: 766px) and (max-width: 1023px) {
+  video + img {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  video {
+    display: none;
+  }
+  .top-md-0 {
+    top: 7rem !important;
+  }
+}
+@media only screen and (max-width: 1023px) and (max-width: 765px) {
+  .top-md-0 {
+    display: none;
+  }
+}
+.games-bg {
+  display: none;
+}
+@media only screen and (min-width: 249px) and (max-width: 765px) {
+  .games-bg {
+    display: block;
+    line-height: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  video + img {
+    display: none;
+  }
+}
+.image-position {
+  position: absolute;
+  top: 0;
+}
+@media screen and (max-width: 767px) {
+  .image-position {
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .image-position {
+    top: 6rem;
+  }
+}
+
 /*INIZIO CARD*/
 .titolo {
   display: flex;
@@ -9688,14 +9818,12 @@ body {
     display: flex;
     position: relative;
     background-color: #262629;
-    width: 489px;
     height: 110px;
   }
   .transformimg2 {
     display: flex;
     position: relative;
     background-color: #262629;
-    width: 489px;
     height: 110px;
   }
   .subtitle {
@@ -9704,6 +9832,9 @@ body {
     top: 40px;
     left: 150px;
     color: white;
+  }
+  .arrow_gio {
+    display: none;
   }
 }
 /*FINE CARD*/
@@ -9871,6 +10002,11 @@ body {
 /*FINE PIATTAFORME*/
 /*INIZIO CARD N°2*/
 .age_title {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.game_title {
   padding-top: 100px;
   padding-bottom: 30px;
 }
