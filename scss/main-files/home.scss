@@ -47,95 +47,51 @@
 //   box-shadow: 14px -5px 22px -20px inset #161616;
 // }
 //codice header daniele //
-.img-daniele {
-  display: flex;
-  flex-flow: column;
-  background-image: url(/assets/img/home-header_daniele/newMainImgEA.png);
-  top: 0;
-  left: 0;
-  margin-top: 96px;
-  -webkit-background-size: cover;
-  -moz-background-cover: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  gap: 0.5rem;
-  @include size(80vh, 100%);
 
-  //codice relativo alla prima sezione della main img
-
-  .textposition {
-    @include size(30vh, 65%);
-    margin-left: 3.5rem;
-    color: white;
-    @include flex(flex, flex-start, flex-end);
-    @include font(Helvetica, x-large);
-
-    .LOGO {
-      @include size(4rem, 30rem);
+.main-img{
+  margin-top: 6rem;
+  position: relative;
+  
+  .main-img-logo {
+    position: absolute;
+    top: 5rem;
+    left: 25rem;
+    @media only screen and (max-width: 1024px) {
+      top: 1.5rem;
+      left: 7rem;
+      img {
+        height: 75px;
+      }
+      h1{
+        font-family: 25px;
+      }
+      p{
+        font-family: 7px;
+      }
     }
-  }
-
-  //codice relativo alla seconda sezione della main img
-
-  .textposition-1 {
-    @include flex(flex, flex-start, center);
-    @include size(30vh, 65%);
-    @include font(Helvetica, xx-large);
-    font-weight: bold;
-    margin-left: 3.5rem;
-    color: black;
-  }
-
-  .btn_daniele {
-    @include size(4rem, 16rem);
-    @include font(Helvetica, large);
-    @include size(5rem, 10rem);
-    color: black;
-    background-color: white;
-    border-radius: 0.2rem;
-    margin-left: 4rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid green;
-  }
-
-  //codice relativo alla terza sezione della main img
-
-  .textposition-2 {
-    @include flex(flex, space-between, center);
-    @include space(0rem, 1rem);
-    @include size(0vh, 100%);
-    //background-image: url(/assets/img/HomePage/form-color.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-
-    .font-text {
-      @include font(Helvetica, large);
-      color: white;
+    h1 {
+      font-family: map-get($ultimi-giochi-font, heading);
+      font-size: 45px;
     }
-    .button-an {
-      @include size(4rem, 16rem);
-      @include font(Helvetica, large);
-      @include size(4rem, 10rem);
-      border-radius: 0.4rem;
-      color: white;
-      margin-right: 6rem;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: white;
+    p{
+      font-family: map-get($ultimi-giochi-font, text);
+      font-size: 20px;
+    }
+
+  }
+  .btn-container {
+    margin-top: 1rem;
+    .btn-giuseppe {
+      width: 35%;
     }
   }
 }
 
 
+
 /* Start Giochi in evidenza */
 .section-wrapper {
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
