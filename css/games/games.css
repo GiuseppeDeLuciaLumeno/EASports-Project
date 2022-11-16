@@ -7875,6 +7875,7 @@ h6.navbar-heading {
 }
 .slider-container .dropdown.active .dropdown-menu {
   display: block;
+  width: 250px;
 }
 .slider-container .border-bottom {
   align-self: flex-end;
@@ -9515,7 +9516,6 @@ body {
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .section-wrapper {
-    box-shadow: 14px -5px 30px -20px inset #161616;
     padding-top: 2rem;
   }
   .section-wrapper h1 {

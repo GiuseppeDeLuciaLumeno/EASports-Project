@@ -142,8 +142,10 @@ function slideSlider(arrow) {
 function dragSlider() {
     startEvents.forEach(eventTupe => {
         sliderContainer.addEventListener(eventTupe, e => {
-            pressed = true
-            startX = e.pageX
+            if (sliderContainerWidth < tabsWidth) {
+                pressed = true
+                startX = e.pageX
+            }
         })
     })
     
