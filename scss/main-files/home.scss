@@ -226,7 +226,7 @@
   display: flex;
   position: absolute;
   top: 100px;
-  left: 320px;
+  left: 200px;
   flex-direction: column;
   /* padding: 130px 0px 0px 410px; */
 
@@ -242,8 +242,8 @@
   display: flex;
   position: relative;
   color: white;
-  width: 544px;
-  height: 54px;
+  width: 70vw;
+  height: 125px;
   font-size: 27px;
 }
 
@@ -289,7 +289,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0rem 0rem 0rem;
   font-family: map-get($ultimi-giochi-font, text);
 }
 
@@ -304,7 +303,6 @@
   font-size: 18px;
   color: white;
   opacity: 0.9;
-  margin: 100px 500px 0px 0px;
 
   &:hover {
     padding: 18px 35px;
@@ -321,7 +319,7 @@
   display: flex;
   flex-direction: row;
   background-color: #6fb0d6;
-  /*  width: 100vw; */
+  width: 100%;
   height: 112px;
   justify-content: space-around;
   align-items: center;
@@ -396,6 +394,9 @@
   /* height: 200px; */
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  padding: 32px 0px 16px 0px;
+
 }
 
 .linkf_gio {
@@ -404,7 +405,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 884px;
+  width: 100%;
   height: 81px;
   @for $i from 1 to 7 {
    div a:nth-child(#{$i}) {
