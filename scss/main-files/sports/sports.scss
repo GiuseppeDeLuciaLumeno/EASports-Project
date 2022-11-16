@@ -12,8 +12,10 @@
 @import '../../atomic-design/4-layouts/footers/footer-1-josephine';
 @import '../../atomic-design/4-layouts/page-sections/page-section-1-dario';
 @import '../../atomic-design/4-layouts/grids/6-items-1-dario';
-@import '../../atomic-design/4-layouts/sliders/slider-1-josephine';
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../atomic-design/4-layouts/navbars/navbar-1-dario';
+@import '../../atomic-design/4-layouts/sidebars/sidebars-1-dario';
+@import '../../atomic-design/4-layouts/sliders/slider-1-dario';
 
 
 * {
@@ -26,8 +28,30 @@ html, body {
     width: 100%;
 }
 
+p {
+  margin-bottom: 0px;
+}
 
-header {
+.button-jos {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+  border-radius: 4px !important;
+}
+
+.height-100 {
+  height: 100px;
+}
+
+.wrapper-div ul {
+  margin-bottom: 0px;
+}
+
+.section-container {
+  padding-top: 2rem;
+}
+
+#bg-video {
     .video-wrapper {
         // Riferimento "relative" per lo sfondo "Absolute"
         position: relative;
@@ -57,7 +81,7 @@ header {
             //Simuliamo la proprietà background-size: cover;
             object-fit: cover;
             height: 100%;
-            width: 90%;
+            width: 100%;
 
             position: absolute;
             top: 0;
@@ -166,7 +190,6 @@ header {
         font-size: 24px;
         font-family: "Juana W05 Bold";
         color: #fff;
-        margin-bottom: 0;
     }
 }
 

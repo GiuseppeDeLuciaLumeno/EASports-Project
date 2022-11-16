@@ -18,13 +18,13 @@ icons.forEach(icon => {
 // Josephine - Inizio Test
 
 //Funzione con onClick tramite codice Js (Da sviluppare condizione per ritorno allo status di default)
-document.getElementById('swapArrow').addEventListener('click', switchArrow);
+// document.getElementById('swapArrow').addEventListener('click', switchArrow);
 
-function switchArrow() {
-    let element = document.getElementById('arrow');
-    element.classList.remove('down');
-    element.classList.add('up');
-}
+// function switchArrow() {
+//     let element = document.getElementById('arrow');
+//     element.classList.remove('down');
+//     element.classList.add('up');
+// }
 
 // Funzione con Html onClick (button="onClick...")
 /*function swapArrow() {
