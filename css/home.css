@@ -3114,6 +3114,7 @@ body > *:not(:first-child).navbar-open {
   font-size: 1rem;
   line-height: 26.4px;
   color: rgb(243, 243, 243);
+  border-radius: 3px;
   transition: transform 0.2s ease-in-out;
 }
 .hero .text a:hover {
