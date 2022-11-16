@@ -373,11 +373,19 @@ select {
 }
 @font-face {
   font-family: ElectronicArtsDisplay;
-  src: url(../../assets/fonts/Electronic_Arts_Display.otf);
+  src: url(../../../../assets/fonts/Electronic_Arts_Display.otf);
 }
 @font-face {
   font-family: ElectronicArtsText;
-  src: url(../../assets/fonts/Electronic_Arts_Text.otf);
+  src: url(../../../../assets/fonts/Electronic_Arts_Text.otf);
+}
+@font-face {
+  font-family: open-sans;
+  src: url(../../../../assets/fonts/OpenSans-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: oswald;
+  src: url(../../../../assets/fonts/Oswald-VariableFont_wght.ttf);
 }
 footer {
   font-family: ElectronicArtsText, Verdana, Geneva, Tahoma, sans-serif;
@@ -13600,12 +13608,12 @@ textarea.form-control-lg {
 }
 
 html, body {
-  width: 100vw;
+  width: 100%;
 }
 
 header .video-wrapper {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 650px;
   background: linear-gradient(to top, black, transparent);
   overflow: hidden;
@@ -13834,7 +13842,7 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
 }
 
 #ultime-novita {
-  background-color: rgb(242, 242, 242);
+  background-color: hsl(0deg, 0%, 95%);
   overflow: hidden;
 }
 #ultime-novita #h3 {
