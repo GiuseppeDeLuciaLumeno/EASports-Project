@@ -3210,7 +3210,7 @@ body > *:not(:first-child).navbar-open {
 .container_gio {
   display: flex;
   position: relative;
-  height: 410px;
+  height: 471px;
 }
 
 .blocco_bgplay {
@@ -3221,7 +3221,7 @@ body > *:not(:first-child).navbar-open {
 }
 
 .bg_play {
-  height: 410px;
+  height: 474px;
   width: 100vw;
 }
 
@@ -4149,9 +4149,6 @@ body > *:not(:first-child).navbar-open {
   }
 }
 @media only screen and (min-width: 1024px) {
-  .cards-wrapper {
-    width: 100vw;
-  }
   .cards-wrapper .fifa23-card,
 .cards-wrapper .apex-mobile-card,
 .cards-wrapper .f1-22-card,
