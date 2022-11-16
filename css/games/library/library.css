@@ -9850,7 +9850,7 @@ video + img {
 
 .platforms {
   background-color: #36404A;
-  width: 100vw;
+  width: 100%;
   height: 1600px;
 }
 
@@ -10001,6 +10001,15 @@ video + img {
 }
 /*FINE PIATTAFORME*/
 /*INIZIO CARD N°2*/
+.titolo {
+  width: auto;
+}
+
+#fix {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .age_title {
   padding-top: 100px;
   padding-bottom: 30px;

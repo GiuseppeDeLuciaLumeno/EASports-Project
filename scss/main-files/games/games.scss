@@ -180,14 +180,12 @@ video+img {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     #block-position {
         position: relative;
     }
 }
 
 .cards-wrapper {
-
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

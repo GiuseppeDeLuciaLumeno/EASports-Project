@@ -3072,102 +3072,113 @@ body > *:not(:first-child).navbar-open {
   }
 }
 
-.img-daniele {
-  display: flex;
-  flex-flow: column;
-  background-image: url(/assets/img/home-header_daniele/newMainImgEA.png);
-  top: 0;
-  left: 0;
-  margin-top: 96px;
-  -webkit-background-size: cover;
-  -moz-background-cover: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  gap: 0.5rem;
-  height: 80vh;
+.hero {
+  margin-top: 93px;
+  overflow-y: hidden;
+  position: relative;
+}
+.hero > picture {
+  position: absolute;
+  z-index: -1;
+}
+.hero > picture img {
   width: 100%;
 }
-.img-daniele .textposition {
-  height: 30vh;
-  width: 65%;
-  margin-left: 3.5rem;
-  color: white;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  font-style: Helvetica;
-  font-size: x-large;
+.hero .text {
+  padding: calc(56.25% + 32px) 7.5vw 32px;
+  font-family: "ElectronicArtsDisplay", "Verdana", "Helvetica", "Arial", sans-serif;
+  color: rgb(22, 22, 22);
 }
-.img-daniele .textposition .LOGO {
-  height: 4rem;
-  width: 30rem;
+.hero .text h1 {
+  font-size: 36px;
+  line-height: 41.4px;
 }
-.img-daniele .textposition-1 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 30vh;
-  width: 65%;
-  font-style: Helvetica;
-  font-size: xx-large;
-  font-weight: bold;
-  margin-left: 3.5rem;
-  color: black;
+.hero .text h2 {
+  margin-top: 13px;
+  font-family: "ElectronicArtsText", "Verdana", "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 25px;
 }
-.img-daniele .btn_daniele {
-  height: 4rem;
-  width: 16rem;
-  font-style: Helvetica;
-  font-size: large;
-  height: 5rem;
-  width: 10rem;
-  color: black;
-  background-color: white;
-  border-radius: 0.2rem;
-  margin-left: 4rem;
-  margin-bottom: 3rem;
+.hero .text a {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 16px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid green;
-}
-.img-daniele .textposition-2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0rem;
-  gap: 1rem;
-  height: 0vh;
+  background-color: rgb(0, 0, 0);
   width: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
+  padding: 12px 24px;
+  font-family: "ElectronicArtsText", "Verdana", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 26.4px;
+  color: rgb(243, 243, 243);
+  border-radius: 3px;
+  transition: transform 0.2s ease-in-out;
 }
-.img-daniele .textposition-2 .font-text {
-  font-style: Helvetica;
-  font-size: large;
-  color: white;
-}
-.img-daniele .textposition-2 .button-an {
-  height: 4rem;
-  width: 16rem;
-  font-style: Helvetica;
-  font-size: large;
-  height: 4rem;
-  width: 10rem;
-  border-radius: 0.4rem;
-  color: white;
-  margin-right: 6rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
+.hero .text a:hover {
+  transform: scale(1.05);
 }
 
+@media (min-width: 640px) {
+  .hero .text a {
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  .hero > picture {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+  }
+  .hero .text {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    padding: 0 38% 0 4%;
+    margin-block: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero .text h1 {
+    font-size: 38px;
+    line-height: 43.7px;
+    margin-top: 10px;
+  }
+  .hero .text a {
+    margin-bottom: 16px;
+    align-self: flex-start;
+  }
+}
+@media (min-width: 1024px) {
+  .hero .text {
+    padding-inline: 8% 50%;
+  }
+  .hero .text h1 {
+    font-size: 44px;
+    line-height: 50.6px;
+  }
+}
+@media (min-width: 1456px) {
+  .hero .text {
+    padding-inline: 18vw 50vw;
+  }
+  .hero .text picture {
+    margin-top: 5px;
+  }
+  .hero .text h1 {
+    font-size: 54px;
+    line-height: 62.1px;
+  }
+  .hero .text h2 {
+    font-size: 24px;
+    line-height: 32.4px;
+  }
+}
 /* Start Giochi in evidenza */
 .section-wrapper {
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3197,7 +3208,7 @@ body > *:not(:first-child).navbar-open {
 .container_gio {
   display: flex;
   position: relative;
-  height: 410px;
+  height: 471px;
 }
 
 .blocco_bgplay {
@@ -3208,7 +3219,7 @@ body > *:not(:first-child).navbar-open {
 }
 
 .bg_play {
-  height: 410px;
+  height: 474px;
   width: 100vw;
 }
 
@@ -3216,7 +3227,7 @@ body > *:not(:first-child).navbar-open {
   display: flex;
   position: absolute;
   top: 100px;
-  left: 320px;
+  left: 200px;
   flex-direction: column;
   /* padding: 130px 0px 0px 410px; */
   /* @media only screen and (max-width:425px) {
@@ -3231,8 +3242,8 @@ body > *:not(:first-child).navbar-open {
   display: flex;
   position: relative;
   color: white;
-  width: 544px;
-  height: 54px;
+  width: 70vw;
+  height: 125px;
   font-size: 27px;
 }
 
@@ -3277,7 +3288,6 @@ body > *:not(:first-child).navbar-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0rem 0rem 0rem;
   font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
 }
 
@@ -3292,7 +3302,6 @@ body > *:not(:first-child).navbar-open {
   font-size: 18px;
   color: white;
   opacity: 0.9;
-  margin: 100px 500px 0px 0px;
 }
 .iscriviti_subito1:hover {
   padding: 18px 35px;
@@ -3308,7 +3317,7 @@ body > *:not(:first-child).navbar-open {
   display: flex;
   flex-direction: row;
   background-color: #6fb0d6;
-  /*  width: 100vw; */
+  width: 100%;
   height: 112px;
   justify-content: space-around;
   align-items: center;
@@ -3381,6 +3390,8 @@ body > *:not(:first-child).navbar-open {
   /* height: 200px; */
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  padding: 32px 0px 16px 0px;
 }
 
 .linkf_gio {
@@ -3389,7 +3400,7 @@ body > *:not(:first-child).navbar-open {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 884px;
+  width: 100%;
   height: 81px;
 }
 .linkf_gio div a:nth-child(1) {
@@ -4136,9 +4147,6 @@ body > *:not(:first-child).navbar-open {
   }
 }
 @media only screen and (min-width: 1024px) {
-  .cards-wrapper {
-    width: 100vw;
-  }
   .cards-wrapper .fifa23-card,
 .cards-wrapper .apex-mobile-card,
 .cards-wrapper .f1-22-card,
@@ -4186,6 +4194,7 @@ body > *:not(:first-child).navbar-open {
 @media only screen and (max-width: 768px) {
   .a_gio {
     width: 50px;
+    display: inline-block;
   }
   .play {
     display: flex;
@@ -4200,8 +4209,8 @@ body > *:not(:first-child).navbar-open {
     display: flex;
     position: relative;
     color: white;
-    width: 335px;
-    height: 100px;
+    width: 70vw;
+    height: 125px;
     font-size: 27px;
     bottom: 30px;
   }
@@ -4216,8 +4225,8 @@ body > *:not(:first-child).navbar-open {
     font-size: 18px;
     color: white;
     opacity: 0.9;
-    margin: 100px 900px 0px 0px;
     right: 250px;
+    width: 200px;
   }
   .iscriviti_subito1:hover {
     padding: 18px 35px;
@@ -4226,7 +4235,7 @@ body > *:not(:first-child).navbar-open {
     display: flex;
     flex-direction: column;
     background-color: #6FB0D6;
-    width: 100vw;
+    width: 100%;
     height: 200px;
     justify-content: space-around;
     align-items: center;
@@ -4241,7 +4250,7 @@ body > *:not(:first-child).navbar-open {
     display: flex;
     flex-direction: column;
     background-color: #EAEAEA;
-    width: 100vw;
+    width: 100%;
     height: 300px;
     justify-content: flex-start;
     align-items: flex-start;
@@ -4253,7 +4262,7 @@ body > *:not(:first-child).navbar-open {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    width: 300px;
+    width: 100%;
     height: 118px;
     padding-bottom: 10px;
   }
@@ -4274,7 +4283,7 @@ body > *:not(:first-child).navbar-open {
     display: flex;
     position: relative;
     color: white;
-    width: 335px;
+    width: 70vw;
     height: 100px;
     font-size: 27px;
   }
@@ -4282,8 +4291,8 @@ body > *:not(:first-child).navbar-open {
     display: flex;
     flex-direction: column;
     background-color: #6FB0D6;
-    width: 100vw;
-    height: 200px;
+    width: 100%;
+    height: 300px;
     justify-content: space-around;
     align-items: center;
     padding: 32px 0px 16px 0px;
@@ -4297,11 +4306,11 @@ body > *:not(:first-child).navbar-open {
     display: flex;
     flex-direction: column;
     background-color: #EAEAEA;
-    width: 100vw;
+    width: 100%;
     height: 300px;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 12px 60px 40px 60px;
+    padding: 12px 15px 40px 15px;
   }
   .linkf_gio {
     display: flex;
@@ -4309,7 +4318,7 @@ body > *:not(:first-child).navbar-open {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    width: 648px;
+    width: 100%;
     height: 118px;
     padding-bottom: 10px;
   }
