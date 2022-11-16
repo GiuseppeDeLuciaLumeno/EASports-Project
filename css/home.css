@@ -3077,45 +3077,106 @@ body > *:not(:first-child).navbar-open {
   }
 }
 
-.main-img {
-  margin-top: 6rem;
+.hero {
+  margin-top: 93px;
+  overflow-y: hidden;
   position: relative;
 }
-.main-img .main-img-logo {
+.hero > picture {
   position: absolute;
-  top: 5rem;
-  left: 25rem;
+  z-index: -1;
 }
-@media only screen and (max-width: 1024px) {
-  .main-img .main-img-logo {
-    top: 1.5rem;
-    left: 7rem;
-  }
-  .main-img .main-img-logo img {
-    height: 75px;
-  }
-  .main-img .main-img-logo h1 {
-    font-family: 25px;
-  }
-  .main-img .main-img-logo p {
-    font-family: 7px;
-  }
+.hero .text {
+  padding: calc(56.25% + 32px) 7.5vw 32px;
+  font-family: "ElectronicArtsDisplay", "Verdana", "Helvetica", "Arial", sans-serif;
+  color: rgb(22, 22, 22);
 }
-.main-img .main-img-logo h1 {
-  font-family: ElectronicArtsDisplay, verdana, Helvetica, Arial, sans-serif;
-  font-size: 45px;
+.hero .text h1 {
+  font-size: 36px;
+  line-height: 41.4px;
 }
-.main-img .main-img-logo p {
-  font-family: ElectronicArtsText, verdana, Helvetica, Arial, sans-serif;
+.hero .text h2 {
+  margin-top: 13px;
+  font-family: "ElectronicArtsText", "Verdana", "Helvetica", "Arial", sans-serif;
   font-size: 20px;
+  font-weight: lighter;
+  line-height: 25px;
 }
-.main-img .btn-container {
-  margin-top: 1rem;
+.hero .text a {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 16px;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  padding: 12px 24px;
+  font-family: "ElectronicArtsText", "Verdana", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 26.4px;
+  color: rgb(243, 243, 243);
+  transition: transform 0.2s ease-in-out;
 }
-.main-img .btn-container .btn-giuseppe {
-  width: 35%;
+.hero .text a:hover {
+  transform: scale(1.05);
 }
 
+@media (min-width: 640px) {
+  .hero .text a {
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  .hero > picture {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+  }
+  .hero .text {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    padding: 0 38% 0 4%;
+    margin-block: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero .text h1 {
+    font-size: 38px;
+    line-height: 43.7px;
+    margin-top: 10px;
+  }
+  .hero .text a {
+    margin-bottom: 16px;
+    align-self: flex-start;
+  }
+}
+@media (min-width: 1024px) {
+  .hero .text {
+    padding-inline: 8% 50%;
+  }
+  .hero .text h1 {
+    font-size: 44px;
+    line-height: 50.6px;
+  }
+}
+@media (min-width: 1456px) {
+  .hero .text {
+    padding-inline: 18vw 50vw;
+  }
+  .hero .text picture {
+    margin-top: 5px;
+  }
+  .hero .text h1 {
+    font-size: 54px;
+    line-height: 62.1px;
+  }
+  .hero .text h2 {
+    font-size: 24px;
+    line-height: 32.4px;
+  }
+}
 /* Start Giochi in evidenza */
 .section-wrapper {
   padding-top: 4rem;

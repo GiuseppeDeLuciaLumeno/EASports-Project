@@ -43,51 +43,133 @@
 // PAGES --------------------------------------------------------------------------------------------
 @import "../atomic-design/6-pages/home";
 
-// .shadows-page {
-//   box-shadow: 14px -5px 22px -20px inset #161616;
-// }
 //codice header daniele //
-
-.main-img{
-  margin-top: 6rem;
+.hero {
+  margin-top: 93px;
+  overflow-y: hidden;
   position: relative;
-  
-  .main-img-logo {
+
+  & > picture {
     position: absolute;
-    top: 5rem;
-    left: 25rem;
-    @media only screen and (max-width: 1024px) {
-      top: 1.5rem;
-      left: 7rem;
-      img {
-        height: 75px;
-      }
-      h1{
-        font-family: 25px;
-      }
-      p{
-        font-family: 7px;
-      }
-    }
+    z-index: -1;
+  }
+
+  .text {
+    padding: calc(56.25% + 32px) 7.5vw 32px;
+    font-family: "ElectronicArtsDisplay", "Verdana", "Helvetica", "Arial", sans-serif;
+    color: rgb(22, 22, 22);
+
     h1 {
-      font-family: map-get($ultimi-giochi-font, heading);
-      font-size: 45px;
-    }
-    p{
-      font-family: map-get($ultimi-giochi-font, text);
-      font-size: 20px;
+      font-size: 36px;
+      line-height: 41.4px;
     }
 
-  }
-  .btn-container {
-    margin-top: 1rem;
-    .btn-giuseppe {
-      width: 35%;
+    h2 {
+      margin-top: 13px;
+      font-family: "ElectronicArtsText", "Verdana", "Helvetica", "Arial", sans-serif;
+      font-size: 20px;
+      font-weight: lighter;
+      line-height: 25px;
+    }
+
+    a {
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 16px;
+      text-align: center;
+      background-color: rgb(0, 0, 0);
+      width: 100%;
+      padding: 12px 24px;
+      font-family: "ElectronicArtsText", "Verdana", "Helvetica", "Arial", sans-serif;
+      font-size: 1rem;
+      line-height: 26.4px;
+      color: rgb(243, 243, 243);
+      transition: transform .2s ease-in-out;
+    }
+
+    a:hover {
+      transform: scale(1.05);
     }
   }
 }
 
+@media (min-width: 640px) {
+  .hero {
+    .text {
+      a {
+        width: auto;
+      }
+    }
+  }
+}
 
+@media (min-width: 768px) {
+  .hero {
+    & > picture {
+      position: relative;
+      z-index: 0;
+      width: 100%;
+    }
+
+    .text {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      padding: 0 38% 0 4%;
+      margin-block: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 38px;
+        line-height: 43.7px;
+        margin-top: 10px;
+      }
+
+      a {
+        margin-bottom: 16px;
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    .text {
+      padding-inline: 8% 50%;
+
+      h1 {
+        font-size: 44px;
+        line-height: 50.6px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1456px) {
+  .hero {
+    .text {
+      padding-inline: 18vw 50vw;
+
+      picture {
+        margin-top: 5px;
+      }
+
+      h1 {
+        font-size: 54px;
+        line-height: 62.1px;
+      }
+
+      h2 {
+        font-size: 24px;
+        line-height: 32.4px;
+      }
+    }
+  }
+}
 
 /* Start Giochi in evidenza */
 .section-wrapper {
