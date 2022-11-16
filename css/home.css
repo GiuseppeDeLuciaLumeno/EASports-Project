@@ -3086,6 +3086,9 @@ body > *:not(:first-child).navbar-open {
   position: absolute;
   z-index: -1;
 }
+.hero > picture img {
+  width: 100%;
+}
 .hero .text {
   padding: calc(56.25% + 32px) 7.5vw 32px;
   font-family: "ElectronicArtsDisplay", "Verdana", "Helvetica", "Arial", sans-serif;
