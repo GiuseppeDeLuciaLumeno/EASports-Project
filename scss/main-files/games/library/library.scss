@@ -1,11 +1,88 @@
-@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+@use 'sass:math';
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/containers";
+@import "../../../../node_modules/bootstrap/scss/maps";
+@import "../../../../node_modules/bootstrap/scss/grid";
+@import "../../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import '../../../../node_modules/bootstrap/scss/card';
+@import '../../../atomic-design/2-base/resets/reset-dario';
+@import '../../../atomic-design/3-components/tabs/tabs-1-dario';
+@import '../../../atomic-design/4-layouts/sliders/slider-1-dario';
+@import '../../../atomic-design/4-layouts/navbars/navbar-1-dario';
+@import '../../../atomic-design/4-layouts/sidebars/sidebars-1-dario';
+@import '../../../atomic-design/1-abstracts/variables/breakpoints/breakpoints-josephine';
+@import '../../../atomic-design/1-abstracts/mixins/breakpoints/breakpoints-josephine';
+@import '../../../atomic-design/4-layouts/footers/footer-1-josephine';
 
 
-   /*INIZO NAVBAR*/ 
+body{
+    font-family: ElectronicArtsText;
+}
+/*INIZO NAVBAR*/ 
 
-   /*FINE NAVBAR*/ 
+/*FINE NAVBAR*/ 
 
-   /*INIZIO CARD*/ 
+video {
+    max-width: 100%;
+}
+
+video+img {
+    display: none;
+}
+
+@media only screen and (min-width: 766px) and (max-width: 1023px) {
+    video+img {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    video {
+        display: none;
+    }
+
+    .top-md-0 {
+        top: 7rem !important;
+
+        @media only screen and (max-width: 765px) {
+            display: none;
+        }
+
+    }
+}
+
+.games-bg {
+    display: none;
+
+    @media only screen and (min-width: 249px) and (max-width: 765px) {
+        display: block;
+        line-height: 0;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    video+img {
+        display: none;
+    }
+}
+
+.image-position {
+    position: absolute;
+    top: 0;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        top: 6rem;
+    }
+}
+
+/*INIZIO CARD*/ 
     
 .titolo{
     display: flex;
@@ -19,15 +96,22 @@
     padding-bottom: 30px;
 }
 
+
 .transformimg{
     display: flex;
-    position: absolute
+    position: absolute;
+    width: 357px;
 }
 .img_card{
     width: 357px;
     height: 200px;
-  margin-left: 30px;
-   margin-right: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: box-shadow .3s ease;
+
+   &:hover{
+    box-shadow: 0px 22px 19px -6px #000000;
+    } 
 }
 
 
@@ -38,10 +122,9 @@
     top: 70px;
     left: 40px;
     color: white;
-    
-   }
+}
 
-.arrow{
+.arrow_gio{
     display: flex;
     position: absolute;
     top: 130px;
@@ -59,19 +142,32 @@
 .transformimg2{
     display: flex;
     position: relative;
-
+    
 }
 
-.card_gio:hover{
-   
+#card_gio{
+    
+    width: 357px;
+    padding: 0px;
+    margin:10px 10px 10px 0px;
+    transition: transform 0.2s ease-in;
+    cursor: pointer;
+
+ &:hover{
+  transform: translateY(-10px);
+  
+ }
 }
+
+
+
 
 @media screen and (max-width: 912px){
     .img_card{
         width: 357px;
         height: 200px;
-      margin-left: 1px;
-       margin-right: 1px;
+        margin-left: 1px;
+        margin-right: 1px;
     }
     .transformimg{
         display: flex;
@@ -96,22 +192,21 @@
 
 @media screen and (max-width: 576px){
     .img_card{
-        display: none;  
-      
+        display: none;   
     }
 
     .transformimg{
         display: flex;
         position: relative;
         background-color:#262629;
-        width: 489px;
+        //width: 489px;
         height: 110px;;
     }
     .transformimg2{
         display: flex;
         position: relative;
         background-color:#262629;
-        width: 489px;
+        //width: 489px;
         height: 110px;;
     }
     .subtitle{
@@ -119,10 +214,11 @@
         position: absolute;
         top: 40px;
         left: 150px;
-        color: white;
-    
-        
-       }
+        color: white;  
+    }
+    .arrow_gio{
+        display: none;
+    }
 }
 
 
@@ -145,8 +241,7 @@
     background-color: #36404A;
     width: 100vw;
     height: 1600px;
-    padding-right: 60px;
-    padding-left: 150px;
+    
     
 }
 
@@ -154,7 +249,10 @@
     height: 200px;
     width: 300px;
     padding-top: 100px;
-    padding-left: 620px;
+    padding-left: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .piattaforma_title{
     color: white;
@@ -321,6 +419,11 @@
     padding-bottom: 30px;
 }
 
+.game_title{
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
 /*FINE CARD N°2*/
 
 
@@ -342,6 +445,20 @@
     padding-bottom: 30px;
     font-style: oblique;
 }
+@media screen and (max-width: 912px){
+    .paragrafo{
+        width: 400px;
+        
+    }
+}
 
+@media screen and (max-width: 776px){
+    .paragrafo{
+        width: 400px;
+        
+    }
+}
 
 /*FINE CARD N°3*/ 
+
+

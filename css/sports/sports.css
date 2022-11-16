@@ -232,7 +232,7 @@
   align-items: center;
   transition: 0.1s ease;
 }
-.slider-tab-container:hover {
+.slider-tab-container:hover, .slider-tab-container:active, .slider-tab-container:focus {
   background-color: hsla(0deg, 0%, 85%, 0.8);
 }
 .slider-tab-container::before {
@@ -4016,77 +4016,103 @@ textarea.form-control-lg {
   z-index: 4;
 }
 
-.btn {
-  --bs-btn-padding-x: 0.75rem;
-  --bs-btn-padding-y: 0.375rem;
-  --bs-btn-font-family: ;
-  --bs-btn-font-size: 1rem;
-  --bs-btn-font-weight: 400;
-  --bs-btn-line-height: 1.5;
-  --bs-btn-color: #212529;
-  --bs-btn-bg: transparent;
-  --bs-btn-border-width: 1px;
-  --bs-btn-border-color: transparent;
-  --bs-btn-border-radius: 0.375rem;
-  --bs-btn-hover-border-color: transparent;
-  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-  --bs-btn-disabled-opacity: 0.65;
-  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
-  display: inline-block;
-  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
-  font-family: var(--bs-btn-font-family);
-  font-size: var(--bs-btn-font-size);
-  font-weight: var(--bs-btn-font-weight);
-  line-height: var(--bs-btn-line-height);
-  color: var(--bs-btn-color);
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
-  border-radius: var(--bs-btn-border-radius);
-  background-color: var(--bs-btn-bg);
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  .btn {
-    transition: none;
+/*  --bs-btn-padding-x: 0.75rem;
+ --bs-btn-padding-y: 0.375rem;
+ --bs-btn-font-family: ;
+ @include rfs($btn-font-size, --bs-btn-font-size);
+ --bs-btn-font-weight: 400;
+ --bs-btn-line-height: 1.5;
+ --bs-btn-color: #212529;
+ --bs-btn-bg: transparent;
+ --bs-btn-border-width: 1px;
+ --bs-btn-border-color: transparent;
+ --bs-btn-border-radius: 0.375rem;
+ --bs-btn-hover-border-color: transparent;
+ --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+ --bs-btn-disabled-opacity: 0.65;
+ --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5); */
+/* display: inline-block;
+padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+font-family: var(--bs-btn-font-family);
+@include font-size(var(--bs-btn-font-size));
+font-weight: var(--bs-btn-font-weight);
+line-height: var(--bs-btn-line-height);
+color: var(--bs-btn-color);
+text-align: center;
+text-decoration: if($link-decoration == none, null, none);
+white-space: $btn-white-space;
+vertical-align: middle;
+cursor: if($enable-button-pointers, pointer, null);
+user-select: none;
+border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+@include border-radius(var(--bs-btn-border-radius));
+@include gradient-bg(var(--bs-btn-bg));
+@include box-shadow(var(--bs-btn-box-shadow));
+@include transition($btn-transition); */
+/*   :not(.btn-check) + &:hover,
+  &:first-child:hover {
+    color: var(--bs-btn-hover-color);
+    text-decoration: if($link-hover-decoration == underline, none, null);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+  }
+
+  &:focus-visible {
+    color: var(--bs-btn-hover-color);
+    @include gradient-bg(var(--bs-btn-hover-bg));
+    border-color: var(--bs-btn-hover-border-color);
+    outline: 0; */
+/*  @if $enable-shadows {
+    box-shadow: var(--bs-btn-box-shadow), var(--bs-btn-focus-box-shadow);
+  } @else {
+    box-shadow: var(--bs-btn-focus-box-shadow);
+  }
+} */
+/* .btn-check:focus-visible + & {
+   border-color: var(--bs-btn-hover-border-color);
+   outline: 0;
+   // Avoid using mixin so we can pass custom focus shadow properly
+   @if $enable-shadows {
+     box-shadow: var(--bs-btn-box-shadow), var(--bs-btn-focus-box-shadow);
+   } @else {
+     box-shadow: var(--bs-btn-focus-box-shadow);
+   }
+ }
+*/
+/*   .btn-check:checked + &,
+  :not(.btn-check) + &:active,
+  &:first-child:active,
+  &.active,
+  &.show {
+    color: var(--bs-btn-active-color);
+    background-color: var(--bs-btn-active-bg);
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--bs-btn-active-border-color);
+    @include box-shadow(var(--bs-btn-active-shadow));
+
+    &:focus-visible {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows {
+        box-shadow: var(--bs-btn-active-shadow), var(--bs-btn-focus-box-shadow);
+      } @else {
+        box-shadow: var(--bs-btn-focus-box-shadow);
+      }
+    }
+  } */
+/*   &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    color: var(--bs-btn-disabled-color);
+    pointer-events: none;
+    background-color: var(--bs-btn-disabled-bg);
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--bs-btn-disabled-border-color);
+    opacity: var(--bs-btn-disabled-opacity);
+    @include box-shadow(none);
   }
 }
-:not(.btn-check) + .btn:hover, .btn:first-child:hover {
-  color: var(--bs-btn-hover-color);
-  background-color: var(--bs-btn-hover-bg);
-  border-color: var(--bs-btn-hover-border-color);
-}
-.btn:focus-visible {
-  color: var(--bs-btn-hover-color);
-  background-color: var(--bs-btn-hover-bg);
-  border-color: var(--bs-btn-hover-border-color);
-  outline: 0;
-  box-shadow: var(--bs-btn-focus-box-shadow);
-}
-.btn-check:focus-visible + .btn {
-  border-color: var(--bs-btn-hover-border-color);
-  outline: 0;
-  box-shadow: var(--bs-btn-focus-box-shadow);
-}
-.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
-  color: var(--bs-btn-active-color);
-  background-color: var(--bs-btn-active-bg);
-  border-color: var(--bs-btn-active-border-color);
-}
-.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
-  box-shadow: var(--bs-btn-focus-box-shadow);
-}
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
-  color: var(--bs-btn-disabled-color);
-  pointer-events: none;
-  background-color: var(--bs-btn-disabled-bg);
-  border-color: var(--bs-btn-disabled-border-color);
-  opacity: var(--bs-btn-disabled-opacity);
-}
-
+ */
 .btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #0d6efd;
@@ -4359,7 +4385,7 @@ textarea.form-control-lg {
   --bs-gradient: none;
 }
 
-.btn-link {
+/* .btn-link {
   --bs-btn-font-weight: 400;
   --bs-btn-color: var(--bs-link-color);
   --bs-btn-bg: transparent;
@@ -4372,29 +4398,34 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: transparent;
   --bs-btn-box-shadow: none;
   --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  text-decoration: underline;
-}
-.btn-link:focus-visible {
-  color: var(--bs-btn-color);
-}
-.btn-link:hover {
-  color: var(--bs-btn-hover-color);
+
+  text-decoration: $link-decoration;
+  @if $enable-gradients {
+    background-image: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus-visible {
+    color: var(--bs-btn-color);
+  }
+
+  &:hover {
+    color: var(--bs-btn-hover-color);
+  } */
+/* }
+ */
+/* .btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
 }
 
-.btn-lg, .btn-group-lg > .btn {
-  --bs-btn-padding-y: 0.5rem;
-  --bs-btn-padding-x: 1rem;
-  --bs-btn-font-size: 1.25rem;
-  --bs-btn-border-radius: 0.5rem;
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
 }
-
-.btn-sm, .btn-group-sm > .btn {
-  --bs-btn-padding-y: 0.25rem;
-  --bs-btn-padding-x: 0.5rem;
-  --bs-btn-font-size: 0.875rem;
-  --bs-btn-border-radius: 0.25rem;
-}
-
+ */
 .fade {
   transition: opacity 0.15s linear;
 }
@@ -4748,106 +4779,148 @@ textarea.form-control-lg {
   --bs-dropdown-header-color: #adb5bd;
 }
 
-.btn-group,
+/* .btn-group,
 .btn-group-vertical {
   position: relative;
   display: inline-flex;
-  vertical-align: middle;
-}
-.btn-group > .btn,
-.btn-group-vertical > .btn {
-  position: relative;
-  flex: 1 1 auto;
-}
-.btn-group > .btn-check:checked + .btn,
-.btn-group > .btn-check:focus + .btn,
-.btn-group > .btn:hover,
-.btn-group > .btn:focus,
-.btn-group > .btn:active,
-.btn-group > .btn.active,
-.btn-group-vertical > .btn-check:checked + .btn,
-.btn-group-vertical > .btn-check:focus + .btn,
-.btn-group-vertical > .btn:hover,
-.btn-group-vertical > .btn:focus,
-.btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
-  z-index: 1;
+  vertical-align: middle; // match .btn alignment given font-size hack above
+
+  > .btn {
+    position: relative;
+    flex: 1 1 auto;
+  }
+
+  // Bring the hover, focused, and "active" buttons to the front to overlay
+  // the borders properly
+  > .btn-check:checked + .btn,
+  > .btn-check:focus + .btn,
+  > .btn:hover,
+  > .btn:focus,
+  > .btn:active,
+  > .btn.active {
+    z-index: 1;
+  }
 }
 
+// Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
-.btn-toolbar .input-group {
-  width: auto;
+
+  .input-group {
+    width: auto;
+  }
 }
 
 .btn-group {
-  border-radius: 0.375rem;
+  @include border-radius($btn-border-radius);
+
+  // Prevent double borders when buttons are next to each other
+  > :not(.btn-check:first-child) + .btn,
+  > .btn-group:not(:first-child) {
+    margin-left: -$btn-border-width;
+  }
+
+  // Reset rounded corners
+  > .btn:not(:last-child):not(.dropdown-toggle),
+  > .btn.dropdown-toggle-split:first-child,
+  > .btn-group:not(:last-child) > .btn {
+    @include border-end-radius(0);
+  }
+
+  // The left radius should be 0 if the button is:
+  // - the "third or more" child
+  // - the second child and the previous element isn't `.btn-check` (making it the first child visually)
+  // - part of a btn-group which isn't the first child
+  > .btn:nth-child(n + 3),
+  > :not(.btn-check) + .btn,
+  > .btn-group:not(:first-child) > .btn {
+    @include border-start-radius(0);
+  }
 }
-.btn-group > :not(.btn-check:first-child) + .btn,
-.btn-group > .btn-group:not(:first-child) {
-  margin-left: -1px;
-}
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn.dropdown-toggle-split:first-child,
-.btn-group > .btn-group:not(:last-child) > .btn {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.btn-group > .btn:nth-child(n+3),
-.btn-group > :not(.btn-check) + .btn,
-.btn-group > .btn-group:not(:first-child) > .btn {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
+
+// Sizing
+//
+// Remix the default button sizing classes into new ones for easier manipulation.
+
+.btn-group-sm > .btn { @extend .btn-sm; }
+.btn-group-lg > .btn { @extend .btn-lg; }
+
+
+//
+// Split button dropdowns
+//
 
 .dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
-}
-.dropdown-toggle-split::after, .dropup .dropdown-toggle-split::after, .dropend .dropdown-toggle-split::after {
-  margin-left: 0;
-}
-.dropstart .dropdown-toggle-split::before {
-  margin-right: 0;
+  padding-right: $btn-padding-x * .75;
+  padding-left: $btn-padding-x * .75;
+
+  &::after,
+  .dropup &::after,
+  .dropend &::after {
+    margin-left: 0;
+  }
+
+  .dropstart &::before {
+    margin-right: 0;
+  }
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
+.btn-sm + .dropdown-toggle-split {
+  padding-right: $btn-padding-x-sm * .75;
+  padding-left: $btn-padding-x-sm * .75;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+.btn-lg + .dropdown-toggle-split {
+  padding-right: $btn-padding-x-lg * .75;
+  padding-left: $btn-padding-x-lg * .75;
 }
+
+
+// The clickable button for toggling the menu
+// Set the same inset shadow as the :active state
+.btn-group.show .dropdown-toggle {
+  @include box-shadow($btn-active-box-shadow);
+
+  // Show no shadow for `.btn-link` since it has no other button styles.
+  &.btn-link {
+    @include box-shadow(none);
+  }
+}
+
+
+//
+// Vertical button groups
+//
 
 .btn-group-vertical {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-}
-.btn-group-vertical > .btn,
-.btn-group-vertical > .btn-group {
-  width: 100%;
-}
-.btn-group-vertical > .btn:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) {
-  margin-top: -1px;
-}
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.btn-group-vertical > .btn ~ .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
 
+  > .btn,
+  > .btn-group {
+    width: 100%;
+  }
+
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) {
+    margin-top: -$btn-border-width;
+  }
+
+  // Reset rounded corners
+  > .btn:not(:last-child):not(.dropdown-toggle),
+  > .btn-group:not(:last-child) > .btn {
+    @include border-bottom-radius(0);
+  }
+
+  > .btn ~ .btn,
+  > .btn-group:not(:first-child) > .btn {
+    @include border-top-radius(0);
+  }
+}
+ */
 .nav {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
@@ -13725,7 +13798,7 @@ header .video-wrapper .wrapper-title h4 a, header .video-wrapper .wrapper-title 
   height: 8rem;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg {
   --bs-btn-border-radius: 0.2rem;
   font-family: "FS Industrie W05 Regular";
   font-size: 18px;

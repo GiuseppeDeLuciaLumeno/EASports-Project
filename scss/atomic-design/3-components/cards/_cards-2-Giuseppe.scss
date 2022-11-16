@@ -1,0 +1,206 @@
+// Giuseppe - inizio -----------------------------------------------------------------------
+
+//Giochi in Evidenza's cards start
+.fifa23-card {
+    @include cards;
+
+    .fifa23-logo {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        transition: transform .4s ease;
+
+    }
+
+    &:hover .fifa23-logo {
+        transform: translateY(-70px);
+        z-index: 2;
+    }
+
+    &:hover p {
+        opacity: 1;
+    }
+  }
+
+
+  .apex-mobile-card {
+    @include cards;
+
+    .apex-mobile-logo {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transition: transform .4s ease;
+    }
+
+    &:hover .apex-mobile-logo {
+        transform: translateY(-70px);
+        z-index: 2;
+    }
+    &:hover p {
+        opacity: 1;
+    }
+  }
+
+
+  .f1-22-card {
+    @include cards;
+
+     .f1-22-logo {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transition: transform .4s ease;
+    }
+
+    &:hover .f1-22-logo {
+        transform: translateY(-60px);
+        z-index: 2;
+    }
+    &:hover p {
+        opacity: 1;
+    }
+  }
+
+
+  .batterfield-card {
+    @include cards;
+
+     .batterfield-logo {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transition: transform .4s ease;
+    }
+
+    &:hover .batterfield-logo {
+        transform: translateY(-40px);
+        z-index: 2;
+    }
+    &:hover p {
+        opacity: 1;
+    }
+  }
+
+
+  .apex-card {
+    @include cards;
+
+    .apex-logo {
+        position: absolute;
+        top: 40%;
+        left: 37%;
+        transition: transform .4s ease;
+    }
+
+    &:hover .apex-logo {
+        transform: translateY(-70px);
+        z-index: 2;
+    }
+    &:hover p {
+        opacity: 1;
+    }
+  }
+
+
+  .the-sims4-card {
+    @include cards;
+
+    .the-sims4-logo {
+        position: absolute;
+        top: 25%;
+        left: 30%;
+        transition: transform .4s ease;
+    }
+
+    &:hover .the-sims4-logo {
+        transform: translateY(-55px);
+        z-index: 2;
+    }
+    &:hover p {
+        opacity: 1;
+    }
+  }
+
+
+  //GESTIONE MOMENTANEA
+  #nhl-card{
+    #nhl-logo{
+        position: absolute;
+        top: 40%;
+        left: 18%;
+    }
+  }
+
+
+  //icons not to display
+ /*  .bi {
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+
+  //icon seet three dots to X
+  .b-icon.active .bi-three-dots {
+    display: none;
+  }
+
+  .b-icon.active .bi-x {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    font-size: 50px;
+    display: block;
+    z-index: 2;
+  } */
+
+  //icons active shows background linear gradien & logo's translation
+  .b-icon.active+a {
+
+    .fifa23-card,
+    .apex-mobile-card,
+    .f1-22-card,
+    .batterfield-card,
+    .apex-card,
+    .the-sims4-card {
+        @include icons;
+
+        &:hover {
+
+            .fifa23-logo,
+            .apex-mobile-logo,
+            .f1-22-logo,
+            .batterfield-logo,
+            .apex-logo,
+            .the-sims4-logo {
+                transform: translateY(-70px);
+            }
+
+            p {
+                display: block;
+            }
+
+        }
+
+        p {
+            display: block;
+            opacity: 1;
+            z-index: 1;
+            color: #f3f3f3;
+        }
+
+    }
+
+    .fifa23-logo,
+    .apex-mobile-logo,
+    .f1-22-logo,
+    .batterfield-logo,
+    .apex-logo,
+    .the-sims4-logo {
+        transform: translateY(-70px);
+    }
+
+  }
+  //Giochi in evidenza cards End
+
+  // Giuseppe - fine --------------------------------------------------------------------------

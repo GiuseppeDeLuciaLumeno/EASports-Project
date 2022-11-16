@@ -1,9 +1,19 @@
+@use 'sass:math';
 @import '../../1-abstracts/variables/colors/colors-dario';
+@import '../../1-abstracts/variables/font-families/font-families-dario';
+@import '../../1-abstracts/variables/font-sizes/font-sizes-dario';
 @import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
 @import '../../1-abstracts/mixins/flexbox/flexbox-1-dario';
 @import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
 @import '../../1-abstracts/functions/units/units-giuseppe';
 
+* {
+  scroll-behavior: auto !important;
+}
+
+aside {
+  font-family: map-get($map: $da-font-family, $key: text);
+}
 
 .aside-mobile {
   position: fixed;
@@ -47,7 +57,7 @@
     }
   }
 
-  .dropdowns {
+  .da-dropdowns {
     height: calc(100vh - 40px - 53px);
     padding-inline: rem(28px);
 
@@ -57,7 +67,7 @@
       padding-inline: rem(18px);
     }
 
-    .dropdown {
+    .da-dropdown {
 
       .dropdown-btn {
         padding-block: rem(13px) rem(12px);
@@ -110,7 +120,7 @@
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         overflow-y: hidden;
         height: 0;
         opacity: 0;
@@ -172,11 +182,11 @@
           }
         }
 
-        .sub-dropdown {
+        .da-sub-dropdown {
           border-bottom: 1px solid rgb(163, 163, 163);
           transition: border-bottom-color 0.4s ease-in-out;
 
-          .sub-dropdown-menu {
+          .da-sub-dropdown-menu {
             padding-inline: rem(38px);
             overflow-y: hidden;
             height: 0;
@@ -200,13 +210,13 @@
           }
         }
 
-        .sub-dropdown:last-child {
+        .da-sub-dropdown:last-child {
           border-bottom: none;
         }
       }
     }
 
-    .dropdown.giochi-open {
+    .da-dropdown.giochi-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -227,7 +237,7 @@
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 107px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
@@ -236,15 +246,15 @@
       }
     }
     
-    .dropdown.giochi-open.esplora-giochi-open {
-      .dropdown-menu {
+    .da-dropdown.giochi-open.esplora-giochi-open {
+      .da-dropdown-menu {
         height: 344px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
 
         transition: height 0.38s ease-in-out;
 
-        .sub-dropdown.sub-dropdown-menu-open {
+        .da-sub-dropdown.sub-dropdown-menu-open {
           border-bottom-color: map-get($map: $da-color, $key: dark);
 
           .sub-dropdown-btn {
@@ -275,7 +285,7 @@
             }
           }
           
-          .sub-dropdown-menu {
+          .da-sub-dropdown-menu {
             height: 236px;
             opacity: 1;
 
@@ -285,15 +295,15 @@
       }
     }
 
-    .dropdown.giochi-open.piattaforme-open {
-      .dropdown-menu {
+    .da-dropdown.giochi-open.piattaforme-open {
+      .da-dropdown-menu {
         height: 307px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
 
         transition: height 0.38s ease-in-out;
 
-        .sub-dropdown.sub-dropdown-menu-open {
+        .da-sub-dropdown.sub-dropdown-menu-open {
           border-bottom-color: map-get($map: $da-color, $key: dark);
 
           .sub-dropdown-btn {
@@ -324,7 +334,7 @@
             }
           }
           
-          .sub-dropdown-menu {
+          .da-sub-dropdown-menu {
             height: 199px;
             opacity: 1;
 
@@ -334,15 +344,15 @@
       }
     }
 
-    .dropdown.giochi-open.esplora-giochi-open.piattaforme-open {
-      .dropdown-menu {
+    .da-dropdown.giochi-open.esplora-giochi-open.piattaforme-open {
+      .da-dropdown-menu {
         height: 543px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
 
         transition: height 0.38s ease-in-out;
 
-        .sub-dropdown.sub-dropdown-menu-open {
+        .da-sub-dropdown.sub-dropdown-menu-open {
           border-bottom-color: map-get($map: $da-color, $key: dark);
 
           .sub-dropdown-btn {
@@ -373,7 +383,7 @@
             }
           }
           
-          .sub-dropdown-menu {
+          .da-sub-dropdown-menu {
             transition: all 0.4s ease-in-out;
           }
 
@@ -388,7 +398,7 @@
       }
     }
     
-    .dropdown.altre-esperienze-open {
+    .da-dropdown.altre-esperienze-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -409,7 +419,7 @@
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 216px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
@@ -418,7 +428,7 @@
       }
     }
 
-    .dropdown.informazioni-open {
+    .da-dropdown.informazioni-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -439,7 +449,7 @@
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 378px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
@@ -448,7 +458,7 @@
       }
     }
 
-    .dropdown.impegni-open {
+    .da-dropdown.impegni-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -469,7 +479,7 @@
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 270px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
@@ -478,7 +488,7 @@
       }
     }
 
-    .dropdown.risorse-open {
+    .da-dropdown.risorse-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -499,7 +509,7 @@
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 378px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
@@ -590,7 +600,7 @@
     }
   }
 
-  .card {
+  .sidebar-card {
     position: relative;
     aspect-ratio: 1 / 1;
 
@@ -613,7 +623,7 @@
     }
   }
 
-  .card:hover {
+  .sidebar-card:hover {
     a {
       img:last-child {
         transform: scale(1.1) translate3d(-45%, -40%, 0);
@@ -629,7 +639,7 @@
     }
   }
 
-  .grid-container {
+  .sidebar-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: rem(32px);

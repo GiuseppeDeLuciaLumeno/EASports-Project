@@ -21,7 +21,9 @@
 
   transition: 0.1s ease;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     background-color: map-get($map: $da-color, $key: active);
   }
 
