@@ -2823,7 +2823,7 @@ footer {
 .footer-main-link .dropdown-language .dropdown #color-nation {
   color: rgb(22, 22, 22);
   display: flex;
-  width: 85%;
+  width: 90%;
 }
 @media (max-width: 767px) {
   .footer-main-link .dropdown-language .dropdown #color-nation {
@@ -2836,12 +2836,6 @@ footer {
 .footer-main-link .dropdown-language .dropdown #color-nation .wrapper-text-arrow {
   display: flex;
   width: 100%;
-  justify-content: space-between;
-}
-.footer-main-link .dropdown-language .dropdown #color-nation .wrapper-text-arrow img {
-  width: 14px;
-  height: 14px;
-  margin-left: 60px;
 }
 .footer-main-link .dropdown-language .dropdown .dropdown-menu {
   position: absolute;
@@ -2956,6 +2950,7 @@ footer {
   align-items: flex-start;
   height: 80%;
   width: 80%;
+  margin-bottom: 0px;
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link ul {

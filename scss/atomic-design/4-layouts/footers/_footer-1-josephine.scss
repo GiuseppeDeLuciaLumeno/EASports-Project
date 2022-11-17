@@ -54,7 +54,7 @@ footer {
         }
 
         @include md {
-            height: 100vh;
+            height: 80vh;
             gap: 20px;
             padding: 40px 22px 30px;
             grid-template-rows: auto;
@@ -99,6 +99,7 @@ footer {
             height: 100%;
             width: 90%;
 
+
         @include lg {
             width: 96%;
         }
@@ -141,159 +142,160 @@ footer {
             height: 100%;
         }
 
-        .dropdown {
-        position: relative;
-        border: 2px solid #c2c2c2;
-        border-radius: 3px;
-        width: 190px;
+         .dropdown {
+         position: relative;
+         border: 2px solid #c2c2c2;
+         border-radius: 3px;
+         width: 190px;
 
-        @include lg {
-            width: 80%;
-        }
+         @include lg {
+             width: 80%;
+         }
 
-        @include md {
-            width: 100%;
-        }
+         @include md {
+             width: 100%;
+         }
 
-            .button-link {
-                width: 100%;
-                height: 61px;
-                text-align: left;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                background: none;
-                border: none;
-                text-decoration: none;
-                color: #5a5a58;
-                font-family: inherit;
-                cursor: pointer;
-                padding: 0;
-                margin-left: 10px;
+             .button-link {
+                 width: 100%;
+                 height: 61px;
+                 text-align: left;
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: space-evenly;
+                 background: none;
+                 border: none;
+                 text-decoration: none;
+                 color: #5a5a58;
+                 font-family: inherit;
+                 cursor: pointer;
+                 padding: 0;
+                 //margin-left: 10px;
+                 padding-left: 1rem;
 
-                @include md {
-                    height: 100%;
-                }
+                 @include md {
+                     height: 100%;
+                 }
 
-                div {
-                font-size: 15px;
-                }
-            }
+                 div {
+                 font-size: 15px;
+                 }
+             }
 
-            #color-nation {
-                color: $color-primary;
-                display: flex;
-                justify-content: space-between;
-                width: 85%;
+             #color-nation {
+                 color: $color-primary;
+                 display: flex;
+                 justify-content: space-between;
+                 width: 85%;
 
-                @include md {
-                    width: 95%;
-                }
+                 @include md {
+                     width: 95%;
+                 }
 
-                img {
-                width: 14px;
-                height: 14px;
-                margin-left: 30px;
-                }
-            }
+                 img {
+                 width: 14px;
+                 height: 14px;
+                 margin-left: 30px;
+                 }
+             }
 
-            .dropdown-menu {
-                position: absolute;
-                left: -440px;
-                top: -385px;
-                background-color: $color-secondary;
-                padding: 0.75rem;
-                border-radius: 0.25rem;
-                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-                opacity: 0;
-                transform: translateY(-10px);
-                -webkit-transform: translateY(-10px);
-                -ms-transform: translateY(-10px);
-                transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-                -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
-                -o-transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-                pointer-events: none;
-                z-index: 100;
+             .dropdown-menu {
+                 position: absolute;
+                 left: -440px;
+                 top: -385px;
+                 background-color: $color-secondary;
+                 padding: 0.75rem;
+                 border-radius: 0.25rem;
+                 box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+                 opacity: 0;
+                 transform: translateY(-10px);
+                 -webkit-transform: translateY(-10px);
+                 -ms-transform: translateY(-10px);
+                 transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+                 -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+                 -o-transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+                 pointer-events: none;
+                 z-index: 100;
 
-                @include lg {
-                    left: 0px;
-                    display: none;
-                }
-            }
+                 @include lg {
+                     left: 0px;
+                     display: none;
+                 }
+             }
 
-            .link {
-                width: 100%;
-                height: 40px;
-                text-align: left;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background: none;
-                border-bottom: 1px solid #eaeaea;
-                text-decoration: none;
-                color: $color-primary;
-                font-family: inherit;
-                cursor: pointer;
-                padding: 0px 8px;
+             .link {
+                 width: 100%;
+                 height: 40px;
+                 text-align: left;
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 background: none;
+                 border-bottom: 1px solid #eaeaea;
+                 text-decoration: none;
+                 color: $color-primary;
+                 font-family: inherit;
+                 cursor: pointer;
+                 padding: 0px 8px;
 
-                &:focus::before {
-                    content: url('/assets/img/icon-check.png');
-                }
+                 &:focus::before {
+                     content: url('/assets/img/icon-check.png');
+                 }
 
-                @include lg {
-                    display: none;
-                }
-            }
+                 @include lg {
+                     display: none;
+                 }
+             }
 
-            .link:hover {
-                padding-left: 20px;
-                transition: padding-left 100ms ease-in-out;
-            }
+             .link:hover {
+                 padding-left: 20px;
+                 transition: padding-left 100ms ease-in-out;
+             }
 
-            .button-link:focus + .dropdown-menu {
-                opacity: 1;
-                transform: translateY(0);
-                -webkit-transform: translateY(0);
-                -ms-transform: translateY(0);
-                pointer-events: auto;
+             .button-link:focus + .dropdown-menu {
+                 opacity: 1;
+                 transform: translateY(0);
+                 -webkit-transform: translateY(0);
+                 -ms-transform: translateY(0);
+                 pointer-events: auto;
 
-                @include lg {
-                    display: none;
-                }
-            }
+                 @include lg {
+                     display: none;
+                 }
+             }
 
-            .information-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 150px);
-                gap: .5rem;
+             .information-grid {
+                 display: grid;
+                 grid-template-columns: repeat(4, 150px);
+                 gap: .5rem;
 
-                @include lg {
-                    display: none;
-                }
-            }
+                 @include lg {
+                     display: none;
+                 }
+             }
 
-            .select-price > select  {
-                appearance: none;
-                position: absolute;
-                color: transparent;
-                background: rgba(255,255,255,0);
-                bottom: 0;
-                width: 100%;
-                height: 100%;
-                cursor: pointer;
-                border: 0;
-                outline: none;
-                display: none;
+             .select-price > select  {
+                 appearance: none;
+                 position: absolute;
+                 color: transparent;
+                 background: rgba(255,255,255,0);
+                 bottom: 0;
+                 width: 100%;
+                 height: 100%;
+                 cursor: pointer;
+                 border: 0;
+                 outline: none;
+                 display: none;
 
-                @include lg {
-                    display: flex;
-                }
+                 @include lg {
+                     display: flex;
+                 }
 
-                @include md {
-                    display: flex;
-                }
-            }
-        }
+                 @include md {
+                     display: flex;
+                 }
+             }
+         }
     }
 
     .dropdown-language {
@@ -340,7 +342,8 @@ footer {
                 font-family: inherit;
                 cursor: pointer;
                 padding: 0;
-                margin-left: 10px;
+                //margin-left: 10px;
+                padding-left: 1rem;
 
                 @include md {
                     height: 100%;
@@ -354,7 +357,7 @@ footer {
             #color-nation {
                 color: $color-primary;
                 display: flex;
-                width: 85%;
+                width: 90%;
 
                 @include md {
                     width: 95%;
@@ -367,13 +370,6 @@ footer {
                 .wrapper-text-arrow {
                     display: flex;
                     width: 100%;
-                    justify-content: space-between;
-
-                    img {
-                        width: 14px;
-                        height: 14px;
-                        margin-left: 60px;
-                    }
                 }
             }
 
@@ -491,9 +487,10 @@ footer {
             align-items: flex-start;
             height: 80%;
             width: 80%;
+            margin-bottom: 0px;
 
             @include lg {
-                width: 89%;
+                width: 100%;
             }
 
             @include md {
@@ -547,4 +544,22 @@ footer {
         }
     }
 }
+
+.jo-arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 0 0 0.1rem 3rem;
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
 // Josephine - fine ------------------------------------------------------------------------------------------
