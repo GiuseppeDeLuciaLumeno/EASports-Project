@@ -2531,7 +2531,7 @@ footer {
 }
 @media (max-width: 767px) {
   .footer-main-link {
-    height: 100vh;
+    height: 80vh;
     gap: 20px;
     padding: 40px 22px 30px;
     grid-template-rows: auto;
@@ -2640,7 +2640,7 @@ footer {
   font-family: inherit;
   cursor: pointer;
   padding: 0;
-  margin-left: 10px;
+  padding-left: 1rem;
 }
 @media (max-width: 767px) {
   .footer-main-link .dropdown-price .dropdown .button-link {
@@ -2810,7 +2810,7 @@ footer {
   font-family: inherit;
   cursor: pointer;
   padding: 0;
-  margin-left: 10px;
+  padding-left: 1rem;
 }
 @media (max-width: 767px) {
   .footer-main-link .dropdown-language .dropdown .button-link {
@@ -2835,7 +2835,15 @@ footer {
 }
 .footer-main-link .dropdown-language .dropdown #color-nation .wrapper-text-arrow {
   display: flex;
+  justify-content: space-between;
   width: 100%;
+  margin-right: 5px;
+}
+@media only screen {
+  .footer-main-link .dropdown-language .dropdown #color-nation .wrapper-text-arrow {
+    max-width: 390px;
+    margin-right: 0px;
+  }
 }
 .footer-main-link .dropdown-language .dropdown .dropdown-menu {
   position: absolute;
@@ -2954,7 +2962,7 @@ footer {
 }
 @media (max-width: 1023px) {
   .footer-main-link .footer-legal-link ul {
-    width: 89%;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -3005,6 +3013,24 @@ footer {
   .footer-main-link .footer-privacy .image-privacy {
     justify-content: flex-start;
   }
+}
+
+.jo-arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin: 0 0 0.1rem 3rem;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 body > *:not(:first-child) {

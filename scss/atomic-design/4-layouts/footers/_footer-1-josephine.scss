@@ -369,7 +369,12 @@ footer {
 
                 .wrapper-text-arrow {
                     display: flex;
+                    justify-content: space-between;
                     width: 100%;
+                    margin-right: 5px;
+                    @media only screen { max-width: 390px;
+                        margin-right: 0px;
+                    }
                 }
             }
 
@@ -552,12 +557,12 @@ footer {
     padding: 3px;
     margin: 0 0 0.1rem 3rem;
   }
-  
+
   .up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
   }
-  
+
   .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
