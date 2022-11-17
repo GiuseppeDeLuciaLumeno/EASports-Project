@@ -439,6 +439,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:1rem 2rem;
+
 
     .ea-local-footer {
       width: 1120px;
@@ -483,6 +485,7 @@
     }
   }
 }
+// response smartphone
 
 @media screen and (max-width: 780px) {
   .section-card {
@@ -510,7 +513,9 @@
   .container-form {
     display: flex;
     flex-direction: column;
+
     width: 100%;
+
   }
   .news-letter-section {
     width: 100%;
@@ -527,8 +532,12 @@
     .form {
       width: 100%;
       height: 100%;
+
       .form-row {
+
+
         #date{
+
         #date-of-birth {
           padding: 10px;
           width: 100%;

@@ -2310,6 +2310,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 2rem;
 }
 * .section-local-footer .ea-local-footer {
   width: 1120px;
