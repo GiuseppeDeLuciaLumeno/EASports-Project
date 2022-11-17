@@ -1,0 +1,9 @@
+//V-icons
+.dropdown-icon-container {
+    width: 20px;
+    height: 20px;
+
+    .v-icon {
+        @include v-icons;
+    }
+}

@@ -7,6 +7,10 @@
 @import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
 @import '../../1-abstracts/functions/units/units-giuseppe';
 
+* {
+  scroll-behavior: auto !important;
+}
+
 aside {
   font-family: map-get($map: $da-font-family, $key: text);
 }
@@ -53,7 +57,7 @@ aside {
     }
   }
 
-  .dropdowns {
+  .da-dropdowns {
     height: calc(100vh - 40px - 53px);
     padding-inline: rem(28px);
 
@@ -63,7 +67,7 @@ aside {
       padding-inline: rem(18px);
     }
 
-    .dropdown {
+    .da-dropdown {
 
       .dropdown-btn {
         padding-block: rem(13px) rem(12px);
@@ -116,7 +120,7 @@ aside {
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         overflow-y: hidden;
         height: 0;
         opacity: 0;
@@ -178,11 +182,11 @@ aside {
           }
         }
 
-        .sub-dropdown {
+        .da-sub-dropdown {
           border-bottom: 1px solid rgb(163, 163, 163);
           transition: border-bottom-color 0.4s ease-in-out;
 
-          .sub-dropdown-menu {
+          .da-sub-dropdown-menu {
             padding-inline: rem(38px);
             overflow-y: hidden;
             height: 0;
@@ -206,13 +210,13 @@ aside {
           }
         }
 
-        .sub-dropdown:last-child {
+        .da-sub-dropdown:last-child {
           border-bottom: none;
         }
       }
     }
 
-    .dropdown.giochi-open {
+    .da-dropdown.giochi-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -233,7 +237,7 @@ aside {
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 107px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
@@ -242,15 +246,15 @@ aside {
       }
     }
     
-    .dropdown.giochi-open.esplora-giochi-open {
-      .dropdown-menu {
+    .da-dropdown.giochi-open.esplora-giochi-open {
+      .da-dropdown-menu {
         height: 344px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
 
         transition: height 0.38s ease-in-out;
 
-        .sub-dropdown.sub-dropdown-menu-open {
+        .da-sub-dropdown.sub-dropdown-menu-open {
           border-bottom-color: map-get($map: $da-color, $key: dark);
 
           .sub-dropdown-btn {
@@ -281,7 +285,7 @@ aside {
             }
           }
           
-          .sub-dropdown-menu {
+          .da-sub-dropdown-menu {
             height: 236px;
             opacity: 1;
 
@@ -291,15 +295,15 @@ aside {
       }
     }
 
-    .dropdown.giochi-open.piattaforme-open {
-      .dropdown-menu {
+    .da-dropdown.giochi-open.piattaforme-open {
+      .da-dropdown-menu {
         height: 307px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
 
         transition: height 0.38s ease-in-out;
 
-        .sub-dropdown.sub-dropdown-menu-open {
+        .da-sub-dropdown.sub-dropdown-menu-open {
           border-bottom-color: map-get($map: $da-color, $key: dark);
 
           .sub-dropdown-btn {
@@ -330,7 +334,7 @@ aside {
             }
           }
           
-          .sub-dropdown-menu {
+          .da-sub-dropdown-menu {
             height: 199px;
             opacity: 1;
 
@@ -340,15 +344,15 @@ aside {
       }
     }
 
-    .dropdown.giochi-open.esplora-giochi-open.piattaforme-open {
-      .dropdown-menu {
+    .da-dropdown.giochi-open.esplora-giochi-open.piattaforme-open {
+      .da-dropdown-menu {
         height: 543px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
 
         transition: height 0.38s ease-in-out;
 
-        .sub-dropdown.sub-dropdown-menu-open {
+        .da-sub-dropdown.sub-dropdown-menu-open {
           border-bottom-color: map-get($map: $da-color, $key: dark);
 
           .sub-dropdown-btn {
@@ -379,7 +383,7 @@ aside {
             }
           }
           
-          .sub-dropdown-menu {
+          .da-sub-dropdown-menu {
             transition: all 0.4s ease-in-out;
           }
 
@@ -394,7 +398,7 @@ aside {
       }
     }
     
-    .dropdown.altre-esperienze-open {
+    .da-dropdown.altre-esperienze-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -415,7 +419,7 @@ aside {
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 216px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
@@ -424,7 +428,7 @@ aside {
       }
     }
 
-    .dropdown.informazioni-open {
+    .da-dropdown.informazioni-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -445,7 +449,7 @@ aside {
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 378px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
@@ -454,7 +458,7 @@ aside {
       }
     }
 
-    .dropdown.impegni-open {
+    .da-dropdown.impegni-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -475,7 +479,7 @@ aside {
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 270px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;
@@ -484,7 +488,7 @@ aside {
       }
     }
 
-    .dropdown.risorse-open {
+    .da-dropdown.risorse-open {
       .dropdown-btn {
         border-bottom-color: map-get($map: $da-color, $key: accent);
 
@@ -505,7 +509,7 @@ aside {
         }
       }
 
-      .dropdown-menu {
+      .da-dropdown-menu {
         height: 378px;
         border-bottom: 1px solid map-get($map: $da-color, $key: accent);
         opacity: 1;

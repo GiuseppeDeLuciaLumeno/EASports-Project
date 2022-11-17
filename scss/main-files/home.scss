@@ -22,6 +22,7 @@
 @import "../atomic-design/2-base/font-faces/font-faces-dario";
 @import "../atomic-design/2-base/resets/reset-dario";
 @import "../atomic-design/2-base/typography/home";
+@import "../../scss/atomic-design/2-base/typography/games/games";
 
 // COMPONENTS --------------------------------------------------------------------------------------------
 @import "../atomic-design/3-components/buttons/button-1-giuseppe";
@@ -43,93 +44,140 @@
 @import "../atomic-design/6-pages/home";
 
 //codice header daniele //
-.img-daniele {
-  display: flex;
-  flex-flow: column;
-  background-image: url(/assets/img/home-header_daniele/newMainImgEA.png);
-  top: 0;
-  left: 0;
-  margin-top: 96px;
-  -webkit-background-size: cover;
-  -moz-background-cover: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  gap: 0.5rem;
-  @include size(80vh, 100%);
+.hero {
+  margin-top: 93px;
+  overflow-y: hidden;
+  position: relative;
 
-  //codice relativo alla prima sezione della main img
-
-  .textposition {
-    @include size(30vh, 65%);
-    margin-left: 3.5rem;
-    color: white;
-    @include flex(flex, flex-start, flex-end);
-    @include font(Helvetica, x-large);
-
-    .LOGO {
-      @include size(4rem, 30rem);
+  & > picture {
+    position: absolute;
+    z-index: -1;
+    img {
+      width: 100%;
     }
   }
 
-  //codice relativo alla seconda sezione della main img
+  .text {
+    padding: calc(56.25% + 32px) 7.5vw 32px;
+    font-family: "ElectronicArtsDisplay", "Verdana", "Helvetica", "Arial", sans-serif;
+    color: rgb(22, 22, 22);
 
-  .textposition-1 {
-    @include flex(flex, flex-start, center);
-    @include size(30vh, 65%);
-    @include font(Helvetica, xx-large);
-    font-weight: bold;
-    margin-left: 3.5rem;
-    color: black;
-  }
-
-  .btn_daniele {
-    @include size(4rem, 16rem);
-    @include font(Helvetica, large);
-    @include size(5rem, 10rem);
-    color: black;
-    background-color: white;
-    border-radius: 0.2rem;
-    margin-left: 4rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid green;
-  }
-
-  //codice relativo alla terza sezione della main img
-
-  .textposition-2 {
-    @include flex(flex, space-between, center);
-    @include space(2rem, 1rem);
-    @include size(20vh, 100%);
-    //background-image: url(/assets/img/HomePage/form-color.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-
-    .font-text {
-      @include font(Helvetica, large);
-      color: white;
+    h1 {
+      font-size: 36px;
+      line-height: 41.4px;
     }
-    .button-an {
-      @include size(4rem, 16rem);
-      @include font(Helvetica, large);
-      @include size(4rem, 10rem);
-      border-radius: 0.4rem;
-      color: white;
-      margin-right: 6rem;
+
+    h2 {
+      margin-top: 13px;
+      font-family: "ElectronicArtsText", "Verdana", "Helvetica", "Arial", sans-serif;
+      font-size: 20px;
+      font-weight: lighter;
+      line-height: 25px;
+    }
+
+    a {
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 16px;
       text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: white;
+      background-color: rgb(0, 0, 0);
+      width: 100%;
+      padding: 12px 24px;
+      font-family: "ElectronicArtsText", "Verdana", "Helvetica", "Arial", sans-serif;
+      font-size: 1rem;
+      line-height: 26.4px;
+      color: rgb(243, 243, 243);
+      border-radius: 3px;
+      transition: transform .2s ease-in-out;
+    }
+
+    a:hover {
+      transform: scale(1.05);
     }
   }
 }
+
+@media (min-width: 640px) {
+  .hero {
+    .text {
+      a {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    & > picture {
+      position: relative;
+      z-index: 0;
+      width: 100%;
+    }
+
+    .text {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      padding: 0 38% 0 4%;
+      margin-block: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 38px;
+        line-height: 43.7px;
+        margin-top: 10px;
+      }
+
+      a {
+        margin-bottom: 16px;
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    .text {
+      padding-inline: 8% 50%;
+
+      h1 {
+        font-size: 44px;
+        line-height: 50.6px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1456px) {
+  .hero {
+    .text {
+      padding-inline: 18vw 50vw;
+
+      picture {
+        margin-top: 5px;
+      }
+
+      h1 {
+        font-size: 54px;
+        line-height: 62.1px;
+      }
+
+      h2 {
+        font-size: 24px;
+        line-height: 32.4px;
+      }
+    }
+  }
+}
+
 /* Start Giochi in evidenza */
 .section-wrapper {
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,7 +210,7 @@
 .container_gio {
   display: flex;
   position: relative;
-  height: 410px;
+  height: 471px;
 }
 
 .blocco_bgplay {
@@ -173,7 +221,7 @@
 }
 
 .bg_play {
-  height: 410px;
+  height: 474px;
   width: 100vw;
 }
 
@@ -181,7 +229,7 @@
   display: flex;
   position: absolute;
   top: 100px;
-  left: 320px;
+  left: 200px;
   flex-direction: column;
   /* padding: 130px 0px 0px 410px; */
 
@@ -197,8 +245,8 @@
   display: flex;
   position: relative;
   color: white;
-  width: 544px;
-  height: 54px;
+  width: 70vw;
+  height: 125px;
   font-size: 27px;
 }
 
@@ -206,6 +254,7 @@
   margin-bottom: 24px;
   justify-content: center;
   align-items: center;
+  font-family: map-get($ultimi-giochi-font, heading);
 }
 
 .img_play {
@@ -243,7 +292,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0rem 0rem 0rem;
+  font-family: map-get($ultimi-giochi-font, text);
 }
 
 .iscriviti_subito1 {
@@ -257,7 +306,6 @@
   font-size: 18px;
   color: white;
   opacity: 0.9;
-  margin: 100px 500px 0px 0px;
 
   &:hover {
     padding: 18px 35px;
@@ -274,7 +322,7 @@
   display: flex;
   flex-direction: row;
   background-color: #6fb0d6;
-  /*  width: 100vw; */
+  width: 100%;
   height: 112px;
   justify-content: space-around;
   align-items: center;
@@ -287,6 +335,9 @@
   width: 500px;
   height: 70.22;
   color: black;
+  .genitori {
+    font-family: map-get($ultimi-giochi-font, heading);
+  }
 }
 
 /*.bottone_genitori{
@@ -328,7 +379,7 @@
   border-radius: 3px;
   padding: 15px 30px;
   transition: padding 0.1s;
-  font-family: ElectronicArtsText, Verdana, Helvetica, Arial, sans-serif;
+  font-family: map-get($ultimi-giochi-font, text);
   font-size: 18px;
   color: #161616;
   opacity: 0.9;
@@ -346,6 +397,9 @@
   /* height: 200px; */
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  padding: 32px 0px 16px 0px;
+
 }
 
 .linkf_gio {
@@ -354,8 +408,13 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 884px;
+  width: 100%;
   height: 81px;
+  @for $i from 1 to 7 {
+   div a:nth-child(#{$i}) {
+      font-family: map-get($ultimi-giochi-font, text)
+    }
+  }
 }
 
 .link_gio {
@@ -379,6 +438,9 @@
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 13px;
+  h3 {
+    font-family: map-get($ultimi-giochi-font, heading);
+  }
 }
 
 .blocco_loghi {

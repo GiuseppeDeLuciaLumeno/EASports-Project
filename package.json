@@ -1,4 +1,13 @@
 {
+  "scripts": {
+    "home": "sass -w --no-source-map .\\scss\\main-files\\home.scss .\\css\\home.css",
+    "ea-originals": "sass -w --no-source-map .\\scss\\main-files\\ea-originals\\ea-originals.scss .\\css\\ea-originals\\ea-originals.css",
+    "free-to-play": "sass -w --no-source-map .\\scss\\main-files\\games\\library\\free-to-play.scss .\\css\\games\\library\\free-to-play.css",
+    "library": "sass -w --no-source-map .\\scss\\main-files\\games\\library\\library.scss .\\css\\games\\library\\library.css",
+    "coming-soon": "sass -w --no-source-map .\\scss\\main-files\\games\\coming-soon.scss .\\css\\games\\coming-soon.css",
+    "games": "sass -w --no-source-map .\\scss\\main-files\\games\\games.scss .\\css\\games\\games.css",
+    "sports": "sass -w --no-source-map .\\scss\\main-files\\sports\\sports.scss .\\css\\sports\\sports.css"
+  },
   "dependencies": {
     "bootstrap": "^5.2.1",
     "flag-icons": "^6.6.6"

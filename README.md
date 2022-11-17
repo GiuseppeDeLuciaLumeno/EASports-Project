@@ -2,13 +2,14 @@ ORGANIZZAZIONE PAGINE HTML: seguiamo quella utilizzata sul sito originale (modo 
 <!-- -------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 IMPORTANTE! Perché tutto funzioni, queste sono le cartelle 'off limits': quelle da non modificare nella loro organizzazione interna:
-  -> \html
   -> \css
+  -> \html
+  -> \js\6-pages
   -> \scss\main-files
   -> \scss\atomic-design\2-base\typography
   -> \scss\atomic-design\6-pages
   -> \scss\atomic-design\responsivity
-  -> \js\6-pages
+  -> \package.json - scripts
 
 Bisogno di aggiungere/modificare un file di una di queste cartelle? Chiedere a Dario, provvederà subito... :-)
 

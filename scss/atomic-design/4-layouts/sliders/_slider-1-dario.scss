@@ -2,118 +2,125 @@
 
 // SLIDER LAYOUT - TO USE WITH 'SLIDER'S TABS' COMPONENT - ref: homepage 'ultime notizie' ----------------------
 
-// .slider-container#slider-container {
-//    .arrow-container.arrow-container-left {.......}
-//    ul.list {
-//        li.slider-tab-container {
-//            a.slider-tab {.......}
-//        }
-//    }
-//    .arrow-container.arrow-container-right {.......}
-//    .border-bottom
-
 @import '../../1-abstracts/variables/colors/colors-dario';
 @import '../../1-abstracts/variables/breakpoints/breakpoints-dario';
 @import '../../1-abstracts/mixins/breakpoints/breakpoints-dario';
+@import '../../3-components/tabs/tabs-1-dario';
 
-.section-container {
-  position: relative;
+.slider-container {
+  overflow-x: hidden;
+  background-color: map-get($map: $da-color, $key: bg);
 
-  .slider-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: center;
+  
+  // arrows
+  .arrow-container {
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+
+    display: none;
+    justify-content: center;
     align-items: center;
 
-    // arrows
-    .arrow-container {
-      height: 50px;
+    &::before, &::after {
+      content: '';
+      display: inline-block;
+      height: 3px;
+      width: 15px;
+      border-radius: 3px;
+      background-color: map-get($map: $da-color, $key: borders-dark);
+
       position: absolute;
-      z-index: 1;
+    }
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &::before, &::after {
-        content: '';
-        display: inline-block;
-        height: 3px;
-        width: 15px;
-        border-radius: 3px;
-        background-color: map-get($map: $da-color, $key: borders-dark);
-
-        position: absolute;
-      }
-
-      @include da-breakpoint(tablet) {
-        height: 60px;
-      }
+    @include da-breakpoint(tablet) {
+      height: 60px;
+    }
+  }
+  
+  .arrow-container-left {
+    left: 0;
+    padding-inline: 20px 40px;
+    
+    &::before {
+      transform: rotate(48.5deg);
+      margin-top: 9.5px;
     }
     
-    .arrow-container-left {
-      left: 0;
-      padding-inline: 20px 40px;
-      background: linear-gradient(90deg, rgba(242,242,242,1) 70%, rgba(242,242,242,0.5) 85%, rgba(0,212,255,0) 100%);
-      
-      &::before {
-        transform: rotate(48.5deg);
-        margin-top: 9.5px;
-      }
-      
-      &::after {
-        transform: rotate(-48.5deg);
-        margin-top: -9.5px;
-      }
+    &::after {
+      transform: rotate(-48.5deg);
+      margin-top: -9.5px;
+    }
+  }
+  
+  .arrow-container-right {
+    right: 0;
+    padding-inline: 40px 20px;
+
+    &::before {
+      transform: rotate(-48.5deg);
+      margin-top: 9.5px;
     }
     
-    .arrow-container-right {
-      right: 0;
-      padding-inline: 40px 20px;
-      background: linear-gradient(90deg, rgba(0,212,255,0) 0%, rgba(242,242,242,0.5) 15%, rgba(242,242,242,1) 30%);
+    &::after {
+      transform: rotate(48.5deg);
+      margin-top: -9.5px;
+    }
+  }
 
-      &::before {
-        transform: rotate(-48.5deg);
-        margin-top: 9.5px;
-      }
-      
-      &::after {
-        transform: rotate(48.5deg);
-        margin-top: -9.5px;
-      }
+  // slider's tabs
+  .wrapper-div {
+    --padding-inline: 7.5vw;
+    --mask-width: 12px;
+    --tabs-mask-width: calc(var(--padding-inline) + var(--mask-width));
+    --tabs-mask-width-outside: calc(var(--padding-inline));
+
+    width: 100%;
+    padding-inline: var(--padding-inline);
+
+    @include da-breakpoint(tablet) {
+      --tabs-mask-width: 60px;
+      --tabs-mask-width-outside: calc(var(--tabs-mask-width) / 2);
+    }
+    
+    @include da-breakpoint(desktop) {
+      --padding-inline: 7.4218vw;
+    }
+    
+    @include da-breakpoint(desktop-large) {
+      --padding-inline: calc((100vw - 1120px) / 2);
     }
 
-    @media(min-width: 56.6875rem) {
-      .arrow-container {
-        display: none;
-      }
-    }
-
-    // slider's tabs
     ul {
+      width: max-content;
       display: flex;
-  
-      li {
-        flex: 0 0 auto;
-        list-style: none;
-  
-        a {
-          
-        }
-      }
+      transition: transform 0.4s;
     }
-  
-    // horizontal bottom line
-    .border-bottom {
-      align-self: flex-end;
+  }
+  .wrapper-div.hide-left {
+    -webkit-mask-image: linear-gradient( 90deg, transparent calc(var(--tabs-mask-width-outside)), #000 var(--tabs-mask-width), black calc(100% - var(--tabs-mask-width-outside)), transparent calc(100% - var(--tabs-mask-width-outside) + 1px));
+  }
+  .wrapper-div.hide-right {
+    -webkit-mask-image: linear-gradient( 90deg, transparent calc(var(--tabs-mask-width-outside) - 1px), #000 var(--tabs-mask-width-outside), #000 calc(100% - var(--tabs-mask-width)), transparent calc(100% - var(--tabs-mask-width-outside)));
+  }
+  .wrapper-div.hide-both {
+    -webkit-mask-image: linear-gradient( 90deg, transparent calc(var(--tabs-mask-width-outside)), black var(--tabs-mask-width), #000 calc(100% - var(--tabs-mask-width)), transparent calc(100% - var(--tabs-mask-width-outside)) );
+  }
 
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      margin-top: -2px;
-      left: 0;
-      background-color: map-get($map: $da-color, $key: borders);
-      z-index: 2;
-    }
+  // horizontal bottom line
+  .border-bottom {
+    align-self: flex-end;
+
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    margin-top: -2px;
+    left: 0;
+    background-color: map-get($map: $da-color, $key: borders);
+    z-index: 2;
   }
 }
 // SLIDER LAYOUT - END ---------------------------------------------------------
